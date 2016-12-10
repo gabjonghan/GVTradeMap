@@ -1,0 +1,1797 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ship_parts_root>
+  <ship_part name="平甲板型小型船体" PartsType="船体" ShipSizeType="小型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸2、造船5" Citys="各国本拠地" NPC="造船所親方" Materials="鉄材20、木材20" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="平甲板型中型船体" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="20" Max="40" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸4、造船9" Citys="ハンブルグ、ナント、オポルト、ラグーザ" NPC="造船所親方" Materials="加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="2層甲板型中型船体" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸4、造船10" Citys="ハンブルグ、ナント、オポルト、ラグーザ" NPC="造船所親方" Materials="加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="3層甲板型中型船体" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸5、造船11" Citys="ハンブルグ、ナント、オポルト、ラグーザ" NPC="造船所親方" Materials="加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="平甲板型大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸7、造船13" Citys="各国占有開拓地" NPC="造船所親方" Materials="木材30、加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="2層甲板型大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8、造船14" Citys="各国占有開拓地" NPC="造船所親方" Materials="木材30、加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="3層甲板型大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8、造船15" Citys="各国占有開拓地" NPC="造船所親方" Materials="木材40、加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="中型櫂船" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="20" Max="40" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸4、造船9" Citys="オデッサ、アレクサンドリア" NPC="造船所親方" Materials="加工木材、加工鉄材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="大型櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8、造船13" Citys="カンディア、カイロ" NPC="造船所親方" Materials="木材20、加工木材、加工鉄材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="大型2層櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="5" Max="7" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8、造船14" Citys="カンディア、カイロ" NPC="造船所親方" Materials="木材30、加工木材、加工鉄材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="大型3層櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="7" Max="9" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8、造船15" Citys="カンディア、カイロ" NPC="造船所親方" Materials="木材40、加工木材、加工鉄材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="公用大型櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="1" Max="3" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸13、造船14" Citys="各国本拠地" NPC="造船所親方" Materials="重装船尾楼、強化鋼の板金4、大型櫂船" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="公用2層甲板型大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸14、造船15" Citys="各国本拠地" NPC="造船所親方" Materials="重装船尾楼、強化鋼の板金5、2層甲板型大型船体" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="公用大型2層櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="5" Max="7" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸14、造船15" Citys="各国本拠地" NPC="造船所親方" Materials="重装船尾楼、強化鋼の板金5、大型2層櫂船" ShipType="複合型" />
+  </ship_part>
+  <ship_part name="公用3層甲板型大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸15、造船16" Citys="各国本拠地" NPC="造船所親方" Materials="重装船尾楼、強化鋼の板金6、3層甲板型大型船体" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="公用大型3層櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="7" Max="9" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸15、造船16" Citys="各国本拠地" NPC="造船所親方" Materials="重装船尾楼、強化鋼の板金6、大型3層櫂船" ShipType="複合型" />
+  </ship_part>
+  <ship_part name="将官用平甲板型中型船体" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12、造船10" Citys="各国本拠地" NPC="造船所親方" Materials="名提督の指揮杖、強化鋼の板金3、平甲板型中型船体" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="将官用2層甲板型中型船体" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="50" Max="70" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12、造船10" Citys="各国本拠地 イスタンブールレシピなし" NPC="造船所親方" Materials="名提督の指揮杖、強化鋼の板金3、2層甲板型中型船体" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="将官用中型櫂船" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="1" Max="3" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12、造船10" Citys="各国本拠地 イスタンブールレシピなし" NPC="造船所親方" Materials="名提督の指揮杖、強化鋼の板金3、中型櫂船" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="東アジア中型船体" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="40" Max="60" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="2" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸11、造船13" Citys="堺、安平、漢陽、杭州" NPC="造船所親方" Materials="東アジア造船技法書2、加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="東アジア大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="2" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12、造船15" Citys="堺、安平、漢陽、杭州" NPC="造船所親方" Materials="東アジア造船技法書3、加工木材、加工鉄材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="東アジア大型櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="3" Max="5" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12、造船15" Citys="堺、安平、漢陽、杭州" NPC="造船所親方" Materials="東アジア造船技法書3、加工木材、加工鉄材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="改良東アジア大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="1" />
+    <data_values name="対波" Min="3" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸17、造船16" Citys="堺、安平、漢陽、杭州" NPC="造船所親方" Materials="重装船尾楼、東アジア大型船体、沙船(オーナメント)" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="強化東アジア大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="1" />
+    <data_values name="対波" Min="3" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸17、造船16" Citys="堺、安平、漢陽、杭州" NPC="造船所親方" Materials="重装船尾楼、東アジア大型船体、広船(オーナメント)" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="改良東アジア大型櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="3" Max="5" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸17、造船16" Citys="堺、安平、漢陽、杭州" NPC="造船所親方" Materials="重装船尾楼、東アジア大型櫂船、菱垣廻船(オーナメント)" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="強化船殻2層大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="60" Max="80" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸17、造船16" Citys="商会開拓街" NPC="造船所親方" Materials="強化船殻設計書、特殊加工ロープ、加工木材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="小ラティーンセイル" PartsType="帆" ShipSizeType="小型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="10" Max="20" />
+    <data_values name="横帆" Min="-10" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製5" Citys="各国本拠地" NPC="製帆職人" Materials="麻生地10、木材10、ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="小スクウェアセイル" PartsType="帆" ShipSizeType="小型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="-10" Max="0" />
+    <data_values name="横帆" Min="10" Max="20" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製6" Citys="各国本拠地" NPC="製帆職人" Materials="麻生地10、木材10、ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="小ガフセイル" PartsType="帆" ShipSizeType="小型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製7" Citys="各国本拠地" NPC="製帆職人" Materials="麻生地10、木材10、ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="小ジャンクセイル" PartsType="帆" ShipSizeType="小型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製12" Citys="長崎、淡水" NPC="造船所親方" Materials="東アジア造船技法書、加工木材、ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="中ラティーンセイル" PartsType="帆" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="25" Max="35" />
+    <data_values name="横帆" Min="-10" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製9" Citys="ベルゲン、アントワープ、オポルト、セウタ、バレンシア、ピサ、サロニカ、ラグーザ、重慶" NPC="製帆職人" Materials="麻生地20、木材20、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="中スクウェアセイル" PartsType="帆" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="-10" Max="0" />
+    <data_values name="横帆" Min="25" Max="35" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製10" Citys="ベルゲン、アントワープ、オポルト、セウタ、バレンシア、ピサ、サロニカ、ラグーザ、重慶" NPC="製帆職人" Materials="麻生地20、木材20、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="中ガフセイル" PartsType="帆" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="15" Max="25" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製11" Citys="ベルゲン、アントワープ、オポルト、セウタ、バレンシア、ピサ、サロニカ、ラグーザ、重慶" NPC="製帆職人" Materials="麻生地20、木材20、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="中ジャンクセイル" PartsType="帆" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="15" Max="25" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製14" Citys="長崎、淡水" NPC="造船所親方" Materials="東アジア造船技法書、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="中ストームセイル" PartsType="帆" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="10" Max="20" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="3" Max="5" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail ShipType="すべて" />
+  </ship_part>
+  <ship_part name="大ラティーンセイル" PartsType="帆" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="40" Max="50" />
+    <data_values name="横帆" Min="-10" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製13" Citys="各国占有開拓地、東南アジア開拓地（軍事都市限定）、長崎" NPC="製帆職人" Materials="麻生地30、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="大スクウェアセイル" PartsType="帆" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="-10" Max="0" />
+    <data_values name="横帆" Min="40" Max="50" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製14" Citys="各国占有開拓地、東南アジア開拓地（軍事都市限定）、長崎" NPC="製帆職人" Materials="麻生地30、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="大ガフセイル" PartsType="帆" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="25" Max="35" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製15" Citys="各国占有開拓地、東南アジア開拓地（軍事都市限定）、長崎" NPC="製帆職人" Materials="麻生地30、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="大ジャンクセイル" PartsType="帆" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="25" Max="35" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製16" Citys="長崎、淡水" NPC="造船所親方" Materials="東アジア造船技法書2、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="デルフィンストームセイル" PartsType="帆" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="20" Max="30" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="3" Max="5" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="攻略本「～El Oriente～プレイヤーズバイブル Premium Edition」付属" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="大ストームセイル" PartsType="帆" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="15" Max="25" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="3" Max="5" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="沈没船" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="デルフィンガフセイル" PartsType="帆" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="35" Max="45" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="攻略本「～Tierra Americana～プレイヤーズバイブル Premium Edition」付属" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="改良小型砲門" PartsType="大砲" ShipSizeType="小型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="2" Max="6" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造5" Citys="各国本拠地" NPC="武器職人" Materials="鉄材20、木材20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="改良中型砲門" PartsType="大砲" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="4" Max="8" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造9" Citys="プリマス、ボルドー、アントワープ、ハンブルグ、ストックホルム、アレクサンドリア、アンボイナ、重慶" NPC="武器職人" Materials="木材30、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="改良大型砲門" PartsType="大砲" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="6" Max="10" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造13" Citys="各国占有開拓地、東南アジア開拓地（軍事都市限定）、長崎" NPC="武器職人" Materials="鉄材40、加工木材、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="加工木材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="-10" Max="0" />
+    <data_values name="横帆" Min="-10" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸6" Citys="各国占有開拓地、ブエノスアイレス、モザンビーク、ポンディシェリ、ディヴ" NPC="船大工" Materials="木材30" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="加工鉄材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="-15" Max="-5" />
+    <data_values name="横帆" Min="-15" Max="-5" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="2" Max="4" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造6" Citys="オスロ、エディンバラ、プリマス、アントワープ、セウタ、ラグーザ、トリエステ、オデッサ、カッファ" NPC="船大工" Materials="鉄材30" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="ロープ" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製6" Citys="ナント、オポルト、アルジェ、ラスパルマス、ゴア、カルカッタ" NPC="船大工" Materials="黄麻30" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="強化ロープ" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="20" Max="40" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製8" Citys="リオデジャネイロ、ヴェラクルス" NPC="船大工" Materials="黄麻10、サイザル麻20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊加工ロープ" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="-6" Max="-2" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製15" Citys="ヴェラクルス、リオデジャネイロ" NPC="船大工" Materials="特注サルベージロープ1、特注曳航補助ロープ1、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="小マスト" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="5" Max="15" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸4" Citys="各国本拠地" NPC="製材職人" Materials="鉄材10、木材20、ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="中マスト" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="10" Max="20" />
+    <data_values name="横帆" Min="10" Max="20" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8" Citys="オポルト、ラグーザ、ハンブルグ、ナント" NPC="製材職人" Materials="鉄材20、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="大マスト" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="15" Max="25" />
+    <data_values name="横帆" Min="15" Max="25" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12" Citys="各国占有開拓地" NPC="製材職人" Materials="鉄材30、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="解体道具一式" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造8" Citys="トレビゾント" NPC="船大工" Materials="木材20、大工道具10、破壊の大錐20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="火薬庫" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="4" Max="8" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="鋳造12" Citys="ベイルート" NPC="船大工" Materials="弾丸20、砲弾20、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="船体隔壁板" PartsType="兵装" ShipSizeType="中型、大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="鋳造12" Citys="江戸、安平、漢陽、泉州" NPC="船大工" Materials="東アジア造船技法書2、解体道具一式、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="甲板補強鉄板" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造13" Citys="江戸、安平、漢陽、泉州" NPC="船大工" Materials="東アジア造船技法書2、修理道具一式、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="轟音機雷" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="-4" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造13" Citys="ホルムズ" NPC="船大工" Materials="白い鉱石10、火薬10、鉛10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊機雷" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="-4" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造13" Citys="ポルトベロ" NPC="船大工" Materials="黒い泥10、火薬10、鉛10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊榴弾" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="2" Max="6" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造14" Citys="マッサワ" NPC="船大工" Materials="火薬10、砲弾10、烈火薬10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="鉛の砲弾" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="2" Max="6" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造14" Citys="カレー" NPC="船大工" Materials="黒い鉱石10、砲弾10、鉛10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特注万能ラム" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造15" Citys="ザンジバル" NPC="船大工" Materials="鉄材10、特大ラム、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="上質リギング" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="5" Max="15" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製6" Citys="各国本拠地" NPC="製帆職人" Materials="鉄材10、木材20、ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="投網" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製8" Citys="サロニカ" NPC="船大工" Materials="捕獲網25、ロープ、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="舫綱" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="2" Max="4" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製12" Citys="カリカット" NPC="船大工" Materials="加工鉄材、ロープ、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="纏絡網" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製12" Citys="アレクサンドリア" NPC="船大工" Materials="加工鉄材、ロープ、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="防舷綱" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製12" Citys="バイーア" NPC="船大工" Materials="麻生地30、ロープ、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="渡し綱" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="1" Max="3" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="縫製14" Citys="サントドミンゴ" NPC="船大工" Materials="加工鉄材、ロープ、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="石灰" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸5" Citys="アゾレス" NPC="船大工" Materials="巨大な岩5" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="救命艇" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="20" Max="40" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸5、造船13" Citys="各国占有開拓地、イスタンブール 所属国のドック管理人のみ、過去の亡命と投資は無効。" NPC="ドック管理人" Materials="救命具10、加工木材、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="掃海艇" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸6、造船13" Citys="カレー" NPC="造船所親方" Materials="望遠鏡、加工木材、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="マストトップ" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="5" Max="15" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8" Citys="ジェノヴァ" NPC="船大工" Materials="望遠鏡、加工木材、強化ロープ" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="修理道具一式" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8" Citys="ソファラ" NPC="船大工" Materials="大工道具10、予備帆10、予備舵10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="縫帆道具一式" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="0" Max="10" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8" Citys="各国占有開拓地、イスタンブール 所属国のドック管理人のみ、過去の亡命と投資は無効。" NPC="ドック管理人" Materials="麻生地30、大工道具10、裁縫道具20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="娯楽室" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="2" Max="6" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="工芸10" Citys="セイロン" NPC="船大工" Materials="気晴らしの酒樽10、安眠のハンモック10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="副官室" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="工芸12" Citys="ジャマイカ" NPC="船大工" Materials="洋書10、ベルベットのクッション、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="防汚塗装" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="0" Max="10" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="-2" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12" Citys="ヤッファ" NPC="塗装職人" Materials="黒い泥10、硫黄10、石灰" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="強襲船室" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="2" Max="6" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="工芸12" Citys="堺、淡水、浦項、澳門" NPC="船大工" Materials="東アジア造船技法書2、特殊船倉、加工木材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="工作室" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="-4" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="2" Max="6" />
+    <detail Skill="工芸13" Citys="ハンブルグ" NPC="船大工" Materials="木材30、大工道具10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特注軽量オール" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="-3" Max="-1" />
+    <data_values name="旋回" Min="2" Max="4" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸13" Citys="チュニス" NPC="船大工" Materials="鉄材20、木材40、加工木材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="診察室" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="2" Max="6" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="工芸13" Citys="イスタンブール" NPC="武器職人" Materials="手術道具10、傷薬詰め合わせ10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="船尾回廊" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="-2" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="2" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸13" Citys="アテネ" NPC="船大工" Materials="大型船尾楼、加工鉄材、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="東アジア貿易船倉" PartsType="兵装" ShipSizeType="中型、大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="2" Max="6" />
+    <detail Skill="工芸13" Citys="堺、淡水、浦項、澳門" NPC="船大工" Materials="東アジア造船技法書2、貯蔵庫、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="提督居室" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="2" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="工芸14" Citys="アデン" NPC="船大工" Materials="高級家具10、ワックス10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="司令塔" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸14" Citys="バレンシア" NPC="船大工" Materials="鉄材20、予備舵5、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特注大型オール" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="3" Max="5" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸14" Citys="セヴァストポリ" NPC="船大工" Materials="木材30、加工鉄材、加工木材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="船匠室" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="1" Max="3" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-4" Max="0" />
+    <detail Skill="工芸14" Citys="各国占有開拓地、イスタンブール 所属国のドック管理人のみ、過去の亡命と投資は無効。" NPC="ドック管理人" Materials="鉄材10、大工道具10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="貯蔵庫" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="-4" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="4" Max="8" />
+    <detail Skill="保管10" Citys="カーボヴェルデ" NPC="船大工" Materials="ネコの置物、ネコイラズ20、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="金庫" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="-4" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="4" Max="8" />
+    <detail Skill="保管12" Citys="リガ" NPC="船大工" Materials="鉄材20、鋼10、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊船倉" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="-6" Max="-2" />
+    <detail Skill="保管14" Citys="ケープ" NPC="船大工" Materials="木材30、加工木材、加工鉄材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="調理室" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="-4" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="2" Max="6" />
+    <detail Skill="調理12" Citys="ルアンダ" NPC="船大工" Materials="魚肉30、小麦粉30、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="シーダー装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸8、造船6" Citys="カンディア、ブレーメン、カサブランカ" NPC="船大工" Materials="木材10、硬化シーダー板、名工の大工道具" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="レッドパイン装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸9、造船6" Citys="カンディア、ブレーメン、カサブランカ" NPC="船大工" Materials="木材10、硬化レッドパイン板、名工の大工道具" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="ビーチ装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸10、造船6" Citys="カンディア、ブレーメン、カサブランカk" NPC="船大工" Materials="木材10、硬化ビーチ板、名工の大工道具" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="エルム装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸11、造船7" Citys="カンディア、ブレーメン、カサブランカ" NPC="船大工" Materials="木材15、硬化エルム板、名工の大工道具2" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="チーク装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸12、造船7" Citys="ヤッファ、マスリパタム、セイラ" NPC="船大工" Materials="名工の大工道具2、硬化チーク板、防汚塗装" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="オーク装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸13、造船8" Citys="カンディア、カサブランカ" NPC="船大工" Materials="船大工ののこぎり、硬化オーク板、防汚塗装" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="マホガニー装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸14、造船9" Citys="ヤッファ、マスリパタム" NPC="船大工" Materials="船大工ののこぎり、硬化マホガニー板、防汚塗装" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="ローズウッド装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="工芸15、造船11" Citys="ヤッファ、マスリパタム" NPC="船大工" Materials="船大工ののこぎり、硬化ローズウッド板、最高級染料6" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="銅張り装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造15、造船10" Citys="ナポリ、ファマガスタ、ダブリン" NPC="船大工" Materials="銅30、圧延銅板、名匠の鍛冶道具5" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="鉄張り装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造16、造船12" Citys="ナポリ、ファマガスタ、ダブリン" NPC="船大工" Materials="純鉄の板金5、圧延鉄板、名匠の鍛冶道具2" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="各国軍公用装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Skill="鋳造18、造船18" Citys="各国本拠地、※該当港にて2M以上投資必須" NPC="船大工" Materials="専用艦建造許可証3、特殊船塗料2（収奪）、鉄張り装材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="汎用小型船体" PartsType="船体" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、マディラ、マラガ" ShipType="帆船" Price="100,000" />
+  </ship_part>
+  <ship_part name="汎用中型船体" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、カンディア、ブレーメン、ナント、サロニカ" ShipType="帆船" Price="1,000,000" />
+  </ship_part>
+  <ship_part name="汎用大型船体" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="各国本拠地、中南米開拓地（中枢限定？）、東南アジア開拓地、（中枢限定）" ShipType="帆船" Price="5,000,000" />
+  </ship_part>
+  <ship_part name="汎用小型櫂船" PartsType="船体" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、マディラ、マラガ" ShipType="複合船" Price="100,000" />
+  </ship_part>
+  <ship_part name="汎用中型櫂船" PartsType="船体" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、カンディア、ブレーメン、ナント、サロニカ" ShipType="複合船" Price="1,000,000" />
+  </ship_part>
+  <ship_part name="汎用大型櫂船" PartsType="船体" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="各国本拠地、東南アジア開拓地（中枢限定）" ShipType="複合船" Price="5,000,000" />
+  </ship_part>
+  <ship_part name="汎用小型砲門" PartsType="大砲" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="2" Max="6" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、マディラ、マラガ" ShipType="すべて" Price="30,000" />
+  </ship_part>
+  <ship_part name="汎用中型砲門" PartsType="大砲" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="2" Max="6" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、カンディア、ブレーメン、ナント、サロニカ" ShipType="すべて" Price="300,000" />
+  </ship_part>
+  <ship_part name="汎用大型砲門" PartsType="大砲" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="2" Max="6" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="各国本拠地、東南アジア開拓地（中枢限定）" ShipType="すべて" Price="1,500,000" />
+  </ship_part>
+  <ship_part name="汎用小ラティーンセイル" PartsType="帆" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、マディラ、マラガ" ShipType="すべて" Price="30,000" />
+  </ship_part>
+  <ship_part name="汎用中ラティーンセイル" PartsType="帆" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、カンディア、ブレーメン、ナント、サロニカ" ShipType="すべて" Price="300,000" />
+  </ship_part>
+  <ship_part name="汎用大ラティーンセイル" PartsType="帆" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="5" Max="15" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="各国本拠地、東南アジア開拓地（中枢限定）" ShipType="すべて" Price="1,500,000" />
+  </ship_part>
+  <ship_part name="汎用小スクウェアセイル" PartsType="帆" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="5" Max="15" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、マディラ、マラガ" ShipType="すべて" Price="30,000" />
+  </ship_part>
+  <ship_part name="汎用中スクウェアセイル" PartsType="帆" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="5" Max="15" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、カンディア、ブレーメン、ナント、サロニカ" ShipType="すべて" Price="300,000" />
+  </ship_part>
+  <ship_part name="汎用大スクウェアセイル" PartsType="帆" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="5" Max="15" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="各国本拠地、東南アジア開拓地（中枢限定）" ShipType="すべて" Price="1,500,000" />
+  </ship_part>
+  <ship_part name="汎用小型増強板" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="50,000" />
+  </ship_part>
+  <ship_part name="汎用小型オール" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="1" Max="3" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="複合船" Price="50,000" />
+  </ship_part>
+  <ship_part name="汎用小型改良舵" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="汎用小型減揺水槽" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="1" Max="3" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="汎用小型装甲板" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="50,000" />
+  </ship_part>
+  <ship_part name="汎用小型拡張船室" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="2" Max="6" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="汎用小型拡張倉庫" PartsType="兵装" ShipSizeType="小型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="2" Max="6" />
+    <detail Citys="アントワープ、オポルト、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="汎用中型増強板" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、ボルドー、サロニカ" ShipType="すべて" Price="500,000" />
+  </ship_part>
+  <ship_part name="汎用中型オール" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="1" Max="3" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、ボルドー、サロニカ" ShipType="複合船" Price="500,000" />
+  </ship_part>
+  <ship_part name="汎用中型改良舵" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="汎用中型減揺水槽" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="1" Max="3" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="汎用中型装甲板" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、ボルドー、サロニカ" ShipType="すべて" Price="500,000" />
+  </ship_part>
+  <ship_part name="汎用中型拡張船室" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="2" Max="6" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="汎用中型拡張倉庫" PartsType="兵装" ShipSizeType="中型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="2" Max="6" />
+    <detail Citys="ナポリ、ベルゲン、ハンブルグ、アテネ、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="汎用大型増強板" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="10" Max="30" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ロンドン、リスボン" ShipType="すべて" Price="2,500,000" />
+  </ship_part>
+  <ship_part name="汎用大型オール" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="1" Max="3" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ヴェネツィア、イスタンブール" ShipType="複合船" Price="2,500,000" />
+  </ship_part>
+  <ship_part name="汎用大型改良舵" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="1" Max="3" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="ロンドン、マルセイユ" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+  <ship_part name="汎用大型減揺水槽" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="1" Max="3" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="セビリア、アムステルダム" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+  <ship_part name="汎用大型装甲板" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="1" Max="3" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="セビリア、イスタンブール" ShipType="すべて" Price="2,500,000" />
+  </ship_part>
+  <ship_part name="汎用大型拡張船室" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="2" Max="6" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="0" Max="0" />
+    <detail Citys="リスボン、ヴェネツィア" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+  <ship_part name="汎用大型拡張倉庫" PartsType="兵装" ShipSizeType="大型" IsGeneralPurpose="True">
+    <data_values name="耐久" Min="0" Max="0" />
+    <data_values name="縦帆" Min="0" Max="0" />
+    <data_values name="横帆" Min="0" Max="0" />
+    <data_values name="漕船" Min="0" Max="0" />
+    <data_values name="旋回" Min="0" Max="0" />
+    <data_values name="対波" Min="0" Max="0" />
+    <data_values name="装甲" Min="0" Max="0" />
+    <data_values name="船室" Min="0" Max="0" />
+    <data_values name="砲室" Min="0" Max="0" />
+    <data_values name="倉庫" Min="2" Max="6" />
+    <detail Citys="マルセイユ、アムステルダム" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+</ship_parts_root>

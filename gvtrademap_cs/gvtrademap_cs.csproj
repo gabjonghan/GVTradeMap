@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C62832A1-A407-4FB8-AF72-5AFBDED58ECF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gvtrademap_cs</RootNamespace>
+    <AssemblyName>gvtrademap_cs_</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>gvicon.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>B607B16883336FD101FBBC1333F205497689954D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>gvtrademap_cs_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2911.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.DirectDraw, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.DirectDraw.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cpubar.cs" />
+    <Compile Include="database\database.cs" />
+    <Compile Include="def.cs" />
+    <Compile Include="draw_infonames.cs" />
+    <Compile Include="favoriteroute.cs" />
+    <Compile Include="form\assembly_load_error_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\assembly_load_error_form.Designer.cs">
+      <DependentUpon>assembly_load_error_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\check_update_result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\check_update_result.Designer.cs">
+      <DependentUpon>check_update_result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\find_form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\find_form2.Designer.cs">
+      <DependentUpon>find_form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\sea_area_dd_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\sea_area_dd_form.Designer.cs">
+      <DependentUpon>sea_area_dd_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\sea_routes_form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\sea_routes_form2.Designer.cs">
+      <DependentUpon>sea_routes_form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\setting_form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\setting_form2.Designer.cs">
+      <DependentUpon>setting_form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\setting_sea_area_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\setting_sea_area_form.Designer.cs">
+      <DependentUpon>setting_sea_area_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="globalmouse_hook.cs" />
+    <Compile Include="gvo\gvo_build_ship_counter.cs" />
+    <Compile Include="gvo\gvo_capture.cs" />
+    <Compile Include="gvo\gvo_chat.cs" />
+    <Compile Include="form\gvtrademap_cs_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\gvtrademap_cs_form.Designer.cs">
+      <DependentUpon>gvtrademap_cs_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gvo\gvo_day_counter.cs" />
+    <Compile Include="gvo\gvo_server_service.cs" />
+    <Compile Include="gvotms_key_assign.cs" />
+    <Compile Include="LoadInfosStatus.cs" />
+    <Compile Include="myship_info.cs" />
+    <Compile Include="sprite_rects\infonameimage.cs" />
+    <Compile Include="window\info_windows.cs" />
+    <Compile Include="gvo\interest_days.cs" />
+    <Compile Include="database\item_database.cs" />
+    <Compile Include="latitude_longitude.cs" />
+    <Compile Include="lib.cs" />
+    <Compile Include="database\map_mark.cs" />
+    <Compile Include="form\map_mark_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\map_mark_form.Designer.cs">
+      <DependentUpon>map_mark_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sprite_rects\seainfonameimage.cs" />
+    <Compile Include="database\sea_area.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="window\setting_window.cs" />
+    <Compile Include="database\share_routes.cs" />
+    <Compile Include="form\share_routes_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\share_routes_form.Designer.cs">
+      <DependentUpon>share_routes_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gvo\speed_calculator.cs" />
+    <Compile Include="spot.cs" />
+    <Compile Include="transform.cs" />
+    <Compile Include="sprite_rects\icons.cs" />
+    <Compile Include="window\item_window.cs" />
+    <Compile Include="loop_x_image.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form\assembly_load_error_form.resx">
+      <DependentUpon>assembly_load_error_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\check_update_result.resx">
+      <DependentUpon>check_update_result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\find_form2.resx">
+      <DependentUpon>find_form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\sea_area_dd_form.resx">
+      <DependentUpon>sea_area_dd_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\sea_routes_form2.resx">
+      <DependentUpon>sea_routes_form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\setting_form2.resx">
+      <DependentUpon>setting_form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\setting_sea_area_form.resx">
+      <DependentUpon>setting_sea_area_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\gvtrademap_cs_form.resx">
+      <DependentUpon>gvtrademap_cs_form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\map_mark_form.resx">
+      <DependentUpon>map_mark_form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\share_routes_form.resx">
+      <DependentUpon>share_routes_form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="database\sea_routes.cs" />
+    <Compile Include="setting.cs" />
+    <Compile Include="database\web_icons.cs" />
+    <Compile Include="database\world_info.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gvicon.ico" />
+    <Content Include="image\country0.bmp" />
+    <Content Include="image\country00.bmp" />
+    <Content Include="image\country1.bmp" />
+    <Content Include="image\country2.bmp" />
+    <Content Include="image\country3.bmp" />
+    <Content Include="image\country4.bmp" />
+    <Content Include="image\country5.bmp" />
+    <Content Include="image\country6.bmp" />
+    <Content Include="image\memo_icon00.bmp" />
+    <Content Include="image\memo_icon01.bmp" />
+    <Content Include="image\memo_icon02.bmp" />
+    <Content Include="image\memo_icon03.bmp" />
+    <Content Include="image\memo_icon04.bmp" />
+    <Content Include="image\memo_icon05.bmp" />
+    <Content Include="image\memo_icon06.bmp" />
+    <Content Include="image\memo_icon07.bmp" />
+    <Content Include="image\memo_icon10.bmp" />
+    <Content Include="image\memo_icon11.bmp" />
+    <Content Include="image\memo_icon12.bmp" />
+    <Content Include="image\memo_icon13.bmp" />
+    <Content Include="image\memo_icon14.bmp" />
+    <Content Include="image\memo_icon15.bmp" />
+    <Content Include="image\memo_icon16.bmp" />
+    <Content Include="image\memo_icon17.bmp" />
+    <Content Include="image\memo_icon18.bmp" />
+    <Content Include="image\memo_icon19.bmp" />
+    <Content Include="image\memo_icon20.bmp" />
+    <Content Include="image\memo_icon21.bmp" />
+    <Content Include="xml\cityinfos.xml" />
+    <Content Include="xml\domaininfo.xml" />
+    <Content Include="xml\itemtype_db.xml" />
+    <Content Include="xml\item_db.txt" />
+    <Content Include="xml\ShipParts.xml" />
+    <Content Include="xml\webicons.txt" />
+    <Content Include="xml\worldinfos.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\library_cs\directx\directx.csproj">
+      <Project>{6EEA0CF2-156F-447E-B6F2-FDC84694C555}</Project>
+      <Name>directx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library_cs\gvo_base\gvo_base.csproj">
+      <Project>{E6E5BE93-1738-4C2D-9A4B-CBE82F1DF73C}</Project>
+      <Name>gvo_base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library_cs\gvo_net_base\gvo_net_base.csproj">
+      <Project>{549CDA71-5A96-487E-B792-E4F92DE19F4E}</Project>
+      <Name>gvo_net_base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library_cs\net\net.csproj">
+      <Project>{04613058-51B5-43A2-88A4-EED2FD674DBF}</Project>
+      <Name>net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library_cs\PanelManager\PanelManager.csproj">
+      <Project>{39516E11-15E5-476A-860C-73D59236E7D0}</Project>
+      <Name>PanelManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library_cs\utility\utility.csproj">
+      <Project>{154900C4-E988-4260-92CC-D546467A93FC}</Project>
+      <Name>utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>"c:\Program Files (x86)\Microsoft\ILMerge\ILMerge.exe" /out:gvtrademap_cs.exe $(TargetFileName) utility.dll directx.dll gvo_base.dll net.dll gvo_net_base.dll PanelManager.dll</PostBuildEvent>
+  </PropertyGroup>
+</Project>

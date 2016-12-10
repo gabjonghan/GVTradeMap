@@ -1,0 +1,103 @@
+worldmap.txt
+0	名前
+1	座標x(地図座標)
+2	座標y(地図座標)
+3	エリアインデックス	用途不明
+4	URLインデックス
+	クリスタル商会時はURL名(S-JISエンコードされて使用される)
+5	使用言語1
+	以下は特殊
+		上陸地点	
+		郊外		
+		海域		
+		奥地		
+		PF			
+6	使用言語2
+7	酒場インデックス
+		翻訳家と豪商は内部で調べてるので設定しないでよい
+		設定内容としては 0 or 1 or 2 or 3
+		// & 1	酒場娘、請負人、販売員
+		// & 2	書庫
+		// & 4	豪商
+		// & 8	翻訳家
+8	名前座標オフセットx(地図座標)	1からのオフセット	大きいアイコン用
+9	名前座標オフセットy(地図座標)	2からのオフセット	大きいアイコン用
+10	名前座標オフセットx(地図座標)	1からのオフセット	小さいアイコン用
+11	名前座標オフセットy(地図座標)	2からのオフセット	小さいアイコン用
+
+domainsindex.txt
+サーバの並び順に街を並べる
+補給港は含める必要がないが、ウシュアイアはすでに含まれてるのでほっておくこと
+東アジアの同盟国を変更できない街もとりあえず同様でいい
+本家がどうするかで含めるかどうかを決定すること
+
+0	名前
+1	街の種類
+	アイコンの種類を決定するため
+	0	首都
+	1	街
+	2	イスラム系の首都
+	3	イスラム系の街
+2	同盟の種類
+	同盟国を変更できなくするため
+	内部的には 0=unknown,1=同盟
+	データ指定は0=同盟となる
+	ちょっとややこしい
+	-1	不明
+	0	同盟
+	1	首都
+	2	領土
+	3	海賊島
+3	国
+	首都もしくは領土時に旗を固定させるため
+	0	unknown
+	1	England
+	2	Spain
+	3	Portugal
+	4	Netherlands
+	5	France
+	6	Venezia
+	7	Turkey
+4	文化圏
+	0	unknown,			
+	1	north_europe,		
+	2	germany,			
+	3	netherlands,		
+	4	britain,			
+	5	north_france,		
+	6	iberian,			
+	7	atlantic,			
+	8	italy_south_france,	
+	9	balkan,				
+	10	turkey,				
+	11	near_east,			
+	12	north_africa,		
+	13	west_africa,		
+	14	east_africa,		
+	15	arab,				
+	16	persia,				
+	17	india,				
+	18	indochina,			
+	19	southeast_asia,		
+	20	oceania,			
+	21	caribbean,			
+	22	east_latin_america,	
+	23	west_latin_america,	
+	24	china,				
+	25	japan,				
+	26	taiwan,				
+	27	korea,				
+	28	north_america,		
+5	名前の絵データの有無
+	1	有り
+	0	無し
+
+seainfo.txt
+海域情報
+主に風向き情報
+0	名前
+1	座標x(地図座標)	風向き描画位置の中心
+2	座標y(地図座標)
+3	夏の角度(degree)	int
+4	冬の角度(degree)	int
+5	速度上昇			int
