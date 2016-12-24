@@ -3,7 +3,7 @@
 	partial class gvtrademap_cs_form
 	{
 		/// <summary>
-		/// 必要なデザイナ変数です. 
+		/// 必要なデザイナ変수です. 
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
@@ -15,13 +15,13 @@
 		{
 			if (disposing && (components != null))
 			{
-				// ここに書かないと例外時スレッドを終了させられない?
-				// スレッドを終了させる
+				// ここに書かないと例외時스레드を종료させられない?
+				// 스레드を종료させる
 				finish_all_threads();
 
 				// アンマネージドリソースの破棄
 				if(m_db != null)	m_db.Dispose();
-				// libは必ず最後(Direct3D Deviceが最後に破棄される)
+				// libは必ず最후(Direct3D Deviceが最후に破棄される)
 				if(m_lib != null)	m_lib.Dispose();
 
 				components.Dispose();
@@ -92,9 +92,9 @@
 			// openpathToolStripMenuItem
 			// 
 			openpathToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openpathlogToolStripMenuItem,
-            this.openpathmailToolStripMenuItem,
-            this.openpathscreenshotToolStripMenuItem});
+			this.openpathlogToolStripMenuItem,
+			this.openpathmailToolStripMenuItem,
+			this.openpathscreenshotToolStripMenuItem});
 			openpathToolStripMenuItem.Name = "openpathToolStripMenuItem";
 			openpathToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
 			openpathToolStripMenuItem.Text = "대항해시대 온라인의 폴더 열기";
@@ -120,14 +120,14 @@
 			// contextMenuStrip1
 			// 
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_country0,
-            this.ToolStripMenuItem_country1,
-            this.ToolStripMenuItem_country2,
-            this.ToolStripMenuItem_country3,
-            this.ToolStripMenuItem_country4,
-            this.ToolStripMenuItem_country5,
-            this.ToolStripMenuItem_country6,
-            this.ToolStripMenuItem_country00});
+			this.ToolStripMenuItem_country0,
+			this.ToolStripMenuItem_country1,
+			this.ToolStripMenuItem_country2,
+			this.ToolStripMenuItem_country3,
+			this.ToolStripMenuItem_country4,
+			this.ToolStripMenuItem_country5,
+			this.ToolStripMenuItem_country6,
+			this.ToolStripMenuItem_country00});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(169, 180);
 			// 
@@ -218,21 +218,21 @@
 			// contextMenuStrip2
 			// 
 			this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.set_target_memo_icon_ToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.add_memo_icon_ToolStripMenuItem,
-            this.edit_memo_icon_ToolStripMenuItem,
-            this.remove_memo_icon_ToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.remove_all_target_memo_icon_ToolStripMenuItem,
-            this.remove_all_memo_icon_ToolStripMenuItem,
-            this.toolStripSeparator5,
-            this.openpathscreenshot2ToolStripMenuItem,
-            this.setseaareastateToolStripMenuItem,
-            openpathToolStripMenuItem,
-            this.toolStripSeparator7,
-            this.changeBorderStyleToolStripMenuItem,
-            this.closeFormToolStripMenuItem});
+			this.set_target_memo_icon_ToolStripMenuItem,
+			this.toolStripSeparator2,
+			this.add_memo_icon_ToolStripMenuItem,
+			this.edit_memo_icon_ToolStripMenuItem,
+			this.remove_memo_icon_ToolStripMenuItem,
+			this.toolStripSeparator1,
+			this.remove_all_target_memo_icon_ToolStripMenuItem,
+			this.remove_all_memo_icon_ToolStripMenuItem,
+			this.toolStripSeparator5,
+			this.openpathscreenshot2ToolStripMenuItem,
+			this.setseaareastateToolStripMenuItem,
+			openpathToolStripMenuItem,
+			this.toolStripSeparator7,
+			this.changeBorderStyleToolStripMenuItem,
+			this.closeFormToolStripMenuItem});
 			this.contextMenuStrip2.Name = "contextMenuStrip2";
 			this.contextMenuStrip2.Size = new System.Drawing.Size(329, 292);
 			// 
@@ -306,11 +306,11 @@
 			// setseaareastateToolStripMenuItem
 			// 
 			this.setseaareastateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exexgvoacToolStripMenuItem,
-            this.toolStripSeparator6,
-            this.normal_sea_area_ToolStripMenuItem,
-            this.safty_sea_area_ToolStripMenuItem,
-            this.lawless_sea_area_ToolStripMenuItem});
+			this.exexgvoacToolStripMenuItem,
+			this.toolStripSeparator6,
+			this.normal_sea_area_ToolStripMenuItem,
+			this.safty_sea_area_ToolStripMenuItem,
+			this.lawless_sea_area_ToolStripMenuItem});
 			this.setseaareastateToolStripMenuItem.Name = "setseaareastateToolStripMenuItem";
 			this.setseaareastateToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
 			this.setseaareastateToolStripMenuItem.Text = "해역변동 시스템 설정";
@@ -350,14 +350,14 @@
 			// contextMenuStrip3
 			// 
 			this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.spotToolStripMenuItem1,
-            this.clear_spotToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.open_recipe_wiki0_ToolStripMenuItem,
-            this.open_recipe_wiki1_ToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.copy_name_to_clipboardToolStripMenuItem,
-            this.copy_all_to_clipboardToolStripMenuItem});
+			this.spotToolStripMenuItem1,
+			this.clear_spotToolStripMenuItem,
+			this.toolStripSeparator4,
+			this.open_recipe_wiki0_ToolStripMenuItem,
+			this.open_recipe_wiki1_ToolStripMenuItem,
+			this.toolStripSeparator3,
+			this.copy_name_to_clipboardToolStripMenuItem,
+			this.copy_all_to_clipboardToolStripMenuItem});
 			this.contextMenuStrip3.Name = "contextMenuStrip3";
 			this.contextMenuStrip3.Size = new System.Drawing.Size(352, 148);
 			// 

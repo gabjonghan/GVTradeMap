@@ -30,7 +30,7 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	public class ShareRoutes
 	{
-		// バウンディングボックスサイズ
+		// 바운딩 박스사이즈
 		private const int					BB_ONCE_SIZE		= 400;
 		// 각도표시の長さ
 		private const float					ANGLE_LINE_LENGTH	= 48f;
@@ -76,7 +76,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 공유1배
-		 バウンディングボックス付き
+		 바운딩 박스付き
 		---------------------------------------------------------------------------*/
 		public class ShareShipListBB : D3dBB2d
 		{
@@ -93,7 +93,7 @@ namespace gvtrademap_cs
 			public ShareShipListBB()
 			{
 				m_list			= new List<ShareShip>();
-				// 適当なオフセット
+				// 적당なオフセット
 				base.OffsetLT	= new Vector2(-64, -8);
 				base.OffsetRB	= new Vector2( 64,  16);
 			}
@@ -107,10 +107,10 @@ namespace gvtrademap_cs
 				if(size.X > BB_ONCE_SIZE)	return false;
 				if(size.Y > BB_ONCE_SIZE)	return false;
 
-				// 追加
+				// 추가
 				m_list.Add(p);
 				base.Update(pos);
-				return true;		// 追加した
+				return true;		// 추가した
 			}
 		}
 
@@ -119,7 +119,7 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		private gvt_lib						m_lib;
 
-		// 정보取得はスレッドのため, ダブルバッファで行う
+		// 정보取得は스레드のため, ダブルバッファで行う
 		private bool						m_share_side;
 		private List<ShareShip>				m_share1;			// 공유정보
 		private List<ShareShip>				m_share2;			// 공유정보
@@ -132,10 +132,10 @@ namespace gvtrademap_cs
 		/*-------------------------------------------------------------------------
 		 
 		---------------------------------------------------------------------------*/
-		// 그리기用
+		// 그리기용
 		public List<ShareShip> ShareList{					get{	return (m_share_side)? m_share1 : m_share2;				}}
 		public List<ShareShipListBB> ShareListBB{			get{	return (m_share_side)? m_share_bb1 : m_share_bb2;		}}
-		// 업데이트用
+		// 업데이트용
 		private List<ShareShip> ShareUpdateList{			get{	return (m_share_side)? m_share2 : m_share1;				}}
 		private List<ShareShipListBB> ShareUpdateListBB{	get{	return (m_share_side)? m_share_bb2 : m_share_bb1;		}}
 	
@@ -157,7 +157,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 공유정보の取得と설정
-		 スレッド対応
+		 스레드대응
 		---------------------------------------------------------------------------*/
 		public void Share()
 		{
@@ -169,7 +169,7 @@ namespace gvtrademap_cs
 			
 		/*-------------------------------------------------------------------------
 		 공유정보の取得と설정
-		 スレッド対応
+		 스레드대응
 		---------------------------------------------------------------------------*/
 		public void Share(int x, int y, State _state)
 		{
@@ -187,11 +187,11 @@ namespace gvtrademap_cs
 			if(data == null)	return;
 
 			update_list(data);
-        }
+		}
 
 		/*-------------------------------------------------------------------------
 		 공유정보の取得と설정
-		 スレッド対応
+		 스레드대응
 		---------------------------------------------------------------------------*/
 		public void update_list(string data)
 		{
@@ -224,7 +224,7 @@ namespace gvtrademap_cs
 			// BB목록を업데이트する
 			update_bb_list();
 	
-			// 그리기用にフリップ
+			// 그리기용にフリップ
 			flip();
 
 			// 텍스쳐フォントリフレッシュリクエスト
@@ -245,7 +245,7 @@ namespace gvtrademap_cs
 				m_req_textured_font_reflesh	= false;
 			}
 	
-			// 그리기フラグが立ってないときは그리지않음
+			// 그리기플래그が立ってないときは그리지않음
 			if(!m_lib.setting.draw_share_routes)		return;
 
 			// 각도
@@ -271,7 +271,7 @@ namespace gvtrademap_cs
 
 			D3dBB2d.CullingRect	rect	= new D3dBB2d.CullingRect(image.Device.client_size);
 			foreach(ShareShipListBB bb in list){
-				// バウンディングボックスで화면外かどうか조사
+				// 바운딩 박스で화면외かどうか조사
 				if(bb.IsCulling(offset, image.ImageScale, rect))	continue;
 
 #if DRAW_POPUPS_BOUNDINGBOX
@@ -374,7 +374,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 이동ベクトルを得る
-		 BB用の矩形も업데이트する
+		 BB용の矩形も업데이트する
 		---------------------------------------------------------------------------*/
 		private void update_move_angle()
 		{
@@ -406,7 +406,7 @@ namespace gvtrademap_cs
 			List<ShareShip>			free_list		= new List<ShareShip>();
 			foreach(ShareShip s in update_list)	free_list.Add(s);
 	
-			// 適当に距離が近い그룹を作る
+			// 적당히 거리가 가까우면 그룹을 만듬
 			while(free_list.Count > 0){
 				update_bb_list.Add(create_bb(ref free_list));
 			}
@@ -423,7 +423,7 @@ namespace gvtrademap_cs
 			ShareShipListBB	bb	= new ShareShipListBB();
 			foreach(ShareShip i in old){
 				if(!bb.Add(i, m_lib.loop_image)){
-					// 追加されなかったら次회に회す
+					// 추가されなかったら次회に회す
 					free_list.Add(i);
 				}
 			}

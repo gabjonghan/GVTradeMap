@@ -29,15 +29,15 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	class setting_window : d3d_windows.window
 	{
-		// 위치とサイズ(サイズは自動で調整される)
+		// 위치と사이즈(사이즈は自動で조정される)
 		private const int				WINDOW_POS_X			= 3;
 		private const int				WINDOW_POS_Y			= 3;
 		private const float				WINDOW_POS_Z			= 0.2f;
-		private const int				WINDOW_SIZE_X			= 250;	// 初期サイズ
-		private const int				WINDOW_SIZE_Y			= 200;	// 初期サイズ
+		private const int				WINDOW_SIZE_X			= 250;	// 初期사이즈
+		private const int				WINDOW_SIZE_Y			= 200;	// 初期사이즈
 
-		// クライアントサイズ
-		// 세로は윈도우サイズから계산される
+		// クライアント사이즈
+		// 세로は윈도우사이즈から계산される
 		private const int				CLIENT_SIZE_X			= (16+4)*(int)setting_icons_index.max + 6;
 
 		// 配置간격
@@ -50,7 +50,7 @@ namespace gvtrademap_cs
 		private gvt_lib					m_lib;						// 
 		private GvoDatabase				m_db;						// DB
 
-		private hittest_list			m_hittest_list;				// 矩形管理
+		private hittest_list			m_hittest_list;				// 矩形관리
 	
 		private enum item_index{
 			setting,			// 설정
@@ -86,7 +86,7 @@ namespace gvtrademap_cs
 			m_lib					= lib;
 			m_db					= db;
 
-			// 아이템追加
+			// 아이템추가
 			m_hittest_list			= new hittest_list();
 
 			// 설정
@@ -343,8 +343,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시用の文字列を得る
-		 표시すべき文字列がない場合nullを返す
+		 ツールチップ표시용の문자열を得る
+		 표시すべき문자열がない場合nullを返す
 		---------------------------------------------------------------------------*/
 		override protected string OnToolTipStringClient(Point pos)
 		{
@@ -356,8 +356,8 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시用の文字列を得る
-		 표시すべき文字列がない場合nullを返す
+		 ツールチップ표시용の문자열を得る
+		 표시すべき문자열がない場合nullを返す
 		 설정아이콘
 		---------------------------------------------------------------------------*/
 		private string get_tooltip_string_setting(Point pos)
@@ -379,7 +379,7 @@ namespace gvtrademap_cs
 			case setting_icons_index.popup_day_interval:	tip	= "ふきだし표시"; break;
 			case setting_icons_index.accident:				tip	= "재해표시\n우클릭で표시항목설정"; break;
 			case setting_icons_index.center_my_ship:		tip	= "현재위치중心표시"; break;
-			case setting_icons_index.myship_angle:			tip	= "コンパスの각도선, 進路예상선표시\n우클릭で표시항목설정"; break;
+			case setting_icons_index.myship_angle:			tip	= "컴패스の각도선, 進路예상선표시\n우클릭で표시항목설정"; break;
 			case setting_icons_index.sea_area:				tip	= "위험해역변동시스템설정"; break;
 			case setting_icons_index.screen_shot:			tip	= "항로の스크린샷保存"; break;
 			case setting_icons_index.show_searoutes_list:	tip	= "항로도목록\n우클릭で항로도설정"; break;
@@ -390,7 +390,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 アサインされたキーの文字列を得る
+		 アサインされた키の문자열を得る
 		 アサインされていなければ""を返す
 		---------------------------------------------------------------------------*/
 		private string get_assign_shortcut_text(KeyFunction function)
@@ -402,8 +402,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시用の文字列を得る
-		 표시すべき文字列がない場合nullを返す
+		 ツールチップ표시용の문자열を得る
+		 표시すべき문자열がない場合nullを返す
 		 설정ボタン
 		---------------------------------------------------------------------------*/
 		private string get_tooltip_string_setting_button(Point pos)

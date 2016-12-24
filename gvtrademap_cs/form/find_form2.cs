@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
  전체검색
- モードレスダイアログとして使用すること
+ モードレスダイアログとして使용すること
 
 ---------------------------------------------------------------------------*/
 
@@ -80,13 +80,13 @@ namespace gvtrademap_cs
 			comboBox3.SelectedIndex		= (int)m_lib.setting.find_filter2;
 			comboBox4.SelectedIndex		= (int)m_lib.setting.find_filter3;
 	
-			// ヘッダのコラムを追加しておく
-			// コラムのサイズは覚えておく必要がある
+			// ヘッダのコラムを추가しておく
+			// コラムの사이즈は覚えておく必要がある
 			listView1.Columns.Add("찾은이름",	180);
 			listView1.Columns.Add("종류",	80);
 			listView1.Columns.Add("장소",	120);
 	
-			// 검색文字列を업데이트
+			// 검색문자열を업데이트
 			update_find_strings();
 			// 검색결과を업데이트
 			update_find_result(null);
@@ -99,8 +99,8 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		private void init_page2()
 		{
-			// ヘッダのコラムを追加しておく
-			// コラムのサイズは覚えておく必要がある
+			// ヘッダのコラムを추가しておく
+			// コラムの사이즈は覚えておく必要がある
 			listView2.Columns.Add("장소",	120);
 			listView2.Columns.Add("종류",	150);
 			listView2.Columns.Add("",	100);
@@ -114,8 +114,8 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		private void init_page3()
 		{
-			// ヘッダのコラムを追加しておく
-			// コラムのサイズは覚えておく必要がある
+			// ヘッダのコラムを추가しておく
+			// コラムの사이즈は覚えておく必要がある
 			listView3.Columns.Add("이름",	180);
 			listView3.Columns.Add("종류",	80);
 			listView3.Columns.Add(" ",	120);
@@ -147,7 +147,7 @@ namespace gvtrademap_cs
 
 			m_now_find		= true;
 
-			// 履歴に追加
+			// 履歴に추가
 			m_lib.setting.find_strings.Add(find_string);
 
 			// 좌표검색判定
@@ -164,7 +164,7 @@ namespace gvtrademap_cs
 				// 검색
 				List<GvoDatabase.Find>	results	= m_db.FindAll(find_string);
 
-				// 검색文字列を업데이트
+				// 검색문자열を업데이트
 				update_find_strings();
 				// 검색결과を업데이트
 				update_find_result(results);
@@ -228,13 +228,13 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 追加する
+		 추가する
 		---------------------------------------------------------------------------*/
 		private void add_item(ListView listview, GvoDatabase.Find i)
 		{
 			// フィルタ
 			if(i.Type != GvoDatabase.Find.FindType.CulturalSphere){
-				// 문화권以外のとき
+				// 문화권以외のとき
 				switch(m_lib.setting.find_filter){
 				case _find_filter.world_info:
 					if(i.Type == GvoDatabase.Find.FindType.Database)	return;
@@ -415,7 +415,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 목록内で우클릭された
+		 목록내で우클릭された
 		---------------------------------------------------------------------------*/
 		private void listView1_MouseClick(object sender, MouseEventArgs e)
 		{
@@ -424,7 +424,7 @@ namespace gvtrademap_cs
 			GvoDatabase.Find	tag		= get_selected_item_tag();
 			if(tag == null)								return;
 
-			// 표시위치調整
+			// 표시위치조정
 			Point		pos	= new Point(e.X, e.Y);
 
 			ItemDatabaseCustom.Data			db		= tag.Database;
@@ -436,16 +436,16 @@ namespace gvtrademap_cs
 			}else{
 				copy_all_to_clipboardToolStripMenuItem.Enabled	= true;
 				if(db.IsSkill || db.IsReport){
-					// スキルか보고
+					// 스킬か보고
 					open_recipe_wiki0_ToolStripMenuItem.Enabled	= false;
 					open_recipe_wiki1_ToolStripMenuItem.Enabled	= false;
 				}else{
 					if(db.IsRecipe){
-						// レシピ
+						// 레시피
 						open_recipe_wiki0_ToolStripMenuItem.Enabled	= true;
 						open_recipe_wiki1_ToolStripMenuItem.Enabled	= false;
 					}else{
-						// レシピ以外
+						// 레시피以외
 						open_recipe_wiki0_ToolStripMenuItem.Enabled	= false;
 						open_recipe_wiki1_ToolStripMenuItem.Enabled	= true;
 					}
@@ -455,8 +455,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 レシピ정보wikiを開く
-		 レシピ검색
+		 레시피정보wikiを開く
+		 레시피검색
 		---------------------------------------------------------------------------*/
 		private void open_recipe_wiki0_ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -467,8 +467,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 レシピ정보wikiを開く
-		 作成可能かどうか검색
+		 레시피정보wikiを開く
+		 작성가능かどうか검색
 		---------------------------------------------------------------------------*/
 		private void open_recipe_wiki1_ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -489,7 +489,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 詳細をクリップボードにコピーする
+		 디테일をクリップボードにコピーする
 		---------------------------------------------------------------------------*/
 		private void copy_all_to_clipboardToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -552,7 +552,7 @@ namespace gvtrademap_cs
 			label3.Text					= m_spot.spot_type_str;
 			listView2.Columns[2].Text	= m_spot.spot_type_column_str;
 			
-			// 목록の追加
+			// 목록の추가
 			foreach(spot.spot_once s in list){
 				ListViewItem	item	= new ListViewItem(s.info.Name, 0);
 				item.Tag				= s;
@@ -659,7 +659,7 @@ namespace gvtrademap_cs
 			listView3.BeginUpdate();
 			listView3.Items.Clear();
 
-			// 목록の追加
+			// 목록の추가
 			foreach(GvoDatabase.Find i in results){
 				add_item(listView3, i);
 			}

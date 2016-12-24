@@ -52,7 +52,7 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(312, 12);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "下記のエラー내용を보고してもらえると対応できるかもしれません. ";
+			this.label2.Text = "下記のエラー내용を보고してもらえると대응できるかもしれません. ";
 			// 
 			// textBox1
 			// 
@@ -121,7 +121,7 @@
 			this.Name = "error_form";
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "想定外のエラー";
+			this.Text = "想定외のエラー";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

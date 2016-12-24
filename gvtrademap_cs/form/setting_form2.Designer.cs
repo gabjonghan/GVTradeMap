@@ -1,33 +1,28 @@
-﻿namespace gvtrademap_cs
-{
-	partial class setting_form2
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+﻿namespace gvtrademap_cs {
+    partial class setting_form2 {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(setting_form2));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -251,8 +246,8 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
@@ -446,7 +441,7 @@
             this.groupBox3.Size = new System.Drawing.Size(183, 77);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "서버・자국";
+            this.groupBox3.Text = "서버 및 국가";
             // 
             // comboBox3
             // 
@@ -505,7 +500,7 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox14.Controls.Add(this.groupBox17);
             this.groupBox14.Controls.Add(this.textBox7);
@@ -551,12 +546,11 @@
             this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox7.Size = new System.Drawing.Size(293, 95);
             this.textBox7.TabIndex = 0;
-            this.textBox7.Text = "この모드は화면캡처정보, 로그분석정보をナビゲーションクライアントから得ます. \r\nこの모드はTCP서버を시작します. \r\nネットワークのセキュリティに注意が必要" +
-    "です. ";
+            this.textBox7.Text = "해당모드는 화면캡처정보, 로그분석정보를 네비게이션 클라이언트에서 얻습니다.\r\n해당모드는 TCP서버를 시작하게 됩니다.\r\n네크워크 보안에 주의가 필요합니다.";
             // 
             // groupBox15
             // 
-            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox15.Controls.Add(this.checkBox17);
             this.groupBox15.Controls.Add(this.groupBox16);
@@ -575,7 +569,7 @@
             this.checkBox17.Name = "checkBox17";
             this.checkBox17.Size = new System.Drawing.Size(192, 16);
             this.checkBox17.TabIndex = 23;
-            this.checkBox17.Text = "캡처した画상の詳細を표시する";
+            this.checkBox17.Text = "캡처한 화면의 디테일을 표시함";
             this.checkBox17.UseVisualStyleBackColor = true;
             // 
             // groupBox16
@@ -1104,7 +1098,7 @@
             this.checkBox310.Name = "checkBox310";
             this.checkBox310.Size = new System.Drawing.Size(100, 16);
             this.checkBox310.TabIndex = 23;
-            this.checkBox310.Text = "何かいい物";
+            this.checkBox310.Text = "무언가 좋은 물건";
             this.checkBox310.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox310.UseVisualStyleBackColor = true;
             // 
@@ -1130,7 +1124,7 @@
             this.checkBox308.Name = "checkBox308";
             this.checkBox308.Size = new System.Drawing.Size(112, 16);
             this.checkBox308.TabIndex = 21;
-            this.checkBox308.Text = "정체모를괴물";
+            this.checkBox308.Text = "정체모를 괴물";
             this.checkBox308.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox308.UseVisualStyleBackColor = true;
             // 
@@ -1379,7 +1373,7 @@
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(180, 16);
             this.checkBox13.TabIndex = 11;
-            this.checkBox13.Text = "선 그리기시의 톱니를 줄이기";
+            this.checkBox13.Text = "선 그리기시 부드럽게";
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
             // checkBox2
@@ -1537,7 +1531,7 @@
             this.groupBox13.Size = new System.Drawing.Size(464, 99);
             this.groupBox13.TabIndex = 14;
             this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "디바이스정보";
+            this.groupBox13.Text = "내 디스플레이 장치 정보";
             // 
             // textBox4
             // 
@@ -1738,7 +1732,7 @@
             // 
             // comboBox9
             // 
-            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox9.FormattingEnabled = true;
@@ -1824,138 +1818,138 @@
             this.groupBox21.ResumeLayout(false);
             this.ResumeLayout(false);
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private Controls.PanelManager panelManager1;
-		private Controls.ManagedPanel managedPanel1;
-		private Controls.ManagedPanel managedPanel2;
-		private System.Windows.Forms.ListBox listBox1;
-		private System.Windows.Forms.ToolTip toolTip1;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.GroupBox groupBox8;
-		private System.Windows.Forms.ComboBox comboBox8;
-		private System.Windows.Forms.GroupBox groupBox7;
-		private System.Windows.Forms.ComboBox comboBox5;
-		private System.Windows.Forms.GroupBox groupBox4;
-		private System.Windows.Forms.ComboBox comboBox7;
-		private System.Windows.Forms.ComboBox comboBox6;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.ComboBox comboBox3;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.GroupBox groupBox5;
-		private Controls.ManagedPanel managedPanel3;
-		private System.Windows.Forms.GroupBox groupBox9;
-		private System.Windows.Forms.CheckBox checkBox1;
-		private System.Windows.Forms.CheckBox checkBox9;
-		private System.Windows.Forms.GroupBox groupBox6;
-		private System.Windows.Forms.CheckBox checkBox6;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
-		private Controls.ManagedPanel managedPanel4;
-		private System.Windows.Forms.GroupBox groupBox10;
-		private Controls.ManagedPanel managedPanel5;
-		private System.Windows.Forms.GroupBox groupBox11;
-		private System.Windows.Forms.CheckBox checkBox16;
-		private System.Windows.Forms.CheckBox checkBox13;
-		private System.Windows.Forms.CheckBox checkBox2;
-		private System.Windows.Forms.CheckBox checkBox12;
-		private System.Windows.Forms.CheckBox checkBox10;
-		private System.Windows.Forms.CheckBox checkBox11;
-		private Controls.ManagedPanel managedPanel6;
-		private System.Windows.Forms.GroupBox groupBox12;
-		private System.Windows.Forms.GroupBox groupBox13;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.GroupBox groupBox14;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox6;
-		private System.Windows.Forms.TextBox textBox7;
-		private System.Windows.Forms.GroupBox groupBox15;
-		private System.Windows.Forms.CheckBox checkBox17;
-		private System.Windows.Forms.GroupBox groupBox16;
-		private System.Windows.Forms.ComboBox comboBox4;
-		private System.Windows.Forms.CheckBox checkBox3;
-		private System.Windows.Forms.CheckBox checkBox5;
-		private System.Windows.Forms.RadioButton radioButton2;
-		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.GroupBox groupBox17;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.GroupBox groupBox18;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.LinkLabel linkLabel2;
-		private System.Windows.Forms.LinkLabel linkLabel1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.ImageList imageList1;
-		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.CheckBox checkBox105;
-		private System.Windows.Forms.CheckBox checkBox104;
-		private System.Windows.Forms.CheckBox checkBox103;
-		private System.Windows.Forms.CheckBox checkBox102;
-		private System.Windows.Forms.CheckBox checkBox101;
-		private System.Windows.Forms.CheckBox checkBox100;
-		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.CheckBox checkBox212;
-		private System.Windows.Forms.CheckBox checkBox211;
-		private System.Windows.Forms.CheckBox checkBox210;
-		private System.Windows.Forms.CheckBox checkBox209;
-		private System.Windows.Forms.CheckBox checkBox208;
-		private System.Windows.Forms.CheckBox checkBox207;
-		private System.Windows.Forms.CheckBox checkBox206;
-		private System.Windows.Forms.CheckBox checkBox205;
-		private System.Windows.Forms.CheckBox checkBox204;
-		private System.Windows.Forms.CheckBox checkBox203;
-		private System.Windows.Forms.CheckBox checkBox202;
-		private System.Windows.Forms.CheckBox checkBox201;
-		private System.Windows.Forms.CheckBox checkBox200;
-		private System.Windows.Forms.TabPage tabPage3;
-		private System.Windows.Forms.CheckBox checkBox310;
-		private System.Windows.Forms.CheckBox checkBox309;
-		private System.Windows.Forms.CheckBox checkBox308;
-		private System.Windows.Forms.CheckBox checkBox307;
-		private System.Windows.Forms.CheckBox checkBox306;
-		private System.Windows.Forms.CheckBox checkBox305;
-		private System.Windows.Forms.CheckBox checkBox304;
-		private System.Windows.Forms.CheckBox checkBox303;
-		private System.Windows.Forms.CheckBox checkBox302;
-		private System.Windows.Forms.CheckBox checkBox301;
-		private System.Windows.Forms.CheckBox checkBox300;
-		private System.Windows.Forms.TabPage tabPage4;
-		private System.Windows.Forms.CheckBox checkBox401;
-		private System.Windows.Forms.CheckBox checkBox402;
-		private System.Windows.Forms.CheckBox checkBox400;
-		private System.Windows.Forms.CheckBox checkBox403;
-		private System.Windows.Forms.CheckBox checkBox8;
-		private Controls.ManagedPanel managedPanel7;
-		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.CheckBox checkBox14;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.TextBox textBox8;
-		private System.Windows.Forms.GroupBox groupBox20;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox textBox9;
-		private System.Windows.Forms.GroupBox groupBox19;
-		private System.Windows.Forms.CheckBox checkBox18;
-		private System.Windows.Forms.CheckBox checkBox19;
-		private Controls.ManagedPanel managedPanel8;
-		private System.Windows.Forms.GroupBox groupBox21;
-		private System.Windows.Forms.ListView listView1;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.ComboBox comboBox9;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.CheckBox checkBox4;
-		private System.Windows.Forms.CheckBox checkBox7;
+        private Controls.PanelManager panelManager1;
+        private Controls.ManagedPanel managedPanel1;
+        private Controls.ManagedPanel managedPanel2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private Controls.ManagedPanel managedPanel3;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private Controls.ManagedPanel managedPanel4;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private Controls.ManagedPanel managedPanel5;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private Controls.ManagedPanel managedPanel6;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.CheckBox checkBox105;
+        private System.Windows.Forms.CheckBox checkBox104;
+        private System.Windows.Forms.CheckBox checkBox103;
+        private System.Windows.Forms.CheckBox checkBox102;
+        private System.Windows.Forms.CheckBox checkBox101;
+        private System.Windows.Forms.CheckBox checkBox100;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.CheckBox checkBox212;
+        private System.Windows.Forms.CheckBox checkBox211;
+        private System.Windows.Forms.CheckBox checkBox210;
+        private System.Windows.Forms.CheckBox checkBox209;
+        private System.Windows.Forms.CheckBox checkBox208;
+        private System.Windows.Forms.CheckBox checkBox207;
+        private System.Windows.Forms.CheckBox checkBox206;
+        private System.Windows.Forms.CheckBox checkBox205;
+        private System.Windows.Forms.CheckBox checkBox204;
+        private System.Windows.Forms.CheckBox checkBox203;
+        private System.Windows.Forms.CheckBox checkBox202;
+        private System.Windows.Forms.CheckBox checkBox201;
+        private System.Windows.Forms.CheckBox checkBox200;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.CheckBox checkBox310;
+        private System.Windows.Forms.CheckBox checkBox309;
+        private System.Windows.Forms.CheckBox checkBox308;
+        private System.Windows.Forms.CheckBox checkBox307;
+        private System.Windows.Forms.CheckBox checkBox306;
+        private System.Windows.Forms.CheckBox checkBox305;
+        private System.Windows.Forms.CheckBox checkBox304;
+        private System.Windows.Forms.CheckBox checkBox303;
+        private System.Windows.Forms.CheckBox checkBox302;
+        private System.Windows.Forms.CheckBox checkBox301;
+        private System.Windows.Forms.CheckBox checkBox300;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckBox checkBox401;
+        private System.Windows.Forms.CheckBox checkBox402;
+        private System.Windows.Forms.CheckBox checkBox400;
+        private System.Windows.Forms.CheckBox checkBox403;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private Controls.ManagedPanel managedPanel7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox checkBox19;
+        private Controls.ManagedPanel managedPanel8;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox15;
-	}
+    }
 }

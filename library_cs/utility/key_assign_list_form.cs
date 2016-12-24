@@ -1,5 +1,5 @@
 ﻿//-------------------------------------------------------------------------
-// キーアサイン
+// 키アサイン
 // 설정
 //-------------------------------------------------------------------------
 using System.Windows.Forms;
@@ -9,7 +9,7 @@ namespace Utility.KeyAssign
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// キーアサイン설정フォーム
+	/// 키アサイン설정フォーム
 	/// </summary>
 	public partial class KeyAssignListForm : Form
 	{
@@ -22,9 +22,9 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 構築
+		/// 구축
 		/// </summary>
-		/// <param name="assign_list">キーアサイン목록</param>
+		/// <param name="assign_list">키アサイン목록</param>
 		public KeyAssignListForm(KeyAssignList assign_list)
 		{
 			InitializeComponent();

@@ -1,8 +1,8 @@
 ﻿//-------------------------------------------------------------------------
-// ユニークな文字列
-// 空な文字列は追加されない
+// ユニークな문자열
+// 空な문자열は추가されない
 // 검색履歴등で사용する
-// 追加された文字列は先頭に追加される
+// 추가された문자열は先頭に추가される
 //-------------------------------------------------------------------------
 using System.Collections.Generic;
 using System.Collections;
@@ -12,10 +12,10 @@ namespace Utility
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// ユニークな文字列
-	/// 空な文字列は追加されない
+	/// ユニークな문자열
+	/// 空な문자열は추가されない
 	/// 검색履歴등で사용する
-	/// 追加された文字列は先頭に追加される
+	/// 추가された문자열は先頭に추가される
 	/// </summary>
 	public sealed class UniqueString : IEnumerable<string>
 	{
@@ -23,7 +23,7 @@ namespace Utility
 		private const int				MAX		= 20;
 		private const int				MIN		= 1;
 
-		private List<string>			m_strings;			// 重複しない文字列목록
+		private List<string>			m_strings;			// 중複しない문자열목록
 		private int						m_max;				// 保持する최대
 		#endregion
 
@@ -32,11 +32,11 @@ namespace Utility
 		/// <summary>
 		/// 내용の取得
 		/// </summary>
-		/// <param name="i">インデックス</param>
-		/// <returns>指定された내용</returns>
+		/// <param name="i">인덱스</param>
+		/// <returns>지정された내용</returns>
 		public string this[int i]		{		get{	return m_strings[i];	}}
 		/// <summary>
-		/// 保持数の取得
+		/// 保持수の取得
 		/// </summary>
 		public int Count				{		get{	return m_strings.Count;	}}
 		/// <summary>
@@ -45,7 +45,7 @@ namespace Utility
 		public string Top				{		get{	if(m_strings.Count <= 0)	return "";
 														return m_strings[0];	}}
 		/// <summary>
-		/// 최대保持数の取得と설정
+		/// 최대保持수の取得と설정
 		/// </summary>
 		public int Max					{		get{	return m_max;			}
 												set{	m_max	= value;
@@ -58,7 +58,7 @@ namespace Utility
 		#region Constructors
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 構築
+		/// 구축
 		/// </summary>
 		public UniqueString()
 		{
@@ -69,16 +69,16 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 配列に変換
+		/// 配열に변환
 		/// </summary>
-		/// <returns>変換された配列</returns>
+		/// <returns>변환された配열</returns>
 		public string[] ToArray()
 		{
 			return m_strings.ToArray();
 		}
 
 		//-------------------------------------------------------------------------
-		/// 列挙
+		/// 열挙
 		public IEnumerator<string> GetEnumerator()
 		{
 			for(int i=0; i<m_strings.Count; i++){
@@ -86,36 +86,36 @@ namespace Utility
 			}
 		}
 		IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+		{
+			return GetEnumerator();
+		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 追加
-		/// 追加されたらtrueを返す
-		/// 先頭に追加される
+		/// 추가
+		/// 추가されたらtrueを返す
+		/// 先頭に추가される
 		/// </summary>
-		/// <param name="str">追加する文字列</param>
-		/// <returns>追加されたらtrue</returns>
+		/// <param name="str">추가する문자열</param>
+		/// <returns>추가されたらtrue</returns>
 		public bool Add(string str)
 		{
 			if(string.IsNullOrEmpty(str))	return false;
 
 			// 삭제する
 			Remove(str);
-			// 先頭に追加
+			// 先頭に추가
 			m_strings.Insert(0, str);
 
-			// 최대数に収まるように調整する
+			// 최대수に収まるように조정する
 			ajust_count();
 			return true;
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 配列で설정
-		/// 설정ファイルからの読み込み用
+		/// 配열で설정
+		/// 설정파일からの읽기용
 		/// </summary>
 		/// <param name="list">목록</param>
 		public void SetRange(string[] list)
@@ -128,23 +128,23 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 追加
-		/// 最後に追加される
-		/// 追加されたらtrueを返す
-		/// 설정ファイルからの読み込み用
+		/// 추가
+		/// 最후に추가される
+		/// 추가されたらtrueを返す
+		/// 설정파일からの읽기용
 		/// </summary>
-		/// <param name="str">追加する文字列</param>
-		/// <returns>追加されたらtrue</returns>
+		/// <param name="str">추가する문자열</param>
+		/// <returns>추가されたらtrue</returns>
 		public bool AddLast(string str)
 		{
 			if(string.IsNullOrEmpty(str))	return false;
 
 			// 삭제する
 			Remove(str);
-			// 最後に追加
+			// 最후に추가
 			m_strings.Add(str);
 
-			// 최대数に収まるように調整する
+			// 최대수に収まるように조정する
 			ajust_count();
 			return true;
 		}
@@ -160,10 +160,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 一致する文字列を삭제する
+		/// 一致する문자열を삭제する
 		/// 삭제した場合はtrueを返す
 		/// </summary>
-		/// <param name="str">삭제する文字列</param>
+		/// <param name="str">삭제する문자열</param>
 		/// <returns>삭제したらtrue</returns>
 		public bool Remove(string str)
 		{
@@ -202,11 +202,11 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 保持数調整
+		/// 保持수조정
 		/// </summary>
 		private void ajust_count()
 		{
-			// 최대数に収まるように調整する
+			// 최대수に収まるように조정する
 			while(m_strings.Count > m_max){
 				m_strings.RemoveAt(m_strings.Count -1);
 			}

@@ -18,25 +18,25 @@ namespace Utility
 	{
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ダウンロード, ファイルに書き出す
+		/// ダウンロード, 파일に書き出す
 		/// </summary>
 		/// <param name="url">URL</param>
-		/// <param name="write_file_name">書き出し先ファイル명</param>
+		/// <param name="write_file_name">書き出し先파일명</param>
 		/// <returns>ダウンロードに成功した場合true</returns>
 		static public bool Download(string url, string write_file_name)
 		{
 			try{
-				//WebRequestの作成
+				//WebRequestの작성
 				HttpWebRequest	webreq = (HttpWebRequest)System.Net.WebRequest.Create(url);
 
 				//서버ーからの応答を受信するためのWebResponseを取得
 				HttpWebResponse	webres = (HttpWebResponse)webreq.GetResponse();
 
-				//応答データを受信するためのStreamを取得
+				//応答데이터を受信するためのStreamを取得
 				using(Stream strm = webres.GetResponseStream()){
-					//ファイルに書き込むためのFileStreamを作成
+					//파일に書き込むためのFileStreamを작성
 					using(FileStream fs = new FileStream(write_file_name, FileMode.Create, FileAccess.Write)){
-						//応答データをファイルに書き込む
+						//応答데이터を파일に書き込む
 						byte[] readData = new byte[1024*8];
 						int readSize = 0;
 						while((readSize = strm.Read(readData, 0, readData.Length)) != 0){
@@ -53,15 +53,15 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ダウンロード, 文字列で返す. 
+		/// ダウンロード, 문자열で返す. 
 		/// </summary>
 		/// <param name="url">URL</param>
 		/// <param name="encoder">Encoding</param>
-		/// <returns>ダウンロードした文字列, 실패した場合nullを返す</returns>
+		/// <returns>ダウンロードした문자열, 실패した場合nullを返す</returns>
 		static public string Download(string url, Encoding encoder)
 		{
 			try{
-				//WebRequestの作成
+				//WebRequestの작성
 				HttpWebRequest	webreq = (HttpWebRequest)System.Net.WebRequest.Create(url);
 
 				//서버ーからの応答を受信するためのWebResponseを取得

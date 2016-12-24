@@ -46,9 +46,9 @@ namespace win32
 		[DllImport("user32.dll")]
 		public static extern void ReleaseDC(IntPtr hWnd, IntPtr hDC);
 
-        //키보드イベント処理
-        [DllImport("user32.dll")]
-        public static extern int keybd_event(int VK, int scan, int flags,int extinfo);
+		//키보드イベント処理
+		[DllImport("user32.dll")]
+		public static extern int keybd_event(int VK, int scan, int flags,int extinfo);
 
 		[DllImport("user32.dll")]
 		public static extern short GetKeyState(int nVirtKey);
@@ -141,8 +141,8 @@ namespace win32
 	/*-------------------------------------------------------------------------
 	 
 	---------------------------------------------------------------------------*/
-    public class gdi32
-    {
+	public class gdi32
+	{
 		[DllImport("gdi32.dll", EntryPoint = "CreateDCA")]
 		public static extern IntPtr CreateDC(string lpDriverName, string lpDeviceName, string lpOutput, string lpInitData);
 
@@ -172,7 +172,7 @@ namespace win32
 	/*-------------------------------------------------------------------------
  
 	---------------------------------------------------------------------------*/
-    public class kernel32
+	public class kernel32
 	{
 		[DllImport("kernel32", CharSet = CharSet.Unicode, SetLastError = true)]
 		public static extern IntPtr LoadLibrary(string lpFileName);

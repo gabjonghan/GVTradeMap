@@ -19,7 +19,7 @@ using System.Net.Sockets;
 ---------------------------------------------------------------------------*/
 namespace net_base
 {
-	// データ受信イベントハンドラ
+	// 데이터受信イベントハンドラ
 	public delegate void ReceivedDataEventHandler(object sender, ReceivedDataEventArgs e);
 
 	/*-------------------------------------------------------------------------
@@ -163,12 +163,12 @@ namespace net_base
 				throw new ApplicationException("接続していません");
 			}
 			
-			// 文字列をByte型配列に変換
-			// EOTを追加する
+			// 문자열をByte형配열に변환
+			// EOTを추가する
 			byte[] send_bytes	= m_encoding.GetBytes(str + "\u0004");
 
 			lock(m_sync_socket){
-				//データを送信する
+				//데이터を送信する
 				m_client.Send(send_bytes);
 			}
 		}
@@ -203,12 +203,12 @@ namespace net_base
 			// イベントを発生
 			OnConnected(new EventArgs());
 
-			// 非同期データ受信を開始する
+			// 非同期데이터受信を開始する
 			StartReceive();
 		}
 	
 		/*-------------------------------------------------------------------------
-		 非同期データ受信を開始する
+		 非同期데이터受信を開始する
 		---------------------------------------------------------------------------*/
 		public void StartReceive()
 		{
@@ -252,10 +252,10 @@ namespace net_base
 				return;
 			}
 
-			//受信したデータを取得する
+			//受信した데이터を取得する
 			byte[]	receive_buffer	= (byte[])ar.AsyncState;
 
-			//受信したデータを蓄積する
+			//受信した데이터を蓄積する
 			m_received_bytes.Write(receive_buffer, 0, len);
 
 			//최대値を超えた時は, 接続を닫기
@@ -264,12 +264,12 @@ namespace net_base
 				return;
 			}
 
-			//最後まで受信したか調べる
+			//最후まで受信したか調べる
 			if(m_received_bytes.Length >= 1){
 				m_received_bytes.Seek(-1, System.IO.SeekOrigin.End);
-				if(m_received_bytes.ReadByte() == (int)'\u0004'){	// 終了コードがあれば
-					// 最後まで受信した時
-					// 受信したデータを文字列に変換
+				if(m_received_bytes.ReadByte() == (int)'\u0004'){	// 종료コードがあれば
+					// 最후まで受信した時
+					// 受信した데이터を문자열に변환
 					string	str = m_encoding.GetString(m_received_bytes.ToArray());
 					m_received_bytes.Close();
 
@@ -283,14 +283,14 @@ namespace net_base
 					}
 					m_received_bytes	= new MemoryStream();
 				}else{
-					// 一番後ろにシークする
+					// 一番후ろにシークする
 					m_received_bytes.Seek(0, System.IO.SeekOrigin.End);
 				}
 			}
 
 			try{
 				lock(m_sync_socket){
-					// 再び受信開始
+					// 다시び受信開始
 					m_client.BeginReceive(	receive_buffer,
 											0, receive_buffer.Length,
 											SocketFlags.None,
@@ -324,7 +324,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 データを受信した
+		 데이터を受信した
 		---------------------------------------------------------------------------*/
 		protected virtual void OnReceivedData(ReceivedDataEventArgs e)
 		{

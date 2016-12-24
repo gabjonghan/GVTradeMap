@@ -33,16 +33,16 @@ namespace gvtrademap_cs
 		// from
 		// 0.99版の속도계산とあっているかどうかは확인していませんが, 본인で확인したところまで…
 		// 1.赤道上の一周=40075.1km
-		// 2.측량の数字では一周=16384point(と仮定)
-		// 3.リアルで1s=ゲームの0.4h
-		// 4.リアルで1s間ゲームの중で1ktで進むと(1.852km/h*0.4h=0.7408km)
+		// 2.측량の수字では一周=16384point(と仮定)
+		// 3.リアルで1s=게임の0.4h
+		// 4.リアルで1s間게임の중で1ktで進むと(1.852km/h*0.4h=0.7408km)
 		// 5.0.7408kmは측량で0.3029point
 		// 1kt=0.3029point/real_second
 		// たとえばリアル1s間6point動いたら (6/0.3029)*(0.3029point/1real_second)=約20kt
 		private const float						MAP_KNOT_RATE	= 0.3029f;
 	
 		/*-------------------------------------------------------------------------
-		 계산用
+		 계산용
 		---------------------------------------------------------------------------*/
 		class data
 		{
@@ -79,13 +79,13 @@ namespace gvtrademap_cs
 		}
 		
 		// 保持する최대간격
-		// 少なくとも계산用の간격よりも대きいこと
+		// 少なくとも계산용の간격よりも대きいこと
 		private const int						LIST_INTERVAL_MAX			= 120*1000;
-//		// 속도계산用최저간격
+//		// 속도계산용최저간격
 //		private const int						CALC_INTERVAL_MIN			= 6*1000;
-		// 속도계산用최대간격
+		// 속도계산용최대간격
 		private const int						CALC_INTERVAL_MAX			= 20*1000;
-//		// 최저간격と최대간격での속도差がこの値未満なら최대간격の속도を採用する
+//		// 최저간격と최대간격での속도差がこの値未満なら최대간격の속도を採용する
 //		private const float						CALC_INTERVAL_GAP_RATE_MAX	= 0.05f;
 
 		// 각도계산時の최저계산간격
@@ -95,29 +95,29 @@ namespace gvtrademap_cs
 		// 각도계산時の最高계산간격
 		// 간격が広いほど誤差が少なくなるが, リアルタイム性が落ちる
 		private const int						CALC_ANGLE_MAX_INTERVAL		= 60*1000;
-		// 각도계산時の精도を求めるためのもの
+		// 각도계산時の정확도を求めるためのもの
 		private const int						CALC_ANGLE_MAX_PRECISION_COUNTS	= 
 			((CALC_ANGLE_MAX_INTERVAL-CALC_ANGLE_MIN_INTERVAL)/CALC_ANGLE_STEP_INTERVAL) +1;
 
 		// 최대각도差(degree)
-		// 각도差のため+-で指定する倍の범위が유효
+		// 각도差のため+-で지정する배の범위が유효
 		private const float						ANGLE_GAP_MAX				= 2;
 
 		/*-------------------------------------------------------------------------
 		 
 		---------------------------------------------------------------------------*/
-		private List<data>						m_length_list;		// 속도계산用위치목록
-		private List<data>						m_angle_list;		// 각도계산用목록
-		private int								m_map_size_x;		// X방향のループサイズ(측량좌표계)
+		private List<data>						m_length_list;		// 속도계산용위치목록
+		private List<data>						m_angle_list;		// 각도계산용목록
+		private int								m_map_size_x;		// X방향のループ사이즈(측량좌표계)
 
-		private float							m_interval;			// 追加インターバル
+		private float							m_interval;			// 추가インターバル
 		private Point							m_old_pos;			// 前회の위치
 	
 		private float							m_speed;			// 속도(측량좌표계)
 		private float							m_angle;			// 각도
 
-		private float							m_angle_gap_cos;	// 각도差用cos(θ)
-		private float							m_angle_precision;	// 각도の精도
+		private float							m_angle_gap_cos;	// 각도差용cos(θ)
+		private float							m_angle_precision;	// 각도の정확도
 																	// 0～1
 
 		private bool							m_req_reset_angle;	// 각도계산の리셋
@@ -135,7 +135,7 @@ namespace gvtrademap_cs
 		public float speed_km			{		get{	return MapToKmSpeed(m_speed);	}}
 		// 각도(degree)
 		public float angle				{		get{	return m_angle;					}}
-		// 각도の精도(0～1)
+		// 각도の정확도(0～1)
 		public float angle_precision	{		get{	return m_angle_precision;		}}
 
 //		public bool is_speed2			{		get{	return m_is_speed2;				}}
@@ -164,8 +164,8 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 위치を追加
-		 intervalはミリ초指定
+		 위치を추가
+		 intervalはミリ초지정
 		 1000 = 1초
 		---------------------------------------------------------------------------*/
 		public void Add(Point pos, int interval)
@@ -198,7 +198,7 @@ namespace gvtrademap_cs
 			// 각도	
 			m_angle_list.Add(new data(pos, m_interval));
 
-			// 목록サイズを調整する
+			// 목록사이즈を조정する
 			ajust_list_size(m_length_list);
 			ajust_list_size(m_angle_list);
 	
@@ -213,7 +213,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 データサイズを調整する
+		 데이터사이즈を조정する
 		---------------------------------------------------------------------------*/
 		private void ajust_list_size(List<data> list)
 		{
@@ -228,8 +228,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 간격のみ追加
-		 측량の캡처に실패したとき用
+		 간격のみ추가
+		 측량の캡처に실패したとき용
 		---------------------------------------------------------------------------*/
 		public void AddIntervalOnly(int interval)
 		{
@@ -256,7 +256,7 @@ namespace gvtrademap_cs
 				m_speed		= speed2;
 				m_is_speed2	= true;
 			}else{
-				// 방향転換등でリアルタイム性が高いことが望まれる속도
+				// 방향전換등でリアルタイム性が高いことが望まれる속도
 				m_speed		= speed1;
 				m_is_speed2	= false;
 			}
@@ -271,12 +271,12 @@ namespace gvtrademap_cs
 				l			+= m_length_list[i].length;
 				interval	+= m_length_list[i].interval;
 				if(interval >= CALC_INTERVAL_MAX){
-					// 安定する속도が得られる時間が得られた
+					// 安定する속도が得られる시간が得られた
 					break;
 				}
 			}
 
-			// 安定する속도が得られるサンプル数でなくても
+			// 安定する속도が得られるサンプル수でなくても
 			// 속도は求めておく
 
 			// 1초에進んだ距離
@@ -397,7 +397,7 @@ namespace gvtrademap_cs
 				Vector2		v_tmp	= transform.SubVector_LoopX(pos, p, m_map_size_x);
 				v_tmp.Normalize();				// 正規化
 				if(v_tmp.LengthSq() >= 0.7f){
-					// ベクトルの長さが短すぎた場合追加しない
+					// ベクトルの長さが短すぎた場合추가しない
 					v_list.Add(v_tmp);
 				}
 			}
@@ -420,7 +420,7 @@ namespace gvtrademap_cs
 				for(int i=1; i<v_list.Count; i++){
 					// 각도差を得る
 					float	cos	= Vector2.Dot(v, v_list[i]);
-					// 각도差が대きすぎなら終了
+					// 각도差が대きすぎなら종료
 					if(cos <= m_angle_gap_cos)		break;
 
 					// 安定した각도
@@ -431,7 +431,7 @@ namespace gvtrademap_cs
 				v	= v2;
 			}
 
-			// 진행방향精도
+			// 진행방향정확도
 			m_angle_precision	= (float)precision / CALC_ANGLE_MAX_PRECISION_COUNTS;
 
 			// 표시向け각도をデグリーで得る	
@@ -440,7 +440,7 @@ namespace gvtrademap_cs
 			// 동が0도になってるので, 북を0도にする
 			m_angle		+= 90;
 			// -180 ～ +180
-			//    0 ～  360 に調整する
+			//	0 ～  360 に조정する
 			while(m_angle < 0)		m_angle		+= 360;
 			while(m_angle >= 360)	m_angle		-= 360;
 		}

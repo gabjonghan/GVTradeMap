@@ -74,7 +74,7 @@
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(82, 12);
 			this.label6.TabIndex = 5;
-			this.label6.Text = "現在の割り当て:";
+			this.label6.Text = "現在の할당:";
 			// 
 			// label7
 			// 
@@ -83,7 +83,7 @@
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(79, 12);
 			this.label7.TabIndex = 6;
-			this.label7.Text = "新しい割り当て:";
+			this.label7.Text = "新しい할당:";
 			// 
 			// button1
 			// 
@@ -119,7 +119,7 @@
 			this.textBox1.Size = new System.Drawing.Size(245, 19);
 			this.textBox1.TabIndex = 0;
 			this.textBox1.TabStop = false;
-			this.textBox1.Text = "なし(割り当てたいキーを押してください)";
+			this.textBox1.Text = "なし(할당たい키を押してください)";
 			this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
 			// 
 			// label2
@@ -162,7 +162,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "キーの割り当て";
+			this.Text = "키の할당";
 			this.Shown += new System.EventHandler(this.key_assign_form_Shown);
 			this.ResumeLayout(false);
 			this.PerformLayout();

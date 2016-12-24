@@ -49,9 +49,9 @@ namespace gvtrademap_cs
 			Process.Start(def.DOWNLOAD_URL);
 		}
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }

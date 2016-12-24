@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 矩形切り取り型スプライト
+ 矩形切り取り형스프라이트
 
 ---------------------------------------------------------------------------*/
 
@@ -35,11 +35,11 @@ namespace directx
 			private Vector2[]			m_uv;
 
 			private	Vector2				m_lefttop;		// 左上のオフセット
-			private Vector2				m_size;			// サイズ
+			private Vector2				m_size;			// 사이즈
 
-            private Rectangle m_rect;
+			private Rectangle m_rect;
 
-            /*-------------------------------------------------------------------------
+			/*-------------------------------------------------------------------------
 
 			---------------------------------------------------------------------------*/
 			public Vector2[] offset	{	get{	return m_offset;	}}
@@ -55,14 +55,14 @@ namespace directx
 			{
 				m_lefttop		= offset;
 				m_size			= new Vector2(_rect.Width, _rect.Height);
-                m_rect          = _rect;
+				m_rect		  = _rect;
 
-                Vector2	uv0		= new Vector2(	(float)_rect.X / tex_size.X,
+				Vector2	uv0		= new Vector2(	(float)_rect.X / tex_size.X,
 												(float)_rect.Y / tex_size.Y);
 				Vector2	uv1		= new Vector2(	((float)_rect.X + _rect.Width) / tex_size.X,
 												((float)_rect.Y + _rect.Height) / tex_size.Y);
 
-				// 頂点정보설정用
+				// 頂点정보설정용
 				// offset
 				m_offset		= new Vector2[4];
 				m_offset[0]		= new Vector2(offset.X,				offset.Y);
@@ -77,32 +77,32 @@ namespace directx
 				m_uv[3]		= uv1;
 			}
 
-            internal void DumpRects(string bmp_file_name)
-            {
-                Debug.WriteLine("OBJDT\ticons_0[] = {");
-                Debug.WriteLine("\t{\t\"" + bmp_file_name + "\",");
-                Debug.WriteLine("\t\t\t0,\t\t// PaletteName");
-                Debug.WriteLine(string.Format("\t\t{0}, {1}, {2}, {3},", (object)this.m_rect.Left, (object)this.m_rect.Top, (object)this.m_rect.Right, (object)this.m_rect.Bottom));
-                Debug.WriteLine(string.Format("\t\t{0}, {1},", (object)((int)this.m_lefttop.X).ToString(), (object)((int)this.m_lefttop.Y).ToString()));
-                Debug.WriteLine("\t\t   0,\t   0,\t\t// Invers V , Invers H ");
-                Debug.WriteLine("\t\t   1,\t\t\t\t// Term");
-                Debug.WriteLine("\t\t   0,\t\t\t\t// Depth_Index");
-                Debug.WriteLine("\t\t   0,\t\t// name");
-                Debug.WriteLine("\t\t0,\t\t// bank");
-                Debug.WriteLine("\t\t   0,\t\t\t\t// optimize");
-                Debug.WriteLine("\t\t   0,\t\t\t\t// drawmode");
-                Debug.WriteLine("\t\t   0,\t\t\t\t// lock");
-                Debug.WriteLine("\t\t   0,\t\t\t\t// mode");
-                Debug.WriteLine("\t}");
-                Debug.WriteLine("};");
-            }
-        }
+			internal void DumpRects(string bmp_file_name)
+			{
+				Debug.WriteLine("OBJDT\ticons_0[] = {");
+				Debug.WriteLine("\t{\t\"" + bmp_file_name + "\",");
+				Debug.WriteLine("\t\t\t0,\t\t// PaletteName");
+				Debug.WriteLine(string.Format("\t\t{0}, {1}, {2}, {3},", (object)this.m_rect.Left, (object)this.m_rect.Top, (object)this.m_rect.Right, (object)this.m_rect.Bottom));
+				Debug.WriteLine(string.Format("\t\t{0}, {1},", (object)((int)this.m_lefttop.X).ToString(), (object)((int)this.m_lefttop.Y).ToString()));
+				Debug.WriteLine("\t\t   0,\t   0,\t\t// Invers V , Invers H ");
+				Debug.WriteLine("\t\t   1,\t\t\t\t// Term");
+				Debug.WriteLine("\t\t   0,\t\t\t\t// Depth_Index");
+				Debug.WriteLine("\t\t   0,\t\t// name");
+				Debug.WriteLine("\t\t0,\t\t// bank");
+				Debug.WriteLine("\t\t   0,\t\t\t\t// optimize");
+				Debug.WriteLine("\t\t   0,\t\t\t\t// drawmode");
+				Debug.WriteLine("\t\t   0,\t\t\t\t// lock");
+				Debug.WriteLine("\t\t   0,\t\t\t\t// mode");
+				Debug.WriteLine("\t}");
+				Debug.WriteLine("};");
+			}
+		}
 	
 		/*-------------------------------------------------------------------------
 
 		---------------------------------------------------------------------------*/
-		private Texture					m_texture;				// スプライト用텍스쳐
-		private	Vector2					m_texture_size;			// 텍스쳐サイズ
+		private Texture					m_texture;				// 스프라이트용텍스쳐
+		private	Vector2					m_texture_size;			// 텍스쳐사이즈
 		private List<rect>				m_rects;				// 矩形정보
 
 		/*-------------------------------------------------------------------------
@@ -114,11 +114,11 @@ namespace directx
 		public int rect_count			{	get{	return m_rects.Count;	}}
 
 		/*-------------------------------------------------------------------------
-		 ファイル명から構築
-		 통상DDSファイルを사용すること
+		 파일명から구축
+		 통상DDS파일を사용すること
 
-		 2のべき乗でない場合強制的に2のべき乗に変換されてしまうので注意
-		 2のべき乗で絵を作ること
+		 2의 거듭제곱이 아닌 경우 강제로 2의 거듭제곱으로 변환되므로 주의
+		 2의 제곱으로 그림을 만들것
 		---------------------------------------------------------------------------*/
 		public d3d_sprite_rects(d3d_device device, string fname)
 		{
@@ -134,12 +134,12 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 Streamから構築
-		 組み込みリソースからの構築用
-		 통상DDSファイルを사용すること
+		 Stream을 사용
+		 내장 리소스로부터 만들때
+		 통상DDS파일を사용すること
 
-		 2のべき乗でない場合強制的に2のべき乗に変換されてしまうので注意
-		 2のべき乗で絵を作ること
+		 2의 거듭제곱이 아닌 경우 강제로 2의 거듭제곱으로 변환되므로 주의
+		 2의 제곱으로 그림을 만들것
 		---------------------------------------------------------------------------*/
 		public d3d_sprite_rects(d3d_device device, Stream stream)
 		{
@@ -155,8 +155,8 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 矩形を追加
-		 矩形번호を返す
+		 사각형을 추가
+		 사각형 번호를 반환
 		---------------------------------------------------------------------------*/
 		public int AddRect(Vector2 offset, Rectangle _rect)
 		{
@@ -184,10 +184,10 @@ namespace directx
 			return m_rects[index];
 		}
 
-        protected void DumpRects(string bmp_file_name)
-        {
-            foreach (d3d_sprite_rects.rect rect in this.m_rects)
-                rect.DumpRects(bmp_file_name);
-        }
-    }
+		protected void DumpRects(string bmp_file_name)
+		{
+			foreach (d3d_sprite_rects.rect rect in this.m_rects)
+				rect.DumpRects(bmp_file_name);
+		}
+	}
 }

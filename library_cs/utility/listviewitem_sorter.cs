@@ -1,7 +1,7 @@
 ﻿//-------------------------------------------------------------------------
 // ListViewソート
-// 単純に文字列でソートされる
-// 数値に変換できる場合は数値でソートする
+// 単純に문자열でソートされる
+// 수値に변환できる場合は수値でソートする
 //-------------------------------------------------------------------------
 using System;
 using System.Windows.Forms;
@@ -13,13 +13,13 @@ namespace Utility.Ctrl
 	///-------------------------------------------------------------------------
 	/// <summary>
 	/// ListViewソート
-	/// 単純に文字列でソートされる
+	/// 単純に문자열でソートされる
 	/// </summary>
 	public class ListViewItemSorter
 	{
 		private int					m_sort_order;			// ソート方向
 		private int					m_default_sort_oder;	// ソート方向の初期値
-		private int					m_current_colum_index;	// 最後にソートした対象のコラム
+		private int					m_current_colum_index;	// 最후にソートした대상のコラム
 
 		///-------------------------------------------------------------------------
 		/// <summary>
@@ -35,7 +35,7 @@ namespace Utility.Ctrl
 
 		///-------------------------------------------------------------------------
 		/// <summary>
-		/// 構築
+		/// 구축
 		/// </summary>
 		public ListViewItemSorter()
 			: this(true)
@@ -44,7 +44,7 @@ namespace Utility.Ctrl
 
 		///-------------------------------------------------------------------------
 		/// <summary>
-		/// 初期値指定で構築
+		/// 初期値지정で구축
 		/// </summary>
 		/// <param name="is_default_sort_oder_normal">
 		/// trueのとき昇順でソートされる
@@ -91,7 +91,7 @@ namespace Utility.Ctrl
 
 		///-------------------------------------------------------------------------
 		/// <summary>
-		/// ソートオーダーを反転させる
+		/// ソートオーダーを反전させる
 		/// </summary>
 		public void FlipSortOrder()
 		{
@@ -101,15 +101,15 @@ namespace Utility.Ctrl
 		///-------------------------------------------------------------------------
 		/// <summary>
 		/// ソートする
-		/// ソート後, ソートオーダーは反転される
+		/// ソート후, ソートオーダーは反전される
 		/// </summary>
-		/// <param name="listview">ソート対象のListView</param>
-		/// <param name="colum_index">ソート対象のカラム번호</param>
+		/// <param name="listview">ソート대상のListView</param>
+		/// <param name="colum_index">ソート대상のカラム번호</param>
 		/// <returns></returns>
 		public bool Sort(ListView listview, int colum_index)
 		{
 			if(colum_index >= listview.Columns.Count){
-				// ソート対象のコラムがlistviewに存在しない
+				// ソート대상のコラムがlistviewに存在しない
 				return false;
 			}
 
@@ -119,7 +119,7 @@ namespace Utility.Ctrl
 
 			listview.ListViewItemSorter	= new ListViewItemComparer(colum_index, m_sort_order);
 			listview.Sort();
-			FlipSortOrder();	// ソート方向を反転
+			FlipSortOrder();	// ソート方向を反전
 			return true;
 		}
 
@@ -135,9 +135,9 @@ namespace Utility.Ctrl
 
 			///-------------------------------------------------------------------------
 			/// <summary>
-			/// 構築
+			/// 구축
 			/// </summary>
-			/// <param name="col">ソート対象のカラム번호</param>
+			/// <param name="col">ソート대상のカラム번호</param>
 			/// <param name="sortOrder">ソート順</param>
 			public ListViewItemComparer(int col, int sortOrder)
 			{
@@ -149,8 +149,8 @@ namespace Utility.Ctrl
 			/// <summary>
 			/// 比較メソッド
 			/// </summary>
-			/// <param name="x">比較対象1</param>
-			/// <param name="y">比較対象2</param>
+			/// <param name="x">比較대상1</param>
+			/// <param name="y">比較대상2</param>
 			/// <returns>比較결과</returns>
 			public int Compare(object x, object y)
 			{
@@ -165,7 +165,7 @@ namespace Utility.Ctrl
 				string	cmp1	= item1.SubItems[col].Text;
 				string	cmp2	= item2.SubItems[col].Text;
 
-				// 数値に変換できるか調べる
+				// 수値に변환できるか調べる
 				double val1, val2;
 				if(!Double.TryParse(cmp1, out val1))	return cmp_string(cmp1, cmp2) * sortOrder;
 				if(!Double.TryParse(cmp2, out val2))	return cmp_string(cmp1, cmp2) * sortOrder;
@@ -177,7 +177,7 @@ namespace Utility.Ctrl
 
 			///-------------------------------------------------------------------------
 			/// <summary>
-			/// 文字列での比較
+			/// 문자열での比較
 			/// </summary>
 			/// <param name="cmp1"></param>
 			/// <param name="cmp2"></param>

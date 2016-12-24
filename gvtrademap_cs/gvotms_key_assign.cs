@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
  
- キーアサイン
+ 키アサイン
 
 ---------------------------------------------------------------------------*/
 
@@ -85,7 +85,7 @@ namespace gvtrademap_cs
 			add_assign("지도の축척리셋", "지도", Keys.Home,										KEY_FUNCTION.map_reset_scale);
 			add_assign("지도を拡대", "지도", Keys.Add,													KEY_FUNCTION.map_zoom_in);
 			add_assign("지도を縮소", "지도", Keys.Subtract,											KEY_FUNCTION.map_zoom_out);
-			add_assign("ブルーライン리셋", "진행방향선", Keys.B,									KEY_FUNCTION.blue_line_reset);
+			add_assign("ブルー라인리셋", "진행방향선", Keys.B,									KEY_FUNCTION.blue_line_reset);
 			add_assign("장소해제", "해제", Keys.Escape,											KEY_FUNCTION.cancel_spot);
 			add_assign("항로도の선택해제", "해제", Keys.Escape,										KEY_FUNCTION.cancel_select_sea_routes);
 			add_assign("아이템윈도우の표시/최소화", "아이템윈도우", Keys.None,		KEY_FUNCTION.item_window_show_min);
@@ -97,7 +97,7 @@ namespace gvtrademap_cs
 			add_assign("@Web아이콘표시ON/OFF", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_02);
 			add_assign("메모아이콘표시ON/OFF", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_03);
 			add_assign("항로선표시ON/OFF", "설정윈도우", Keys.None,								KEY_FUNCTION.setting_window_button_04);
-			add_assign("日付ふきだし표시切り替え", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_05);
+			add_assign("일付ふきだし표시切り替え", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_05);
 			add_assign("재해ポップアップ표시ON/OFF", "설정윈도우", Keys.None,					KEY_FUNCTION.setting_window_button_06);
 			add_assign("현재위치중心표시ON/OFF", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_07);
 			add_assign("진행방향선표시ON/OFF", "설정윈도우", Keys.None,							KEY_FUNCTION.setting_window_button_08);
@@ -119,7 +119,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 기능の追加
+		 기능の추가
 		---------------------------------------------------------------------------*/
 		private void add_assign(string name, string group, Keys key, KEY_FUNCTION kf)
 		{
@@ -127,19 +127,19 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 キー入力から기능を得る
-		 同一のキーが割り当てられている場合전부の목록が返る
+		 키入力から기능を得る
+		 同一の키が할당られている場合전부の목록が返る
 		 KeyDownイベントから呼ばれることを期待している
-		 割り当てられた기능がない場合nullを返す
+		 할당られた기능がない場合nullを返す
 		---------------------------------------------------------------------------*/
 		public List<KEY_FUNCTION> KeysToFunction(KeyEventArgs e)
 		{
 			List<assign>	alist	= GetAssignedList(e);
-			if(alist == null)	return null;		// 割り当てられた기능はない
+			if(alist == null)	return null;		// 할당られた기능はない
 
 			List<KEY_FUNCTION>	list	= new List<KEY_FUNCTION>();
 			foreach(assign i in alist){
-				// 기능に변환して追加
+				// 기능に변환して추가
 				try{
 					KEY_FUNCTION	f	= (KEY_FUNCTION)i.Tag;
 					list.Add(f);

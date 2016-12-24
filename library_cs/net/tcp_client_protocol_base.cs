@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
  TCPクライアントベース
- 通信プロトコル実装用ベース
+ 通信プロトコル実装용ベース
 
 ---------------------------------------------------------------------------*/
 
@@ -36,8 +36,8 @@ namespace net_base
 		};
 	
 		// datas[0]はコマンド
-		// datas[1]からはデータ
-		// データ数はコマンドによって異なる
+		// datas[1]からは데이터
+		// 데이터수はコマンドによって異なる
 		public delegate void ReceivedCommandEventHandler(object sender, string[] datas);
 
 		private	string				m_protocol_name;		// プロトコル명
@@ -52,7 +52,7 @@ namespace net_base
 		public client_state state		{	get{	return m_state;		}}
 	
 		/*-------------------------------------------------------------------------
-		 クライアント用
+		 クライアント용
 		---------------------------------------------------------------------------*/
 		public tcp_client_protocol_base(string protocol_name, int version)
 			: base()
@@ -61,7 +61,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 서버用
+		 서버용
 		---------------------------------------------------------------------------*/
 		public tcp_client_protocol_base(string protocol_name, int version, Socket soc)
 			: base(soc)
@@ -81,12 +81,12 @@ namespace net_base
 			m_version			= version;				// プロトコル버전
 			m_state				= client_state.init;	// 初期化中
 	
-			// データ受信時のハンドラ
+			// 데이터受信時のハンドラ
 			base.ReceivedData	+= new ReceivedDataEventHandler(received_handler);
 		}
 
 		/*-------------------------------------------------------------------------
-		 データを送信する
+		 데이터を送信する
 		 commandには:を含んではいけない
 		 VERSIONという이름のcommandは予約されている
 		---------------------------------------------------------------------------*/
@@ -101,20 +101,20 @@ namespace net_base
 			}
 #if DEBUG
 			if(command == VERSION_COMMAND){
-				throw new Exception(VERSION_COMMAND + " という이름のコマンド명は指定できません");
+				throw new Exception(VERSION_COMMAND + " という이름のコマンド명は지정できません");
 			}
 #endif
 			base.Send(CreatePacket(command, datas));
 		}
 
 		/*-------------------------------------------------------------------------
-		 パケットを作成する
+		 パケットを작성함
 		---------------------------------------------------------------------------*/
 		static public string CreatePacket(string command, string[] datas)
 		{
 #if DEBUG
 			if(command.IndexOf(':') >= 0){
-				throw new Exception(": を含むプロトコル명は指定できません");
+				throw new Exception(": を含むプロトコル명は지정できません");
 			}
 #endif
 			string	packet	= command;
@@ -130,13 +130,13 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 データ受信
-		 データを분解してハンドラに渡す
+		 데이터受信
+		 데이터を분解してハンドラに渡す
 		---------------------------------------------------------------------------*/
 		private void received_handler(object sender, ReceivedDataEventArgs e)
 		{
 			string[]	datas	= e.received_string.Split(':');
-			if(datas.Length <= 0)	return;		// データエラー
+			if(datas.Length <= 0)	return;		// 데이터エラー
 
 			// 버전정보
 			if(datas[0] == VERSION_COMMAND){
@@ -151,7 +151,7 @@ namespace net_base
 					m_state		= client_state.error_version;
 					return;
 				}
-				// 通信可能
+				// 通信가능
 				m_state		= client_state.ready;
 				return;
 			}

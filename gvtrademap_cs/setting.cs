@@ -131,23 +131,23 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	public class GlobalSettings : IIniSaveLoad
 	{
-		// 항로도の保持数の初期値
+		// 항로도の保持수の初期値
 		private const int				DEF_SEAROUTES_GROUP_MAX			= 20;
 		private const int				DEF_TRASH_SEAROUTES_GROUP_MAX	= 200;
 
 		/*-------------------------------------------------------------------------
 		 
 		---------------------------------------------------------------------------*/
-		// 윈도우위치とサイズ
+		// 윈도우위치と사이즈
 		private Point					m_window_location;			// 윈도우위치
-		private Size					m_window_size;				// 윈도우サイズ
+		private Size					m_window_size;				// 윈도우사이즈
 
 		private Point					m_find_window_location;		// 검색윈도우위치
-		private Size					m_find_window_size;			// 검색윈도우サイズ
+		private Size					m_find_window_size;			// 검색윈도우사이즈
 		private bool					m_find_window_visible;		// 표시중のときtrue
 	
 		private Point					m_sea_routes_window_location;	// 항로목록윈도우위치
-		private Size					m_sea_routes_window_size;		// 항로목록윈도우サイズ
+		private Size					m_sea_routes_window_size;		// 항로목록윈도우사이즈
 		private bool					m_sea_routes_window_visible;	// 항로목록표시중のときtrue
 
 		private	bool					m_save_searoutes;			// 항로기록
@@ -164,16 +164,16 @@ namespace gvtrademap_cs
 		private GvoWorldInfo.Server			m_server;					// 서버
 		private GvoWorldInfo.Country			m_country;					// 자국
 		private MapIndex				m_map_index;				// 지도
-		private MapIcon				m_map_icon;					// 지도の아이콘サイズ
+		private MapIcon				m_map_icon;					// 지도の아이콘사이즈
 		private MapDrawNames			m_map_draw_names;			// 도시명などを그리기するかどうか
 		private string					m_share_group;				// 항로공유그룹명
 		private string					m_share_group_myname;		// 항로공유표시명
 		private int						m_searoutes_group_max;		// 覚えておく항로도の최대
 		private int						m_trash_searoutes_group_max;	// 覚えておくごみ箱항로도の최대
 		private bool					m_connect_network;			// ネットワークに연결する
-		private bool					m_hook_mouse;				// 마우스の進む/戻るボタンでスキル/도구窓を開く
+		private bool					m_hook_mouse;				// 마우스の進む/戻るボタンで스킬/도구窓を開く
 		private bool					m_windows_vista_aero;		// Aero모드
-		private bool					m_enable_analize_log_chat;	// 재해用に로그を분석する
+		private bool					m_enable_analize_log_chat;	// 재해용に로그を분석する
 		private bool					m_is_share_routes;			// 항로공유する
 		private CaptureIntervalIndex	m_capture_interval;			// 화면캡처간격
 		private bool					m_connect_web_icon;			// @Web아이콘をダウンロードする
@@ -181,25 +181,25 @@ namespace gvtrademap_cs
 		private TudeInterval			m_tude_interval;			// 위도, 경도그리기방법
 		private bool					m_use_mixed_map;			// 항로도즐겨찾기と合成された지도を사용する
 		private bool					m_window_top_most;			// 윈도우を常に最前面に표시する
-		private bool					m_enable_line_antialias;	// 선の그리기のギザギザを軽減する
-		private bool					m_enable_sea_routes_aplha;	// アクティブな항로도以外を半透明で그리기する
+		private bool					m_enable_line_antialias;	// 선の그리기のギザギザを경減する
+		private bool					m_enable_sea_routes_aplha;	// アクティブな항로도以외を반투명で그리기する
 		private SSFormat				m_ss_format;				// 스크린샷の書き出しフォーマット
 		private bool					m_remove_near_web_icons;	// 距離が近く同じ종류の@Web아이콘を목록から삭제する
-		private bool					m_draw_capture_info;		// 캡처の詳細を그리기する
+		private bool					m_draw_capture_info;		// 캡처の디테일を그리기する
 		private bool					m_is_server_mode;			// TCP서버모드
 		private int						m_port_index;				// 포트번호
 		private bool					m_is_mixed_info_names;		// 도시명を지도に合成する
 		private int						m_minimum_draw_days;		// 그리기する최저항해일수
-		private bool					m_enable_favorite_sea_routes_alpha;	// 즐겨찾기항로도を半透明で그리기する
+		private bool					m_enable_favorite_sea_routes_alpha;	// 즐겨찾기항로도を반투명で그리기する
 		private bool					m_draw_favorite_sea_routes_alpha_popup;	// 즐겨찾기항로도の재해ポップアップを그리기する
 		private	bool					m_debug_flag_show_potision;	// 정보윈도우の좌표を지도좌표계で표시する
-        private bool                    m_enable_dpi_scaling;       // DPIスケーリングに対応するフリをする
+		private bool					m_enable_dpi_scaling;	   // DPIスケーリングに대응するフリをする
 
 		// 표시関係
 		private string					m_select_info;				// 선택중の세계정보
 		private float					m_map_pos_x;				// 지도の그리기オフセット
 		private float					m_map_pos_y;				// 지도の그리기オフセット
-		private float					m_map_scale;				// 지도のスケール
+		private float					m_map_scale;				// 지도の스케일
 
 		// 윈도우상태
 		private bool					m_is_item_window_normal_size;	// 통상상태のときtrue
@@ -234,11 +234,11 @@ namespace gvtrademap_cs
 		private RequestCtrl			m_req_screen_shot;			// 스크린샷
 		private RequestCtrl			m_req_update_map;			// 지도の合成リクエスト
 
-		private RequestCtrl			m_req_centering_gpos;		// 特定のゲーム좌표をセンタリングするリクエスト
+		private RequestCtrl			m_req_centering_gpos;		// 特定の게임좌표をセンタリングするリクエスト
 		private Point					m_centering_gpos;			// センタリングする좌표
 
 		private RequestCtrl			m_req_spot_item;			// 장소リクエスト
-		private RequestCtrl			m_req_spot_item_changed;	// 장소リクエスト(対象변경)
+		private RequestCtrl			m_req_spot_item_changed;	// 장소リクエスト(대상변경)
 
 		/*-------------------------------------------------------------------------
 		 
@@ -355,7 +355,7 @@ namespace gvtrademap_cs
 		public SSFormat ss_format			{	get{	return m_ss_format;						}
 												set{	m_ss_format	= value;					}}
 
-		// 外부からの항로공유유효かどうかのチェック用
+		// 외부からの항로공유유효かどうかのチェック용
 		public bool enable_share_routes{
 			get{
 				if(!connect_network)			return false;		// インターネットに연결しない
@@ -440,8 +440,8 @@ namespace gvtrademap_cs
 																set{	m_draw_favorite_sea_routes_alpha_popup	= value;	}}
 		public bool debug_flag_show_potision				{	get{	return m_debug_flag_show_potision;		}
 																set{	m_debug_flag_show_potision	= value;	}}
-        public bool enable_dpi_scaling                      {   get{    return m_enable_dpi_scaling;  }
-                                                                set{    m_enable_dpi_scaling = value; }}
+		public bool enable_dpi_scaling					  {   get{	return m_enable_dpi_scaling;  }
+																set{	m_enable_dpi_scaling = value; }}
 
 		// 표시항목
 		public DrawSettingWebIcons draw_setting_web_icons{		get{	return m_draw_setting_web_icons;	}
@@ -487,16 +487,16 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		private void init()
 		{
-			// 윈도우위치とサイズ
+			// 윈도우위치と사이즈
 			window_location				= new Point(10, 10);
 			window_size					= new Size(640, 400);
-			// 검색윈도우위치とサイズ
+			// 검색윈도우위치と사이즈
 			find_window_size			= new Size(468, 320);
 			find_window_location		= new Point(window_location.X + ((window_size.Width / 2) - (find_window_size.Width / 2)),
 													window_location.Y + ((window_size.Height / 2) - (find_window_size.Height / 2)));
 			find_window_visible			= false;
 				
-			// 항로도목록윈도우위치とサイズ
+			// 항로도목록윈도우위치と사이즈
 			sea_routes_window_size		= new Size(690, 320);
 			sea_routes_window_location	= new Point(window_location.X + ((window_size.Width / 2) - (sea_routes_window_size.Width / 2)),
 													window_location.Y + ((window_size.Height / 2) - (sea_routes_window_size.Height / 2)));
@@ -507,7 +507,7 @@ namespace gvtrademap_cs
 			draw_web_icons				= false;
 			draw_icons					= false;
 			draw_sea_routes				= true;
-			draw_popup_day_interval		= 5;		// 5日
+			draw_popup_day_interval		= 5;		// 5일
 			draw_accident				= false;
 			center_myship				= false;
 			draw_myship_angle			= true;
@@ -544,8 +544,8 @@ namespace gvtrademap_cs
 			minimum_draw_days			= 0;
 			enable_favorite_sea_routes_alpha		= true;
 			draw_favorite_sea_routes_alpha_popup	= false;
-            debug_flag_show_potision    = false;
-            enable_dpi_scaling          = false;
+			debug_flag_show_potision	= false;
+			enable_dpi_scaling		  = false;
 
 			// 표시関係
 			select_info					= "";		// 선택なし
@@ -711,7 +711,7 @@ namespace gvtrademap_cs
 			s.enable_favorite_sea_routes_alpha		= enable_favorite_sea_routes_alpha;
 			s.draw_favorite_sea_routes_alpha_popup	= draw_favorite_sea_routes_alpha_popup;
 			s.debug_flag_show_potision	= debug_flag_show_potision;
-            s.enable_dpi_scaling        = enable_dpi_scaling;
+			s.enable_dpi_scaling		= enable_dpi_scaling;
 
 			// リクエストは전부취소
 			s.CancelAllRequests();
@@ -811,7 +811,7 @@ namespace gvtrademap_cs
 			this.enable_favorite_sea_routes_alpha		= s.enable_favorite_sea_routes_alpha;
 			this.draw_favorite_sea_routes_alpha_popup	= s.draw_favorite_sea_routes_alpha_popup;
 			this.debug_flag_show_potision	= s.debug_flag_show_potision;
-            this.enable_dpi_scaling         = s.enable_dpi_scaling;
+			this.enable_dpi_scaling		 = s.enable_dpi_scaling;
 
 			// リクエストは전부취소
 			CancelAllRequests();
@@ -823,12 +823,12 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 설정ファイル読み込み
+		 설정파일읽기
 		---------------------------------------------------------------------------*/
 		public void IniLoad(IIni p, string group)
 		{
 		
-			// 윈도우위치とサイズ
+			// 윈도우위치と사이즈
 			m_window_location.X		= p.GetProfile("window", "pos_x",	window_location.X);
 			m_window_location.Y		= p.GetProfile("window", "pos_y",	window_location.Y);
 			m_window_size.Width		= p.GetProfile("window", "size_x",	window_size.Width);
@@ -857,8 +857,8 @@ namespace gvtrademap_cs
 			draw_web_icons			= p.GetProfile("icon", "draw_web_icons",			draw_web_icons);
 
 			// ダイア로그설정항목
-            server                  = GvoWorldInfo.GetServerFromString(p.GetProfile("dialog", "server", server.ToString()));
-            country                 = GvoWorldInfo.GetCountryFromString(p.GetProfile("dialog", "country", country.ToString()));
+			server				  = GvoWorldInfo.GetServerFromString(p.GetProfile("dialog", "server", server.ToString()));
+			country				 = GvoWorldInfo.GetCountryFromString(p.GetProfile("dialog", "country", country.ToString()));
 			map						= MapIndex.Map1 + p.GetProfile("dialog", "map_index_new",	(int)map);
 			map_icon				= MapIcon.Big + p.GetProfile("dialog", "map_icon",	(int)map_icon);
 			map_draw_names			= MapDrawNames.Draw + p.GetProfile("dialog", "map_draw_names",	(int)map_draw_names);
@@ -889,7 +889,7 @@ namespace gvtrademap_cs
 			enable_favorite_sea_routes_alpha		= p.GetProfile("dialog", "enable_favorite_sea_routes_alpha",	enable_favorite_sea_routes_alpha);
 			draw_favorite_sea_routes_alpha_popup	= p.GetProfile("dialog", "draw_favorite_sea_routes_alpha_popup",	draw_favorite_sea_routes_alpha_popup);
 			debug_flag_show_potision	= p.GetProfile("dialog", "debug_flag_show_potision",	debug_flag_show_potision);
-            enable_dpi_scaling          = p.GetProfile("dialog", "enable_dpi_scaling", enable_dpi_scaling);
+			enable_dpi_scaling		  = p.GetProfile("dialog", "enable_dpi_scaling", enable_dpi_scaling);
 
 			// 표시関係
 			m_select_info			= p.GetProfile("map", "select_info",		m_select_info);
@@ -935,11 +935,11 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 설정ファイル書き出し
+		 설정파일書き出し
 		---------------------------------------------------------------------------*/
 		public void IniSave(IIni p, string group)
 		{
-			// 윈도우위치とサイズ
+			// 윈도우위치と사이즈
 			p.SetProfile("window", "pos_x",					window_location.X);
 			p.SetProfile("window", "pos_y",					window_location.Y);
 			p.SetProfile("window", "size_x",					window_size.Width);
@@ -1000,7 +1000,7 @@ namespace gvtrademap_cs
 			p.SetProfile("dialog", "enable_favorite_sea_routes_alpha",	enable_favorite_sea_routes_alpha);
 			p.SetProfile("dialog", "draw_favorite_sea_routes_alpha_popup",	draw_favorite_sea_routes_alpha_popup);
 			p.SetProfile("dialog", "debug_flag_show_potision",	debug_flag_show_potision);
-            p.SetProfile("dialog", "enable_dpi_scaling", enable_dpi_scaling);
+			p.SetProfile("dialog", "enable_dpi_scaling", enable_dpi_scaling);
 
 			// 표시関係
 			p.SetProfile("map", "select_info",				m_select_info);

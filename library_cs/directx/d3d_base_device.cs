@@ -30,7 +30,7 @@ namespace directx
 	{
 		public enum CreateType{
 			BestPerformance,				// デバイスの能力から最適なものを선택する
-			SoftwareVertexProcessing,		// 頂点をCPUが変換する
+			SoftwareVertexProcessing,		// 頂点をCPUが변환する
 		};
 	
 		private System.Windows.Forms.Form			m_form;
@@ -56,9 +56,9 @@ namespace directx
 		public CreateType create_type				{	get{	return m_create_type;		}}
 
 		/*-------------------------------------------------------------------------
-		 Deviceを作成する
-		 作成できなかったときの例外はスルーするので呼び出し側で対応すること
-		 CreateType.BestPerformanceで作成される
+		 Deviceを작성함
+		 작성できなかったときの例외はスルーするので呼び出し側で대응すること
+		 CreateType.BestPerformanceで작성される
 		---------------------------------------------------------------------------*/
 		public void Create(System.Windows.Forms.Form form, PresentParameters param)
 		{
@@ -66,9 +66,9 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 Deviceを作成する
-		 作成できなかったときの例外はスルーするので呼び出し側で対応すること
-		 CreateTypeを指定する
+		 Deviceを작성함
+		 작성できなかったときの例외はスルーするので呼び出し側で대응すること
+		 CreateTypeを지정する
 		---------------------------------------------------------------------------*/
 		public void Create(System.Windows.Forms.Form form, PresentParameters param, CreateType create_type)
 		{
@@ -76,17 +76,17 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 Deviceを作成する
-		 作成できなかったときの例外はスルーするので呼び出し側で対応すること
-		 CreateType, DeviceTypeを指定する
+		 Deviceを작성함
+		 작성できなかったときの例외はスルーするので呼び出し側で대응すること
+		 CreateType, DeviceTypeを지정する
 		---------------------------------------------------------------------------*/
 		public void Create(System.Windows.Forms.Form form, PresentParameters param, CreateType create_type, DeviceType device_type)
 		{
-			// 그리기対象
+			// 그리기대상
 			m_form				= form;
-			// デバイスタイプ
+			// デバイス타입
 			m_device_type		= device_type;
-			// 作成방법
+			// 작성방법
 			m_create_type		= create_type;
 
 			// デフォルトのアダプタ번호
@@ -94,7 +94,7 @@ namespace directx
 			// デバイスの能力を取得する
 			m_caps				= Manager.GetDeviceCaps(m_adapter_index, device_type);
 
-			// 作成パラメータ
+			// 작성パラメータ
 			m_present_params	= param;
 
 			// 
@@ -103,10 +103,10 @@ namespace directx
 			case CreateType.BestPerformance:
 				// 最適なものを選ぶ
 				if(m_caps.DeviceCaps.SupportsHardwareTransformAndLight){
-					// ハードウェアで頂点変換に対応している
+					// ハードウェアで頂点변환に대응している
 					m_create_flags	|= CreateFlags.HardwareVertexProcessing;
 				}else{
-					// ハードウェアで頂点変換に対応していない
+					// ハードウェアで頂点변환に대응していない
 					m_create_flags	|= CreateFlags.SoftwareVertexProcessing;
 				}
 				if(   (m_caps.DeviceCaps.SupportsPureDevice)
@@ -120,10 +120,10 @@ namespace directx
 				m_create_flags	|= CreateFlags.SoftwareVertexProcessing;
 				break;
 			default:
-				throw new Exception("CreateTypeの指定が不正");
+				throw new Exception("CreateTypeの지정が不正");
 			}
 
-			// デバイスを作成
+			// デバイスを작성
 			m_d3d_device	= new Device(	m_adapter_index, device_type, form,
 											m_create_flags, m_present_params);
 		}
@@ -160,7 +160,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기終了
+		 그리기종료
 		---------------------------------------------------------------------------*/
 		public virtual void End()
 		{
@@ -194,9 +194,9 @@ namespace directx
 		{
 			int	result;
 
-			// リセット可能かどうかをチェック
+			// リセット가능かどうかをチェック
 			if(!m_d3d_device.CheckCooperativeLevel(out result)){
-				// リセット可能ならリセット
+				// リセット가능ならリセット
 				if(result == (int)ResultCode.DeviceNotReset){
 					m_d3d_device.Reset(m_present_params);
 				}else if (result == (int)ResultCode.DeviceLost){
@@ -209,9 +209,9 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 指定されたフォーマットが사용可能かどうかを得る
-		 現在のデバイスを対象に調べる
-		 통상텍스쳐作成時にこの関数で결과を得るべきではない
+		 지정されたフォーマットが사용가능かどうかを得る
+		 現在のデバイスを대상に調べる
+		 통상텍스쳐작성時にこの関수で결과を得るべきではない
 		 初期化時に결과を知っておくこと
 		---------------------------------------------------------------------------*/
 		public bool CheckDeviceFormat(Usage usage, ResourceType resource_type, DepthFormat format)

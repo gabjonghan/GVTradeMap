@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 定数定義
+ 定수定義
 
 ---------------------------------------------------------------------------*/
 
@@ -20,11 +20,11 @@ namespace gvo_base
 	---------------------------------------------------------------------------*/
 	static public class gvo_def
 	{
-		// 대항해시대Onlineの윈도우검색用
+		// 대항해시대Onlineの윈도우검색용
 		public const string		GVO_CLASS_NAME				= "Greate Voyages Online Game MainFrame";
 		public const string		GVO_WINDOW_NAME				= "대항해시대 온라인";
 
-		// ユーザデータパス
+		// 유저데이터パス
 		public const string		GVO_USERDATA_PATH			= @"KOEI\GV Online\";
 		// 로그パス
 		public const string		GVO_LOG_PATH				= GVO_USERDATA_PATH + @"Log\Chat\";

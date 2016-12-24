@@ -1,9 +1,9 @@
 ﻿/*-------------------------------------------------------------------------
 
  Direct3D
- 텍스쳐化されたフォント
- Fontは非常に遅いので텍스쳐にレンダリングしてキャッシュする
- 텍스쳐はFontがレンダリングすることで作られる
+ 텍스쳐화시킨 폰트
+ Fontは非常に遅いので텍스쳐に렌더링して캐시する
+ 텍스쳐はFontが렌더링することで作られる
 
 ---------------------------------------------------------------------------*/
 
@@ -25,82 +25,79 @@ using System.Collections.Generic;
 /*-------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------*/
-namespace directx
-{
+namespace directx {
 	/*-------------------------------------------------------------------------
 
 	---------------------------------------------------------------------------*/
-	public class d3d_textured_font :IDisposable
-	{
+	public class d3d_textured_font : IDisposable {
 		/*-------------------------------------------------------------------------
 
 		---------------------------------------------------------------------------*/
-		public class textured_font : IDisposable
-		{
-			private string					m_str;			// 텍스쳐化された文字列
-			private Vector2					m_size;			// 文字列のサイズ
-															// 그리기時に사용する
-															// 텍스쳐サイズとは関係ない
-			private Vector2					m_texture_size;	// 텍스쳐サイズ
-			private Texture					m_texture;		// 그리기用텍스쳐
-			private int						m_ref_count;	// 参照회数
+		public class textured_font : IDisposable {
+			private string m_str;		   // 텍스쳐화된 문자열
+			private Vector2 m_size;		 // 문자열 크기
+											// 그리기時に사용する
+											// 텍스쳐사이즈와 관계없음
+			private Vector2 m_texture_size; // 텍스쳐사이즈
+			private Texture m_texture;	  // 그리기용텍스쳐
+			private int m_ref_count;	// 참조회수
 
 			/*-------------------------------------------------------------------------
 
 			---------------------------------------------------------------------------*/
-			public string	str				{	get{	return str;				}}
-			public Vector2	size			{	get{	return m_size;			}}
-			public Texture	texture			{	get{	return m_texture;		}}
-			public Vector2	texture_size	{	get{	return m_texture_size;	}}
-			public int		ref_count		{	get{	return m_ref_count;		}
-									internal	set{	m_ref_count	= value;	}}
+			public string str { get { return str; } }
+			public Vector2 size { get { return m_size; } }
+			public Texture texture { get { return m_texture; } }
+			public Vector2 texture_size { get { return m_texture_size; } }
+			public int ref_count {
+				get { return m_ref_count; }
+				internal set { m_ref_count = value; }
+			}
 
 			/*-------------------------------------------------------------------------
 
 			---------------------------------------------------------------------------*/
 			public textured_font(d3d_device device, string str, Microsoft.DirectX.Direct3D.Font font)
-				: this(device, str, font, Format.A8R8G8B8)
-			{
+				: this(device, str, font, Format.A8R8G8B8) {
 			}
-			public textured_font(d3d_device device, string str, Microsoft.DirectX.Direct3D.Font font, Format format)
-			{
-				m_ref_count			= 0;
-				m_str				= str;
-				try{
-					Rectangle	rect	= font.MeasureString(null, str, DrawTextFormat.None, Color.White);
-					m_size				= new Vector2(rect.Right, rect.Bottom);
+			public textured_font(d3d_device device, string str, Microsoft.DirectX.Direct3D.Font font, Format format) {
+				m_ref_count = 0;
+				m_str = str;
+				try {
+					Rectangle rect = font.MeasureString(null, str, DrawTextFormat.None, Color.White);
+					m_size = new Vector2(rect.Right, rect.Bottom);
 
-					// 텍스쳐を作成
-					// サイズは4の倍数とする
-					int		width		= (((int)m_size.X) + 3) & ~3;
-					int		height		= (((int)m_size.Y) + 3) & ~3;
-					m_texture_size		= new Vector2(width, height);
-					m_texture			= new Texture(device.device, width, height, 1,
+					// 텍스쳐を작성
+					// 사이즈は4の배수とする
+					int width = (((int)m_size.X) + 3) & ~3;
+					int height = (((int)m_size.Y) + 3) & ~3;
+					m_texture_size = new Vector2(width, height);
+					m_texture = new Texture(device.device, width, height, 1,
 														Usage.RenderTarget, format, Pool.Default);
-				}catch{
-					// 텍스쳐作成실패
-					m_size				= new Vector2(0,0);
-					m_texture_size		= new Vector2(0,0);
-					m_texture			= null;
+				} catch {
+					// 텍스쳐작성실패
+					m_size = new Vector2(0, 0);
+					m_texture_size = new Vector2(0, 0);
+					m_texture = null;
 					return;
 				}
 
-				// レンダーターゲットを指定
-				Surface	depth				= device.device.DepthStencilSurface;
-				Surface	backbuffer			= device.device.GetBackBuffer(0, 0, BackBufferType.Mono);
+				// 렌더링 타겟を지정
+				Surface depth = device.device.DepthStencilSurface;
+				Surface backbuffer = device.device.GetBackBuffer(0, 0, BackBufferType.Mono);
 
-				device.device.DepthStencilSurface	= null;		// zバッファなし
+				device.device.DepthStencilSurface = null;	   // zバッファなし
 				device.device.SetRenderTarget(0, m_texture.GetSurfaceLevel(0));
 
 				// 화면のクリア
-				device.Clear(ClearFlags.Target, Color.FromArgb(0,0,0,0));
-				// レンダリング
-				device.device.RenderState.ZBufferEnable	= false;
-				font.DrawText(null, str, new Point(0,0), Color.White);
-				device.device.RenderState.ZBufferEnable	= true;
+				device.Clear(ClearFlags.Target, Color.FromArgb(0, 0, 0, 0));
+				// 렌더링
+				device.device.RenderState.ZBufferEnable = false;
+				font.DrawText(null, str, new Point(0, 0), Color.White);
+				device.device.RenderState.ZBufferEnable = true;
 
-				// レンダーターゲットを元に戻す
-				device.device.DepthStencilSurface	= depth;
+				// 렌더링 타겟を元に戻す
+				device.device.DepthStencilSurface = depth;
 				device.device.SetRenderTarget(0, backbuffer);
 
 				backbuffer.Dispose();
@@ -110,169 +107,158 @@ namespace directx
 			/*-------------------------------------------------------------------------
 
 			---------------------------------------------------------------------------*/
-			public void Dispose()
-			{
-				if(m_texture != null)	m_texture.Dispose();
-				m_texture	= null;
+			public void Dispose() {
+				if (m_texture != null) m_texture.Dispose();
+				m_texture = null;
 			}
 		}
 
 		/*-------------------------------------------------------------------------
 
 		---------------------------------------------------------------------------*/
-		private d3d_device								m_device;
-		private Microsoft.DirectX.Direct3D.Font			m_font;
-		private Dictionary<string, textured_font>		m_map;
-		private Format									m_texture_format;
+		private d3d_device m_device;
+		private Microsoft.DirectX.Direct3D.Font m_font;
+		private Dictionary<string, textured_font> m_map;
+		private Format m_texture_format;
 
 		/*-------------------------------------------------------------------------
 
 		---------------------------------------------------------------------------*/
-		public int cash_count				{	get{	return m_map.Count;		}}
+		public int cash_count { get { return m_map.Count; } }
 
 		/*-------------------------------------------------------------------------
 
 		---------------------------------------------------------------------------*/
-		public d3d_textured_font(d3d_device device, Microsoft.DirectX.Direct3D.Font font)
-		{
-			m_device		= device;
-			m_font			= font;
-			m_map			= new Dictionary<string,textured_font>();
-			m_device.device.DeviceReset	+= new System.EventHandler(device_reset);
+		public d3d_textured_font(d3d_device device, Microsoft.DirectX.Direct3D.Font font) {
+			m_device = device;
+			m_font = font;
+			m_map = new Dictionary<string, textured_font>();
+			m_device.device.DeviceReset += new System.EventHandler(device_reset);
 
-			// A1R5G5B5のレンダーターゲットが사용可能か調べる
+			// A1R5G5B5の렌더링 타겟が사용가능か調べる
 			// 사용できない場合はA8R8G8B8を사용する
-			// Radeon系は사용可能
-			// NVIDIA系は사용不可
-			// Intel系はたぶん사용可能
-			m_texture_format	= Format.A1R5G5B5;
-			if(!m_device.CheckDeviceFormat(Usage.RenderTarget, ResourceType.Textures, Format.A1R5G5B5)){
-				// A1R5G5B5のレンダーターゲットが作れない
-				m_texture_format	= Format.A8R8G8B8;
+			// Radeon계は사용가능
+			// NVIDIA계は사용不可
+			// Intel계はたぶん사용가능
+			m_texture_format = Format.A1R5G5B5;
+			if (!m_device.CheckDeviceFormat(Usage.RenderTarget, ResourceType.Textures, Format.A1R5G5B5)) {
+				// A1R5G5B5の렌더링 타겟が作れない
+				m_texture_format = Format.A8R8G8B8;
 			}
 		}
-	
+
 		/*-------------------------------------------------------------------------
 		 デバイスリセット時の初期化
 		---------------------------------------------------------------------------*/
-		private void device_reset(object sender, System.EventArgs e)
-		{
+		private void device_reset(object sender, System.EventArgs e) {
 			Clear();
 		}
-	
+
 		/*-------------------------------------------------------------------------
-		 キャッシュを全て삭제
+		 캐시を全て삭제
 		---------------------------------------------------------------------------*/
-		public void Clear()
-		{
-			Dictionary<string, textured_font>.ValueCollection	list	= m_map.Values;
+		public void Clear() {
+			Dictionary<string, textured_font>.ValueCollection list = m_map.Values;
 
 			// 텍스쳐を全て破棄
-			foreach(textured_font i in list){
+			foreach (textured_font i in list) {
 				i.Dispose();
 			}
 			m_map.Clear();
 		}
-	
+
 		/*-------------------------------------------------------------------------
 		 
 		---------------------------------------------------------------------------*/
-		public void Dispose()
-		{
-			if(m_map != null){
+		public void Dispose() {
+			if (m_map != null) {
 				Clear();
 			}
-			m_map	= null;
+			m_map = null;
 		}
 
 		/*-------------------------------------------------------------------------
 		 textured_fontを得る
-		 なければ作成される
-		 그리기内で呼ぶこと
+		 なければ작성される
+		 그리기내で呼ぶこと
 		---------------------------------------------------------------------------*/
-		private textured_font get_textured_font(string str)
-		{
-			textured_font	tf	= null;
-			if(m_map.TryGetValue(str, out tf)){
+		private textured_font get_textured_font(string str) {
+			textured_font tf = null;
+			if (m_map.TryGetValue(str, out tf)) {
 				tf.ref_count++;
 				return tf;
 			}
 
-			// ないので作成する
-			tf		= new textured_font(m_device, str, m_font, m_texture_format);
-			m_map.Add(str, tf);		// 追加
+			// ないので작성함
+			tf = new textured_font(m_device, str, m_font, m_texture_format);
+			m_map.Add(str, tf);	 // 추가
 			return tf;
 		}
 
 		/*-------------------------------------------------------------------------
 		 textured_fontがあるか調べる
 		---------------------------------------------------------------------------*/
-		private bool is_created_textured_font(string str)
-		{
-			textured_font	tf	= null;
-			if(m_map.TryGetValue(str, out tf)){
+		private bool is_created_textured_font(string str) {
+			textured_font tf = null;
+			if (m_map.TryGetValue(str, out tf)) {
 				return true;
 			}
 			return false;
 		}
-	
+
 		/*-------------------------------------------------------------------------
-		 文字列の그리기時のサイズを得る
+		 문자열の그리기時の사이즈を得る
 		---------------------------------------------------------------------------*/
-		public Rectangle MeasureText(string str, Color color)
-		{
-			if(is_created_textured_font(str)){
-				// キャッシュされていればそのままサイズを返す
-				textured_font	font	= get_textured_font(str);
-				Rectangle		rect	= new Rectangle(0, 0, (int)font.size.X, (int)font.size.Y);
+		public Rectangle MeasureText(string str, Color color) {
+			if (is_created_textured_font(str)) {
+				// 캐시されていればそのまま사이즈を返す
+				textured_font font = get_textured_font(str);
+				Rectangle rect = new Rectangle(0, 0, (int)font.size.X, (int)font.size.Y);
 				return rect;
 			}
-			// キャッシュされてなければ調べる
+			// 캐시されてなければ調べる
 			return m_font.MeasureString(null, str, DrawTextFormat.None, color);
 		}
 
 		/*-------------------------------------------------------------------------
-		 文字列の그리기
+		 문자열の그리기
 		---------------------------------------------------------------------------*/
-		public void DrawText(string str, Vector3 pos, Color color)
-		{
-			textured_font	font	= get_textured_font(str);
-			if(font.texture == null)	return;
+		public void DrawText(string str, Vector3 pos, Color color) {
+			textured_font font = get_textured_font(str);
+			if (font.texture == null) return;
 
-			pos.X	= (float)(int)pos.X;
-			pos.Y	= (float)(int)pos.Y;
+			pos.X = (float)(int)pos.X;
+			pos.Y = (float)(int)pos.Y;
 			m_device.DrawTexture(font.texture, pos, font.texture_size, color.ToArgb());
 		}
 
 		/*-------------------------------------------------------------------------
-		 文字列の그리기
-		 右詰め
+		 문자열の그리기
+		 오른쪽 정렬
 		 xで終わるように그리기される
 		---------------------------------------------------------------------------*/
-		public void DrawTextR(string str, Vector3 pos, Color color)
-		{
-			textured_font	font	= get_textured_font(str);
-			if(font.texture == null)	return;
+		public void DrawTextR(string str, Vector3 pos, Color color) {
+			textured_font font = get_textured_font(str);
+			if (font.texture == null) return;
 
-			pos.X	-= font.size.X;
-			pos.X	= (float)(int)pos.X;
-			pos.Y	= (float)(int)pos.Y;
+			pos.X -= font.size.X;
+			pos.X = (float)(int)pos.X;
+			pos.Y = (float)(int)pos.Y;
 			m_device.DrawTexture(font.texture, pos, font.texture_size, color.ToArgb());
 		}
 
 		/*-------------------------------------------------------------------------
-		 文字列の그리기
-		 センタリング
+		 문자열の그리기
+		 가운데 정렬
 		 xが真中にくるように그리기される
 		---------------------------------------------------------------------------*/
-		public void DrawTextC(string str, Vector3 pos, Color color)
-		{
-			textured_font	font	= get_textured_font(str);
-			if(font.texture == null)	return;
+		public void DrawTextC(string str, Vector3 pos, Color color) {
+			textured_font font = get_textured_font(str);
+			if (font.texture == null) return;
 
-			pos.X	-= font.size.X / 2;
-			pos.X	= (float)(int)pos.X;
-			pos.Y	= (float)(int)pos.Y;
+			pos.X -= font.size.X / 2;
+			pos.X = (float)(int)pos.X;
+			pos.Y = (float)(int)pos.Y;
 			m_device.DrawTexture(font.texture, pos, font.texture_size, color.ToArgb());
 		}
 	}

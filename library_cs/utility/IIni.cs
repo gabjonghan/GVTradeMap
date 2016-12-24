@@ -7,52 +7,52 @@ namespace Utility.Ini
 {
   public interface IIni
   {
-    string GetProfile(string group_name, string name, string default_value);
+	string GetProfile(string group_name, string name, string default_value);
 
-    string[] GetProfile(string group_name, string name, string[] default_value);
+	string[] GetProfile(string group_name, string name, string[] default_value);
 
-    void SetProfile(string group_name, string name, string value);
+	void SetProfile(string group_name, string name, string value);
 
-    void SetProfile(string group_name, string name, string[] value);
+	void SetProfile(string group_name, string name, string[] value);
 
-    bool GetProfile(string group_name, string name, bool default_value);
+	bool GetProfile(string group_name, string name, bool default_value);
 
-    int GetProfile(string group_name, string name, int default_value);
+	int GetProfile(string group_name, string name, int default_value);
 
-    long GetProfile(string group_name, string name, long default_value);
+	long GetProfile(string group_name, string name, long default_value);
 
-    double GetProfile(string group_name, string name, double default_value);
+	double GetProfile(string group_name, string name, double default_value);
 
-    float GetProfile(string group_name, string name, float default_value);
+	float GetProfile(string group_name, string name, float default_value);
 
-    void SetProfile(string group_name, string name, bool value);
+	void SetProfile(string group_name, string name, bool value);
 
-    void SetProfile(string group_name, string name, int value);
+	void SetProfile(string group_name, string name, int value);
 
-    void SetProfile(string group_name, string name, long value);
+	void SetProfile(string group_name, string name, long value);
 
-    void SetProfile(string group_name, string name, double value);
+	void SetProfile(string group_name, string name, double value);
 
-    void SetProfile(string group_name, string name, float value);
+	void SetProfile(string group_name, string name, float value);
 
-    bool[] GetProfile(string group_name, string name, bool[] default_value);
+	bool[] GetProfile(string group_name, string name, bool[] default_value);
 
-    int[] GetProfile(string group_name, string name, int[] default_value);
+	int[] GetProfile(string group_name, string name, int[] default_value);
 
-    long[] GetProfile(string group_name, string name, long[] default_value);
+	long[] GetProfile(string group_name, string name, long[] default_value);
 
-    double[] GetProfile(string group_name, string name, double[] default_value);
+	double[] GetProfile(string group_name, string name, double[] default_value);
 
-    float[] GetProfile(string group_name, string name, float[] default_value);
+	float[] GetProfile(string group_name, string name, float[] default_value);
 
-    void SetProfile(string group_name, string name, bool[] value);
+	void SetProfile(string group_name, string name, bool[] value);
 
-    void SetProfile(string group_name, string name, int[] value);
+	void SetProfile(string group_name, string name, int[] value);
 
-    void SetProfile(string group_name, string name, long[] value);
+	void SetProfile(string group_name, string name, long[] value);
 
-    void SetProfile(string group_name, string name, double[] value);
+	void SetProfile(string group_name, string name, double[] value);
 
-    void SetProfile(string group_name, string name, float[] value);
+	void SetProfile(string group_name, string name, float[] value);
   }
 }

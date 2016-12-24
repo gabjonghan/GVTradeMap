@@ -69,9 +69,9 @@ namespace gvtrademap_cs
 			public map_mark_type type{		get{	return m_type;			}
 											set{	m_type		= value;	}}
 
-			// ゲーム좌표
+			// 게임좌표
 			public Point gposition{			get{	return transform.map_pos2_game_pos(position, m_lib.loop_image);		}}
-			// ツールチップ用
+			// ツールチップ용
 			public string tooltipstr{		get{
 												Point pos	= gposition;
 												return String.Format("{0}\n[{1},{2}]", memo, pos.X, pos.Y);
@@ -93,7 +93,7 @@ namespace gvtrademap_cs
 			}
 
 			/*-------------------------------------------------------------------------
-			 読み込み
+			 읽기
 			---------------------------------------------------------------------------*/
 			public bool Load(string line)
 			{
@@ -146,12 +146,12 @@ namespace gvtrademap_cs
 			m_lib			= lib;
 			m_datas			= new hittest_list();
 
-			// 読み込み
+			// 읽기
 			load(fname);
 		}
 
 		/*-------------------------------------------------------------------------
-		 追加
+		 추가
 		---------------------------------------------------------------------------*/
 		public void Add(Point pos, map_mark_type type, string memo)
 		{
@@ -159,7 +159,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 読み込み
+		 읽기
 		---------------------------------------------------------------------------*/
 		private void load(string fname)
 		{
@@ -178,7 +178,7 @@ namespace gvtrademap_cs
 					}
 				}
 			}catch{
-				// 読み込み실패
+				// 읽기실패
 			}
 		}
 
@@ -188,7 +188,7 @@ namespace gvtrademap_cs
 		public bool Write(string fname)
 		{
 			if(m_datas.Count <= 0){
-				// ファイルがあれば삭제する
+				// 파일があれば삭제する
 				file_ctrl.RemoveFile(fname);
 				return true;
 			}
@@ -235,7 +235,7 @@ namespace gvtrademap_cs
 
 			Vector2		scale	= new Vector2(size, size);
 
-			// 목적지用
+			// 목적지용
 			size	*= 1.5f;
 			Vector2		scale2	= new Vector2(size, size);
 
@@ -259,7 +259,7 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		private bool is_draw(int index)
 		{
-			// 그리기フラグ
+			// 그리기플래그
 			DrawSettingMemoIcons	flag	= m_lib.setting.draw_setting_memo_icons;
 
 			switch((map_mark_type)index){
@@ -372,7 +372,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 最初の목적지메모아이콘を得る
+		 최초の목적지메모아이콘を得る
 		---------------------------------------------------------------------------*/
 		private data get_1st_target_memo()
 		{

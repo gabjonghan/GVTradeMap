@@ -57,7 +57,7 @@
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(117, 27);
 			this.button1.TabIndex = 2;
-			this.button1.Text = "割り当て";
+			this.button1.Text = "할당";
 			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// button2
@@ -107,7 +107,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(117, 27);
 			this.button4.TabIndex = 3;
-			this.button4.Text = "割り当て解除";
+			this.button4.Text = "할당解除";
 			this.button4.UseVisualStyleBackColor = true;
 			// 
 			// button5
@@ -140,7 +140,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "キー割り当て";
+			this.Text = "키할당";
 			this.ResumeLayout(false);
 
 		}

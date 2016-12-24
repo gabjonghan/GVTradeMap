@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 교역MapC#用
+ 교역MapC#용
  TCPクライアント
 
 ---------------------------------------------------------------------------*/
@@ -38,14 +38,14 @@ namespace gvo_net_base
 		private const string		COMMAND_SEAINFO		= "SEAINFO";
 		private const string		COMMAND_ERROR		= "ERROR";
 
-		// 同期用
+		// 同期용
 		private readonly object		m_sync_object		= new object();
 
-		// 受信データ
+		// 受信데이터
 		private gvo_analized_data	m_received_data;
 		private List<gvo_map_cs_chat_base.sea_area_type>	m_sea_info;
 
-		// 受信フラグ
+		// 受信플래그
 		private bool				m_enable_receive_data;
 	
 		/*-------------------------------------------------------------------------
@@ -83,14 +83,14 @@ namespace gvo_net_base
 			: base(PROTOCOL_NAME, PROTOCOL_VERSION)
 		{
 			init();
-			// クライアントはデータ受信しない
+			// クライアントは데이터受信しない
 			m_enable_receive_data	= false;
 		}
 		public gvo_tcp_client(Socket sct)
 			: base(PROTOCOL_NAME, PROTOCOL_VERSION, sct)
 		{
 			init();
-			// 서버はデータ受信する
+			// 서버は데이터受信する
 			m_enable_receive_data	= true;
 		}
 
@@ -102,7 +102,7 @@ namespace gvo_net_base
 			// コマンド受信ハンドラ
 			base.ReceivedCommand		+= new ReceivedCommandEventHandler(received_command_handler);
 
-			// 受信データ
+			// 受信데이터
 			m_received_data		= new gvo_analized_data();
 			m_sea_info			= new List<gvo_map_cs_chat_base.sea_area_type>();
 		}
@@ -138,7 +138,7 @@ namespace gvo_net_base
 
 		/*-------------------------------------------------------------------------
 		 캡처정보の送信
-		 日付のみ
+		 일付のみ
 		---------------------------------------------------------------------------*/
 		public void SendCaptureDays(int days, bool interest)
 		{
@@ -161,7 +161,7 @@ namespace gvo_net_base
 		---------------------------------------------------------------------------*/
 		private void send_data(string command, string[] datas)
 		{
-			if(base.state != client_state.ready)	return;	// 通信可能でない
+			if(base.state != client_state.ready)	return;	// 通信가능でない
 
 			try{
 				SendData(command, datas);
@@ -178,7 +178,7 @@ namespace gvo_net_base
 		---------------------------------------------------------------------------*/
 		private void received_command_handler(object sender, string[] datas)
 		{
-			// 受信フラグによっては전부のデータを捨てる
+			// 受信플래그によっては전부の데이터を捨てる
 			if(!m_enable_receive_data)	return;
 
 			// 受信時は完全にロックする

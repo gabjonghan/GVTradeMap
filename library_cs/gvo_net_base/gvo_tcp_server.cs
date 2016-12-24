@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 교역MapC#用
+ 교역MapC#용
  TCP서버
 
 ---------------------------------------------------------------------------*/
@@ -51,12 +51,12 @@ namespace gvo_net_base
 		public gvo_tcp_server()
 			: base(gvo_tcp_client.PROTOCOL_NAME, gvo_tcp_client.PROTOCOL_VERSION)
 		{
-			// マルチユーザは未対応
+			// マルチ유저は未대응
 			base.max_client		= 1;
 		}
 	
 		/*-------------------------------------------------------------------------
-		 tcp_client_baseの作成
+		 tcp_client_baseの작성
 		 継承時はこのメソッドをオーバーライドすること
 		---------------------------------------------------------------------------*/
 		protected override tcp_client_base CreateClient(Socket sct)

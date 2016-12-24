@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- バウンディングボックス
- 2D用
+ 바운딩 박스
+ 2D용
 
 ---------------------------------------------------------------------------*/
 
@@ -22,7 +22,7 @@ namespace directx
 	{
 		private Vector2				m_min;
 		private Vector2				m_max;
-		private bool				m_is_1st;		// 最初の위치を설정したらtrue
+		private bool				m_is_1st;		// 최초の위치を설정したらtrue
 		private Vector2				m_offset_lt;	// 左上のオフセット
 		private Vector2				m_offset_rb;	// 右下のオフセット
 	
@@ -86,7 +86,7 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 カリングチェック
+		 컬링チェック
 		---------------------------------------------------------------------------*/
 		public bool IsCulling(CullingRect rect)
 		{
@@ -94,7 +94,7 @@ namespace directx
 		}
 		public bool IsCulling(Vector2 offset, float scale, CullingRect rect)
 		{
-			// 설정してないときはカリングする
+			// 설정してないときは컬링する
 			if(!m_is_1st)		return true;
 
 			Vector2		pos2	= offsetscale(m_max, offset, scale);
@@ -106,7 +106,7 @@ namespace directx
 			pos					+=  m_offset_lt;
 			if(pos.X >= rect.right_bottom.X)	return true;
 			if(pos.Y >= rect.right_bottom.Y)	return true;
-			// カリングしない
+			// 컬링しない
 			return false;
 		}
 
@@ -149,7 +149,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 カリング用
+		 컬링용
 		---------------------------------------------------------------------------*/
 		public struct CullingRect
 		{

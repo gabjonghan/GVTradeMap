@@ -12,9 +12,9 @@ namespace Utility.Xml
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// XmlIniを사용した설정管理. 
+	/// XmlIniを사용した설정관리. 
 	/// XmlIniのインスタンス化を自動で行うため, 
-	/// IniBaseのインターフェイスでのアクセスを実装するだけで설정の読み書きが行える. 
+	/// IniBaseのインターフェイスでのアクセスを実装するだけで설정の읽기が行える. 
 	/// </summary>
 	public class XmlIniSetting : IniSettingBase
 	{
@@ -23,11 +23,11 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 構築
+		/// 구축
 		/// </summary>
-		/// <param name="file_name">読み込みファイル명(フルパスであること)</param>
+		/// <param name="file_name">읽기파일명(フルパスであること)</param>
 		/// <param name="id">
-		/// <para>설정ファイルが正しいことを認識するID</para>
+		/// <para>설정파일が正しいことを認識するID</para>
 		/// <para>アプリケーション毎にユニークなものにすること</para>
 		/// </param>
 		public XmlIniSetting(string file_name, string id)
@@ -47,7 +47,7 @@ namespace Utility.Xml
 		public override void Load()
 		{
 			XmlIni		ini			= new XmlIni(m_file_name, m_id);
-			// 読み込み
+			// 읽기
 			Load(ini);
 		}
 	
@@ -76,7 +76,7 @@ namespace Utility.Xml
 		/// </summary>
 		protected const string				ROOT_NAME		= "XmlIniRoot";
 		/// <summary>
-		/// IDタイプ명
+		/// ID타입명
 		/// IDを格納するアトリビュート명として사용される
 		/// </summary>
 		protected const string				XMLINI_TYPE		= "XmlIniType";
@@ -94,10 +94,10 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 新しいDocument	を作成
+		/// 新しいDocument	を작성
 		/// </summary>
 		/// <param name="id">
-		/// <para>설정ファイルが正しいことを認識するID</para>
+		/// <para>설정파일が正しいことを認識するID</para>
 		/// <para>アプリケーション毎にユニークなものにすること</para>
 		/// </param>
 		public XmlIni(string id)
@@ -107,12 +107,12 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 読み込みつつ作成
-		/// 読み込みに실패した場合は新しいDocumentを作成する
+		/// 읽기つつ작성
+		/// 읽기に실패した場合は新しいDocumentを작성함
 		/// </summary>
-		/// <param name="file_name">読み込みファイル명</param>
+		/// <param name="file_name">읽기파일명</param>
 		/// <param name="id">
-		/// <para>설정ファイルが正しいことを認識するID</para>
+		/// <para>설정파일が正しいことを認識するID</para>
 		/// <para>アプリケーション毎にユニークなものにすること</para>
 		/// </param>
 		public XmlIni(string file_name, string id)
@@ -122,14 +122,14 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 読み込み
+		/// 읽기
 		/// </summary>
-		/// <param name="file_name">読み込みファイル명</param>
+		/// <param name="file_name">읽기파일명</param>
 		/// <param name="id">
-		/// <para>설정ファイルが正しいことを認識するID</para>
+		/// <para>설정파일が正しいことを認識するID</para>
 		/// <para>アプリケーション毎にユニークなものにすること</para>
 		/// </param>
-		/// <returns>読み込みに成功した場合trueを返す</returns>
+		/// <returns>읽기に成功した場合trueを返す</returns>
 		public bool Load(string file_name, string id)
 		{
 			try{
@@ -142,10 +142,10 @@ namespace Utility.Xml
 					create_new_document(id);
 					return false;
 				}
-				// 読み込み成功
+				// 읽기成功
 				return true;
 			}catch{
-				// 読み込み실패
+				// 읽기실패
 				create_new_document(id);
 				return false;
 			}
@@ -155,7 +155,7 @@ namespace Utility.Xml
 		/// <summary>
 		/// 書き出し
 		/// </summary>
-		/// <param name="file_name">書き出し先ファイル명</param>
+		/// <param name="file_name">書き出し先파일명</param>
 		public virtual void Save(string file_name)
 		{
 			m_document.Save(file_name);
@@ -179,8 +179,8 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 新しいDocument	を作成
-		/// ROOTを作成する
+		/// 新しいDocument	を작성
+		/// ROOTを작성함
 		/// </summary>
 		/// <param name="id"></param>
 		protected void create_new_document(string id)
@@ -189,7 +189,7 @@ namespace Utility.Xml
 			m_document.AppendChild(
 				m_document.CreateXmlDeclaration("1.0", "UTF-8", null));
 
-			// ルートを作成
+			// ルートを작성
 			m_document.AppendChild(create_element(ROOT_NAME));
 
 			// このXmlIniBaseを識別するID
@@ -200,34 +200,34 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// データ取得
-		/// データが得られない場合はdefault_valueを返す
+		/// 데이터取得
+		/// 데이터が得られない場合はdefault_valueを返す
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <param name="default_value">データが得られない場合の初期値</param>
-		/// <returns>得られたデータ</returns>
+		/// <param name="name">데이터명</param>
+		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <returns>得られた데이터</returns>
 		public override string GetProfile(string group_name, string name, string default_value)
 		{
 			XmlNode		node	= get_element(group_name, name);
 			if(node == null)	return default_value;		// 要素がないので初期値を返す
 
-			string		text	= get_first_text(node);		// 最初のXmlTextの내용を得る
+			string		text	= get_first_text(node);		// 최초のXmlTextの내용を得る
 			if(text == null)	return default_value;		// XmlTextがないので初期値を返す
-			return text;									// 得られたデータ
+			return text;									// 得られた데이터
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// データ取得
-		/// データが得られない場合はdefault_valueを返す
+		/// 데이터取得
+		/// 데이터が得られない場合はdefault_valueを返す
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <param name="default_value">データが得られない場合の初期値</param>
+		/// <param name="name">데이터명</param>
+		/// <param name="default_value">데이터が得られない場合の初期値</param>
 		/// <returns>
-		/// 得られたデータ
-		/// 대きさ0の配列の可能性有り
+		/// 得られた데이터
+		/// 대きさ0の配열の가능性有り
 		/// </returns>
 		public override string[] GetProfile(string group_name, string name, string[] default_value)
 		{
@@ -236,7 +236,7 @@ namespace Utility.Xml
 
 			List<string>	list	= new List<string>();
 			foreach(XmlNode n in node.ChildNodes){
-				string		text	= get_first_text(n);	// 最初のXmlTextの내용を得る
+				string		text	= get_first_text(n);	// 최초のXmlTextの내용を得る
 				if(text != null)	list.Add(text);
 			}
 			return list.ToArray();
@@ -244,8 +244,8 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ノードの最初のテキストを得る. 
-		/// 子ノードのうち, 最初のXmlTextの내용を返す. 
+		/// ノードの최초のテキストを得る. 
+		/// 子ノードのうち, 최초のXmlTextの내용を返す. 
 		/// 子ノードにXmlTextが含まれない場合はnullを返す. 
 		/// </summary>
 		/// <param name="node"></param>
@@ -265,11 +265,11 @@ namespace Utility.Xml
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// データがあるかどうかを得る
+		/// 데이터があるかどうかを得る
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <returns>データがある場合true</returns>
+		/// <param name="name">데이터명</param>
+		/// <returns>데이터がある場合true</returns>
 		protected override bool HasProfile(string group_name, string name)
 		{
 			return (get_element(group_name, name) != null)? true: false;
@@ -277,11 +277,11 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// データ설정
+		/// 데이터설정
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <param name="value">データ</param>
+		/// <param name="name">데이터명</param>
+		/// <param name="value">데이터</param>
 		public override void SetProfile(string group_name, string name, string value)
 		{
 			update_element(group_name, name, value);
@@ -289,12 +289,12 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// データ설정
-		/// 配列の내용は전부置きかえられる
+		/// 데이터설정
+		/// 配열の내용は전부置きかえられる
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <param name="value">データ</param>
+		/// <param name="name">데이터명</param>
+		/// <param name="value">데이터</param>
 		public override void SetProfile(string group_name, string name, string[] value)
 		{
 			update_element(group_name, name, value);
@@ -303,7 +303,7 @@ namespace Utility.Xml
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// groupを得る
-		/// groupが無ければ作成する
+		/// groupが無ければ작성함
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <returns>그룹</returns>
@@ -325,8 +325,8 @@ namespace Utility.Xml
 		/// group이름を渡す
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <returns>データノード</returns>
+		/// <param name="name">데이터명</param>
+		/// <returns>데이터ノード</returns>
 		protected XmlNode get_element(string group_name, string name)
 		{
 			XmlNode		group_node	= get_group(group_name);
@@ -339,13 +339,13 @@ namespace Utility.Xml
 		/// 
 		/// </summary>
 		/// <param name="name"></param>
-		/// <returns>作成したElement</returns>
+		/// <returns>작성したElement</returns>
 		private XmlElement create_element(string name)
 		{
 			try{
 				return m_document.CreateElement(name);
 			}catch{
-				throw new Exception(String.Format("Elementの作成に실패하였습니다. \n[ {0} ] に사용できない文字が含まれている可能性があります. ", name));
+				throw new Exception(String.Format("Elementの작성に실패하였습니다. \n[ {0} ] に사용できない문자が含まれている가능性があります. ", name));
 			}
 		}
 		
@@ -355,8 +355,8 @@ namespace Utility.Xml
 		/// 설정항목がない場合Elementが作られる
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <param name="value">データ</param>
+		/// <param name="name">데이터명</param>
+		/// <param name="value">데이터</param>
 		protected void update_element(string group_name, string name, string value)
 		{
 			XmlNode		node		= get_edit_node(group_name, name);
@@ -369,8 +369,8 @@ namespace Utility.Xml
 		/// 설정항목がない場合Elementが作られる
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
-		/// <param name="name">データ명</param>
-		/// <param name="value">データ</param>
+		/// <param name="name">데이터명</param>
+		/// <param name="value">데이터</param>
 		protected void update_element(string group_name, string name, string[] value)
 		{
 			XmlNode		node		= get_edit_node(group_name, name);
@@ -386,7 +386,7 @@ namespace Utility.Xml
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 編集するべきノードを得る. 
-		/// 정보更新用. ノードが無ければ作成して返す. 
+		/// 정보更新용. ノードが無ければ작성して返す. 
 		/// ノードが既に存在していれば子供を全てを삭제して返す. 
 		/// </summary>
 		/// <param name="group_name"></param>
@@ -402,7 +402,7 @@ namespace Utility.Xml
 				// 子供を全部삭제
 				node.RemoveAll();
 			}else{
-				// 新しい要素として追加
+				// 新しい要素として추가
 				node	= create_element(name);
 				group_node.AppendChild(node);
 			}

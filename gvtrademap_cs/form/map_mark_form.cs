@@ -89,8 +89,8 @@ namespace gvtrademap_cs
 			toolTip1.SetToolTip(button20, "목적지");
 
 			toolTip1.SetToolTip(textBox1, "메모を入力してください");
-			toolTip1.SetToolTip(textBox2, "위치Xを指定してください");
-			toolTip1.SetToolTip(textBox3, "위치Yを指定してください");
+			toolTip1.SetToolTip(textBox2, "위치Xを지정してください");
+			toolTip1.SetToolTip(textBox3, "위치Yを지정してください");
 
 			button1.Click	+= new System.EventHandler(button1_Click);
 			button2.Click	+= new System.EventHandler(button2_Click);

@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
  항로도즐겨찾기の合成
- 合成後の画상を書き出す
- 合成後の画상が최신の場合なにもしない
+ 合成후の画상を書き出す
+ 合成후の画상が최신の場合なにもしない
 
 ---------------------------------------------------------------------------*/
 
@@ -36,7 +36,7 @@ namespace gvtrademap_cs
 		{
 			bool	is_create	= false;
 	
-			// ファイルの存在확인
+			// 파일の存在확인
 			if(!File.Exists(fname_a))	return false;
 			if(!File.Exists(fname_b)){
 				// Bがない場合はCを삭제する
@@ -44,16 +44,16 @@ namespace gvtrademap_cs
 				return false;
 			}
 
-			// 作成するかどうかのチェック
+			// 작성함かどうかのチェック
 			if(!File.Exists(fname_c)){
-				// Cがないときは無条건で作成
+				// Cがないときは無条건で작성
 				is_create	= true;
 			}else{
 				FileInfo	info_a	= new FileInfo(fname_a);
 				FileInfo	info_b	= new FileInfo(fname_b);
 				FileInfo	info_c	= new FileInfo(fname_c);
 
-				// 合成後の정보が古い場合は作成する
+				// 合成후の정보が古い場合は작성함
 				if(info_a.LastWriteTime > info_c.LastWriteTime)		is_create	= true;
 				if(info_b.LastWriteTime > info_c.LastWriteTime)		is_create	= true;
 			}
@@ -67,7 +67,7 @@ namespace gvtrademap_cs
 				byte[]		image_b		= load_image(fname_b, out size_b, out stride_b);
 
 				if(image_a.Length != image_b.Length){
-					MessageBox.Show("항로도즐겨찾기の画상サイズが지도と異なります. ", "항로도즐겨찾기の合成중", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("항로도즐겨찾기の画상사이즈が지도と異なります. ", "항로도즐겨찾기の合成중", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return false;
 				}
 

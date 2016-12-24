@@ -110,7 +110,7 @@
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(250, 20);
 			this.comboBox1.TabIndex = 0;
-			this.toolTip1.SetToolTip(this.comboBox1, "入力された文字列が含まれるものを전체검색します\r\nxxxx,yyyy 形式で入力することで特定の좌표をセンタリングすることができます");
+			this.toolTip1.SetToolTip(this.comboBox1, "入力された문자열が含まれるものを전체검색します\r\nxxxx,yyyy 形式で入力することで特定の좌표をセンタリングすることができます");
 			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// listView2
@@ -159,10 +159,10 @@
 			this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox4.FormattingEnabled = true;
 			this.comboBox4.Items.AddRange(new object[] {
-            "부분일치",
-            "완전일치",
-            "앞부분일치",
-            "뒷부분일치"});
+			"부분일치",
+			"완전일치",
+			"앞부분일치",
+			"뒷부분일치"});
 			this.comboBox4.Location = new System.Drawing.Point(262, 35);
 			this.comboBox4.Name = "comboBox4";
 			this.comboBox4.Size = new System.Drawing.Size(101, 20);
@@ -175,8 +175,8 @@
 			this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox3.FormattingEnabled = true;
 			this.comboBox3.Items.AddRange(new object[] {
-            "명칭 등",
-            "종류"});
+			"명칭 등",
+			"종류"});
 			this.comboBox3.Location = new System.Drawing.Point(175, 35);
 			this.comboBox3.Name = "comboBox3";
 			this.comboBox3.Size = new System.Drawing.Size(81, 20);
@@ -189,9 +189,9 @@
 			this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox2.FormattingEnabled = true;
 			this.comboBox2.Items.AddRange(new object[] {
-            "도시정보",
-            "아이템DB",
-            "전체정보"});
+			"도시정보",
+			"아이템DB",
+			"전체정보"});
 			this.comboBox2.Location = new System.Drawing.Point(6, 35);
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(163, 20);
@@ -203,11 +203,11 @@
 			// contextMenuStrip1
 			// 
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.open_recipe_wiki0_ToolStripMenuItem,
-            this.open_recipe_wiki1_ToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.copy_name_to_clipboardToolStripMenuItem,
-            this.copy_all_to_clipboardToolStripMenuItem});
+			this.open_recipe_wiki0_ToolStripMenuItem,
+			this.open_recipe_wiki1_ToolStripMenuItem,
+			this.toolStripSeparator3,
+			this.copy_name_to_clipboardToolStripMenuItem,
+			this.copy_all_to_clipboardToolStripMenuItem});
 			this.contextMenuStrip1.Name = "contextMenuStrip3";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(352, 98);
 			// 
@@ -215,14 +215,14 @@
 			// 
 			this.open_recipe_wiki0_ToolStripMenuItem.Name = "open_recipe_wiki0_ToolStripMenuItem";
 			this.open_recipe_wiki0_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki0_ToolStripMenuItem.Text = "レシピの詳細をレシピ정보wikiで조사";
+			this.open_recipe_wiki0_ToolStripMenuItem.Text = "레시피の디테일を레시피정보wikiで조사";
 			this.open_recipe_wiki0_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki0_ToolStripMenuItem_Click);
 			// 
 			// open_recipe_wiki1_ToolStripMenuItem
 			// 
 			this.open_recipe_wiki1_ToolStripMenuItem.Name = "open_recipe_wiki1_ToolStripMenuItem";
 			this.open_recipe_wiki1_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki1_ToolStripMenuItem.Text = "レシピで作成可能かどうかレシピ정보wikiで조사";
+			this.open_recipe_wiki1_ToolStripMenuItem.Text = "레시피で작성가능かどうか레시피정보wikiで조사";
 			this.open_recipe_wiki1_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki1_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
@@ -241,7 +241,7 @@
 			// 
 			this.copy_all_to_clipboardToolStripMenuItem.Name = "copy_all_to_clipboardToolStripMenuItem";
 			this.copy_all_to_clipboardToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.copy_all_to_clipboardToolStripMenuItem.Text = "詳細をクリップボードにコピー";
+			this.copy_all_to_clipboardToolStripMenuItem.Text = "디테일をクリップボードにコピー";
 			this.copy_all_to_clipboardToolStripMenuItem.Click += new System.EventHandler(this.copy_all_to_clipboardToolStripMenuItem_Click);
 			// 
 			// tabControl1

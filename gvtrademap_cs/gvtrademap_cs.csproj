@@ -154,6 +154,7 @@
     <Compile Include="gvotms_key_assign.cs" />
     <Compile Include="LoadInfosStatus.cs" />
     <Compile Include="myship_info.cs" />
+    <Compile Include="sprite_rects\nameTexture.cs" />
     <Compile Include="sprite_rects\infonameimage.cs" />
     <Compile Include="window\info_windows.cs" />
     <Compile Include="gvo\interest_days.cs" />

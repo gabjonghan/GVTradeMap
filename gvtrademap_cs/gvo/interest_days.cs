@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
  이자からの경과일수
- 完全な경과일수とはならない可能性があるが, 
- 허용범위の精도は保てる
+ 完全な경과일수とはならない가능性があるが, 
+ 허용범위の정확도は保てる
 
 ---------------------------------------------------------------------------*/
 
@@ -57,28 +57,28 @@ namespace gvtrademap_cs
 				base.Reset(days);		// 카운터리셋
 			}
 
-			// 설정保存用に覚えておく
+			// 설정保存용に覚えておく
 			m_setting.interest_days		= base.get_true_days();
 		}
 
 		/*-------------------------------------------------------------------------
-		 ポップアップ用の文字列を得る
+		 ポップアップ용の문자열を得る
 		---------------------------------------------------------------------------*/
 		public string GetPopupString()
 		{
 			if(GetDays() > 30){
-				// 30日を超えてる
+				// 30일を超えてる
 				// 
-				return "30日이상경과しました\n현재の경과일수は信頼できません\n이자を受け取ると正常にもどります";
+				return "30일 이상이 지났습니다.\n현재의 경과일수는 신뢰할수 없습니다.\n이자를 받는 날을 정상으로 초기화합니다.";
 			}else{
 #if DEBUG_POPUP_STRING
-				return String.Format("残り{0}日\n{1}日항해중\n開始{2}\n현재{3}",
+				return String.Format("残り{0}일\n{1}일항해중\n開始{2}\n현재{3}",
 										30 - GetDays(),
 										base.VoyageDays - base.VoyageDaysStart,
 										base.VoyageDaysStart,
 										base.VoyageDays);
 #else
-				return String.Format("残り{0}日\n{1}日항해중",
+				return String.Format("남은{0}일\n{1}일항해중",
 										30 - GetDays(),
 										base.VoyageDays - base.VoyageDaysStart);
 #endif

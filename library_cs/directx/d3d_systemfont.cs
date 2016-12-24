@@ -2,7 +2,7 @@
 
  Direct3D
  시스템フォント
- D3DXFontよりも高速だが, ASCII文字のみの그리기となる
+ D3DXFontよりも고속だが, ASCII문자のみの그리기となる
  MS UI Gothicを少しだけ改造したフォント
 
 ---------------------------------------------------------------------------*/
@@ -35,13 +35,13 @@ namespace directx
 
 		---------------------------------------------------------------------------*/
 		private d3d_device					m_d3d_device;		// 
-		private d3d_sprite_rects			m_sprite_rects;		// 管理用スプライト
-		private d3d_sprite					m_sprite;			// 그리기管理
+		private d3d_sprite_rects			m_sprite_rects;		// 관리용스프라이트
+		private d3d_sprite					m_sprite;			// 그리기관리
 
-		private int[]						m_width_tbl;		// 幅テーブル
+		private int[]						m_width_tbl;		// 幅테이블
 
 		private Vector3						m_position;			// Puts()時の표시위치
-		private float						m_return_x;			// 改行時のX위치
+		private float						m_return_x;			// 개행時のX위치
 
 		/*-------------------------------------------------------------------------
 
@@ -59,7 +59,7 @@ namespace directx
 		{
 			if(device == null)	return;
 
-			// 2のべき乗でない場合強制的に2のべき乗に変換されてしまうので注意
+			// 2のべき乗でない場合強制的に2のべき乗に변환されてしまうので注意
 			// 2のべき乗で絵を作ること
 			Assembly	ass		= Assembly.GetExecutingAssembly();
 			Stream		stream	= ass.GetManifestResourceStream("directx.image.systemfont_8x16_ui_gothic.dds");
@@ -88,7 +88,7 @@ namespace directx
 
 			m_sprite		= new d3d_sprite(device.device, device.is_use_ve1_1_ps1_1);
 
-			// 矩形登録
+			// 矩形등록
 			init_rects();
 
 			// 初期위치
@@ -96,7 +96,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 矩形登録
+		 矩形등록
 		---------------------------------------------------------------------------*/
 		private void init_rects()
 		{
@@ -108,7 +108,7 @@ namespace directx
 				}
 			}
 			
-			// 幅テーブル
+			// 幅테이블
 			m_width_tbl			= new int[]{
 				//   ! " # $ % & ' ( ) * + , - . / 
 				   6,4,6,7,6,7,7,4,4,4,6,6,3,6,3,7,
@@ -127,7 +127,7 @@ namespace directx
 
 		/*-------------------------------------------------------------------------
 		 그리기フレームの開始
-		 그리기したスプライト数を初期化する
+		 그리기した스프라이트수を初期化する
 		---------------------------------------------------------------------------*/
 		public void BeginFrame()
 		{
@@ -135,7 +135,7 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 그리기時のサイズを得る
+		 그리기時の사이즈を得る
 		 リターンコードは無視されるため, 세로は常に HEIGHT を返す
 		---------------------------------------------------------------------------*/
 		public Rectangle MeasureText(string text)
@@ -159,7 +159,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 開始と終了
+		 開始と종료
 		 Begin();
 		 DrawText();
 		  :
@@ -177,7 +177,7 @@ namespace directx
 
 		/*-------------------------------------------------------------------------
 		 그리기
-		 위치指定で改行無視
+		 위치지정で개행無視
 		---------------------------------------------------------------------------*/
 		public void DrawTextR(string text, int x, int y, Color color)
 		{
@@ -221,8 +221,8 @@ namespace directx
 		/*-------------------------------------------------------------------------
 		 그리기
 		 Puts()
-		 改行コードが考慮される
-		 デバッグ用
+		 개행コードが考慮される
+		 デバッグ용
 
 		 Begin();
 		 End();
@@ -235,7 +235,7 @@ namespace directx
 			foreach(char a in text){
 				int		ch	= (int)a;
 				if(a == '\n'){
-					// 改行
+					// 개행
 					m_position.Y	+= HEIGHT;
 					m_position.X	= m_return_x;
 				}else if((ch > 0x20)&&(ch <= 0x20+(16*6))){

@@ -27,21 +27,21 @@ namespace gvtrademap_cs
 	{
 		public enum type{
 			none,						// 장소なし
-			country_flags,				// 国旗표시
+			country_flags,				// 국기표시
 			icons_0,					// 看판娘
-			icons_1,					// 書庫
+			icons_1,					// 서고
 			icons_2,					// 번역가
-			icons_3,					// 豪商
-			has_item,					// 指定した아이템がある
-			language,					// 言語
+			icons_3,					// 무역상인
+			has_item,					// 지정した아이템がある
+			language,					// 언어
 
 			tab_0,						// 교역
 			tab_1,						// 도구
 			tab_2,						// 공방
 			tab_3,						// 인물
-            tab_4,						// 조선소주인
-            tab_4_1,					// 조선공
-            tab_5,						// 무기장인
+			tab_4,						// 조선소주인
+			tab_4_1,					// 조선공
+			tab_5,						// 무기장인
 			tab_6,						// 제재소장인
 			tab_7,						// 돛제작자
 			tab_8,						// 조각가
@@ -53,13 +53,13 @@ namespace gvtrademap_cs
 		};
 
 		/*-------------------------------------------------------------------------
-		 外부参照用장소내용
+		 외부참조용장소내용
 		---------------------------------------------------------------------------*/
 		public class spot_once
 		{
-			private GvoWorldInfo.Info			m_info;				// 장소対象
+			private GvoWorldInfo.Info			m_info;				// 장소대상
 			private string					m_name;				// 이름
-			private string					m_ex;				// 追加する文字列
+			private string					m_ex;				// 추가する문자열
 			
 			/*-------------------------------------------------------------------------
 			 
@@ -87,11 +87,11 @@ namespace gvtrademap_cs
 		private icons						m_icons;
 		private LoopXImage				m_loop_image;
 
-		private List<GvoWorldInfo.Info>		m_spots;			// 장소対象
-		private type						m_spot_type;		// 장소タイプ
-		private string						m_find_string;		// 검색文字列
+		private List<GvoWorldInfo.Info>		m_spots;			// 장소대상
+		private type						m_spot_type;		// 장소타입
+		private string						m_find_string;		// 검색문자열
 
-		private List<spot_once>				m_spot_list;		// 外부参照向け목록
+		private List<spot_once>				m_spot_list;		// 외부참조向け목록
 
 		/*-------------------------------------------------------------------------
 		 
@@ -130,8 +130,8 @@ namespace gvtrademap_cs
 
 			m_spot_type		= _type;
 			switch(_type){
-			case type.country_flags:		// 国旗
-				// 国목록を作成する
+			case type.country_flags:		// 국기
+				// 국목록を작성함
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					if(i.InfoType == GvoWorldInfo.InfoType.City){
 						m_spots.Add(i);
@@ -140,9 +140,9 @@ namespace gvtrademap_cs
 				}
 				break;
 			case type.icons_0:				// 看판娘
-			case type.icons_1:				// 書庫
+			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
-			case type.icons_3:				// 豪商
+			case type.icons_3:				// 무역상인
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					if((i.Sakaba & (1<<(_type-type.icons_0))) != 0){
 						m_spots.Add(i);
@@ -150,7 +150,7 @@ namespace gvtrademap_cs
 					}
 				}
 				break;
-			case type.has_item:				// 指定した아이템がある
+			case type.has_item:				// 지정した아이템がある
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					GvoWorldInfo.Info.Group.Data	d	= i.HasItem(find_str);
 					if(d != null){
@@ -159,7 +159,7 @@ namespace gvtrademap_cs
 					}
 				}
 				break;
-			case type.language:				// 言語
+			case type.language:				// 언어
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					if(   (i.Lang1 == find_str)
 						||(i.Lang2 == find_str) ){
@@ -168,7 +168,7 @@ namespace gvtrademap_cs
 						m_spot_list.Add(new spot_once(i, find_str, ""));
 					}else{
 						if(i.LearnPerson(find_str) != null){
-							// 言語取得
+							// 언어取得
 							m_spots.Add(i);
 							m_spot_list.Add(new spot_once(i, find_str, i.LearnPerson(find_str)));
 						}
@@ -179,8 +179,8 @@ namespace gvtrademap_cs
 			case type.tab_1:				// 도구
 			case type.tab_2:				// 공방
 			case type.tab_3:				// 인물
-            case type.tab_4:				// 조선소주인
-            case type.tab_4_1:				// 조선공
+			case type.tab_4:				// 조선소주인
+			case type.tab_4_1:				// 조선공
 			case type.tab_5:				// 무기장인
 			case type.tab_6:				// 제재소장인
 			case type.tab_7:				// 돛제작자
@@ -243,23 +243,23 @@ namespace gvtrademap_cs
 		private void draw_proc(Vector2 offset, LoopXImage image)
 		{
 			switch(m_spot_type){
-			case type.country_flags:		// 国旗
+			case type.country_flags:		// 국기
 				draw_spot_mycountry(offset);
 				spot_flags(offset);
 				break;
 			case type.icons_0:				// 看판娘
-			case type.icons_1:				// 書庫
+			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
-			case type.icons_3:				// 豪商
+			case type.icons_3:				// 무역상인
 				draw_spot(offset);
 				spot_cities(offset);
 				spot_icons(offset);
 				break;
-			case type.has_item:				// 指定した아이템がある
+			case type.has_item:				// 지정した아이템がある
 				draw_spot(offset);
 				spot_cities(offset);
 				break;
-			case type.language:				// 言語
+			case type.language:				// 언어
 				draw_spot_for_lang(offset);
 				spot_cities(offset);
 				spot_learn_lang(offset);
@@ -268,9 +268,9 @@ namespace gvtrademap_cs
 			case type.tab_1:				// 도구
 			case type.tab_2:				// 공방
 			case type.tab_3:				// 인물
-            case type.tab_4:				// 조선소주인
-            case type.tab_4_1:				// 조선공
-            case type.tab_5:				// 무기장인
+			case type.tab_4:				// 조선소주인
+			case type.tab_4_1:				// 조선공
+			case type.tab_5:				// 무기장인
 			case type.tab_6:				// 제재소장인
 			case type.tab_7:				// 돛제작자
 			case type.tab_8:				// 조각가
@@ -290,7 +290,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 장소표시
-		 国旗
+		 국기
 		---------------------------------------------------------------------------*/
 		private void spot_flags(Vector2 offset)
 		{
@@ -337,7 +337,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 장소표시
-		 본인の国のみ
+		 본인の국のみ
 		---------------------------------------------------------------------------*/
 		private void draw_spot_mycountry(Vector2 offset)
 		{
@@ -366,7 +366,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 言語用장소표시
+		 언어용장소표시
 		---------------------------------------------------------------------------*/
 		private void draw_spot_for_lang(Vector2 offset)
 		{
@@ -399,7 +399,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 言語用장소표시
+		 언어용장소표시
 		 覚えられる도시に인아이콘표시
 		---------------------------------------------------------------------------*/
 		private void spot_learn_lang(Vector2 offset)
@@ -486,7 +486,7 @@ namespace gvtrademap_cs
 		{
 			float	size	= m_loop_image.ImageScale;
 			if(size < 0.5)				size = 0.5f;
-            else if (size > 1.0f)       size = 1.0f;
+			else if (size > 1.0f)	   size = 1.0f;
 	
 			m_device.sprites.BeginDrawSprites(m_icons.texture, offset, m_loop_image.ImageScale, new Vector2(size, size));
 			foreach(GvoWorldInfo.Info i in m_spots){
@@ -497,23 +497,23 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ用文字列を得る
+		 ツールチップ용문자열を得る
 		---------------------------------------------------------------------------*/
 		public string GetToolTipString(Point pos)
 		{
 			switch(m_spot_type){
-			case type.country_flags:		// 国旗
+			case type.country_flags:		// 국기
 			case type.icons_0:				// 看판娘
-			case type.icons_1:				// 書庫
+			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
-			case type.icons_3:				// 豪商
+			case type.icons_3:				// 무역상인
 			case type.tab_0:				// 교역
 			case type.tab_1:				// 도구
 			case type.tab_2:				// 공방
 			case type.tab_3:				// 인물
-            case type.tab_4:				// 조선공
-            case type.tab_4_1:				// 조선소주인
-            case type.tab_5:				// 무기장인
+			case type.tab_4:				// 조선공
+			case type.tab_4_1:				// 조선소주인
+			case type.tab_5:				// 무기장인
 			case type.tab_6:				// 제재소장인
 			case type.tab_7:				// 돛제작자
 			case type.tab_8:				// 조각가
@@ -521,7 +521,7 @@ namespace gvtrademap_cs
 			case type.city_name:			// 도시명
 				break;
 
-			case type.has_item:				// 指定した아이템がある
+			case type.has_item:				// 지정した아이템がある
 				foreach(GvoWorldInfo.Info i in m_spots){
 					if(i.HitTest(pos)){
 						GvoWorldInfo.Info.Group.Data	d	= i.HasItem(m_find_string);
@@ -529,7 +529,7 @@ namespace gvtrademap_cs
 					}
 				}
 				break;
-			case type.language:				// 言語
+			case type.language:				// 언어
 				foreach(GvoWorldInfo.Info i in m_spots){
 					if(i.HitTest(pos)){
 						return i.LearnPerson(m_find_string);
@@ -548,17 +548,17 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소タイプを文字列で得る
+		 장소타입を문자열で得る
 		---------------------------------------------------------------------------*/
 		static public string GetTypeString(type _type)
 		{
 			switch(_type){
 			case type.none:						return "장소なし";
-			case type.country_flags:			return "国旗";
+			case type.country_flags:			return "국기";
 			case type.icons_0:					return "看판娘";
-			case type.icons_1:					return "書庫";
+			case type.icons_1:					return "서고";
 			case type.icons_2:					return "번역가";
-			case type.icons_3:					return "豪商";
+			case type.icons_3:					return "무역상인";
 			case type.has_item:					return "아이템등";
 			case type.language:					return "사용언어";
 			case type.tab_0:					return "교역所";
@@ -566,8 +566,8 @@ namespace gvtrademap_cs
 			case type.tab_2:					return "공방";
 			case type.tab_3:					return "인물";
 			case type.tab_4:					return "조선소주인";
-            case type.tab_4_1:                  return "조선공";
-            case type.tab_5:                    return "무기장인";
+			case type.tab_4_1:				  return "조선공";
+			case type.tab_5:					return "무기장인";
 			case type.tab_6:					return "제재소장인";
 			case type.tab_7:					return "돛제작자";
 			case type.tab_8:					return "조각가";
@@ -576,12 +576,12 @@ namespace gvtrademap_cs
 			case type.city_name:				return "도시명";
 			case type.cultural_sphere:			return "문화권";
 			}
-			return "불명なタイプ";
+			return "불명な타입";
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소タイプからEx文字列を得る
-		 장소목록用
+		 장소타입からEx문자열を得る
+		 장소목록용
 		---------------------------------------------------------------------------*/
 		static public string GetExColumnString(type _type)
 		{
@@ -593,14 +593,14 @@ namespace gvtrademap_cs
 			case type.icons_2:					return "";
 			case type.icons_3:					return "";
 			case type.has_item:					return "価格등";
-			case type.language:					return "言語習得";
+			case type.language:					return "언어習得";
 			case type.tab_0:					return "";
 			case type.tab_1:					return "";
 			case type.tab_2:					return "";
 			case type.tab_3:					return "";
 			case type.tab_4:					return "";
-            case type.tab_4_1:                  return "";
-            case type.tab_5:                    return "";
+			case type.tab_4_1:				  return "";
+			case type.tab_5:					return "";
 			case type.tab_6:					return "";
 			case type.tab_7:					return "";
 			case type.tab_8:					return "";

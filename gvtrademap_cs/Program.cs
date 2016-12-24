@@ -25,7 +25,7 @@ namespace gvtrademap_cs
 				// MDX1.1チェック
 				AssemblyName	error_ass	= null;
 				if(!Useful.LoadReferencedAssembly(Assembly.GetExecutingAssembly(), out error_ass)){
-					// Assemblyの読み込みに실패
+					// Assemblyの읽기に실패
 					// 主にMDX1.1がインストールされていない
 					using(assembly_load_error_form dlg = new assembly_load_error_form(error_ass)){
 						dlg.ShowDialog();
@@ -43,8 +43,8 @@ namespace gvtrademap_cs
 
 							int		old_tick_count	= System.Environment.TickCount;
 							while(frm.Created){
-								// 초間60フレームを限界とする
-								// それほど精도が高くないと思う
+								// 초間60フレームを한계とする
+								// それほど정확도が高くないと思う
 								if(System.Environment.TickCount - old_tick_count >= 1000/60){
 									old_tick_count	= System.Environment.TickCount;
 									frm.update_main_window();
@@ -57,7 +57,7 @@ namespace gvtrademap_cs
 					}
 #if !DEBUG
 				}catch(Exception ex){
-					// 想定外の오류
+					// 想定외の오류
 					using(
 						error_form	dlg = new error_form(def.WINDOW_TITLE,
 														ex,
@@ -70,7 +70,7 @@ namespace gvtrademap_cs
 #endif
 			}else{
 				// すでに시작している
-				// アクティブにして終了する
+				// アクティブにして종료する
 				gvtrademap_cs_form.ActiveGVTradeMap();
 			}
 			// m が GC によって解放されないようにする

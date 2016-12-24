@@ -2,12 +2,12 @@
 
  チャット분석のベース
  リクエスト付き
- 指定したルールでの분석が可能
+ 지정したルールでの분석が가능
  분석は1行単位のみ
- 複数行での분석は実機からリアルタイムに로그が書き出されるため, 
- まだ必要な로그が書き出されていない可能性がある
+ 複수行での분석は実機からリアルタイムに로그が書き出されるため, 
+ まだ必要な로그が書き出されていない가능性がある
 
- スレッド対応版
+ 스레드대응版
 
 ---------------------------------------------------------------------------*/
 
@@ -34,20 +34,20 @@ namespace gvo_base
 	public abstract class gvo_chat_base : RequestCtrl
 	{
 		public enum type{
-			index0,		// 1文字目から一致するもの
+			index0,		// 1문자目から一致するもの
 			any_index,	// どこかに含まれればいいもの
 			regex,		// 正規表現
 		};
 	
 		/*-------------------------------------------------------------------------
-		 분석対象
+		 분석대상
 		---------------------------------------------------------------------------*/
 		public class analize_data
 		{
 			private string				m_analize;
 			private type				m_type;
-			private Regex				m_regex;		// 正規表現時の분석対象
-			private object				m_tag;			// 분석결과参照用タグ
+			private Regex				m_regex;		// 正規表現時の분석대상
+			private object				m_tag;			// 분석결과참조용タグ
 
 			/*-------------------------------------------------------------------------
 			
@@ -156,14 +156,14 @@ namespace gvo_base
 		};
 	
 		private string						m_path;							// 로그パス
-		private FileInfo					m_newest_chat_file_info;		// 最新の로그ファイル정보
-		private FileInfo					m_chat_file_info;				// 분석対象の로그ファイル정보
-		private int							m_analyze_lines;				// 분석した行数
+		private FileInfo					m_newest_chat_file_info;		// 最新の로그파일정보
+		private FileInfo					m_chat_file_info;				// 분석대상の로그파일정보
+		private int							m_analyze_lines;				// 분석した行수
 
-		private List<analize_data>			m_analize_list;					// 분석対象
+		private List<analize_data>			m_analize_list;					// 분석대상
 		private List<analized_data>			m_analized_list;				// 분석결과
 
-		// スレッド対応
+		// 스레드대응
 		private readonly object				m_syncobject	= new object();
 
 		/*-------------------------------------------------------------------------
@@ -174,7 +174,7 @@ namespace gvo_base
 												List<analized_data>	list;
 												lock(m_syncobject){
 													// 新しい분석정보は差し替えのため, 
-													// 参照が得られればよい
+													// 참조が得られればよい
 													list	= m_analized_list;
 												}
 												return list;
@@ -229,15 +229,15 @@ namespace gvo_base
 			m_path						= path;
 
 			m_newest_chat_file_info		= null;		// 更新が最も新しい로그
-			m_chat_file_info			= null;		// 분석対象の로그
-			m_analyze_lines				= 0;		// 분석状況
+			m_chat_file_info			= null;		// 분석대상の로그
+			m_analyze_lines				= 0;		// 분석현황
 
 			m_analize_list				= new List<analize_data>();
 			m_analized_list				= null;
 		}
 	
 		/*-------------------------------------------------------------------------
-		 분석정보を追加する
+		 분석정보を추가する
 		 tagで判定すること
 		---------------------------------------------------------------------------*/
 		protected void AddAnalizeList(string analize, type _type, object tag)
@@ -246,9 +246,9 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 분석정보を追加する
+		 분석정보を추가する
 		 tagで判定すること
-		 預金の이자用
+		 預金の이자용
 		---------------------------------------------------------------------------*/
 		protected void AddAnalizeList_Interest(object tag)
 		{
@@ -264,23 +264,23 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 最も新しい로그ファイル명を得る
+		 最も新しい로그파일명を得る
 		---------------------------------------------------------------------------*/
 		private FileInfo get_newest_log_file()
 		{
-			// 로그ファイル목록を得る
-			// 最終書き込み時間でソートされる
+			// 로그파일목록を得る
+			// 最終쓰기시간でソートされる
 			FileInfo[]	log_list	= GetLogFiles();
 
 			if(log_list == null)		return null;	// 실패
 			if(log_list.Length <= 0)	return null;	// 로그が1つもない
 
-			// 最後のファイルが最新로그
+			// 最후の파일が最新로그
 			return log_list[log_list.Length - 1];
 		}
 	
 		/*-------------------------------------------------------------------------
-		 로그ファイル명목록を得る
+		 로그파일명목록を得る
 		---------------------------------------------------------------------------*/
 		public FileInfo[] GetLogFiles()
 		{
@@ -303,7 +303,7 @@ namespace gvo_base
 				// 로그が1つもない場合はnullを返す
 				if(file_info.Length <= 0)	return null;
 
-				// 最終書き込み時間でソートする
+				// 最終쓰기시간でソートする
 				SortFileInfo_LastWriteTime(file_info);
 				return file_info;
 			}catch{
@@ -313,19 +313,19 @@ namespace gvo_base
 
 		/*-------------------------------------------------------------------------
 		 ソート
-		 最終書き込み時間で比較する
+		 最終쓰기시간で比較する
 		---------------------------------------------------------------------------*/
 		static public void SortFileInfo_LastWriteTime(FileInfo[] list)
 		{
 			if(list == null)	return;
 
-			// 最終書き込み時間でソートする
+			// 最終쓰기시간でソートする
 			Array.Sort<FileInfo>(list, new file_info_compare());
 		}
 	
 		/*-------------------------------------------------------------------------
 		 比較
-		 最終書き込み時間で比較する
+		 最終쓰기시간で比較する
 		---------------------------------------------------------------------------*/
 		public class file_info_compare : IComparer<FileInfo>
 		{
@@ -358,7 +358,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 指定された로그분석
+		 지정された로그분석
 		---------------------------------------------------------------------------*/
 		public List<analized_data> AnalyzeChatLog(string fname)
 		{
@@ -403,7 +403,7 @@ namespace gvo_base
 				m_newest_chat_file_info	= get_newest_log_file();
 			}
 
-			// 로그ファイル정보の取得に실패
+			// 로그파일정보の取得に실패
 			if(m_newest_chat_file_info == null)		return false;
 
 			if(m_chat_file_info == null){
@@ -448,7 +448,7 @@ namespace gvo_base
 			// 현재로그が存在しない
 			if(!m_chat_file_info.Exists)	return false;
 
-			// 最新정보を新しく作成
+			// 最新정보を新しく작성
 			m_newest_chat_file_info		= new FileInfo(m_chat_file_info.FullName);
 	
 			try{
@@ -476,11 +476,11 @@ namespace gvo_base
 
 		/*-------------------------------------------------------------------------
 		 분석する
-		 분석결과はlist내용に追加される
+		 분석결과はlist내용に추가される
 		---------------------------------------------------------------------------*/
 		private bool do_analize(FileInfo file_info, List<analized_data> list, ref int analyze_lines)
 		{
-			// スレッド時にnullになる可能性がある
+			// 스레드時にnullになる가능性がある
 			// pathのset時
 			if(file_info == null)	return false;
 
@@ -489,7 +489,7 @@ namespace gvo_base
 					string	line		= "";
 					int		line_count	= 0;
 
-					// TXTとHTMLに対応
+					// TXTとHTMLに대응
 					string		ex		= Path.GetExtension(file_info.FullName);
 					bool		is_text;
 					Encoding	encoder	= null;
@@ -535,10 +535,10 @@ namespace gvo_base
 		---------------------------------------------------------------------------*/
 		protected virtual void AnalyzeLine(string line, List<analized_data> list)
 		{
-			// 登録されているルールでの분석
+			// 등록されているルールでの분석
 			foreach(analize_data d in m_analize_list){
 				if(d.Analize(line, list)){
-					// 対象が見つかった
+					// 대상が見つかった
 					return;
 				}
 			}

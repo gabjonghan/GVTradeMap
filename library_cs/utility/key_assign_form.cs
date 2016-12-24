@@ -1,5 +1,5 @@
 ﻿//-------------------------------------------------------------------------
-// キーアサイン
+// 키アサイン
 //-------------------------------------------------------------------------
 using System;
 using System.Windows.Forms;
@@ -9,8 +9,8 @@ namespace Utility.KeyAssign
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// キーアサインフォーム, 
-	/// 1つのキーアサインを編集する. 
+	/// 키アサインフォーム, 
+	/// 1つの키アサインを編集する. 
 	/// </summary>
 	public partial class KeyAssignForm : Form
 	{
@@ -19,7 +19,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 新しくアサインされたキーを得る
+		/// 新しくアサインされた키を得る
 		/// </summary>
 		public Keys NewAssignKey{
 			get{
@@ -29,9 +29,9 @@ namespace Utility.KeyAssign
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 構築
+		/// 구축
 		/// </summary>
-		/// <param name="assign">編集するキーアサイン</param>
+		/// <param name="assign">編集する키アサイン</param>
 		public KeyAssignForm(KeyAssignList.Assign assign)
 		{
 			InitializeComponent();
@@ -42,13 +42,13 @@ namespace Utility.KeyAssign
 
 			label1.Text			= assign.KeysString;
 
-			// なにもなしでOKを押すと割り当てなしとなる
+			// なにもなしでOKを押すと할당なしとなる
 			m_new_assign		= Keys.None;
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// キーが押された
+		/// 키が押された
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -61,10 +61,10 @@ namespace Utility.KeyAssign
 			// 入力がテキストボックスに反映されないようにする
 			e.SuppressKeyPress	= true;
 	
-			// 入力されたキーを反映させる
+			// 入力された키を反映させる
 			textBox1.Text		= m_assign.GetKeysString(e.KeyData);
 
-			// 割り当て可能なら値を覚えておく
+			// 할당가능なら値を覚えておく
 			m_new_assign		= (m_assign.CanAssignKeys(e.KeyData))
 									? e.KeyData
 									: Keys.None;

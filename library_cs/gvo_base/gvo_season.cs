@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- 季節管理
- 9時間毎に夏と冬が入れ換わる
+ 季節관리
+ 9시간毎に夏と冬が入れ換わる
 
 ---------------------------------------------------------------------------*/
 
@@ -31,10 +31,10 @@ namespace gvo_base
 			MAX
 		};
 	
-		private DateTime				m_next_season_start;	// 次회の季節変動開始日時
-		private DateTime				m_now_season_start;		// 今회の季節変動開始日時
+		private DateTime				m_next_season_start;	// 次회の季節変動開始일時
+		private DateTime				m_now_season_start;		// 今회の季節変動開始일時
 		private season					m_now_season;			// 現在の季節
-		private DateTime				m_base_season_start;	// 基準となる日時
+		private DateTime				m_base_season_start;	// 基準となる일時
 
 		/*-------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ namespace gvo_base
 		---------------------------------------------------------------------------*/
 		public gvo_season()
 		{
-			// 夏の基準となる日時
+			// 夏の基準となる일時
 			// 未来でも過去でもよい
 			m_base_season_start	= new DateTime(2010, 3, 2, 13, 30, 0);	// 夏
 			m_now_season		= season.MAX;
@@ -74,16 +74,16 @@ namespace gvo_base
 			long	ticks		= now.Ticks - m_base_season_start.Ticks;
 			long	t			= ticks / TimeSpan.FromHours(9).Ticks;
 			if(t < 0)	t--;
-			// 偶数なら夏, 奇数なら冬
+			// 偶수なら夏, 奇수なら冬
 			season	now_s		= ((t & 1) == 0)? season.summer: season.winter;
 			if(now_s != m_now_season)	ret	= true;	// 季節が変わった
 			m_now_season		= now_s;	// 今회得たの季節
 
-			// 今회の変動開始日時
+			// 今회の変動開始일時
 			m_now_season_start	= m_base_season_start.AddHours((t + 0) * 9);
 //			Debug.WriteLine(TojbbsDateTimeString(m_now_season_start));
 	
-			// 次회の変動開始日時
+			// 次회の変動開始일時
 			m_next_season_start	= m_base_season_start.AddHours((t + 1) * 9);
 //			Debug.WriteLine(TojbbsDateTimeString(m_next_season_start));
 
@@ -92,7 +92,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 季節を文字列で返す
+		 季節を문자열で返す
 		---------------------------------------------------------------------------*/
 		public static string ToSeasonString(season s)
 		{

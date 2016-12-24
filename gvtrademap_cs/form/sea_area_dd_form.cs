@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- ドラッグ&ドロップされた해역정보
+ 드래그&ドロップされた해역정보
 
 ---------------------------------------------------------------------------*/
 
@@ -30,7 +30,7 @@ namespace gvtrademap_cs
 		private List<sea_area_once_from_dd>		m_list;
 		private GvoDatabase						m_db;
 
-		// フィルタ後の목록
+		// フィルタ후の목록
 		private List<sea_area_once_from_dd>		m_filterd_list;
 
 		/*-------------------------------------------------------------------------
@@ -55,7 +55,7 @@ namespace gvtrademap_cs
 			listView1.Columns.Add("서버",		80);
 			listView1.Columns.Add("해역명",		100);
 			listView1.Columns.Add("상태",		100);
-			listView1.Columns.Add("終了日時",	180);
+			listView1.Columns.Add("종료일時",	180);
 			listView1.Columns.Add("補足",		100);
 	
 			checkBox1.Checked	= true;
@@ -143,9 +143,9 @@ namespace gvtrademap_cs
 			}
 		}
 
-        private void sea_area_dd_form_Load(object sender, EventArgs e)
-        {
+		private void sea_area_dd_form_Load(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }

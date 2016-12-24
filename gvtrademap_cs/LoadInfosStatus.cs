@@ -7,26 +7,26 @@ namespace gvtrademap_cs
 {
   public class LoadInfosStatus
   {
-    public int NowStep { get; set; }
+	public int NowStep { get; set; }
 
-    public int MaxStep { get; set; }
+	public int MaxStep { get; set; }
 
-    public string StatusMessage { get; set; }
+	public string StatusMessage { get; set; }
 
-    public void Start(int max, string message)
-    {
-      MaxStep = max;
-      NowStep = 0;
-      StatusMessage = message;
-    }
+	public void Start(int max, string message)
+	{
+	  MaxStep = max;
+	  NowStep = 0;
+	  StatusMessage = message;
+	}
 
-    public void IncStep(string next_message)
-    {
-      StatusMessage = next_message;
-      if (++NowStep < MaxStep)
-        return;
-      NowStep = MaxStep;
-      StatusMessage = "완료";
-    }
+	public void IncStep(string next_message)
+	{
+	  StatusMessage = next_message;
+	  if (++NowStep < MaxStep)
+		return;
+	  NowStep = MaxStep;
+	  StatusMessage = "완료";
+	}
   }
 }

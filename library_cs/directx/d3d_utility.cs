@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- DirectX用ユーティリティ
+ DirectX용ユーティリティ
  全てstaticメソッド
 
 ---------------------------------------------------------------------------*/
@@ -23,8 +23,8 @@ namespace directx
 	static public class d3d_utility
 	{
 		/*-------------------------------------------------------------------------
-		 텍스쳐のサイズを得る
-		 LevelDescription 0 のサイズを返す 
+		 텍스쳐の사이즈を得る
+		 LevelDescription 0 の사이즈を返す 
 		 tex==null のとき Vector2(0,0) を返す
 		---------------------------------------------------------------------------*/
 		static public Vector2 GetTextureSize(Texture tex)
@@ -40,15 +40,15 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 텍스쳐を作成する
-		 텍스쳐はManagedで作成される
-		 시스템메모リに作成した텍스쳐を사용できる텍스쳐にするのに사용する
-		 bmp등から切り出した텍스쳐を作成する場合は, 
-		 시스템메모リに텍스쳐を作成し, この関数でManagedに転送する
-		 Managedで作成した텍스쳐をロックしてはいけない
+		 텍스쳐を작성함
+		 텍스쳐はManagedで작성される
+		 시스템메모リに작성した텍스쳐を사용できる텍스쳐にするのに사용する
+		 bmp등から切り出した텍스쳐を작성함場合は, 
+		 시스템메모リに텍스쳐を작성し, この関수でManagedに전送する
+		 Managedで작성した텍스쳐をロックしてはいけない
 		 
-		 텍스쳐はできるだけDDSで作成し, TextureLoaderを使って로드こと
-		 TextureLoaderはManagedな텍스쳐を作成してくれる
+		 텍스쳐はできるだけDDSで작성し, TextureLoaderを使って로드こと
+		 TextureLoaderはManagedな텍스쳐を작성してくれる
 		---------------------------------------------------------------------------*/
 		static public Texture CreateTextureFromTexture(Device device, Texture src_texture)
 		{
@@ -57,9 +57,9 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 フォーマット指定版
-		 フォーマット変換は기본的には時間が掛かるので注意
-		 フォーマット変換に실패するかもしれない
+		 フォーマット지정版
+		 フォーマット변환は기본的には시간が掛かるので注意
+		 フォーマット변환に실패するかもしれない
 		---------------------------------------------------------------------------*/
 		static public Texture CreateTextureFromTexture(Device device, Texture src_texture, Format format)
 		{
@@ -67,7 +67,7 @@ namespace directx
 			if(src_texture == null)		return null;
 
 			try{
-				// 同じサイズの텍스쳐を作成する
+				// 同じ사이즈の텍스쳐を작성함
 				Texture dst_texture		= CreateTextureSameSize(device, src_texture, format);
 				if(dst_texture == null){
 					// 실패
@@ -87,7 +87,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 渡された텍스쳐と同じサイズの텍스쳐を作成する
+		 渡された텍스쳐と同じ사이즈の텍스쳐を작성함
 		---------------------------------------------------------------------------*/
 		static public Texture CreateTextureSameSize(Device device, Texture src_texture)
 		{
@@ -101,7 +101,7 @@ namespace directx
 		}
 		static public Texture CreateTextureSameSize(Device device, Texture src_texture, Format format)
 		{
-			// Managedで作成する
+			// Managedで작성함
 			return CreateTextureSameSize(device, src_texture, Usage.None, format, Pool.Managed);
 		}
 		static public Texture CreateTextureSameSize(Device device, Texture src_texture, Usage usage, Format format, Pool pool)
@@ -112,13 +112,13 @@ namespace directx
 											1, usage, format, pool);
 				return tex;
 			}catch{
-				// 作成실패
+				// 작성실패
 				return null;
 			}
 		}
 		/*-------------------------------------------------------------------------
-		 渡された텍스쳐と同じサイズの텍스쳐を作成する
-		 レンダーターゲットとして作成する
+		 渡された텍스쳐と同じ사이즈の텍스쳐を작성함
+		 렌더링 타겟として작성함
 		---------------------------------------------------------------------------*/
 		static public Texture CreateRenderTargetTextureSameSize(Device device, Texture src_texture)
 		{
@@ -128,8 +128,8 @@ namespace directx
 	
 		/*-------------------------------------------------------------------------
 		 텍스쳐コピー
-		 例えば시스템메모リ上の텍스쳐をVRAMに転送する등
-		 サイズ등はチェックしないので注意
+		 例えば시스템메모リ上の텍스쳐をVRAMに전送する등
+		 사이즈등はチェックしないので注意
 		---------------------------------------------------------------------------*/
 		static public bool CopyTexture(Device device, Texture dst_texture, Texture src_texture)
 		{
@@ -151,7 +151,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 텍스쳐サイズを2のべき乗に調整する
+		 텍스쳐사이즈を2のべき乗に조정する
 		---------------------------------------------------------------------------*/
 		static public Size TextureSizePow2(Size size)
 		{
@@ -162,7 +162,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 サイズを2のべき乗に調整する
+		 사이즈を2のべき乗に조정する
 		---------------------------------------------------------------------------*/
 		static private int size_pow2(int size)
 		{

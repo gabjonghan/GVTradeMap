@@ -86,7 +86,7 @@ namespace gvtrademap_cs
 			}catch{
 				Close();
 				m_is_error	= true;		// 오류
-				MessageBox.Show("TCP서버の시작に실패하였습니다. ", "TCP서버시작오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("TCP서버의 시작에 실패하였습니다. ", "TCP서버시작오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -102,7 +102,7 @@ namespace gvtrademap_cs
 			if(list == null)		return null;
 			if(list.Length <= 0)	return null;
 
-			// 最初に연결されたクライアント
+			// 최초に연결されたクライアント
 			return list[0];
 		}
 	}

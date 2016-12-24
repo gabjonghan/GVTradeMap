@@ -3,7 +3,7 @@
  TabControlのtab비표시版
 
  コードは以下のTipsから持ってきています
- .NET Framework2.0用に多少調整している程度
+ .NET Framework2.0용に多少조정している程度
 
  Mick Doherty's .net Tips and Tricks
  http://dotnetrix.co.uk/default.htm
@@ -77,7 +77,7 @@ namespace Controls
 		#endregion
 
 		private Controls.ManagedPanel m_SelectedPanel;
-        
+		
 		public event EventHandler SelectedIndexChanged;
 
 		//ManagedPanels
@@ -86,7 +86,7 @@ namespace Controls
 		{
 			get{return base.Controls;}
 		}
-    
+	
 
 		//SelectedPanel
 		[TypeConverter(typeof(TypeConverters.SelectedPanelConverter))]
@@ -100,7 +100,7 @@ namespace Controls
 				OnSelectedPanelChanged(EventArgs.Empty);
 			}
 		}
-             
+			 
 
 		//SelectedIndex
 		[Browsable(false)]
@@ -156,7 +156,7 @@ namespace Controls
 		{
 			if ((e.Control is Controls.ManagedPanel) == false)
 				throw new ArgumentException("Only Mangel.Controls.ManagedPanels can be added to a Mangel.Controls.PanelManger.");
-            
+			
 			if (this.SelectedPanel != null)
 				((Controls.ManagedPanel)this.SelectedPanel).Visible = false;
 
@@ -186,7 +186,7 @@ namespace Controls
 	[ToolboxItem(false)]
 	public class ManagedPanel: System.Windows.Forms.ScrollableControl
 	{
-        
+		
 		public ManagedPanel()
 		{
 			base.Dock = DockStyle.Fill;
@@ -257,7 +257,7 @@ namespace Design
 		private DesignerVerbCollection m_verbs = new DesignerVerbCollection();
 		private IDesignerHost m_DesignerHost;
 		private ISelectionService m_SelectionService;
-        
+		
 		private Controls.PanelManager HostControl
 		{
 			get{return (Controls.PanelManager)this.Control;}
@@ -266,7 +266,7 @@ namespace Design
 
 		public PanelManagerDesigner():base()
 		{
-			DesignerVerb verb1 = new DesignerVerb("ページの追加", new EventHandler(OnAddPanel));
+			DesignerVerb verb1 = new DesignerVerb("ページの추가", new EventHandler(OnAddPanel));
 			DesignerVerb verb2 = new DesignerVerb("ページの삭제", new EventHandler(OnRemovePanel));
 			m_verbs.AddRange(new DesignerVerb[] {verb1, verb2});
 		}
@@ -306,25 +306,25 @@ namespace Design
 			{
 				if (m_SelectionService == null)
 					m_SelectionService = (ISelectionService)GetService(typeof(ISelectionService));
-                
+				
 				return m_SelectionService;
 			}
 		}
-        
+		
 
 		private void OnAddPanel(Object sender, EventArgs e)
 		{
 			Control.ControlCollection oldManagedPanels = HostControl.Controls;
-            
+			
 			RaiseComponentChanging(TypeDescriptor.GetProperties(HostControl)["ManagedPanels"]);
-            
+			
 			Controls.ManagedPanel P = (Controls.ManagedPanel)DesignerHost.CreateComponent(typeof(Controls.ManagedPanel));
 			P.Text = P.Name;
 			HostControl.ManagedPanels.Add(P);
-            
+			
 			RaiseComponentChanged(TypeDescriptor.GetProperties(HostControl)["ManagedPanels"], oldManagedPanels, HostControl.ManagedPanels);
 			HostControl.SelectedPanel = P;
-            
+			
 			SetVerbs();
 		}
 
@@ -332,17 +332,17 @@ namespace Design
 		private void OnRemovePanel(Object sender, EventArgs e)
 		{
 			Control.ControlCollection oldManagedPanels = HostControl.Controls;
-            
+			
 			if (HostControl.SelectedIndex < 0) return;
-            
+			
 			RaiseComponentChanging(TypeDescriptor.GetProperties(HostControl)["TabPages"]);
-            
+			
 			DesignerHost.DestroyComponent((Controls.ManagedPanel)HostControl.ManagedPanels[HostControl.SelectedIndex]);
 
 			RaiseComponentChanged(TypeDescriptor.GetProperties(HostControl)["ManagedPanels"], oldManagedPanels, HostControl.ManagedPanels);
-            
+			
 			SelectionService.SetSelectedComponents(new IComponent[] {HostControl}, SelectionTypes.Auto);
-            
+			
 			SetVerbs();
 		}
 
@@ -406,7 +406,7 @@ namespace Design
 			{
 				if (m_SelectionService == null)
 					m_SelectionService = (ISelectionService)GetService(typeof(ISelectionService));
-                
+				
 				return m_SelectionService;
 			}
 		}

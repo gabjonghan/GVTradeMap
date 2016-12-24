@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
  TCP서버ベース
- 複数のクライアントと接続できる
+ 複수のクライアントと接続できる
 
 ---------------------------------------------------------------------------*/
 
@@ -19,7 +19,7 @@ using System.Net.Sockets;
 ---------------------------------------------------------------------------*/
 namespace net_base
 {
-	// 서버用イベントハンドラ
+	// 서버용イベントハンドラ
 	public delegate void ServerEventHandler(object sender, ServerEventArgs e);
 
 	/*-------------------------------------------------------------------------
@@ -54,7 +54,7 @@ namespace net_base
 			stoped,
 		};
 		
-		private int						MAX_CLIENT		= 16;		// 최대接続数
+		private int						MAX_CLIENT		= 16;		// 최대接続수
 		private int						DEF_BACKLOG		= 100;
 	
 		private Socket					m_server;
@@ -64,7 +64,7 @@ namespace net_base
 
 		protected List<tcp_client_base>	m_client_list;
 	
-		// 同期用
+		// 同期용
 		protected readonly object		m_sync_socket	= new object();
 
 		// イベント
@@ -127,7 +127,7 @@ namespace net_base
 
 				// clientを全て停止する
 				if(m_client_list != null){
-					// Dispose()内で목록から삭제されるため
+					// Dispose()내で목록から삭제されるため
 					// foreachが使えない
 					while(m_client_list.Count > 0){
 						m_client_list[0].Dispose();
@@ -167,7 +167,7 @@ namespace net_base
 		---------------------------------------------------------------------------*/
 		public void Listen(int portNum)
 		{
-			// IPv4の最初のアドレスを得る
+			// IPv4の최초のアドレスを得る
 			IPAddress[]	address_list	= net_useful.GetLocalIpAddress_Ipv4();
 			if(   (address_list == null)
 				||(address_list.Length <= 0) ){
@@ -199,7 +199,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 tcp_client_baseの作成
+		 tcp_client_baseの작성
 		 継承時はこのメソッドをオーバーライドすること
 		---------------------------------------------------------------------------*/
 		protected virtual tcp_client_base CreateClient(Socket sct)
@@ -223,31 +223,31 @@ namespace net_base
 				return;
 			}
 
-			// tcp_client_baseの作成
+			// tcp_client_baseの작성
 			tcp_client_base	client	= this.CreateClient(soc);
 
-			// 최대数を超えていないか
+			// 최대수を超えていないか
 			if(m_client_list.Count >= m_max_client){
 				client.Close();
 			}else{
-				// コレクションに追加
+				// コレクションに추가
 				lock(m_sync_socket){
 					m_client_list.Add(client);
 				}
 
-				// イベントハンドラの追加
+				// イベントハンドラの추가
 				client.Disconnected		+= new EventHandler(client_disconnected);
 				client.ReceivedData		+= new ReceivedDataEventHandler(client_received_data);
 				// イベントを発生
 				OnAcceptedClient(new ServerEventArgs(client));
 
-				// データ受信開始
+				// 데이터受信開始
 				if(!client.is_closed){
 					client.StartReceive();
 				}
 			}
 
-			// 接続要求施行を再開する
+			// 接続要求施行を다시開する
 			m_server.BeginAccept(new AsyncCallback(accept_callback), null);
 		}
 
@@ -265,7 +265,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 データを受信した
+		 데이터を受信した
 		---------------------------------------------------------------------------*/
 		private void client_received_data(object sender, ReceivedDataEventArgs e)
 		{
@@ -284,7 +284,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 データを受信した
+		 데이터を受信した
 		---------------------------------------------------------------------------*/
 		protected virtual void OnReceivedData(ReceivedDataEventArgs e)
 		{

@@ -1,12 +1,12 @@
 ﻿//-------------------------------------------------------------------------
-// キーアサインヘルパ
+// 키アサインヘルパ
 // KeyAssignFormの動作내용
 // ダイア로그にKeyAssignFormの항목を埋め込んだときに사용する
-// ComboBox	그룹선택用
-// Button		割り当て변경用
-// Button		割り当て解除用
-// Button		初期割り当てに戻す
-// ListView	割り当て목록
+// ComboBox	그룹선택용
+// Button		할당변경용
+// Button		할당解除용
+// Button		初期할당に戻す
+// ListView	할당목록
 // の5つのコントロールを渡す
 //-------------------------------------------------------------------------
 using System;
@@ -18,7 +18,7 @@ namespace Utility.KeyAssign
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// キーアサインヘルパ. 
+	/// 키アサインヘルパ. 
 	/// KeyAssignFormの動作내용. 
 	/// ダイア로그にKeyAssignFormの항목を埋め込んだときに사용する. 
 	/// </summary>
@@ -40,12 +40,12 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 構築
+		/// 구축
 		/// </summary>
 		/// <param name="assign_list">必須, 複製して保持される</param>
-		/// <param name="form">설정用フォーム, アサイン用ダイア로그표시時に参照される. 必須</param>
-		/// <param name="cbox">그룹선택用, nullでもよい</param>
-		/// <param name="list_view">アサイン목록표시用ListView, 必須</param>
+		/// <param name="form">설정용フォーム, アサイン용ダイア로그표시時に참조される. 必須</param>
+		/// <param name="cbox">그룹선택용, nullでもよい</param>
+		/// <param name="list_view">アサイン목록표시용ListView, 必須</param>
 		/// <param name="assign_button">アサインボタン, 必須</param>
 		/// <param name="remove_assign_button">アサイン삭제ボタン, nullでもよい</param>
 		/// <param name="default_all_assign_button">전부を初期値に戻すボタン, nullでもよい</param>
@@ -73,7 +73,7 @@ namespace Utility.KeyAssign
 			// 初期化
 			init();
 
-			// 割り当てボタンの更新
+			// 할당ボタンの更新
 			update_assign_button();
 		}
 
@@ -90,12 +90,12 @@ namespace Utility.KeyAssign
 				m_select_group_cbox.SelectedIndexChanged	+= new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			}
 
-			// 割り当て변경ボタン
+			// 할당변경ボタン
 			if(m_assign_button != null){
 				m_assign_button.Click += new System.EventHandler(this.button1_Click);
 			}
 
-			// 割り当て解除ボタン
+			// 할당解除ボタン
 			if(m_remove_assign_button != null){
 				m_remove_assign_button.Click += new System.EventHandler(this.button2_Click);
 			}
@@ -127,7 +127,7 @@ namespace Utility.KeyAssign
 		{
 			m_list_view.Columns.Add("그룹", 90);
 			m_list_view.Columns.Add("기능", 180);
-			m_list_view.Columns.Add("割り当て", 100);
+			m_list_view.Columns.Add("할당", 100);
 
 			List<string>	glist	= m_assign_list.GetGroupList();
 			if(glist == null)	return;
@@ -155,7 +155,7 @@ namespace Utility.KeyAssign
 			m_list_view.BeginUpdate();
 			m_list_view.Items.Clear();
 
-			// 그룹선택状況により목록내용を決める
+			// 그룹선택현황により목록내용を決める
 			List<KeyAssignList.Assign>	list	= null;
 
 			if(m_select_group_cbox != null){
@@ -176,16 +176,16 @@ namespace Utility.KeyAssign
 
 			m_list_view.EndUpdate();
 
-			// 割り当てボタンの更新
+			// 할당ボタンの更新
 			update_assign_button();
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ListViewに追加する
+		/// ListViewに추가する
 		/// </summary>
-		/// <param name="listview">対象のListView</param>
-		/// <param name="i">キーアサイン</param>
+		/// <param name="listview">대상のListView</param>
+		/// <param name="i">키アサイン</param>
 		private void add_item(ListView listview, KeyAssignList.Assign i)
 		{
 			ListViewItem	item	= new ListViewItem(i.Group, 0);
@@ -199,7 +199,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 割り当て변경ボタンの更新
+		/// 할당변경ボタンの更新
 		/// </summary>
 		private void update_assign_button()
 		{
@@ -233,7 +233,7 @@ namespace Utility.KeyAssign
 		/// <param name="e"></param>
 		private void listView1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			// 割り当てボタンの更新
+			// 할당ボタンの更新
 			update_assign_button();
 		}
 
@@ -261,7 +261,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// キー割り当て변경
+		/// 키할당변경
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -286,7 +286,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// キー割り当て解除
+		/// 키할당解除
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -296,7 +296,7 @@ namespace Utility.KeyAssign
 
 			if(i == null)		return;
 
-			// 割り当てなし
+			// 할당なし
 			i.Keys		= Keys.None;
 
 			// 목록の更新

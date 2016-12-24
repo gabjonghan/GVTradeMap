@@ -1,742 +1,742 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <domaininfo_root>
   <domain_info name="アントワープ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ヴィスビー">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="England" />
   </domain_info>
   <domain_info name="オスロ">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="コペンハーゲン">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ストックホルム">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="England" />
   </domain_info>
   <domain_info name="ダンツィヒ">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="England" />
   </domain_info>
   <domain_info name="ハンブルグ">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ブレーメン">
-    <server name="Euros" country="Netherlands" />
-    <server name="Zephyros" country="Netherlands" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Netherlands" />
+	<server name="Zephyros" country="Netherlands" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ベルゲン">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="England" />
   </domain_info>
   <domain_info name="リガ">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="England" />
   </domain_info>
   <domain_info name="リューベック">
-    <server name="Euros" country="England" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="England" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ダブリン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="England" />
   </domain_info>
-  <domain_info name="カサブランカ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+  <domain_info name="カ서브ランカ">
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="セウタ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="アンコナ">
-    <server name="Euros" country="Venezia" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Venezia" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="カリアリ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="カルヴィ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="サッサリ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ジェノヴァ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="シラクサ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ナポリ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ピサ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="アテネ">
-    <server name="Euros" country="France" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="France" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="カンディア">
-    <server name="Euros" country="Venezia" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Venezia" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="サロニカ">
-    <server name="Euros" country="Venezia" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Turkey" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Venezia" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Turkey" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ファマガスタ">
-    <server name="Euros" country="France" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="France" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="オデッサ">
-    <server name="Euros" country="Turkey" />
-    <server name="Zephyros" country="Turkey" />
-    <server name="Notos" country="Turkey" />
-    <server name="Boreas" country="Turkey" />
+	<server name="Euros" country="Turkey" />
+	<server name="Zephyros" country="Turkey" />
+	<server name="Notos" country="Turkey" />
+	<server name="Boreas" country="Turkey" />
   </domain_info>
   <domain_info name="カイロ">
-    <server name="Euros" country="Turkey" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Turkey" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="セヴァストポリ">
-    <server name="Euros" country="Turkey" />
-    <server name="Zephyros" country="Turkey" />
-    <server name="Notos" country="Turkey" />
-    <server name="Boreas" country="Turkey" />
+	<server name="Euros" country="Turkey" />
+	<server name="Zephyros" country="Turkey" />
+	<server name="Notos" country="Turkey" />
+	<server name="Boreas" country="Turkey" />
   </domain_info>
   <domain_info name="チュニス">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="トリポリ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ベイルート">
-    <server name="Euros" country="Turkey" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Turkey" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ベンガジ">
-    <server name="Euros" country="Turkey" />
-    <server name="Zephyros" country="France" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Turkey" />
+	<server name="Zephyros" country="France" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ヤッファ">
-    <server name="Euros" country="Turkey" />
-    <server name="Zephyros" country="France" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Turkey" />
+	<server name="Zephyros" country="France" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="サンティアゴ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="サントドミンゴ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="サンフアン">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ジャマイカ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ハバナ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ポルトベロ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="マラカイボ">
-    <server name="Euros" country="Netherlands" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Netherlands" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ヴェラクルス">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="メリダ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="バイーア">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="リオデジャネイロ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ブエノスアイレス">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="サンアントニオ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="アビジャン">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="アルギン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="カーボヴェルデ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="カリビブ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ケープ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="サンジョルジュ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="England" />
   </domain_info>
   <domain_info name="サントメ">
-    <server name="Euros" country="Netherlands" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Netherlands" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="シエラレオネ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="ドゥアラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ベニン">
-    <server name="Euros" country="France" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="France" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ベンゲラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ルアンダ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="キルワ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="ザンジバル">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="ソファラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="タマタブ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Netherlands" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Netherlands" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ナタール">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="マリンディ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="モガディシオ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="モザンビーク">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="モンバサ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="アデン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ジェッダ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ジョファール">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="スエズ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="セイラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="France" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="France" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ソコトラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="マスカット">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="マッサワ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="バスラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Turkey" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Turkey" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ホルムズ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="カリカット">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="カルカッタ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="ゴア">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="コチン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="セイロン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ディヴ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="ポンディシェリ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="France" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="France" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="マスリパタム">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="アチン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ジャカルタ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Netherlands" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Netherlands" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="スラバヤ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="France" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="France" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="パタニ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="パレンバン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="バンジェルマシン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ペグー">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="マカッサル">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="マラッカ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="ヤーデイン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Netherlands" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Netherlands" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="England" />
   </domain_info>
   <domain_info name="ルン">
-    <server name="Euros" country="Venezia" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Venezia" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="マニラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="ブルネイ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Portugal" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Portugal" />
   </domain_info>
   <domain_info name="ダバオ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ロッブリー">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="クチン">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ディリ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="ジャンビ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="アンボイナ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="テルナーテ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="カカドゥ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Venezia" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Venezia" />
   </domain_info>
   <domain_info name="ホバート">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ワンガヌイ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="クガリ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Spain" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Spain" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ピンジャラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="アカプルコ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="グァテマラ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="パナマ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="トゥンベス">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ランバイェケ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Venezia" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Venezia" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="リマ">
-    <server name="Euros" country="Spain" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Spain" />
+	<server name="Euros" country="Spain" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Spain" />
   </domain_info>
   <domain_info name="コピアポ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="バルパライソ">
-    <server name="Euros" country="France" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Portugal" />
-    <server name="Boreas" country="France" />
+	<server name="Euros" country="France" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Portugal" />
+	<server name="Boreas" country="France" />
   </domain_info>
   <domain_info name="グアム">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="Portugal" />
-    <server name="Notos" country="Spain" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="Portugal" />
+	<server name="Notos" country="Spain" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="サマライ">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="England" />
-    <server name="Boreas" country="Netherlands" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="England" />
+	<server name="Boreas" country="Netherlands" />
   </domain_info>
   <domain_info name="ヒバオア">
-    <server name="Euros" country="Portugal" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="England" />
+	<server name="Euros" country="Portugal" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="England" />
   </domain_info>
-     <domain_info name="ハワイ">
-    <server name="Euros" country="France" />
-    <server name="Zephyros" country="England" />
-    <server name="Notos" country="Venezia" />
-    <server name="Boreas" country="England" />
+	 <domain_info name="ハワイ">
+	<server name="Euros" country="France" />
+	<server name="Zephyros" country="England" />
+	<server name="Notos" country="Venezia" />
+	<server name="Boreas" country="England" />
   </domain_info>
   
   
