@@ -668,7 +668,7 @@ namespace gvo_base {
 						if(analize_angle_sub(tmp))	last	= tmp;
 					}
 
-					// 真ん中を각도とする
+					// 真ん중を각도とする
 					return ((float)(start + last)) * 0.5f;
 				}
 		*/
@@ -690,7 +690,7 @@ namespace gvo_base {
 				if (analize_angle_sub2(tmp)) last = tmp;
 			}
 
-			// 真ん中を각도とする
+			// 真ん중を각도とする
 			return ((float)(start + last)) * 0.5f;
 		}
 

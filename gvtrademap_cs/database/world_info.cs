@@ -29,13 +29,14 @@ namespace gvtrademap_cs {
 	---------------------------------------------------------------------------*/
 	public class GvoWorldInfo : IDisposable {
 		public enum InfoType {
-			City,		  // 도시
-			Sea,			// 해역
-			Shore,		// 상륙지점
-			Shore2,	  // 2차 필드
-			OutsideCity,	// 교외
-			PF,		  // 개인농장
-			InlandCity	// 내륙도시
+			City,           // 도시
+			Sea,            // 해역
+			Shore,          // 상륙지점
+			Shore2,         // 2차 필드
+			OutsideCity,    // 교외
+			PF,             // 개인농장
+			InlandCity,     // 내륙도시
+			GuildCity,      // 길드개척도시
 		};
 
 		// 서버
@@ -51,7 +52,7 @@ namespace gvtrademap_cs {
 		};
 		// 국
 		public enum Country {
-			Unknown,			// 무소속(보급항등)
+			Unknown,            // 무소속(보급항등)
 			England,
 			Spain,
 			Portugal,
@@ -63,56 +64,56 @@ namespace gvtrademap_cs {
 
 		// 도시の종류
 		public enum CityType {
-			Capital,			// 수도
-			City,			  // 도시
-			CapitalIslam,	  // 수도(이슬람)
-			CityIslam,		// 도시(이슬람)
+			Capital,            // 수도
+			City,               // 도시
+			CapitalIslam,       // 수도(이슬람)
+			CityIslam,          // 도시(이슬람)
 		};
 		// 동맹の종류
 		public enum AllianceType {
-			Unknown,			// 없음(보급항등)
-			Alliance,		  // 동맹
-			Capital,			// 수도
-			Territory,		// 영지
-			Piratical,		// 해적섬
+			Unknown,            // 없음(보급항등)
+			Alliance,           // 동맹
+			Capital,            // 수도
+			Territory,          // 영지
+			Piratical,          // 해적섬
 		};
 
 		// 문화권
 		public enum CulturalSphere {
-			Unknown,			// 불명
-			NorthEurope,		// 북유럽
-			Germany,			// 독일
-			Netherlands,		// 네덜란드
-			Britain,			// 브리튼 섬
-			NorthFrance,		// 프랑스 북부
-			Iberian,			// 이베리아
-			Atlantic,		  // 대서양
+			Unknown,            // 불명
+			NorthEurope,        // 북유럽
+			Germany,            // 독일
+			Netherlands,        // 네덜란드
+			Britain,            // 브리튼 섬
+			NorthFrance,        // 프랑스 북부
+			Iberian,            // 이베리아
+			Atlantic,         // 대서양
 			ItalySouthFrance,   // 이탈리아/남프랑스
-			Balkan,		  // 발칸
-			Turkey,		  // 터키
-			NearEast,		  // 서아시아
-			NorthAfrica,		// 북아프리카
-			WestAfrica,	  // 서아프리카
-			EastAfrica,	  // 동아프리카
-			Arab,			  // 아랍
-			Persia,		  // 페르시아
-			India,			// 인도
-			Indochina,		// 인도차이나
-			SoutheastAsia,	// 동남아시아
-			Oceania,			// 오세아니아
-			Caribbean,		// 카리브
+			Balkan,       // 발칸
+			Turkey,       // 터키
+			NearEast,         // 서아시아
+			NorthAfrica,        // 북아프리카
+			WestAfrica,   // 서아프리카
+			EastAfrica,   // 동아프리카
+			Arab,             // 아랍
+			Persia,       // 페르시아
+			India,          // 인도
+			Indochina,      // 인도차이나
+			SoutheastAsia,  // 동남아시아
+			Oceania,            // 오세아니아
+			Caribbean,      // 카리브
 			EastLatinAmerica,   // 중남미 동해안
 			WestLatinAmerica,   // 중남미 서해안
-			China,			// 화남
-			Japan,			// 일본
-			Taiwan,		  // 대만
-			Korea,			// 조선
+			China,          // 화남
+			Japan,          // 일본
+			Taiwan,       // 대만
+			Korea,          // 조선
 			EastNorthAmerica,   // 북미 동해안
-			WestNorthAmerica	// 북미 서해안
+			WestNorthAmerica    // 북미 서해안
 		};
 
 
-		private static EnumParser<GvoWorldInfo.InfoType>[] m_infotype_enum_param = new EnumParser<GvoWorldInfo.InfoType>[7]
+		private static EnumParser<GvoWorldInfo.InfoType>[] m_infotype_enum_param = new EnumParser<GvoWorldInfo.InfoType>[8]
 	{
 	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.City, "도시"),
 	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.Sea, "해역"),
@@ -120,7 +121,8 @@ namespace gvtrademap_cs {
 	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.Shore2, "2차 필드"),
 	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.OutsideCity, "교외"),
 	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.PF, "개인농장"),
-	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.InlandCity, "내륙도시")
+	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.InlandCity, "내륙도시"),
+	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.GuildCity, "길드개척도시")
 	};
 		private static EnumParser<GvoWorldInfo.Country>[] m_country_enum_param = new EnumParser<GvoWorldInfo.Country>[8]
 	{
@@ -188,18 +190,19 @@ namespace gvtrademap_cs {
 		private gvt_lib m_lib;
 		private gvo_season m_season;
 
-		private draw_infonames m_draw_infonames;		// 도시명などの그리기
+		private draw_infonames m_draw_infonames;        // 도시명などの그리기
 
-		private hittest_list m_world;			 // 세계の정보
+		private hittest_list m_world;            // 세계の정보
 		private MultiDictionary<string, GvoWorldInfo.Info> m_world_hash_table;
 		private GvoItemTypeDatabase m_item_type_db;   // 아이템の종류정보
 
-		private hittest_list m_nonseas;	   // 해역以외の목록
-		private hittest_list m_seas;					// 해역목록
-		private hittest_list m_cities;  // 도시목록
+		private hittest_list m_seas;        // 해역목록
+		private hittest_list m_cities;      // 도시목록
+		private hittest_list m_shores;      // 1차상륙지, 개인농장
+		private hittest_list m_nonseas;     // 위 3가지에 해당하지 않는 모두 
 
-		private GvoWorldInfo.Server m_server;			 // 현재서버
-		private GvoWorldInfo.Country m_my_country;	  // 현재국가
+		private GvoWorldInfo.Server m_server;            // 현재서버
+		private GvoWorldInfo.Country m_my_country;    // 현재국가
 
 		/*-------------------------------------------------------------------------
 
@@ -209,9 +212,11 @@ namespace gvtrademap_cs {
 		public GvoWorldInfo.Server MyServer { get { return m_server; } }
 		public GvoWorldInfo.Country MyCountry { get { return m_my_country; } }
 
-		public hittest_list NoSeas { get { return m_nonseas; } }
 		public hittest_list Seas { get { return m_seas; } }
 		public hittest_list Cities { get { return m_cities; } }
+		public hittest_list Shores { get { return m_shores; } }
+		public hittest_list NoSeas { get { return m_nonseas; } }
+
 		public gvo_season Season { get { return m_season; } }
 
 		/*-------------------------------------------------------------------------
@@ -223,9 +228,11 @@ namespace gvtrademap_cs {
 			m_world = new hittest_list();
 			m_world_hash_table = new MultiDictionary<string, GvoWorldInfo.Info>();
 			m_item_type_db = new GvoItemTypeDatabase();
-			m_nonseas = new hittest_list();
 			m_seas = new hittest_list();
-            m_cities = new hittest_list();
+			m_cities = new hittest_list();
+			m_shores = new hittest_list();
+			m_nonseas = new hittest_list();
+
 			m_draw_infonames = new draw_infonames(lib, this);
 
 			// 서버と국を初期化
@@ -282,19 +289,21 @@ namespace gvtrademap_cs {
 		 해역목록とその他목록を구축する
 		---------------------------------------------------------------------------*/
 		private void create_seas_list() {
-			m_nonseas.Clear();
 			m_seas.Clear();
-            m_cities.Clear();
+			m_cities.Clear();
+			m_shores.Clear();
+			m_nonseas.Clear();
 
 			foreach (Info i in m_world) {
 				if (i.InfoType == InfoType.Sea) {
 					// 해역
 					if (i.SeaInfo != null) m_seas.Add(i);
+				} else if (i.InfoType == InfoType.City) {
+					m_cities.Add(i);
+				} else if (i.InfoType == InfoType.Shore || i.InfoType == InfoType.PF || i.InfoType == InfoType.GuildCity) {
+					m_shores.Add(i);
 				} else {
-					if(i.InfoType == InfoType.City) {
-						m_cities.Add(i);
-					}
-					// 해역以외
+					// 해역이외 도시제외
 					m_nonseas.Add(i);
 				}
 			}
@@ -545,7 +554,7 @@ namespace gvtrademap_cs {
 				if (xmlDocument.DocumentElement == null || xmlDocument.DocumentElement.ChildNodes.Count <= 0)
 					return;
 				foreach (XmlNode n in xmlDocument.DocumentElement.ChildNodes) {
-					if (n.Attributes["name"] != null) {
+					if (n.Attributes != null && n.Attributes["name"] != null) {
 						GvoWorldInfo.Info info = FindInfo(n.Attributes["name"].Value);
 						if (info != null)
 							info.LoadItemsXml(n);
@@ -733,25 +742,25 @@ namespace gvtrademap_cs {
 			// 판정용 여백
 			const int CHECK_MARGIN = 10;
 
-			private string m_name;		  // 이름
-			private InfoType m_info_type;	 // 종류(도시등)
-			private int m_url_index;		// URL번호
-			private string m_url;			 // URLそのもの
-											  // 直接リンク
-			private GvoWorldInfo.Server m_server;		  // プレイしている서버
-			private GvoWorldInfo.CityInfo m_cityinfo;		 // 도시정보
+			private string m_name;        // 이름
+			private InfoType m_info_type;    // 종류(도시등)
+			private int m_url_index;        // URL번호
+			private string m_url;            // URLそのもの
+											 // 直接リンク
+			private GvoWorldInfo.Server m_server;         // プレイしている서버
+			private GvoWorldInfo.CityInfo m_cityinfo;        // 도시정보
 			private GvoWorldInfo.SeaInfo m_seainfo;   // 해역정보
 
-			private string m_memo;		  // 메모
+			private string m_memo;        // 메모
 			private string[] m_memo_div_lines;  // 行単位に분할された메모
 
 			private Point m_string_offset1; // 도시명표시용 오프셋(아이콘 대)
 			private Point m_string_offset2; // 도시명표시용 오프셋(아이콘 소)
 			private d3d_sprite_rects.rect m_icon_rect;  // 아이콘 대 사각형
-			private d3d_sprite_rects.rect m_small_icon_rect;	// 아이콘 소 사각형
-			private d3d_sprite_rects.rect m_string_rect;		// 문자표시용 사각형
+			private d3d_sprite_rects.rect m_small_icon_rect;    // 아이콘 소 사각형
+			private d3d_sprite_rects.rect m_string_rect;        // 문자표시용 사각형
 
-			private List<Group> m_groups;	 // group_index분の데이터
+			private List<Group> m_groups;    // group_index분の데이터
 
 			/*-------------------------------------------------------------------------
 
@@ -1040,8 +1049,11 @@ namespace gvtrademap_cs {
 						case InfoType.InlandCity:
 							m_icon_rect = lib.icons.GetIcon(icons.icon_index.map_magenta_circle);
 							break;
+						case InfoType.GuildCity:
+							m_icon_rect = lib.icons.GetIcon(icons.icon_index.map_red_circle);
+							break;
 					}
-					m_small_icon_rect = m_icon_rect;		// 同じ아이콘を사용する
+					m_small_icon_rect = m_icon_rect;        // 同じ아이콘を사용する
 					m_string_rect = lib.infonameimage.GetCityName(index);
 				}
 			}
@@ -1109,7 +1121,7 @@ namespace gvtrademap_cs {
 			 HPを開くtooltipを得る
 			---------------------------------------------------------------------------*/
 			public string GetToolTipString_HP() {
-				if (!IsUrl) return null;		// URLが등록されていない
+				if (!IsUrl) return null;        // URLが등록されていない
 
 				if (UrlIndex != -1) {
 					if (InfoType == GvoWorldInfo.InfoType.City) {
@@ -1121,7 +1133,7 @@ namespace gvtrademap_cs {
 					}
 				} else {
 					// クリスタル商会
-					//					return "直接リンク\n좌클릭でブラウザを開く";
+					//					return "直接リンク\n좌클릭으로 ブラウザを開く";
 					return "대항해시대Online 상륙지 지도\n클릭으로 브라우저 열기";
 				}
 			}
@@ -1311,7 +1323,7 @@ namespace gvtrademap_cs {
 				/*-------------------------------------------------------------------------
 				 
 				---------------------------------------------------------------------------*/
-				private string m_name;		  // 이름
+				private string m_name;        // 이름
 				private List<Data> m_datas;   // 데이터
 				private GvoWorldInfo.Info m_info;
 				private int m_index;
@@ -1351,7 +1363,7 @@ namespace gvtrademap_cs {
 				public int GetSakabaFlag() {
 					int flag = 0;
 					foreach (Data d in m_datas) {
-						if (d.Tag == "@") {	 // 번역가
+						if (d.Tag == "@") {  // 번역가
 							flag |= 4;
 						} else if (d.Tag == "#") {   // 무역상인
 							flag |= 8;
@@ -1448,19 +1460,19 @@ namespace gvtrademap_cs {
 				 데이터
 				---------------------------------------------------------------------------*/
 				public class Data {
-					private Info m_info;					// 属している도시など
-					private string m_name;			  // 이름
-					private string m_tag;				 // タグ
-					private string m_tag2;			  // タグ2
-					private int m_group_index;	  // 属している그룹번호
+					private Info m_info;                    // 属している도시など
+					private string m_name;            // 이름
+					private string m_tag;                // タグ
+					private string m_tag2;            // タグ2
+					private int m_group_index;    // 属している그룹번호
 
 					// 외からの참조용
-					private bool m_is_bonus_item;	 // 명産품
-					private string m_price;	   // 가격, 인물명など
-					private Color m_color;		  // 표시색
-					private Color m_price_color;			// 가격용색
-					private string m_investment;			// 必要な가격額
-					private ItemDatabaseCustom.Data m_item_db;		  // 아이템DBの디테일
+					private bool m_is_bonus_item;    // 명産품
+					private string m_price;    // 가격, 인물명など
+					private Color m_color;        // 표시색
+					private Color m_price_color;            // 가격용색
+					private string m_investment;            // 必要な가격額
+					private ItemDatabaseCustom.Data m_item_db;        // 아이템DBの디테일
 
 					/*-------------------------------------------------------------------------
 					 
@@ -1628,7 +1640,7 @@ namespace gvtrademap_cs {
 
 							// 가격
 							if (m_group_index != 3) m_price = _get_price();
-							else m_price = Tag2;				// 인물
+							else m_price = Tag2;                // 인물
 						}
 					}
 
@@ -1695,32 +1707,32 @@ namespace gvtrademap_cs {
 									d.m_tag2 = "10000";
 								}
 								break;
-							case "회避指남書第1巻":
-								d.m_name = "連撃指남書第1巻";
+							case "회避指남書제 1권":
+								d.m_name = "連撃指남書제 1권";
 								break;
-							case "攻撃指남書第1巻":
-								d.m_name = "猛攻指남書第1巻";
+							case "공격指남書제 1권":
+								d.m_name = "猛攻指남書제 1권";
 								break;
-							case "회復指남書第1巻":
-								d.m_name = "活용指남書第1巻";
+							case "회復指남書제 1권":
+								d.m_name = "活용指남書제 1권";
 								break;
-							case "防御指남書第1巻":
-								d.m_name = "奇手指남書第1巻";
+							case "방어指남書제 1권":
+								d.m_name = "奇手指남書제 1권";
 								break;
 							case "パデットロール":
 								d.m_name = "パデッドロール";
 								break;
-							case "診察室の製법":
-								d.m_name = "조선素材・診察室";
+							case "診察실の製법":
+								d.m_name = "조선소재・診察실";
 								break;
 							case "天子の선수상":
 								d.m_name = "天使の선수상";
 								break;
 							case "해역":
-								d.m_name = "地理";
+								d.m_name = "지리";
 								break;
-							case "高級上納품の梱包":
-								d.m_name = "高級上納품の梱包(NO.1)";
+							case "高급상納품の梱包":
+								d.m_name = "高급상納품の梱包(NO.1)";
 								break;
 						}
 					}
@@ -1769,10 +1781,10 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		public class SeaInfo {
 			private string m_name;
-			private Point m_wind_pos;		 // 풍향を그리기する위치の중心
-			private float m_summer_angle;	 // 夏の풍향
-			private float m_winter_angle;	 // 冬の풍향
-			private int m_speedup_rate;  // 최대속도上昇
+			private Point m_wind_pos;        // 풍향を그리기する위치の중心
+			private float m_summer_angle;    // 夏の풍향
+			private float m_winter_angle;    // 冬の풍향
+			private int m_speedup_rate;  // 최대속도상昇
 			private int m_summer_angle_deg; // 夏の풍향
 			private int m_winter_angle_deg; // 夏の풍향
 			private string m_summer_angle_string;   // 16段階の풍향
@@ -1886,9 +1898,9 @@ namespace gvtrademap_cs {
 		 도시정보
 		---------------------------------------------------------------------------*/
 		public class CityInfo {
-			private string m_name;		  // 이름
-			private GvoWorldInfo.Country[] m_domains;		 // 동맹현황
-			private int m_index;			// 도시번호
+			private string m_name;        // 이름
+			private GvoWorldInfo.Country[] m_domains;        // 동맹현황
+			private int m_index;            // 도시번호
 			private GvoWorldInfo.CityType m_city_type;  // 도시の종류
 			private GvoWorldInfo.AllianceType m_alliance_type;  // 동맹の종류
 			private GvoWorldInfo.CulturalSphere m_cultural_sphere;  // 문화권
@@ -2044,11 +2056,11 @@ namespace gvtrademap_cs {
 	 カテゴリは아이템DBに이동した
 	---------------------------------------------------------------------------*/
 	public class GvoItemTypeDatabase {
-		private MultiDictionary<string, ItemRank> m_bonus_items;			// 명産품扱いの아이템
+		private MultiDictionary<string, ItemRank> m_bonus_items;            // 명産품扱いの아이템
 		private MultiDictionary<string, ItemRank> m_nanban_trade_items; // 남만품扱いの아이템
 		private MultiDictionary<string, ItemRank> m_fishting_ranks;  // 낚시ランク
 		private MultiDictionary<string, ItemRank> m_collect_ranks;  // 채집ランク
-		private MultiDictionary<string, ItemRank> m_supply_ranks;		 // 조달ランク
+		private MultiDictionary<string, ItemRank> m_supply_ranks;        // 조달ランク
 
 		/*-------------------------------------------------------------------------
 		 
@@ -2177,8 +2189,8 @@ namespace gvtrademap_cs {
 		 낚시, 채집, 조달용ランク取得
 		---------------------------------------------------------------------------*/
 		public class ItemRank : IDictionaryNode<string> {
-			private string m_name;		  // 아이템명
-			private int m_rank;	   // 必要ランク
+			private string m_name;        // 아이템명
+			private int m_rank;    // 必要ランク
 
 			/*-------------------------------------------------------------------------
 			 

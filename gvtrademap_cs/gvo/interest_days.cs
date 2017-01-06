@@ -69,7 +69,7 @@ namespace gvtrademap_cs
 			if(GetDays() > 30){
 				// 30일を超えてる
 				// 
-				return "30일 이상이 지났습니다.\n현재의 경과일수는 신뢰할수 없습니다.\n이자를 받는 날을 정상으로 초기화합니다.";
+				return "30일 이상이 지났습니다.\n현재의 경과일수는 신뢰할수 없습니다.\n이자 받는 날을 정상으로 초기화합니다.";
 			}else{
 #if DEBUG_POPUP_STRING
 				return String.Format("残り{0}일\n{1}일항해중\n開始{2}\n현재{3}",

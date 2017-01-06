@@ -40,14 +40,14 @@ namespace gvtrademap_cs
 
 			string	str	= def.WINDOW_TITLE + "\n";
 			str			+= assembly_name.FullName + "\n";
-			str			+= "の읽기に실패하였습니다. \n\n";
+			str			+= " 읽기에 실패하였습니다.\n\n";
 
-			str			+= "교역Map C#の시작にはMicrsoft DirectX 9.0C以降, Managed DirectX(MDX1.1) が必要です. \n";
-			str			+= "MDX1.1をインストールするには DirectX End-User Runtime Web Installer を実行してください. \n";
-			str			+= "DirectX End-User Runtime Web InstallerはMDX1.1をインストールしてくれます. \n";
+			str			+= "교역Map C#의 시작애는 Micrsoft DirectX 9.0C 이상, Managed DirectX(MDX1.1)가 필요합니다.\n";
+			str			+= "MDX1.1를 설치하려면 DirectX End-User Runtime Web Installer를 실행하십시오.\n";
+			str			+= "DirectX End-User Runtime Web Installer와 MDX1.1를 인스톨하게 됩니다.\n";
 
 			str			+= "\n";
-			str			+= "MDX1.1をインストールしたにも関わらず시작できない場合は오류내용を보고してもらえると대응できるかもしれません. ";
+			str			+= "MDX1.1를 설치했음에도 시작되지 않을 경우 오류내용을 보고해주면 대응할 수 있을지도 모릅니다.\n(일본어판은 더이상 업데이트되지 않습니다.)";
 	
 			textBox1.AcceptsReturn	= true;
 			textBox1.Lines			= str.Split(new char[]{'\n'});

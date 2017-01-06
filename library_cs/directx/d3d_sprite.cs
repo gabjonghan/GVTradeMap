@@ -532,7 +532,7 @@ namespace directx {
 				m_vertex_list[index + i].Color = color;
 			}
 
-			// 左上三角形
+			// 左상三角形
 			m_vertex_list[index + 1].X += size.X;
 			m_vertex_list[index + 2].Y += size.Y;
 

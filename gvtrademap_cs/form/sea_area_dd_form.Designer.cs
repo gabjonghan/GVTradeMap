@@ -77,9 +77,9 @@
 			this.checkBox1.AutoSize = true;
 			this.checkBox1.Location = new System.Drawing.Point(14, 220);
 			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(168, 16);
+			this.checkBox1.Size = new System.Drawing.Size(176, 16);
 			this.checkBox1.TabIndex = 12;
-			this.checkBox1.Text = "플레이하고있는서버외무시";
+			this.checkBox1.Text = "플레이하고있는 서버외 무시";
 			this.checkBox1.UseVisualStyleBackColor = true;
 			this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -89,9 +89,9 @@
 			this.checkBox2.AutoSize = true;
 			this.checkBox2.Location = new System.Drawing.Point(14, 242);
 			this.checkBox2.Name = "checkBox2";
-			this.checkBox2.Size = new System.Drawing.Size(120, 16);
+			this.checkBox2.Size = new System.Drawing.Size(128, 16);
 			this.checkBox2.TabIndex = 13;
-			this.checkBox2.Text = "기한지난정보무시";
+			this.checkBox2.Text = "기한지난 정보 무시";
 			this.checkBox2.UseVisualStyleBackColor = true;
 			this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
 			// 
@@ -113,7 +113,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Drag&Drop해역정보갱신";
+			this.Text = "Drag&Drop 해역정보 갱신";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.sea_area_dd_form_FormClosed);
 			this.Load += new System.EventHandler(this.sea_area_dd_form_Load);
 			this.ResumeLayout(false);

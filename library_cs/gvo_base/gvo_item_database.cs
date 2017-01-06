@@ -52,7 +52,7 @@ namespace gvo_base
 			Rigging,	// 艤装
 			Skill,		// 스킬
 			Report,		// 보고
-			Technic,	// 陸戦テクニック
+			Technic,	// 테크닉
 			Unknown,	// 불명
 		};
 		// 
@@ -116,63 +116,63 @@ namespace gvo_base
 		{
 			m_ajust_name_list	= new Dictionary<string,string>();
 
-			m_ajust_name_list.Add("ロット(NO.1)", "ロット（NO.1）");
-			m_ajust_name_list.Add("ロット(NO.2)", "ロット（NO.2）");
-			m_ajust_name_list.Add("ロット(NO.3)", "ロット（NO.3）");
-			m_ajust_name_list.Add("ロット(NO.4)", "ロット（NO.4）");
-			m_ajust_name_list.Add("ロット(NO.5)", "ロット（NO.5）");
-			m_ajust_name_list.Add("ロット(NO.6)", "ロット（NO.6）");
-			m_ajust_name_list.Add("ロット(NO.7)", "ロット（NO.7）");
-			m_ajust_name_list.Add("ロット(NO.8)", "ロット（NO.8）");
-			m_ajust_name_list.Add("ロット(NO.9)", "ロット（NO.9）");
-			m_ajust_name_list.Add("ロット(NO.10)", "ロット（NO.10）");
-			m_ajust_name_list.Add("ロット(NO.11)", "ロット（NO.11）");
-			m_ajust_name_list.Add("ロット(NO.12)", "ロット（NO.12）");
-			m_ajust_name_list.Add("ロット(NO.13)", "ロット（NO.13）");
-			m_ajust_name_list.Add("ロット(NO.14)", "ロット（NO.14）");
-			m_ajust_name_list.Add("ロット(No.14)", "ロット（NO.14）");
-			m_ajust_name_list.Add("鉱石精錬の書", "鉱石製錬の書");
+			m_ajust_name_list.Add("행운권(NO.1)", "행운권（NO.1）");
+			m_ajust_name_list.Add("행운권(NO.2)", "행운권（NO.2）");
+			m_ajust_name_list.Add("행운권(NO.3)", "행운권（NO.3）");
+			m_ajust_name_list.Add("행운권(NO.4)", "행운권（NO.4）");
+			m_ajust_name_list.Add("행운권(NO.5)", "행운권（NO.5）");
+			m_ajust_name_list.Add("행운권(NO.6)", "행운권（NO.6）");
+			m_ajust_name_list.Add("행운권(NO.7)", "행운권（NO.7）");
+			m_ajust_name_list.Add("행운권(NO.8)", "행운권（NO.8）");
+			m_ajust_name_list.Add("행운권(NO.9)", "행운권（NO.9）");
+			m_ajust_name_list.Add("행운권(NO.10)", "행운권（NO.10）");
+			m_ajust_name_list.Add("행운권(NO.11)", "행운권（NO.11）");
+			m_ajust_name_list.Add("행운권(NO.12)", "행운권（NO.12）");
+			m_ajust_name_list.Add("행운권(NO.13)", "행운권（NO.13）");
+			m_ajust_name_list.Add("행운권(NO.14)", "행운권（NO.14）");
+			m_ajust_name_list.Add("행운권(No.14)", "행운권（NO.14）");
+			m_ajust_name_list.Add("鉱돌精錬の書", "鉱돌製錬の書");
 			m_ajust_name_list.Add("合金製錬の書", "合金精錬の書");
-			m_ajust_name_list.Add("貴金属の精錬법", "貴金属の製錬법");
+			m_ajust_name_list.Add("귀금속の精錬법", "귀금속の製錬법");
 			m_ajust_name_list.Add("アラブ神獣の선수상彫刻術", "アラブの神獣の선수상彫刻術");
 			m_ajust_name_list.Add("ボンバルタ", "ボンバルダ");
 			m_ajust_name_list.Add("牛革製ベスト", "牛皮製ベスト");
 			m_ajust_name_list.Add("花嫁衣装の縫製書", "花嫁衣裳の縫製법");
-			m_ajust_name_list.Add("소형배용高級上納품の梱包", "소형高級上納품の梱包");
-			m_ajust_name_list.Add("중형배용高級上納품の梱包", "중형高級上納품の梱包");
-			m_ajust_name_list.Add("대형배용高級上納품の梱包", "대형高級上納품の梱包");
-			m_ajust_name_list.Add("高級上納품(소형배용)", "高級上納품（소형배용）");
-			m_ajust_name_list.Add("高級上納품(중형배용)", "高級上納품（중형배용）");
-			m_ajust_name_list.Add("高級上納품(대형배용)", "高級上納품（대형배용）");
+			m_ajust_name_list.Add("소형배용高급상納품の梱包", "소형高급상納품の梱包");
+			m_ajust_name_list.Add("중형배용高급상納품の梱包", "중형高급상納품の梱包");
+			m_ajust_name_list.Add("대형배용高급상納품の梱包", "대형高급상納품の梱包");
+			m_ajust_name_list.Add("高급상納품(소형배용)", "高급상納품（소형배용）");
+			m_ajust_name_list.Add("高급상納품(중형배용)", "高급상納품（중형배용）");
+			m_ajust_name_list.Add("高급상納품(대형배용)", "高급상納품（대형배용）");
 			m_ajust_name_list.Add("全艤装補助돛縫製법", "全艤装補助돛組立법");
-			m_ajust_name_list.Add("ペットの育て方初級編", "ペットの育て方　初級編");
-			m_ajust_name_list.Add("セット料理集第1集", "セット料理集第1巻");
+			m_ajust_name_list.Add("ペットの育て方초급編", "ペットの育て方　초급編");
+			m_ajust_name_list.Add("セット料理集第1集", "セット料理集제 1권");
 			m_ajust_name_list.Add("フォルダンミルクレープ", "フォンダン・ミルクレープ");
 			m_ajust_name_list.Add("果実を使ったお菓子", "果物を使ったお菓子");
-			m_ajust_name_list.Add("防御職인の工芸技법", "防具職인の工芸技법");
-			m_ajust_name_list.Add("きのこバターソテー", "きのこのバターソテー");
+			m_ajust_name_list.Add("방어職인の공예技법", "防具職인の공예技법");
+			m_ajust_name_list.Add("버섯バターソテー", "버섯のバターソテー");
 			m_ajust_name_list.Add("フルーツ盛り合わせ", "フルーツの盛り合わせ");
 			m_ajust_name_list.Add("ブッシュドノエル", "ブッシュ・ド・ノエル");
-			m_ajust_name_list.Add("実용衣装裁縫術・第1巻", "実용衣装縫製術・第1巻");
+			m_ajust_name_list.Add("実용衣装裁縫術・제 1권", "実용衣装縫製術・제 1권");
 			m_ajust_name_list.Add("ローマ神話の선수상彫刻術", "ローマ神話の彫刻術");
 			m_ajust_name_list.Add("一味違う！手作り소物", "一味違う！　手作り소物");
 			m_ajust_name_list.Add("ゲルマン諸語", "ゲルマン諸語翻訳메모");
-			m_ajust_name_list.Add("동欧諸語", "동欧諸語翻訳메모");
+			m_ajust_name_list.Add("동유럽諸語", "동유럽諸語翻訳메모");
 			m_ajust_name_list.Add("ロマンス諸語", "ロマンス諸語翻訳메모");
 			m_ajust_name_list.Add("アルタイ諸語", "アルタイ諸語翻訳메모");
 			m_ajust_name_list.Add("セム・ハム諸語", "セム・ハム諸語翻訳메모");
 			m_ajust_name_list.Add("アメリカ諸語", "アメリカ諸語翻訳메모");
 			m_ajust_name_list.Add("아프리카諸語", "아프리카諸語翻訳메모");
 			m_ajust_name_list.Add("인도洋諸語", "인도洋諸語翻訳메모");
-			m_ajust_name_list.Add("デミ・カルヴァリン포10문", "デミ・カルヴァリン10문");
-			m_ajust_name_list.Add("デミ・カルヴァリン포12문", "デミ・カルヴァリン12문");
-			m_ajust_name_list.Add("デミ・カルヴァリン포14문", "デミ・カルヴァリン14문");
-			m_ajust_name_list.Add("デミ・カルヴァリン포16문", "デミ・カルヴァリン16문");
+			m_ajust_name_list.Add("데미 캘버린포 10문", "데미 캘버린10문");
+			m_ajust_name_list.Add("데미 캘버린포 12문", "데미 캘버린12문");
+			m_ajust_name_list.Add("데미 캘버린포 14문", "데미 캘버린14문");
+			m_ajust_name_list.Add("데미 캘버린포 16문", "데미 캘버린16문");
 			m_ajust_name_list.Add("漁師の心得・鮮魚保存법", "漁師の心得　鮮魚保存법");
-			m_ajust_name_list.Add("ファルコン2포", "ファルコン포2문");
-			m_ajust_name_list.Add("ファルコン4포", "ファルコン포4문");
-			m_ajust_name_list.Add("ファルコン6포", "ファルコン포6문");
-			m_ajust_name_list.Add("ファルコン8포", "ファルコン포8문");
+			m_ajust_name_list.Add("팰콘2포", "팰콘포 2문");
+			m_ajust_name_list.Add("팰콘4포", "팰콘포 4문");
+			m_ajust_name_list.Add("팰콘6포", "팰콘포 6문");
+			m_ajust_name_list.Add("팰콘8포", "팰콘포 8문");
 			m_ajust_name_list.Add("マクラジャボトル", "マラクジャボトル");
 			m_ajust_name_list.Add("マクラジャジュース", "マラクジャジュース");
 			m_ajust_name_list.Add("경량シーダ추가장갑", "경량シーダー추가장갑");
@@ -182,7 +182,7 @@ namespace gvo_base
 			m_ajust_name_list.Add("かんざし♀", "かんざし");
 			m_ajust_name_list.Add("通天冠♂", "通天冠");
 			m_ajust_name_list.Add("歩揺♀","歩揺");
-			m_ajust_name_list.Add("四方平定巾♂","四方平定巾");
+			m_ajust_name_list.Add("四方평定巾♂","四方평定巾");
 			m_ajust_name_list.Add("窄袖衫襦♀","窄袖衫襦");
 			m_ajust_name_list.Add("直裾深衣♂","直裾深衣");
 		}
@@ -240,28 +240,28 @@ namespace gvo_base
 		{
 			switch(name){
 			case "食料품":
-			case "調味料":
-			case "雑貨":
+			case "조미료":
+			case "잡화":
 			case "医薬품":
 			case "家畜":
 				return Categoly.Categoly1;
-			case "酒類":
-			case "鉱石":
-			case "染料":
+			case "주류":
+			case "鉱돌":
+			case "염료":
 			case "工業품":
 			case "嗜好품":
 				return Categoly.Categoly2;
 			case "繊維":
-			case "織物":
-			case "武具":
-			case "火器":
-			case "工芸품":
+			case "직물":
+			case "무기류":
+			case "총포류":
+			case "공예품":
 			case "미술품":
 				return Categoly.Categoly3;
-			case "香辛料":
-			case "貴金属":
-			case "香料":
-			case "宝石":
+			case "향辛料":
+			case "귀금속":
+			case "향料":
+			case "宝돌":
 				return Categoly.Categoly4;
 			}
 			return Categoly.Unknown;
@@ -290,45 +290,45 @@ namespace gvo_base
 			switch(name){
 			case "食料품":
 			case "家畜":
-			case "酒類":
-			case "調味料":
+			case "주류":
+			case "조미료":
 			case "嗜好품":
-			case "香辛料":
-			case "香料":
+			case "향辛料":
+			case "향料":
 			case "医薬품":
 			case "繊維":
-			case "染料":
-			case "織物":
-			case "貴金属":
-			case "鉱石":
-			case "宝石":
-			case "工芸품":
+			case "염료":
+			case "직물":
+			case "귀금속":
+			case "鉱돌":
+			case "宝돌":
+			case "공예품":
 			case "미술품":
-			case "雑貨":
-			case "武具":
-			case "火器":
+			case "잡화":
+			case "무기류":
+			case "총포류":
 			case "工業품":
 				return TypeGroup.Trade;
 			case "消耗품":
-			case "推薦状":
+			case "추천장":
 			case "레시피帳":
-			case "宝箱":
-			case "ロット":
-			case "素材":
-			case "ペット権利書":
-			case "不動産権利書":
+			case "보물 상자":
+			case "행운권":
+			case "소재":
+			case "애완동물 권리서":
+			case "부동산 권리 증서":
 			case "배権利書":
-			case "家具":
-			case "物資":
+			case "가구":
+			case "물자":
 				return TypeGroup.Item;
 			case "소형돛배":
-			case "中소형돛배":
+			case "중소형돛배":
 			case "중형돛배":
-			case "中대형돛배":
+			case "중대형돛배":
 			case "대형돛배":
-			case "中소형갤리":
+			case "중소형갤리":
 			case "중형갤리":
-			case "中대형갤리":
+			case "중대형갤리":
 			case "대형갤리":
 				return TypeGroup.Ship;
 			case "배首선수상":
@@ -338,27 +338,27 @@ namespace gvo_base
 			case "舷側포":
 			case "배首포":
 			case "배尾포":
-			case "紋章":
+			case "문장":
 				return TypeGroup.Rigging;
 			case "頭장비품":
 			case "体장비품":
 			case "足장비품":
 			case "手장비품":
 			case "武器・도구":
-			case "装身具":
+			case "장신구":
 				return TypeGroup.Equip;
 			case "모험스킬":
 			case "교역스킬":
-			case "海事스킬":
+			case "전투스킬":
 			case "언어스킬":
 			case "아이템効果스킬":
-			case "副官스킬":
+			case "부관스킬":
 			case "배스킬스킬":
 				return TypeGroup.Skill;
 			case "보고":
 				return TypeGroup.Report;
-			case "陸戦テクニック":
-				return TypeGroup.Technic;	// 陸戦テクニック
+			case "테크닉":
+				return TypeGroup.Technic;	// 테크닉
 			default:
 				return TypeGroup.Unknown;
 			}
@@ -370,42 +370,42 @@ namespace gvo_base
 			{
 				case "食料품":
 				case "家畜":
-				case "酒類":
-				case "調味料":
+				case "주류":
+				case "조미료":
 				case "嗜好품":
-				case "香辛料":
-				case "香料":
+				case "향辛料":
+				case "향料":
 				case "医薬품":
 				case "繊維":
-				case "染料":
-				case "織物":
-				case "貴金属":
-				case "鉱石":
-				case "宝石":
-				case "工芸품":
+				case "염료":
+				case "직물":
+				case "귀금속":
+				case "鉱돌":
+				case "宝돌":
+				case "공예품":
 				case "미술품":
-				case "雑貨":
-				case "武具":
-				case "火器":
+				case "잡화":
+				case "무기류":
+				case "총포류":
 				case "工業품":
 					return TypeGroup2.Trade;
 				case "消耗품":
-				case "推薦状":
+				case "추천장":
 				case "레시피帳":
-				case "宝箱":
-				case "ロット":
-				case "素材":
-				case "ペット権利書":
-				case "家具":
+				case "보물 상자":
+				case "행운권":
+				case "소재":
+				case "애완동물 권리서":
+				case "가구":
 					return TypeGroup2.Item;
 				case "소형돛배":
-				case "中소형돛배":
+				case "중소형돛배":
 				case "중형돛배":
-				case "中대형돛배":
+				case "중대형돛배":
 				case "대형돛배":
-				case "中소형갤리":
+				case "중소형갤리":
 				case "중형갤리":
-				case "中대형갤리":
+				case "중대형갤리":
 				case "대형갤리":
 					return TypeGroup2.Ship;
 				case "배首선수상":
@@ -415,14 +415,14 @@ namespace gvo_base
 				case "舷側포":
 				case "배首포":
 				case "배尾포":
-				case "紋章":
+				case "문장":
 					return TypeGroup2.Item;
 				case "頭장비품":
 				case "体장비품":
 				case "足장비품":
 				case "手장비품":
 				case "武器・도구":
-				case "装身具":
+				case "장신구":
 					return TypeGroup2.Item;
 				default:
 					return TypeGroup2.Unknown;
@@ -445,7 +445,7 @@ namespace gvo_base
 			case TypeGroup.Rigging:		return "艤装";
 			case TypeGroup.Skill:		return "스킬";
 			case TypeGroup.Report:		return "보고";
-			case TypeGroup.Technic:		return "陸戦テクニック";
+			case TypeGroup.Technic:		return "테크닉";
 			default:
 				return "불명";
 			}
@@ -489,7 +489,7 @@ namespace gvo_base
 								foreach(string i in create_document0(split)){
 									Debug.WriteLine(i);
 								}
-								Debug.WriteLine("종류:陸戦テクニック");
+								Debug.WriteLine("종류:테크닉");
 							}else if(split.Length == 11){
 								// 전투계
 								Debug.WriteLine("ID:1");
@@ -499,7 +499,7 @@ namespace gvo_base
 								foreach(string i in create_document0(split)){
 									Debug.WriteLine(i);
 								}
-								Debug.WriteLine("종류:陸戦テクニック");
+								Debug.WriteLine("종류:테크닉");
 							}
 							Debug.WriteLine("");
 						}
@@ -577,7 +577,7 @@ namespace gvo_base
 			public bool IsSkill{			get{
 													if(Type == "모험스킬")	return true;
 													if(Type == "교역스킬")	return true;
-													if(Type == "海事스킬")	return true;
+													if(Type == "전투스킬")	return true;
 													if(Type == "언어스킬")	return true;
 													return false;
 											}

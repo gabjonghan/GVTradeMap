@@ -55,9 +55,10 @@
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(14, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(401, 12);
+			this.label1.Size = new System.Drawing.Size(441, 12);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "업데이트されたソフトウェアが見つかりました. 업데이트내용は以下の通りです. ";
+			this.label1.Text = "업데이트 가능한 소프트웨어를 발견했습니다. 업데이트 내용은 아래와 같습니다.";
+			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// button1
 			// 
@@ -77,7 +78,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(215, 23);
 			this.button4.TabIndex = 12;
-			this.button4.Text = "ダウンロードページを開く";
+			this.button4.Text = "다운로드 페이지를 열기";
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
@@ -86,9 +87,9 @@
 			this.label2.AutoSize = true;
 			this.label2.Location = new System.Drawing.Point(14, 23);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(467, 12);
+			this.label2.Size = new System.Drawing.Size(507, 12);
 			this.label2.TabIndex = 13;
-			this.label2.Text = "自動업데이트はされません. ダウンロードページからダウンロードして업데이트してください. ";
+			this.label2.Text = "자동 업데이트가 지원되지 않습니다. 다운로드 페이지에서 다운로드하여 업데이트 하십시오.";
 			// 
 			// check_update_result
 			// 
@@ -107,7 +108,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "업데이트확인결과";
+			this.Text = "업데이트 확인 결과";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

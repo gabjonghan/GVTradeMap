@@ -93,7 +93,7 @@ namespace gvtrademap_cs {
 		//		public const string		URL4						= @"http://showroom256.hp.infoseek.co.jp/cgi-bin/read.cgi";
 		public const string URL4 = @"http://jbbs.livedoor.jp/netgame/7161/";
 		public const string URL5 = @"wiki.livedoor.jp/kristall/d/";
-		public const string URL6 = @"http://www.microsoft.com/downloads/details.aspx?displaylang=ja&FamilyID=2da43d38-db71-4c1b-bc6a-9b6652cd92a3";
+		public const string URL6 = @"https://www.microsoft.com/en-us/download/details.aspx?id=35";
 		public const string JOY_URL = @"https://www.ssjoy.org/dho/";
 
 		public const string URL_HP_ORIGINAL = @"http://gvtrademap.daa.jp/";
@@ -109,7 +109,7 @@ namespace gvtrademap_cs {
 		public const int ICON_SIZE_X = 16;
 		public const int ICON_SIZE_Y = 16;
 
-		// メイリオフォントのデフォルト사이즈
+		// メイリオフォントのデフォ금허브 소사이즈
 		// MS ゴシック UI と同じくらいの사이즈になるような値
 		public const float MEIRYO_POINT = 8f;
 

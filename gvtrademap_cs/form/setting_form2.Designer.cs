@@ -1,28 +1,28 @@
 ﻿namespace gvtrademap_cs {
-    partial class setting_form2 {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class setting_form2 {
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing) {
+			if (disposing && (components != null)) {
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent() {
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(setting_form2));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -112,17 +112,6 @@
             this.checkBox401 = new System.Windows.Forms.CheckBox();
             this.checkBox402 = new System.Windows.Forms.CheckBox();
             this.checkBox400 = new System.Windows.Forms.CheckBox();
-            this.managedPanel5 = new Controls.ManagedPanel();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.managedPanel6 = new Controls.ManagedPanel();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -154,6 +143,17 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.managedPanel5 = new Controls.ManagedPanel();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.panelManager1.SuspendLayout();
             this.managedPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -177,8 +177,6 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.managedPanel5.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.managedPanel6.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox18.SuspendLayout();
@@ -190,6 +188,8 @@
             this.groupBox2.SuspendLayout();
             this.managedPanel8.SuspendLayout();
             this.groupBox21.SuspendLayout();
+            this.managedPanel5.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -246,8 +246,8 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
@@ -290,14 +290,14 @@
             this.panelManager1.Controls.Add(this.managedPanel2);
             this.panelManager1.Controls.Add(this.managedPanel3);
             this.panelManager1.Controls.Add(this.managedPanel4);
-            this.panelManager1.Controls.Add(this.managedPanel5);
             this.panelManager1.Controls.Add(this.managedPanel6);
             this.panelManager1.Controls.Add(this.managedPanel7);
             this.panelManager1.Controls.Add(this.managedPanel8);
+            this.panelManager1.Controls.Add(this.managedPanel5);
             this.panelManager1.Location = new System.Drawing.Point(196, 12);
             this.panelManager1.Name = "panelManager1";
-            this.panelManager1.SelectedIndex = 4;
-            this.panelManager1.SelectedPanel = this.managedPanel5;
+            this.panelManager1.SelectedIndex = 0;
+            this.panelManager1.SelectedPanel = this.managedPanel1;
             this.panelManager1.Size = new System.Drawing.Size(478, 313);
             this.panelManager1.TabIndex = 0;
             // 
@@ -306,7 +306,7 @@
             this.managedPanel1.Controls.Add(this.groupBox1);
             this.managedPanel1.Location = new System.Drawing.Point(0, 0);
             this.managedPanel1.Name = "managedPanel1";
-            this.managedPanel1.Size = new System.Drawing.Size(0, 0);
+            this.managedPanel1.Size = new System.Drawing.Size(478, 313);
             this.managedPanel1.Text = "managedPanel1";
             // 
             // groupBox1
@@ -326,9 +326,9 @@
             // 
             this.groupBox8.Controls.Add(this.comboBox8);
             this.groupBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox8.Location = new System.Drawing.Point(197, 75);
+            this.groupBox8.Location = new System.Drawing.Point(250, 75);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(183, 51);
+            this.groupBox8.Size = new System.Drawing.Size(200, 51);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "스크린샷";
@@ -343,16 +343,16 @@
             "jpeg"});
             this.comboBox8.Location = new System.Drawing.Point(8, 18);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(167, 20);
+            this.comboBox8.Size = new System.Drawing.Size(175, 20);
             this.comboBox8.TabIndex = 0;
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.comboBox5);
             this.groupBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox7.Location = new System.Drawing.Point(197, 18);
+            this.groupBox7.Location = new System.Drawing.Point(250, 18);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(183, 51);
+            this.groupBox7.Size = new System.Drawing.Size(200, 51);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "위도, 경도선";
@@ -368,7 +368,7 @@
             "좌표만 그리기"});
             this.comboBox5.Location = new System.Drawing.Point(7, 18);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(168, 20);
+            this.comboBox5.Size = new System.Drawing.Size(175, 20);
             this.comboBox5.TabIndex = 0;
             // 
             // groupBox4
@@ -380,7 +380,7 @@
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox4.Location = new System.Drawing.Point(7, 101);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(183, 125);
+            this.groupBox4.Size = new System.Drawing.Size(200, 125);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "지도";
@@ -390,9 +390,9 @@
             this.checkBox8.AutoSize = true;
             this.checkBox8.Location = new System.Drawing.Point(7, 100);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(220, 16);
+            this.checkBox8.Size = new System.Drawing.Size(180, 16);
             this.checkBox8.TabIndex = 12;
-            this.checkBox8.Text = "도시명을 배율에 따라 조정하지 않음";
+            this.checkBox8.Text = "폰트를 배율에 따라 조정안함";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // comboBox7
@@ -400,11 +400,13 @@
             this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
-            "도시명 표시",
-            "도시명 비표시"});
+            "전체 명칭 표시",
+            "도시, 상륙지, 해역명 표시",
+            "도시, 해역명 표시",
+            "전체 명칭 비표시"});
             this.comboBox7.Location = new System.Drawing.Point(7, 74);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(168, 20);
+            this.comboBox7.Size = new System.Drawing.Size(175, 20);
             this.comboBox7.TabIndex = 2;
             // 
             // comboBox6
@@ -412,11 +414,13 @@
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
-            "도시아이콘 대",
-            "도시아이콘 소"});
+            "큰 아이콘 전체 표시",
+            "작은 아이콘 전체 표시",
+            "작은 아이콘 도시명, 상륙지 표시",
+            "아이콘 비표시"});
             this.comboBox6.Location = new System.Drawing.Point(7, 46);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(168, 20);
+            this.comboBox6.Size = new System.Drawing.Size(175, 20);
             this.comboBox6.TabIndex = 1;
             // 
             // comboBox1
@@ -424,11 +428,11 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "지도1(녹색)",
-            "지도2(서버)"});
+            "지도1",
+            "지도2"});
             this.comboBox1.Location = new System.Drawing.Point(7, 18);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 20);
+            this.comboBox1.Size = new System.Drawing.Size(175, 20);
             this.comboBox1.TabIndex = 0;
             // 
             // groupBox3
@@ -438,7 +442,7 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(7, 18);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(183, 77);
+            this.groupBox3.Size = new System.Drawing.Size(200, 77);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "서버 및 국가";
@@ -457,7 +461,7 @@
             "오스만투르크"});
             this.comboBox3.Location = new System.Drawing.Point(7, 46);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(168, 20);
+            this.comboBox3.Size = new System.Drawing.Size(175, 20);
             this.comboBox3.TabIndex = 1;
             // 
             // comboBox2
@@ -474,7 +478,7 @@
             "Eirene"});
             this.comboBox2.Location = new System.Drawing.Point(7, 18);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 20);
+            this.comboBox2.Size = new System.Drawing.Size(175, 20);
             this.comboBox2.TabIndex = 0;
             // 
             // managedPanel2
@@ -500,7 +504,7 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox14.Controls.Add(this.groupBox17);
             this.groupBox14.Controls.Add(this.textBox7);
@@ -546,11 +550,12 @@
             this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox7.Size = new System.Drawing.Size(293, 95);
             this.textBox7.TabIndex = 0;
-            this.textBox7.Text = "해당모드는 화면캡처정보, 로그분석정보를 네비게이션 클라이언트에서 얻습니다.\r\n해당모드는 TCP서버를 시작하게 됩니다.\r\n네크워크 보안에 주의가 필요합니다.";
+            this.textBox7.Text = "해당모드는 화면캡처정보, 로그분석정보를 네비게이션 클라이언트에서 얻습니다.\r\n해당모드는 TCP서버를 시작하게 됩니다.\r\n네크워크 보안에 주의가 필" +
+    "요합니다.";
             // 
             // groupBox15
             // 
-            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox15.Controls.Add(this.checkBox17);
             this.groupBox15.Controls.Add(this.groupBox16);
@@ -785,10 +790,10 @@
             this.tabPage1.Controls.Add(this.checkBox101);
             this.tabPage1.Controls.Add(this.checkBox100);
             this.tabPage1.ImageIndex = 0;
-            this.tabPage1.Location = new System.Drawing.Point(5, 23);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(455, 145);
+            this.tabPage1.Size = new System.Drawing.Size(456, 145);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "@Web아이콘";
             this.tabPage1.ToolTipText = "@Web 아이콘 표시할때 표시할항목 설정";
@@ -800,8 +805,9 @@
             this.checkBox105.ImageIndex = 9;
             this.checkBox105.ImageList = this.imageList1;
             this.checkBox105.Location = new System.Drawing.Point(129, 94);
+            this.checkBox105.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox105.Name = "checkBox105";
-            this.checkBox105.Size = new System.Drawing.Size(100, 16);
+            this.checkBox105.Size = new System.Drawing.Size(100, 24);
             this.checkBox105.TabIndex = 5;
             this.checkBox105.Text = "자기장이상";
             this.checkBox105.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -813,8 +819,9 @@
             this.checkBox104.ImageIndex = 8;
             this.checkBox104.ImageList = this.imageList1;
             this.checkBox104.Location = new System.Drawing.Point(129, 72);
+            this.checkBox104.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox104.Name = "checkBox104";
-            this.checkBox104.Size = new System.Drawing.Size(76, 16);
+            this.checkBox104.Size = new System.Drawing.Size(76, 24);
             this.checkBox104.TabIndex = 4;
             this.checkBox104.Text = "사이렌";
             this.checkBox104.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -826,8 +833,9 @@
             this.checkBox103.ImageIndex = 7;
             this.checkBox103.ImageList = this.imageList1;
             this.checkBox103.Location = new System.Drawing.Point(129, 50);
+            this.checkBox103.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox103.Name = "checkBox103";
-            this.checkBox103.Size = new System.Drawing.Size(64, 16);
+            this.checkBox103.Size = new System.Drawing.Size(64, 24);
             this.checkBox103.TabIndex = 3;
             this.checkBox103.Text = "수초";
             this.checkBox103.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -839,8 +847,9 @@
             this.checkBox102.ImageIndex = 6;
             this.checkBox102.ImageList = this.imageList1;
             this.checkBox102.Location = new System.Drawing.Point(129, 28);
+            this.checkBox102.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox102.Name = "checkBox102";
-            this.checkBox102.Size = new System.Drawing.Size(64, 16);
+            this.checkBox102.Size = new System.Drawing.Size(64, 24);
             this.checkBox102.TabIndex = 2;
             this.checkBox102.Text = "화재";
             this.checkBox102.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -852,8 +861,9 @@
             this.checkBox101.ImageIndex = 5;
             this.checkBox101.ImageList = this.imageList1;
             this.checkBox101.Location = new System.Drawing.Point(129, 6);
+            this.checkBox101.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox101.Name = "checkBox101";
-            this.checkBox101.Size = new System.Drawing.Size(64, 16);
+            this.checkBox101.Size = new System.Drawing.Size(64, 24);
             this.checkBox101.TabIndex = 1;
             this.checkBox101.Text = "상어";
             this.checkBox101.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -865,8 +875,9 @@
             this.checkBox100.ImageIndex = 4;
             this.checkBox100.ImageList = this.imageList1;
             this.checkBox100.Location = new System.Drawing.Point(7, 6);
+            this.checkBox100.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox100.Name = "checkBox100";
-            this.checkBox100.Size = new System.Drawing.Size(88, 16);
+            this.checkBox100.Size = new System.Drawing.Size(88, 24);
             this.checkBox100.TabIndex = 0;
             this.checkBox100.Text = "풍향전반";
             this.checkBox100.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -888,10 +899,10 @@
             this.tabPage2.Controls.Add(this.checkBox201);
             this.tabPage2.Controls.Add(this.checkBox200);
             this.tabPage2.ImageIndex = 1;
-            this.tabPage2.Location = new System.Drawing.Point(5, 23);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(455, 145);
+            this.tabPage2.Size = new System.Drawing.Size(456, 145);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "메모아이콘";
             this.tabPage2.ToolTipText = "메모아이콘 표시할 때 표시항목 설정";
@@ -903,8 +914,9 @@
             this.checkBox212.ImageIndex = 15;
             this.checkBox212.ImageList = this.imageList1;
             this.checkBox212.Location = new System.Drawing.Point(260, 116);
+            this.checkBox212.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox212.Name = "checkBox212";
-            this.checkBox212.Size = new System.Drawing.Size(76, 16);
+            this.checkBox212.Size = new System.Drawing.Size(76, 24);
             this.checkBox212.TabIndex = 18;
             this.checkBox212.Text = "목적지";
             this.checkBox212.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -916,10 +928,11 @@
             this.checkBox211.ImageIndex = 14;
             this.checkBox211.ImageList = this.imageList1;
             this.checkBox211.Location = new System.Drawing.Point(260, 94);
+            this.checkBox211.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox211.Name = "checkBox211";
-            this.checkBox211.Size = new System.Drawing.Size(61, 16);
+            this.checkBox211.Size = new System.Drawing.Size(94, 24);
             this.checkBox211.TabIndex = 17;
-            this.checkBox211.Text = "free";
+            this.checkBox211.Text = "자유선택4";
             this.checkBox211.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox211.UseVisualStyleBackColor = true;
             // 
@@ -929,10 +942,11 @@
             this.checkBox210.ImageIndex = 13;
             this.checkBox210.ImageList = this.imageList1;
             this.checkBox210.Location = new System.Drawing.Point(260, 72);
+            this.checkBox210.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox210.Name = "checkBox210";
-            this.checkBox210.Size = new System.Drawing.Size(61, 16);
+            this.checkBox210.Size = new System.Drawing.Size(94, 24);
             this.checkBox210.TabIndex = 16;
-            this.checkBox210.Text = "free";
+            this.checkBox210.Text = "자유선택3";
             this.checkBox210.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox210.UseVisualStyleBackColor = true;
             // 
@@ -942,10 +956,11 @@
             this.checkBox209.ImageIndex = 12;
             this.checkBox209.ImageList = this.imageList1;
             this.checkBox209.Location = new System.Drawing.Point(260, 50);
+            this.checkBox209.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox209.Name = "checkBox209";
-            this.checkBox209.Size = new System.Drawing.Size(61, 16);
+            this.checkBox209.Size = new System.Drawing.Size(94, 24);
             this.checkBox209.TabIndex = 15;
-            this.checkBox209.Text = "free";
+            this.checkBox209.Text = "자유선택2";
             this.checkBox209.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox209.UseVisualStyleBackColor = true;
             // 
@@ -955,10 +970,11 @@
             this.checkBox208.ImageIndex = 11;
             this.checkBox208.ImageList = this.imageList1;
             this.checkBox208.Location = new System.Drawing.Point(260, 28);
+            this.checkBox208.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox208.Name = "checkBox208";
-            this.checkBox208.Size = new System.Drawing.Size(61, 16);
+            this.checkBox208.Size = new System.Drawing.Size(94, 24);
             this.checkBox208.TabIndex = 14;
-            this.checkBox208.Text = "free";
+            this.checkBox208.Text = "자유선택1";
             this.checkBox208.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox208.UseVisualStyleBackColor = true;
             // 
@@ -968,12 +984,14 @@
             this.checkBox207.ImageIndex = 1;
             this.checkBox207.ImageList = this.imageList1;
             this.checkBox207.Location = new System.Drawing.Point(260, 6);
+            this.checkBox207.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox207.Name = "checkBox207";
-            this.checkBox207.Size = new System.Drawing.Size(88, 16);
+            this.checkBox207.Size = new System.Drawing.Size(64, 24);
             this.checkBox207.TabIndex = 13;
-            this.checkBox207.Text = "マンボウ";
+            this.checkBox207.Text = "맘보";
             this.checkBox207.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox207.UseVisualStyleBackColor = true;
+            this.checkBox207.CheckedChanged += new System.EventHandler(this.checkBox207_CheckedChanged);
             // 
             // checkBox206
             // 
@@ -981,8 +999,9 @@
             this.checkBox206.ImageIndex = 10;
             this.checkBox206.ImageList = this.imageList1;
             this.checkBox206.Location = new System.Drawing.Point(129, 116);
+            this.checkBox206.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox206.Name = "checkBox206";
-            this.checkBox206.Size = new System.Drawing.Size(64, 16);
+            this.checkBox206.Size = new System.Drawing.Size(64, 24);
             this.checkBox206.TabIndex = 12;
             this.checkBox206.Text = "어장";
             this.checkBox206.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -994,8 +1013,9 @@
             this.checkBox205.ImageIndex = 9;
             this.checkBox205.ImageList = this.imageList1;
             this.checkBox205.Location = new System.Drawing.Point(129, 94);
+            this.checkBox205.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox205.Name = "checkBox205";
-            this.checkBox205.Size = new System.Drawing.Size(100, 16);
+            this.checkBox205.Size = new System.Drawing.Size(100, 24);
             this.checkBox205.TabIndex = 11;
             this.checkBox205.Text = "자기장이상";
             this.checkBox205.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1007,8 +1027,9 @@
             this.checkBox204.ImageIndex = 8;
             this.checkBox204.ImageList = this.imageList1;
             this.checkBox204.Location = new System.Drawing.Point(129, 72);
+            this.checkBox204.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox204.Name = "checkBox204";
-            this.checkBox204.Size = new System.Drawing.Size(76, 16);
+            this.checkBox204.Size = new System.Drawing.Size(76, 24);
             this.checkBox204.TabIndex = 10;
             this.checkBox204.Text = "사이렌";
             this.checkBox204.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1020,8 +1041,9 @@
             this.checkBox203.ImageIndex = 7;
             this.checkBox203.ImageList = this.imageList1;
             this.checkBox203.Location = new System.Drawing.Point(129, 50);
+            this.checkBox203.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox203.Name = "checkBox203";
-            this.checkBox203.Size = new System.Drawing.Size(64, 16);
+            this.checkBox203.Size = new System.Drawing.Size(64, 24);
             this.checkBox203.TabIndex = 9;
             this.checkBox203.Text = "수초";
             this.checkBox203.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1033,8 +1055,9 @@
             this.checkBox202.ImageIndex = 6;
             this.checkBox202.ImageList = this.imageList1;
             this.checkBox202.Location = new System.Drawing.Point(129, 28);
+            this.checkBox202.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox202.Name = "checkBox202";
-            this.checkBox202.Size = new System.Drawing.Size(64, 16);
+            this.checkBox202.Size = new System.Drawing.Size(64, 24);
             this.checkBox202.TabIndex = 8;
             this.checkBox202.Text = "화재";
             this.checkBox202.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1046,8 +1069,9 @@
             this.checkBox201.ImageIndex = 5;
             this.checkBox201.ImageList = this.imageList1;
             this.checkBox201.Location = new System.Drawing.Point(129, 6);
+            this.checkBox201.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox201.Name = "checkBox201";
-            this.checkBox201.Size = new System.Drawing.Size(64, 16);
+            this.checkBox201.Size = new System.Drawing.Size(64, 24);
             this.checkBox201.TabIndex = 7;
             this.checkBox201.Text = "상어";
             this.checkBox201.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1059,8 +1083,9 @@
             this.checkBox200.ImageIndex = 4;
             this.checkBox200.ImageList = this.imageList1;
             this.checkBox200.Location = new System.Drawing.Point(7, 6);
+            this.checkBox200.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox200.Name = "checkBox200";
-            this.checkBox200.Size = new System.Drawing.Size(88, 16);
+            this.checkBox200.Size = new System.Drawing.Size(88, 24);
             this.checkBox200.TabIndex = 6;
             this.checkBox200.Text = "풍향전반";
             this.checkBox200.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1080,10 +1105,10 @@
             this.tabPage3.Controls.Add(this.checkBox301);
             this.tabPage3.Controls.Add(this.checkBox300);
             this.tabPage3.ImageIndex = 2;
-            this.tabPage3.Location = new System.Drawing.Point(5, 23);
+            this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(455, 145);
+            this.tabPage3.Size = new System.Drawing.Size(456, 145);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "재해";
             this.tabPage3.ToolTipText = "재해아이콘 표시할 때 표시할항목 설정";
@@ -1095,8 +1120,9 @@
             this.checkBox310.ImageIndex = 21;
             this.checkBox310.ImageList = this.imageList1;
             this.checkBox310.Location = new System.Drawing.Point(124, 94);
+            this.checkBox310.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox310.Name = "checkBox310";
-            this.checkBox310.Size = new System.Drawing.Size(100, 16);
+            this.checkBox310.Size = new System.Drawing.Size(132, 24);
             this.checkBox310.TabIndex = 23;
             this.checkBox310.Text = "무언가 좋은 물건";
             this.checkBox310.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1108,8 +1134,9 @@
             this.checkBox309.ImageIndex = 20;
             this.checkBox309.ImageList = this.imageList1;
             this.checkBox309.Location = new System.Drawing.Point(124, 72);
+            this.checkBox309.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox309.Name = "checkBox309";
-            this.checkBox309.Size = new System.Drawing.Size(64, 16);
+            this.checkBox309.Size = new System.Drawing.Size(64, 24);
             this.checkBox309.TabIndex = 22;
             this.checkBox309.Text = "전투";
             this.checkBox309.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1121,8 +1148,9 @@
             this.checkBox308.ImageIndex = 19;
             this.checkBox308.ImageList = this.imageList1;
             this.checkBox308.Location = new System.Drawing.Point(124, 50);
+            this.checkBox308.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox308.Name = "checkBox308";
-            this.checkBox308.Size = new System.Drawing.Size(112, 16);
+            this.checkBox308.Size = new System.Drawing.Size(116, 24);
             this.checkBox308.TabIndex = 21;
             this.checkBox308.Text = "정체모를 괴물";
             this.checkBox308.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1134,8 +1162,9 @@
             this.checkBox307.ImageIndex = 18;
             this.checkBox307.ImageList = this.imageList1;
             this.checkBox307.Location = new System.Drawing.Point(124, 28);
+            this.checkBox307.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox307.Name = "checkBox307";
-            this.checkBox307.Size = new System.Drawing.Size(52, 16);
+            this.checkBox307.Size = new System.Drawing.Size(52, 24);
             this.checkBox307.TabIndex = 20;
             this.checkBox307.Text = "쥐";
             this.checkBox307.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1147,8 +1176,9 @@
             this.checkBox306.ImageIndex = 17;
             this.checkBox306.ImageList = this.imageList1;
             this.checkBox306.Location = new System.Drawing.Point(124, 6);
+            this.checkBox306.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox306.Name = "checkBox306";
-            this.checkBox306.Size = new System.Drawing.Size(76, 16);
+            this.checkBox306.Size = new System.Drawing.Size(76, 24);
             this.checkBox306.TabIndex = 19;
             this.checkBox306.Text = "눈보라";
             this.checkBox306.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1160,8 +1190,9 @@
             this.checkBox305.ImageIndex = 16;
             this.checkBox305.ImageList = this.imageList1;
             this.checkBox305.Location = new System.Drawing.Point(7, 116);
+            this.checkBox305.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox305.Name = "checkBox305";
-            this.checkBox305.Size = new System.Drawing.Size(64, 16);
+            this.checkBox305.Size = new System.Drawing.Size(64, 24);
             this.checkBox305.TabIndex = 18;
             this.checkBox305.Text = "폭풍";
             this.checkBox305.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1173,8 +1204,9 @@
             this.checkBox304.ImageIndex = 9;
             this.checkBox304.ImageList = this.imageList1;
             this.checkBox304.Location = new System.Drawing.Point(7, 94);
+            this.checkBox304.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox304.Name = "checkBox304";
-            this.checkBox304.Size = new System.Drawing.Size(100, 16);
+            this.checkBox304.Size = new System.Drawing.Size(100, 24);
             this.checkBox304.TabIndex = 17;
             this.checkBox304.Text = "자기장이상";
             this.checkBox304.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1186,8 +1218,9 @@
             this.checkBox303.ImageIndex = 8;
             this.checkBox303.ImageList = this.imageList1;
             this.checkBox303.Location = new System.Drawing.Point(7, 72);
+            this.checkBox303.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox303.Name = "checkBox303";
-            this.checkBox303.Size = new System.Drawing.Size(76, 16);
+            this.checkBox303.Size = new System.Drawing.Size(76, 24);
             this.checkBox303.TabIndex = 16;
             this.checkBox303.Text = "사이렌";
             this.checkBox303.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1199,8 +1232,9 @@
             this.checkBox302.ImageIndex = 7;
             this.checkBox302.ImageList = this.imageList1;
             this.checkBox302.Location = new System.Drawing.Point(7, 50);
+            this.checkBox302.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox302.Name = "checkBox302";
-            this.checkBox302.Size = new System.Drawing.Size(64, 16);
+            this.checkBox302.Size = new System.Drawing.Size(64, 24);
             this.checkBox302.TabIndex = 15;
             this.checkBox302.Text = "수초";
             this.checkBox302.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1212,8 +1246,9 @@
             this.checkBox301.ImageIndex = 6;
             this.checkBox301.ImageList = this.imageList1;
             this.checkBox301.Location = new System.Drawing.Point(7, 28);
+            this.checkBox301.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox301.Name = "checkBox301";
-            this.checkBox301.Size = new System.Drawing.Size(64, 16);
+            this.checkBox301.Size = new System.Drawing.Size(64, 24);
             this.checkBox301.TabIndex = 14;
             this.checkBox301.Text = "화재";
             this.checkBox301.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1225,8 +1260,9 @@
             this.checkBox300.ImageIndex = 5;
             this.checkBox300.ImageList = this.imageList1;
             this.checkBox300.Location = new System.Drawing.Point(7, 6);
+            this.checkBox300.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox300.Name = "checkBox300";
-            this.checkBox300.Size = new System.Drawing.Size(64, 16);
+            this.checkBox300.Size = new System.Drawing.Size(64, 24);
             this.checkBox300.TabIndex = 13;
             this.checkBox300.Text = "상어";
             this.checkBox300.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1239,10 +1275,10 @@
             this.tabPage4.Controls.Add(this.checkBox402);
             this.tabPage4.Controls.Add(this.checkBox400);
             this.tabPage4.ImageIndex = 3;
-            this.tabPage4.Location = new System.Drawing.Point(5, 23);
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(455, 145);
+            this.tabPage4.Size = new System.Drawing.Size(456, 145);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "항로예상선";
             this.tabPage4.ToolTipText = "항로예상선 표시할 때 표시항목 설정";
@@ -1253,8 +1289,9 @@
             this.checkBox403.AutoSize = true;
             this.checkBox403.ImageList = this.imageList1;
             this.checkBox403.Location = new System.Drawing.Point(28, 49);
+            this.checkBox403.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox403.Name = "checkBox403";
-            this.checkBox403.Size = new System.Drawing.Size(280, 16);
+            this.checkBox403.Size = new System.Drawing.Size(280, 24);
             this.checkBox403.TabIndex = 2;
             this.checkBox403.Text = "일시적으로 측량스킬이 끊어졌을 때의 예상위치";
             this.checkBox403.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1265,8 +1302,9 @@
             this.checkBox401.AutoSize = true;
             this.checkBox401.ImageList = this.imageList1;
             this.checkBox401.Location = new System.Drawing.Point(28, 28);
+            this.checkBox401.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox401.Name = "checkBox401";
-            this.checkBox401.Size = new System.Drawing.Size(168, 16);
+            this.checkBox401.Size = new System.Drawing.Size(168, 24);
             this.checkBox401.TabIndex = 1;
             this.checkBox401.Text = "속도로 구한 도달예상 위치";
             this.checkBox401.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1278,8 +1316,9 @@
             this.checkBox402.ImageIndex = 3;
             this.checkBox402.ImageList = this.imageList1;
             this.checkBox402.Location = new System.Drawing.Point(7, 71);
+            this.checkBox402.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox402.Name = "checkBox402";
-            this.checkBox402.Size = new System.Drawing.Size(220, 16);
+            this.checkBox402.Size = new System.Drawing.Size(220, 24);
             this.checkBox402.TabIndex = 3;
             this.checkBox402.Text = "과거의 위치로 분석한 항로예상선";
             this.checkBox402.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1291,130 +1330,14 @@
             this.checkBox400.ImageIndex = 9;
             this.checkBox400.ImageList = this.imageList1;
             this.checkBox400.Location = new System.Drawing.Point(7, 6);
+            this.checkBox400.MinimumSize = new System.Drawing.Size(0, 24);
             this.checkBox400.Name = "checkBox400";
-            this.checkBox400.Size = new System.Drawing.Size(180, 16);
+            this.checkBox400.Size = new System.Drawing.Size(180, 24);
             this.checkBox400.TabIndex = 0;
             this.checkBox400.Text = "나침반에서 분석한 예상선";
             this.checkBox400.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBox400.UseVisualStyleBackColor = true;
             this.checkBox400.CheckedChanged += new System.EventHandler(this.checkBox400_CheckedChanged);
-            // 
-            // managedPanel5
-            // 
-            this.managedPanel5.Controls.Add(this.groupBox11);
-            this.managedPanel5.Location = new System.Drawing.Point(0, 0);
-            this.managedPanel5.Name = "managedPanel5";
-            this.managedPanel5.Size = new System.Drawing.Size(478, 313);
-            this.managedPanel5.Text = "managedPanel5";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.checkBox15);
-            this.groupBox11.Controls.Add(this.checkBox7);
-            this.groupBox11.Controls.Add(this.checkBox4);
-            this.groupBox11.Controls.Add(this.checkBox16);
-            this.groupBox11.Controls.Add(this.checkBox13);
-            this.groupBox11.Controls.Add(this.checkBox2);
-            this.groupBox11.Controls.Add(this.checkBox12);
-            this.groupBox11.Controls.Add(this.checkBox10);
-            this.groupBox11.Controls.Add(this.checkBox11);
-            this.groupBox11.Location = new System.Drawing.Point(0, 3);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(478, 230);
-            this.groupBox11.TabIndex = 15;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "기타";
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(7, 202);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(273, 16);
-            this.checkBox15.TabIndex = 15;
-            this.checkBox15.Text = "DPI의 확대/축소에 해당하도록 글자 크기 조정";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(7, 182);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(382, 16);
-            this.checkBox7.TabIndex = 14;
-            this.checkBox7.Text = "정보윈도우의 좌표 표시를 지도 이미지의 좌표계로 표시(디버깅용)";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(7, 160);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(288, 16);
-            this.checkBox4.TabIndex = 13;
-            this.checkBox4.Text = "선박건조 중이 아니더라도 항상 조선 카운터 표시";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(7, 42);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(247, 16);
-            this.checkBox16.TabIndex = 8;
-            this.checkBox16.Text = "교역 MAP@Web 아이콘 그리기를 최적화";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(7, 114);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(180, 16);
-            this.checkBox13.TabIndex = 11;
-            this.checkBox13.Text = "선 그리기시 부드럽게";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(7, 66);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(226, 16);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "마우스의 앞/뒤 버튼으로 도구창 열기";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(7, 138);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(172, 16);
-            this.checkBox12.TabIndex = 12;
-            this.checkBox12.Text = "윈도우를 항상 맨 위에 표시";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(7, 18);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(216, 16);
-            this.checkBox10.TabIndex = 7;
-            this.checkBox10.Text = "우클릭동작을 윈도우 표준에 맞추기";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(7, 90);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(224, 16);
-            this.checkBox11.TabIndex = 10;
-            this.checkBox11.Text = "항로도즐겨찾기와 합성한지도를 사용";
-            this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // managedPanel6
             // 
@@ -1516,7 +1439,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::gvtrademap_cs.Properties.Resources.gvicon;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 32);
             this.pictureBox1.TabIndex = 20;
@@ -1683,7 +1606,7 @@
             this.managedPanel8.Controls.Add(this.groupBox21);
             this.managedPanel8.Location = new System.Drawing.Point(0, 0);
             this.managedPanel8.Name = "managedPanel8";
-            this.managedPanel8.Size = new System.Drawing.Size(0, 0);
+            this.managedPanel8.Size = new System.Drawing.Size(478, 313);
             this.managedPanel8.Text = "managedPanel8";
             // 
             // groupBox21
@@ -1717,7 +1640,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(136, 27);
             this.button5.TabIndex = 6;
-            this.button5.Text = "할당해제";
+            this.button5.Text = "할당 해제";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -1732,7 +1655,7 @@
             // 
             // comboBox9
             // 
-            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox9.FormattingEnabled = true;
@@ -1740,6 +1663,125 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(464, 20);
             this.comboBox9.TabIndex = 4;
+            // 
+            // managedPanel5
+            // 
+            this.managedPanel5.Controls.Add(this.groupBox11);
+            this.managedPanel5.Location = new System.Drawing.Point(0, 0);
+            this.managedPanel5.Name = "managedPanel5";
+            this.managedPanel5.Size = new System.Drawing.Size(0, 0);
+            this.managedPanel5.Text = "managedPanel5";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.checkBox15);
+            this.groupBox11.Controls.Add(this.checkBox7);
+            this.groupBox11.Controls.Add(this.checkBox4);
+            this.groupBox11.Controls.Add(this.checkBox16);
+            this.groupBox11.Controls.Add(this.checkBox13);
+            this.groupBox11.Controls.Add(this.checkBox2);
+            this.groupBox11.Controls.Add(this.checkBox12);
+            this.groupBox11.Controls.Add(this.checkBox10);
+            this.groupBox11.Controls.Add(this.checkBox11);
+            this.groupBox11.Location = new System.Drawing.Point(0, 3);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(478, 238);
+            this.groupBox11.TabIndex = 15;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "기타";
+            this.groupBox11.Enter += new System.EventHandler(this.groupBox11_Enter);
+            // 
+            // checkBox15
+            // 
+            this.checkBox15.AutoSize = true;
+            this.checkBox15.Location = new System.Drawing.Point(7, 179);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(273, 16);
+            this.checkBox15.TabIndex = 15;
+            this.checkBox15.Text = "DPI의 확대/축소에 해당하도록 글자 크기 조정";
+            this.checkBox15.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(7, 156);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(382, 16);
+            this.checkBox7.TabIndex = 14;
+            this.checkBox7.Text = "정보윈도우의 좌표 표시를 지도 이미지의 좌표계로 표시(디버깅용)";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(7, 133);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(288, 16);
+            this.checkBox4.TabIndex = 13;
+            this.checkBox4.Text = "선박건조 중이 아니더라도 항상 조선 카운터 표시";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Location = new System.Drawing.Point(7, 41);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(247, 16);
+            this.checkBox16.TabIndex = 8;
+            this.checkBox16.Text = "교역 MAP@Web 아이콘 그리기를 최적화";
+            this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(7, 87);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(140, 16);
+            this.checkBox13.TabIndex = 11;
+            this.checkBox13.Text = "선 그리기시 부드럽게";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(7, 202);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(226, 16);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.Text = "마우스의 앞/뒤 버튼으로 도구창 열기";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Visible = false;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(7, 110);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(172, 16);
+            this.checkBox12.TabIndex = 12;
+            this.checkBox12.Text = "윈도우를 항상 맨 위에 표시";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(7, 18);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(216, 16);
+            this.checkBox10.TabIndex = 7;
+            this.checkBox10.Text = "우클릭동작을 윈도우 표준에 맞추기";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(7, 64);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(224, 16);
+            this.checkBox11.TabIndex = 10;
+            this.checkBox11.Text = "항로도즐겨찾기와 합성한지도를 사용";
+            this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // setting_form2
             // 
@@ -1796,9 +1838,6 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.managedPanel5.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
             this.managedPanel6.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
@@ -1816,140 +1855,143 @@
             this.groupBox2.PerformLayout();
             this.managedPanel8.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
+            this.managedPanel5.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
-        }
+		}
 
-        #endregion
+		#endregion
 
-        private Controls.PanelManager panelManager1;
-        private Controls.ManagedPanel managedPanel1;
-        private Controls.ManagedPanel managedPanel2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private Controls.ManagedPanel managedPanel3;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private Controls.ManagedPanel managedPanel4;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private Controls.ManagedPanel managedPanel5;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private Controls.ManagedPanel managedPanel6;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.CheckBox checkBox105;
-        private System.Windows.Forms.CheckBox checkBox104;
-        private System.Windows.Forms.CheckBox checkBox103;
-        private System.Windows.Forms.CheckBox checkBox102;
-        private System.Windows.Forms.CheckBox checkBox101;
-        private System.Windows.Forms.CheckBox checkBox100;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.CheckBox checkBox212;
-        private System.Windows.Forms.CheckBox checkBox211;
-        private System.Windows.Forms.CheckBox checkBox210;
-        private System.Windows.Forms.CheckBox checkBox209;
-        private System.Windows.Forms.CheckBox checkBox208;
-        private System.Windows.Forms.CheckBox checkBox207;
-        private System.Windows.Forms.CheckBox checkBox206;
-        private System.Windows.Forms.CheckBox checkBox205;
-        private System.Windows.Forms.CheckBox checkBox204;
-        private System.Windows.Forms.CheckBox checkBox203;
-        private System.Windows.Forms.CheckBox checkBox202;
-        private System.Windows.Forms.CheckBox checkBox201;
-        private System.Windows.Forms.CheckBox checkBox200;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.CheckBox checkBox310;
-        private System.Windows.Forms.CheckBox checkBox309;
-        private System.Windows.Forms.CheckBox checkBox308;
-        private System.Windows.Forms.CheckBox checkBox307;
-        private System.Windows.Forms.CheckBox checkBox306;
-        private System.Windows.Forms.CheckBox checkBox305;
-        private System.Windows.Forms.CheckBox checkBox304;
-        private System.Windows.Forms.CheckBox checkBox303;
-        private System.Windows.Forms.CheckBox checkBox302;
-        private System.Windows.Forms.CheckBox checkBox301;
-        private System.Windows.Forms.CheckBox checkBox300;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.CheckBox checkBox401;
-        private System.Windows.Forms.CheckBox checkBox402;
-        private System.Windows.Forms.CheckBox checkBox400;
-        private System.Windows.Forms.CheckBox checkBox403;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private Controls.ManagedPanel managedPanel7;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private Controls.ManagedPanel managedPanel8;
-        private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox15;
-    }
+		private Controls.PanelManager panelManager1;
+		private Controls.ManagedPanel managedPanel1;
+		private Controls.ManagedPanel managedPanel2;
+		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox groupBox8;
+		private System.Windows.Forms.ComboBox comboBox8;
+		private System.Windows.Forms.GroupBox groupBox7;
+		private System.Windows.Forms.ComboBox comboBox5;
+		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.ComboBox comboBox7;
+		private System.Windows.Forms.ComboBox comboBox6;
+		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.ComboBox comboBox3;
+		private System.Windows.Forms.ComboBox comboBox2;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private Controls.ManagedPanel managedPanel3;
+		private System.Windows.Forms.GroupBox groupBox9;
+		private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.CheckBox checkBox9;
+		private System.Windows.Forms.GroupBox groupBox6;
+		private System.Windows.Forms.CheckBox checkBox6;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox textBox1;
+		private Controls.ManagedPanel managedPanel4;
+		private System.Windows.Forms.GroupBox groupBox10;
+		private Controls.ManagedPanel managedPanel5;
+		private System.Windows.Forms.GroupBox groupBox11;
+		private System.Windows.Forms.CheckBox checkBox16;
+		private System.Windows.Forms.CheckBox checkBox13;
+		private System.Windows.Forms.CheckBox checkBox2;
+		private System.Windows.Forms.CheckBox checkBox12;
+		private System.Windows.Forms.CheckBox checkBox10;
+		private System.Windows.Forms.CheckBox checkBox11;
+		private Controls.ManagedPanel managedPanel6;
+		private System.Windows.Forms.GroupBox groupBox12;
+		private System.Windows.Forms.GroupBox groupBox13;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.GroupBox groupBox14;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox textBox7;
+		private System.Windows.Forms.GroupBox groupBox15;
+		private System.Windows.Forms.CheckBox checkBox17;
+		private System.Windows.Forms.GroupBox groupBox16;
+		private System.Windows.Forms.ComboBox comboBox4;
+		private System.Windows.Forms.CheckBox checkBox3;
+		private System.Windows.Forms.CheckBox checkBox5;
+		private System.Windows.Forms.RadioButton radioButton2;
+		private System.Windows.Forms.RadioButton radioButton1;
+		private System.Windows.Forms.GroupBox groupBox17;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.GroupBox groupBox18;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.LinkLabel linkLabel2;
+		private System.Windows.Forms.LinkLabel linkLabel1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.ImageList imageList1;
+		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.TabPage tabPage1;
+		private System.Windows.Forms.CheckBox checkBox105;
+		private System.Windows.Forms.CheckBox checkBox104;
+		private System.Windows.Forms.CheckBox checkBox103;
+		private System.Windows.Forms.CheckBox checkBox102;
+		private System.Windows.Forms.CheckBox checkBox101;
+		private System.Windows.Forms.CheckBox checkBox100;
+		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.CheckBox checkBox212;
+		private System.Windows.Forms.CheckBox checkBox211;
+		private System.Windows.Forms.CheckBox checkBox210;
+		private System.Windows.Forms.CheckBox checkBox209;
+		private System.Windows.Forms.CheckBox checkBox207;
+		private System.Windows.Forms.CheckBox checkBox206;
+		private System.Windows.Forms.CheckBox checkBox205;
+		private System.Windows.Forms.CheckBox checkBox204;
+		private System.Windows.Forms.CheckBox checkBox203;
+		private System.Windows.Forms.CheckBox checkBox202;
+		private System.Windows.Forms.CheckBox checkBox201;
+		private System.Windows.Forms.CheckBox checkBox200;
+		private System.Windows.Forms.TabPage tabPage3;
+		private System.Windows.Forms.CheckBox checkBox310;
+		private System.Windows.Forms.CheckBox checkBox309;
+		private System.Windows.Forms.CheckBox checkBox308;
+		private System.Windows.Forms.CheckBox checkBox307;
+		private System.Windows.Forms.CheckBox checkBox306;
+		private System.Windows.Forms.CheckBox checkBox305;
+		private System.Windows.Forms.CheckBox checkBox304;
+		private System.Windows.Forms.CheckBox checkBox303;
+		private System.Windows.Forms.CheckBox checkBox302;
+		private System.Windows.Forms.CheckBox checkBox301;
+		private System.Windows.Forms.CheckBox checkBox300;
+		private System.Windows.Forms.TabPage tabPage4;
+		private System.Windows.Forms.CheckBox checkBox401;
+		private System.Windows.Forms.CheckBox checkBox402;
+		private System.Windows.Forms.CheckBox checkBox400;
+		private System.Windows.Forms.CheckBox checkBox403;
+		private System.Windows.Forms.CheckBox checkBox8;
+		private Controls.ManagedPanel managedPanel7;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.CheckBox checkBox14;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox textBox8;
+		private System.Windows.Forms.GroupBox groupBox20;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.TextBox textBox9;
+		private System.Windows.Forms.GroupBox groupBox19;
+		private System.Windows.Forms.CheckBox checkBox18;
+		private System.Windows.Forms.CheckBox checkBox19;
+		private Controls.ManagedPanel managedPanel8;
+		private System.Windows.Forms.GroupBox groupBox21;
+		private System.Windows.Forms.ListView listView1;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.ComboBox comboBox9;
+		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.CheckBox checkBox4;
+		private System.Windows.Forms.CheckBox checkBox7;
+		private System.Windows.Forms.CheckBox checkBox15;
+		private System.Windows.Forms.CheckBox checkBox208;
+	}
 }

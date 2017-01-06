@@ -248,11 +248,11 @@ namespace gvo_base
 		/*-------------------------------------------------------------------------
 		 분석정보を추가する
 		 tagで判定すること
-		 預金の이자용
+		 예금 이자용
 		---------------------------------------------------------------------------*/
 		protected void AddAnalizeList_Interest(object tag)
 		{
-			m_analize_list.Add(new analize_data("預金の이자を", type.index0, tag));
+			m_analize_list.Add(new analize_data("예금 이자로", type.index0, tag));
 		}
 
 		/*-------------------------------------------------------------------------

@@ -26,7 +26,7 @@ namespace gvtrademap_cs
 	{
 		public enum SendKeyType{
 			TOGGLE_SKILL	= 1,	// 스킬パネル開閉			Ctrl+Q
-			TOGGLE_CUSTOM_SLOT,		// カスタムスロットを開く		Ctrl+Z
+			TOGGLE_CUSTOM_SLOT,		// カスタムス행운권を開く		Ctrl+Z
 			OPEN_ITEM_WINDOW,		// 아이템윈도우を開く	Ctrl+W
 		};
 	
@@ -48,13 +48,13 @@ namespace gvtrademap_cs
 		{
 			m_handle		= kernel32.LoadLibrary("mousehook.dll");
 			if(m_handle == IntPtr.Zero){
-				MessageBox.Show("mousehook.dll の읽기に실패");
+				MessageBox.Show("mousehook.dll 의 읽기에 실패");
 				return;
 			}
 
 			IntPtr	func	= kernel32.GetProcAddress(m_handle, "SetDolMouseHookEx");
 			if(func == IntPtr.Zero){
-				MessageBox.Show("SetDolMouseHookEx() のアドレス取得に실패");
+				MessageBox.Show("SetDolMouseHookEx() 의 주소 획득 실패");
 				return;
 			}
 
@@ -81,7 +81,7 @@ namespace gvtrademap_cs
 
 			IntPtr	func	= kernel32.GetProcAddress(m_handle, "UnhookDolMouseHook");
 			if(func == IntPtr.Zero){
-				MessageBox.Show("UnhookDolMouseHook() のアドレス取得に실패");
+				MessageBox.Show("UnhookDolMouseHook() 의 주소 획득에 실패");
 				return;
 			}
 

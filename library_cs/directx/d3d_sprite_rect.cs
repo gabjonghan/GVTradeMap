@@ -34,7 +34,7 @@ namespace directx
 			private Vector2[]			m_offset;
 			private Vector2[]			m_uv;
 
-			private	Vector2				m_lefttop;		// 左上のオフセット
+			private	Vector2				m_lefttop;		// 左상のオフセット
 			private Vector2				m_size;			// 사이즈
 
 			private Rectangle m_rect;

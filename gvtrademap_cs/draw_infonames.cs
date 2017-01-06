@@ -39,13 +39,16 @@ namespace gvtrademap_cs {
 		private bool m_is_error;
 		private VertexDeclaration m_decl;
 
-		private d3d_writable_vb_with_index m_icons1_vb;		 // 대 아이콘용
-		private d3d_writable_vb_with_index m_city_names1_vb;		// 도시명과 상륙지점명
-		private d3d_writable_vb_with_index m_icons2_vb;		 // 소 아이콘용
-		private d3d_writable_vb_with_index m_city_names2_vb;		// 도시명과 상륙지점명
+		private d3d_writable_vb_with_index m_icons1_vb;   // 대 아이콘용
+		private d3d_writable_vb_with_index m_city_names1_vb;        // 도시명
+		private d3d_writable_vb_with_index m_icons2_vb;   // 소 아이콘용
+		private d3d_writable_vb_with_index m_city_names2_vb;        // 도시명
 
-		private d3d_writable_vb_with_index m_sea_names1_vb;	 // 여름용 해역명
-		private d3d_writable_vb_with_index m_sea_names2_vb;	 // 겨울용 해역명
+		private d3d_writable_vb_with_index m_shore_names_vb;        // 1차 상륙지, 개인농장
+		private d3d_writable_vb_with_index m_land_names_vb;     // 2차 상륙지, 내륙도시, 교외명 등 기타
+
+		private d3d_writable_vb_with_index m_sea_names1_vb;  // 여름용 해역명
+		private d3d_writable_vb_with_index m_sea_names2_vb;  // 겨울용 해역명
 
 		/*-------------------------------------------------------------------------
 
@@ -62,6 +65,9 @@ namespace gvtrademap_cs {
 			m_icons2_vb = null;
 			m_city_names2_vb = null;
 
+			m_shore_names_vb = null;
+			m_land_names_vb = null;
+
 			m_sea_names1_vb = null;
 			m_sea_names2_vb = null;
 		}
@@ -75,6 +81,10 @@ namespace gvtrademap_cs {
 			if (m_city_names1_vb != null) m_city_names1_vb.Dispose();
 			if (m_icons2_vb != null) m_icons2_vb.Dispose();
 			if (m_city_names2_vb != null) m_city_names2_vb.Dispose();
+
+			if (m_shore_names_vb != null) m_shore_names_vb.Dispose();
+			if (m_land_names_vb != null) m_land_names_vb.Dispose();
+
 			if (m_sea_names1_vb != null) m_sea_names1_vb.Dispose();
 			if (m_sea_names2_vb != null) m_sea_names2_vb.Dispose();
 
@@ -83,6 +93,10 @@ namespace gvtrademap_cs {
 			m_city_names1_vb = null;
 			m_icons2_vb = null;
 			m_city_names2_vb = null;
+
+			m_shore_names_vb = null;
+			m_land_names_vb = null;
+
 			m_sea_names1_vb = null;
 			m_sea_names2_vb = null;
 		}
@@ -94,10 +108,11 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		public void DrawCityName() {
 			create_buffers();
-
 			if (m_lib.device.sprites.effect != null) {
 				// 쉐이더사용
 				m_lib.device.device.RenderState.ZBufferEnable = false;
+				m_lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_cityicon_shader_proc), 64);
+				m_lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_landname_shader_proc), 64);
 				m_lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_cityname_shader_proc), 64);
 				m_lib.device.device.RenderState.ZBufferEnable = true;
 			} else {
@@ -106,6 +121,8 @@ namespace gvtrademap_cs {
 
 				m_lib.device.device.RenderState.ZBufferEnable = false;
 				m_lib.device.sprites.BeginDrawSprites(m_lib.infonameimage.texture);
+				m_lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_cityicon_proc), 64);
+				m_lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_landname_proc), 64);
 				m_lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_cityname_proc), 64);
 				m_lib.device.sprites.EndDrawSprites();
 				m_lib.device.device.RenderState.ZBufferEnable = true;
@@ -113,47 +130,135 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 도시명그리기
-		 상륙지점も含む
+		 상륙지그리기
 		---------------------------------------------------------------------------*/
-		private void draw_cityname_proc(Vector2 offset, LoopXImage image) {
-			if (m_lib.setting.map_icon == MapIcon.Big) {
-				// 대 아이콘
-				foreach (GvoWorldInfo.Info i in m_world.NoSeas) {
-					Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position), offset);
-					if (i.IconRect != null) {
-						m_lib.device.sprites.AddDrawSprites(new Vector3(p.X, p.Y, 0.3f), i.IconRect);
-					}
-
-					if (m_lib.setting.map_draw_names == MapDrawNames.Hide) continue;
-					if (i.NameRect == null) continue;
-					p.X += i.StringOffset1.X;
-					p.Y += i.StringOffset1.Y;
-					m_lib.device.sprites.AddDrawSprites(new Vector3(p.X, p.Y, 0.3f), i.NameRect);
-				}
-			} else {
-				// 소 아이콘
-				foreach (GvoWorldInfo.Info i in m_world.NoSeas) {
-					Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position), offset);
-					if (i.SmallIconRect != null) {
-						m_lib.device.sprites.AddDrawSprites(new Vector3(p.X, p.Y, 0.3f), i.SmallIconRect);
-					}
-
-					if (m_lib.setting.map_draw_names == MapDrawNames.Hide) continue;
-					if (i.NameRect == null) continue;
-					p.X += i.StringOffset2.X;
-					p.Y += i.StringOffset2.Y;
-					m_lib.device.sprites.AddDrawSprites(new Vector3(p.X, p.Y, 0.3f), i.NameRect);
-				}
+		private void draw_landname_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_draw_names == MapDrawNames.Hide || m_lib.setting.map_draw_names == MapDrawNames.OnlyCity) {
+				return;
 			}
+
+			// 1차 상륙지
+			draw_namerects(offset, image, m_world.Shores);
+
+			if (m_lib.setting.map_draw_names == MapDrawNames.CityAndShore) {
+				return;
+			}
+
+			// 2차 상륙지
+			draw_namerects(offset, image, m_world.NoSeas);
 		}
 
 		/*-------------------------------------------------------------------------
 		 도시명그리기
 		 상륙지점も含む
+		---------------------------------------------------------------------------*/
+		private void draw_cityname_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_draw_names == MapDrawNames.Hide) {
+				return;
+			}
+
+			draw_namerects(offset, image, m_world.Cities);
+		}
+
+		private void draw_namerects(Vector2 offset, LoopXImage image, hittest_list list) {
+			foreach (GvoWorldInfo.Info i in list) {
+				if (i.NameRect == null) continue;
+
+				Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position), offset);
+
+				if (m_lib.setting.map_icon == MapIcon.Big) {
+					// 대 아이콘
+					p.X += i.StringOffset1.X;
+					p.Y += i.StringOffset1.Y;
+				} else {
+					// 소 아이콘
+					p.X += i.StringOffset2.X;
+					p.Y += i.StringOffset2.Y;
+				}
+
+				m_lib.device.sprites.AddDrawSprites(new Vector3(p.X, p.Y, 0.3f), i.NameRect);
+			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 아이콘그리기
+		 상륙지점も含む
+		---------------------------------------------------------------------------*/
+		private void draw_cityicon_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_icon == MapIcon.Hide) {
+				return;
+			}
+			
+			draw_iconrects(offset, image, m_world.Cities);
+			
+			draw_iconrects(offset, image, m_world.Shores);
+
+			if (m_lib.setting.map_icon == MapIcon.CityAndShore) {
+				return;
+			}
+
+			draw_iconrects(offset, image, m_world.NoSeas);
+		}
+
+		private void draw_iconrects(Vector2 offset, LoopXImage image, hittest_list list) {
+			foreach (GvoWorldInfo.Info i in list) {
+				Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position), offset);
+
+				d3d_sprite_rects.rect refRect;
+				if (m_lib.setting.map_icon == MapIcon.Big) {
+					// 대 아이콘
+					refRect = i.IconRect;
+				} else {
+					refRect = i.SmallIconRect;
+				}
+
+				if (refRect != null) {
+					m_lib.device.sprites.AddDrawSprites(new Vector3(p.X, p.Y, 0.3f), refRect);
+				}
+			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 상륙지그리기
 		 쉐이더사용
 		---------------------------------------------------------------------------*/
+		private void draw_landname_shader_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_draw_names == MapDrawNames.Hide || m_lib.setting.map_draw_names == MapDrawNames.OnlyCity) {
+				return;
+			}
+
+			set_shader_params(m_lib.infonameimage.texture, offset, image.ImageScale);
+
+			Effect effect = m_lib.device.sprites.effect;
+			if (effect == null) return;
+
+			effect.Begin(0);
+			effect.BeginPass(0);
+
+			m_lib.device.device.VertexDeclaration = m_decl;
+
+			draw_buffer(m_shore_names_vb, m_world.Shores.Count);
+
+			if (m_lib.setting.map_draw_names == MapDrawNames.CityAndShore) {
+				return;
+			}
+
+			draw_buffer(m_land_names_vb, m_world.NoSeas.Count);
+
+			effect.EndPass();
+			effect.End();
+		}
+
+		/*-------------------------------------------------------------------------
+		도시명그리기
+		상륙지점も含む
+		쉐이더사용
+	   ---------------------------------------------------------------------------*/
 		private void draw_cityname_shader_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_draw_names == MapDrawNames.Hide) {
+				return;
+			}
+
 			set_shader_params(m_lib.infonameimage.texture, offset, image.ImageScale);
 
 			Effect effect = m_lib.device.sprites.effect;
@@ -164,19 +269,41 @@ namespace gvtrademap_cs {
 
 			m_lib.device.device.VertexDeclaration = m_decl;
 			if (m_lib.setting.map_icon == MapIcon.Big) {
-				// 대きい아이콘
-				draw_buffer(m_icons1_vb, m_world.NoSeas.Count);
-				if (m_lib.setting.map_draw_names == MapDrawNames.Draw) {
-					// 도시명
-					draw_buffer(m_city_names1_vb, m_world.NoSeas.Count);
-				}
+				// 대きい아이콘		
+				draw_buffer(m_city_names1_vb, m_world.Cities.Count);
 			} else {
-				// 소さい아이콘
-				draw_buffer(m_icons2_vb, m_world.NoSeas.Count);
-				if (m_lib.setting.map_draw_names == MapDrawNames.Draw) {
-					// 도시명
-					draw_buffer(m_city_names2_vb, m_world.NoSeas.Count);
-				}
+				// 소さい아이콘	
+				draw_buffer(m_city_names2_vb, m_world.Cities.Count);
+			}
+			effect.EndPass();
+			effect.End();
+		}
+
+		/*-------------------------------------------------------------------------
+		 아이콘그리기
+		 상륙지점も含む
+		 쉐이더사용
+		---------------------------------------------------------------------------*/
+		private void draw_cityicon_shader_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_icon == MapIcon.Hide) {
+				return;
+			}
+
+			set_shader_params(m_lib.icons.texture, offset, image.ImageScale);
+
+			Effect effect = m_lib.device.sprites.effect;
+			if (effect == null) return;
+
+			effect.Begin(0);
+			effect.BeginPass(0);
+
+			m_lib.device.device.VertexDeclaration = m_decl;
+			if (m_lib.setting.map_icon == MapIcon.Big) {
+				draw_buffer(m_icons1_vb, m_world.Cities.Count + m_world.Shores.Count + m_world.NoSeas.Count);				
+			} else if (m_lib.setting.map_icon == MapIcon.Small) {
+				draw_buffer(m_icons2_vb, m_world.Cities.Count + m_world.Shores.Count + m_world.NoSeas.Count);
+			} else {
+				draw_buffer(m_icons2_vb, m_world.Cities.Count + m_world.Shores.Count);
 			}
 			effect.EndPass();
 			effect.End();
@@ -211,6 +338,10 @@ namespace gvtrademap_cs {
 		 해역명그리기
 		---------------------------------------------------------------------------*/
 		private void draw_seaname_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_draw_names == MapDrawNames.Hide) {
+				return;
+			}
+
 			d3d_sprite_rects.rect _rect = m_lib.seainfonameimage.GetWindArrowIcon();
 			int color1 = (m_world.Season.now_season == gvo_season.season.summer) ? -1 : (96 << (8 * 3)) | 0x00ffffff;
 			int color2 = (m_world.Season.now_season == gvo_season.season.winter) ? -1 : (96 << (8 * 3)) | 0x00ffffff;
@@ -236,6 +367,10 @@ namespace gvtrademap_cs {
 		 쉐이더사용
 		---------------------------------------------------------------------------*/
 		private void draw_seaname_shader_proc(Vector2 offset, LoopXImage image) {
+			if (m_lib.setting.map_draw_names == MapDrawNames.Hide) {
+				return;
+			}
+
 			set_shader_params(m_lib.seainfonameimage.texture, offset, image.ImageScale);
 
 			Effect effect = m_lib.device.sprites.effect;
@@ -244,7 +379,7 @@ namespace gvtrademap_cs {
 			effect.Begin(0);
 			effect.BeginPass(0);
 
-			m_lib.device.device.VertexDeclaration = m_decl;	 // 頂点の디테일
+			m_lib.device.device.VertexDeclaration = m_decl;  // 頂点の디테일
 			if (m_world.Season.now_season == gvo_season.season.summer) {
 				// 夏
 				draw_buffer(m_sea_names1_vb, m_world.Seas.Count * 3);
@@ -280,7 +415,7 @@ namespace gvtrademap_cs {
 				effect.SetValue("GlobalScale", gscale);
 
 				// technique
-				effect.Technique = "SpriteWithGlobalParams";		// グローバルパラメータと拡縮と회전付き
+				effect.Technique = "SpriteWithGlobalParams";        // グローバルパラメータと拡縮と회전付き
 			} catch {
 				// 쉐이더ーの사용をやめる
 				m_lib.device.sprites.DisposeEffect();
@@ -292,9 +427,9 @@ namespace gvtrademap_cs {
 		 구축されていればなにもしない
 		---------------------------------------------------------------------------*/
 		private void create_buffers() {
-			if (!m_lib.device.is_use_ve1_1_ps1_1) return;	   // 쉐이더を使わない
-			if (m_is_create_buffers) return;		// 작성されている
-			if (m_is_error) return;	 // 오류
+			if (!m_lib.device.is_use_ve1_1_ps1_1) return;     // 쉐이더を使わない
+			if (m_is_create_buffers) return;        // 작성されている
+			if (m_is_error) return;  // 오류
 
 			try {
 				m_decl = new VertexDeclaration(m_lib.device.device, sprite_vertex.VertexElements);
@@ -334,32 +469,64 @@ namespace gvtrademap_cs {
 		 도시명と상륙지점명のバッファ작성 
 		---------------------------------------------------------------------------*/
 		private void create_city_buffer() {
-			m_icons1_vb = create_buffer(m_world.NoSeas.Count);
-			m_icons2_vb = create_buffer(m_world.NoSeas.Count);
-			m_city_names1_vb = create_buffer(m_world.NoSeas.Count);
-			m_city_names2_vb = create_buffer(m_world.NoSeas.Count);
+			m_icons1_vb = create_buffer(m_world.Cities.Count + m_world.Shores.Count + m_world.NoSeas.Count);
+			m_icons2_vb = create_buffer(m_world.Cities.Count + m_world.Shores.Count + m_world.NoSeas.Count);
+			m_city_names1_vb = create_buffer(m_world.Cities.Count);
+			m_city_names2_vb = create_buffer(m_world.Cities.Count);
 
-			sprite_vertex[] icons1_vbo = new sprite_vertex[m_world.NoSeas.Count * 4];
-			sprite_vertex[] icons2_vbo = new sprite_vertex[m_world.NoSeas.Count * 4];
-			sprite_vertex[] city_names1_vbo = new sprite_vertex[m_world.NoSeas.Count * 4];
-			sprite_vertex[] city_names2_vbo = new sprite_vertex[m_world.NoSeas.Count * 4];
+			m_shore_names_vb = create_buffer(m_world.Shores.Count);
+			m_land_names_vb = create_buffer(m_world.NoSeas.Count);
+			
+			sprite_vertex[] icons1_vbo = new sprite_vertex[(m_world.Cities.Count + m_world.Shores.Count + m_world.NoSeas.Count) * 4];
+			sprite_vertex[] icons2_vbo = new sprite_vertex[(m_world.Cities.Count + m_world.Shores.Count + m_world.NoSeas.Count) * 4];
+			sprite_vertex[] city_names1_vbo = new sprite_vertex[m_world.Cities.Count * 4];
+			sprite_vertex[] city_names2_vbo = new sprite_vertex[m_world.Cities.Count * 4];
+			sprite_vertex[] shore_names_vbo = new sprite_vertex[m_world.Shores.Count * 4];
+			sprite_vertex[] land_names_vbo = new sprite_vertex[m_world.NoSeas.Count * 4];
 
 			int index = 0;
-			foreach (GvoWorldInfo.Info i in m_world.NoSeas) {
+			foreach (GvoWorldInfo.Info i in m_world.Cities) {
 				// 아이콘
 				set_vbo(ref icons1_vbo, index, i.position, new Point(0, 0), i.IconRect, 0, -1);
 				set_vbo(ref icons2_vbo, index, i.position, new Point(0, 0), i.SmallIconRect, 0, -1);
+
 				// 문자 (도시이름)
 				set_vbo(ref city_names1_vbo, index, i.position, i.StringOffset1, i.NameRect, i.angle, -1);
 				set_vbo(ref city_names2_vbo, index, i.position, i.StringOffset2, i.NameRect, i.angle, -1);
 
 				index++;
 			}
+			int index2 = 0;
+			foreach (GvoWorldInfo.Info i in m_world.Shores) {
+				// 아이콘
+				set_vbo(ref icons1_vbo, index, i.position, new Point(0, 0), i.IconRect, 0, -1);
+				set_vbo(ref icons2_vbo, index, i.position, new Point(0, 0), i.SmallIconRect, 0, -1);
+
+				// 문자 (도시이름)
+				set_vbo(ref shore_names_vbo, index2, i.position, i.StringOffset2, i.NameRect, i.angle, -1);
+				
+				index++;
+				index2++;
+			}
+			int index3 = 0;
+			foreach (GvoWorldInfo.Info i in m_world.NoSeas) {
+				// 아이콘
+				set_vbo(ref icons1_vbo, index, i.position, new Point(0, 0), i.IconRect, 0, -1);
+				set_vbo(ref icons2_vbo, index, i.position, new Point(0, 0), i.SmallIconRect, 0, -1);
+
+				// 문자 (도시이름)
+				set_vbo(ref land_names_vbo, index3, i.position, i.StringOffset2, i.NameRect, i.angle, -1);
+
+				index++;
+				index3++;
+			}
 			// 정점들을 설정
 			m_icons1_vb.SetData<sprite_vertex>(icons1_vbo);
 			m_icons2_vb.SetData<sprite_vertex>(icons2_vbo);
 			m_city_names1_vb.SetData<sprite_vertex>(city_names1_vbo);
 			m_city_names2_vb.SetData<sprite_vertex>(city_names2_vbo);
+			m_shore_names_vb.SetData<sprite_vertex>(shore_names_vbo);
+			m_land_names_vb.SetData<sprite_vertex>(land_names_vbo);
 		}
 
 		/*-------------------------------------------------------------------------
@@ -445,12 +612,12 @@ namespace gvtrademap_cs {
 		[StructLayout(LayoutKind.Sequential)]
 		protected struct sprite_vertex {
 			public Vector3 Position;   // 좌표					12
-			public Vector2 uv;		  // uv					8
+			public Vector2 uv;      // uv					8
 			public Vector2 offset1; // x, y		offset1		8
 			public Vector2 offset2; // x, y		offset2		8
-			public Vector3 param;	   // x, y		ImageScale		12
-										// z		angle_rad
-			public int color;	   // Color				4
+			public Vector3 param;     // x, y		ImageScale		12
+									  // z		angle_rad
+			public int color;     // Color				4
 
 			/*-------------------------------------------------------------------------
 			 頂点情報

@@ -189,7 +189,7 @@ namespace gvtrademap_cs
 				foreach(string s in m_lib.setting.find_strings){
 					comboBox1.Items.Add(s);
 				}
-				// 一番上を선택
+				// 一番상を선택
 				comboBox1.SelectedIndex		= 0;
 			}
 		}

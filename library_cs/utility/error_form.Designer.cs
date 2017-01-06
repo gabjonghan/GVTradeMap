@@ -43,7 +43,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(182, 12);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "想定していないエラーが発生しました. ";
+			this.label1.Text = "예상하지 못한 오류가 발생했습니다.";
 			// 
 			// label2
 			// 
@@ -52,7 +52,7 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(312, 12);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "下記のエラー내용を보고してもらえると대응できるかもしれません. ";
+			this.label2.Text = "아래에 오류 내용을 보고해주면 대응할수 있을지도 모릅니다.(현재 일본어판 개발중단)";
 			// 
 			// textBox1
 			// 
@@ -87,7 +87,7 @@
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(458, 23);
 			this.button2.TabIndex = 1;
-			this.button2.Text = "エラー보고을실시ページを開く";
+			this.button2.Text = "오류보고할 페이지를 열기";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
@@ -99,7 +99,7 @@
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(458, 23);
 			this.button3.TabIndex = 2;
-			this.button3.Text = "エラー내용をクリップボードにコピー";
+			this.button3.Text = "오류내용을 클립보드에 카피";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
@@ -121,7 +121,7 @@
 			this.Name = "error_form";
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "想定외のエラー";
+			this.Text = "예상 외의 오류";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

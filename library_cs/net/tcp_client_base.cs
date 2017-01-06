@@ -181,17 +181,17 @@ namespace net_base
 			IPAddress[]	list	= net_useful.GetIpAddressIpv4(host);
 			if(   (list == null)
 				||(list.Length <= 0) ){
-				throw new ApplicationException("서버ーが見つかりません");
+				throw new ApplicationException("서버를 찾을 수 없습니다");
 			}
 			Connect(list[0], port);
 		}
 		public void Connect(IPAddress host, int port)
 		{
 			if(is_closed){
-				throw new ApplicationException("接続していません");
+				throw new ApplicationException("서버를 찾을 수 없습니다");
 			}
 			if(is_connected){
-				throw new ApplicationException("接続済です");
+				throw new ApplicationException("이미 접속중입니다");
 			}
 
 			// 接続する

@@ -39,8 +39,8 @@ namespace gvtrademap_cs
 //		private const int					TEXTURED_FONT_REFLESH_INTERVAL	= 1;
 	
 		public enum State{
-			outof_sea,				// 해上ではない
-			in_the_sea,				// 해上
+			outof_sea,				// 해상ではない
+			in_the_sea,				// 해상
 		};
 	
 		/*-------------------------------------------------------------------------

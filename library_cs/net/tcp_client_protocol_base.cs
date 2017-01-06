@@ -29,7 +29,7 @@ namespace net_base
 	
 		public enum client_state{
 			init,
-			chekc_version,	// 버전確認中
+			chekc_version,	// 버전確認중
 			error_version,	// 버전エラー
 			ready,			// 通信OK
 			disconected,	// 切断されている
@@ -79,7 +79,7 @@ namespace net_base
 		{
 			m_protocol_name		= protocol_name;		// プロトコル명
 			m_version			= version;				// プロトコル버전
-			m_state				= client_state.init;	// 初期化中
+			m_state				= client_state.init;	// 初期化중
 	
 			// 데이터受信時のハンドラ
 			base.ReceivedData	+= new ReceivedDataEventHandler(received_handler);

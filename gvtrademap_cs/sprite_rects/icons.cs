@@ -19,7 +19,7 @@ using directx;
 namespace gvtrademap_cs {
 	public class icons : d3d_sprite_rects {
 		public enum icon_index {
-			// 일付変わり時のふきだし아이콘
+			// 일付変わり時の말풍선아이콘
 			days_big_shadow,	// 影
 
 			// 일付표시용수字
@@ -252,7 +252,7 @@ namespace gvtrademap_cs {
 			// 스크립트로부터 잘라낸 것
 			// 일付変わり時の아이콘
 			days_mini_6,
-			// 일付変わり時のふきだし아이콘
+			// 일付変わり時の말풍선아이콘
 			days_big_6,
 			days_big_100,	   // 100일以降の좌우が대きいもの
 
@@ -563,31 +563,32 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(0, 0), new Rectangle(96, 216, 44, 12));
 
 			// 지도용 본거지 항구 상륙지 2차필드 아이콘
-			AddRect(new Vector2(232 - 243, 160 - 175), new Rectangle(232, 160, 254 - 232, 185 - 160)); // 1 본거지, 184번째 사각형
-			AddRect(new Vector2(232 - 243, 216 - 225), new Rectangle(232, 216, 254 - 232, 235 - 216)); // 2 본거지(이슬람)
+			AddRect(new Vector2(-12, -22), new Rectangle(232, 160, 254 - 232, 185 - 160)); // 1 본거지, 184번째 사각형
+			AddRect(new Vector2(-11, -14), new Rectangle(232, 216, 254 - 232, 235 - 216)); // 2 본거지(이슬람)
 			AddRect(new Vector2(-7, -11), new Rectangle(232, 192, 245 - 232, 207 - 192)); // 3 도시 1
 			AddRect(new Vector2(-5, -9), new Rectangle(203, 242, 212 - 203, 253 - 242)); // 4 도시 2
 			AddRect(new Vector2(-7, -11), new Rectangle(232, 240, 245 - 232, 255 - 240)); // 5 도시 1 (이슬람)
 			AddRect(new Vector2(-5, -9), new Rectangle(215, 242, 224 - 215, 253 - 242)); // 6 도시 2 (이슬람)
+						
 			// 도시 / 상륙지 등 아이콘
-			AddRect(new Vector2(-2, -2), new Rectangle(179, 208, 4, 4));  // 7,  빨간색 사각형 
-			AddRect(new Vector2(-2, -2), new Rectangle(179, 216, 4, 4));  // 8,  하늘색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(179, 224, 4, 4));  // 9,  노란색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(179, 232, 4, 4));  // 10, 빨간색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(179, 240, 4, 4));  // 11, 하늘색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(179, 248, 4, 4));  // 12, 노란색 원, 195번째
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 208, 4, 4));  // 13, 마젠타 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 216, 4, 4));  // 14, 파란색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 224, 4, 4));  // 15, 주황색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 232, 4, 4));  // 16, 마젠타 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 240, 4, 4));  // 17, 파란색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 248, 4, 4));  // 18, 주황색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 208, 4, 4));  // 19, 흰색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 216, 4, 4));  // 20, 녹색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 224, 4, 4));  // 21, 연두색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 232, 4, 4));  // 22, 흰색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 240, 4, 4));  // 23, 녹색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 248, 4, 4));  // 24, 연두색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(179, 208, 6, 6));  // 7,  빨간색 사각형 
+			AddRect(new Vector2(-2, -2), new Rectangle(179, 216, 6, 6));  // 8,  하늘색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(179, 224, 6, 6));  // 9,  노란색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(179, 232, 6, 6));  // 10, 빨간색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(179, 240, 6, 6));  // 11, 하늘색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(179, 248, 6, 6));  // 12, 노란색 원, 195번째
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 208, 6, 6));  // 13, 마젠타 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 216, 6, 6));  // 14, 파란색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 224, 6, 6));  // 15, 주황색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 232, 6, 6));  // 16, 마젠타 원
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 240, 6, 6));  // 17, 파란색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 248, 6, 6));  // 18, 주황색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 208, 6, 6));  // 19, 흰색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 216, 6, 6));  // 20, 녹색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 224, 6, 6));  // 21, 연두색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 232, 6, 6));  // 22, 흰색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 240, 6, 6));  // 23, 녹색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(187, 248, 6, 6));  // 24, 연두색 원
 		}
 
 		/*-------------------------------------------------------------------------

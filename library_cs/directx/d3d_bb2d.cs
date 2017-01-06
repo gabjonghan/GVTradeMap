@@ -23,7 +23,7 @@ namespace directx
 		private Vector2				m_min;
 		private Vector2				m_max;
 		private bool				m_is_1st;		// 최초の위치を설정したらtrue
-		private Vector2				m_offset_lt;	// 左上のオフセット
+		private Vector2				m_offset_lt;	// 左상のオフセット
 		private Vector2				m_offset_rb;	// 右下のオフセット
 	
 		/*-------------------------------------------------------------------------

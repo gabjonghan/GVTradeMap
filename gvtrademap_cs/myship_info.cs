@@ -35,10 +35,10 @@ namespace gvtrademap_cs {
 	public class myship_info {
 		// ナビゲーションクライアントからの受信タイムアウト
 		// タイムアウト時は나침반の각도を初期化する
-		// 항로공유時は해上ではない扱いとなる
+		// 항로공유時は해상ではない扱いとなる
 		private const int FROM_CLIENT_RECEIVE_TIME_OUT = 1000 * 5;  // 5초
-																	// 해上ではないと判断する시간
-																	// この시간일付が캡처できなければ해上ではないと判断する
+																	// 해상ではないと判断する시간
+																	// この시간일付が캡처できなければ해상ではないと判断する
 																	// 도달예상위치の리셋も絡むため, 少し長めに설정する
 		private const int OUT_OF_SEA_TIME_OUT = 1000 * 5;   // 5초
 															// 도달예상위치
@@ -58,7 +58,7 @@ namespace gvtrademap_cs {
 		private Point m_pos;					// 본인の배위치
 												// 항로공유時にこの値を渡す
 		private float m_angle;			  // 본인の배の向き
-		private bool m_is_in_the_sea;	   // 해上のときtrue
+		private bool m_is_in_the_sea;	   // 해상のときtrue
 											//		private float				m_show_speed;			// 도달예상표시アニメーション용속도
 
 		private gvo_server_service m_server_service;		// ナビゲーションクライアントからの受信
@@ -240,7 +240,7 @@ namespace gvtrademap_cs {
 			if (data == null) {
 				if (m_capture_timer.GetSectionTimeMilliseconds() >= FROM_CLIENT_RECEIVE_TIME_OUT) {
 					// 受信タイムアウト
-					// 해上に居ないと判断する
+					// 해상に居ないと判断する
 					m_is_in_the_sea = false;
 					// 도달예상を리셋
 					reset_expect();
@@ -331,7 +331,7 @@ namespace gvtrademap_cs {
 				m_db.BuildShipCounter.Update(data.days);
 			} else {
 				if (m_expect_delay_timer.GetSectionTimeMilliseconds() > OUT_OF_SEA_TIME_OUT) {
-					// 해上ではない
+					// 해상ではない
 					m_is_in_the_sea = false;
 					// 도달예상を리셋
 					reset_expect();
@@ -352,7 +352,7 @@ namespace gvtrademap_cs {
 			// 본인の배の위치
 			m_pos = new Point(data.pos_x, data.pos_y);
 			m_angle = data.angle;
-			m_is_in_the_sea = true;	 // 해上
+			m_is_in_the_sea = true;	 // 해상
 			m_capture_sucess = true;		// 캡처成功
 
 			// 측량위치を추가する

@@ -67,7 +67,7 @@
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(247, 23);
 			this.button3.TabIndex = 12;
-			this.button3.Text = "모든해역군을통상상태로복원";
+			this.button3.Text = "모든 해역군을 통상상태로 복원";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
@@ -86,7 +86,7 @@
 			this.listView1.ShowItemToolTips = true;
 			this.listView1.Size = new System.Drawing.Size(466, 293);
 			this.listView1.TabIndex = 13;
-			this.toolTip1.SetToolTip(this.listView1, "おまじない");
+			this.toolTip1.SetToolTip(this.listView1, "주술");
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			this.listView1.ColumnWidthChanged += new System.Windows.Forms.ColumnWidthChangedEventHandler(this.listView1_ColumnWidthChanged);
@@ -123,8 +123,8 @@
 			this.button4.Size = new System.Drawing.Size(247, 23);
 			this.button4.TabIndex = 15;
 			this.button4.Text = "해역정보수집시작";
-			this.toolTip1.SetToolTip(this.button4, "해역변동수집시작함. \r\n해역변동수집は\r\n・したらば掲示판の안전해역정보スレ\r\n・대항해시대Onlineまとめwiki(統括)\r\nから해역변동정보を取得します" +
-		". ");
+			this.toolTip1.SetToolTip(this.button4, "해역변동 수집시작\r\n해역변동수집은\r\n일본 게시판 및 위키의\r\n해역변동정보를 얻음" +
+		" ");
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
@@ -149,7 +149,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "위험해역변동시스템설정";
+			this.Text = "위험해역 변동시스템 설정";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.setting_sea_area_form_FormClosed);
 			this.ResumeLayout(false);
 

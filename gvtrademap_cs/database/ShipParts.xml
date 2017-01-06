@@ -1,0 +1,1797 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ship_parts_root>
+  <ship_part name="평갑판형소형선체" PartsType="선체" ShipSizeType="소형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예2、조선5" Citys="各국본거지" NPC="조선소주인" Materials="철재20、木材20" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="평갑판형중형선체" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="20" Max="40" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예4、조선9" Citys="허브ルグ、ナント、オポ금허브 소、ラグーザ" NPC="조선소주인" Materials="加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="2층갑판형중형선체" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예4、조선10" Citys="허브ルグ、ナント、オポ금허브 소、ラグーザ" NPC="조선소주인" Materials="加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="3층갑판형중형선체" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예5、조선11" Citys="허브ルグ、ナント、オポ금허브 소、ラグーザ" NPC="조선소주인" Materials="加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="평갑판형대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예7、조선13" Citys="各국占有開拓地" NPC="조선소주인" Materials="木材30、加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="2층갑판형대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8、조선14" Citys="各국占有開拓地" NPC="조선소주인" Materials="木材30、加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="3층갑판형대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8、조선15" Citys="各국占有開拓地" NPC="조선소주인" Materials="木材40、加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="중형도선" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="20" Max="40" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예4、조선9" Citys="オデッサ、アレクサンドリア" NPC="조선소주인" Materials="加工木材、加工철재" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="대형도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8、조선13" Citys="간디아、카이로" NPC="조선소주인" Materials="木材20、加工木材、加工철재" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="대형2층도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="5" Max="7" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8、조선14" Citys="간디아、카이로" NPC="조선소주인" Materials="木材30、加工木材、加工철재" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="대형3층도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="7" Max="9" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8、조선15" Citys="간디아、카이로" NPC="조선소주인" Materials="木材40、加工木材、加工철재" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="공용대형도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="1" Max="3" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예13、조선14" Citys="各국본거지" NPC="조선소주인" Materials="중装船尾楼、강화鋼の板金4、대형도선" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="공용2층갑판형대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예14、조선15" Citys="各국본거지" NPC="조선소주인" Materials="중装船尾楼、강화鋼の板金5、2층갑판형대형선체" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="공용대형2층도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="5" Max="7" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예14、조선15" Citys="各국본거지" NPC="조선소주인" Materials="중装船尾楼、강화鋼の板金5、대형2층도선" ShipType="複合형" />
+  </ship_part>
+  <ship_part name="공용3층갑판형대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예15、조선16" Citys="各국본거지" NPC="조선소주인" Materials="중装船尾楼、강화鋼の板金6、3층갑판형대형선체" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="공용대형3층도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="7" Max="9" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예15、조선16" Citys="各국본거지" NPC="조선소주인" Materials="중装船尾楼、강화鋼の板金6、대형3층도선" ShipType="複合형" />
+  </ship_part>
+  <ship_part name="将官용평갑판형중형선체" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12、조선10" Citys="各국본거지" NPC="조선소주인" Materials="名提督の指揮杖、강화鋼の板金3、평갑판형중형선체" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="将官용2층갑판형중형선체" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="50" Max="70" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12、조선10" Citys="各국본거지 イスタンブール레시피なし" NPC="조선소주인" Materials="名提督の指揮杖、강화鋼の板金3、2층갑판형중형선체" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="将官용중형도선" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="1" Max="3" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12、조선10" Citys="各국본거지 イスタンブール레시피なし" NPC="조선소주인" Materials="名提督の指揮杖、강화鋼の板金3、중형도선" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="東아시아중형선체" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="40" Max="60" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="2" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예11、조선13" Citys="堺、安평、漢陽、杭州" NPC="조선소주인" Materials="東아시아조선技법書2、加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="東아시아대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="2" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12、조선15" Citys="堺、安평、漢陽、杭州" NPC="조선소주인" Materials="東아시아조선技법書3、加工木材、加工철재" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="東아시아대형도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="3" Max="5" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12、조선15" Citys="堺、安평、漢陽、杭州" NPC="조선소주인" Materials="東아시아조선技법書3、加工木材、加工철재" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="개량東아시아대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="1" />
+	<data_values name="내파" Min="3" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예17、조선16" Citys="堺、安평、漢陽、杭州" NPC="조선소주인" Materials="중装船尾楼、東아시아대형선체、沙船(オーナメント)" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="강화東아시아대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="1" />
+	<data_values name="내파" Min="3" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예17、조선16" Citys="堺、安평、漢陽、杭州" NPC="조선소주인" Materials="중装船尾楼、東아시아대형선체、広船(オーナメント)" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="개량東아시아대형도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="3" Max="5" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예17、조선16" Citys="堺、安평、漢陽、杭州" NPC="조선소주인" Materials="중装船尾楼、東아시아대형도선、菱垣廻船(オーナメント)" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="강화船殻2층대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="60" Max="80" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예17、조선16" Citys="商会開拓街" NPC="조선소주인" Materials="강화船殻設計書、特殊加工로프、加工木材" ShipType="帆船" />
+  </ship_part>
+  <ship_part name="소ラティーンセイル" PartsType="帆" ShipSizeType="소형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="10" Max="20" />
+	<data_values name="가로돛" Min="-10" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製5" Citys="各국본거지" NPC="製帆職人" Materials="마 원단10、木材10、로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="소スクウェアセイル" PartsType="帆" ShipSizeType="소형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="-10" Max="0" />
+	<data_values name="가로돛" Min="10" Max="20" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製6" Citys="各국본거지" NPC="製帆職人" Materials="마 원단10、木材10、로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="소ガフセイル" PartsType="帆" ShipSizeType="소형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製7" Citys="各국본거지" NPC="製帆職人" Materials="마 원단10、木材10、로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="소ジャンクセイル" PartsType="帆" ShipSizeType="소형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製12" Citys="나가사키、단수이" NPC="조선소주인" Materials="東아시아조선技법書、加工木材、로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="중ラティーンセイル" PartsType="帆" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="25" Max="35" />
+	<data_values name="가로돛" Min="-10" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製9" Citys="ベルゲン、앤트워프、オポ금허브 소、セウタ、バレンシア、ピサ、サロニカ、ラグーザ、중경" NPC="製帆職人" Materials="마 원단20、木材20、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="중スクウェアセイル" PartsType="帆" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="-10" Max="0" />
+	<data_values name="가로돛" Min="25" Max="35" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製10" Citys="ベルゲン、앤트워프、オポ금허브 소、セウタ、バレンシア、ピサ、サロニカ、ラグーザ、중경" NPC="製帆職人" Materials="마 원단20、木材20、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="중ガフセイル" PartsType="帆" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="15" Max="25" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製11" Citys="ベルゲン、앤트워프、オポ금허브 소、セウタ、バレンシア、ピサ、サロニカ、ラグーザ、중경" NPC="製帆職人" Materials="마 원단20、木材20、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="중ジャンクセイル" PartsType="帆" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="15" Max="25" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製14" Citys="나가사키、단수이" NPC="조선소주인" Materials="東아시아조선技법書、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="중ストームセイル" PartsType="帆" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="10" Max="20" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="3" Max="5" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail ShipType="すべて" />
+  </ship_part>
+  <ship_part name="대ラティーンセイル" PartsType="帆" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="40" Max="50" />
+	<data_values name="가로돛" Min="-10" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製13" Citys="各국占有開拓地、東南아시아開拓地（軍事都市限定）、나가사키" NPC="製帆職人" Materials="마 원단30、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="대スクウェアセイル" PartsType="帆" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="-10" Max="0" />
+	<data_values name="가로돛" Min="40" Max="50" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製14" Citys="各국占有開拓地、東南아시아開拓地（軍事都市限定）、나가사키" NPC="製帆職人" Materials="마 원단30、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="대ガフセイル" PartsType="帆" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="25" Max="35" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製15" Citys="各국占有開拓地、東南아시아開拓地（軍事都市限定）、나가사키" NPC="製帆職人" Materials="마 원단30、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="대ジャンクセイル" PartsType="帆" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="25" Max="35" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製16" Citys="나가사키、단수이" NPC="조선소주인" Materials="東아시아조선技법書2、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="デルフィンストームセイル" PartsType="帆" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="20" Max="30" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="3" Max="5" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="攻略本「～El Oriente～プレイヤーズバイブル Premium Edition」付属" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="대ストームセイル" PartsType="帆" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="15" Max="25" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="3" Max="5" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="沈没船" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="デルフィンガフセイル" PartsType="帆" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="35" Max="45" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="攻略本「～Tierra Americana～プレイヤーズバイブル Premium Edition」付属" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="개량소형포문" PartsType="대포" ShipSizeType="소형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="2" Max="6" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造5" Citys="各국본거지" NPC="武器職人" Materials="철재20、木材20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="개량중형포문" PartsType="대포" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="4" Max="8" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造9" Citys="プリマス、ボルドー、앤트워프、허브ルグ、ストックホルム、アレクサンドリア、アンボイナ、중경" NPC="武器職人" Materials="木材30、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="개량대형포문" PartsType="대포" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="6" Max="10" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造13" Citys="各국占有開拓地、東南아시아開拓地（軍事都市限定）、나가사키" NPC="武器職人" Materials="철재40、加工木材、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="加工木材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="-10" Max="0" />
+	<data_values name="가로돛" Min="-10" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예6" Citys="各국占有開拓地、부에노스아이레스、모잠비크、퐁디셰리、ディヴ" NPC="조선공" Materials="木材30" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="加工철재" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="-15" Max="-5" />
+	<data_values name="가로돛" Min="-15" Max="-5" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="2" Max="4" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造6" Citys="オスロ、エディンバラ、プリマス、앤트워프、セウタ、ラグーザ、トリエステ、オデッサ、カッファ" NPC="조선공" Materials="철재30" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="로프" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製6" Citys="ナント、オポ금허브 소、アルジェ、ラスパルマス、ゴア、カルカッタ" NPC="조선공" Materials="황마30" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="강화로프" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="20" Max="40" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製8" Citys="リオデジャネイロ、베라크루스" NPC="조선공" Materials="황마10、サイザル마20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊加工로프" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="-6" Max="-2" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製15" Citys="베라크루스、リオデジャネイロ" NPC="조선공" Materials="特注サルベージ로프1、特注曳航補助로프1、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="소마스트" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="5" Max="15" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예4" Citys="各국본거지" NPC="製材職人" Materials="철재10、木材20、로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="중마스트" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="10" Max="20" />
+	<data_values name="가로돛" Min="10" Max="20" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8" Citys="オポ금허브 소、ラグーザ、허브ルグ、ナント" NPC="製材職人" Materials="철재20、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="대마스트" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="15" Max="25" />
+	<data_values name="가로돛" Min="15" Max="25" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12" Citys="各국占有開拓地" NPC="製材職人" Materials="철재30、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="解体道具一式" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造8" Citys="トレビゾント" NPC="조선공" Materials="木材20、대工道具10、破壊の대錐20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="火薬庫" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="4" Max="8" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="鋳造12" Citys="베이루트" NPC="조선공" Materials="弾丸20、포弾20、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="선체隔壁板" PartsType="兵装" ShipSizeType="중형、대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="鋳造12" Citys="에도、安평、漢陽、泉州" NPC="조선공" Materials="東아시아조선技법書2、解体道具一式、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="갑판補強철판" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造13" Citys="에도、安평、漢陽、泉州" NPC="조선공" Materials="東아시아조선技법書2、수리道具一式、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="轟音機雷" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="-4" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造13" Citys="ホルムズ" NPC="조선공" Materials="白い鉱돌10、火薬10、납10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊機雷" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="-4" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造13" Citys="포르토벨로" NPC="조선공" Materials="黒い泥10、火薬10、납10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊榴弾" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="2" Max="6" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造14" Citys="마사와" NPC="조선공" Materials="火薬10、포弾10、烈火薬10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="납の포弾" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="2" Max="6" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造14" Citys="カレー" NPC="조선공" Materials="黒い鉱돌10、포弾10、납10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特注万能ラム" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造15" Citys="잔지바르" NPC="조선공" Materials="철재10、特대ラム、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="상質リギング" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="5" Max="15" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製6" Citys="各국본거지" NPC="製帆職人" Materials="철재10、木材20、로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="投網" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製8" Citys="サロニカ" NPC="조선공" Materials="捕獲網25、로프、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="舫綱" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="2" Max="4" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製12" Citys="カリカット" NPC="조선공" Materials="加工철재、로프、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="纏絡網" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製12" Citys="アレクサンドリア" NPC="조선공" Materials="加工철재、로프、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="防舷綱" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製12" Citys="バイーア" NPC="조선공" Materials="마 원단30、로프、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="渡し綱" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="1" Max="3" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="縫製14" Citys="산토도밍고" NPC="조선공" Materials="加工철재、로프、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="돌灰" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예5" Citys="アゾレス" NPC="조선공" Materials="巨대な岩5" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="救命艇" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="20" Max="40" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예5、조선13" Citys="各국占有開拓地、イスタンブール 所属국のドック관리人のみ、過去の亡命と投資は無効。" NPC="ドック관리人" Materials="구명도구10、加工木材、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="掃海艇" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예6、조선13" Citys="カレー" NPC="조선소주인" Materials="望遠鏡、加工木材、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="마스트トップ" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="5" Max="15" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8" Citys="ジェノヴァ" NPC="조선공" Materials="望遠鏡、加工木材、강화로프" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="수리道具一式" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8" Citys="ソファラ" NPC="조선공" Materials="대工道具10、예비돛10、予備舵10" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="縫帆道具一式" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="0" Max="10" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8" Citys="各국占有開拓地、イスタンブール 所属국のドック관리人のみ、過去の亡命と投資は無効。" NPC="ドック관리人" Materials="마 원단30、대工道具10、裁縫道具20" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="娯楽실" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="2" Max="6" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="공예10" Citys="セイロン" NPC="조선공" Materials="気晴らしの酒樽10、安眠のハンモック10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="부관실" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="공예12" Citys="ジャマイカ" NPC="조선공" Materials="洋書10、ベルベットのクッション、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="防汚塗装" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="0" Max="10" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="-2" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12" Citys="야파" NPC="塗装職人" Materials="黒い泥10、硫黄10、돌灰" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="強襲선실" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="2" Max="6" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="공예12" Citys="堺、단수이、포항、澳문" NPC="조선공" Materials="東아시아조선技법書2、特殊船倉、加工木材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="공작실" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="-4" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="2" Max="6" />
+	<detail Skill="공예13" Citys="허브ルグ" NPC="조선공" Materials="木材30、대工道具10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特注경량オール" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="-3" Max="-1" />
+	<data_values name="선회" Min="2" Max="4" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예13" Citys="튀니스" NPC="조선공" Materials="철재20、木材40、加工木材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="診察실" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="2" Max="6" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="공예13" Citys="イスタンブール" NPC="武器職人" Materials="手術道具10、傷薬詰め合わせ10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="船尾回廊" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="-2" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="2" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예13" Citys="아테네" NPC="조선공" Materials="대형船尾楼、加工철재、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="東아시아貿易船倉" PartsType="兵装" ShipSizeType="중형、대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="2" Max="6" />
+	<detail Skill="공예13" Citys="堺、단수이、포항、澳문" NPC="조선공" Materials="東아시아조선技법書2、貯蔵庫、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="提督居실" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="2" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="공예14" Citys="アデン" NPC="조선공" Materials="高급가구10、ワックス10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="司令塔" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예14" Citys="バレンシア" NPC="조선공" Materials="철재20、予備舵5、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特注대형オール" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="3" Max="5" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예14" Citys="セヴァストポリ" NPC="조선공" Materials="木材30、加工철재、加工木材" ShipType="複合船" />
+  </ship_part>
+  <ship_part name="船匠실" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="1" Max="3" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-4" Max="0" />
+	<detail Skill="공예14" Citys="各국占有開拓地、イスタンブール 所属국のドック관리人のみ、過去の亡命と投資は無効。" NPC="ドック관리人" Materials="철재10、대工道具10、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="貯蔵庫" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="-4" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="4" Max="8" />
+	<detail Skill="보관10" Citys="カーボヴェルデ" NPC="조선공" Materials="ネコの置物、쥐약20、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="金庫" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="-4" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="4" Max="8" />
+	<detail Skill="보관12" Citys="リガ" NPC="조선공" Materials="철재20、鋼10、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="特殊船倉" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="-6" Max="-2" />
+	<detail Skill="보관14" Citys="케이프" NPC="조선공" Materials="木材30、加工木材、加工철재" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="조리실" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="-4" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="2" Max="6" />
+	<detail Skill="조리12" Citys="루안다" NPC="조선공" Materials="어육30、밀粉30、加工木材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="シーダー装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예8、조선6" Citys="간디아、ブレーメン、カ서브ランカ" NPC="조선공" Materials="木材10、硬化シーダー板、名工の대工道具" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="レッドパイン装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예9、조선6" Citys="간디아、ブレーメン、カ서브ランカ" NPC="조선공" Materials="木材10、硬化レッドパイン板、名工の대工道具" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="ビーチ装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예10、조선6" Citys="간디아、ブレーメン、カ서브ランカk" NPC="조선공" Materials="木材10、硬化ビーチ板、名工の대工道具" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="エルム装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예11、조선7" Citys="간디아、ブレーメン、カ서브ランカ" NPC="조선공" Materials="木材15、硬化エルム板、名工の대工道具2" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="チーク装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예12、조선7" Citys="야파、マスリパタム、セイラ" NPC="조선공" Materials="名工の대工道具2、硬化チーク板、防汚塗装" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="オーク装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예13、조선8" Citys="간디아、カ서브ランカ" NPC="조선공" Materials="조선공ののこぎり、硬化オーク板、防汚塗装" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="マホガニー装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예14、조선9" Citys="야파、マスリパタム" NPC="조선공" Materials="조선공ののこぎり、硬化マホガニー板、防汚塗装" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="로즈우드装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="공예15、조선11" Citys="야파、マスリパタム" NPC="조선공" Materials="조선공ののこぎり、硬化로즈우드板、最高급염료6" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="동張り装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造15、조선10" Citys="ナポリ、파마구스타、ダブリン" NPC="조선공" Materials="동30、圧延동판、명장 の鍛冶道具5" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="철張り装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造16、조선12" Citys="ナポリ、파마구스타、ダブリン" NPC="조선공" Materials="純철の板金5、圧延철판、명장 の鍛冶道具2" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="各국軍공용装材" PartsType="兵装" ShipSizeType="すべて" IsGeneralPurpose="False">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Skill="鋳造18、조선18" Citys="各국본거지、※該当港にて2M以상投資必須" NPC="조선공" Materials="전용艦建造許可証3、特殊船塗料2（収奪）、철張り装材" ShipType="すべて" />
+  </ship_part>
+  <ship_part name="범용소형선체" PartsType="선체" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、마데이라、マラガ" ShipType="帆船" Price="100,000" />
+  </ship_part>
+  <ship_part name="범용중형선체" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、간디아、ブレーメン、ナント、サロニカ" ShipType="帆船" Price="1,000,000" />
+  </ship_part>
+  <ship_part name="범용대형선체" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="各국본거지、중南米開拓地（중枢限定？）、東南아시아開拓地、（중枢限定）" ShipType="帆船" Price="5,000,000" />
+  </ship_part>
+  <ship_part name="범용소형도선" PartsType="선체" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、마데이라、マラガ" ShipType="複合船" Price="100,000" />
+  </ship_part>
+  <ship_part name="범용중형도선" PartsType="선체" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、간디아、ブレーメン、ナント、サロニカ" ShipType="複合船" Price="1,000,000" />
+  </ship_part>
+  <ship_part name="범용대형도선" PartsType="선체" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="各국본거지、東南아시아開拓地（중枢限定）" ShipType="複合船" Price="5,000,000" />
+  </ship_part>
+  <ship_part name="범용소형포문" PartsType="대포" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="2" Max="6" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、마데이라、マラガ" ShipType="すべて" Price="30,000" />
+  </ship_part>
+  <ship_part name="범용중형포문" PartsType="대포" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="2" Max="6" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、간디아、ブレーメン、ナント、サロニカ" ShipType="すべて" Price="300,000" />
+  </ship_part>
+  <ship_part name="범용대형포문" PartsType="대포" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="2" Max="6" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="各국본거지、東南아시아開拓地（중枢限定）" ShipType="すべて" Price="1,500,000" />
+  </ship_part>
+  <ship_part name="범용소ラティーンセイル" PartsType="帆" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、마데이라、マラガ" ShipType="すべて" Price="30,000" />
+  </ship_part>
+  <ship_part name="범용중ラティーンセイル" PartsType="帆" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、간디아、ブレーメン、ナント、サロニカ" ShipType="すべて" Price="300,000" />
+  </ship_part>
+  <ship_part name="범용대ラティーンセイル" PartsType="帆" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="5" Max="15" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="各국본거지、東南아시아開拓地（중枢限定）" ShipType="すべて" Price="1,500,000" />
+  </ship_part>
+  <ship_part name="범용소スクウェアセイル" PartsType="帆" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="5" Max="15" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス、마데이라、マラガ" ShipType="すべて" Price="30,000" />
+  </ship_part>
+  <ship_part name="범용중スクウェアセイル" PartsType="帆" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="5" Max="15" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、간디아、ブレーメン、ナント、サロニカ" ShipType="すべて" Price="300,000" />
+  </ship_part>
+  <ship_part name="범용대スクウェアセイル" PartsType="帆" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="5" Max="15" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="各국본거지、東南아시아開拓地（중枢限定）" ShipType="すべて" Price="1,500,000" />
+  </ship_part>
+  <ship_part name="범용소형増強板" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="50,000" />
+  </ship_part>
+  <ship_part name="범용소형オール" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="1" Max="3" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="複合船" Price="50,000" />
+  </ship_part>
+  <ship_part name="범용소형개량舵" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="범용소형減揺水槽" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="1" Max="3" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="범용소형장갑板" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="50,000" />
+  </ship_part>
+  <ship_part name="범용소형拡張선실" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="2" Max="6" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="범용소형拡張창고" PartsType="兵装" ShipSizeType="소형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="2" Max="6" />
+	<detail Citys="앤트워프、オポ금허브 소、シラクサ、ジェノヴァ 、ダブリン、バルセロナ、バレンシア、パルマ、ピサ、フローニンゲン、プリマス" ShipType="すべて" Price="80,000" />
+  </ship_part>
+  <ship_part name="범용중형増強板" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、ボルドー、サロニカ" ShipType="すべて" Price="500,000" />
+  </ship_part>
+  <ship_part name="범용중형オール" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="1" Max="3" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、ボルドー、サロニカ" ShipType="複合船" Price="500,000" />
+  </ship_part>
+  <ship_part name="범용중형개량舵" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="범용중형減揺水槽" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="1" Max="3" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="범용중형장갑板" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、ボルドー、サロニカ" ShipType="すべて" Price="500,000" />
+  </ship_part>
+  <ship_part name="범용중형拡張선실" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="2" Max="6" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="범용중형拡張창고" PartsType="兵装" ShipSizeType="중형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="2" Max="6" />
+	<detail Citys="ナポリ、ベルゲン、허브ルグ、아테네、ボルドー、サロニカ" ShipType="すべて" Price="800,000" />
+  </ship_part>
+  <ship_part name="범용대형増強板" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="10" Max="30" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ロンドン、리스본" ShipType="すべて" Price="2,500,000" />
+  </ship_part>
+  <ship_part name="범용대형オール" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="1" Max="3" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ヴェネツィア、イスタンブール" ShipType="複合船" Price="2,500,000" />
+  </ship_part>
+  <ship_part name="범용대형개량舵" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="1" Max="3" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="ロンドン、マルセイユ" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+  <ship_part name="범용대형減揺水槽" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="1" Max="3" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="セビリア、アムステルダム" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+  <ship_part name="범용대형장갑板" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="1" Max="3" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="セビリア、イスタンブール" ShipType="すべて" Price="2,500,000" />
+  </ship_part>
+  <ship_part name="범용대형拡張선실" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="2" Max="6" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="0" Max="0" />
+	<detail Citys="리스본、ヴェネツィア" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+  <ship_part name="범용대형拡張창고" PartsType="兵装" ShipSizeType="대형" IsGeneralPurpose="True">
+	<data_values name="내구" Min="0" Max="0" />
+	<data_values name="세로돛" Min="0" Max="0" />
+	<data_values name="가로돛" Min="0" Max="0" />
+	<data_values name="조력" Min="0" Max="0" />
+	<data_values name="선회" Min="0" Max="0" />
+	<data_values name="내파" Min="0" Max="0" />
+	<data_values name="장갑" Min="0" Max="0" />
+	<data_values name="선실" Min="0" Max="0" />
+	<data_values name="포실" Min="0" Max="0" />
+	<data_values name="창고" Min="2" Max="6" />
+	<detail Citys="マルセイユ、アムステルダム" ShipType="すべて" Price="4,000,000" />
+  </ship_part>
+</ship_parts_root>

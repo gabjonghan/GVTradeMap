@@ -250,7 +250,7 @@ namespace directx {
 		/*-------------------------------------------------------------------------
 		 문자열の그리기
 		 가운데 정렬
-		 xが真中にくるように그리기される
+		 xが真중にくるように그리기される
 		---------------------------------------------------------------------------*/
 		public void DrawTextC(string str, Vector3 pos, Color color) {
 			textured_font font = get_textured_font(str);

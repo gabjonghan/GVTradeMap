@@ -89,7 +89,7 @@ namespace directx
 			// 작성방법
 			m_create_type		= create_type;
 
-			// デフォルトのアダプタ번호
+			// デフォ금허브 소のアダプタ번호
 			m_adapter_index		= Manager.Adapters.Default.Adapter;
 			// デバイスの能力を取得する
 			m_caps				= Manager.GetDeviceCaps(m_adapter_index, device_type);

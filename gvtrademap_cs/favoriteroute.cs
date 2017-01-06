@@ -53,7 +53,7 @@ namespace gvtrademap_cs
 				FileInfo	info_b	= new FileInfo(fname_b);
 				FileInfo	info_c	= new FileInfo(fname_c);
 
-				// 合成후の정보が古い場合は작성함
+				// 合成후の정보が고い場合は작성함
 				if(info_a.LastWriteTime > info_c.LastWriteTime)		is_create	= true;
 				if(info_b.LastWriteTime > info_c.LastWriteTime)		is_create	= true;
 			}

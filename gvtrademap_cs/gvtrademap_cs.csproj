@@ -277,13 +277,28 @@
     <Content Include="image\memo_icon19.bmp" />
     <Content Include="image\memo_icon20.bmp" />
     <Content Include="image\memo_icon21.bmp" />
-    <Content Include="xml\cityinfos.xml" />
-    <Content Include="xml\domaininfo.xml" />
-    <Content Include="xml\itemtype_db.xml" />
-    <Content Include="xml\item_db.txt" />
-    <Content Include="xml\ShipParts.xml" />
-    <Content Include="xml\webicons.txt" />
-    <Content Include="xml\worldinfos.xml" />
+    <Content Include="database\cityinfos.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="database\domaininfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="database\itemtype_db.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="database\item_db.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="database\ShipParts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="database\webicons.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="database\worldinfos.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

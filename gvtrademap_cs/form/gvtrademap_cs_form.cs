@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------*/
 // CPU사용현황を표시する
 //#define	DEBUG_DRAW_CPU_BAR
-// 컴패스분석デバッグ
+// 나침반분석デバッグ
 //#define	DEBUG_COMPASS
 // 공유항로デバッグ
 //#define	DEBUG_SHARE_ROUTES
@@ -959,7 +959,7 @@ namespace gvtrademap_cs {
 				// 본인의 위치が분からない
 				m_db.ShareRoutes.Share(0, 0, ShareRoutes.State.outof_sea);
 			} else {
-				// 컴패스の각도が得られていれば해上
+				// 나침반の각도が得られていれば해상
 				ShareRoutes.State _state = (m_myship_info.is_in_the_sea)
 													? ShareRoutes.State.in_the_sea
 													: ShareRoutes.State.outof_sea;
@@ -1191,14 +1191,15 @@ namespace gvtrademap_cs {
 		}
 		#endregion
 
-		#region 마우스훅関係
+		#region 마우스훅관계
 		/*-------------------------------------------------------------------------
 		 마우스훅시작と종료
 		 설정により시작と종료を切り替える
-		 使わない場合は훅していないほうがいい
+		 사용하지 않을 경우 후킹하지 않는 편이 좋다.
 		---------------------------------------------------------------------------*/
 		private void do_mouse_hook() {
-			if (m_lib.setting.hook_mouse) {
+			// 버그로 기능을 막아둠
+			/*if (m_lib.setting.hook_mouse) {
 				// 사용
 				if (m_mouse_hook != null) return;	   // すでに시작중
 
@@ -1208,7 +1209,7 @@ namespace gvtrademap_cs {
 				// 未사용
 				// 使っていれば훅を외す
 				dispose_mouse_hook();
-			}
+			}*/
 		}
 
 		/*-------------------------------------------------------------------------
@@ -1337,7 +1338,7 @@ namespace gvtrademap_cs {
 					tip = info.TooltipString;
 					if (m_lib.setting.map_draw_names == MapDrawNames.Draw) {
 						// 도시명を그리기する모드
-						// 상륙지점등はポップアップしない
+						// 상륙지 등은 팝업하지 않음
 						if (info.InfoType == GvoWorldInfo.InfoType.OutsideCity) return null;
 						if (info.InfoType == GvoWorldInfo.InfoType.Shore) return null;
 						if (info.InfoType == GvoWorldInfo.InfoType.Shore2) return null;
@@ -1386,7 +1387,7 @@ namespace gvtrademap_cs {
 				// 렌더링 타겟
 				rendertarget = device.CreateRenderTarget(RENDER_TARGET_SIZE_X, RENDER_TARGET_SIZE_Y,
 																Format.R5G6B5, MultiSampleType.None, 0, false);
-				// メイン메모リ上のサーフェイス
+				// メイン메모リ상のサーフェイス
 				// 렌더링결과取り出し용
 				offscreen = device.CreateOffscreenPlainSurface(RENDER_TARGET_SIZE_X, RENDER_TARGET_SIZE_Y,
 																		Format.R5G6B5, Pool.SystemMemory);
@@ -1953,7 +1954,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private void gvtrademap_cs_form_KeyDown(object sender, KeyEventArgs e) {
 #if DEBUG_COMPASS
-			// 컴패스분석デバッグ용
+			// 나침반분석デバッグ용
 			switch(e.KeyData){
 			case Keys.Up:
 				m_db.capture.m_angle_x	-= 0.5f;
@@ -2008,7 +2009,7 @@ namespace gvtrademap_cs {
 		public void ExecFunction(KeyFunction func) {
 			switch (func) {
 				case KeyFunction.map_change:
-					// 지도切り替え
+					// 지도바꾸기
 					if (!is_load) {
 						if (++m_lib.setting.map >= MapIndex.Max) {
 							m_lib.setting.map = MapIndex.Map1;
@@ -2304,7 +2305,7 @@ namespace gvtrademap_cs {
 
 #if DEBUG_COMPASS
 		/*-------------------------------------------------------------------------
-		 컴패스デバッグ
+		 나침반デバッグ
 		---------------------------------------------------------------------------*/
 		private void debug_compass()
 		{

@@ -97,7 +97,7 @@ namespace gvtrademap_cs
 			add_assign("@Web아이콘표시ON/OFF", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_02);
 			add_assign("메모아이콘표시ON/OFF", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_03);
 			add_assign("항로선표시ON/OFF", "설정윈도우", Keys.None,								KEY_FUNCTION.setting_window_button_04);
-			add_assign("일付ふきだし표시切り替え", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_05);
+			add_assign("일付말풍선표시切り替え", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_05);
 			add_assign("재해ポップアップ표시ON/OFF", "설정윈도우", Keys.None,					KEY_FUNCTION.setting_window_button_06);
 			add_assign("현재위치중心표시ON/OFF", "설정윈도우", Keys.None,						KEY_FUNCTION.setting_window_button_07);
 			add_assign("진행방향선표시ON/OFF", "설정윈도우", Keys.None,							KEY_FUNCTION.setting_window_button_08);

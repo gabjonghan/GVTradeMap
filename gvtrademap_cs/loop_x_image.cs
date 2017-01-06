@@ -255,7 +255,7 @@ namespace gvtrademap_cs
 	public class LoopXImage : IDisposable
 	{
 		private const int TEXSIZE_STEP = 512;	   // 분할사이즈
-		private const int HEIGHT_MARGIN = 200;	  // 上下のスクロールマージン
+		private const int HEIGHT_MARGIN = 200;	  // 상下のスクロールマージン
 		private const float SCALE_MIN = 0.15f;	   // 縮소한계
 		private const float SCALE_MAX = 2;		// 拡대한계
 

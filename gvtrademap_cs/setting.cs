@@ -20,17 +20,21 @@ namespace gvtrademap_cs
 {
 	// 지도
 	public enum MapIndex{
-		Map1,				// 녹색もの
-		Map2,				// 서버もの
+		Map1,				// 맵 1번
+		Map2,				// 맵 2번
 		Max
 	};
 	public enum MapIcon{
 		Big,				// 대きい아이콘
-		Small,				// 소さい아이콘
+		Small,              // 소さい아이콘
+        CityAndShore,       // 도시와 1차필드만
+        Hide,
 	};
 	public enum MapDrawNames{
-		Draw,				// 도시명などを그리기する
-		Hide,				// 도시명などを그리지않음
+		Draw,			   // 도시명, 해역명, 전체 상륙지명 그리기
+        CityAndShore,      // 도시와 해역명, 1차필드까지만
+		OnlyCity,		   // 도시와 해역명 그리기
+		Hide,			   // 명칭을 그리지 않음
 	};
 	// 화면캡처간격
 	public enum CaptureIntervalIndex{
@@ -154,7 +158,7 @@ namespace gvtrademap_cs
 		private bool					m_draw_share_routes;		// 항로공유
 		private bool					m_draw_icons;				// 메모아이콘그리기
 		private bool					m_draw_sea_routes;			// 항로도그리기
-		private int						m_draw_popup_day_interval;	// ふきだし표시간격
+		private int						m_draw_popup_day_interval;	// 말풍선표시간격
 		private bool					m_draw_accident;			// 재해그리기
 		private bool					m_center_myship;			// 본인の배중心に그리기
 		private bool					m_draw_myship_angle;		// 예상선그리기
@@ -181,7 +185,7 @@ namespace gvtrademap_cs
 		private TudeInterval			m_tude_interval;			// 위도, 경도그리기방법
 		private bool					m_use_mixed_map;			// 항로도즐겨찾기と合成された지도を사용する
 		private bool					m_window_top_most;			// 윈도우を常に最前面に표시する
-		private bool					m_enable_line_antialias;	// 선の그리기のギザギザを경減する
+		private bool					m_enable_line_antialias;	// 선の그리기の기자기자を경減する
 		private bool					m_enable_sea_routes_aplha;	// アクティブな항로도以외を반투명で그리기する
 		private SSFormat				m_ss_format;				// 스크린샷の書き出しフォーマット
 		private bool					m_remove_near_web_icons;	// 距離が近く同じ종류の@Web아이콘を목록から삭제する

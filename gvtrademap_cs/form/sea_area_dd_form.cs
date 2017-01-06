@@ -55,8 +55,8 @@ namespace gvtrademap_cs
 			listView1.Columns.Add("서버",		80);
 			listView1.Columns.Add("해역명",		100);
 			listView1.Columns.Add("상태",		100);
-			listView1.Columns.Add("종료일時",	180);
-			listView1.Columns.Add("補足",		100);
+			listView1.Columns.Add("종료일시",	180);
+			listView1.Columns.Add("보충",		100);
 	
 			checkBox1.Checked	= true;
 			checkBox2.Checked	= true;

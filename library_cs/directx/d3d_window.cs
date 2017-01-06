@@ -24,10 +24,10 @@ namespace directx {
 	public class d3d_windows {
 		// 윈도우내判定
 		public enum hit_check {
-			title,			  // フレームの上部
+			title,			  // フレームの상部
 			title_button,	   // タイトル내のボタン
 			client,			 // クライアント領域
-			inside,			 // 上記以외の윈도우내
+			inside,			 // 상記以외の윈도우내
 			outside			 // 윈도우외
 		};
 

@@ -107,7 +107,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(117, 27);
 			this.button4.TabIndex = 3;
-			this.button4.Text = "할당解除";
+			this.button4.Text = "할당해제";
 			this.button4.UseVisualStyleBackColor = true;
 			// 
 			// button5
@@ -117,7 +117,7 @@
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(117, 27);
 			this.button5.TabIndex = 4;
-			this.button5.Text = "全て初期値に戻す";
+			this.button5.Text = "전부 초기값으로 되돌림";
 			this.button5.UseVisualStyleBackColor = true;
 			// 
 			// KeyAssignListForm
@@ -140,7 +140,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "키할당";
+			this.Text = "키 할당";
 			this.ResumeLayout(false);
 
 		}
