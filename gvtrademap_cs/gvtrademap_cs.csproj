@@ -155,7 +155,6 @@
     <Compile Include="LoadInfosStatus.cs" />
     <Compile Include="myship_info.cs" />
     <Compile Include="sprite_rects\nameTexture.cs" />
-    <Compile Include="sprite_rects\infonameimage.cs" />
     <Compile Include="window\info_windows.cs" />
     <Compile Include="gvo\interest_days.cs" />
     <Compile Include="database\item_database.cs" />
@@ -168,7 +167,6 @@
     <Compile Include="form\map_mark_form.Designer.cs">
       <DependentUpon>map_mark_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="sprite_rects\seainfonameimage.cs" />
     <Compile Include="database\sea_area.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="window\setting_window.cs" />
@@ -232,6 +230,19 @@
     </Compile>
     <None Include="app.config" />
     <None Include="app.manifest" />
+    <None Include="font\NanumGothicExtraBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="map\gv_pics20.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="map\gv_pics20.pdn" />
+    <None Include="map\infonames.dds" />
+    <None Include="map\infonames.pdn" />
+    <None Include="map\infonames.psd" />
+    <None Include="map\seainfonames.dds" />
+    <None Include="map\seainfonames.pdn" />
+    <None Include="map\worldmap_r.psd" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -299,6 +310,10 @@
     <Content Include="database\worldinfos.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="map\worldmap_c.png" />
+    <Content Include="map\worldmap_mask.png" />
+    <Content Include="map\worldmap_r.png" />
+    <Content Include="map\worldmap_r_old.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

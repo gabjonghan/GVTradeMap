@@ -76,8 +76,7 @@ namespace gvtrademap_cs {
 		private d3d_device m_d3d_device;			// 그리기
 		private LoopXImage m_loop_x_image;		// 지도관리
 		private icons m_icons;			// 아이콘관리
-		private infonameimage m_infonameimage;	// 도시등の문자の絵관리
-		private seainfonameimage m_seainfonameimage;		// 해역の문자の絵관리
+		private nameTexture m_nameTexture;
 		private GlobalSettings m_setting;			  // 설정항목
 		private IniProfileSetting m_ini_manager;			// 설정の읽기관리
 		private KeyAssignManager m_key_assign_manager;  // 키할당관리
@@ -88,8 +87,7 @@ namespace gvtrademap_cs {
 		public LoopXImage loop_image { get { return m_loop_x_image; } }
 		public d3d_device device { get { return m_d3d_device; } }
 		public icons icons { get { return m_icons; } }
-		public infonameimage infonameimage { get { return m_infonameimage; } }
-		public seainfonameimage seainfonameimage { get { return m_seainfonameimage; } }
+		public nameTexture nameTexture { get { return m_nameTexture; } }
 		public GlobalSettings setting { get { return m_setting; } }
 		public IniProfileSetting IniManager { get { return m_ini_manager; } }
 		public KeyAssignManager KeyAssignManager { get { return m_key_assign_manager; } }
@@ -119,13 +117,10 @@ namespace gvtrademap_cs {
 
 			// 아이콘관리
 			m_icons = new icons(m_d3d_device, def.ICONSIMAGE_FULLNAME);
+			
 			// 도시등の문자の絵관리
-			m_infonameimage = new infonameimage(m_d3d_device, def.INFONAMEIMAGE_FULLNAME);
-			//m_infonameimage = new nameTexture(m_d3d_device, );
-
-			// 해역の문자の絵관리
-			m_seainfonameimage = new seainfonameimage(m_d3d_device, def.SEAINFONAMEIMAGE_FULLNAME);
-
+			m_nameTexture = new nameTexture(m_d3d_device);
+			
 			// 키할당初期化
 			init_key_assign();
 		}
@@ -136,17 +131,13 @@ namespace gvtrademap_cs {
 		public void Dispose() {
 			if (m_loop_x_image != null) m_loop_x_image.Dispose();
 			if (m_icons != null) m_icons.Dispose();
-			if (m_infonameimage != null) m_infonameimage.Dispose();
-			if (m_seainfonameimage != null) m_seainfonameimage.Dispose();
-
+			
 			// 最후にD3Ddeviceを破棄する
 			if (m_d3d_device != null) m_d3d_device.Dispose();
 
 			m_loop_x_image = null;
 			m_icons = null;
-			m_infonameimage = null;
-			m_seainfonameimage = null;
-
+			
 			m_d3d_device = null;
 		}
 

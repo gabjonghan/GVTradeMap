@@ -277,7 +277,7 @@ namespace gvtrademap_cs {
 			map_yellow_rect,	// 193번째 인덱스
 			map_red_circle,	// 194번째 인덱스
 			map_cyan_circle,	// 195번째 인덱스
-			map_yello_circle,	// 196번째 인덱스
+			map_yellow_circle,	// 196번째 인덱스
 			map_magenta_rect,	// 197번째 인덱스
 			map_blue_rect,	// 198번째 인덱스
 			map_orange_rect,	// 199번째 인덱스
@@ -291,6 +291,8 @@ namespace gvtrademap_cs {
 			map_green_circle,	// 207번째 인덱스
 			map_lime_circle,	// 208번째 인덱스
 			
+			wind_arrow,			// 풍향
+
 			max
 		};
 
@@ -583,12 +585,14 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(-2, -2), new Rectangle(187, 232, 6, 6));  // 16, 마젠타 원
 			AddRect(new Vector2(-2, -2), new Rectangle(187, 240, 6, 6));  // 17, 파란색 원
 			AddRect(new Vector2(-2, -2), new Rectangle(187, 248, 6, 6));  // 18, 주황색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 208, 6, 6));  // 19, 흰색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 216, 6, 6));  // 20, 녹색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 224, 6, 6));  // 21, 연두색 사각형
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 232, 6, 6));  // 22, 흰색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 240, 6, 6));  // 23, 녹색 원
-			AddRect(new Vector2(-2, -2), new Rectangle(187, 248, 6, 6));  // 24, 연두색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(195, 208, 6, 6));  // 19, 흰색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(195, 216, 6, 6));  // 20, 녹색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(195, 224, 6, 6));  // 21, 연두색 사각형
+			AddRect(new Vector2(-2, -2), new Rectangle(195, 232, 6, 6));  // 22, 흰색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(195, 240, 6, 6));  // 23, 녹색 원
+			AddRect(new Vector2(-2, -2), new Rectangle(195, 248, 6, 6));  // 24, 연두색 원
+
+			AddRect(new Vector2(-4, -8), new Rectangle(210, 223, 10, 15)); // WindArrowIcon
 		}
 
 		/*-------------------------------------------------------------------------

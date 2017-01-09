@@ -279,7 +279,7 @@ namespace gvtrademap_cs {
 					}
 
 					// 그리기용の矩形を업데이트する
-					i.UpdateDrawRects(m_lib, has_name_image ? index : -1);
+					i.UpdateDrawRects(m_lib, i.Name);
 					if (has_name_image) index++;
 				}
 			}
@@ -858,7 +858,7 @@ namespace gvtrademap_cs {
 			public Point StringOffset2 { get { return m_string_offset2; } }
 			public d3d_sprite_rects.rect IconRect { get { return m_icon_rect; } }
 			public d3d_sprite_rects.rect SmallIconRect { get { return m_small_icon_rect; } }
-			public d3d_sprite_rects.rect NameRect { get { return m_string_rect; } }
+			public d3d_sprite_rects.rect NameRect { get { return m_string_rect; } set { m_string_rect = value; } }
 
 			// ツールチップ
 			public string TooltipString { get { return __get_tool_tip_string(); } }
@@ -1012,7 +1012,7 @@ namespace gvtrademap_cs {
 			/*-------------------------------------------------------------------------
 			 그리기용의 사각형을 갱신
 			---------------------------------------------------------------------------*/
-			public void UpdateDrawRects(gvt_lib lib, int index) {
+			public void UpdateDrawRects(gvt_lib lib, String name) {
 				if (m_info_type == InfoType.Sea) return;
 
 				if (m_info_type == InfoType.City) {
@@ -1031,7 +1031,7 @@ namespace gvtrademap_cs {
 							break;
 					}
 					m_small_icon_rect = lib.icons.GetIcon(icons.icon_index.map_red_rect);
-					m_string_rect = lib.infonameimage.GetCityName(index);
+					//m_string_rect = lib.nameTexture.getRect(name);
 				} else {
 					switch (InfoType) {
 						case InfoType.Shore:
@@ -1044,7 +1044,7 @@ namespace gvtrademap_cs {
 							m_icon_rect = lib.icons.GetIcon(icons.icon_index.map_orange_circle);
 							break;
 						case InfoType.PF:
-							m_icon_rect = lib.icons.GetIcon(icons.icon_index.map_lime_circle);
+							m_icon_rect = lib.icons.GetIcon(icons.icon_index.map_yellow_circle);
 							break;
 						case InfoType.InlandCity:
 							m_icon_rect = lib.icons.GetIcon(icons.icon_index.map_magenta_circle);
@@ -1054,7 +1054,7 @@ namespace gvtrademap_cs {
 							break;
 					}
 					m_small_icon_rect = m_icon_rect;        // 同じ아이콘を사용する
-					m_string_rect = lib.infonameimage.GetCityName(index);
+					//m_string_rect = lib.nameTexture.getRect(name);
 				}
 			}
 
