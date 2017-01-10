@@ -4,15 +4,15 @@
 	<!-- 도시정보 -->
 
 	<info name="암스테르담" url_index="32" info_type="City" angle="0">
-		<position x="99" y="2506" />
-		<name_offset1 x="8" y="-1" />
-		<name_offset2 x="6" y="-1" />
+		<position x="96" y="2497" />
+		<name_offset1 x="4" y="-8" />
+		<name_offset2 x="4" y="-8" />
 		<city_detail index="10" city_type="Capital" alliance_type="Capital" cultural_sphere="Netherlands" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" bar_flags="7" />
 	</info>
-	<info name="앤트워프" url_index="33" info_type="City" angle="0">
-		<position x="51" y="2530" />
-		<name_offset1 x="-10" y="6" />
-		<name_offset2 x="-10" y="6" />
+	<info name="앤트워프" url_index="33" info_type="City" angle="-30">
+		<position x="48" y="2521" />
+		<name_offset1 x="-6" y="3" />
+		<name_offset2 x="-6" y="3" />
 		<city_detail index="8" city_type="City" alliance_type="Alliance" cultural_sphere="Netherlands" has_name_image="True" lang1="네덜란드어" bar_flags="0" />
 	</info>
 	<info name="뷔스비" url_index="108" info_type="City" angle="0">
@@ -35,8 +35,8 @@
 	</info>
 	<info name="스톡홀름" url_index="40" info_type="City" angle="0">
 		<position x="841" y="1979" />
-		<name_offset1 x="-2" y="-6" />
-		<name_offset2 x="0" y="0" />
+		<name_offset1 x="-48" y="-11" />
+		<name_offset2 x="-48" y="-11" />
 		<city_detail index="16" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="5" />
 	</info>
 	<info name="단치히" url_index="95" info_type="City" angle="0">
@@ -47,20 +47,20 @@
 	</info>
 	<info name="함부르크" url_index="36" info_type="City" angle="0">
 		<position x="358" y="2376" />
-		<name_offset1 x="-1" y="-6" />
-		<name_offset2 x="0" y="-4" />
+		<name_offset1 x="2" y="1" />
+		<name_offset2 x="2" y="1" />
 		<city_detail index="11" city_type="City" alliance_type="Alliance" cultural_sphere="Germany" has_name_image="True" lang1="독일어" bar_flags="0" />
 	</info>
-	<info name="브레멘" url_index="107" info_type="City" angle="0">
+	<info name="브레멘" url_index="107" info_type="City" angle="30">
 		<position x="229" y="2400" />
-		<name_offset1 x="2" y="0" />
-		<name_offset2 x="2" y="0" />
+		<name_offset1 x="4" y="-16" />
+		<name_offset2 x="4" y="-16" />
 		<city_detail index="106" city_type="City" alliance_type="Alliance" cultural_sphere="Germany" has_name_image="True" lang1="독일어" bar_flags="0" />
 	</info>
 	<info name="그로닝겐" url_index="94" info_type="City" angle="0">
-		<position x="147" y="2458" />
-		<name_offset1 x="6" y="-2" />
-		<name_offset2 x="5" y="-2" />
+		<position x="143" y="2452" />
+		<name_offset1 x="8" y="-11" />
+		<name_offset2 x="8" y="-11" />
 		<city_detail index="93" city_type="City" alliance_type="Territory" cultural_sphere="Netherlands" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" bar_flags="0" />
 	</info>
 	<info name="베르겐" url_index="35" info_type="City" angle="0">
@@ -69,10 +69,10 @@
 		<name_offset2 x="4" y="-2" />
 		<city_detail index="12" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="0" />
 	</info>
-	<info name="헤르데르" url_index="34" info_type="City" angle="0">
-		<position x="64" y="2475" />
-		<name_offset1 x="-2" y="-14" />
-		<name_offset2 x="-2" y="-6" />
+	<info name="헤르데르" url_index="34" info_type="City" angle="30">
+		<position x="66" y="2466" />
+		<name_offset1 x="0" y="-19" />
+		<name_offset2 x="0" y="-19" />
 		<city_detail index="9" city_type="City" alliance_type="Territory" cultural_sphere="Netherlands" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" lang2="영어" bar_flags="0" />
 	</info>
 	<info name="리가" url_index="41" info_type="City" angle="0">
@@ -113,8 +113,8 @@
 	</info>
 	<info name="런던" url_index="24" info_type="City" angle="0">
 		<position x="16322" y="2406" />
-		<name_offset1 x="0" y="-8" />
-		<name_offset2 x="0" y="0" />
+		<name_offset1 x="-11" y="-17" />
+		<name_offset2 x="-11" y="-17" />
 		<city_detail index="0" city_type="Capital" alliance_type="Capital" cultural_sphere="Britain" has_name_image="True" default_country="England" lang1="영어" bar_flags="15" />
 	</info>
 	<info name="칼레" url_index="26" info_type="City" angle="0">
@@ -155,8 +155,8 @@
 	</info>
 	<info name="세비야" url_index="5" info_type="City" angle="0">
 		<position x="15905" y="3261" />
-		<name_offset1 x="0" y="0" />
-		<name_offset2 x="0" y="0" />
+		<name_offset1 x="2" y="-10" />
+		<name_offset2 x="2" y="-10" />
 		<city_detail index="22" city_type="Capital" alliance_type="Capital" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="7" />
 	</info>
 	<info name="바르셀로나" url_index="9" info_type="City" angle="0">
@@ -215,8 +215,8 @@
 	</info>
 	<info name="리스본" url_index="1" info_type="City" angle="0">
 		<position x="15795" y="3203" />
-		<name_offset1 x="0" y="-4" />
-		<name_offset2 x="0" y="-4" />
+		<name_offset1 x="-37" y="-3" />
+		<name_offset2 x="-37" y="-3" />
 		<city_detail index="21" city_type="Capital" alliance_type="Capital" cultural_sphere="Iberian" has_name_image="True" default_country="Portugal" lang1="포르투갈어" bar_flags="15" />
 	</info>
 	<info name="안코나" url_index="55" info_type="City" angle="0">
@@ -226,9 +226,9 @@
 		<city_detail index="44" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" bar_flags="0" />
 	</info>
 	<info name="베네치아" url_index="53" info_type="City" angle="0">
-		<position x="536" y="2800" />
-		<name_offset1 x="0" y="-16" />
-		<name_offset2 x="0" y="-5" />
+		<position x="543" y="2798" />
+		<name_offset1 x="2" y="-15" />
+		<name_offset2 x="2" y="-15" />
 		<city_detail index="45" city_type="Capital" alliance_type="Capital" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="Venezia" lang1="이탈리아어" lang2="아라비아어" bar_flags="7" />
 	</info>
 	<info name="칼리아리" url_index="20" info_type="City" angle="0">
@@ -257,8 +257,8 @@
 	</info>
 	<info name="제노바" url_index="12" info_type="City" angle="0">
 		<position x="304" y="2913" />
-		<name_offset1 x="0" y="-8" />
-		<name_offset2 x="0" y="-4" />
+		<name_offset1 x="4" y="-8" />
+		<name_offset2 x="4" y="-8" />
 		<city_detail index="34" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" bar_flags="7" />
 	</info>
 	<info name="시라쿠사" url_index="59" info_type="City" angle="0">
@@ -274,9 +274,9 @@
 		<city_detail index="46" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="Venezia" lang1="이탈리아어" bar_flags="0" />
 	</info>
 	<info name="나폴리" url_index="58" info_type="City" angle="0">
-		<position x="618" y="3111" />
-		<name_offset1 x="0" y="5" />
-		<name_offset2 x="0" y="5" />
+		<position x="620" y="3115" />
+		<name_offset1 x="4" y="-9" />
+		<name_offset2 x="4" y="-9" />
 		<city_detail index="42" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" lang2="아라비아어" bar_flags="7" />
 	</info>
 	<info name="피사" url_index="13" info_type="City" angle="0">
@@ -287,8 +287,8 @@
 	</info>
 	<info name="마르세이유" url_index="11" info_type="City" angle="0">
 		<position x="126" y="2964" />
-		<name_offset1 x="0" y="-16" />
-		<name_offset2 x="0" y="-5" />
+		<name_offset1 x="-48" y="-17" />
+		<name_offset2 x="-48" y="-17" />
 		<city_detail index="33" city_type="Capital" alliance_type="Capital" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="France" lang1="프랑스어" bar_flags="7" />
 	</info>
 	<info name="라구사" url_index="54" info_type="City" angle="0">
@@ -298,9 +298,9 @@
 		<city_detail index="48" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="Venezia" lang1="이탈리아어" bar_flags="0" />
 	</info>
 	<info name="아테네" url_index="45" info_type="City" angle="0">
-		<position x="1087" y="3244" />
-		<name_offset1 x="-4" y="5" />
-		<name_offset2 x="-4" y="5" />
+		<position x="1088" y="3257" />
+		<name_offset1 x="2" y="1" />
+		<name_offset2 x="2" y="1" />
 		<city_detail index="50" city_type="City" alliance_type="Alliance" cultural_sphere="Balkan" has_name_image="True" lang1="그리스어" lang2="터키어" bar_flags="7" />
 	</info>
 	<info name="간디아" url_index="50" info_type="City" angle="0">
@@ -329,14 +329,14 @@
 	</info>
 	<info name="알렉산드리아" url_index="46" info_type="City" angle="0">
 		<position x="1340" y="3548" />
-		<name_offset1 x="-4" y="4" />
-		<name_offset2 x="-2" y="4" />
+		<name_offset1 x="-70" y="2" />
+		<name_offset2 x="-70" y="2" />
 		<city_detail index="53" city_type="CityIslam" alliance_type="Territory" cultural_sphere="NorthAfrica" has_name_image="True" default_country="Turkey" lang1="아라비아어" lang2="고대이집트어" bar_flags="7" />
 	</info>
 	<info name="이스탄불" url_index="42" info_type="City" angle="0">
 		<position x="1282" y="3046" />
-		<name_offset1 x="-8" y="-2" />
-		<name_offset2 x="-6" y="-2" />
+		<name_offset1 x="3" y="-17" />
+		<name_offset2 x="3" y="-17" />
 		<city_detail index="57" city_type="CapitalIslam" alliance_type="Capital" cultural_sphere="Turkey" has_name_image="True" default_country="Turkey" lang1="아라비아어" lang2="터키어" bar_flags="7" />
 	</info>
 	<info name="오데사" url_index="96" info_type="City" angle="0">
@@ -365,8 +365,8 @@
 	</info>
 	<info name="튀니스" url_index="16" info_type="City" angle="0">
 		<position x="410" y="3272" />
-		<name_offset1 x="-3" y="0" />
-		<name_offset2 x="-3" y="0" />
+		<name_offset1 x="-36" y="0" />
+		<name_offset2 x="-36" y="0" />
 		<city_detail index="40" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="NorthAfrica" has_name_image="True" lang1="아라비아어" bar_flags="7" />
 	</info>
 	<info name="트리폴리" url_index="17" info_type="City" angle="0">
@@ -413,8 +413,8 @@
 	</info>
 	<info name="산토도밍고" url_index="90" info_type="City" angle="0">
 		<position x="13488" y="4027" />
-		<name_offset1 x="0" y="-20" />
-		<name_offset2 x="0" y="-20" />
+		<name_offset1 x="2" y="-17" />
+		<name_offset2 x="2" y="-17" />
 		<city_detail index="89" city_type="City" alliance_type="Alliance" cultural_sphere="Caribbean" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="5" />
 	</info>
 	<info name="산후안" url_index="91" info_type="City" angle="0">
@@ -437,8 +437,8 @@
 	</info>
 	<info name="포르토벨로" url_index="109" info_type="City" angle="0">
 		<position x="12841" y="4164" />
-		<name_offset1 x="0" y="0" />
-		<name_offset2 x="0" y="0" />
+		<name_offset1 x="3" y="0" />
+		<name_offset2 x="3" y="0" />
 		<city_detail index="112" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="5" />
 	</info>
 	<info name="윌렘스타트" url_index="125" info_type="City" angle="0">
@@ -551,14 +551,14 @@
 	</info>
 	<info name="케이프타운" url_index="68" info_type="City" angle="0">
 		<position x="974" y="6000" />
-		<name_offset1 x="8" y="-2" />
-		<name_offset2 x="6" y="-2" />
+		<name_offset1 x="-10" y="-20" />
+		<name_offset2 x="-10" y="-20" />
 		<city_detail index="67" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="5" />
 	</info>
 	<info name="세인트조지스" url_index="64" info_type="City" angle="0">
 		<position x="68" y="4523" />
-		<name_offset1 x="0" y="-11" />
-		<name_offset2 x="0" y="-9" />
+		<name_offset1 x="2" y="-14" />
+		<name_offset2 x="2" y="-14" />
 		<city_detail index="63" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="포르투갈어" lang2="서아프리카어" bar_flags="5" />
 	</info>
 	<info name="상투메" url_index="65" info_type="City" angle="0">
@@ -605,8 +605,8 @@
 	</info>
 	<info name="잔지바르" url_index="72" info_type="City" angle="0">
 		<position x="1822" y="4978" />
-		<name_offset1 x="10" y="-2" />
-		<name_offset2 x="10" y="-2" />
+		<name_offset1 x="5" y="-4" />
+		<name_offset2 x="5" y="-4" />
 		<city_detail index="72" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="5" />
 	</info>
 	<info name="소팔라" url_index="69" info_type="City" angle="0">
@@ -766,9 +766,9 @@
 		<city_detail index="126" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
 	<info name="자카르타" url_index="128" info_type="City" angle="0">
-		<position x="4817" y="4991" />
-		<name_offset1 x="0" y="-12" />
-		<name_offset2 x="0" y="-12" />
+		<position x="4818" y="4988" />
+		<name_offset1 x="2" y="-8" />
+		<name_offset2 x="2" y="-8" />
 		<city_detail index="127" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="1" />
 	</info>
 	<info name="수라바야" url_index="129" info_type="City" angle="0">
@@ -869,14 +869,14 @@
 	</info>
 	<info name="암보이나" url_index="144" info_type="City" angle="0">
 		<position x="5822" y="4913" />
-		<name_offset1 x="0" y="7" />
-		<name_offset2 x="0" y="7" />
+		<name_offset1 x="2" y="3" />
+		<name_offset2 x="2" y="3" />
 		<city_detail index="144" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" lang2="네덜란드어" bar_flags="2" />
 	</info>
 	<info name="테르나테" url_index="145" info_type="City" angle="0">
 		<position x="5788" y="4711" />
-		<name_offset1 x="-2" y="5" />
-		<name_offset2 x="-2" y="5" />
+		<name_offset1 x="2" y="-15" />
+		<name_offset2 x="2" y="-15" />
 		<city_detail index="145" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" lang2="네덜란드어" bar_flags="2" />
 	</info>
 	<info name="홀로" url_index="146" info_type="City" angle="0">
@@ -953,8 +953,8 @@
 	</info>
 	<info name="리마" url_index="154" info_type="City" angle="0">
 		<position x="12845" y="5258" />
-		<name_offset1 x="9" y="-1" />
-		<name_offset2 x="9" y="-1" />
+		<name_offset1 x="2" y="-8" />
+		<name_offset2 x="2" y="-8" />
 		<city_detail index="158" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="케추아어" lang2="스페인어" bar_flags="3" />
 	</info>
 	<info name="코피아포" url_index="158" info_type="City" angle="0">
@@ -1019,8 +1019,8 @@
 	</info>
 	<info name="한양" info_type="City" angle="0">
 		<position x="5781" y="3217" />
-		<name_offset1 x="0" y="-10" />
-		<name_offset2 x="0" y="-6" />
+		<name_offset1 x="2" y="-10" />
+		<name_offset2 x="2" y="-10" />
 		<city_detail index="169" city_type="City" alliance_type="Unknown" cultural_sphere="Korea" has_name_image="True" lang1="조선어" bar_flags="3" />
 	</info>
 	<info name="운대산" info_type="City" angle="0">
@@ -1031,8 +1031,8 @@
 	</info>
 	<info name="항주" info_type="City" angle="0">
 		<position x="5549" y="3542" />
-		<name_offset1 x="-10" y="1" />
-		<name_offset2 x="-10" y="1" />
+		<name_offset1 x="-26" y="-1" />
+		<name_offset2 x="-26" y="-1" />
 		<city_detail index="171" city_type="City" alliance_type="Unknown" cultural_sphere="China" has_name_image="True" lang1="중국어" bar_flags="2" />
 	</info>
 	<info name="중경" info_type="City" angle="0">
@@ -1061,14 +1061,14 @@
 	</info>
 	<info name="안평" info_type="City" angle="0">
 		<position x="5679" y="3911" />
-		<name_offset1 x="0" y="12" />
-		<name_offset2 x="0" y="12" />
+		<name_offset1 x="-25" y="2" />
+		<name_offset2 x="-25" y="2" />
 		<city_detail index="176" city_type="City" alliance_type="Unknown" cultural_sphere="Taiwan" has_name_image="True" lang1="중국어" bar_flags="2" />
 	</info>
 	<info name="상트페테르부르크" url_index="495" info_type="City" angle="0">
 		<position x="1230" y="1965" />
-		<name_offset1 x="0" y="3" />
-		<name_offset2 x="0" y="3" />
+		<name_offset1 x="1" y="1" />
+		<name_offset2 x="1" y="1" />
 		<city_detail index="10" city_type="Capital" alliance_type="Capital" cultural_sphere="Russia" has_name_image="True" default_country="Russia" lang1="노르웨이어" lang2="북극어" bar_flags="7" />
 	</info>
 	<info name="코콜라" url_index="" info_type="City" angle="0">
@@ -1116,8 +1116,8 @@
 
 	<info name="샌프란시스코" url_index="" info_type="City" angle="0">
 		<position x="10550" y="3085" />
-		<name_offset1 x="5" y="-10" />
-		<name_offset2 x="3" y="3" />
+		<name_offset1 x="3" y="2" />
+		<name_offset2 x="3" y="2" />
 		<city_detail index="209" city_type="City" alliance_type="Alliance" cultural_sphere="Unknown" has_name_image="True" lang1="북미어" bar_flags="3" />
 	</info>
 	<info name="타코마" url_index="" info_type="City" angle="0">
@@ -1156,10 +1156,10 @@
 		<name_offset2 x="0" y="0" />
 		<city_detail index="215" city_type="City" alliance_type="Territory" cultural_sphere="Britain" has_name_image="True" default_country="England" lang1="영어" bar_flags="0" />
 	</info>
-	<info name="로테르담" info_type="City" angle="0">
+	<info name="로테르담" info_type="City" angle="-30">
 		<position x="52" y="2492" />
-		<name_offset1 x="0" y="0" />
-		<name_offset2 x="0" y="0" />
+		<name_offset1 x="14" y="7" />
+		<name_offset2 x="14" y="5" />
 		<city_detail index="216" city_type="City" alliance_type="Territory" cultural_sphere="Netherlands" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" bar_flags="0" />
 	</info>
 	<info name="르아브르" info_type="City" angle="0">

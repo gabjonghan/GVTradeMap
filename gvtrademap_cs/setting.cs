@@ -28,12 +28,14 @@ namespace gvtrademap_cs
 		Big,				// 대きい아이콘
 		Small,              // 소さい아이콘
         CityAndShore,       // 도시와 1차필드만
+		OnlyBigCity,		// 대도시 (소아이콘)
         Hide,
 	};
 	public enum MapDrawNames{
 		Draw,			   // 도시명, 해역명, 전체 상륙지명 그리기
         CityAndShore,      // 도시와 해역명, 1차필드까지만
-		OnlyCity,		   // 도시와 해역명 그리기
+		OnlyCity,          // 도시와 해역명 그리기
+		OnlyBigCity,       // 조합도시 그리기
 		Hide,			   // 명칭을 그리지 않음
 	};
 	// 화면캡처간격

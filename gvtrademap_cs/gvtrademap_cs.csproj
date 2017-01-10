@@ -187,9 +187,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="form\assembly_load_error_form.resx">
       <DependentUpon>assembly_load_error_form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="form\check_update_result.resx">
       <DependentUpon>check_update_result.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="form\find_form2.resx">
       <DependentUpon>find_form2.cs</DependentUpon>
@@ -237,11 +239,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="map\gv_pics20.pdn" />
-    <None Include="map\infonames.dds" />
-    <None Include="map\infonames.pdn" />
-    <None Include="map\infonames.psd" />
-    <None Include="map\seainfonames.dds" />
-    <None Include="map\seainfonames.pdn" />
     <None Include="map\worldmap_r.psd" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -309,10 +306,15 @@
     </Content>
     <Content Include="database\worldinfos.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
-    <Content Include="map\worldmap_c.png" />
+    <Content Include="map\worldmap_c.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="map\worldmap_mask.png" />
-    <Content Include="map\worldmap_r.png" />
+    <Content Include="map\worldmap_r.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="map\worldmap_r_old.png" />
   </ItemGroup>
   <ItemGroup>
