@@ -29,10 +29,6 @@ namespace gvtrademap_cs {
 
 	---------------------------------------------------------------------------*/
 	class draw_infonames : IDisposable {
-		// 季節じゃないほうの풍向の색
-		// 少し薄くなるような색
-		private const int WIND_ANGLE_COLOR2 = (96 << (8 * 3)) | 0x00ffffff;
-
 		private gvt_lib m_lib;
 		private GvoWorldInfo m_world;
 
@@ -84,7 +80,6 @@ namespace gvtrademap_cs {
 			m_sea_icons1_vb = null;
 			m_sea_icons2_vb = null;
 			m_sea_names_vb = null;
-
 		}
 
 		/*-------------------------------------------------------------------------
@@ -452,7 +447,7 @@ namespace gvtrademap_cs {
 
 			int index = 0;
 			foreach (GvoWorldInfo.Info i in m_world.Seas) {
-				Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position));
+				Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position), offset);
 				// 해역명
 				m_lib.device.sprites.AddDrawSpritesNC(new Vector3(p.X + 3, p.Y, 0.3f), m_lib.nameTexture.getRect(i.Name), i.angle, -1);
 				index++;
@@ -471,7 +466,7 @@ namespace gvtrademap_cs {
 				// 풍향그리기
 				if (i.SeaInfo == null) continue;
 
-				Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position));
+				Vector2 p = image.GlobalPos2LocalPos(transform.ToVector2(i.position), offset);
 
 				if (m_world.Season.now_season == gvo_season.season.summer) {
 					m_lib.device.sprites.AddDrawSpritesNC(new Vector3(p.X - 3 - 1, p.Y + 3 + 1, 0.3f), _rect, i.SeaInfo.SummerAngle, -1);

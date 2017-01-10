@@ -1731,8 +1731,8 @@ namespace gvtrademap_cs {
 							case "해역":
 								d.m_name = "지리";
 								break;
-							case "高급상納품の梱包":
-								d.m_name = "高급상納품の梱包(NO.1)";
+							case "고급 상납품 포장":
+								d.m_name = "고급 상납품 포장(NO.1)";
 								break;
 						}
 					}
@@ -1745,7 +1745,7 @@ namespace gvtrademap_cs {
 
 						string str = "명칭:" + this.ItemDb.Name + "\n";
 						if (Categoly != ItemDatabaseCustom.Categoly.Unknown) {
-							str += "종류:" + Type + "(カテゴリ" + ((int)Categoly + 1).ToString() + ")\n";
+							str += "종류:" + Type + "(카테고리" + ((int)Categoly + 1).ToString() + ")\n";
 						} else {
 							str += "종류:" + Type + "\n";
 						}
@@ -1782,11 +1782,11 @@ namespace gvtrademap_cs {
 		public class SeaInfo {
 			private string m_name;
 			private Point m_wind_pos;        // 풍향を그리기する위치の중心
-			private float m_summer_angle;    // 夏の풍향
-			private float m_winter_angle;    // 冬の풍향
+			private float m_summer_angle;    // 여름의 풍향
+			private float m_winter_angle;    // 겨울의 풍향
 			private int m_speedup_rate;  // 최대속도상昇
-			private int m_summer_angle_deg; // 夏の풍향
-			private int m_winter_angle_deg; // 夏の풍향
+			private int m_summer_angle_deg; // 여름의 풍향
+			private int m_winter_angle_deg; // 여름의 풍향
 			private string m_summer_angle_string;   // 16段階の풍향
 			private string m_winter_angle_string;   // 16段階の풍향
 
@@ -2053,7 +2053,7 @@ namespace gvtrademap_cs {
 	/*-------------------------------------------------------------------------
 	 아이템の종류
 	 명産, 채집, 탐색ランク
-	 カテゴリは아이템DBに이동した
+	 카테고리は아이템DBに이동した
 	---------------------------------------------------------------------------*/
 	public class GvoItemTypeDatabase {
 		private MultiDictionary<string, ItemRank> m_bonus_items;            // 명産품扱いの아이템

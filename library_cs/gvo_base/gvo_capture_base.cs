@@ -179,7 +179,7 @@ namespace gvo_base {
 		---------------------------------------------------------------------------*/
 		static public IntPtr FindGvoWindow() {
 			return user32.FindWindowA(gvo_def.GVO_CLASS_NAME,
-										gvo_def.GVO_WINDOW_NAME);
+										null);
 		}
 
 		/*-------------------------------------------------------------------------

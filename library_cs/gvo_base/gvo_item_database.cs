@@ -32,7 +32,7 @@ namespace gvo_base
 		/*-------------------------------------------------------------------------
 		 
 		---------------------------------------------------------------------------*/
-		// カテゴリ
+		// 카테고리
 		public enum Categoly{
 			Categoly1,
 			Categoly2,
@@ -138,12 +138,12 @@ namespace gvo_base
 			m_ajust_name_list.Add("ボンバルタ", "ボンバルダ");
 			m_ajust_name_list.Add("牛革製ベスト", "牛皮製ベスト");
 			m_ajust_name_list.Add("花嫁衣装の縫製書", "花嫁衣裳の縫製법");
-			m_ajust_name_list.Add("소형배용高급상納품の梱包", "소형高급상納품の梱包");
-			m_ajust_name_list.Add("중형배용高급상納품の梱包", "중형高급상納품の梱包");
-			m_ajust_name_list.Add("대형배용高급상納품の梱包", "대형高급상納품の梱包");
-			m_ajust_name_list.Add("高급상納품(소형배용)", "高급상納품（소형배용）");
-			m_ajust_name_list.Add("高급상納품(중형배용)", "高급상納품（중형배용）");
-			m_ajust_name_list.Add("高급상納품(대형배용)", "高급상納품（대형배용）");
+			m_ajust_name_list.Add("소형배용고급 상납품 포장", "소형고급 상납품 포장");
+			m_ajust_name_list.Add("중형배용고급 상납품 포장", "중형고급 상납품 포장");
+			m_ajust_name_list.Add("대형배용고급 상납품 포장", "대형고급 상납품 포장");
+			m_ajust_name_list.Add("고급 상납품(소형배용)", "고급 상납품（소형배용）");
+			m_ajust_name_list.Add("고급 상납품(중형배용)", "고급 상납품（중형배용）");
+			m_ajust_name_list.Add("고급 상납품(대형배용)", "고급 상납품（대형배용）");
 			m_ajust_name_list.Add("全艤装補助돛縫製법", "全艤装補助돛組立법");
 			m_ajust_name_list.Add("ペットの育て方초급編", "ペットの育て方　초급編");
 			m_ajust_name_list.Add("セット料理集第1集", "セット料理集제 1권");
@@ -233,8 +233,8 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 타입명からカテゴリを得る
-		 食料품 などの이름からカテゴリを得る
+		 타입명から카테고리を得る
+		 食料품 などの이름から카테고리を得る
 		---------------------------------------------------------------------------*/
 		static public Categoly GetCategolyFromType(string name)
 		{
@@ -268,7 +268,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 カテゴリ그리기용の색を得る
+		 카테고리그리기용の색を得る
 		---------------------------------------------------------------------------*/
 		static public Color GetCategolyColor(Categoly cate)
 		{
@@ -560,9 +560,9 @@ namespace gvo_base
 			private string					m_name;
 			private string					m_type;
 			private string					m_document;
-			private Categoly				m_categoly;				// 교역품時のカテゴリ
+			private Categoly				m_categoly;				// 교역품時の카테고리
 			private TypeGroup				m_type_group;			// 종류の그룹
-			private TypeGroup2				m_type_group2;			// 所持품カテゴリ
+			private TypeGroup2				m_type_group2;			// 所持품카테고리
 			private bool					m_is_combat_item;		// 陸戦아이템のときtreu
 
 			/*-------------------------------------------------------------------------
@@ -619,7 +619,7 @@ namespace gvo_base
 						m_is_combat_item	= true;
 					}
 
-					// 교역품時のカテゴリ
+					// 교역품時の카테고리
 					m_categoly		= ItemDatabase.GetCategolyFromType(m_type);
 					// 종류の그룹
 					m_type_group	= ItemDatabase.GetTypeGroupFromType(m_type);

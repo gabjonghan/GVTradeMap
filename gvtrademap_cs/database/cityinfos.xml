@@ -48,10 +48,10 @@
 	  <item name="染め粉" price="2000" />
 	  <item name="お菓子の作り方・초급編" price="7000" />
 	  <item name="漁師の心得・鮮魚保存법" price="5000" />
-	  <item name="畜産秘伝・羊の章" price="8000" />
-	  <item name="직물秘伝・소재の書" price="5000" />
-	  <item name="직물秘伝・生地の書" price="10000" />
-	  <item name="직물秘伝・高급生地の書" option="*" price="100000" investment="240k" />
+	  <item name="畜産비법・羊の章" price="8000" />
+	  <item name="직물 비법서・소재の書" price="5000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
+	  <item name="직물 비법서・高급生地の書" option="*" price="100000" investment="240k" />
 	  <item name="花嫁衣裳の縫製법" option="*" price="800000" investment="400k" />
 	  <item name="剣錬成・入문" price="20000" />
 	  <item name="高급帽子の縫製법" option="*" price="200000" investment="240k" />
@@ -83,7 +83,7 @@
 	  <item name="범용대형拡張창고" option="*" price="4000000" />
 	  <item name="마네킹(通常男性형)" price="3000" />
 	  <item name="마네킹(通常女性형)" price="3000" />
-	  <item name="高급상納품の梱包(NO.1)" option="%" />
+	  <item name="고급 상납품 포장(NO.1)" option="%" />
 	</group>
 	<group name="[인물]">
 	  <item name="観察" option="s" price="모험조합" />
@@ -333,7 +333,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	</group>
@@ -567,7 +567,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="독약" price="250" />
 	  <item name="解毒剤" price="100" />
-	  <item name="製革秘伝" option="*" price="8000" investment="120k" />
+	  <item name="製革비법" option="*" price="8000" investment="120k" />
 	  <item name="槍錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="추가장갑경량化법" option="$" investment="600k" />
 	</group>
@@ -983,9 +983,9 @@
 	  <item name="偽造通信文" option="*" price="3000" />
 	  <item name="投げナイフ" price="150" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
-	  <item name="酒造秘伝" option="*" price="10000" />
+	  <item name="酒造비법" option="*" price="10000" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
 	  <item name="杖錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 2권" option="*" price="30000" investment="120k" />
@@ -1160,7 +1160,7 @@
 	  <item name="偽造通信文" option="*" price="3000" />
 	  <item name="投げナイフ" price="150" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
 	  <item name="杖錬成・응용" option="*" price="50000" investment="120k" />
@@ -1236,7 +1236,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	  <item name="무기류製作の技법書" option="$" investment="500k" />
@@ -1345,7 +1345,7 @@
 	  <item name="偽造通信文" option="*" price="3000" />
 	  <item name="投げナイフ" price="150" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
 	  <item name="杖錬成・응용" option="*" price="50000" investment="120k" />
@@ -1460,10 +1460,10 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
-	  <item name="직물秘伝・紋様染の書" option="$" investment="840k" />
+	  <item name="직물 비법서・紋様染の書" option="$" investment="840k" />
 	</group>
   </cityinfo>
   <cityinfo name="리가">
@@ -1703,7 +1703,7 @@
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
 	  <item name="パイを극めよう" option="*" price="20000" investment="180k" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="광석製錬の書" option="*" price="8000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
@@ -1745,7 +1745,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	</group>
@@ -1773,7 +1773,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	  <item name="モードデザイン集・제 3권" option="$" price="1.5M" />
@@ -1977,14 +1977,14 @@
 	  <item name="染め粉" price="2000" />
 	  <item name="북해の魚介料理" price="7000" />
 	  <item name="漁師の心得・鮮魚保存법" price="5000" />
-	  <item name="직물秘伝・소재の書" price="5000" />
-	  <item name="직물秘伝・高급生地の書" option="*" price="100000" investment="240k" />
+	  <item name="직물 비법서・소재の書" price="5000" />
+	  <item name="직물 비법서・高급生地の書" option="*" price="100000" investment="240k" />
 	  <item name="花嫁衣裳の縫製법" option="*" price="800000" investment="400k" />
 	  <item name="剣錬成・入문" price="20000" />
 	  <item name="高급帽子の縫製법" option="*" price="200000" investment="240k" />
 	  <item name="防具職人の공예技법" option="*" price="300000" investment="600k" />
 	  <item name="북해の名物料理集" option="$" price="1M" />
-	  <item name="高급상納품の梱包(NO.3)" option="%" />
+	  <item name="고급 상납품 포장(NO.3)" option="%" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -2233,9 +2233,9 @@
 	  <item name="マフィン" option="+" />
 	  <item name="りんごのコンポート" option="+" />
 	  <item name="アンズのタルト" option="+" />
-	  <item name="高급상納품(대형船용)" option="#" />
-	  <item name="高급상納품(중형船용)" option="#" />
-	  <item name="高급상納품(소형船용)" option="#" />
+	  <item name="고급 상납품(대형船용)" option="#" />
+	  <item name="고급 상납품(중형船용)" option="#" />
+	  <item name="고급 상납품(소형船용)" option="#" />
 	  <item name="지방해賊への상納품" option="#" />
 	  <item name="ゲルマン諸語" option="@" />
 	</group>
@@ -2261,7 +2261,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="杖錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	</group>
@@ -2399,9 +2399,9 @@
 	  <item name="投げナイフ" price="150" />
 	  <item name="陶酔の酒" price="500" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
-	  <item name="畜産秘伝・牛の章" price="8000" />
+	  <item name="畜産비법・牛の章" price="8000" />
 	  <item name="医薬調合の書" price="5000" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
 	  <item name="杖錬成・응용" option="*" price="50000" investment="120k" />
@@ -2528,7 +2528,7 @@
 	  <item name="投げナイフ" price="150" />
 	  <item name="陶酔の酒" price="500" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="誰でもできる간단레시피" price="5000" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
@@ -2700,8 +2700,8 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="畜産秘伝・豚の章" price="5000" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="畜産비법・豚の章" price="5000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	  <item name="モードデザイン集・제 3권" option="$" investment="1.5M" />
@@ -2871,7 +2871,7 @@
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
 	  <item name="총포류製作の技법書" price="20000" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	</group>
@@ -3010,14 +3010,14 @@
 	  <item name="カード" price="500" />
 	  <item name="手경で栄養豊富な豆料理" price="5000" />
 	  <item name="漁師の心得・鮮魚保存법" price="5000" />
-	  <item name="직물秘伝・소재の書" price="5000" />
-	  <item name="직물秘伝・高급生地の書" option="*" price="100000" investment="240k" />
+	  <item name="직물 비법서・소재の書" price="5000" />
+	  <item name="직물 비법서・高급生地の書" option="*" price="100000" investment="240k" />
 	  <item name="金색司祭服の縫製법" option="*" price="800000" investment="400k" />
 	  <item name="剣錬成・入문" price="20000" />
 	  <item name="高급帽子の縫製법" option="*" price="200000" investment="240k" />
 	  <item name="防具職人の공예技법" option="*" price="300000" investment="600k" />
 	  <item name="서지중해の名物料理集" option="$" />
-	  <item name="高급상納품の梱包(NO.3)" option="%" />
+	  <item name="고급 상납품 포장(NO.3)" option="%" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -3312,7 +3312,7 @@
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
 	  <item name="총포류製作の技법書" price="20000" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	  <item name="무기류製作の技법書" option="$" investment="500k" />
@@ -3505,7 +3505,7 @@
 	  <item name="傷薬詰め合わせ" price="500" />
 	  <item name="조미료대全" price="5000" />
 	  <item name="誰でもできる간단레시피" price="5000" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	</group>
@@ -3561,8 +3561,8 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="製革秘伝" option="*" price="180k" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="製革비법" option="*" price="180k" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	</group>
@@ -3686,7 +3686,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	</group>
@@ -3712,7 +3712,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	</group>
@@ -3734,7 +3734,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	</group>
@@ -3769,7 +3769,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="医薬調合の書" price="5000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
@@ -3828,10 +3828,10 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
-	  <item name="酒造秘伝・제 2권" option="$" investment="800k" />
+	  <item name="酒造비법・제 2권" option="$" investment="800k" />
 	</group>
   </cityinfo>
   <cityinfo name="라스팔마스">
@@ -3852,7 +3852,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	</group>
@@ -3918,14 +3918,14 @@
 	  <item name="染め粉" price="2000" />
 	  <item name="船乗りの魚介料理" price="7000" />
 	  <item name="漁師の心得・鮮魚保存법" price="5000" />
-	  <item name="직물秘伝・소재の書" price="5000" />
-	  <item name="직물秘伝・高급生地の書" option="*" price="100000" />
+	  <item name="직물 비법서・소재の書" price="5000" />
+	  <item name="직물 비법서・高급生地の書" option="*" price="100000" />
 	  <item name="金색司祭服の縫製법" option="*" price="800000" investment="400k" />
 	  <item name="剣錬成・入문" price="20000" />
 	  <item name="高급帽子の縫製법" option="*" price="200000" />
 	  <item name="防具職人の공예技법" option="*" price="300000" />
 	  <item name="서지중해の名物料理集" option="$" />
-	  <item name="高급상納품の梱包(NO.2)" option="%" />
+	  <item name="고급 상납품 포장(NO.2)" option="%" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -4187,9 +4187,9 @@
 	  <item name="ポルトガル風ブイヤベース" option="+" />
 	  <item name="ガレット" option="+" />
 	  <item name="フォンダン・ミルクレープ" option="+" />
-	  <item name="高급상納품(대형船용)" option="#" />
-	  <item name="高급상納품(중형船용)" option="#" />
-	  <item name="高급상納품(소형船용)" option="#" />
+	  <item name="고급 상납품(대형船용)" option="#" />
+	  <item name="고급 상납품(중형船용)" option="#" />
+	  <item name="고급 상납품(소형船용)" option="#" />
 	  <item name="지방해賊への상納품" option="#" />
 	  <item name="ロマンス諸語" option="@" />
 	</group>
@@ -4209,7 +4209,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	  <item name="パスタ料理・상급編" option="$" />
@@ -4269,8 +4269,8 @@
 	  <item name="染め粉" price="2000" />
 	  <item name="パスタの基本" price="8000" />
 	  <item name="漁師の心得・鮮魚保存법" price="5000" />
-	  <item name="직물秘伝・소재の書" price="5000" />
-	  <item name="직물秘伝・高급生地の書" option="*" price="100000" investment="240k" />
+	  <item name="직물 비법서・소재の書" price="5000" />
+	  <item name="직물 비법서・高급生地の書" option="*" price="100000" investment="240k" />
 	  <item name="省대臣용長衣の縫製법" option="*" price="800000" investment="400k" />
 	  <item name="剣錬成・入문" price="20000" />
 	  <item name="高급帽子の縫製법" option="*" price="200000" investment="240k" />
@@ -4304,7 +4304,7 @@
 	  <item name="범용대형オール" option="*" price="2500000" />
 	  <item name="마네킹(通常男性형)" price="3000" />
 	  <item name="마네킹(通常女性형)" price="3000" />
-	  <item name="高급상納품の梱包(NO.1)" option="%" />
+	  <item name="고급 상납품 포장(NO.1)" option="%" />
 	</group>
 	<group name="[인물]">
 	  <item name="生態調査" option="s" price="모험조합" />
@@ -4567,11 +4567,11 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="参謀の心得書" option="*" price="30000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
-	  <item name="酒造秘伝" option="$" investment="600k" />
+	  <item name="酒造비법" option="$" investment="600k" />
 	</group>
   </cityinfo>
   <cityinfo name="칼비">
@@ -4587,11 +4587,11 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="畜産秘伝・鳥の章" price="8000" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="畜産비법・鳥の章" price="8000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
-	  <item name="製革秘伝" option="$" />
+	  <item name="製革비법" option="$" />
 	</group>
   </cityinfo>
   <cityinfo name="자다르">
@@ -4607,7 +4607,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	</group>
@@ -4625,7 +4625,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	  <item name="パン屋さんのおいしいパン" option="$" investment="320k" />
@@ -4661,7 +4661,7 @@
 	  <item name="傷薬詰め合わせ" price="500" />
 	  <item name="カード" price="500" />
 	  <item name="肉料理の初歩" price="10000" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
 	  <item name="提督服の縫製법" option="*" price="500000" investment="400k" />
 	  <item name="槍錬成・入문" price="20000" />
@@ -4892,7 +4892,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="医薬調合の書" price="5000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
@@ -5077,7 +5077,7 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	</group>
@@ -5118,7 +5118,7 @@
 	  <item name="偽造通信文" option="*" price="3000" />
 	  <item name="投げナイフ" price="150" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="カード" price="500" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
@@ -5360,7 +5360,7 @@
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
 	  <item name="はじめて焼くパン" price="7000" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	  <item name="モードデザイン集・제 3권" option="*" price="100000" investment="120k" />
@@ -5631,13 +5631,13 @@
 	  <item name="染め粉" price="2000" />
 	  <item name="果物を使ったお菓子" price="7000" />
 	  <item name="漁師の心得・鮮魚保存법" price="5000" />
-	  <item name="직물秘伝・소재の書" price="5000" />
-	  <item name="직물秘伝・高급生地の書" option="*" price="100000" investment="240k" />
+	  <item name="직물 비법서・소재の書" price="5000" />
+	  <item name="직물 비법서・高급生地の書" option="*" price="100000" investment="240k" />
 	  <item name="金색司祭服の縫製법" option="*" price="800000" investment="400k" />
 	  <item name="剣錬成・入문" price="20000" />
 	  <item name="高급帽子の縫製법" option="*" price="200000" investment="240k" />
 	  <item name="防具職人の공예技법" option="*" price="300000" investment="600k" />
-	  <item name="高급상納품の梱包(NO.2)" option="%" />
+	  <item name="고급 상납품 포장(NO.2)" option="%" />
 	  <item name="서지중해の名物料理集" option="$" price="1M" />
 	</group>
 	<group name="[공방]">
@@ -5945,8 +5945,8 @@
 	  <item name="トビの羽" price="100" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="畜産秘伝・鳥の章" price="8000" />
-	  <item name="직물秘伝・生地の書" option="*" price="10000" />
+	  <item name="畜産비법・鳥の章" price="8000" />
+	  <item name="직물 비법서・生地の書" option="*" price="10000" />
 	  <item name="剣錬成・응용" option="*" price="50000" investment="120k" />
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	  <item name="職人のブーツ강화법" option="$" investment="1.2M" />
@@ -6081,7 +6081,7 @@
 	  <item name="偽造通信文" option="*" price="3000" />
 	  <item name="投げナイフ" price="150" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="カード" price="500" />
 	  <item name="カード(RANK2)" price="1000" />
@@ -6266,7 +6266,7 @@
 	  <item name="偽造通信文" option="*" price="3000" />
 	  <item name="投げナイフ" price="150" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
 	  <item name="杖錬成・응용" option="*" price="50000" investment="120k" />
@@ -6366,7 +6366,7 @@
 	  <item name="偽造通信文" option="*" price="3000" />
 	  <item name="投げナイフ" price="150" />
 	  <item name="タカの羽" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="陸戦용소도구・공예の書" price="10000" />
 	  <item name="杖錬成・응용" option="*" price="50000" investment="120k" />
@@ -6742,7 +6742,7 @@
 	  <item name="粘着유" price="150" />
 	  <item name="業火たいまつ" price="300" />
 	  <item name="特殊染색料その1" price="5000" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="カード" price="500" />
 	  <item name="カード(RANK2)" price="1000" />
 	  <item name="곡도錬成・入문" price="20000" />
@@ -8148,7 +8148,7 @@
 	  <item name="名모험家の手記" price="8000" />
 	  <item name="調査용片眼鏡" price="2500" />
 	  <item name="裁縫도구" price="10000" />
-	  <item name="秘伝・카리브料理" option="$" price="300k" />
+	  <item name="비법・카리브料理" option="$" price="300k" />
 	</group>
 	<group name="[공방]">
 	  <item name="船塗料" price="500" />
@@ -8348,7 +8348,7 @@
 	  <item name="名모험家の手記" price="8000" />
 	  <item name="調査용片眼鏡" price="2500" />
 	  <item name="裁縫도구" price="10000" />
-	  <item name="秘伝・카리브料理" option="*" price="20000" />
+	  <item name="비법・카리브料理" option="*" price="20000" />
 	  <item name="카리브の衣服縫製법" option="$" />
 	</group>
   </cityinfo>
@@ -8410,7 +8410,7 @@
 	  <item name="名모험家の手記" price="8000" />
 	  <item name="調査용片眼鏡" price="2500" />
 	  <item name="裁縫도구" price="10000" />
-	  <item name="酒造秘伝・제 2권" option="$" investment="840k" />
+	  <item name="酒造비법・제 2권" option="$" investment="840k" />
 	</group>
 	<group name="[공방]">
 	  <item name="船塗料" price="500" />
@@ -9109,7 +9109,7 @@
 	  <item name="タヒボジュース" price="300" />
 	  <item name="タヒボボトル" option="*" price="600" investment="120k" />
 	  <item name="強壮剤" price="300" />
-	  <item name="염료秘伝" option="$" investment="840k" />
+	  <item name="염료비법" option="$" investment="840k" />
 	  <item name="コンチェロスサンダル製법" option="%" />
 	</group>
   </cityinfo>
@@ -10228,7 +10228,7 @@
 	  <item name="捕獲網" price="300" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="향料秘伝" option="$" investment="500k" />
+	  <item name="향料비법" option="$" investment="500k" />
 	</group>
   </cityinfo>
   <cityinfo name="잔지바르">
@@ -10477,7 +10477,7 @@
 	  <item name="捕獲網" price="300" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="향料秘伝" option="$" investment="500k" />
+	  <item name="향料비법" option="$" investment="500k" />
 	</group>
   </cityinfo>
   <cityinfo name="나탈">
@@ -10756,7 +10756,7 @@
 	  <item name="カード" price="500" />
 	  <item name="カード(RANK3)" price="2000" />
 	  <item name="衣装の美しい染め方" option="*" price="50000" investment="120k" />
-	  <item name="향料秘伝" option="$" investment="500k" />
+	  <item name="향料비법" option="$" investment="500k" />
 	</group>
 	<group name="[공방]">
 	  <item name="ネコの置物" price="14500" />
@@ -11862,7 +11862,7 @@
 	  <item name="砒石の毒" price="400" />
 	  <item name="業火たいまつ" price="300" />
 	  <item name="魅惑の향" price="1000" />
-	  <item name="직물秘伝・紋様染の書" option="$" investment="820k" />
+	  <item name="직물 비법서・紋様染の書" option="$" investment="820k" />
 	</group>
   </cityinfo>
   <cityinfo name="아체">
@@ -12055,7 +12055,7 @@
 	  <item name="砒石の毒" price="400" />
 	  <item name="捕獲網" price="300" />
 	  <item name="強壮剤" price="300" />
-	  <item name="동남아시아秘伝料理・陸" option="$" investment="2M" />
+	  <item name="동남아시아비법料理・陸" option="$" investment="2M" />
 	</group>
   </cityinfo>
   <cityinfo name="팔렘방">
@@ -12162,7 +12162,7 @@
 	  <item name="砒石の毒" price="400" />
 	  <item name="捕獲網" price="300" />
 	  <item name="強壮剤" price="300" />
-	  <item name="동남아시아秘伝料理・해" option="$" investment="2M" />
+	  <item name="동남아시아비법料理・해" option="$" investment="2M" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -12822,7 +12822,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="オセアニア衣装縫製법" option="$" />
 	</group>
@@ -12843,7 +12843,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	</group>
   </cityinfo>
@@ -12863,7 +12863,7 @@
 	  <item name="強力粘着유" price="200" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="投石" price="30" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="オセアニア衣装縫製법" option="$" investment="2M" />
 	</group>
 	<group name="[인물]">
@@ -12886,7 +12886,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="행운권(NO.14)" option="$" investment="500k" />
 	</group>
@@ -12908,7 +12908,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="행운권(NO.14)" option="$" investment="500k" />
 	</group>
@@ -13016,7 +13016,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="強壮剤" price="300" />
 	  <item name="巫女のチチャ" price="30000" />
 	  <item name="행운권(NO.10)" option="$" investment="500k" />
@@ -13039,7 +13039,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="強壮剤" price="300" />
 	  <item name="巫女のチチャ" price="30000" />
 	  <item name="행운권(NO.10)" option="$" investment="500k" />
@@ -13186,7 +13186,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="強壮剤" price="300" />
 	  <item name="巫女のチチャ" price="30000" />
 	  <item name="행운권(NO.10)" option="$" investment="500k" />
@@ -13209,7 +13209,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="強壮剤" price="300" />
 	  <item name="巫女のチチャ" price="30000" />
 	  <item name="행운권(NO.10)" option="$" investment="500k" />
@@ -13230,7 +13230,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="행운권(NO.14)" option="$" investment="500k" />
 	</group>
@@ -13254,7 +13254,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="행운권(NO.14)" option="$" investment="500k" />
 	</group>
@@ -13280,7 +13280,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="행운권(NO.14)" option="$" investment="500k" />
 	</group>
@@ -13322,7 +13322,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・縫製編" price="800000" />
 	</group>
 	<group name="[공방]">
@@ -13389,7 +13389,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・공예編" price="800000" />
 	</group>
 	<group name="[공방]">
@@ -13439,11 +13439,11 @@
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
 	  <item name="捕獲網" price="300" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="일本の名物料理" price="350000" />
 	  <item name="조미료대全・秘境編" price="700000" />
-	  <item name="刀匠秘伝" price="2500000" />
+	  <item name="刀匠비법" price="2500000" />
 	</group>
 	<group name="[공방]">
 	  <item name="일本の무기류" option="%" />
@@ -13519,7 +13519,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・縫製編" price="800000" />
 	</group>
 	<group name="[배]">
@@ -13562,7 +13562,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・공예編" price="800000" />
 	</group>
 	<group name="[공방]">
@@ -13629,11 +13629,11 @@
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
 	  <item name="捕獲網" price="300" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="朝鮮の名物料理" price="350000" />
 	  <item name="조미료대全・秘境編" price="700000" />
-	  <item name="刀匠秘伝" price="2500000" />
+	  <item name="刀匠비법" price="2500000" />
 	</group>
 	<group name="[공방]">
 	  <item name="船塗料" price="500" />
@@ -13714,7 +13714,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・縫製編" price="800000" />
 	</group>
 	<group name="[배]">
@@ -13762,10 +13762,10 @@
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
 	  <item name="捕獲網" price="300" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="조미료대全・秘境編" price="700000" />
-	  <item name="刀匠秘伝" price="2500000" />
+	  <item name="刀匠비법" price="2500000" />
 	  <item name="華남の名物料理" price="350000" />
 	</group>
 	<group name="[공방]">
@@ -13847,7 +13847,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・공예編" price="800000" />
 	</group>
 	<group name="[공방]">
@@ -13913,7 +13913,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・縫製編" price="800000" />
 	</group>
 	<group name="[배]">
@@ -13957,7 +13957,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・縫製編" price="800000" />
 	</group>
 	<group name="[공방]">
@@ -14012,7 +14012,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="동아시아の소物・공예編" price="800000" />
 	  <item name="동아시아の소物・縫製編" price="800000" />
 	</group>
@@ -14062,10 +14062,10 @@
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
 	  <item name="捕獲網" price="300" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="조미료대全・秘境編" price="700000" />
-	  <item name="刀匠秘伝" price="2500000" />
+	  <item name="刀匠비법" price="2500000" />
 	  <item name="台만島の名物料理" price="350000" />
 	</group>
 	<group name="[공방]">
@@ -14131,7 +14131,7 @@
 	  <item name="投石" price="30" />
 	  <item name="ブーメラン" price="150" />  
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />		
+	  <item name="비법の治療薬" price="600" />		
 	  <item name="治療薬詰め合わせ" price="900" />
 	</group>
   </cityinfo>
@@ -14320,7 +14320,7 @@
 		<item name="傷薬詰め合わせ" price="500" />
 		<item name="高산モードデザイン集・제 1권" price="10000" />
 	  <item name="剣錬成・응용" price="50000" investment="120K以下" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 	</group>
 
 	<group name="[공방]">
@@ -14516,7 +14516,7 @@
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
 	  <item name="鉱夫のピッケル" price="10000" investment="" />
-	  <item name="직물秘伝・生地の書" price="10000" />
+	  <item name="직물 비법서・生地の書" price="10000" />
 		  <item name="モードデザイン集・제 1권" price="10000" />
 			<item name="シャツ＆デニムパンツ" price="20000" investment="19世紀登場" />
 	  <item name="トラッヘ・デ・ヴァケーロ" price="65000" investment="19世紀登場" />		
@@ -16368,7 +16368,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="強壮剤" price="300" />
 	  <item name="巫女のチチャ" price="30000" />
 	  <item name="アンデス衣装縫製법제 2권" option="%" />
@@ -16404,7 +16404,7 @@
 	  <item name="釣具" price="2500" />
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="強壮剤" price="300" />
 	  <item name="巫女のチチャ" price="30000" />
 	</group>
@@ -16550,7 +16550,7 @@
 	  <item name="投てき용たいまつ" price="150" />
 	  <item name="トビの羽" price="100" />
 	  <item name="強力粘着유" price="200" />
-	  <item name="秘伝の治療薬" price="600" />
+	  <item name="비법の治療薬" price="600" />
 	  <item name="治療薬詰め合わせ" price="900" />
 	  <item name="북미先住民衣装縫製법2巻" option="%" />
 	</group>

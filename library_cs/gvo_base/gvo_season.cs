@@ -53,7 +53,7 @@ namespace gvo_base
 		---------------------------------------------------------------------------*/
 		public gvo_season()
 		{
-			// 夏の基準となる일時
+			// 여름의 基準となる일時
 			// 未来でも過去でもよい
 			m_base_season_start	= new DateTime(2010, 3, 2, 13, 30, 0);	// 夏
 			m_now_season		= season.MAX;
