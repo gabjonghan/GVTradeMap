@@ -383,7 +383,7 @@ namespace directx {
 		/*-------------------------------------------------------------------------
 		 스프라이트の그리기 추가
 		 등배, 白, 不투명
-		 화면외컬링なし
+		 화면외컬링없음
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect) {
 			return AddDrawSpritesNC(pos, _rect, -1);
@@ -392,7 +392,7 @@ namespace directx {
 		/*-------------------------------------------------------------------------
 		 스프라이트の그리기 추가
 		 등배, 색지정
-		 화면외컬링なし
+		 화면외컬링없음
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, int color) {
 			return AddDrawSpritesNC(pos, _rect, color, new Vector2(0, 0));
@@ -426,7 +426,7 @@ namespace directx {
 		/*-------------------------------------------------------------------------
 		 스프라이트の그리기 추가
 		 스케일지정
-		 화면외컬링なし
+		 화면외컬링없음
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, Vector2 scale) {
 			return AddDrawSpritesNC(pos, _rect, scale, -1);
@@ -435,7 +435,7 @@ namespace directx {
 		/*-------------------------------------------------------------------------
 		 스프라이트の그리기 추가
 		 스케일지정, 색지정
-		 화면외컬링なし
+		 화면외컬링없음
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, Vector2 scale, int color) {
 			return AddDrawSpritesNC(pos, _rect, scale, color, new Vector2(0, 0));
@@ -587,8 +587,8 @@ namespace directx {
 		 스프라이트の그리기 추가
 		 회전지정
 		 각도はラジアン
-		 화면외컬링なし
-		 회전지정は화면외컬링なしのみ
+		 화면외컬링없음
+		 회전지정は화면외컬링없음のみ
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, new Vector2(1, 1), -1);
@@ -598,8 +598,8 @@ namespace directx {
 		 스프라이트の그리기 추가
 		 스케일지정, 회전지정
 		 각도はラジアン
-		 화면외컬링なし
-		 회전지정は화면외컬링なしのみ
+		 화면외컬링없음
+		 회전지정は화면외컬링없음のみ
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad, Vector2 scale) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, scale, -1);
@@ -609,8 +609,8 @@ namespace directx {
 		 스프라이트の그리기 추가
 		 색지정, 회전지정
 		 각도はラジアン
-		 화면외컬링なし
-		 회전지정は화면외컬링なしのみ
+		 화면외컬링없음
+		 회전지정は화면외컬링없음のみ
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad, int color) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, new Vector2(1, 1), color);
@@ -620,8 +620,8 @@ namespace directx {
 		 스프라이트の그리기 추가
 		 스케일지정, 색지정, 회전지정
 		 각도はラジアン
-		 화면외컬링なし
-		 회전지정は화면외컬링なしのみ
+		 화면외컬링없음
+		 회전지정は화면외컬링없음のみ
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad, Vector2 scale, int color) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, scale, color, new Vector2(0, 0));

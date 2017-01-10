@@ -47,7 +47,7 @@ namespace gvtrademap_cs
 	};
 	// 위도, 경도그리기간격
 	public enum TudeInterval{
-		None,			// なし
+		None,			// 없음
 		Interval1000,	// 1000刻み
 		Interval100,	// 100刻み
 		OnlyPoints,		// 좌표値のみ
@@ -211,7 +211,7 @@ namespace gvtrademap_cs
 		private bool					m_is_item_window_normal_size;	// 통상상태のときtrue
 		private bool					m_is_setting_window_normal_size;	// 통상상태のときtrue
 
-		private bool					m_is_border_style_none;		// 윈도우枠の표시なしのときtrue
+		private bool					m_is_border_style_none;		// 윈도우枠の표시없음のときtrue
 
 		private UniqueString			m_find_strings;				// 검색履歴
 		private _find_filter			m_find_filter;				// 검색フィルタ
@@ -283,7 +283,7 @@ namespace gvtrademap_cs
 													case 5:
 														break;
 													default:
-														m_draw_popup_day_interval	= 0;	// 표시なし
+														m_draw_popup_day_interval	= 0;	// 표시없음
 														break;
 													}
 												}
@@ -554,7 +554,7 @@ namespace gvtrademap_cs
 			enable_dpi_scaling		  = false;
 
 			// 표시関係
-			select_info					= "";		// 선택なし
+			select_info					= "";		// 선택없음
 			map_pos_x					= 0;
 			map_pos_y					= 0;
 			map_scale					= 1;

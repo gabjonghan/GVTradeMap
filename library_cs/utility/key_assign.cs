@@ -108,7 +108,7 @@ namespace Utility.KeyAssign
 		{
 			key	&= ~(Keys.Alt | Keys.Control | Keys.Shift);
 
-			// なし
+			// 없음
 			if(key == Keys.None)				return false;
 
 			// Ctrl등
@@ -173,9 +173,9 @@ namespace Utility.KeyAssign
 		/// <returns>키내용の문자열</returns>
 		/// <remarks>
 		/// <para>키の문자열を得る. </para>
-		/// <para>何も押されていないときは"なし"を返す. </para>
+		/// <para>何も押されていないときは"없음"を返す. </para>
 		/// <para>내部でCanAssignKeys()を呼び出し, アサイン가능な키かどうかを判断する. </para>
-		/// <para>アサイン가능でなければ"なし"を返す. </para>
+		/// <para>アサイン가능でなければ"없음"を返す. </para>
 		/// <para>Ctrl, Shift, Altは特別でこれらの키のみが押された場合は</para>
 		/// <para>"Ctrl+"등を返す. </para>
 		/// </remarks>
@@ -193,9 +193,9 @@ namespace Utility.KeyAssign
 		/// <remarks>
 		/// <para>키の문자열を得る. </para>
 		/// <para>KeyEventArgs.KeyDataを渡すこと</para>
-		/// <para>何も押されていないときは"なし"を返す. </para>
+		/// <para>何も押されていないときは"없음"を返す. </para>
 		/// <para>내部でCanAssignKeys()を呼び出し, アサイン가능な키かどうかを判断する. </para>
-		/// <para>アサイン가능でなければ"なし"を返す. </para>
+		/// <para>アサイン가능でなければ"없음"を返す. </para>
 		/// <para>Ctrl, Shift, Altは特別でこれらの키のみが押された場合は</para>
 		/// <para>"Ctrl+"등を返す. </para>
 		/// </remarks>
@@ -210,7 +210,7 @@ namespace Utility.KeyAssign
 			if(CanAssignKeys(key)){
 				str	+= keys_to_string(key);
 			}else{
-				if(str == "")	return "なし";	// 무효키
+				if(str == "")	return "없음";	// 무효키
 			}
 			return str;
 		}
@@ -258,7 +258,7 @@ namespace Utility.KeyAssign
 			case Keys.Subtract:		return "-";
 			case Keys.Divide:		return "/";
 			case Keys.Multiply:		return "*";
-//			case Keys.None:			return "なし";
+//			case Keys.None:			return "없음";
 			}
 			// その他
 			return key.ToString();
@@ -279,7 +279,7 @@ namespace Utility.KeyAssign
 	/// <para>ProcessCmdKey()は통상FormのProcessCmdKey()내で呼ぶ. </para>
 	/// <para>할당가능かどうかの判定にはAssignRuleが사용される. </para>
 	/// <para>独自の할당ルールを지정する場合は, AssignRuleを継承しコンストラクタに渡す. </para>
-	/// <para>引수なしのコンストラクタを사용すると, AssignRuleを사용する. </para>
+	/// <para>引수없음のコンストラクタを사용すると, AssignRuleを사용する. </para>
 	/// <para>AssignRuleを継承したKeyAssignRuleOnlyShortcutはSystem.Windows.Forms.Shortcutのみを할당가능にする. </para>
 	/// <para>メニューやコンテキストメニューと同期させるには, </para>
 	/// <para>BindTagForMenuItem()でタグを関連付け, UpdateMenuShortcutKeys()でショートカット키の표시を更新する. </para>
@@ -468,7 +468,7 @@ namespace Utility.KeyAssign
 					if(a != null){
 						// smi.ShortcutKeysにはShortcutのみしか지정できないため, 
 						// 표시설정のみ行う
-						smi.ShortcutKeys				= Keys.None;	// ショートカット키としてはなし
+						smi.ShortcutKeys				= Keys.None;	// ショートカット키としては없음
 						smi.ShowShortcutKeys			= true;
 						smi.ShortcutKeyDisplayString	= (a.Keys == Keys.None)? "": a.KeysString;
 					}
@@ -605,7 +605,7 @@ namespace Utility.KeyAssign
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 추가, 
-		/// 初期値なしの場合はKeys.Noneを渡すこと
+		/// 初期値없음の場合はKeys.Noneを渡すこと
 		/// </summary>
 		/// <param name="name">アサイン명</param>
 		/// <param name="group">그룹명</param>
@@ -750,7 +750,7 @@ namespace Utility.KeyAssign
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// Tagに関連付けられた키アサインのショートカット키を문자열で得る. 
-		/// 할당なし, 関連付けられた키アサインがない場合は""を返す. 
+		/// 할당없음, 関連付けられた키アサインがない場合は""を返す. 
 		/// </summary>
 		/// <param name="tag">Tag</param>
 		/// <returns>ショートカット키の문자열</returns>
@@ -986,8 +986,8 @@ namespace Utility.KeyAssign
 			//-------------------------------------------------------------------------
 			/// <summary>
 			/// 키の문자열を得る. 
-			/// 何も押されていないときは"なし"を返す. 
-			/// 할당가능でないものは"なし"を返す. 
+			/// 何も押されていないときは"없음"を返す. 
+			/// 할당가능でないものは"없음"を返す. 
 			/// 할당가능かどうかはKeyAssignRule.CanAssignKeys()の実装による. 
 			/// </summary>
 			/// <param name="key"></param>

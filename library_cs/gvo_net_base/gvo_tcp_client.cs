@@ -68,7 +68,7 @@ namespace gvo_net_base
 				lock(m_sync_object){
 					// コピーを返す
 					// 내용はクリアされる
-					if(m_sea_info.Count <= 0)	return null;	// 정보なし
+					if(m_sea_info.Count <= 0)	return null;	// 정보없음
 					gvo_map_cs_chat_base.sea_area_type[] list	= m_sea_info.ToArray();
 					m_sea_info.Clear();
 					return list;

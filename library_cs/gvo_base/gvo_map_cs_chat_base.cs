@@ -63,7 +63,7 @@ namespace gvo_base {
 
 		---------------------------------------------------------------------------*/
 		public enum accident {
-			none,			   // なし
+			none,			   // 없음
 
 			shark1,			 // 상어1
 			shark2,			 // 상어2
@@ -256,7 +256,7 @@ namespace gvo_base {
 		 (たくさんのポップアップが1度に生まれる必要がないため)
 		---------------------------------------------------------------------------*/
 		public override bool AnalyzeNewestChatLog() {
-			// 재해なし
+			// 재해없음
 			_accident = accident.none;
 
 			// 이자が来たかどうかはここではクリアされない

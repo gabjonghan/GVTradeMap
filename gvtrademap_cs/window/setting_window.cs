@@ -230,7 +230,7 @@ namespace gvtrademap_cs {
 											: icons.icon_index.setting_gray_7));
 			pos.X += SETTING_ICONS_STEP;
 
-			// 残り3つはグレー표시なし
+			// 残り3つはグレー표시없음
 			for (int i = 0; i < 3; i++) {
 				base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(icons.icon_index.setting_10 + i));
 				pos.X += SETTING_ICONS_STEP;

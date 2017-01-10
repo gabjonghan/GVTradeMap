@@ -730,7 +730,7 @@ namespace gvtrademap_cs {
 
 			GvoWorldInfo.Info _info = m_db.World.FindInfo(select.InfoName);
 			if (_info != null) {
-				// 장소の리셋なしで설정
+				// 장소の리셋없음で설정
 				set_info(_info, false);
 				// センタリングしてもらう
 				req_centering_info();
@@ -773,7 +773,7 @@ namespace gvtrademap_cs {
 
 			GvoWorldInfo.Info _info = select.info;
 			if (_info != null) {
-				// 장소の리셋なしで설정
+				// 장소の리셋없음で설정
 				set_info(_info, false);
 				// センタリングしてもらう
 				req_centering_info();

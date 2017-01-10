@@ -110,7 +110,7 @@ namespace gvtrademap_cs {
 			setting_gray_7,
 			setting_gray_8,
 
-			// 스크린샷と항로도삭제はグレイ표시なし
+			// 스크린샷と항로도삭제はグレイ표시없음
 			setting_10,
 			setting_11,
 			setting_11_1,

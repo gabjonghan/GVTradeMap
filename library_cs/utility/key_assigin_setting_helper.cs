@@ -296,7 +296,7 @@ namespace Utility.KeyAssign
 
 			if(i == null)		return;
 
-			// 할당なし
+			// 할당없음
 			i.Keys		= Keys.None;
 
 			// 목록の更新

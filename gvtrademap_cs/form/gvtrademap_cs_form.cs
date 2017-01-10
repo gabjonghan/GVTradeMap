@@ -343,7 +343,7 @@ namespace gvtrademap_cs {
 			this.Location = m_lib.setting.window_location;
 			this.Size = size;
 
-			// 윈도우枠なし
+			// 윈도우枠없음
 			if (m_lib.setting.is_border_style_none) {
 				ExecFunction(KeyFunction.window_change_border_style);
 			}
@@ -478,7 +478,7 @@ namespace gvtrademap_cs {
 		private void load_map() {
 			if (is_load) return;		// なにか로딩중
 			if ((m_map_index == m_lib.setting.map)
-			   && (m_use_mixed_map == m_lib.setting.use_mixed_map)) return;	 // 변경なし
+			   && (m_use_mixed_map == m_lib.setting.use_mixed_map)) return;	 // 변경없음
 
 			m_load_map_t = new Thread(new ThreadStart(load_map_proc));
 			m_load_map_t.Name = "load map";
@@ -597,7 +597,7 @@ namespace gvtrademap_cs {
 
 			// 드래그량を0に戻す
 			if ((m_mouse_move.X != 0) || (m_mouse_move.Y != 0)) {
-				// 드래그중は그리기스킵なし
+				// 드래그중は그리기스킵없음
 				m_lib.device.SetMustDrawFlag();
 			}
 
@@ -1265,7 +1265,7 @@ namespace gvtrademap_cs {
 					if (is_show_menu_strip) {
 						m_tooltip_interval = 0;
 					} else {
-						// 마우스の이동なし
+						// 마우스の이동없음
 						if (!is_inside_mouse_cursor_main_window()) {
 							// 윈도우외
 							m_tooltip_old_mouse_pos = mpos;

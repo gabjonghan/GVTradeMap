@@ -554,7 +554,7 @@ namespace gvtrademap_cs
 			// 렌더링 타겟を지정
 			Surface depth = m_device.device.DepthStencilSurface;
 			Surface backbuffer = m_device.device.GetBackBuffer(0, 0, BackBufferType.Mono);
-			m_device.device.DepthStencilSurface = null;	 // zバッファなし
+			m_device.device.DepthStencilSurface = null;	 // zバッファ없음
 
 			try
 			{
@@ -607,7 +607,7 @@ namespace gvtrademap_cs
 			if (m_image_size.X <= 0) return;
 			if (m_image_size.Y <= 0) return;
 
-			// Y방향クランプなし
+			// Y방향クランプ없음
 			// 自由にスクロールする
 
 			// 그리기

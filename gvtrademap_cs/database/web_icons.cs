@@ -187,7 +187,7 @@ namespace gvtrademap_cs {
 			// 설정변경のチェック
 			if ((m_optimize == m_lib.setting.remove_near_web_icons)
 				&& (m_draw_flags == m_lib.setting.draw_setting_web_icons)) {
-				// 설정변경なし
+				// 설정변경없음
 				return;
 			}
 

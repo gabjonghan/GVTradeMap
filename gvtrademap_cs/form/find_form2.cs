@@ -64,7 +64,7 @@ namespace gvtrademap_cs
 			toolTip1.AutoPopDelay		= 30*1000;		// 30초표시
 			toolTip1.BackColor			= Color.LightYellow;
 
-			// 各ページの初期化
+			// 각ページの初期化
 			init_page1();
 			init_page2();
 			init_page3();

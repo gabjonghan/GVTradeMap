@@ -391,7 +391,7 @@ namespace gvtrademap_cs
 
 			if(pos_list.Count <= 0)		return;		// 각도が求められるサンプルが集まっていない
 
-			// 各이동ベクトルを得る
+			// 각이동ベクトルを得る
 			List<Vector2>	v_list		= new List<Vector2>();
 			foreach(Point p in pos_list){
 				Vector2		v_tmp	= transform.SubVector_LoopX(pos, p, m_map_size_x);

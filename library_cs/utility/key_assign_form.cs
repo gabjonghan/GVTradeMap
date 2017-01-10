@@ -42,7 +42,7 @@ namespace Utility.KeyAssign
 
 			label1.Text			= assign.KeysString;
 
-			// なにもなしでOKを押すと할당なしとなる
+			// なにも없음でOKを押すと할당없음となる
 			m_new_assign		= Keys.None;
 		}
 

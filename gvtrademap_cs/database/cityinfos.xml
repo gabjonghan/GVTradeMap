@@ -68,7 +68,7 @@
 	  <item name="複帆보조돛縫製법" option="*" price="30000" investment="120k" />
 	  <item name="複合보조돛縫製법" option="*" price="50000" investment="180k" />
 	  <item name="全艤装보조돛組立법" option="*" price="100000" investment="240k" />
-	  <item name="木材계추가장갑작성법" price="15000" />
+	  <item name="목재계추가장갑작성법" price="15000" />
 	  <item name="金属계추가장갑작성법" option="*" price="40000" investment="180k" />
 	  <item name="소형대포주조법" price="10000" />
 	  <item name="중형대포주조법" option="*" price="100000" investment="120k" />
@@ -362,7 +362,7 @@
 	  <item name="미술품" option="h" price="マリア王妃" />
 	  <item name="미술" option="s" price="マリア王妃" />
 	  <item name="スラブ諸語" option="s" price="マリア王妃" />
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -532,7 +532,7 @@
 	<group name="[교역]">
 	  <item name="아마" price="167" />
 	  <item name="모피" price="1138" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	  <item name="アクア히트" price="502" />
 	  <item name="丸太" option="*" price="142" investment="500k" />
 	  <item name="ヒツジ" price="108" />
@@ -557,7 +557,7 @@
 	  <item name="모피" option="*" price="1138" investment="320k" />
 	  <item name="양모" price="323" />
 	  <item name="석재" price="570" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	</group>
 	<group name="[도구]">
 	  <item name="パイレーツベスト" price="18500" />
@@ -578,7 +578,7 @@
 	  <item name="해양生物の상彫刻術" price="10000" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
 	<group name="행상인">
 	  <item name="沈静の旗" option="-" />
@@ -901,7 +901,7 @@
   <cityinfo name="단치히">
 	<group name="[교역]">
 	  <item name="모피" price="1138" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	  <item name="琥珀" option="*" price="2020" investment="320k" />
 	  <item name="철광석" option="*" price="566" investment="180k" />
 	  <item name="テンサイ" option="*" price="79" investment="500k" />
@@ -1332,7 +1332,7 @@
 	  <item name="소금" price="207" />
 	  <item name="곡도" option="*" price="871" investment="180k" />
 	  <item name="석재" option="*" price="575" investment="240k" />
-	  <item name="木材" price="590" />
+	  <item name="목재" price="590" />
 	  <item name="ヒツジ" option="*" investment="580k" />
 	</group>
 	<group name="[도구]">
@@ -1676,7 +1676,7 @@
 	  <item name="해양生物の상彫刻術" price="10000" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="더블린">
@@ -1800,7 +1800,7 @@
 	  <item name="범용소형拡張창고" option="*" price="80000" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -1996,7 +1996,7 @@
 	  <item name="複帆보조돛縫製법" option="*" price="30000" investment="120k" />
 	  <item name="複合보조돛縫製법" option="*" price="50000" investment="180k" />
 	  <item name="全艤装보조돛組立법" option="*" price="100000" investment="240k" />
-	  <item name="木材계추가장갑작성법" price="15000" />
+	  <item name="목재계추가장갑작성법" price="15000" />
 	  <item name="金属계추가장갑작성법" option="*" price="40000" investment="180k" />
 	  <item name="소형대포주조법" price="10000" />
 	  <item name="중형대포주조법" option="*" price="100000" investment="120k" />
@@ -2876,7 +2876,7 @@
 	  <item name="モードデザイン集・제 1권" price="10000" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -3029,7 +3029,7 @@
 	  <item name="複帆보조돛縫製법" option="*" price="30000" investment="120k" />
 	  <item name="複合보조돛縫製법" option="*" price="50000" investment="180k" />
 	  <item name="全艤装보조돛組立법" option="*" price="100000" investment="240k" />
-	  <item name="木材계추가장갑작성법" price="15000" />
+	  <item name="목재계추가장갑작성법" price="15000" />
 	  <item name="金属계추가장갑작성법" option="*" price="40000" investment="180k" />
 	  <item name="소형대포주조법" price="10000" />
 	  <item name="중형대포주조법" option="*" price="100000" investment="120k" />
@@ -3938,7 +3938,7 @@
 	  <item name="複帆보조돛縫製법" option="*" price="30000" />
 	  <item name="複合보조돛縫製법" option="*" price="50000" />
 	  <item name="全艤装보조돛組立법" option="*" price="100000" />
-	  <item name="木材계추가장갑작성법" price="15000" />
+	  <item name="목재계추가장갑작성법" price="15000" />
 	  <item name="金属계추가장갑작성법" option="*" price="40000" />
 	  <item name="소형대포주조법" price="10000" />
 	  <item name="중형대포주조법" option="*" price="100000" />
@@ -4289,7 +4289,7 @@
 	  <item name="複帆보조돛縫製법" option="*" price="30000" investment="120k" />
 	  <item name="複合보조돛縫製법" option="*" price="50000" investment="180k" />
 	  <item name="全艤装보조돛組立법" option="*" price="100000" investment="240k" />
-	  <item name="木材계추가장갑작성법" price="15000" />
+	  <item name="목재계추가장갑작성법" price="15000" />
 	  <item name="金属계추가장갑작성법" option="*" price="40000" investment="180k" />
 	  <item name="소형대포주조법" price="10000" />
 	  <item name="중형대포주조법" option="*" price="100000" investment="120k" />
@@ -5082,7 +5082,7 @@
 	  <item name="モードデザイン集・제 1권" option="*" price="10000" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="나폴리">
@@ -5651,7 +5651,7 @@
 	  <item name="複帆보조돛縫製법" option="*" price="30000" investment="120k" />
 	  <item name="複合보조돛縫製법" option="*" price="50000" investment="180k" />
 	  <item name="全艤装보조돛組立법" option="*" price="100000" investment="240k" />
-	  <item name="木材계추가장갑작성법" price="15000" />
+	  <item name="목재계추가장갑작성법" price="15000" />
 	  <item name="金属계추가장갑작성법" option="*" price="40000" investment="180k" />
 	  <item name="소형대포주조법" price="10000" />
 	  <item name="중형대포주조법" option="*" price="100000" investment="120k" />
@@ -5955,7 +5955,7 @@
 	  <item name="宗教遺物" option="h" price="ベロニカ・フランコ" />
 	  <item name="スラブ諸語" option="s" price="ベロニカ・フランコ" />
 	  <item name="동유럽諸語辞書の製법" option="%" price="ベロニカ・フランコ" />
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -7134,7 +7134,7 @@
 	  <item name="광석製錬の書" option="$" investment="300k" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -7340,7 +7340,7 @@
   </cityinfo>
   <cityinfo name="카파">
 	<group name="[교역]">
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	  <item name="チーズ" price="303" />
 	  <item name="綿生地" price="666" />
 	  <item name="터키絨毯" price="3640" />
@@ -7359,7 +7359,7 @@
 	  <item name="국家貢献勲記" option="$" investment="200k" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工철재" option="%" price="조선공" />
+	  <item name="조선소재・가공철재" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -7774,7 +7774,7 @@
 	  <item name="ガーリック" price="242" />
 	  <item name="綿生地" price="666" />
 	  <item name="水稲" price="192" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	  <item name="소금" price="207" />
 	  <item name="ヒツジ" price="108" />
 	  <item name="ザクロ" price="358" />
@@ -7934,7 +7934,7 @@
 	  <item name="ダマスカスソード" option="*" price="4150" investment="180k" />
 	  <item name="鋼" price="967" />
 	  <item name="紙" option="*" investment="400k" />
-	  <item name="木材" option="*" investment="600k" />
+	  <item name="목재" option="*" investment="600k" />
 	</group>
 	<group name="[도구]">
 	  <item name="チャドリ" price="84700" />
@@ -8130,7 +8130,7 @@
 	  <item name="행운권(NO.1)" option="$" investment="500k" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・石加工" option="%" price="조선공" />
+	  <item name="조선소재・石가공" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="산티아고">
@@ -8569,7 +8569,7 @@
 	</group>
 	<group name="[인물]">
 	  <item name="アメリカ諸語辞書の製법" option="%" price="학자" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	  <item name="조선技術研究成果" option="%" price="ドック관리人" />
 	  <item name="鋳造の先端技術" option="%" price="熟練鋳造技師" />
 	  <item name="縫製の先端技術" option="%" price="熟練縫製技師" />
@@ -8730,7 +8730,7 @@
 	</group>
 	<group name="[인물]">
 	  <item name="アメリカ諸語辞書の製법" option="%" price="학자" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	  <item name="조선技術研究成果" option="%" price="ドック관리人" />
 	  <item name="鋳造の先端技術" option="%" price="熟練鋳造技師" />
 	  <item name="縫製の先端技術" option="%" price="熟練縫製技師" />
@@ -8844,7 +8844,7 @@
 	</group>
 	<group name="[인물]">
 	  <item name="アメリカ諸語辞書の製법" option="%" price="학자" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	  <item name="조선技術研究成果" option="%" price="ドック관리人" />
 	  <item name="鋳造の先端技術" option="%" price="熟練鋳造技師" />
 	  <item name="縫製の先端技術" option="%" price="熟練縫製技師" />
@@ -9145,7 +9145,7 @@
 	</group>
 	<group name="[인물]">
 	  <item name="アメリカ諸語辞書の製법" option="%" price="학자" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	  <item name="조선技術研究成果" option="%" price="ドック관리人" />
 	  <item name="鋳造の先端技術" option="%" price="熟練鋳造技師" />
 	  <item name="縫製の先端技術" option="%" price="熟練縫製技師" />
@@ -9315,7 +9315,7 @@
 	</group>
 	<group name="[인물]">
 	  <item name="アメリカ諸語辞書の製법" option="%" price="학자" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	  <item name="조선技術研究成果" option="%" price="ドック관리人" />
 	  <item name="鋳造の先端技術" option="%" price="熟練鋳造技師" />
 	  <item name="縫製の先端技術" option="%" price="熟練縫製技師" />
@@ -9454,7 +9454,7 @@
 	  <item name="綿花" price="267" />
 	  <item name="サトウキビ" price="192" />
 	  <item name="コーヒー" price="375" />
-	  <item name="木材" option="*" price="560" investment="240k" />
+	  <item name="목재" option="*" price="560" investment="240k" />
 	  <item name="소고기" price="566" />
 	  <item name="キャッサバ" price="60" />
 	</group>
@@ -9526,7 +9526,7 @@
 	</group>
 	<group name="[인물]">
 	  <item name="アメリカ諸語辞書の製법" option="%" price="학자" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	  <item name="조선技術研究成果" option="%" price="ドック관리人" />
 	  <item name="鋳造の先端技術" option="%" price="熟練鋳造技師" />
 	  <item name="縫製の先端技術" option="%" price="熟練縫製技師" />
@@ -9723,7 +9723,7 @@
 	  <item name="港・集落" option="h" price="ディアス・デ・ソリス" />
 	  <item name="投てき術" option="s" price="ディアス・デ・ソリス" />
 	  <item name="오세아니아어" option="s" price="ディアス・デ・ソリス" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="산안토니오">
@@ -9752,7 +9752,7 @@
 	  <item name="綿花" option="*" price="267" investment="240k" />
 	  <item name="象牙" price="1689" />
 	  <item name="석유" option="*" price="507" investment="120k" />
-	  <item name="木材" price="590" />
+	  <item name="목재" price="590" />
 	  <item name="ダイヤモンド" option="*" price="3608" investment="400k" />
 	  <item name="金" option="*" price="3957" />
 	</group>
@@ -9921,7 +9921,7 @@
 	  <item name="ダイヤモンド" option="*" price="3608" investment="500k" />
 	  <item name="木상" option="*" price="872" />
 	  <item name="석유" price="510" />
-	  <item name="木材" price="596" />
+	  <item name="목재" price="596" />
 	  <item name="象牙" price="1691" />
 	  <item name="金" option="*" price="3957" />
 	</group>
@@ -10040,7 +10040,7 @@
 	  <item name="象牙" price="1689" />
 	  <item name="석유" price="510" />
 	  <item name="ココナツ" price="257" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	</group>
 	<group name="[도구]">
 	  <item name="泥酔の酒" price="300" />
@@ -10068,7 +10068,7 @@
 	  <item name="ダイヤモンド" option="*" price="2774" investment="120k" />
 	  <item name="木상" option="*" price="872" investment="240k" />
 	  <item name="석유" price="510" />
-	  <item name="木材" price="595" />
+	  <item name="목재" price="595" />
 	</group>
 	<group name="[도구]">
 	  <item name="孔雀石のブローチ" option="*" price="6000000" investment="120k" />
@@ -10396,7 +10396,7 @@
 	  <item name="綿花" option="*" price="267" />
 	  <item name="オレンジオイル" option="*" price="415" />
 	  <item name="金" option="*" price="3957" />
-	  <item name="木材" price="595" />
+	  <item name="목재" price="595" />
 	  <item name="象牙" price="1689" />
 	</group>
 	<group name="[도구]">
@@ -10462,7 +10462,7 @@
   <cityinfo name="타마타브">
 	<group name="[교역]">
 	  <item name="모피" price="1138" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	  <item name="エメラルド" option="*" price="3023" investment="240k" />
 	  <item name="イランイラン" price="695" />
 	  <item name="어육" price="128" />
@@ -10506,7 +10506,7 @@
   <cityinfo name="말린디">
 	<group name="[교역]">
 	  <item name="象牙" price="1689" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	  <item name="竜涎향" price="2489" />
 	  <item name="철광석" option="*" price="566" investment="240k" />
 	  <item name="サイカク" option="*" price="1918" investment="600k" />
@@ -10561,7 +10561,7 @@
 	  <item name="捕獲網" price="300" />
 	  <item name="治療薬" price="300" />
 	  <item name="傷薬詰め合わせ" price="500" />
-	  <item name="おもてなし肉料理" option="$" investment="300k" />
+	  <item name="おもて없음肉料理" option="$" investment="300k" />
 	</group>
 	<group name="[공방]">
 	  <item name="望郷のカリヨンベル" price="200" />
@@ -10623,7 +10623,7 @@
 	  <item name="해양生物" option="h" price="コリタン" />
 	  <item name="釣り" option="s" price="コリタン" />
 	  <item name="페르시아어" option="s" price="コリタン" />
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -10764,7 +10764,7 @@
 	  <item name="望郷のカリヨンベル" price="200" />
 	  <item name="船歌の楽譜" price="200" />
 	  <item name="特殊帆塗料その5" price="1500" />
-	  <item name="特殊木材계추가장갑작성법" option="*" price="40000" investment="120k" />
+	  <item name="特殊목재계추가장갑작성법" option="*" price="40000" investment="120k" />
 	  <item name="火炎대포주조법" option="*" price="300000" investment="240k" />
 	  <item name="陸戦용소도구・공예の書" option="%" />
 	</group>
@@ -11816,7 +11816,7 @@
 	  <item name="ジュエリーカット赤の書" option="$" investment="2M" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="퐁디셰리">
@@ -11844,7 +11844,7 @@
 	  <item name="船歌の楽譜" price="200" />
 	</group>
 	<group name="[인물]">
-	  <item name="조선소재・加工木材" option="%" price="조선공" />
+	  <item name="조선소재・가공목재" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="마술리파탐">
@@ -12064,7 +12064,7 @@
 	  <item name="サイカク" price="1922" />
 	  <item name="金" price="6440" />
 	  <item name="真珠" price="3614" />
-	  <item name="木材" price="355" />
+	  <item name="목재" price="355" />
 	  <item name="양파" price="71" />
 	</group>
 	<group name="[도구]">
@@ -12109,7 +12109,7 @@
 	  <item name="ルビー" option="*" price="2711" investment="500k" />
 	  <item name="ひすい" option="*" price="1438" investment="400k" />
 	  <item name="べっこう" option="*" price="1323" investment="320k" />
-	  <item name="木材" price="590" />
+	  <item name="목재" price="590" />
 	</group>
 	<group name="[도구]">
 	  <item name="パイレーツベスト" price="18500" />
@@ -12325,7 +12325,7 @@
 	  <item name="沈향" price="5074" />
 	  <item name="동광석" price="691" />
 	  <item name="석유" option="*" price="508" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	  <item name="흑檀" price="1060" />
 	</group>
 	<group name="[도구]">
@@ -12375,7 +12375,7 @@
 	  <item name="バナナ" price="132" />
 	  <item name="수은" option="*" price="982" investment="180k" />
 	  <item name="青동" price="860" />
-	  <item name="木材" price="592" />
+	  <item name="목재" price="592" />
 	  <item name="石墨" option="*" price="777" investment="240k" />
 	</group>
 	<group name="[도구]">
@@ -12490,7 +12490,7 @@
 	  <item name="龍脳" price="1080" />
 	  <item name="石상" price="1383" />
 	  <item name="短剣" price="758" />
-	  <item name="木材" price="587" />
+	  <item name="목재" price="587" />
 	  <item name="真珠" option="*" investment="320k" />
 	</group>
 	<group name="[도구]">
@@ -12829,7 +12829,7 @@
   </cityinfo>
   <cityinfo name="호바트">
 	<group name="[교역]">
-	  <item name="木材" price="503" />
+	  <item name="목재" price="503" />
 	  <item name="꿀" price="770" />
 	  <item name="皮革" price="372" />
 	  <item name="동광석" price="693" />
@@ -12849,7 +12849,7 @@
   </cityinfo>
   <cityinfo name="왕가누이">
 	<group name="[교역]">
-	  <item name="木材" price="674" />
+	  <item name="목재" price="674" />
 	  <item name="サツマイモ" price="86" />
 	  <item name="모피" price="1295" />
 	  <item name="꿀" price="873" />
@@ -12877,7 +12877,7 @@
 	  <item name="ユーカリ" price="327" />
 	  <item name="サンゴ" price="2720" />
 	  <item name="石炭" price="415" />
-	  <item name="木材" price="591" />
+	  <item name="목재" price="591" />
 	</group>
 	<group name="[도구]">
 	  <item name="木槍" price="34400" />
@@ -12947,7 +12947,7 @@
   </cityinfo>
   <cityinfo name="과테말라">
 	<group name="[교역]">
-	  <item name="木材" price="600" />
+	  <item name="목재" price="600" />
 	  <item name="トウモロコシ" price="50" />
 	  <item name="コーヒー" price="380" />
 	  <item name="캐슈넛" price="330" />
@@ -14311,7 +14311,7 @@
 	  <item name="석유" price="507" />
 	  <item name="ウォッカ" price="397" />
 	  <item name="紙" price="240" investment="120K超180k以下" />
-	  <item name="木材" price="444" investment="70k" />
+	  <item name="목재" price="444" investment="70k" />
 	</group>
 	<group name="[도구]">
 	  <item name="解毒剤" price="100" />
@@ -16498,7 +16498,7 @@
 	<group name="[교역]">
 	  <item name="草" price="-1" />
 	  <item name="植物유" price="-1" />
-	  <item name="木材" price="-1" />
+	  <item name="목재" price="-1" />
 	  <item name="石墨" price="-1" />
 	  <item name="草" price="-2" />
 	  <item name="대豆" price="-2" />
@@ -16510,7 +16510,7 @@
 	<group name="[교역]">
 	  <item name="草" price="-1" />
 	  <item name="綿花" price="-1" />
-	  <item name="木材" price="-1" />
+	  <item name="목재" price="-1" />
 	  <item name="漆" price="-1" />
 	</group>
   </cityinfo>
@@ -16519,7 +16519,7 @@
 	  <item name="草" price="-1" />
 	  <item name="植物유" price="-1" />
 	  <item name="綿花" price="-1" />
-	  <item name="木材" price="-1" />
+	  <item name="목재" price="-1" />
 	  <item name="철광석" price="-1" />
 	  <item name="草" price="-2" />
 	  <item name="ブタ" price="-2" />
@@ -18042,7 +18042,7 @@
 	  <item name="산토끼" price="-2" />
 	  <item name="石" price="-1" />
 	  <item name="丸太" price="-1" />
-	  <item name="木材" price="-1" />
+	  <item name="목재" price="-1" />
 	  <item name="石炭" price="-1" />
 			<item name="석재" price="-1" />
 			<item name="クランベリー" price="-1" />
@@ -18181,7 +18181,7 @@
 	  <item name="석유" option="*" price="579" investment="500k" />
 	  <item name="보리" price="35" />
 	  <item name="모피" option="*" price="1296" investment="320k" />
-	  <item name="木材" price="674" />
+	  <item name="목재" price="674" />
 	</group>
   </cityinfo>
   <cityinfo name="북미대륙 서쪽">

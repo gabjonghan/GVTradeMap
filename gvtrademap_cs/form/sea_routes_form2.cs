@@ -62,7 +62,7 @@ namespace gvtrademap_cs {
 			m_view2 = new list_view_db(listView2, m_db.SeaRoute.favorite_sea_routes);
 			m_view3 = new list_view_db(listView3, m_db.SeaRoute.trash_sea_routes);
 
-			// 各ページの初期化
+			// 각ページの初期化
 			init_page1();
 			init_page2();
 			init_page3();

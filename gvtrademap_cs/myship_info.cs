@@ -215,7 +215,7 @@ namespace gvtrademap_cs {
 		 ある時点でのスナップショットとなる
 		---------------------------------------------------------------------------*/
 		private gvo_analized_data get_myship_data() {
-			// 항로기록なしならなにもしない
+			// 항로기록없음ならなにもしない
 			if (!m_lib.setting.save_searoutes) return null;
 
 			// 캡처방법の지정
@@ -301,7 +301,7 @@ namespace gvtrademap_cs {
 			// 
 			if (data == null) return;
 
-			// 항로기록なしならなにもしない
+			// 항로기록없음ならなにもしない
 			if (!m_lib.setting.save_searoutes) {
 				// 위치と각도は初期化する
 				m_pos = new Point(-1, -1);

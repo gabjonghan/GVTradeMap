@@ -86,7 +86,7 @@ namespace directx {
 				Surface depth = device.device.DepthStencilSurface;
 				Surface backbuffer = device.device.GetBackBuffer(0, 0, BackBufferType.Mono);
 
-				device.device.DepthStencilSurface = null;	   // zバッファなし
+				device.device.DepthStencilSurface = null;	   // zバッファ없음
 				device.device.SetRenderTarget(0, m_texture.GetSurfaceLevel(0));
 
 				// 화면のクリア

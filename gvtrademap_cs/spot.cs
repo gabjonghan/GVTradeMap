@@ -26,7 +26,7 @@ namespace gvtrademap_cs
 	public class spot
 	{
 		public enum type{
-			none,						// 장소なし
+			none,						// 장소없음
 			country_flags,				// 국기표시
 			icons_0,					// 看판娘
 			icons_1,					// 서고
@@ -553,7 +553,7 @@ namespace gvtrademap_cs
 		static public string GetTypeString(type _type)
 		{
 			switch(_type){
-			case type.none:						return "장소なし";
+			case type.none:						return "장소없음";
 			case type.country_flags:			return "국기";
 			case type.icons_0:					return "看판娘";
 			case type.icons_1:					return "서고";

@@ -141,7 +141,7 @@ namespace directx {
 					m_client_pos = new Vector2(4, 10 + 4);
 					m_client_size = new Vector2(m_size.X - 4 * 2, m_size.Y - (10 + 4 * 2));
 				} else {
-					// ヘッダなし
+					// ヘッダ없음
 					m_client_pos = new Vector2(4, 4);
 					m_client_size = new Vector2(m_size.X - 4 * 2, m_size.Y - (4 * 2));
 				}
@@ -363,7 +363,7 @@ namespace directx {
 			/*-------------------------------------------------------------------------
 			 ボタン계の현재용背景그리기
 			 マウスを乗せたときに出したいとき용
-			 枠なし
+			 枠없음
 			---------------------------------------------------------------------------*/
 			public void DrawCurrentButtonBack_WithoutFrame(Vector3 pos, Vector2 size) {
 				// 枠付きで그리기

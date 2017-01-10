@@ -126,7 +126,7 @@ namespace gvtrademap_cs {
 			Surface backBuffer = m_d3d_device.device.GetBackBuffer(0, 0, BackBufferType.Mono);
 
 			if (depth != null) {
-				m_d3d_device.device.DepthStencilSurface = null;      // zバッファなし
+				m_d3d_device.device.DepthStencilSurface = null;      // zバッファ없음
 			}
 			m_d3d_device.device.SetRenderTarget(0, m_cityTexture.GetSurfaceLevel(0));
 
