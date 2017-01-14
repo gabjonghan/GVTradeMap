@@ -301,7 +301,7 @@
 	  <item name="ゆで달걀" option="+" />
 	  <item name="鶏のロースト" option="+" />
 	  <item name="ポークソテーリンゴ添え" option="+" />
-	  <item name="ヒラメの와인蒸し" option="+" />
+	  <item name="광어の와인蒸し" option="+" />
 	  <item name="호밀パン" option="+" />
 	  <item name="건포도入り호밀パン" option="+" />
 	  <item name="アップルパイ" option="+" />
@@ -323,7 +323,7 @@
 	</group>
 	<group name="[도구]">
 	  <item name="펠트製アクトン" price="8300" />
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="リンネル製ペチコート" price="8300" />
 	  <item name="トリコルヌ" price="23000" />
 	  <item name="羽付トリコルヌ" option="*" price="33000" investment="120k" />
@@ -890,7 +890,7 @@
 	  <item name="ゆで달걀" option="+" />
 	  <item name="鶏のロースト" option="+" />
 	  <item name="ポークソテーリンゴ添え" option="+" />
-	  <item name="ヒラメの와인蒸し" option="+" />
+	  <item name="광어の와인蒸し" option="+" />
 	  <item name="호밀パン" option="+" />
 	  <item name="건포도入り호밀パン" option="+" />
 	  <item name="アップルパイ" option="+" />
@@ -1693,7 +1693,7 @@
 	  <item name="철재" option="*" price="703" investment="400k" />
 	</group>
 	<group name="[도구]">
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="ジレ" price="27500" />
 	  <item name="ブレストプレート" option="*" price="104000" investment="320k" />
 	  <item name="羽付ピューリタンハット" option="*" price="36700" investment="120k" />
@@ -2226,8 +2226,8 @@
 	  <item name="예비돛" option="-" />
 	  <item name="프랑키스카" option="-" />
 	  <item name="갑판 청소용 브러시" option="-" />
-	  <item name="ニシンの燻製" option="+" />
-	  <item name="タラの와인蒸し" option="+" />
+	  <item name="청어の燻製" option="+" />
+	  <item name="대구の와인蒸し" option="+" />
 	  <item name="鮭のムニエル" option="+" />
 	  <item name="ビスケット" option="+" />
 	  <item name="マフィン" option="+" />
@@ -2863,7 +2863,7 @@
 	</group>
 	<group name="[도구]">
 	  <item name="펠트製アクトン" price="8300" />
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="シュルコー" price="30000" />
 	  <item name="ターバン" price="31500" />
 	  <item name="解毒剤" price="100" />
@@ -3277,7 +3277,7 @@
 	  <item name="예비돛" option="-" />
 	  <item name="프랑키스카" option="-" />
 	  <item name="갑판 청소용 브러시" option="-" />
-	  <item name="エビのハーブマリネ" option="+" />
+	  <item name="새우のハーブマリネ" option="+" />
 	  <item name="누에콩のスープ" option="+" />
 	  <item name="ゆで달걀" option="+" />
 	  <item name="バジリコスパゲティ" option="+" />
@@ -3492,11 +3492,11 @@
 	  <item name="산호" option="*" price="2760" investment="240k" />
 	</group>
 	<group name="[도구]">
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="펠트製저킨" price="23000" />
 	  <item name="スパニッシュトーク" price="12400" />
 	  <item name="羽付スパニッシュトーク" price="20000" />
-	  <item name="アジシェ" price="32600" />
+	  <item name="전갱이シェ" price="32600" />
 	  <item name="ターバン" price="31500" />
 	  <item name="레이스アップブーツ" price="17400" />
 	  <item name="解毒剤" price="100" />
@@ -3728,7 +3728,7 @@
 	  <item name="목상" option="*" price="872" />
 	</group>
 	<group name="[도구]">
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="ジレ" price="27500" />
 	  <item name="釣具" price="2500" />
 	  <item name="トビの羽" price="100" />
@@ -3761,9 +3761,9 @@
 	<group name="[도구]">
 	  <item name="펠트製アクトン" price="8300" />
 	  <item name="牛皮製ベスト" price="3800" />
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="イェレク" price="58400" />
-	  <item name="アジシェ" price="32600" />
+	  <item name="전갱이シェ" price="32600" />
 	  <item name="ターバン" price="31500" />
 	  <item name="解毒剤" price="100" />
 	  <item name="トビの羽" price="100" />
@@ -5346,7 +5346,7 @@
 	</group>
 	<group name="[도구]">
 	  <item name="コットン製アクトン" price="12300" />
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="リンネル製ペチコート" price="8300" />
 	  <item name="アドミラルコート" option="*" price="144000" />
 	  <item name="バイコルヌ" price="23000" />
@@ -5933,7 +5933,7 @@
 	</group>
 	<group name="[도구]">
 	  <item name="펠트製アクトン" price="8300" />
-	  <item name="バッカニアベスト" price="11800" />
+	  <item name="バッ게アベスト" price="11800" />
 	  <item name="リンネル製ペチコート" price="8300" />
 	  <item name="イェレク" option="*" price="58400" />
 	  <item name="パデッドロール" option="*" price="40800" investment="120k" />
@@ -6757,7 +6757,7 @@
 	  <item name="サークルクロス" price="5000" />
 	  <item name="フィッシャーマン" price="5000" />
 	  <item name="フォックス" price="5000" />
-	  <item name="エイプ" price="5000" />
+	  <item name="가오리プ" price="5000" />
 	  <item name="バタフライ" price="5000" />
 	  <item name="アドミラル" price="5000" />
 	  <item name="アンカー" price="5000" />
@@ -7423,7 +7423,7 @@
 	<group name="[도구]">
 	  <item name="ブルンジュク" price="66100" />
 	  <item name="アガール" price="25400" />
-	  <item name="アジシェ" price="32600" />
+	  <item name="전갱이シェ" price="32600" />
 	  <item name="ターバン" price="31500" />
 	  <item name="アラビアンシューズ" price="28100" />
 	  <item name="レザーブーツ" price="26200" />
@@ -7633,7 +7633,7 @@
 	</group>
 	<group name="[도구]">
 	  <item name="ブルンジュク" price="66100" />
-	  <item name="アジシェ" price="32600" />
+	  <item name="전갱이シェ" price="32600" />
 	  <item name="ターバン" price="31500" />
 	  <item name="イクール" option="*" price="35000" investment="240k" />
 	  <item name="シミター" price="29000" />
@@ -9024,7 +9024,7 @@
 	  <item name="タヒボボトル" option="*" price="600" />
 	  <item name="強壮剤" price="300" />
 	  <item name="행운권(NO.11)" option="$" />
-	  <item name="ボラ民族服の縫製법" option="%" />
+	  <item name="숭어民族服の縫製법" option="%" />
 	</group>
 	<group name="[공방]">
 	  <item name="船塗料" price="500" />
@@ -9941,7 +9941,7 @@
 	  <item name="デルフィン" price="5000" />
 	  <item name="サークルクロス" price="5000" />
 	  <item name="フィッシャーマン" price="5000" />
-	  <item name="エイプ" price="5000" />
+	  <item name="가오리プ" price="5000" />
 	  <item name="バタフライ" price="5000" />
 	  <item name="アドミラル" price="5000" />
 	  <item name="アンカー" price="5000" />
@@ -10269,7 +10269,7 @@
 	  <item name="クジラ" price="5000" />
 	  <item name="サークルクロス" price="5000" />
 	  <item name="フィッシャーマン" price="5000" />
-	  <item name="エイプ" price="5000" />
+	  <item name="가오리プ" price="5000" />
 	  <item name="バタフライ" price="5000" />
 	  <item name="アドミラル" price="5000" />
 	  <item name="アンカー" price="5000" />
@@ -11021,7 +11021,7 @@
 	  <item name="デルフィン" price="5000" />
 	  <item name="サークルクロス" price="5000" />
 	  <item name="フィッシャーマン" price="5000" />
-	  <item name="エイプ" price="5000" />
+	  <item name="가오리プ" price="5000" />
 	  <item name="バタフライ" price="5000" />
 	  <item name="アドミラル" price="5000" />
 	  <item name="サンシャイン" price="5000" />
@@ -11226,7 +11226,7 @@
 	  <item name="スコーピオン" price="5000" />
 	  <item name="サークルクロス" price="5000" />
 	  <item name="フィッシャーマン" price="5000" />
-	  <item name="エイプ" price="5000" />
+	  <item name="가오리プ" price="5000" />
 	  <item name="バタフライ" price="5000" />
 	  <item name="アドミラル" price="5000" />
 	  <item name="アンカー" price="5000" />
@@ -12690,7 +12690,7 @@
 	  <item name="デルフィン" price="5000" />
 	  <item name="サークルクロス" price="5000" />
 	  <item name="フィッシャーマン" price="5000" />
-	  <item name="エイプ" price="5000" />
+	  <item name="가오리プ" price="5000" />
 	  <item name="バタフライ" price="5000" />
 	  <item name="アドミラル" price="5000" />
 	  <item name="アンカー" price="5000" />
@@ -13475,7 +13475,7 @@
 	  <item name="安眠のハンモック" option="-" />
 	  <item name="目印のリボン" option="-" />
 	  <item name="おにぎり" option="+" />
-	  <item name="해풀と豆腐の味噌汁" option="+" />
+	  <item name="해초と豆腐の味噌汁" option="+" />
 	  <item name="芋の味噌田楽" option="+" />
 	  <item name="豆腐" option="+" />
 	  <item name="ぜんざい" option="+" />
@@ -16553,1455 +16553,1055 @@
   </cityinfo>
   <cityinfo name="노르웨이해">
 	<group name="[교역]">
-	  <item name="ニシン" />
-	  <item name="サンマ" />
-	  <item name="アカウオ" />
-	  <item name="キンメダイ" />
-	  <item name="タラ" />
-	  <item name="サケ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="넙치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="유틀란드 반도 앞바다">
 	<group name="[교역]">
-	  <item name="ニシン" />
-	  <item name="タラ" />
-	  <item name="イワシ" />
-	  <item name="アカウオ" />
-	  <item name="カレイ" />
-	  <item name="シタビラメ" />
-	  <item name="ホウボウ" />
-	  <item name="サンマ" />
-	  <item name="キンメダイ" />
-	  <item name="해水" price="-1" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="혀가자미" />
+	  <item name="성대" />
+	  <item name="황어" />
+	  <item name="금눈돔" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="북해">
 	<group name="[교역]">
-	  <item name="ニシン" />
-	  <item name="ホウボウ" />
-	  <item name="サンマ" />
-	  <item name="アカウオ" />
-	  <item name="カレイ" />
-	  <item name="タラ" />
-	  <item name="シタビラメ" />
-	  <item name="キンメダイ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="꽁치" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="혀가자미" />
+	  <item name="가자미" />
+	  <item name="성대" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	  <item name="게" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="발트해">
 	<group name="[교역]">
-	  <item name="アカウオ" />
-	  <item name="イワシ" />
-	  <item name="サケ" />
-	  <item name="サンマ" />
-	  <item name="タラ" />
-	  <item name="チョウザメ" />
-	  <item name="ニシン" />
-	  <item name="ヤリイカ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="대구" />
+	  <item name="철갑상어" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="브리튼 섬 남부">
 	<group name="[교역]">
-	  <item name="ニシン" />
-	  <item name="キンメダイ" />
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="サンマ" />
-	  <item name="カレイ" />
-	  <item name="シタビラメ" />
-	  <item name="アカウオ" />
-	  <item name="マンボウ" />
-	  <item name="ホウボウ" />
-	  <item name="ウナギ" />
-	  <item name="주석キ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="고등어" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="꽁치" />
+	  <item name="혀가자미" />
+	  <item name="가자미" />
+	  <item name="농어" />
+	  <item name="성대" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="브리튼 섬 북부">
 	<group name="[교역]">
-	  <item name="アカウオ" />
-	  <item name="イワシ" />
-	  <item name="ウナギ" />
-	  <item name="カレイ" />
-	  <item name="サケ" />
-	  <item name="シタビラメ" />
-	  <item name="タラ" />
-	  <item name="ニシン" />
-	  <item name="ホウボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="혀가자미" />
+	  <item name="가자미" />
+	  <item name="뱀장어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="연어" />
+	  <item name="해수" price="-1" />
+	  <item name="게" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="비스케이만">
 	<group name="[교역]">
-	  <item name="サンマ" />
-	  <item name="イワシ" />
-	  <item name="キンメダイ" />
-	  <item name="ニシン" />
-	  <item name="カレイ" />
-	  <item name="シタビラメ" />
-	  <item name="マンボウ" />
-	  <item name="ホウボウ" />
-	  <item name="ウナギ" />
-	  <item name="주석キ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="꽁치" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="혀가자미" />
+	  <item name="가자미" />
+	  <item name="금눈돔" />
+	  <item name="개복치" />
+	  <item name="해수" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="북동대서양">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ウナギ" />
-	  <item name="カレイ" />
-	  <item name="サンマ" />
-	  <item name="シタビラメ" />
-	  <item name="タラ" />
-	  <item name="ニシン" />
-	  <item name="マトウダイ" />
-	  <item name="ホウボウ" />
-	  <item name="ヤリイカ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
+	  <item name="꽁치" />
+	  <item name="뱀장어" />
+	  <item name="오징어" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="혀가자미" />
+	  <item name="가자미" />
+	  <item name="대구" />
+	  <item name="성대" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="북대서양">
 	<group name="[교역]">
-	  <item name="ソウダカツオ" />
-	  <item name="イワシ" />
-	  <item name="マンボウ" />
-	  <item name="カンパチ" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="달고기" />
+	  <item name="잿방어" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="カマスサワラ" />
-	  <item name="マトウダイ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="리스본 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="サバ" />
+	  <item name="고등어" />
+	  <item name="벤자리" />
+	  <item name="오징어" />
+	  <item name="정어리" />
+	  <item name="달고기" />
+	  <item name="만새기" />
+	  <item name="참돔" />
+	  <item name="꼬치삼치" />
+	  <item name="잿방어" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="カンパチ" />
-	  <item name="カマスサワラ" />
-	  <item name="サワラ" />
-	  <item name="ヤリイカ" />
-	  <item name="マダイ" />
-	  <item name="マンボウ" />
-	  <item name="マトウダイ" />
-	  <item name="アオザメ" />
-	  <item name="カジキ" />
-	  <item name="イサキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="청상아리" />
+	  <item name="청새치" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カニ" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="마데이라 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="シイラ" />
-	  <item name="サバ" />
-	  <item name="ソウダカツオ" />
-	  <item name="カジキ" />
-	  <item name="カマスサワラ" />
-	  <item name="マツダイ" />
-	  <item name="サワラ" />
-	  <item name="マトウダイ" />
-	  <item name="カツオ" />
+	  <item name="고등어" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="달고기" />
+	  <item name="만새기" />
+	  <item name="백미돔" />
+	  <item name="가다랑어" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="カンパチ" />
-	  <item name="マンボウ" />
-	  <item name="アオザメ" />
-	  <item name="ホオジロザメ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="삼치" />
+	  <item name="잿방어" />
+	  <item name="청상아리" />
+	  <item name="청새치" />
 	  <item name="통나무" price="-1" />
-	  <item name="カニ" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="지브롤터 해협">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="アジ" />
-	  <item name="クロダイ" />
-	  <item name="マンボウ" />
-	  <item name="カサゴ" />
+	  <item name="고등어" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="감성돔" />
 	  <item name="다랑어" />
-	  <item name="シイラ" />
-	  <item name="マツダイ" />
-	  <item name="マトウダイ" />
-	  <item name="アオザメ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="청상아리" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="ムール貝" price="-1" />
-	  <item name="산호" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="홍합" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="발레아레스제도 앞바다">
 	<group name="[교역]">
-	  <item name="サバ" />
-	  <item name="アジ" />
-	  <item name="イワシ" />
-	  <item name="カマスサワラ" />
-	  <item name="カレイ" />
-	  <item name="カサゴ" />
-	  <item name="クロダイ" />
-	  <item name="ホオジロザメ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="고등어" />
+	  <item name="쏨뱅이" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="가자미" />
+	  <item name="감성돔" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="ムール貝" price="-1" />
-	  <item name="カニ" price="-1" />
-	  <item name="산호" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="홍합" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="리그리아 해">
 	<group name="[교역]">
-	  <item name="アジ" />
-	  <item name="イワシ" />
-	  <item name="カサゴ" />
-	  <item name="カジキ" />
-	  <item name="カマスサワラ" />
-	  <item name="クロダイ" />
-	  <item name="サバ" />
-	  <item name="ハタ" />
-	  <item name="ホオジロザメ" />
-	  <item name="マンボウ" />
-	  <item name="ヤリイカ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="ムール貝" price="-1" />
+	  <item name="쏨뱅이" />
+	  <item name="오징어" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="개복치" />
+	  <item name="홍합" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="티레니아 해">
 	<group name="[교역]">
-	  <item name="ヤリイカ" />
-	  <item name="カサゴ" />
-	  <item name="カジキ" />
-	  <item name="アジ" />
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="カマスサワラ" />
-	  <item name="ハタ" />
-	  <item name="マンボウ" />
+	  <item name="쏨뱅이" />
+	  <item name="오징어" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="도루묵" />
+	  <item name="꼬치삼치" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="ホオジロザメ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="ムール貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="홍합" price="-1" />
 	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="이오니아 해">
 	<group name="[교역]">
-	  <item name="アジ" />
-	  <item name="サバ" />
-	  <item name="アオザメ" />
-	  <item name="イワシ" />
+	  <item name="고등어" />
+	  <item name="숭어" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
 	  <item name="다랑어" />
-	  <item name="ボラ" />
-	  <item name="ハタ" />
-	  <item name="ヤリイカ" />
-	  <item name="マンボウ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="ムール貝" price="-1" />
-	  <item name="산호" price="-1" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
 	  <item name="사금" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아드리아 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="アジ" />
-	  <item name="カサゴ" />
-	  <item name="カレイ" />
-	  <item name="ハタ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="ムール貝" price="-1" />
+	  <item name="쏨뱅이" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="가자미" />
+	  <item name="도루묵" />
+	  <item name="개복치" />
+	  <item name="해수" price="-1" />
+	  <item name="사금" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="동 지중해">
 	<group name="[교역]">
-	  <item name="アジ" />
-	  <item name="アロワナ" />
-	  <item name="イワシ" />
-	  <item name="カサゴ" />
-	  <item name="サバ" />
-	  <item name="シビレナマズ" />
-	  <item name="タコ" />
-	  <item name="テラピア" />
-	  <item name="ナイルパーチ" />
-	  <item name="ハタ" />
-	  <item name="フグ" />
-	  <item name="ボラ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="문어" />
+	  <item name="숭어" />
+	  <item name="쏨뱅이" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="도루묵" />
+	  <item name="전기메기" />
+	  <item name="테라피아" />
+	  <item name="나일파치" />
+	  <item name="아로와나" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="ムール貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="홍합" price="-1" />
 	  <item name="산호" price="-1" />
 	  <item name="사금" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="흑해">
 	<group name="[교역]">
-	  <item name="アジ" />
-	  <item name="イワシ" />
-	  <item name="ウナギ" />
-	  <item name="チョウザメ" />
-	  <item name="ボラ" />
-	  <item name="유럽オオナマズ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="숭어" />
+	  <item name="뱀장어" />
+	  <item name="유럽메기" />
+	  <item name="철갑상어" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="ムール貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="홍합" price="-1" />
 	  <item name="사금" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="카나리아 앞바다">
 	<group name="[교역]">
-	  <item name="ソウダカツオ" />
-	  <item name="イワシ" />
-	  <item name="シイラ" />
-	  <item name="サワラ" />
-	  <item name="サバ" />
-	  <item name="マツダイ" />
-	  <item name="マンボウ" />
-	  <item name="カマスサワラ" />
-	  <item name="マダイ" />
-	  <item name="アオザメ" />
-	  <item name="ホオジロザメ" />
-	  <item name="カジキ" />
-	  <item name="タコ" />
+	  <item name="고등어" />
+	  <item name="문어" />
+	  <item name="정어리" />
+	  <item name="만새기" />
+	  <item name="백미돔" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="청상아리" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="곡물해안 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="オキ주석キ" />
-	  <item name="サバ" />
-	  <item name="サワラ" />
-	  <item name="다랑어" />
-	  <item name="ソウダカツオ" />
-	  <item name="マダイ" />
-	  <item name="シイラ" />
-	  <item name="カマスサワラ" />
-	  <item name="ホオジロザメ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="고등어" />
+	  <item name="정어리" />
+	  <item name="다금바리" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="황금해안 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="サバ" />
+	  <item name="고등어" />
+	  <item name="정어리" />
+	  <item name="참돔" />
+	  <item name="꼬치삼치" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="マダイ" />
-	  <item name="カマスサワラ" />
-	  <item name="ソウダカツオ" />
-	  <item name="サワラ" />
-	  <item name="ホオジロザメ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="백상어" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남대서양">
 	<group name="[교역]">
-	  <item name="サバ" />
-	  <item name="イワシ" />
+	  <item name="고등어" />
+	  <item name="정어리" />
 	  <item name="다랑어" />
-	  <item name="アオザメ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="기니 만">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="ソウダカツオ" />
-	  <item name="マダイ" />
-	  <item name="サワラ" />
-	  <item name="カマスサワラ" />
-	  <item name="マンボウ" />
-	  <item name="カジキ" />
-	  <item name="オニカマス" />
-	  <item name="ヤリイカ" />
-	  <item name="ホオジロザメ" />
-	  <item name="다랑어" />
-	  <item name="マトウダイ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="고등어" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="참돔" />
+	  <item name="창꼬치" />
+	  <item name="꼬치삼치" />
+	  <item name="삼치" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="나미비아 앞바다">
 	<group name="[교역]">
-	  <item name="サバ" />
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="다랑어" />
-	  <item name="アオザメ" />
-	  <item name="カジキ" />
-	  <item name="カマスサワラ" />
-	  <item name="ホオジロザメ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="고등어" />
+	  <item name="정어리" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="희망봉 앞바다">
 	<group name="[교역]">
-	  <item name="サバ" />
-	  <item name="イワシ" />
+	  <item name="고등어" />
 	  <item name="다랑어" />
-	  <item name="アオザメ" />
-	  <item name="ホオジロザメ" />
-	  <item name="オニカマス" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아굴라스 곶">
 	<group name="[교역]">
-	  <item name="ソウダカツオ" />
-	  <item name="オニカマス" />
-	  <item name="サバ" />
-	  <item name="ホオジロザメ" />
-	  <item name="다랑어" />
-	  <item name="イワシ" />
-	  <item name="アオザメ" />
-	  <item name="ヒラアジ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="정어리" />
+	  <item name="잿방어" />
+	  <item name="백상어" />
+	  <item name="청상아리" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아굴라스 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="オニカマス" />
-	  <item name="ソウダカツオ" />
-	  <item name="サバ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="모잠비크 해협">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ソウダカツオ" />
-	  <item name="サバ" />
-	  <item name="カツオ" />
-	  <item name="다랑어" />
-	  <item name="カンパチ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
+	  <item name="흑줄점전갱이" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남서 인도양">
 	<group name="[교역]">
-	  <item name="カツオ" />
-	  <item name="ソウダカツオ" />
-	  <item name="イワシ" />
-	  <item name="カジキ" />
+	  <item name="잿방어" />
 	  <item name="다랑어" />
-	  <item name="ヒラアジ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="마다가스카르 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="オニカマス" />
-	  <item name="ソウダカツオ" />
-	  <item name="グルクマ" />
-	  <item name="다랑어" />
-	  <item name="サバ" />
-	  <item name="カツオ" />
-	  <item name="カンパチ" />
-	  <item name="ヒラアジ" />
-	  <item name="カマスサワラ" />
-	  <item name="マンボウ" />
-	  <item name="カジキ" />
-	  <item name="アオザメ" />
-	  <item name="ホオジロザメ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="고등어" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="그루쿠마" />
+	  <item name="잿방어" />
+	  <item name="가다랑어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="청새치" />
+	  <item name="청상아리" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="잔지바르 앞바다">
 	<group name="[교역]">
-	  <item name="アオザメ" />
-	  <item name="ソウダカツオ" />
-	  <item name="カツオ" />
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="グルクマ" />
-	  <item name="다랑어" />
-	  <item name="カンパチ" />
-	  <item name="ヒラアジ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아라비아 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="ソウダカツオ" />
-	  <item name="グルクマ" />
-	  <item name="カツオ" />
-	  <item name="マンボウ" />
-	  <item name="アオザメ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="고등어" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="그루쿠마" />
+	  <item name="가다랑어" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="홍해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ソウダカツオ" />
-	  <item name="グルクマ" />
-	  <item name="マンボウ" />
-	  <item name="ブダイ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="그루쿠마" />
+	  <item name="앵무고기" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="페르시아 만">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="アジ" />
-	  <item name="グルクマ" />
-	  <item name="ブダイ" />
-	  <item name="マンボウ" />
+	  <item name="고등어" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="그루쿠마" />
+	  <item name="앵무고기" />
 	  <item name="다랑어" />
-	  <item name="カジキ" />
-	  <item name="アオザメ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="인도 서쪽 해안 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="アジ" />
-	  <item name="ソウダカツオ" />
-	  <item name="オニカマス" />
-	  <item name="タカサゴ" />
-	  <item name="グルクマ" />
-	  <item name="ヒラアジ" />
-	  <item name="カンパチ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="인도 남쪽 해안 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="オニカマス" />
-	  <item name="カジキ" />
-	  <item name="カツオ" />
-	  <item name="カンパチ" />
-	  <item name="グルクマ" />
-	  <item name="ソウダカツオ" />
-	  <item name="タカサゴ" />
-	  <item name="ヒラアジ" />
-	  <item name="マンボウ" />
-	  <item name="アオザメ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="바나나피쉬" />
+	  <item name="정어리" />
+	  <item name="그루쿠마" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="안다만 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="オニカマス" />
-	  <item name="カンパチ" />
-	  <item name="グルクマ" />
-	  <item name="コウイカ" />
-	  <item name="ソウダカツオ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중부 인도양">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="オニカマス" />
-	  <item name="カツオ" />
-	  <item name="ソウダカツオ" />
+	  <item name="물치 다랑어" />
+	  <item name="창꼬치" />
+	  <item name="가다랑어" />
 	  <item name="다랑어" />
-	  <item name="ヒラアジ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="청상아리" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="벵갈만">
 	<group name="[교역]">
-	  <item name="タカサゴ" />
-	  <item name="イワシ" />
-	  <item name="ソウダカツオ" />
-	  <item name="グルクマ" />
-	  <item name="オニカマス" />
-	  <item name="カツオ" />
-	  <item name="コウイカ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="바나나피쉬" />
+	  <item name="정어리" />
+	  <item name="창꼬치" />
+	  <item name="가다랑어" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="산후안 앞바다">
 	<group name="[교역]">
-	  <item name="オニカマス" />
-	  <item name="カマスサワラ" />
-	  <item name="ソウダカツオ" />
-	  <item name="イワシ" />
-	  <item name="サワラ" />
-	  <item name="해水" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="창꼬치" />
+	  <item name="꼬치삼치" />
+	  <item name="삼치" />
+	  <item name="통나무" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="안틸 제도 앞바다">
 	<group name="[교역]">
-	  <item name="カマスサワラ" />
-	  <item name="サバ" />
-	  <item name="イワシ" />
+	  <item name="고등어" />
+	  <item name="이빨다랑어" />
+	  <item name="창꼬치" />
+	  <item name="백미돔" />
+	  <item name="가다랑어" />
+	  <item name="다금바리" />
 	  <item name="다랑어" />
-	  <item name="カツオ" />
-	  <item name="ホオジロザメ" />
-	  <item name="オニカマス" />
-	  <item name="サワラ" />
-	  <item name="アオザメ" />
-	  <item name="マツダイ" />
-	  <item name="シイラ" />
-	  <item name="マトウダイ" />
-	  <item name="スギ" />
-	  <item name="カンパチ" />
-	  <item name="イサキ" />
-	  <item name="ハガツオ" />
-	  <item name="オキ주석キ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="삼치" />
+	  <item name="청새치" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="서 카리브 해">
 	<group name="[교역]">
-	  <item name="アオザメ" />
-	  <item name="イワシ" />
-	  <item name="オニカマス" />
-	  <item name="カマスサワラ" />
-	  <item name="スギ" />
-	  <item name="주석キ" />
-	  <item name="ヒラアジ" />
-	  <item name="ホオジロザメ" />
+	  <item name="정어리" />
+	  <item name="날새기" />
+	  <item name="창꼬치" />
+	  <item name="다금바리" />
 	  <item name="다랑어" />
-	  <item name="マトウダイ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="청상아리" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
-	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="버뮤다제도 앞바다">
 	<group name="[교역]">
-	  <item name="サワラ" />
-	  <item name="サバ" />
-	  <item name="イワシ" />
-	  <item name="オキ주석キ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="개복치" />
+	  <item name="고등어" />
+	  <item name="정어리" />
+	  <item name="삼치" />
+	  <item name="새우" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="코드 곶 앞바다">
 	<group name="[교역]">
-	  <item name="ニシン" />
-	  <item name="サバ" />
-	  <item name="イワシ" />
-	  <item name="ブルーフィッシュ" />
-	  <item name="ポーギー" />
-	  <item name="タラ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="고등어" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="도미" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="멕시코만">
 	<group name="[교역]">
-	  <item name="イサキ" />
-	  <item name="イワシ" />
-	  <item name="オキ주석キ" />
-	  <item name="オニカマス" />
-	  <item name="カマスサワラ" />
-	  <item name="サバ" />
-	  <item name="スギ" />
-	  <item name="ターポン" />
-	  <item name="ハガツオ" />
-	  <item name="ヒラアジ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="벤자리" />
+	  <item name="정어리" />
+	  <item name="날새기" />
+	  <item name="창꼬치" />
+	  <item name="꼬치삼치" />
+	  <item name="다금바리" />
+	  <item name="타폰" />
+	  <item name="해수" price="-1" />
 	  <item name="용연향" price="-1" />
-	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남 카리브 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="ボラ" />
-	  <item name="サワラ" />
-	  <item name="シイラ" />
-	  <item name="オニカマス" />
-	  <item name="カマスサワラ" />
-	  <item name="カンパチ" />
-	  <item name="イサキ" />
-	  <item name="ハガツオ" />
-	  <item name="オキ주석キ" />
-	  <item name="カツオ" />
-	  <item name="다랑어" />
-	  <item name="カジキ" />
-	  <item name="ターポン" />
-	  <item name="アメリカナマズ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="고등어" />
+	  <item name="벤자리" />
+	  <item name="창꼬치" />
+	  <item name="백미돔" />
+	  <item name="꼬치삼치" />
+	  <item name="잿방어" />
+	  <item name="가다랑어" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
-	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙대서양">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カマスサワラ" />
-	  <item name="オニカマス" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="정어리" />
+	  <item name="창꼬치" />
+	  <item name="꼬치삼치" />
+	  <item name="청새치" />
+	  <item name="통나무" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아마존강 유역">
 	<group name="[교역]">
-	  <item name="アメリカナマズ" />
-	  <item name="アロワナ" />
-	  <item name="イワシ" />
-	  <item name="オニカマス" />
-	  <item name="カジキ" />
-	  <item name="カマスサワラ" />
-	  <item name="プレコストムス" />
-	  <item name="ピラニア" />
-	  <item name="ピラルク" />
-	  <item name="エイ" />
-	  <item name="ボラ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
+	  <item name="갑옷메기" />
+	  <item name="피라니아" />
+	  <item name="아로와나" />
+	  <item name="플레코스토무스" />
+	  <item name="피라루크" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
-	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="산로케곶 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カマスサワラ" />
-	  <item name="オニカマス" />
-	  <item name="マンボウ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="정어리" />
+	  <item name="창꼬치" />
+	  <item name="꼬치삼치" />
+	  <item name="개복치" />
+	  <item name="청새치" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
-	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남서 대서양">
 	<group name="[교역]">
-	  <item name="アジ" />
-	  <item name="イワシ" />
-	  <item name="オキ주석キ" />
-	  <item name="ハガツオ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="이빨다랑어" />
+	  <item name="다금바리" />
+	  <item name="해수" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="부에노스아이레스 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="オキ주석キ" />
-	  <item name="ハガツオ" />
-	  <item name="ヒラメ" />
-	  <item name="ペヘレイ" />
-	  <item name="ホウボウ" />
-	  <item name="ヤリイカ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="오징어" />
+	  <item name="정어리" />
+	  <item name="성대" />
+	  <item name="이빨다랑어" />
+	  <item name="광어" />
+	  <item name="페헤레이" />
+	  <item name="개복치" />
+	  <item name="다금바리" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
 	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아르헨티나 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ニシン" />
-	  <item name="ホウボウ" />
-	  <item name="マンボウ" />
-	  <item name="メルルーサ" />
-	  <item name="ヤリイカ" />
-	  <item name="マゼランアイナメ" />
-	  <item name="タラ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
-	  <item name="용연향" price="-1" />
-	  <item name="산호" price="-1" />
+	  <item name="오징어" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="대구" />
+	  <item name="메를루자" />
+	  <item name="마젤란 쥐노래미" />
+	  <item name="해수" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="조지아 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ニシン" />
-	  <item name="ヤリイカ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="진주貝" price="-1" />
-	  <item name="용연향" price="-1" />
-	  <item name="산호" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남 인도양">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ソウダカツオ" />
-	  <item name="다랑어" />
-	  <item name="アオザメ" />
+	  <item name="해수" />
 	</group>
   </cityinfo>
   <cityinfo name="남동 인도양">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ソウダカツオ" />
-	  <item name="アオザメ" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
 	  <item name="다랑어" />
-	  <item name="해水" price="-1" />
+	  <item name="청상아리" />
 	  <item name="통나무" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="자바섬 남쪽 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="グルクマ" />
-	  <item name="カツオ" />
-	  <item name="ソウダカツオ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="그루쿠마" />
+	  <item name="가다랑어" />
+	  <item name="개복치" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="자바 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ボラ" />
-	  <item name="エイ" />
-	  <item name="キス" />
-	  <item name="カサゴ" />
-	  <item name="グルクマ" />
-	  <item name="コウイカ" />
-	  <item name="ソウダカツオ" />
-	  <item name="フエフキダイ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
+	  <item name="갑오징어" />
+	  <item name="물치 다랑어" />
+	  <item name="보리멸" />
+	  <item name="정어리" />
+	  <item name="해수" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="새우" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="시암만">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="エイ" />
-	  <item name="カサゴ" />
-	  <item name="キス" />
-	  <item name="コウイカ" />
-	  <item name="ソウダカツオ" />
-	  <item name="タカサゴ" />
-	  <item name="ボラ" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="바나나피쉬" />
+	  <item name="보리멸" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="셀레베스 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="エイ" />
-	  <item name="オニカマス" />
-	  <item name="カサゴ" />
-	  <item name="カツオ" />
-	  <item name="キス" />
-	  <item name="コウイカ" />
-	  <item name="サワラ" />
-	  <item name="ソウダカツオ" />
-	  <item name="タカサゴ" />
-	  <item name="バラフエダイ" />
-	  <item name="ブダイ" />
-	  <item name="ヒラアジ" />
-	  <item name="フエフキダイ" />
-	  <item name="ホウボウ" />
-	  <item name="ボラ" />
-	  <item name="メガネモチノウオ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="가다랑어" />
+	  <item name="갑오징어" />
+	  <item name="바나나피쉬" />
+	  <item name="보리멸" />
+	  <item name="숭어" />
+	  <item name="쏨뱅이" />
+	  <item name="정어리" />
+	  <item name="창꼬치" />
+	  <item name="앵무고기" />
+	  <item name="갈돔" />
 	  <item name="용연향" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="반다 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="エイ" />
-	  <item name="オニカマス" />
-	  <item name="カツオ" />
-	  <item name="キス" />
-	  <item name="コウイカ" />
-	  <item name="サワラ" />
-	  <item name="ソウダカツオ" />
-	  <item name="バラフエダイ" />
-	  <item name="ヒラアジ" />
-	  <item name="フエフキダイ" />
-	  <item name="ボラ" />
-	  <item name="해水" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="숭어" />
+	  <item name="정어리" />
+	  <item name="갑오징어" />
+	  <item name="보리멸" />
+	  <item name="창꼬치" />
+	  <item name="장미툼돔" />
+	  <item name="가다랑어" />
+	  <item name="가오리" />
+	  <item name="갈돔" />
+	  <item name="삼치" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="서캐롤린 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ボラ" />
-	  <item name="キス" />
-	  <item name="オニカマス" />
-	  <item name="カツオ" />
-	  <item name="ソウダカツオ" />
-	  <item name="サワラ" />
-	  <item name="フエフキダイ" />
-	  <item name="ヒラアジ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="동 캐롤라인 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ソウダカツオ" />
-	  <item name="オニカマス" />
-	  <item name="カツオ" />
-	  <item name="サワラ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="오스트레일리아 서부 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ハガツオ" />
-	  <item name="다랑어" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="エビ" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="퍼스 해저분지">
 	<group name="[교역]">
-	  <item name="アオザメ" />
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ノコギリザメ" />
-	  <item name="ハガツオ" />
-	  <item name="다랑어" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="정어리" />
+	  <item name="이빨다랑어" />
+	  <item name="가다랑어" />
+	  <item name="청상아리" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아라푸라 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="フエダイ" />
-	  <item name="ハガツオ" />
+	  <item name="정어리" />
+	  <item name="이빨다랑어" />
 	  <item name="다랑어" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
+	  <item name="퉁돔" />
+	  <item name="청새치" />
 	  <item name="통나무" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="오스트레일리아 남부 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ハガツオ" />
-	  <item name="ハタ" />
-	  <item name="ノコギリザメ" />
+	  <item name="정어리" />
+	  <item name="이빨다랑어" />
+	  <item name="톱상어" />
+	  <item name="가다랑어" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="マンボウ" />
-	  <item name="해水" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="산호해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カジキ" />
-	  <item name="カツオ" />
-	  <item name="ハタ" />
-	  <item name="ヒラアジ" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
 	  <item name="다랑어" />
-	  <item name="해水" price="-1" />
+	  <item name="흑점줄전갱이" />
 	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="태즈먼 해">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ハタ" />
-	  <item name="ハガツオ" />
-	  <item name="マダイ" />
-	  <item name="カウアイ" />
-	  <item name="カジキ" />
-	  <item name="カツオ" />
+	  <item name="정어리" />
+	  <item name="참돔" />
+	  <item name="카우아이" />
+	  <item name="도루묵" />
+	  <item name="가다랑어" />
 	  <item name="다랑어" />
-	  <item name="ノコギリザメ" />
-	  <item name="해水" price="-1" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="사모아 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カジキ" />
-	  <item name="カツオ" />
-	  <item name="ハタ" />
-	  <item name="ヒラアジ" />
+	  <item name="정어리" />
+	  <item name="도루묵" />
 	  <item name="다랑어" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
+	  <item name="흑점줄전갱이" />
+	  <item name="청새치" />
 	  <item name="통나무" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지 서쪽">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="カジキ" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
+	  <item name="청새치" />
 	  <item name="다랑어" />
-	  <item name="マンボウ" />
+	  <item name="개복치" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지 북쪽">
 	<group name="[교역]">
-	  <item name="アカマンボウ" />
-	  <item name="イワシ" />
-	  <item name="カジキ" />
-	  <item name="다랑어" />
-	  <item name="マンボウ" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
+	  <item name="정어리" />
 	  <item name="다랑어" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지 동쪽">
 	<group name="[교역]">
-	  <item name="イワシ" />
+	  <item name="정어리" />
+	  <item name="개복치" />
 	  <item name="다랑어" />
-	  <item name="マンボウ" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="페루 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カタクチイワシ" />
-	  <item name="メルルーサ" />
-	  <item name="ヒラマサ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="멸치" />
+	  <item name="정어리" />
+	  <item name="부시리" />
+	  <item name="메를루자" />
+	  <item name="해수" price="-1" />
+	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="칠레 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="ヤリイカ" />
-	  <item name="ニシン" />
-	  <item name="メルルーサ" />
-	  <item name="カサゴ" />
-	  <item name="マンボウ" />
-	  <item name="다랑어" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="쏨뱅이" />
+	  <item name="오징어" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="메를루자" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="멜라네시아 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ソウダカツオ" />
-	  <item name="ハタ" />
-	  <item name="ヒラアジ" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
+	  <item name="가다랑어" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="흑점줄전갱이" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙 태평양 해저분지 서쪽">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ヒラアジ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙 태평양 해저분지">
 	<group name="[교역]">
-	  <item name="イワシ" />
+	  <item name="정어리" />
 	  <item name="다랑어" />
-	  <item name="マンボウ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙 태평양 해저분지 동쪽">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カタクチイワシ" />
+	  <item name="멸치" />
+	  <item name="정어리" />
 	  <item name="다랑어" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="테우안테펙 만">
 	<group name="[교역]">
-	  <item name="カタクチイワシ" />
-	  <item name="ヒラマサ" />
-	  <item name="カツオ" />
-	  <item name="ニシン" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="통나무" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="파나마 만">
 	<group name="[교역]">
-	  <item name="カタクチイワシ" />
-	  <item name="ヒラマサ" />
-	  <item name="カツオ" />
-	  <item name="ニシン" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="멸치" />
+	  <item name="청어" />
+	  <item name="부시리" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="갈라파고스제도 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カタクチイワシ" />
-	  <item name="ヒラマサ" />
-	  <item name="다랑어" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="멸치" />
+	  <item name="정어리" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="과야킬 만">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カタクチイワシ" />
-	  <item name="メルルーサ" />
-	  <item name="ヒラマサ" />
-	  <item name="해水" price="-1" />
-	  <item name="해풀" price="-1" />
-	  <item name="통나무" price="-1" />
-	  <item name="エビ" price="-1" />
-	  <item name="カキ" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="동아시아 서부">
 	<group name="[교역]">
-	  <item name="アオリイカ" />
-	  <item name="イワシ" />
-	  <item name="サバ" />
-	  <item name="アジ" />
+	  <item name="흰 꼴뚜기" />
+	  <item name="고등어" />
+	  <item name="뱀장어" />
+	  <item name="전갱이" />
 	  <item name="다랑어" />
-	  <item name="ウナギ" />
-	  <item name="クロダイ" />
+	  <item name="감성돔" />
+	  <item name="가다랑어" />
+	  <item name="다랑어" />
 	</group>
   </cityinfo>
   <cityinfo name="동아시아 동부">
 	<group name="[교역]">
-	  <item name="サバ" />
-	  <item name="カツオ" />
-	  <item name="カサゴ" />
-	  <item name="ヤガラ" />
-	  <item name="アジ" />
-	  <item name="ブリ" />
+	  <item name="고등어" />
+	  <item name="쏨뱅이" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="농어" />
+	  <item name="도루묵" />
+	  <item name="연어" />
+	  <item name="방어" />
+	  <item name="가다랑어" />
 	  <item name="다랑어" />
-	  <item name="해水" price="-1" />
-	  <item name="カニ" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="목재" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="북서 태평양 해저분지">
 	<group name="[교역]">
-	  <item name="サバ" />
-	  <item name="カツオ" />
-	  <item name="ハガツオ" />
-	  <item name="イシダイ" />
-	  <item name="해水" price="-1" />
-	  <item name="통나무" price="-1" />
+	  <item name="고등어" />
+	  <item name="돌돔" />
+	  <item name="이빨다랑어" />
+	  <item name="가다랑어" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
 
   <cityinfo name="하와이 앞바다">
 	<group name="[교역]">
-	  <item name="イワシ" />
-	  <item name="カツオ" />
-	  <item name="ヒラアジ" />
-	  <item name="カジキ" />
-	  <item name="해水" price="-1" />
+	  <item name="정어리" />
+	  <item name="개복치" />
+	  <item name="다랑어" />
+	  <item name="청새치" />
 	  <item name="통나무" price="-1" />
-	  <item name="カキ" price="-1" />
-	  <item name="용연향" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="테라 노바 북쪽">
@@ -18012,7 +17612,7 @@
 	  <item name="기묘한 열매" price="-2" />
 	  <item name="돌" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="クランベリー" price="-1" />
+	  <item name="크랜베리" price="-1" />
 	  <item name="흰색광석" price="-1" />
 			<item name="거대한 바위" price="-1" />
 		</group>
@@ -18041,7 +17641,7 @@
 	  <item name="목재" price="-1" />
 	  <item name="석탄" price="-1" />
 			<item name="석재" price="-1" />
-			<item name="クランベリー" price="-1" />
+			<item name="크랜베리" price="-1" />
 		</group>
   </cityinfo>
   <cityinfo name="북미 대륙 남동쪽">
@@ -18069,7 +17669,7 @@
 	  <item name="검은색 광석" price="-1" />
 	  <item name="붉은색 광석" price="-1" />
 			<item name="석재" price="-1" />
-			<item name="クランベリー" price="-1" />
+			<item name="크랜베리" price="-1" />
 			<item name="거대한 바위" price="-1" />
 		</group>
   </cityinfo>
@@ -18083,7 +17683,7 @@
 	  <item name="검은색 광석" price="-1" />
 	  <item name="붉은색 광석" price="-1" />
 			<item name="석재" price="-1" />
-			<item name="クランベリー" price="-1" />
+			<item name="크랜베리" price="-1" />
 			<item name="거대한 바위" price="-1" />
 		</group>
   </cityinfo>
@@ -18097,7 +17697,7 @@
 	  <item name="검은색 광석" price="-1" />
 	  <item name="붉은색 광석" price="-1" />
 			<item name="석재" price="-1" />
-			<item name="クランベリー" price="-1" />
+			<item name="크랜베리" price="-1" />
 			<item name="거대한 바위" price="-1" />
 		</group>
   </cityinfo>
@@ -18169,8 +17769,8 @@
   </cityinfo>
   <cityinfo name="타코마">
 	<group name="[교역]">
-	  <item name="アイス와인" price="1120" />
-	  <item name="ピューター " price="1214" />
+	  <item name="아이스와인" price="1120" />
+	  <item name="백랍 " price="1214" />
 	  <item name="블루베리" price="458" investment="240k" />
 	  <item name="라즈베리" price="458" investment="320k" />			
 	  <item name="밀" price="47" />
@@ -18188,7 +17788,7 @@
 	  <item name="검은색 광석" price="-1" />
 			<item name="거대한 바위" price="-1" />		
 	  <item name="석재" price="-1" />
-			<item name="クランベリー" price="-1" />
+			<item name="크랜베리" price="-1" />
 			<item name="기묘한 열매" price="-2" />
 		</group>
   </cityinfo>
@@ -18274,7 +17874,7 @@
   </cityinfo>
   <cityinfo name="옥스포드">
 	<group name="[도구]">
-		<item name="バッカニアベスト" price="11800" />
+		<item name="バッ게アベスト" price="11800" />
 		<item name="シュルコー" price="30000" />
 		<item name="ペチコート" price="3800" />
 		<item name="ピューリタンハット" price="26000" />
