@@ -2145,7 +2145,7 @@
 	</info>
 
 	<info name="그레이트플레인스" info_type="Shore2" angle="0">
-		<position x="11765" y="3162" />
+		<position x="11740" y="3556" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
 	</info>
@@ -2181,6 +2181,11 @@
 		<position x="10752" y="2574" />
 		<name_offset1 x="5" y="3" />
 		<name_offset2 x="5" y="3" />
+	</info>
+	<info name="서시베리아 평원" info_type="Shore2" angle="0">
+		<position x="1066" y="1848" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
 	</info>
 
 	<!-- 해역정보 -->
@@ -3193,13 +3198,13 @@
 
 	<!-- 내륙도시 -->
 	<info name="파리" info_type="InlandCity" angle="0">
-		<position x="16358" y="2700" />
+		<position x="143" y="2797" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
 		<city_detail index="197" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" default_country="France" has_name_image="True" lang1="프랑스어" bar_flags="0" />
 	</info>
 	<info name="피렌체" info_type="InlandCity" angle="0">
-		<position x="460" y="2937" />
+		<position x="444" y="2996" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
 		<city_detail index="198" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" default_country="Venezia" has_name_image="True" lang1="이탈리아어" bar_flags="0" />
@@ -3211,13 +3216,13 @@
 		<city_detail index="199" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" default_country="Venezia" has_name_image="True" lang1="이탈리아어" bar_flags="0" />
 	</info>
 	<info name="옥스포드" info_type="InlandCity" angle="0">
-		<position x="16240" y="2277" />
+		<position x="16276" y="2337" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
 		<city_detail index="200" city_type="City" alliance_type="Territory" cultural_sphere="Britain" default_country="England" has_name_image="True" lang1="영어" bar_flags="0" />
 	</info>
 	<info name="프랑크푸르트" url_index="495" info_type="InlandCity" angle="0">
-		<position x="329" y="2629" />
+		<position x="359" y="2539" />
 		<name_offset1 x="0" y="3" />
 		<name_offset2 x="0" y="3" />
 		<city_detail index="206" city_type="City" alliance_type="Territory" cultural_sphere="Germany" default_country="Germany" has_name_image="True" lang1="독일어" bar_flags="0" />
