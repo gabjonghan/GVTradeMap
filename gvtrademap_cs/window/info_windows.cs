@@ -7,7 +7,7 @@
 /*-------------------------------------------------------------------------
  define
 ---------------------------------------------------------------------------*/
-// 공유항로デバッグ
+// 공유 항로 디버그
 //#define	DEBUG_SHARE_ROUTES
 
 /*-------------------------------------------------------------------------
@@ -36,8 +36,8 @@ namespace gvtrademap_cs {
 			speed,	// 속도윈도우
 			position,   // 위치윈도우
 			share,	// 항로공유윈도우
-			interest,   // 이자からの경과일수윈도우
-			build_ship, // 조선からの경과일수윈도우
+			interest,   // 이자로부터의 경과 일수 윈도우
+			build_ship, // 조선으로부터의 경과 일수 윈도우
 			tcp_server, // TCP서버
 		};
 
@@ -47,11 +47,11 @@ namespace gvtrademap_cs {
 		private GvoDatabase m_db;
 		private myship_info m_myship_info;
 
-		private hittest_list m_windows;	  // 윈도우矩形관리
+		private hittest_list m_windows;	  // 윈도우 사각형 관리
 		private Point m_select_pos;  // 십자표시 (이전에 선택한) 위치
 		private Point m_mouse_pos;	// 마우스위치
 
-		// 背景색
+		// 배경색
 		static private Color m_back_color = Color.FromArgb(220, 80, 80, 80);
 
 		/*-------------------------------------------------------------------------
@@ -77,9 +77,9 @@ namespace gvtrademap_cs {
 			m_windows.Add(new hittest());
 			// 항로공유윈도우
 			m_windows.Add(new hittest());
-			// 이자からの경과일수윈도우
+			// 이자로부터의 경과 일수 윈도우
 			m_windows.Add(new hittest());
-			// 조선からの경과일수윈도우
+			// 조선으로부터의 경과 일수 윈도우
 			m_windows.Add(new hittest());
 			// TCP서버
 			m_windows.Add(new hittest());
@@ -87,7 +87,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 업데이트
-		 主に윈도우위치
+		 주로 윈도우 위치
 		---------------------------------------------------------------------------*/
 		public void Update(Point select_pos, Point mouse_pos) {
 			// 표시용정보
@@ -114,7 +114,7 @@ namespace gvtrademap_cs {
 			{
 				hittest ht = m_windows[(int)window_index.share];
 
-				// 상태によっては비표시になる
+				// 상태에 따라서는 비표시가 된다
 				ht.enable = true;
 #if !DEBUG_SHARE_ROUTES
 				if (!m_lib.setting.enable_share_routes) ht.enable = false;
@@ -124,15 +124,15 @@ namespace gvtrademap_cs {
 				ht.rect = new Rectangle(rect.Width - size.Width, prect.Y - size.Height - 3, size.Width, size.Height);
 			}
 
-			// 이자からの경과일수윈도우
+			// 이자로부터의 경과 일수 윈도우
 			{
 				hittest ht = m_windows[(int)window_index.interest];
 
-				// 상태によっては비표시になる
+				// 상태에 따라서는 비표시가 된다
 				ht.enable = true;
 				if (!m_lib.setting.enable_analize_log_chat) ht.enable = false;
 				if (!m_lib.setting.save_searoutes) ht.enable = false;
-				// 서버모드時は유효
+				// 서버 모드일 때는 유효
 				if (m_lib.setting.is_server_mode) ht.enable = true;
 
 				Size size = new Size(78, 14 * 1 + 2);
@@ -140,18 +140,18 @@ namespace gvtrademap_cs {
 				ht.rect = new Rectangle(rect.Width - size.Width, prect.Y - size.Height - 3, size.Width, size.Height);
 			}
 
-			// 조선からの경과일수
+			// 조선으로부터의 경과 일수
 			{
 				hittest ht = m_windows[(int)window_index.build_ship];
 
-				// 상태によっては비표시になる
+				// 상태에 따라서는 비표시가 된다
 				ht.enable = true;
 				if (!m_lib.setting.enable_analize_log_chat) ht.enable = false;
 				if (!m_lib.setting.save_searoutes) ht.enable = false;
-				// 서버모드時は유효
+				// 서버 모드일 때는 유효
 				if (m_lib.setting.is_server_mode) ht.enable = true;
 				if (!m_lib.setting.force_show_build_ship) {
-					// 조선중でないときは비표시
+					// 조선 중이 아닐 때는 비표시
 					ht.enable = m_db.BuildShipCounter.IsNowBuild;
 				}
 
@@ -164,7 +164,7 @@ namespace gvtrademap_cs {
 			{
 				hittest ht = m_windows[(int)window_index.tcp_server];
 
-				// 상태によっては비표시になる
+				// 상태에 따라서는 비표시가 된다
 				ht.enable = true;
 				if (!m_lib.setting.is_server_mode) ht.enable = false;
 
@@ -175,11 +175,11 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 基準となる윈도우矩形を得る
-		 그리기대상の윈도우矩形を返す
+		 기준이 되는 윈도우 사각형을 얻는다
+		 그리기 대상 윈도우 사각형을 반환한다
 		---------------------------------------------------------------------------*/
 		private Rectangle get_parent_window_rect(int start_index) {
-			start_index--;  // 1つ前の윈도우
+			start_index--;  // 하나 앞의 윈도우
 			if (start_index <= (int)window_index.position) {
 				return m_windows[(int)window_index.position].rect;
 			}
@@ -204,9 +204,9 @@ namespace gvtrademap_cs {
 			draw_speed();
 			// 항로공유
 			draw_share();
-			// 이자からの경과일수
+			// 이자로부터의 경과 일수
 			draw_interest();
-			// 조선からの경과일수윈도우
+			// 조선으로부터의 경과 일수 윈도우
 			draw_build_ship();
 			// TCP서버
 			draw_tcp_server();
@@ -216,8 +216,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 현재위치の그리기
-		 ついでに拡縮率も描く
+		 현재 위치 그리기
+		 덤으로 확대축소율도 그린다
 		---------------------------------------------------------------------------*/
 		private void draw_gpos() {
 			hittest ht = m_windows[(int)window_index.position];
@@ -229,19 +229,19 @@ namespace gvtrademap_cs {
 
 			int pos_y = (int)pos.Y + 2 + 1;
 
-			// 拡縮率 배율
+			// 확대축소율 배율
 			int scale = (int)Math.Round((double)m_lib.loop_image.ImageScale * 100);
 			m_lib.device.systemfont.DrawTextR(String.Format("{0}%", scale),
 									(int)pos.X + 75 + OFFSET_X, pos_y, Color.White);
 
-			// 季節
+			// 계절
 			m_lib.device.sprites.AddDrawSpritesNC(new Vector3(pos.X + 6, pos_y, 0.1f), m_lib.icons.GetIcon(icons.icon_index.string04)); // 지도
 			pos_y += 14 - 1;
-			m_lib.device.sprites.AddDrawSpritesNC(new Vector3(pos.X + 6, pos_y, 0.1f), m_lib.icons.GetIcon(icons.icon_index.string03)); // 季節
+			m_lib.device.sprites.AddDrawSpritesNC(new Vector3(pos.X + 6, pos_y, 0.1f), m_lib.icons.GetIcon(icons.icon_index.string03)); // 계절
 			d3d_sprite_rects.rect _rect = m_lib.icons.GetIcon((m_db.GvoSeason.now_season == gvo_season.season.summer) ? icons.icon_index.string06 : icons.icon_index.string05);
 			m_lib.device.sprites.AddDrawSpritesNC(new Vector3(pos.X + 75 + OFFSET_X - 12, pos_y, 0.1f), _rect);
 
-			// 본인の배の위치
+			// 본인 배의 위치
 			pos_y += 14 - 1;
 			string my_pos = "--- , ---";
 			Point tmp_p = game_pos_2_map_pos_for_debug(m_myship_info.pos);
@@ -251,22 +251,22 @@ namespace gvtrademap_cs {
 			m_lib.device.systemfont.DrawTextR(my_pos,
 									(int)pos.X + 75 + OFFSET_X, pos_y, Color.White);
 
-			// 좌클릭した위치
+			// 좌클릭한 위치
 			pos_y += 14 - 1;
 			tmp_p = game_pos_2_map_pos_for_debug(m_select_pos);
 			m_lib.device.systemfont.DrawTextR(String.Format("{0} , {1}", tmp_p.X, tmp_p.Y),
 									(int)pos.X + 75 + OFFSET_X, pos_y, Color.White);
-			// 현재の마우스위치
+			// 현재 마우스 위치
 			pos_y += 14 - 1;
 			Point gpos = transform.client_pos2_game_pos(m_mouse_pos, m_lib.loop_image);
 			tmp_p = game_pos_2_map_pos_for_debug(gpos);
 			m_lib.device.systemfont.DrawTextR(String.Format("{0} , {1}", tmp_p.X, tmp_p.Y),
 									(int)pos.X + 75 + OFFSET_X, pos_y, Color.White);
 			{
-				// 좌클릭した위치にクロスカーソルの표시
-				// 지도좌표に변환
+				// 좌클릭한 위치에 십자 커서 표시
+				// 지도 좌표로 변환
 				Vector2 p = m_lib.loop_image.GlobalPos2LocalPos(transform.game_pos2_map_pos(transform.ToVector2(m_select_pos), m_lib.loop_image));
-				// ループを考慮する
+				// 루프를 고려한다
 				p = m_lib.loop_image.AjustLocalPos(p);
 
 				m_lib.device.sprites.AddDrawSpritesNC(new Vector3(p.X, p.Y, 0.3f),
@@ -275,24 +275,24 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 デバッグ용に측량좌표계から지도좌표계に변환する
-		 デバッグ플래그た立ってないときはそのまま返す
+		 디버그용으로 측량 좌표계에서 지도 좌표계로 변환한다
+		 디버그 플래그가 서 있지 않을 때는 그대로 반환한다
 		---------------------------------------------------------------------------*/
 		private Point game_pos_2_map_pos_for_debug(Point p) {
-			// デバッグ플래그がない場合はそのまま返す
+			// 디버그 플래그가 없는 경우에는 그대로 반환한다
 			if (!m_lib.setting.debug_flag_show_potision) return p;
 			return transform.game_pos2_map_pos(p, m_lib.loop_image);
 		}
 
 		/*-------------------------------------------------------------------------
 		 속도그리기
-		 ついでに진행방향も그리기する
+		 덤으로 진행 방향도 그린다
 		---------------------------------------------------------------------------*/
 		private void draw_speed() {
 			hittest ht = m_windows[(int)window_index.speed];
 			Vector3 pos = new Vector3(ht.rect.X, ht.rect.Y, 0.3f);
 
-			// 枠
+			// 테두리
 			// 속도용
 			m_lib.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(icons.icon_index.speed_background));
 			// 각도용
@@ -324,12 +324,12 @@ namespace gvtrademap_cs {
 			//			m_lib.Device.systemfont.DrawTextR(m_db.speed.speed_knot.ToString("0.00") + "Kt(" + m_db.speed.speed_map.ToString("0.00") + ")",
 			//									pos_x, (int)pos.Y + 1+1, Color.Black);
 			// 각도
-			// 측량からの각도
+			// 측량으로부터의 각도
 			if (m_myship_info.angle >= 0) {
 				m_lib.device.systemfont.DrawTextR(m_myship_info.angle.ToString("0.0"),
 										pos_x - 12, (int)pos.Y + 1 + 1 + 16 + 1, Color.Black);
 			}
-			// 나침반からの각도
+			// 나침반으로부터의 각도
 			if (m_db.SpeedCalculator.angle >= 0) {
 				m_lib.device.systemfont.DrawTextR(m_db.SpeedCalculator.angle.ToString("0.0"),
 										pos_x - 12, (int)pos.Y + 1 + 1 + 16 + 1 + 16 + 1, Color.Black);
@@ -343,7 +343,7 @@ namespace gvtrademap_cs {
 		private void draw_share() {
 			hittest ht = m_windows[(int)window_index.share];
 
-			if (!ht.enable) return;  // 유효ではない
+			if (!ht.enable) return;  // 유효하지 않다
 
 			Vector3 pos = new Vector3(ht.rect.X, ht.rect.Y, 0.1f);
 			Vector2 size = new Vector2(ht.rect.Width, ht.rect.Height);
@@ -357,13 +357,13 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 이자からの경과일수
+		 이자로부터의 경과 일수
 		 윈도우
 		---------------------------------------------------------------------------*/
 		private void draw_interest() {
 			hittest ht = m_windows[(int)window_index.interest];
 
-			if (!ht.enable) return;  // 유효ではない
+			if (!ht.enable) return;  // 유효하지 않다
 
 			Vector3 pos = new Vector3(ht.rect.X, ht.rect.Y, 0.1f);
 			Vector2 size = new Vector2(ht.rect.Width, ht.rect.Height);
@@ -378,13 +378,13 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 조선からの경과일수
+		 조선으로부터의 경과 일수
 		 윈도우
 		---------------------------------------------------------------------------*/
 		private void draw_build_ship() {
 			hittest ht = m_windows[(int)window_index.build_ship];
 
-			if (!ht.enable) return;  // 유효ではない
+			if (!ht.enable) return;  // 유효하지 않다
 
 			Vector3 pos = new Vector3(ht.rect.X, ht.rect.Y, 0.1f);
 			Vector2 size = new Vector2(ht.rect.Width, ht.rect.Height);
@@ -405,7 +405,7 @@ namespace gvtrademap_cs {
 		private void draw_tcp_server() {
 			hittest ht = m_windows[(int)window_index.tcp_server];
 
-			if (!ht.enable) return;  // 유효ではない
+			if (!ht.enable) return;  // 유효하지 않다
 
 			Vector3 pos = new Vector3(ht.rect.X, ht.rect.Y, 0.1f);
 			Vector2 size = new Vector2(ht.rect.Width, ht.rect.Height);
@@ -418,7 +418,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ヒットテスト
+		 히트 테스트
 		---------------------------------------------------------------------------*/
 		public bool HitTest(Point point) {
 			switch (m_windows.HitTest_Index(point)) {
@@ -433,7 +433,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 마우스클릭
-		 ダイア로그표시용に form を必要とする
+		 대화상자 표시용으로 form 이 필요하다
 		---------------------------------------------------------------------------*/
 		public bool OnMouseClick(Point point, MouseButtons mouseButtons, Form form) {
 			switch (m_windows.HitTest_Index(point)) {
@@ -447,10 +447,10 @@ namespace gvtrademap_cs {
 					using (share_routes_form dlg = new share_routes_form(m_db.ShareRoutes.ShareList)) {
 						if (dlg.ShowDialog(form) == DialogResult.OK) {
 							if (dlg.is_selected) {
-								// 선택されてる장소をセンタリングする
+								// 선택된 장소를 센터링한다
 								m_lib.setting.centering_gpos = dlg.selected_position;
 								m_lib.setting.req_centering_gpos.Request();
-								// 선택한のに비표시だとあれなので強制표시
+								// 선택했는데 비표시면 곤란하므로 강제 표시
 								m_lib.setting.draw_share_routes = true;
 							}
 						}
@@ -469,32 +469,32 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ용문자열を得る
+		 툴팁용 문자열을 얻는다
 		---------------------------------------------------------------------------*/
 		public string OnToolTipString(Point pos) {
 			switch (m_windows.HitTest_Index(pos)) {
 				case (int)window_index.position: {
-						string str = "지도拡縮率\n季節(";
+						string str = "지도 확대축소율\n계절(";
 						str += m_db.GvoSeason.next_season_start_shortstr;
-						str += "まで)\n본인 배의 위치\n십자표시の위치\n마우스の위치";
+						str += "까지)\n본인 배의 위치\n십자 표시 위치\n마우스 위치";
 						if (m_lib.setting.debug_flag_show_potision) {
-							str += "\n(デバッグ플래그유효)";
+							str += "\n(디버그 플래그 유효)";
 						}
 						return str;
 					}
-				case (int)window_index.speed: return "속도\n나침반から분석した각도\n측량から분석した각도";
+				case (int)window_index.speed: return "속도\n나침반으로 분석한 각도\n측량으로 분석한 각도";
 				case (int)window_index.share: {
 						string str = "";
 						foreach (ShareRoutes.ShareShip s in m_db.ShareRoutes.ShareList) {
 							if (str != "") str += "\n";
 							str += s.Name;
 						}
-						if (str == "") str = "항로공유メンバーが居ません";
+						if (str == "") str = "항로 공유 멤버가 없습니다";
 						return str;
 					}
 				case (int)window_index.interest: return m_db.InterestDays.GetPopupString();
 				case (int)window_index.build_ship: {
-						return m_db.BuildShipCounter.GetPopupString() + "\n(우클릭で리셋)";
+						return m_db.BuildShipCounter.GetPopupString() + "\n(우클릭으로 리셋)";
 					}
 				case (int)window_index.tcp_server: {
 						gvo_server_service server = m_myship_info.server_service;
@@ -503,10 +503,10 @@ namespace gvtrademap_cs {
 							if (server.is_listening) {
 								return "TCP서버모드\n연결대기";
 							} else {
-								return "TCP서버모드\n서버の시작に실패";
+								return "TCP서버모드\n서버 시작에 실패";
 							}
 						} else {
-							return "TCP서버모드\n연결済\n通信대상:" + client.remote_ep.ToString();
+							return "TCP서버모드\n연결됨\n통신 대상:" + client.remote_ep.ToString();
 						}
 					}
 			}

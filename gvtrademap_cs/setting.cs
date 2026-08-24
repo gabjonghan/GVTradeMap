@@ -25,8 +25,8 @@ namespace gvtrademap_cs
 		Max
 	};
 	public enum MapIcon{
-		Big,				// 대きい아이콘
-		Small,              // 소さい아이콘
+		Big,				// 큰 아이콘
+		Small,              // 작은 아이콘
         CityAndShore,       // 도시와 1차필드만
 		OnlyBigCity,		// 대도시 (소아이콘)
         Hide,
@@ -48,30 +48,30 @@ namespace gvtrademap_cs
 	// 위도, 경도그리기간격
 	public enum TudeInterval{
 		None,			// 없음
-		Interval1000,	// 1000刻み
-		Interval100,	// 100刻み
-		OnlyPoints,		// 좌표値のみ
+		Interval1000,	// 1000 단위
+		Interval100,	// 100 단위
+		OnlyPoints,		// 좌표값만
 	};
-	// 검색フィルタ
+	// 검색 필터
 	public enum _find_filter{
-		world_info,			// 도시정보からのみ
-		item_database,		// 아이템DBからのみ
-		both,				// 両方
+		world_info,			// 도시 정보에서만
+		item_database,		// 아이템 DB 에서만
+		both,				// 양쪽 다
 	};
-	// 검색フィルタ2
+	// 검색 필터 2
 	public enum _find_filter2{
-		name,				// 명칭 등から
+		name,				// 명칭 등에서
 		type,				// 종류별로
 	};
-	// 검색フィルタ3
+	// 검색 필터 3
 	public enum _find_filter3{
-		full_text_search,	// 全文검색(부분일치)
+		full_text_search,	// 전문 검색(부분 일치)
 		full_match,			// 완전일치
 		prefix_search,		// 앞부분일치
 		suffix_search,		// 뒷부분일치
 	};
 
-	// 표시항목ページ
+	// 표시 항목 페이지
 	public enum DrawSettingPage{
 		WebIcons,		// @Web아이콘
 		MemoIcons,		// 메모아이콘
@@ -137,24 +137,24 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	public class GlobalSettings : IIniSaveLoad
 	{
-		// 항로도の保持수の初期値
+		// 항로도 보관 개수의 초기값
 		private const int				DEF_SEAROUTES_GROUP_MAX			= 20;
 		private const int				DEF_TRASH_SEAROUTES_GROUP_MAX	= 200;
 
 		/*-------------------------------------------------------------------------
 		 
 		---------------------------------------------------------------------------*/
-		// 윈도우위치と사이즈
+		// 윈도우 위치와 크기
 		private Point					m_window_location;			// 윈도우위치
 		private Size					m_window_size;				// 윈도우사이즈
 
 		private Point					m_find_window_location;		// 검색윈도우위치
 		private Size					m_find_window_size;			// 검색윈도우사이즈
-		private bool					m_find_window_visible;		// 표시중のときtrue
+		private bool					m_find_window_visible;		// 표시 중일 때 true
 	
 		private Point					m_sea_routes_window_location;	// 항로목록윈도우위치
 		private Size					m_sea_routes_window_size;		// 항로목록윈도우사이즈
-		private bool					m_sea_routes_window_visible;	// 항로목록표시중のときtrue
+		private bool					m_sea_routes_window_visible;	// 항로 목록 표시 중일 때 true
 
 		private	bool					m_save_searoutes;			// 항로기록
 		private bool					m_draw_share_routes;		// 항로공유
@@ -162,68 +162,68 @@ namespace gvtrademap_cs
 		private bool					m_draw_sea_routes;			// 항로도그리기
 		private int						m_draw_popup_day_interval;	// 말풍선표시간격
 		private bool					m_draw_accident;			// 재해그리기
-		private bool					m_center_myship;			// 본인の배중心に그리기
+		private bool					m_center_myship;			// 본인 배 중심으로 그리기
 		private bool					m_draw_myship_angle;		// 예상선그리기
 		private bool					m_draw_web_icons;			// @Web아이콘그리기
 
-		// ダイア로그설정항목
+		// 대화상자 설정 항목
 		private GvoWorldInfo.Server			m_server;					// 서버
 		private GvoWorldInfo.Country			m_country;					// 자국
 		private MapIndex				m_map_index;				// 지도
-		private MapIcon				m_map_icon;					// 지도の아이콘사이즈
-		private MapDrawNames			m_map_draw_names;			// 도시명などを그리기するかどうか
+		private MapIcon				m_map_icon;					// 지도의 아이콘 크기
+		private MapDrawNames			m_map_draw_names;			// 도시명 등을 그릴지 여부
 		private string					m_share_group;				// 항로공유그룹명
 		private string					m_share_group_myname;		// 항로공유표시명
-		private int						m_searoutes_group_max;		// 覚えておく항로도の최대
-		private int						m_trash_searoutes_group_max;	// 覚えておくごみ箱항로도の최대
-		private bool					m_connect_network;			// ネットワークに연결する
-		private bool					m_hook_mouse;				// 마우스の進む/戻るボタンで스킬/도구窓を開く
+		private int						m_searoutes_group_max;		// 기억해 둘 항로도의 최대 개수
+		private int						m_trash_searoutes_group_max;	// 기억해 둘 휴지통 항로도의 최대 개수
+		private bool					m_connect_network;			// 네트워크에 연결한다
+		private bool					m_hook_mouse;				// 마우스의 앞으로/뒤로 버튼으로 스킬/도구 창을 연다
 		private bool					m_windows_vista_aero;		// Aero모드
-		private bool					m_enable_analize_log_chat;	// 재해용に로그を분석する
-		private bool					m_is_share_routes;			// 항로공유する
+		private bool					m_enable_analize_log_chat;	// 재해 확인용으로 로그를 분석한다
+		private bool					m_is_share_routes;			// 항로를 공유한다
 		private CaptureIntervalIndex	m_capture_interval;			// 화면캡처간격
-		private bool					m_connect_web_icon;			// @Web아이콘をダウンロードする
-		private bool					m_compatible_windows_rclick;	// 우클릭の動作をwindows互換にする
+		private bool					m_connect_web_icon;			// @Web 아이콘을 다운로드한다
+		private bool					m_compatible_windows_rclick;	// 우클릭 동작을 windows 호환으로 한다
 		private TudeInterval			m_tude_interval;			// 위도, 경도그리기방법
-		private bool					m_use_mixed_map;			// 항로도즐겨찾기と合成された지도を사용する
-		private bool					m_window_top_most;			// 윈도우を常に最前面に표시する
-		private bool					m_enable_line_antialias;	// 선の그리기の기자기자を경減する
-		private bool					m_enable_sea_routes_aplha;	// アクティブな항로도以외を반투명で그리기する
-		private SSFormat				m_ss_format;				// 스크린샷の書き出しフォーマット
-		private bool					m_remove_near_web_icons;	// 距離が近く同じ종류の@Web아이콘を목록から삭제する
-		private bool					m_draw_capture_info;		// 캡처の디테일を그리기する
+		private bool					m_use_mixed_map;			// 항로도 즐겨찾기와 합성된 지도를 사용한다
+		private bool					m_window_top_most;			// 윈도우를 항상 맨 앞에 표시한다
+		private bool					m_enable_line_antialias;	// 선 그리기의 계단 현상을 줄인다
+		private bool					m_enable_sea_routes_aplha;	// 활성화된 항로도 이외를 반투명으로 그린다
+		private SSFormat				m_ss_format;				// 스크린샷의 기록 포맷
+		private bool					m_remove_near_web_icons;	// 거리가 가깝고 종류가 같은 @Web 아이콘을 목록에서 삭제한다
+		private bool					m_draw_capture_info;		// 캡처 상세를 그린다
 		private bool					m_is_server_mode;			// TCP서버모드
 		private int						m_port_index;				// 포트번호
-		private bool					m_is_mixed_info_names;		// 도시명を지도に合成する
-		private int						m_minimum_draw_days;		// 그리기する최저항해일수
-		private bool					m_enable_favorite_sea_routes_alpha;	// 즐겨찾기항로도を반투명で그리기する
-		private bool					m_draw_favorite_sea_routes_alpha_popup;	// 즐겨찾기항로도の재해ポップアップを그리기する
-		private	bool					m_debug_flag_show_potision;	// 정보윈도우の좌표を지도좌표계で표시する
-		private bool					m_enable_dpi_scaling;	   // DPIスケーリングに대응するフリをする
+		private bool					m_is_mixed_info_names;		// 도시명을 지도에 합성한다
+		private int						m_minimum_draw_days;		// 그릴 최저 항해 일수
+		private bool					m_enable_favorite_sea_routes_alpha;	// 즐겨찾기 항로도를 반투명으로 그린다
+		private bool					m_draw_favorite_sea_routes_alpha_popup;	// 즐겨찾기 항로도의 재해 팝업을 그린다
+		private	bool					m_debug_flag_show_potision;	// 정보 윈도우의 좌표를 지도 좌표계로 표시한다
+		private bool					m_enable_dpi_scaling;	   // DPI 스케일링에 대응하는 척한다
 
-		// 표시関係
-		private string					m_select_info;				// 선택중の세계정보
-		private float					m_map_pos_x;				// 지도の그리기オフセット
-		private float					m_map_pos_y;				// 지도の그리기オフセット
-		private float					m_map_scale;				// 지도の스케일
+		// 표시 관계
+		private string					m_select_info;				// 선택 중인 세계 정보
+		private float					m_map_pos_x;				// 지도의 그리기 오프셋
+		private float					m_map_pos_y;				// 지도의 그리기 오프셋
+		private float					m_map_scale;				// 지도의 스케일
 
 		// 윈도우상태
-		private bool					m_is_item_window_normal_size;	// 통상상태のときtrue
-		private bool					m_is_setting_window_normal_size;	// 통상상태のときtrue
+		private bool					m_is_item_window_normal_size;	// 통상 상태일 때 true
+		private bool					m_is_setting_window_normal_size;	// 통상 상태일 때 true
 
-		private bool					m_is_border_style_none;		// 윈도우枠の표시없음のときtrue
+		private bool					m_is_border_style_none;		// 윈도우 테두리를 표시하지 않을 때 true
 
-		private UniqueString			m_find_strings;				// 검색履歴
-		private _find_filter			m_find_filter;				// 검색フィルタ
-		private _find_filter2			m_find_filter2;				// 검색フィルタ2
-		private _find_filter3			m_find_filter3;				// 검색フィルタ3
+		private UniqueString			m_find_strings;				// 검색 이력
+		private _find_filter			m_find_filter;				// 검색 필터
+		private _find_filter2			m_find_filter2;				// 검색 필터 2
+		private _find_filter3			m_find_filter3;				// 검색 필터 3
 
-		// 이자からの경과일수
+		// 이자로부터의 경과 일수
 		private int						m_interest_days;
 
-		// 조선からの경과일수
-		private bool					m_force_show_build_ship;	// 조선중でなくても윈도우を표시する
-		private bool					m_is_now_build_ship;		// 조선중ならtrue
+		// 조선으로부터의 경과 일수
+		private bool					m_force_show_build_ship;	// 조선 중이 아니어도 윈도우를 표시한다
+		private bool					m_is_now_build_ship;		// 조선 중이면 true
 		private string					m_build_ship_name;			// 선박명
 		private int						m_build_ship_days;			// 조선중일수
 
@@ -236,15 +236,15 @@ namespace gvtrademap_cs
 		private bool						m_draw_setting_myship_angle_with_speed_pos;
 		private bool						m_draw_setting_myship_expect_pos;
 		
-		// リクエスト
+		// 리퀘스트
 		private RequestCtrl			m_req_screen_shot;			// 스크린샷
-		private RequestCtrl			m_req_update_map;			// 지도の合成リクエスト
+		private RequestCtrl			m_req_update_map;			// 지도 합성 리퀘스트
 
-		private RequestCtrl			m_req_centering_gpos;		// 特定の게임좌표をセンタリングするリクエスト
-		private Point					m_centering_gpos;			// センタリングする좌표
+		private RequestCtrl			m_req_centering_gpos;		// 특정 게임 좌표를 센터링하는 리퀘스트
+		private Point					m_centering_gpos;			// 센터링할 좌표
 
-		private RequestCtrl			m_req_spot_item;			// 장소リクエスト
-		private RequestCtrl			m_req_spot_item_changed;	// 장소リクエスト(대상변경)
+		private RequestCtrl			m_req_spot_item;			// 장소 리퀘스트
+		private RequestCtrl			m_req_spot_item_changed;	// 장소 리퀘스트(대상 변경)
 
 		/*-------------------------------------------------------------------------
 		 
@@ -361,13 +361,13 @@ namespace gvtrademap_cs
 		public SSFormat ss_format			{	get{	return m_ss_format;						}
 												set{	m_ss_format	= value;					}}
 
-		// 외부からの항로공유유효かどうかのチェック용
+		// 외부에서 항로 공유가 유효한지 확인하기 위한 것
 		public bool enable_share_routes{
 			get{
-				if(!connect_network)			return false;		// インターネットに연결しない
+				if(!connect_network)			return false;		// 인터넷에 연결하지 않는다
 				if(!is_share_routes)			return false;		// 공유무효
-				if(share_group == "")			return false;		// 그룹명が空欄
-				if(share_group_myname == "")	return false;		// 본인の배の이름が空欄
+				if(share_group == "")			return false;		// 그룹명이 공란
+				if(share_group_myname == "")	return false;		// 본인 배의 이름이 공란
 				return true;		// 유효
 			}
 		}
@@ -389,7 +389,7 @@ namespace gvtrademap_cs
 
 		public bool connect_web_icon{			get{	return m_connect_web_icon;				}
 												set{	m_connect_web_icon	= value;			}}
-		// @Web아이콘を로드かどうかを得る
+		// @Web 아이콘을 로드할지 여부를 얻는다
 		public bool is_load_web_icon{			get{	if(!connect_network)	return false;
 														return connect_web_icon;				}}
 
@@ -463,7 +463,7 @@ namespace gvtrademap_cs
 		public bool draw_setting_myship_expect_pos{					get{	return m_draw_setting_myship_expect_pos;		}
 																	set{	m_draw_setting_myship_expect_pos	= value;	}}
 
-		// 未사용
+		// 미사용
 		public string DefaultIniGroupName			{				get{	return "GlobalSettings";		}}
 
 
@@ -472,12 +472,12 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		public GlobalSettings()
 		{
-			// 初期値설정
+			// 초기값 설정
 			init();
 		}
 
 		/*-------------------------------------------------------------------------
-		 リクエストを전부취소する
+		 리퀘스트를 전부 취소한다
 		---------------------------------------------------------------------------*/
 		public void CancelAllRequests()
 		{
@@ -489,20 +489,20 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 初期値を설정する
+		 초기값을 설정한다
 		---------------------------------------------------------------------------*/
 		private void init()
 		{
-			// 윈도우위치と사이즈
+			// 윈도우 위치와 크기
 			window_location				= new Point(10, 10);
 			window_size					= new Size(640, 400);
-			// 검색윈도우위치と사이즈
+			// 검색 윈도우 위치와 크기
 			find_window_size			= new Size(468, 320);
 			find_window_location		= new Point(window_location.X + ((window_size.Width / 2) - (find_window_size.Width / 2)),
 													window_location.Y + ((window_size.Height / 2) - (find_window_size.Height / 2)));
 			find_window_visible			= false;
 				
-			// 항로도목록윈도우위치と사이즈
+			// 항로도 목록 윈도우 위치와 크기
 			sea_routes_window_size		= new Size(690, 320);
 			sea_routes_window_location	= new Point(window_location.X + ((window_size.Width / 2) - (sea_routes_window_size.Width / 2)),
 													window_location.Y + ((window_size.Height / 2) - (sea_routes_window_size.Height / 2)));
@@ -518,7 +518,7 @@ namespace gvtrademap_cs
 			center_myship				= false;
 			draw_myship_angle			= true;
 
-			// ダイア로그설정항목
+			// 대화상자 설정 항목
 			server						= GvoWorldInfo.Server.Euros;
 			country						= GvoWorldInfo.Country.England;
 			m_map_index					= MapIndex.Map1;
@@ -553,7 +553,7 @@ namespace gvtrademap_cs
 			debug_flag_show_potision	= false;
 			enable_dpi_scaling		  = false;
 
-			// 표시関係
+			// 표시 관계
 			select_info					= "";		// 선택없음
 			map_pos_x					= 0;
 			map_pos_y					= 0;
@@ -563,25 +563,25 @@ namespace gvtrademap_cs
 			is_item_window_normal_size		= true;
 			is_setting_window_normal_size	= true;
 
-			// 윈도우枠の표시/비표시
+			// 윈도우 테두리 표시/비표시
 			is_border_style_none		= false;
 
-			// 검색履歴
+			// 검색 이력
 			m_find_strings				= new UniqueString();
 			find_filter					= _find_filter.both;
 			find_filter2				= _find_filter2.name;
 			find_filter3				= _find_filter3.full_text_search;
 
-			// 이자からの경과일수
+			// 이자로부터의 경과 일수
 			this.interest_days			= 0;
 	
-			// 조선からの경과일수
+			// 조선으로부터의 경과 일수
 			this.force_show_build_ship	= false;
 			this.is_now_build_ship		= false;
 			this.build_ship_name		= "";
 			this.build_ship_days		= 0;
 	
-			// リクエスト
+			// 리퀘스트
 			m_req_screen_shot			= new RequestCtrl();
 			m_req_update_map			= new RequestCtrl();
 			m_req_centering_gpos		= new RequestCtrl();
@@ -628,7 +628,7 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 クローン
+		 클론
 		---------------------------------------------------------------------------*/
 		public GlobalSettings Clone()
 		{
@@ -669,7 +669,7 @@ namespace gvtrademap_cs
 			s.searoutes_group_max		= searoutes_group_max;
 			s.trash_searoutes_group_max	= trash_searoutes_group_max;
 
-			// 複製する
+			// 복제한다
 			s.m_find_strings.Clone(m_find_strings);
 			s.find_filter				= find_filter;
 			s.find_filter2				= find_filter2;
@@ -719,11 +719,11 @@ namespace gvtrademap_cs
 			s.debug_flag_show_potision	= debug_flag_show_potision;
 			s.enable_dpi_scaling		= enable_dpi_scaling;
 
-			// リクエストは전부취소
+			// 리퀘스트는 전부 취소
 			s.CancelAllRequests();
 			return s;
 		}
-		// 지도と도시명合成チェック付き
+		// 지도와 도시명 합성 확인 포함
 		public void Clone(GlobalSettings s)
 		{
 			bool	req		= false;
@@ -731,7 +731,7 @@ namespace gvtrademap_cs
 				||(this.map_icon != s.map_icon)
 				||(this.map_draw_names != s.map_draw_names)
 				||(this.is_mixed_info_names != s.is_mixed_info_names) ){
-				// 合成し直す必要あり
+				// 다시 합성할 필요 있음
 				req		= true;
 			}
 	
@@ -769,7 +769,7 @@ namespace gvtrademap_cs
 			searoutes_group_max			= s.searoutes_group_max;
 			trash_searoutes_group_max	= s.trash_searoutes_group_max;
 
-			// 複製する
+			// 복제한다
 			m_find_strings.Clone(s.m_find_strings);
 			find_filter					= s.find_filter;
 			find_filter2				= s.find_filter2;
@@ -819,10 +819,10 @@ namespace gvtrademap_cs
 			this.debug_flag_show_potision	= s.debug_flag_show_potision;
 			this.enable_dpi_scaling		 = s.enable_dpi_scaling;
 
-			// リクエストは전부취소
+			// 리퀘스트는 전부 취소
 			CancelAllRequests();
 
-			// 지도合成リクエストを업데이트する
+			// 지도 합성 리퀘스트를 갱신한다
 			if(req){
 				this.req_update_map.Request();
 			}
@@ -834,7 +834,7 @@ namespace gvtrademap_cs
 		public void IniLoad(IIni p, string group)
 		{
 		
-			// 윈도우위치と사이즈
+			// 윈도우 위치와 크기
 			m_window_location.X		= p.GetProfile("window", "pos_x",	window_location.X);
 			m_window_location.Y		= p.GetProfile("window", "pos_y",	window_location.Y);
 			m_window_size.Width		= p.GetProfile("window", "size_x",	window_size.Width);
@@ -862,7 +862,7 @@ namespace gvtrademap_cs
 			draw_myship_angle		= p.GetProfile("icon", "draw_myship_angle",			draw_myship_angle);
 			draw_web_icons			= p.GetProfile("icon", "draw_web_icons",			draw_web_icons);
 
-			// ダイア로그설정항목
+			// 대화상자 설정 항목
 			server				  = GvoWorldInfo.GetServerFromString(p.GetProfile("dialog", "server", server.ToString()));
 			country				 = GvoWorldInfo.GetCountryFromString(p.GetProfile("dialog", "country", country.ToString()));
 			map						= MapIndex.Map1 + p.GetProfile("dialog", "map_index_new",	(int)map);
@@ -897,7 +897,7 @@ namespace gvtrademap_cs
 			debug_flag_show_potision	= p.GetProfile("dialog", "debug_flag_show_potision",	debug_flag_show_potision);
 			enable_dpi_scaling		  = p.GetProfile("dialog", "enable_dpi_scaling", enable_dpi_scaling);
 
-			// 표시関係
+			// 표시 관계
 			m_select_info			= p.GetProfile("map", "select_info",		m_select_info);
 			map_pos_x				= p.GetProfile("map", "map_pos_x",			map_pos_x);
 			map_pos_y				= p.GetProfile("map", "map_pos_y",			map_pos_y);
@@ -909,16 +909,16 @@ namespace gvtrademap_cs
 
 			is_border_style_none	= p.GetProfile("setting_window", "is_border_style_none",		is_border_style_none);
 
-			// 이자からの경과일수
+			// 이자로부터의 경과 일수
 			this.interest_days		= p.GetProfile("interest", "interest_days",	this.interest_days);
 
-			// 조선からの경과일수
+			// 조선으로부터의 경과 일수
 			this.force_show_build_ship	= p.GetProfile("build_ship", "force_show_build_ship",	this.force_show_build_ship);
 			this.is_now_build_ship	= p.GetProfile("build_ship", "is_now_build_ship",	this.is_now_build_ship);
 			this.build_ship_name	= p.GetProfile("build_ship", "build_ship_name",	this.build_ship_name);
 			this.build_ship_days	= p.GetProfile("build_ship", "build_ship_days",	this.build_ship_days);
 
-			// 검색履歴
+			// 검색 이력
 			int	index	= 0;
 			m_find_strings.Clear();
 			while(true){
@@ -941,11 +941,11 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 설정파일書き出し
+		 설정 파일 기록
 		---------------------------------------------------------------------------*/
 		public void IniSave(IIni p, string group)
 		{
-			// 윈도우위치と사이즈
+			// 윈도우 위치와 크기
 			p.SetProfile("window", "pos_x",					window_location.X);
 			p.SetProfile("window", "pos_y",					window_location.Y);
 			p.SetProfile("window", "size_x",					window_size.Width);
@@ -973,7 +973,7 @@ namespace gvtrademap_cs
 			p.SetProfile("icon", "draw_myship_angle",			draw_myship_angle);
 			p.SetProfile("icon", "draw_web_icons",			draw_web_icons);
 
-			// ダイア로그설정항목
+			// 대화상자 설정 항목
 			p.SetProfile("dialog", "server",					server.ToString());
 			p.SetProfile("dialog", "country",					country.ToString());
 			p.SetProfile("dialog", "map_index_new",			(int)map);
@@ -1008,7 +1008,7 @@ namespace gvtrademap_cs
 			p.SetProfile("dialog", "debug_flag_show_potision",	debug_flag_show_potision);
 			p.SetProfile("dialog", "enable_dpi_scaling", enable_dpi_scaling);
 
-			// 표시関係
+			// 표시 관계
 			p.SetProfile("map", "select_info",				m_select_info);
 			p.SetProfile("map", "map_pos_x",					map_pos_x);
 			p.SetProfile("map", "map_pos_y",					map_pos_y);
@@ -1020,16 +1020,16 @@ namespace gvtrademap_cs
 
 			p.SetProfile("setting_window", "is_border_style_none",		is_border_style_none);
 
-			// 이자からの경과일수
+			// 이자로부터의 경과 일수
 			p.SetProfile("interest", "interest_days",	this.interest_days);
 
-			// 조선からの경과일수
+			// 조선으로부터의 경과 일수
 			p.SetProfile("build_ship", "force_show_build_ship",	this.force_show_build_ship);
 			p.SetProfile("build_ship", "is_now_build_ship",	this.is_now_build_ship);
 			p.SetProfile("build_ship", "build_ship_name",	this.build_ship_name);
 			p.SetProfile("build_ship", "build_ship_days",	this.build_ship_days);
 
-			// 검색履歴
+			// 검색 이력
 			int	index	= 0;
 			foreach(string s in m_find_strings){
 				p.SetProfile("find", String.Format("list{0}", index),	s);
