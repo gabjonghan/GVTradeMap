@@ -49,7 +49,7 @@ namespace directx
 		private string								m_device_info_string;
 		private string								m_device_info_string_short;
 
-		// 그리기支援
+		// 그리기 지원
 		private	d3d_point							m_points;
 		private d3d_sprite							m_sprite;
 
@@ -94,7 +94,7 @@ namespace directx
 														set{	m_skip_max	= value;	}}
 
 		/*-------------------------------------------------------------------------
-		 初期化
+		 초기화
 		---------------------------------------------------------------------------*/
 		public d3d_device(System.Windows.Forms.Form form)
 			: base()
@@ -139,7 +139,7 @@ namespace directx
 				// 스테이트 초기화
 				device_reset(this, null);
 
-				// 그리기支援
+				// 그리기 지원
 				m_points			= new d3d_point(device);
 				m_sprite			= new d3d_sprite(device, is_use_ve1_1_ps1_1);
 	
@@ -303,7 +303,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기開始
+		 그리기 시작
 		---------------------------------------------------------------------------*/
 		public override bool Begin()
 		{

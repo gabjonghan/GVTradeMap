@@ -57,7 +57,7 @@ namespace Utility
 				message		+= message_top + "\n";
 			}
 
-			// 일時
+			// 일시
 			message			+= "DATE:" + Useful.TojbbsDateTimeString(DateTime.Now) + "\n";
 
 			// OS버전

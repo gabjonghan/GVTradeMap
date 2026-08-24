@@ -247,7 +247,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터取得
+		/// 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// 상속받은 쪽에서 구현할 것
 		/// </summary>
@@ -259,7 +259,7 @@ namespace Utility.Ini
 		
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터取得
+		/// 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// 상속받은 쪽에서 구현할 것
 		/// </summary>
@@ -296,7 +296,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// bool데이터取得
+		/// bool 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -316,7 +316,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// int데이터取得
+		/// int 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -336,7 +336,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// long데이터取得
+		/// long 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -356,7 +356,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// double데이터取得
+		/// double 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -376,7 +376,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// float데이터取得
+		/// float 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -462,7 +462,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// bool[]데이터取得
+		/// bool[] 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -495,7 +495,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// int[]데이터取得
+		/// int[] 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -528,7 +528,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// long[]데이터取得
+		/// long[] 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -561,7 +561,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// double[]데이터取得
+		/// double[] 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -594,7 +594,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// float[]데이터取得
+		/// float[] 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>

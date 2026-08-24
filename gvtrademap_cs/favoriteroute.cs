@@ -29,7 +29,7 @@ namespace gvtrademap_cs
 	static class favoriteroute
 	{
 		/*-------------------------------------------------------------------------
-		 合成
+		 합성
 		 A + B -> C
 		---------------------------------------------------------------------------*/
 		static public bool MixMap(string fname_a, string fname_b, string fname_c, ImageFormat format)
@@ -67,11 +67,11 @@ namespace gvtrademap_cs
 				byte[]		image_b		= load_image(fname_b, out size_b, out stride_b);
 
 				if(image_a.Length != image_b.Length){
-					MessageBox.Show("항로도즐겨찾기の画상사이즈が지도と異なります. ", "항로도즐겨찾기の合成중", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("항로도 즐겨찾기의 이미지 크기가 지도와 다릅니다. ", "항로도 즐겨찾기 합성 중", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return false;
 				}
 
-				// 合成
+				// 합성
 				// 단순히 50% 로 합성된다
 				// 순백색은 무시된다
 				for(int y=0; y<size_a.Height; y++){
@@ -82,7 +82,7 @@ namespace gvtrademap_cs
 						byte c22	= image_b[index + 2];
 
 						// 투명 처리 확인
-						// 白
+						// 흰색
 						if(   (c20 >= 250)
 							&&(c21 >= 250)
 							&&(c22 >= 250) ) continue;
@@ -91,7 +91,7 @@ namespace gvtrademap_cs
 						byte c11	= image_a[index + 1];
 						byte c12	= image_a[index + 2];
 
-						// 合成
+						// 합성
 						c10		= (byte)((c10 / 2) + (c20 / 2));
 						c11		= (byte)((c11 / 2) + (c21 / 2));
 						c12		= (byte)((c12 / 2) + (c22 / 2));

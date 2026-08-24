@@ -44,7 +44,7 @@ namespace directx {
 		// 현재 프레임에 그린 스프라이트 수
 		private int m_draw_sprites_in_frame;
 
-		// 쉐이더사용時
+		// 쉐이더 사용 시
 		private Effect m_effect;
 		private VertexDeclaration m_decl;
 		private d3d_writable_vb_with_index m_vb;
@@ -75,7 +75,7 @@ namespace directx {
 			m_vertex_list = new CustomVertex.TransformedColoredTextured[DRAW_SPRITE_ONCE * 6];
 			m_sprite_count = 0;
 
-			// 쉐이더사용時
+			// 쉐이더 사용 시
 			m_effect = null;
 			m_decl = null;
 			m_vb = null;
@@ -109,7 +109,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더사용初期化
+		 쉐이더 사용 초기화
 		 스프라이트용 이펙트를 읽어들여 초기화한다
 		 .fx 든 .fxo 든 상관없다
 		---------------------------------------------------------------------------*/
@@ -129,7 +129,7 @@ namespace directx {
 				}
 		*/
 		/*-------------------------------------------------------------------------
-		 쉐이더사용初期化
+		 쉐이더 사용 초기화
 		 스프라이트용 이펙트를 읽어들여 초기화한다
 		 임베드된 리소스로부터 읽기
 		 .fxo 여야 한다
@@ -148,7 +148,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더사용용初期化
+		 쉐이더 사용용 초기화
 		 Effect 는 이미 설정되어 있어야 한다
 		---------------------------------------------------------------------------*/
 		private void initialize_shader() {
@@ -280,7 +280,7 @@ namespace directx {
 		//#if aaa
 		/*-------------------------------------------------------------------------
 		 스프라이트 그리기 추가
-		 등배, 白, 不투명
+		 등배, 흰색, 불투명
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSprites(Vector3 pos, d3d_sprite_rects.rect _rect) {
 			return AddDrawSprites(pos, _rect, -1);
@@ -301,7 +301,7 @@ namespace directx {
 				pos = goffsetscale(pos);
 				Vector2 size = gscale(_rect.size);
 
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -356,7 +356,7 @@ namespace directx {
 				size.X *= scale.X;
 				size.Y *= scale.Y;
 
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -382,7 +382,7 @@ namespace directx {
 		//#endif
 		/*-------------------------------------------------------------------------
 		 스프라이트 그리기 추가
-		 등배, 白, 不투명
+		 등배, 흰색, 불투명
 		 화면외컬링없음
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect) {
@@ -405,7 +405,7 @@ namespace directx {
 				pos = goffsetscale(pos);
 				Vector2 size = gscale(_rect.size);
 
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -457,7 +457,7 @@ namespace directx {
 
 				pos.X += offset.X;
 				pos.Y += offset.Y;
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -490,7 +490,7 @@ namespace directx {
 		private void draw_sprites() {
 			if (m_effect != null) {
 				// 쉐이더사용
-				m_vb.SetData<sprite_vertex>(m_vbo);	 // 頂点데이터설정
+				m_vb.SetData<sprite_vertex>(m_vbo);	 // 정점 데이터 설정
 														//왠지 느려서 사용 중단
 
 				m_effect.Begin(0);
@@ -532,7 +532,7 @@ namespace directx {
 				m_vertex_list[index + i].Color = color;
 			}
 
-			// 左상三角形
+			// 좌상단 삼각형
 			m_vertex_list[index + 1].X += size.X;
 			m_vertex_list[index + 2].Y += size.Y;
 
@@ -544,7 +544,7 @@ namespace directx {
 			m_vertex_list[index + 2].Tu = _rect.uv[2].X;
 			m_vertex_list[index + 2].Tv = _rect.uv[2].Y;
 
-			// 右下三角形
+			// 우하단 삼각형
 			m_vertex_list[index + 3].X += size.X;
 			m_vertex_list[index + 4].X += size.X;
 			m_vertex_list[index + 4].Y += size.Y;
@@ -634,8 +634,8 @@ namespace directx {
 				pos = goffsetscale(pos);
 				Vector2 scale2 = gscale(scale);
 
-				Matrix mat = Matrix.RotationZ(angle_rad);		   // Z軸회전
-				mat = Matrix.Scaling(scale2.X, scale2.Y, 1) * mat;  // 拡대縮소
+				Matrix mat = Matrix.RotationZ(angle_rad);		   // Z 축 회전
+				mat = Matrix.Scaling(scale2.X, scale2.Y, 1) * mat;  // 확대 축소
 
 				Vector3 p0 = new Vector3(_rect.offset[0].X, _rect.offset[0].Y, 0);
 				Vector3 p1 = new Vector3(_rect.offset[1].X, _rect.offset[1].Y, 0);
@@ -709,7 +709,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더용頂点
+		 쉐이더용 정점
 		---------------------------------------------------------------------------*/
 		[StructLayout(LayoutKind.Sequential)]
 		protected struct sprite_vertex {
@@ -722,7 +722,7 @@ namespace directx {
 			public int color;	   // color				4
 
 			/*-------------------------------------------------------------------------
-			 頂点정보
+			 정점 정보
 			---------------------------------------------------------------------------*/
 			public static VertexElement[] VertexElements = {
 				// Position (12바이트)

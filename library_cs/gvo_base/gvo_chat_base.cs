@@ -7,7 +7,7 @@
  여러 줄 분석은 실제 게임에서 실시간으로 로그가 기록되기 때문에,
  아직 필요한 로그가 기록되지 않았을 가능성이 있다
 
- 스레드대응版
+ 스레드 대응 버전
 
 ---------------------------------------------------------------------------*/
 
@@ -36,7 +36,7 @@ namespace gvo_base
 		public enum type{
 			index0,		// 첫 문자부터 일치하는 것
 			any_index,	// 어딘가에 포함되기만 하면 되는 것
-			regex,		// 正規表現
+			regex,		// 정규 표현식
 		};
 	
 		/*-------------------------------------------------------------------------
@@ -106,7 +106,7 @@ namespace gvo_base
 					}
 					break;
 				case type.regex:
-					// 正規表現
+					// 정규 표현식
 					Match	match	= m_regex.Match(line);
 					if(match.Success){
 						list.Add(new analized_data(this, line, match));
@@ -125,7 +125,7 @@ namespace gvo_base
 		{
 			private analize_data			m_analize_data;
 			private string					m_line;
-			private Match					m_match;	// 正規表現時
+			private Match					m_match;	// 정규 표현식일 때
 
 			/*-------------------------------------------------------------------------
 			 
@@ -295,7 +295,7 @@ namespace gvo_base
 				FileInfo[]	file_info	= info.GetFiles("*.html");
 				FileInfo[]	file_info2	= info.GetFiles("*.txt");
 
-				// 連結
+				// 연결
 				int	size	= file_info.Length;
 				Array.Resize<FileInfo>(ref file_info, size + file_info2.Length);
 				Array.Copy(file_info2, 0, file_info, size, file_info2.Length);
@@ -324,7 +324,7 @@ namespace gvo_base
 		}
 	
 		/*-------------------------------------------------------------------------
-		 比較
+		 비교
 		 마지막 기록 시간으로 비교한다
 		---------------------------------------------------------------------------*/
 		public class file_info_compare : IComparer<FileInfo>
@@ -452,7 +452,7 @@ namespace gvo_base
 			m_newest_chat_file_info		= new FileInfo(m_chat_file_info.FullName);
 	
 			try{
-				// 정보更新
+				// 정보 갱신
 				m_newest_chat_file_info.Refresh();
 			}catch{
 				// 정보 갱신에 실패

@@ -50,7 +50,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 更新
+		 갱신
 		---------------------------------------------------------------------------*/
 		public void Update(Vector2 pos)
 		{
@@ -60,7 +60,7 @@ namespace directx
 				m_max		= pos;
 				m_is_1st	= true;
 			}else{
-				// 更新
+				// 갱신
 				if(pos.X < m_min.X)		m_min.X	= pos.X;
 				if(pos.X > m_max.X)		m_max.X	= pos.X;
 				if(pos.Y < m_min.Y)		m_min.Y	= pos.Y;

@@ -29,9 +29,9 @@ namespace net_base
 	
 		public enum client_state{
 			init,
-			chekc_version,	// 버전確認중
+			chekc_version,	// 버전 확인 중
 			error_version,	// 버전 오류
-			ready,			// 通信OK
+			ready,			// 통신 OK
 			disconected,	// 접속이 끊긴 상태
 		};
 	
@@ -79,7 +79,7 @@ namespace net_base
 		{
 			m_protocol_name		= protocol_name;		// 프로토콜명
 			m_version			= version;				// 프로토콜 버전
-			m_state				= client_state.init;	// 初期化중
+			m_state				= client_state.init;	// 초기화 중
 	
 			// 데이터 수신 시 핸들러
 			base.ReceivedData	+= new ReceivedDataEventHandler(received_handler);
@@ -130,7 +130,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 데이터受信
+		 데이터 수신
 		 데이터를 분해해서 핸들러에 넘긴다
 		---------------------------------------------------------------------------*/
 		private void received_handler(object sender, ReceivedDataEventArgs e)
@@ -151,7 +151,7 @@ namespace net_base
 					m_state		= client_state.error_version;
 					return;
 				}
-				// 通信가능
+				// 통신 가능
 				m_state		= client_state.ready;
 				return;
 			}
@@ -189,7 +189,7 @@ namespace net_base
 		protected override void OnDisconnected(EventArgs e)
 		{
 			base.OnDisconnected(e);
-			m_state		= client_state.disconected;		// 切断
+			m_state		= client_state.disconected;		// 끊김
 		}
 	}
 }

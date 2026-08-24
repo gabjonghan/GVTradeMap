@@ -78,7 +78,7 @@ namespace Utility
 		}
 
 		//-------------------------------------------------------------------------
-		/// 열挙
+		/// 열거
 		public IEnumerator<string> GetEnumerator()
 		{
 			for(int i=0; i<m_strings.Count; i++){
@@ -177,9 +177,9 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 複製
+		/// 복제
 		/// </summary>
-		/// <param name="list">複製元</param>
+		/// <param name="list">복제 원본</param>
 		public void Clone(UniqueString list)
 		{
 			Clear();
@@ -202,7 +202,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 保持수조정
+		/// 보관 개수 조정
 		/// </summary>
 		private void ajust_count()
 		{

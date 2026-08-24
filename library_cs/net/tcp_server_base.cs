@@ -54,7 +54,7 @@ namespace net_base
 			stoped,
 		};
 		
-		private int						MAX_CLIENT		= 16;		// 최대接続수
+		private int						MAX_CLIENT		= 16;		// 최대 접속 수
 		private int						DEF_BACKLOG		= 100;
 	
 		private Socket					m_server;
@@ -64,7 +64,7 @@ namespace net_base
 
 		protected List<tcp_client_base>	m_client_list;
 	
-		// 同期용
+		// 동기용
 		protected readonly object		m_sync_socket	= new object();
 
 		// 이벤트
@@ -241,7 +241,7 @@ namespace net_base
 				// 이벤트 발생
 				OnAcceptedClient(new ServerEventArgs(client));
 
-				// 데이터受信開始
+				// 데이터 수신 시작
 				if(!client.is_closed){
 					client.StartReceive();
 				}

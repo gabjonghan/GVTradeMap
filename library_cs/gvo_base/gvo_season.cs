@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 季節관리
+ 계절 관리
  9 시간마다 여름과 겨울이 뒤바뀐다
 
 ---------------------------------------------------------------------------*/
@@ -55,15 +55,15 @@ namespace gvo_base
 		{
 			// 여름의 기준이 되는 일시
 			// 미래든 과거든 상관없다
-			m_base_season_start	= new DateTime(2010, 3, 2, 13, 30, 0);	// 夏
+			m_base_season_start	= new DateTime(2010, 3, 2, 13, 30, 0);	// 여름
 			m_now_season		= season.MAX;
 
-			// 更新
+			// 갱신
 			UpdateSeason();
 		}
 		
 		/*-------------------------------------------------------------------------
-		 更新
+		 갱신
 		 계절이 바뀌었을 때 true 를 반환한다
 		---------------------------------------------------------------------------*/
 		public bool UpdateSeason()
@@ -97,8 +97,8 @@ namespace gvo_base
 		public static string ToSeasonString(season s)
 		{
 			switch(s){
-			case season.summer:		return "夏";
-			case season.winter:		return "冬";
+			case season.summer:		return "여름";
+			case season.winter:		return "겨울";
 			}
 			return "불명";
 		}

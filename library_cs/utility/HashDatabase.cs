@@ -26,7 +26,7 @@ namespace Utility
 	/// TKey 가 중복 가능한 해시 테이블
 	/// </summary>
 	/// <typeparam name="TKey">키</typeparam>
-	/// <typeparam name="TValue">要素</typeparam>
+	/// <typeparam name="TValue">요소</typeparam>
 	public class MultiDictionary<TKey, TValue> : IEnumerable<TValue>
 		where TValue : IDictionaryNode<TKey>
 	{
@@ -48,7 +48,7 @@ namespace Utility
 		/// <summary>
 		/// 추가
 		/// </summary>
-		/// <param name="t">要素</param>
+		/// <param name="t">요소</param>
 		public void Add(TValue t)
 		{
 			List<TValue>	list	= null;
@@ -66,9 +66,9 @@ namespace Utility
 		/// 삭제. 
 		/// 처음 발견된 t 를 삭제한다.
 		/// t.Key 에 중복되는 요소가 있는 경우에는, 중복 개수에 따라 시간이 걸린다.
-		/// O(중複수)
+		/// O(중복 개수)
 		/// </summary>
-		/// <param name="t">要素</param>
+		/// <param name="t">요소</param>
 		public void Remove(TValue t)
 		{
 			List<TValue>	list	= null;
@@ -100,7 +100,7 @@ namespace Utility
 		/// 요소가 없으면 null 을 반환한다.
 		/// </summary>
 		/// <param name="key">키</param>
-		/// <returns>要素</returns>
+		/// <returns>요소</returns>
 		public TValue GetValue(TKey key)
 		{
 			List<TValue>	list	= null;
@@ -117,7 +117,7 @@ namespace Utility
 		/// 요소가 없으면 null 을 반환한다.
 		/// </summary>
 		/// <param name="key">키</param>
-		/// <returns>要素목록</returns>
+		/// <returns>요소 목록</returns>
 		public TValue[] GetValueList(TKey key)
 		{
 			List<TValue>	list	= null;
@@ -138,7 +138,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
+		/// 열거
 		/// 열거되는 순서는 정해져 있지 않다
 		/// </summary>
 		/// <returns></returns>
@@ -153,7 +153,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
+		/// 열거
 		/// 열거되는 순서는 정해져 있지 않다
 		/// </summary>
 		/// <returns></returns>
@@ -170,7 +170,7 @@ namespace Utility
 	/// TKey 는 중복될 수 없다.
 	/// </summary>
 	/// <typeparam name="TKey">키</typeparam>
-	/// <typeparam name="TValue">要素</typeparam>
+	/// <typeparam name="TValue">요소</typeparam>
 	public class SequentialDictionary<TKey, TValue> : IEnumerable<TValue>
 		where TValue : IDictionaryNode<TKey>
 	{
@@ -199,7 +199,7 @@ namespace Utility
 		/// 추가된 순서로 접근할 수 있다
 		/// t.Key 가 이미 존재하면 예외를 던진다
 		/// </summary>
-		/// <param name="t">要素</param>
+		/// <param name="t">요소</param>
 		public void Add(TValue t)
 		{
 			try{
@@ -246,7 +246,7 @@ namespace Utility
 		/// 요소가 없으면 null 을 반환한다.
 		/// </summary>
 		/// <param name="key">키</param>
-		/// <returns>要素</returns>
+		/// <returns>요소</returns>
 		public TValue GetValue(TKey key)
 		{
 			TValue	d;
@@ -268,7 +268,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
+		/// 열거
 		/// </summary>
 		/// <returns></returns>
 		public IEnumerator<TValue> GetEnumerator()
@@ -280,7 +280,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
+		/// 열거
 		/// </summary>
 		/// <returns></returns>
 		IEnumerator IEnumerable.GetEnumerator()

@@ -19,8 +19,8 @@ namespace Utility
 	public class RequestCtrl
 	{
 		private bool						m_request;
-		private object						m_arg1;			// 引수1
-		private object						m_arg2;			// 引수2
+		private object						m_arg1;			// 인수 1
+		private object						m_arg2;			// 인수 2
 
 		/*-------------------------------------------------------------------------
 		 

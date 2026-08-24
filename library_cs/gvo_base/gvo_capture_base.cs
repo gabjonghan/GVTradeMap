@@ -13,7 +13,7 @@
  define
 ---------------------------------------------------------------------------*/
 // 나침반 분석 디버그
-#define	DEBUG_WRITE_ANALYZE_POINT		// 분석위치を赤く塗る
+#define	DEBUG_WRITE_ANALYZE_POINT		// 분석 위치를 빨갛게 칠한다
 
 /*-------------------------------------------------------------------------
  using
@@ -49,7 +49,7 @@ namespace gvo_base {
 			xp,
 			vista,
 		};
-		private mode m_capture_mode;		// 動作모드
+		private mode m_capture_mode;		// 동작 모드
 
 		private ScreenCapture m_capture1;		   // 측량 및 날짜용
 		private ScreenCapture m_capture2;		 // 진향방향용
@@ -57,7 +57,7 @@ namespace gvo_base {
 		// 분석결과
 		private Point m_point;		  // 분석후의 측량좌표
 		private int m_days;			 // 분석후의 일수
-		private float m_angle;		  // 나침반方向
+		private float m_angle;		  // 나침반 방향
 
 		protected Point[] m_compass_pos;		// 나침반으로부터 각도산출용
 		protected float[] m_ajust_compass;  // 조정용 테이블
@@ -134,7 +134,7 @@ namespace gvo_base {
 			m_enable_days = true;	   // 항해일수분석유효
 			m_enable_angle = true;	  // 나침반분석유효
 
-			// 분석결과初期化
+			// 분석 결과 초기화
 			m_point = new Point(-1, -1);
 			m_days = -1;
 			m_angle = -1;
@@ -503,7 +503,7 @@ namespace gvo_base {
 		 나침반으로 분석한다
 		---------------------------------------------------------------------------*/
 		private void analize_angle() {
-			// 初期値
+			// 초기값
 			m_angle = -1;
 
 			// 캡처가 성공하지 않았으면 분석하지 않는다
@@ -591,7 +591,7 @@ namespace gvo_base {
 				m_an_index = 3;
 			}
 
-			// 인덱스開示
+			// 인덱스 공개
 			m_com_index = angle;
 			m_com_index2 = angle2;
 
@@ -624,7 +624,7 @@ namespace gvo_base {
 
 							m_an_index2	= 3;
 						}
-						// 인덱스開示
+						// 인덱스 공개
 						m_com_index2		= angle;
 						if(m_com_index2 >= COMPASS_DIV)	m_com_index2	-= COMPASS_DIV;
 						if(m_com_index2 < 0)			m_com_index2	+= COMPASS_DIV;

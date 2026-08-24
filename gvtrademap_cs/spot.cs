@@ -28,7 +28,7 @@ namespace gvtrademap_cs
 		public enum type{
 			none,						// 장소없음
 			country_flags,				// 국기표시
-			icons_0,					// 看판娘
+			icons_0,					// 주점 아가씨
 			icons_1,					// 서고
 			icons_2,					// 번역가
 			icons_3,					// 무역상인
@@ -139,7 +139,7 @@ namespace gvtrademap_cs
 					}
 				}
 				break;
-			case type.icons_0:				// 看판娘
+			case type.icons_0:				// 주점 아가씨
 			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
 			case type.icons_3:				// 무역상인
@@ -168,7 +168,7 @@ namespace gvtrademap_cs
 						m_spot_list.Add(new spot_once(i, find_str, ""));
 					}else{
 						if(i.LearnPerson(find_str) != null){
-							// 언어取得
+							// 언어 취득
 							m_spots.Add(i);
 							m_spot_list.Add(new spot_once(i, find_str, i.LearnPerson(find_str)));
 						}
@@ -247,7 +247,7 @@ namespace gvtrademap_cs
 				draw_spot_mycountry(offset);
 				spot_flags(offset);
 				break;
-			case type.icons_0:				// 看판娘
+			case type.icons_0:				// 주점 아가씨
 			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
 			case type.icons_3:				// 무역상인
@@ -503,7 +503,7 @@ namespace gvtrademap_cs
 		{
 			switch(m_spot_type){
 			case type.country_flags:		// 국기
-			case type.icons_0:				// 看판娘
+			case type.icons_0:				// 주점 아가씨
 			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
 			case type.icons_3:				// 무역상인
@@ -555,14 +555,14 @@ namespace gvtrademap_cs
 			switch(_type){
 			case type.none:						return "장소없음";
 			case type.country_flags:			return "국기";
-			case type.icons_0:					return "看판娘";
+			case type.icons_0:					return "주점 아가씨";
 			case type.icons_1:					return "서고";
 			case type.icons_2:					return "번역가";
 			case type.icons_3:					return "무역상인";
 			case type.has_item:					return "아이템등";
 			case type.language:					return "사용언어";
-			case type.tab_0:					return "교역所";
-			case type.tab_1:					return "도구屋";
+			case type.tab_0:					return "교역소";
+			case type.tab_1:					return "도구점";
 			case type.tab_2:					return "공방";
 			case type.tab_3:					return "인물";
 			case type.tab_4:					return "조선소주인";
@@ -592,8 +592,8 @@ namespace gvtrademap_cs
 			case type.icons_1:					return "";
 			case type.icons_2:					return "";
 			case type.icons_3:					return "";
-			case type.has_item:					return "価格등";
-			case type.language:					return "언어習得";
+			case type.has_item:					return "가격 등";
+			case type.language:					return "언어 습득";
 			case type.tab_0:					return "";
 			case type.tab_1:					return "";
 			case type.tab_2:					return "";

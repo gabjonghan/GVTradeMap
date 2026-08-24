@@ -75,7 +75,10 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 ## 작업 시 주의사항
 
 - **인코딩·서식**: 모든 `.cs`는 UTF-8 **with BOM** + CRLF + 탭 들여쓰기다. 이걸 바꾸면 diff가 파일 전체로 번진다. 데이터 파일도 원래 인코딩(예: `データフォーマット.txt`는 Shift-JIS)을 유지할 것.
-- **주석 언어**: 원본 일본어 주석이 기계 번역으로 부분 한글화돼 `Assemblyの읽기に실패` 같은 혼종 문장이 널려 있다. 정상이며, 손대는 줄 외에는 일괄 정리하지 말 것(리뷰 불가능한 diff가 된다).
+- **주석 언어**: 원본 일본어 주석은 한글화가 끝났다(2026-08). 지금 소스에 남아 있는 일본어는 **전부 의도적으로 남긴 것**이므로 번역하지 말 것:
+  - `library_cs/gvo_base/gvo_item_database.cs` 의 `m_ajust_name_list`, `library_cs/gvo_base/gvo_map_cs_chat_base.cs` 의 `AddAnalizeList()` 패턴, `gvtrademap_cs/database/world_info.cs` 의 `update_rename()` — 모두 **게임이 실제 출력하는 문구·아이템명과 대조하는 데이터**다. 번역하면 재해 감지와 아이템 매칭이 조용히 깨진다. 이 문자열들은 "번역" 대상이 아니라 한국어판 게임의 실제 문구를 확인해 교체해야 하는 항목이며, `AddAnalizeList()` 는 일부만 한글 문구로 교체된 상태다.
+  - `library_cs/utility/useful.cs`, `library_cs/directx/d3d_device.cs` 의 `"メイリオ"` — Windows 폰트 이름(Meiryo)이라 바꾸면 폰트를 찾지 못한다.
+  - `library_cs/utility/SFMT.cs`, `RandomBase.cs` — 제3자 라이브러리(Copyright © Rei HOBARA 2007), Shift-JIS 인코딩. 손대지 말 것.
 - **네이밍**: 필드는 `m_` 접두사, 메서드·지역변수는 snake_case가 다수(일본어 원본 스타일). 새 코드도 주변 파일 스타일을 따를 것.
 - **셰이더 미지원 폴백**: `d3d_sprite`의 `m_effect`가 `null`일 수 있고, `draw_infonames.cs` 등 여러 곳이 `if (effect == null) return;`로 우회한다. 렌더링 코드를 추가할 때 이 경로를 깨뜨리지 말 것.
 - **버전 문자열**: 릴리스 시 `def.VERSION`(정수)과 `def.WINDOW_TITLE`을 함께 갱신한다. `def.VERSION`은 원본 사이트의 업데이트 확인에 쓰인다.

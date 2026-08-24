@@ -140,7 +140,7 @@ namespace Utility
 		/// 초를 포함하지 않는다
 		/// </summary>
 		/// <param name="dt">변환 대상 일시</param>
-		/// <returns>일時문자열</returns>
+		/// <returns>일시 문자열</returns>
 		public static string ToShortDateTimeString(DateTime dt)
 		{
 			return dt.ToString("yyyy/MM/dd") + dt.ToString(" HH:mm");
@@ -151,7 +151,7 @@ namespace Utility
 		/// 시타라바 스타일의 일시 문자열을 반환한다
 		/// </summary>
 		/// <param name="dt">변환 대상 일시</param>
-		/// <returns>일時문자열</returns>
+		/// <returns>일시 문자열</returns>
 		public static string TojbbsDateTimeString(DateTime dt)
 		{
 			string str = dt.ToString("yyyy/MM/dd", DateTimeFormatInfo.InvariantInfo);
@@ -161,22 +161,22 @@ namespace Utility
 					str += "(일)";
 					break;
 				case DayOfWeek.Monday:
-					str += "(月)";
+					str += "(월)";
 					break;
 				case DayOfWeek.Tuesday:
-					str += "(火)";
+					str += "(화)";
 					break;
 				case DayOfWeek.Wednesday:
-					str += "(水)";
+					str += "(수)";
 					break;
 				case DayOfWeek.Thursday:
-					str += "(木)";
+					str += "(목)";
 					break;
 				case DayOfWeek.Friday:
-					str += "(金)";
+					str += "(금)";
 					break;
 				case DayOfWeek.Saturday:
-					str += "(土)";
+					str += "(토)";
 					break;
 			}
 			return str + dt.ToString(" HH:mm:ss");
@@ -253,7 +253,7 @@ namespace Utility
 		/// 매치했을 때는 Match 를 반환한다.
 		/// 매치하지 않는 경우에는 null 을 반환한다.
 		/// </summary>
-		/// <param name="regex">正規表現</param>
+		/// <param name="regex">정규 표현식</param>
 		/// <param name="str">대상 문자열</param>
 		/// <returns>매치한 것</returns>
 		static public Match match(string regex, string str)

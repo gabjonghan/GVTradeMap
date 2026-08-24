@@ -60,7 +60,7 @@ namespace directx {
 				Vector2 uv1 = new Vector2(((float)_rect.X + _rect.Width) / tex_size.X,
 												((float)_rect.Y + _rect.Height) / tex_size.Y);
 
-				// 頂点정보설정용
+				// 정점 정보 설정용
 				// offset
 				m_offset = new Vector2[4];
 				m_offset[0] = new Vector2(offset.X, offset.Y);
@@ -100,7 +100,7 @@ namespace directx {
 		---------------------------------------------------------------------------*/
 		private Texture m_texture;              // 스프라이트용텍스쳐
 		private Vector2 m_texture_size;         // 텍스쳐사이즈
-		private List<rect> m_rects;             // 矩形정보
+		private List<rect> m_rects;             // 사각형 정보
 
 		/*-------------------------------------------------------------------------
 

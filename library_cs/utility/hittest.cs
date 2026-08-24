@@ -21,10 +21,10 @@ namespace Utility {
 	 여러 개일 경우에는 hittest_list 를 쓰면 다루기 편하다
 	---------------------------------------------------------------------------*/
 	public class hittest {
-		private Rectangle m_rect;   // 判定矩形
+		private Rectangle m_rect;   // 판정 사각형
 		private Point m_position;   // 오프셋
 		private float m_scale;	  // 스케일
-		private bool m_enable;	  // 유효時true
+		private bool m_enable;	  // 유효할 때 true
 		private float m_angle;	  // 각도
 		private int m_priority;	  // 우선순위
 
@@ -265,7 +265,7 @@ namespace Utility {
 		}
 
 		/*-------------------------------------------------------------------------
-		 열挙
+		 열거
 		---------------------------------------------------------------------------*/
 		public IEnumerator<hittest> GetEnumerator() {
 			foreach (hittest h in m_list) {

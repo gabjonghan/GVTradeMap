@@ -38,14 +38,14 @@ namespace gvo_net_base
 		private const string		COMMAND_SEAINFO		= "SEAINFO";
 		private const string		COMMAND_ERROR		= "ERROR";
 
-		// 同期용
+		// 동기용
 		private readonly object		m_sync_object		= new object();
 
-		// 受信데이터
+		// 수신 데이터
 		private gvo_analized_data	m_received_data;
 		private List<gvo_map_cs_chat_base.sea_area_type>	m_sea_info;
 
-		// 受信플래그
+		// 수신 플래그
 		private bool				m_enable_receive_data;
 	
 		/*-------------------------------------------------------------------------
@@ -102,7 +102,7 @@ namespace gvo_net_base
 			// 커맨드 수신 핸들러
 			base.ReceivedCommand		+= new ReceivedCommandEventHandler(received_command_handler);
 
-			// 受信데이터
+			// 수신 데이터
 			m_received_data		= new gvo_analized_data();
 			m_sea_info			= new List<gvo_map_cs_chat_base.sea_area_type>();
 		}
@@ -157,7 +157,7 @@ namespace gvo_net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 通信
+		 통신
 		---------------------------------------------------------------------------*/
 		private void send_data(string command, string[] datas)
 		{
@@ -174,7 +174,7 @@ namespace gvo_net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 受信
+		 수신
 		---------------------------------------------------------------------------*/
 		private void received_command_handler(object sender, string[] datas)
 		{

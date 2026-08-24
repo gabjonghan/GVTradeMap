@@ -38,7 +38,7 @@ namespace directx
 		private d3d_sprite_rects			m_sprite_rects;		// 관리용스프라이트
 		private d3d_sprite					m_sprite;			// 그리기관리
 
-		private int[]						m_width_tbl;		// 幅테이블
+		private int[]						m_width_tbl;		// 폭 테이블
 
 		private Vector3						m_position;			// Puts() 시의 표시 위치
 		private float						m_return_x;			// 개행 시의 X 위치
@@ -53,7 +53,7 @@ namespace directx
 		public int sprite_count			{	get{	return m_sprite.draw_sprites_in_frame;	}}
 	
 		/*-------------------------------------------------------------------------
-		 初期化
+		 초기화
 		---------------------------------------------------------------------------*/
 		public d3d_systemfont(d3d_device device)
 		{
@@ -79,7 +79,7 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 初期化
+		 초기화
 		---------------------------------------------------------------------------*/
 		private void initialize(d3d_device device)
 		{
@@ -88,15 +88,15 @@ namespace directx
 
 			m_sprite		= new d3d_sprite(device.device, device.is_use_ve1_1_ps1_1);
 
-			// 矩形등록
+			// 사각형 등록
 			init_rects();
 
-			// 初期위치
+			// 초기 위치
 			locate			= new Vector3(0, 0, 0.1f);
 		}
 
 		/*-------------------------------------------------------------------------
-		 矩形등록
+		 사각형 등록
 		---------------------------------------------------------------------------*/
 		private void init_rects()
 		{
@@ -108,7 +108,7 @@ namespace directx
 				}
 			}
 			
-			// 幅테이블
+			// 폭 테이블
 			m_width_tbl			= new int[]{
 				//   ! " # $ % & ' ( ) * + , - . / 
 				   6,4,6,7,6,7,7,4,4,4,6,6,3,6,3,7,

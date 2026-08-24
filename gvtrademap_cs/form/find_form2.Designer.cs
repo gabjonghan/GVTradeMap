@@ -94,7 +94,7 @@
 			this.listView1.ShowItemToolTips = true;
 			this.listView1.Size = new System.Drawing.Size(408, 134);
 			this.listView1.TabIndex = 5;
-			this.toolTip1.SetToolTip(this.listView1, "おまじない");
+			this.toolTip1.SetToolTip(this.listView1, "더미");
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
@@ -110,7 +110,7 @@
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(250, 20);
 			this.comboBox1.TabIndex = 0;
-			this.toolTip1.SetToolTip(this.comboBox1, "入力された문자열が含まれるものを전체검색します\r\nxxxx,yyyy 形式で入力することで特定の좌표をセンタリングすることができます");
+			this.toolTip1.SetToolTip(this.comboBox1, "입력한 문자열이 포함된 것을 전체 검색합니다\r\nxxxx,yyyy 형식으로 입력하면 특정 좌표를 센터링할 수 있습니다");
 			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// listView2
@@ -127,7 +127,7 @@
 			this.listView2.ShowItemToolTips = true;
 			this.listView2.Size = new System.Drawing.Size(408, 164);
 			this.listView2.TabIndex = 29;
-			this.toolTip1.SetToolTip(this.listView2, "おまじない");
+			this.toolTip1.SetToolTip(this.listView2, "더미");
 			this.listView2.UseCompatibleStateImageBehavior = false;
 			this.listView2.View = System.Windows.Forms.View.Details;
 			this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
@@ -147,7 +147,7 @@
 			this.listView3.ShowItemToolTips = true;
 			this.listView3.Size = new System.Drawing.Size(408, 192);
 			this.listView3.TabIndex = 29;
-			this.toolTip1.SetToolTip(this.listView3, "おまじない");
+			this.toolTip1.SetToolTip(this.listView3, "더미");
 			this.listView3.UseCompatibleStateImageBehavior = false;
 			this.listView3.View = System.Windows.Forms.View.Details;
 			this.listView3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView3_MouseDoubleClick);
@@ -181,7 +181,7 @@
 			this.comboBox3.Name = "comboBox3";
 			this.comboBox3.Size = new System.Drawing.Size(81, 20);
 			this.comboBox3.TabIndex = 3;
-			this.toolTip1.SetToolTip(this.comboBox3, "・명칭 등\r\n　아이템 이름, 도시명, 사용언어검색. \r\n・종류\r\n　아이템종류별로 검색. \r\n　예:식료품");
+			this.toolTip1.SetToolTip(this.comboBox3, "- 명칭 등\r\n  아이템 이름, 도시명, 사용 언어 검색. \r\n- 종류\r\n  아이템 종류별로 검색. \r\n  예:식료품");
 			this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
 			// 
 			// comboBox2
@@ -196,8 +196,8 @@
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(163, 20);
 			this.comboBox2.TabIndex = 2;
-			this.toolTip1.SetToolTip(this.comboBox2, "・도시정보\r\n　도시정보 검색. \r\n　검색결과와 장소표시가 가능. \r\n・아이템DB\r\n　독자적인 아이템DB 사용 검색" +
-					". \r\n　검색결과와 장소표시가 불가능. \r\n・전체정보\r\n　위의 모두를 검색. ");
+			this.toolTip1.SetToolTip(this.comboBox2, "- 도시정보\r\n  도시정보 검색. \r\n  검색결과와 장소표시가 가능. \r\n- 아이템DB\r\n  독자적인 아이템DB 사용 검색" +
+					". \r\n  검색결과와 장소표시가 불가능. \r\n- 전체정보\r\n  위의 모두를 검색. ");
 			this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
 			// 
 			// contextMenuStrip1
@@ -215,14 +215,14 @@
 			// 
 			this.open_recipe_wiki0_ToolStripMenuItem.Name = "open_recipe_wiki0_ToolStripMenuItem";
 			this.open_recipe_wiki0_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki0_ToolStripMenuItem.Text = "레시피の디테일を레시피정보wikiで조사";
+			this.open_recipe_wiki0_ToolStripMenuItem.Text = "레시피 상세를 레시피 정보 wiki 에서 조사";
 			this.open_recipe_wiki0_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki0_ToolStripMenuItem_Click);
 			// 
 			// open_recipe_wiki1_ToolStripMenuItem
 			// 
 			this.open_recipe_wiki1_ToolStripMenuItem.Name = "open_recipe_wiki1_ToolStripMenuItem";
 			this.open_recipe_wiki1_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki1_ToolStripMenuItem.Text = "레시피で작성가능かどうか레시피정보wikiで조사";
+			this.open_recipe_wiki1_ToolStripMenuItem.Text = "레시피로 작성 가능한지 레시피 정보 wiki 에서 조사";
 			this.open_recipe_wiki1_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki1_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
@@ -234,14 +234,14 @@
 			// 
 			this.copy_name_to_clipboardToolStripMenuItem.Name = "copy_name_to_clipboardToolStripMenuItem";
 			this.copy_name_to_clipboardToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.copy_name_to_clipboardToolStripMenuItem.Text = "명칭をクリップボードにコピー";
+			this.copy_name_to_clipboardToolStripMenuItem.Text = "명칭을 클립보드에 복사";
 			this.copy_name_to_clipboardToolStripMenuItem.Click += new System.EventHandler(this.copy_name_to_clipboardToolStripMenuItem_Click);
 			// 
 			// copy_all_to_clipboardToolStripMenuItem
 			// 
 			this.copy_all_to_clipboardToolStripMenuItem.Name = "copy_all_to_clipboardToolStripMenuItem";
 			this.copy_all_to_clipboardToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.copy_all_to_clipboardToolStripMenuItem.Text = "디테일をクリップボードにコピー";
+			this.copy_all_to_clipboardToolStripMenuItem.Text = "상세를 클립보드에 복사";
 			this.copy_all_to_clipboardToolStripMenuItem.Click += new System.EventHandler(this.copy_all_to_clipboardToolStripMenuItem_Click);
 			// 
 			// tabControl1

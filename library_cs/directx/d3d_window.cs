@@ -22,7 +22,7 @@ namespace directx {
 	 윈도우관리
 	---------------------------------------------------------------------------*/
 	public class d3d_windows {
-		// 윈도우내判定
+		// 윈도우 내 판정
 		public enum hit_check {
 			title,			  // 프레임의 상부
 			title_button,	   // 타이틀 내의 버튼
@@ -40,7 +40,7 @@ namespace directx {
 
 			public enum mode {
 				normal,		 // 통상
-				small,		  // 最소化
+				small,		  // 최소화
 			};
 
 			private d3d_windows m_ctrl;
@@ -59,7 +59,7 @@ namespace directx {
 														// 클라이언트 영역 그리기 델리게이트가 참조한다
 			private float m_z;
 
-			private int m_back_color;			   // 背景색
+			private int m_back_color;			   // 배경색
 			private int m_title_color;			  // 타이틀 색
 			private int m_frame_color;			  // 프레임 색
 
@@ -274,7 +274,7 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 更新
+			 갱신
 			---------------------------------------------------------------------------*/
 			public void Update() {
 				//				m_screen_size	= new Vector2(m_device.device.Viewport.Width, m_device.device.Viewport.Height);
@@ -287,7 +287,7 @@ namespace directx {
 			---------------------------------------------------------------------------*/
 			public void Draw() {
 				if (m_window_mode == mode.small) {
-					// 最소化
+					// 최소화
 					int color = m_title_color;
 					color &= 0x00ffffff;
 					color |= (64 << 24);
@@ -298,7 +298,7 @@ namespace directx {
 					m_device.DrawLineRect(new Vector3(m_pos.X + SMALL_HEADER_WIDTH - 10, m_pos.Y, m_z), new Vector2(10, 10), Color.Black.ToArgb());
 					m_device.DrawLineRect(new Vector3(m_pos.X + SMALL_HEADER_WIDTH - 7, m_pos.Y + 3, m_z), new Vector2(4, 4), Color.FromArgb(50, 50, 50).ToArgb());
 				} else {
-					// 통상時
+					// 통상 시
 					m_device.DrawFillRect(new Vector3(m_pos.X, m_pos.Y, m_z), m_size, m_back_color);
 					if (is_draw_header) {
 						m_device.DrawFillRect(new Vector3(m_pos.X, m_pos.Y, m_z), new Vector2(m_size.X, 10), m_title_color);
@@ -363,7 +363,7 @@ namespace directx {
 			/*-------------------------------------------------------------------------
 			 버튼 계열의 현재 상태용 배경 그리기
 			 마우스를 올렸을 때 표시하고 싶을 때용
-			 枠없음
+			 테두리 없음
 			---------------------------------------------------------------------------*/
 			public void DrawCurrentButtonBack_WithoutFrame(Vector3 pos, Vector2 size) {
 				// 테두리를 붙여서 그리기
@@ -422,7 +422,7 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 윈도우모드切替
+			 윈도우 모드 전환
 			---------------------------------------------------------------------------*/
 			public void ToggleWindowMode() {
 				if (m_window_mode == mode.small) m_window_mode = mode.normal;
@@ -502,7 +502,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 更新
+		 갱신
 		---------------------------------------------------------------------------*/
 		public void Update() {
 			foreach (window w in m_windows) {

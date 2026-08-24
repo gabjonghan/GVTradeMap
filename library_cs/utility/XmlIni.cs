@@ -142,7 +142,7 @@ namespace Utility.Xml
 					create_new_document(id);
 					return false;
 				}
-				// 읽기成功
+				// 읽기 성공
 				return true;
 			}catch{
 				// 읽기실패
@@ -200,7 +200,7 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터取得
+		/// 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
@@ -219,7 +219,7 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터取得
+		/// 데이터 취득
 		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>

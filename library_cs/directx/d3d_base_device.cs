@@ -150,7 +150,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기開始
+		 그리기 시작
 		---------------------------------------------------------------------------*/
 		public virtual bool Begin()
 		{
@@ -218,7 +218,7 @@ namespace directx
 		{
 			if(m_d3d_device == null)	return false;
 			Format	af		= (m_present_params.Windowed)
-								? m_d3d_device.DisplayMode.Format		// 윈도우모드時
+								? m_d3d_device.DisplayMode.Format		// 윈도우 모드일 때
 								: m_present_params.BackBufferFormat;	// 풀스크린일 때
 			return Manager.CheckDeviceFormat(	m_adapter_index,
 												m_device_type,
@@ -231,7 +231,7 @@ namespace directx
 		{
 			if(m_d3d_device == null)	return false;
 			Format	af		= (m_present_params.Windowed)
-								? m_d3d_device.DisplayMode.Format		// 윈도우모드時
+								? m_d3d_device.DisplayMode.Format		// 윈도우 모드일 때
 								: m_present_params.BackBufferFormat;	// 풀스크린일 때
 			return Manager.CheckDeviceFormat(	m_adapter_index,
 												m_device_type,

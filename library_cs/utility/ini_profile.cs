@@ -56,7 +56,7 @@ namespace Utility.Ini
 	public class IniProfile : IniBase
 	{
 		/// <summary>
-		/// API宣言
+		/// API 선언
 		/// ini 파일 읽기
 		/// </summary>
 		[DllImport("kernel32.dll", EntryPoint="GetPrivateProfileString")]
@@ -69,7 +69,7 @@ namespace Utility.Ini
 			, string lpFileName ); 
 
 		/// <summary>
-		/// API宣言
+		/// API 선언
 		/// ini 파일 쓰기
 		/// </summary>
 		[DllImport("kernel32.dll", EntryPoint="WritePrivateProfileString")] 
@@ -108,11 +108,11 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// string데이터取得
+		/// string 데이터 취득
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">이름</param>
-		/// <param name="default_value">初期値</param>
+		/// <param name="default_value">초기값</param>
 		/// <returns>취득된 데이터</returns>
 		public override string GetProfile(string group_name, string name, string default_value)
 		{
@@ -127,11 +127,11 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// string[]데이터取得
+		/// string[] 데이터 취득
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">이름</param>
-		/// <param name="default_value">初期値</param>
+		/// <param name="default_value">초기값</param>
 		/// <returns>취득된 데이터</returns>
 		public override string[] GetProfile(string group_name, string name, string[] default_value)
 		{

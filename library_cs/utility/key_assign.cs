@@ -138,7 +138,7 @@ namespace Utility.KeyAssign
 			// CapsLock
 			if(key == Keys.Capital)								return false;
 
-			// 반角, 全角
+			// 반각, 전각
 			if(key == (Keys.Oemtilde | Keys.D4))				return false;
 			if(key == (Keys.OemBackslash | Keys.ControlKey))	return false;
 	
@@ -419,7 +419,7 @@ namespace Utility.KeyAssign
 		/// 메뉴에 표시되는 단축키와 관리되고 있는 할당을 일치시킨다.
 		/// ToolStripItem.Tag 가 Assign.Tag 와 일치하는 것을 검색해, 단축키를 갱신한다.
 		/// 표시만 설정하므로, 메뉴의 단축키 기능은 사용하지 않는다.
-		/// ContextMenuStrip版
+		/// ContextMenuStrip 버전
 		/// </summary>
 		/// <param name="menu">ContextMenuStrip</param>
 		public void UpdateMenuShortcutKeys(ContextMenuStrip menu)
@@ -435,7 +435,7 @@ namespace Utility.KeyAssign
 		/// 메뉴에 표시되는 단축키와 관리되고 있는 할당을 일치시킨다.
 		/// ToolStripItem.Tag 가 Assign.Tag 와 일치하는 것을 검색해, 단축키를 갱신한다.
 		/// 표시만 설정하므로, 메뉴의 단축키 기능은 사용하지 않는다.
-		/// MenuStrip版
+		/// MenuStrip 버전
 		/// </summary>
 		/// <param name="menu">MenuStrip</param>
 		public void UpdateMenuShortcutKeys(MenuStrip menu)
@@ -797,7 +797,7 @@ namespace Utility.KeyAssign
 		}
 
 		//-------------------------------------------------------------------------
-		/// 열挙
+		/// 열거
 		public IEnumerator<Assign> GetEnumerator()
 		{
 			for(int i=0; i<m_list.Count; i++){
@@ -822,7 +822,7 @@ namespace Utility.KeyAssign
 			private string					m_name;			// function name
 			private string					m_group;		// group name
 			private object					m_tag;			// tag
-			private string					m_ini_name;		// 설정保存용명
+			private string					m_ini_name;		// 설정 저장용 이름
 
 			//-------------------------------------------------------------------------
 			/// <summary>

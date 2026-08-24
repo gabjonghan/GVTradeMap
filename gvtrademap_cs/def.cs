@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 定수定義
+ 상수 정의
 
 ---------------------------------------------------------------------------*/
 
@@ -63,7 +63,7 @@ namespace gvtrademap_cs {
 		  public const string		FISHING_RANKS_FULLFNAME		= INFO_PATH + "낚시R.txt";
 		  public const string		COLLECT_RANKS_FULLFNAME		= INFO_PATH + "채집R.txt";
 		  public const string		SUPPLY_RANKS_FULLFNAME		= INFO_PATH + "조달R.txt";
-		  public const string		BONUS_ITEMS_FULLFNAME		= INFO_PATH + "特産품.txt";
+		  public const string		BONUS_ITEMS_FULLFNAME		= INFO_PATH + "특산품.txt";
 		  public const string		NANBAN_TRADE_ITEMS_FULLFNAME	= INFO_LOCAL_PATH + "남만품.txt";
 		  */
 
@@ -116,7 +116,7 @@ namespace gvtrademap_cs {
 		// 그리기 스킵의 최대
 		public const int SKIP_DRAW_FRAME_MAX = 5;
 
-		// 연결先포트번호
+		// 연결 대상 포트 번호
 		public const int DEFALUT_PORT_INDEX = 16612;
 	}
 }

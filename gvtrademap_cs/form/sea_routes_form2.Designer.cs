@@ -98,7 +98,7 @@
 			this.listView1.ShowItemToolTips = true;
 			this.listView1.Size = new System.Drawing.Size(735, 192);
 			this.listView1.TabIndex = 6;
-			this.toolTip1.SetToolTip(this.listView1, "おまじない");
+			this.toolTip1.SetToolTip(this.listView1, "더미");
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			this.listView1.VirtualMode = true;
@@ -290,7 +290,7 @@
 			// 
 			this.toolStripMenuItem6.Name = "toolStripMenuItem6";
 			this.toolStripMenuItem6.Size = new System.Drawing.Size(237, 22);
-			this.toolStripMenuItem6.Text = "즐겨찾기항로도목록に이동(&M)";
+			this.toolStripMenuItem6.Text = "즐겨찾기 항로도 목록으로 이동(&M)";
 			this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
 			// 
 			// toolStripMenuItem8

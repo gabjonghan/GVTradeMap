@@ -4,7 +4,7 @@
 // 대화상자에 KeyAssignForm 의 항목을 끼워 넣었을 때 사용한다
 // ComboBox	그룹선택용
 // Button		할당변경용
-// Button		할당解除용
+// Button		할당 해제용
 // Button		초기 할당으로 되돌리기
 // ListView	할당목록
 // 이 다섯 가지 컨트롤을 넘긴다
@@ -70,7 +70,7 @@ namespace Utility.KeyAssign
 			// 컨트롤 초기화
 			init_ctrl();
 
-			// 初期化
+			// 초기화
 			init();
 
 			// 할당 버튼 갱신
@@ -121,7 +121,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 初期化
+		/// 초기화
 		/// </summary>
 		private void init()
 		{
@@ -286,7 +286,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키할당解除
+		/// 키 할당 해제
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>

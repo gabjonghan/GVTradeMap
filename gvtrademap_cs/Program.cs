@@ -37,9 +37,9 @@ namespace gvtrademap_cs
 #endif
 					using(gvtrademap_cs_form frm = new gvtrademap_cs_form())
 					{
-						if(frm.Initialize()){		// 初期化
+						if(frm.Initialize()){		// 초기화
 							device_info_string	= frm.device_info_string;
-							frm.Show();				// 표시開始
+							frm.Show();				// 표시 시작
 
 							int		old_tick_count	= System.Environment.TickCount;
 							while(frm.Created){
@@ -63,7 +63,7 @@ namespace gvtrademap_cs
 														ex,
 														def.WINDOW_TITLE,
 														def.URL4,
-														(device_info_string != "")? device_info_string: "未取得") ){
+														(device_info_string != "")? device_info_string: "미취득") ){
 						dlg.ShowDialog();
 					}
 				}

@@ -121,18 +121,18 @@
 	<value>17, 17</value>
   </metadata>
   <data name="comboBox4.ToolTip" xml:space="preserve">
-	<value>・부분일치
-　一부분でも含まれるものを검색します. 
-・완전일치
-　完全に一致するもののみ검색します. 
-・앞부분일치
-　先頭から一致するもののみ검색します. 
-　「ロング」で검색した場合, 「ロングソード」はヒットしますが, 
-　「バロング」はヒットしません. 
-・뒷부분일치
-　語尾に一致するもののみ검색します. 
-　「ロン」で검색した場合, 「バロン」はヒットしますが, 
-　「ロンドン」はヒットしません. </value>
+	<value>- 부분일치
+  일부분이라도 포함되는 것을 검색합니다. 
+- 완전일치
+  완전히 일치하는 것만 검색합니다. 
+- 앞부분일치
+  앞에서부터 일치하는 것만 검색합니다. 
+  "롱"으로 검색한 경우, "롱소드"는 걸리지만 
+  "바롱"은 걸리지 않습니다. 
+- 뒷부분일치
+  어미가 일치하는 것만 검색합니다. 
+  "롱"으로 검색한 경우, "바롱"은 걸리지만 
+  "롱던"은 걸리지 않습니다. </value>
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
 	<value>129, 21</value>

@@ -149,9 +149,9 @@ namespace Utility.Ctrl
 			/// <summary>
 			/// 비교 메서드
 			/// </summary>
-			/// <param name="x">比較대상1</param>
-			/// <param name="y">比較대상2</param>
-			/// <returns>比較결과</returns>
+			/// <param name="x">비교 대상 1</param>
+			/// <param name="y">비교 대상 2</param>
+			/// <returns>비교 결과</returns>
 			public int Compare(object x, object y)
 			{
 				ListViewItem	item1	= x as ListViewItem;

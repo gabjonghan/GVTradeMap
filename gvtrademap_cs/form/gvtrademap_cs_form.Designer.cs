@@ -3,25 +3,25 @@
 	partial class gvtrademap_cs_form
 	{
 		/// <summary>
-		/// 必要なデザイナ変수です. 
+		/// 필요한 디자이너 변수입니다.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
 		/// <summary>
-		/// 사용중のリソースを전부クリーンアップします. 
+		/// 사용 중인 리소스를 전부 정리합니다.
 		/// </summary>
-		/// <param Name="disposing">マネージ リソースが破棄される場合 true, 破棄されない場合は false です. </param>
+		/// <param Name="disposing">관리 리소스가 파기되는 경우 true, 파기되지 않는 경우는 false 입니다.</param>
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && (components != null))
 			{
-				// ここに書かないと例외時스레드を종료させられない?
-				// 스레드を종료させる
+				// 여기에 쓰지 않으면 예외 발생 시 스레드를 종료시킬 수 없다?
+				// 스레드를 종료시킨다
 				finish_all_threads();
 
-				// アンマネージドリソースの破棄
+				// 언매니지드 리소스 파기
 				if(m_db != null)	m_db.Dispose();
-				// libは必ず最후(Direct3D Deviceが最후に破棄される)
+				// lib 는 반드시 마지막(Direct3D Device 가 마지막에 파기된다)
 				if(m_lib != null)	m_lib.Dispose();
 
 				components.Dispose();
@@ -29,11 +29,11 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows フォーム デザイナで生成されたコード
+		#region Windows 폼 디자이너에서 생성된 코드
 
 		/// <summary>
-		/// デザイナ サ포트に必要なメソッドです. このメソッドの내용を
-		/// コード エディタで변경しないでください. 
+		/// 디자이너 지원에 필요한 메서드입니다. 이 메서드의 내용을
+		/// 코드 에디터에서 변경하지 마십시오.
 		/// </summary>
 		private void InitializeComponent()
 		{
