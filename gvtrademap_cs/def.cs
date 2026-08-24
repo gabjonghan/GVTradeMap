@@ -16,7 +16,7 @@ namespace gvtrademap_cs {
 
 	---------------------------------------------------------------------------*/
 	public static partial class def {
-		// HPの元
+		// HP 의 원본
 		public const string URL_HP = @"http://www.geocities.jp/cookiezephyros/";
 
 		// 업데이트확인용
@@ -25,21 +25,21 @@ namespace gvtrademap_cs {
 		static public string VERSION_FNAME = "version.txt";
 		static public string DOWNLOAD_URL = URL_HP + @"gvtrademap.html";
 
-		// Window title 及び버전정보
+		// Window title 및 버전 정보
 		//		public const string		WINDOW_TITLE				= "대항해시대Online 교역MAP C# ver.1.22β1";
 		public const string WINDOW_TITLE = "대항해시대Online 교역MAP C# ver.1.32.3+4";
 
-		// 해역변동수집アプリケーション
+		// 해역 변동 수집 애플리케이션
 		public const string SEAAREA_APP_FNAME = "gvoac.exe";
 
-		// パス
+		// 경로
 		public const string DB_PATH = "database\\";
 		public const string MAP_PATH = "map\\";
 		public const string SEAROUTE_PATH = "temp\\";
 		public const string MEMO_PATH = "memo\\";
 		public const string SS_PATH = "SS\\";
 
-		// 파일명(パス含む)
+		// 파일명(경로 포함)
 		public const string WEB_ICONS_FULLFNAME = DB_PATH + "webicons.txt";
 		public const string ITEMDB_FULLNAME = DB_PATH + "item_db.txt";
 		public const string INFO_FULLNAME = DB_PATH + "cityinfos.xml";
@@ -70,7 +70,7 @@ namespace gvtrademap_cs {
 		// 설정파일
 		public const string INI_FNAME = "gvtrademap_cs.ini";
 
-		// 지도파일(パス含む)
+		// 지도 파일(경로 포함)
 		public const string MAP_FULLFNAME1 = MAP_PATH + "worldmap_r.png";
 		public const string MAP_FULLFNAME2 = MAP_PATH + "worldmap_c.png";
 		public const string MIX_MAP_FULLFNAME1 = MAP_PATH + "worldmap_r_mix.png";
@@ -84,10 +84,10 @@ namespace gvtrademap_cs {
 		public const string ICONSIMAGE_FULLNAME = MAP_PATH + "gv_pics20.dds";
 
 		// 스프라이트그리기용쉐이더
-		// 쉐이더は埋め込みリソース
+		// 쉐이더는 임베드된 리소스
 		public const string SPRITE_SHADER_RESOURCENAME = "gvtrademap_cs.fx.sprite.fxo";
 
-		// 디테일정보ページ
+		// 상세 정보 페이지
 		public const string URL0 = "dol.egret.jp/gtf/?page=city&id=";
 		public const string URL1 = "www2.atwiki.jp/harrington/pages/";
 		//		public const string		URL4						= @"http://showroom256.hp.infoseek.co.jp/cgi-bin/read.cgi";
@@ -98,7 +98,7 @@ namespace gvtrademap_cs {
 
 		public const string URL_HP_ORIGINAL = @"http://gvtrademap.daa.jp/";
 
-		// 게임내좌표の한계
+		// 게임 내 좌표의 한계
 		public const int GAME_WIDTH = 16384;
 		public const int GAME_HEIGHT = 8192;
 
@@ -109,11 +109,11 @@ namespace gvtrademap_cs {
 		public const int ICON_SIZE_X = 16;
 		public const int ICON_SIZE_Y = 16;
 
-		// メイリオフォントのデフォ금허브 소사이즈
-		// MS ゴシック UI と同じくらいの사이즈になるような値
+		// 메이리오 폰트의 기본 크기
+		// MS 고딕 UI 와 비슷한 크기가 되도록 하는 값
 		public const float MEIRYO_POINT = 8f;
 
-		// 그리기스킵の최대
+		// 그리기 스킵의 최대
 		public const int SKIP_DRAW_FRAME_MAX = 5;
 
 		// 연결先포트번호

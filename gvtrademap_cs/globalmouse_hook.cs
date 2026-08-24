@@ -25,20 +25,20 @@ namespace gvtrademap_cs
 	class globalmouse_hook : IDisposable
 	{
 		public enum SendKeyType{
-			TOGGLE_SKILL	= 1,	// 스킬パネル開閉			Ctrl+Q
-			TOGGLE_CUSTOM_SLOT,		// カスタムス행운권を開く		Ctrl+Z
-			OPEN_ITEM_WINDOW,		// 아이템윈도우を開く	Ctrl+W
+			TOGGLE_SKILL	= 1,	// 스킬 패널 열고 닫기			Ctrl+Q
+			TOGGLE_CUSTOM_SLOT,		// 커스텀 슬롯 열기		Ctrl+Z
+			OPEN_ITEM_WINDOW,		// 아이템 윈도우 열기	Ctrl+W
 		};
 	
-		private IntPtr					m_handle;		// DLLのハンドル
+		private IntPtr					m_handle;		// DLL 의 핸들
 
-		// DLL내の関수
+		// DLL 안의 함수
 		private delegate int SetDolMouseHookEx(int xbutton1_keytype, int xbutton2_keytype);
 		private delegate int UnhookDolMouseHook();
 	
 		/*-------------------------------------------------------------------------
 		 初期化
-		 마우스훅を開始する
+		 마우스 훅을 시작한다
 		---------------------------------------------------------------------------*/
 		public globalmouse_hook()
 			: this(SendKeyType.TOGGLE_SKILL, SendKeyType.OPEN_ITEM_WINDOW)
@@ -71,7 +71,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 훅されていれば종료させる
+		 훅되어 있으면 종료시킨다
 		---------------------------------------------------------------------------*/
 		public void Dispose()
 		{

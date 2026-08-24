@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
- よく使うものをまとめたもの
- DirectXの関係から最후にDispose()を呼ぶこと
- (少なくとも텍스쳐등を破棄した후Dispose()が呼ばれなくてはならない)
+ 자주 쓰는 것들을 모아 놓은 것
+ DirectX 관계상 Dispose() 를 가장 마지막에 호출할 것
+ (적어도 텍스쳐 등을 파기한 뒤 Dispose() 가 호출되어야 한다)
 
 ---------------------------------------------------------------------------*/
 
@@ -55,7 +55,7 @@ namespace gvtrademap_cs {
 		setting_window_button_11,
 		setting_window_button_12,
 		setting_window_button_13,
-		setting_window_button_exec_gvoac,	  // 해역정보수집の시작
+		setting_window_button_exec_gvoac,	  // 해역 정보 수집 시작
 		folder_open_00,
 		folder_open_01,
 		folder_open_02,
@@ -66,7 +66,7 @@ namespace gvtrademap_cs {
 		window_change_border_style,
 		window_close,
 
-		unknown_function = 65535,		  // 定義されていない기능
+		unknown_function = 65535,		  // 정의되지 않은 기능
 	};
 
 	/*-------------------------------------------------------------------------
@@ -78,7 +78,7 @@ namespace gvtrademap_cs {
 		private icons m_icons;			// 아이콘관리
 		private nameTexture m_nameTexture;
 		private GlobalSettings m_setting;			  // 설정항목
-		private IniProfileSetting m_ini_manager;			// 설정の읽기관리
+		private IniProfileSetting m_ini_manager;			// 설정 읽기 관리
 		private KeyAssignManager m_key_assign_manager;  // 키할당관리
 
 		/*-------------------------------------------------------------------------
@@ -96,7 +96,7 @@ namespace gvtrademap_cs {
 
 		---------------------------------------------------------------------------*/
 		public gvt_lib(System.Windows.Forms.Form form, string ini_file_name) {
-			// 설정항목の읽기관리
+			// 설정 항목의 읽기 관리
 			m_ini_manager = new IniProfileSetting(ini_file_name);
 
 			// 설정항목
@@ -108,7 +108,7 @@ namespace gvtrademap_cs {
 			m_ini_manager.AddIniSaveLoad(m_setting);
 			m_ini_manager.AddIniSaveLoad(m_key_assign_manager, "key_assign");
 
-			// メイン윈도우그리기용
+			// 메인 윈도우 그리기용
 			m_d3d_device = new d3d_device(form);
 			m_d3d_device.skip_max = def.SKIP_DRAW_FRAME_MAX;		// 그리기스킵수
 
@@ -118,7 +118,7 @@ namespace gvtrademap_cs {
 			// 아이콘관리
 			m_icons = new icons(m_d3d_device, def.ICONSIMAGE_FULLNAME);
 			
-			// 도시등の문자の絵관리
+			// 도시 등의 문자 그림 관리
 			m_nameTexture = new nameTexture(m_d3d_device);
 			
 			// 키할당初期化
@@ -132,7 +132,7 @@ namespace gvtrademap_cs {
 			if (m_loop_x_image != null) m_loop_x_image.Dispose();
 			if (m_icons != null) m_icons.Dispose();
 			
-			// 最후にD3Ddeviceを破棄する
+			// 마지막에 D3Ddevice 를 파기한다
 			if (m_d3d_device != null) m_d3d_device.Dispose();
 
 			m_loop_x_image = null;

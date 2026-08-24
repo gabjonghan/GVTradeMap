@@ -32,7 +32,7 @@ namespace gvtrademap_cs {
 		private const int BB_ONCE_SIZE = 400;
 		private const int BB_OUTSIDESCREEEN_OFFSET = 16;
 
-		// 破棄する距離の2乗
+		// 파기할 거리의 제곱
 		private const float REMOVE_LENGTH_SQ = 34 * 34;
 
 		private enum icon_index {
@@ -80,7 +80,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 바운딩 박스付き
+		 바운딩 박스 포함
 		---------------------------------------------------------------------------*/
 		public class DataListBB : D3dBB2d {
 			private List<Data> m_list;
@@ -95,7 +95,7 @@ namespace gvtrademap_cs {
 			---------------------------------------------------------------------------*/
 			public DataListBB() {
 				m_list = new List<Data>();
-				// オフセットを지정しておく
+				// 오프셋을 지정해 둔다
 				base.OffsetLT = new Vector2(-BB_OUTSIDESCREEEN_OFFSET, -BB_OUTSIDESCREEEN_OFFSET);
 				base.OffsetRB = new Vector2(BB_OUTSIDESCREEEN_OFFSET, BB_OUTSIDESCREEEN_OFFSET);
 			}
@@ -111,7 +111,7 @@ namespace gvtrademap_cs {
 				// 추가
 				m_list.Add(p);
 				base.Update(transform.ToVector2(p.Position));
-				return true;		// 추가した
+				return true;		// 추가했다
 			}
 		}
 
@@ -139,7 +139,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 데이터を로드
+		 데이터를 로드
 		---------------------------------------------------------------------------*/
 		public bool Load(string fname) {
 			if (!File.Exists(fname)) return false;	  // 파일을 찾을 수 없습니다
@@ -174,29 +174,29 @@ namespace gvtrademap_cs {
 				return false;
 			}
 
-			// 그리기용に仕분ける
+			// 그리기용으로 분류한다
 			create_draw_list();
 			return true;
 		}
 
 		/*-------------------------------------------------------------------------
 		 업데이트
-		 최적화현황が変わった場合は그리기목록を作りなおす
+		 최적화 상태가 바뀐 경우에는 그리기 목록을 다시 만든다
 		---------------------------------------------------------------------------*/
 		public void Update() {
-			// 설정변경のチェック
+			// 설정 변경 확인
 			if ((m_optimize == m_lib.setting.remove_near_web_icons)
 				&& (m_draw_flags == m_lib.setting.draw_setting_web_icons)) {
 				// 설정변경없음
 				return;
 			}
 
-			// 作り直す
+			// 다시 만든다
 			create_draw_list();
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기용に仕분ける
+		 그리기용으로 분류한다
 		---------------------------------------------------------------------------*/
 		private void create_draw_list() {
 			m_draw_list.Clear();
@@ -204,7 +204,7 @@ namespace gvtrademap_cs {
 			// 그리기플래그
 			m_draw_flags = m_lib.setting.draw_setting_web_icons;
 
-			// 목록を作る
+			// 목록을 만든다
 			List<Data> free_list = create_list();
 
 			// 적당히 거리가 가까우면 그룹을 만듬
@@ -214,15 +214,15 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 목록を作る
-		 설정によっては同じ아이콘で距離が近い場合추가されない
+		 목록을 만든다
+		 설정에 따라서는 같은 아이콘이고 거리가 가까우면 추가되지 않는다
 		---------------------------------------------------------------------------*/
 		private List<Data> create_list() {
 			List<Data> free_list = new List<Data>();
 
 			m_optimize = m_lib.setting.remove_near_web_icons;
 			if (!m_optimize) {
-				// 전부を無条건に含む
+				// 전부를 무조건 포함
 				foreach (Data i in m_list) free_list.Add(i);
 			} else {
 				foreach (Data i in m_list) {
@@ -235,22 +235,22 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 추가する必要があるか조사
-		 同じ종류の아이콘で距離が近い場合falseを返す
+		 추가할 필요가 있는지 조사
+		 같은 종류의 아이콘이고 거리가 가까우면 false 를 반환한다
 		---------------------------------------------------------------------------*/
 		private bool is_add_list(Data wi, List<Data> list) {
 			foreach (Data i in list) {
-				// 아이콘が同じ
+				// 아이콘이 같다
 				if (wi.IconIndex != i.IconIndex) continue;
-				// 距離が近い
+				// 거리가 가깝다
 				Vector2 p1 = transform.ToVector2(wi.Position);
 				Vector2 p2 = transform.ToVector2(i.Position);
 				if ((p1 - p2).LengthSq() > REMOVE_LENGTH_SQ) continue;
 
-				// 近い위치にあるので추가しない
+				// 가까운 위치에 있으므로 추가하지 않는다
 				return false;
 			}
-			// 추가する
+			// 추가한다
 			return true;
 		}
 
@@ -263,7 +263,7 @@ namespace gvtrademap_cs {
 
 			DataListBB bb = new DataListBB();
 			foreach (Data i in old) {
-				// 그리기플래그がないものは추가しない
+				// 그리기 플래그가 없는 것은 추가하지 않는다
 				if (!is_draw(i.IconIndex)) continue;
 
 				if (!bb.Add(i)) {
@@ -294,7 +294,7 @@ namespace gvtrademap_cs {
 			D3dBB2d.CullingRect rect = new D3dBB2d.CullingRect(image.Device.client_size);
 			m_lib.device.sprites.BeginDrawSprites(m_lib.icons.texture, offset, image.ImageScale, scale);
 			foreach (DataListBB i in m_draw_list) {
-				// 바운딩 박스で화면외かどうか조사
+				// 바운딩 박스로 화면 밖인지 조사
 				if (i.IsCulling(offset, image.ImageScale, rect)) {
 					continue;
 				}
@@ -314,7 +314,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 표시항목チェック
+		 표시 항목 확인
 		---------------------------------------------------------------------------*/
 		private bool is_draw(int index) {
 			// 그리기플래그

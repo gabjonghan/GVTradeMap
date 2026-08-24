@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
- x방향にループするイメージ
- イメージに合成してしまう모드に대응
- イメージは렌더링 타겟として確保される
+ x 방향으로 루프하는 이미지
+ 이미지에 합성해 버리는 모드에 대응
+ 이미지는 렌더링 타겟으로 확보된다
 
 ---------------------------------------------------------------------------*/
 
@@ -31,11 +31,11 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	class TextureUnit : IDisposable
 	{
-		private d3d_device m_device;				// デバイス
-		private Texture m_texture;			  // 그리기する텍스쳐
-		private Texture m_texture_sysmem;	   // 시스템메모リに確保した텍스쳐
-		private Vector2 m_offset;			   // 切り出しオフセット
-		private Size m_size;					// 切り出し사이즈
+		private d3d_device m_device;				// 디바이스
+		private Texture m_texture;			  // 그릴 텍스쳐
+		private Texture m_texture_sysmem;	   // 시스템 메모리에 확보한 텍스쳐
+		private Vector2 m_offset;			   // 잘라내기 오프셋
+		private Size m_size;					// 잘라내기 크기
 		private Size m_texture_size;			// 텍스쳐사이즈
 												// 
 
@@ -58,8 +58,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 image から rect 사이즈を切り取って텍스쳐を작성
-		 렌더링 타겟を작성함ことにより, 사이즈を2のべき乗に조정する
+		 image 에서 rect 크기만큼 잘라내 텍스쳐를 작성
+		 렌더링 타겟으로 작성하기 때문에, 크기를 2 의 거듭제곱으로 조정한다
 		---------------------------------------------------------------------------*/
 		virtual public void Create(d3d_device device, ref byte[] image, Size size, int stride, Rectangle rect)
 		{
@@ -78,17 +78,17 @@ namespace gvtrademap_cs
 				m_size.Height = size.Height - rect.Y;
 			}
 
-			// 텍스쳐사이즈を2のべき乗にする
+			// 텍스쳐 크기를 2 의 거듭제곱으로 만든다
 			m_texture_size = d3d_utility.TextureSizePow2(m_size);
 			//			m_texture_size	= m_size;
 
-			// 텍스쳐の작성とロック
+			// 텍스쳐 작성과 잠금
 			if (m_texture_sysmem != null) m_texture_sysmem.Dispose();
 			m_texture_sysmem = new Texture(m_device.device, m_texture_size.Width, m_texture_size.Height,
 												1, Usage.Dynamic, Format.R5G6B5, Pool.SystemMemory);
 			UInt16[,] buf = (UInt16[,])m_texture_sysmem.LockRectangle(typeof(UInt16), 0, LockFlags.Discard, m_texture_size.Height, m_texture_size.Width);
 
-			// 텍스쳐내용の生成
+			// 텍스쳐 내용 생성
 			int index = (stride * rect.Y) + (rect.X * sizeof(UInt16));
 			for (int y = 0; y < m_size.Height; y++)
 			{
@@ -99,8 +99,8 @@ namespace gvtrademap_cs
 										| (image[index + x * sizeof(UInt16) + 0] << 0));
 					buf[y, x] = color;
 				}
-				// 사이즈조정をした場合は1ドット余분にコピーする
-				// バイリニア時の참조장소対策
+				// 크기 조정을 한 경우에는 1 도트 여분으로 복사한다
+				// 바이리니어 필터일 때의 참조 위치 대책
 				if (m_texture_size.Width > m_size.Width)
 				{
 					buf[y, m_size.Width] = color;
@@ -111,15 +111,15 @@ namespace gvtrademap_cs
 
 			if (m_texture != null) m_texture.Dispose();
 
-			// Managedな텍스쳐に전送する
+			// Managed 텍스쳐로 전송한다
 			//			m_texture	= d3d_utility.CreateTextureFromTexture(m_device.Device, Texture);
-			// 렌더링 타겟の텍스쳐に전送する
+			// 렌더링 타겟 텍스쳐로 전송한다
 			RefreshTexture();
 		}
 
 		/*-------------------------------------------------------------------------
-		 image から rect 사이즈を切り取って텍스쳐を작성
-		 マスク용
+		 image 에서 rect 크기만큼 잘라내 텍스쳐를 작성
+		 마스크용
 		---------------------------------------------------------------------------*/
 		virtual public void CreateFromMask(d3d_device device, ref byte[] image, Size size, int stride, Rectangle rect)
 		{
@@ -140,13 +140,13 @@ namespace gvtrademap_cs
 
 			m_texture_size = m_size;
 
-			// 텍스쳐の작성とロック
+			// 텍스쳐 작성과 잠금
 			using (Texture texture = new Texture(m_device.device, m_size.Width, m_size.Height,
 												1, Usage.Dynamic, Format.A1R5G5B5, Pool.SystemMemory))
 			{
 				UInt16[,] buf = (UInt16[,])texture.LockRectangle(typeof(UInt16), 0, LockFlags.Discard, m_size.Height, m_size.Width);
 
-				// 텍스쳐내용の生成
+				// 텍스쳐 내용 생성
 				int index = (stride * rect.Y) + (rect.X * sizeof(UInt16));
 				for (int y = 0; y < m_size.Height; y++)
 				{
@@ -155,12 +155,12 @@ namespace gvtrademap_cs
 						UInt16 color = (UInt16)((image[index + x * sizeof(UInt16) + 1] << 8)
 												| (image[index + x * sizeof(UInt16) + 0] << 0));
 
-						// jpgなのである程도誤差を認める
+						// jpg 이므로 어느 정도 오차를 허용한다
 						if ((((color >> 0) & 0x1f) < 0x10)
 							|| (((color >> 5) & 0x3f) < 0x30)
 							|| (((color >> 5 + 6) & 0x1f) < 0x10))
 						{
-							color = 0x7fff;	 // 抜き
+							color = 0x7fff;	 // 투명 처리
 						}
 
 						buf[y, x] = color;
@@ -169,7 +169,7 @@ namespace gvtrademap_cs
 				}
 				texture.UnlockRectangle(0);
 
-				// Managedな텍스쳐に전送する
+				// Managed 텍스쳐로 전송한다
 				if (m_texture != null) m_texture.Dispose();
 				m_texture = d3d_utility.CreateTextureFromTexture(m_device.device, texture);
 			}
@@ -193,18 +193,18 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 リフレッシュ
-		 デバイスロスト対策
+		 리프레시
+		 디바이스 로스트 대책
 		---------------------------------------------------------------------------*/
 		public void RefreshTexture()
 		{
-			// 特殊な사용をしない
+			// 특수한 사용은 하지 않는다
 			if (m_texture_sysmem == null) return;
 
-			// すでにあれば解放する
+			// 이미 있으면 해제한다
 			if (m_texture != null) m_texture.Dispose();
 
-			// 렌더링 타겟として사용できる텍스쳐を작성し, 전送する
+			// 렌더링 타겟으로 사용할 수 있는 텍스쳐를 작성해 전송한다
 			m_texture = d3d_utility.CreateRenderTargetTextureSameSize(m_device.device, m_texture_sysmem);
 			d3d_utility.CopyTexture(m_device.device, m_texture, m_texture_sysmem);
 		}
@@ -225,20 +225,20 @@ namespace gvtrademap_cs
 			Vector2 size = new Vector2(scale * m_texture_size.Width, scale * m_texture_size.Height);
 			Vector2 client_size = m_device.client_size;
 
-			// オフセットを考慮
+			// 오프셋을 고려
 			pos.X *= scale;
 			pos.Y *= scale;
 			pos.X += offset.X;
 			pos.Y += offset.Y;
 
-			// 그리기범위チェック
+			// 그리기 범위 확인
 			// debug
-			// 범위내の端付近で컬링する
+			// 범위 안의 끝부분에서 컬링한다
 			//			if(pos.X + ImageSize.X < 0+32)		return;
 			//			if(pos.Y + ImageSize.Y < 0+32)		return;
 			//			if(pos.X > client_size.X-32)	return;
 			//			if(pos.Y > client_size.Y-32)	return;
-			// 통상の컬링
+			// 통상 컬링
 			if (pos.X + size.X < 0) return;
 			if (pos.Y + size.Y < 0) return;
 			if (pos.X > client_size.X) return;
@@ -255,32 +255,32 @@ namespace gvtrademap_cs
 	public class LoopXImage : IDisposable
 	{
 		private const int TEXSIZE_STEP = 512;	   // 분할사이즈
-		private const int HEIGHT_MARGIN = 200;	  // 상下のスクロールマージン
+		private const int HEIGHT_MARGIN = 200;	  // 상하 스크롤 마진
 		private const float SCALE_MIN = 0.25f;	   // 축소한계
 		private const float SCALE_MAX = 2;		// 확대한계
 
-		private d3d_device m_device;					// デバイス
+		private d3d_device m_device;					// 디바이스
 
 		private Vector2 m_image_size;			   // 이미지 전체의 크기
 		private List<TextureUnit> m_textures;				   // 텍스쳐목록
 
-		// 그리기위치と스케일
-		private Vector2 m_offset;				   // オフセット
-		private float m_scale;				  // 拡대縮소率
+		// 그리기 위치와 스케일
+		private Vector2 m_offset;				   // 오프셋
+		private float m_scale;				  // 확대 축소율
 
-		// 그리기위치と스케일退避용
-		private Vector2 m_offset_shelter;		   // オフセット
-		private float m_scale_shelter;		  // 拡대縮소率
+		// 그리기 위치와 스케일 대피용
+		private Vector2 m_offset_shelter;		   // 오프셋
+		private float m_scale_shelter;		  // 확대 축소율
 		private bool m_is_pushed_params;			// 
 
-		// 스레드で로드場合の진행具合
+		// 스레드로 로드할 경우의 진행 상태
 		private int m_load_current;
 		private int m_load_max;
 		private string m_load_str;
 
-		// 그리기支援デリゲート
-		// 그리기時のX방향ループに대응し, オフセットを解決する
-		// このデリゲートが何회呼ばれるかはクライアント사이즈と画상사이즈による
+		// 그리기 지원 델리게이트
+		// 그릴 때의 X 방향 루프에 대응해 오프셋을 해결한다
+		// 이 델리게이트가 몇 번 호출되는지는 클라이언트 크기와 이미지 크기에 따라 다르다
 		public delegate void DrawHandler(Vector2 draw_offset, LoopXImage image);
 
 		private bool m_device_lost;
@@ -308,11 +308,11 @@ namespace gvtrademap_cs
 		public d3d_device Device { get { return m_device; } }
 
 		/*-------------------------------------------------------------------------
-		 オフセットの加算
+		 오프셋 가산
 		---------------------------------------------------------------------------*/
 		public void AddOffset(Vector2 add_offset)
 		{
-			// 스케일が소さいほど이동량が대きくなる
+			// 스케일이 작을수록 이동량이 커진다
 			m_offset += add_offset * (1 / ImageScale);
 		}
 
@@ -325,7 +325,7 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		public void SetScale(float scale, Point center_pos, bool is_center_mouse)
 		{
-			// 범위チェック
+			// 범위 확인
 			if (scale < SCALE_MIN) scale = SCALE_MIN;
 			if (scale > SCALE_MAX) scale = SCALE_MAX;
 
@@ -336,27 +336,27 @@ namespace gvtrademap_cs
 
 			if (is_center_mouse)
 			{
-				// 지정된위치が중心になるようにオフセットを변경する
+				// 지정된 위치가 중심이 되도록 오프셋을 변경한다
 				Vector2 pos = new Vector2(center_pos.X, center_pos.Y);
 
-				// 중心위치の差분を得る
+				// 중심 위치의 차분을 얻는다
 				Vector2 old_offset = pos * (1 / m_scale);
 				Vector2 new_offset = pos * (1 / scale);
 
-				// オフセットを수정する
+				// 오프셋을 수정한다
 				m_offset -= old_offset - new_offset;
 
 				m_scale = scale;
 			}
 			else
 			{
-				// オフセットを변경しない
+				// 오프셋을 변경하지 않는다
 				m_scale = scale;
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 지정된좌표が중心になるようにオフセットを변경する
+		 지정된 좌표가 중심이 되도록 오프셋을 변경한다
 		---------------------------------------------------------------------------*/
 		public void MoveCenterOffset(Point center)
 		{
@@ -398,8 +398,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 デバイスロスト
-		 플래그だけ立てる
+		 디바이스 로스트
+		 플래그만 세운다
 		---------------------------------------------------------------------------*/
 		private void device_reset(object sender, System.EventArgs e)
 		{
@@ -407,8 +407,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 イメージの구축
-		 進捗현황の初期化
+		 이미지 구축
+		 진척 상태 초기화
 		---------------------------------------------------------------------------*/
 		public void InitializeCreateImage()
 		{
@@ -454,28 +454,28 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		public bool CreateImage(string file_name)
 		{
-			// 텍스쳐목록を解放
+			// 텍스쳐 목록 해제
 			Dispose();
 
 			InitializeCreateImage();
 
 			try
 			{
-				// イメージの읽기
+				// 이미지 읽기
 				m_load_str = file_name;
 				Bitmap bitmap = ResizeImage(new Bitmap(file_name), (int)def.GAME_WIDTH/4, (int)def.GAME_HEIGHT/4);
 				Vector2 size = new Vector2(bitmap.Width, bitmap.Height);
 				m_image_size = size;
 
-				// 로드枚수を수える
+				// 로드한 장수를 센다
 				int count_x = bitmap.Width / TEXSIZE_STEP;
 				if ((bitmap.Width % TEXSIZE_STEP) != 0) count_x++;
 				int count_y = bitmap.Height / TEXSIZE_STEP;
 				if ((bitmap.Height % TEXSIZE_STEP) != 0) count_y++;
 				m_load_max = count_x * count_y;
 
-				// ロックしてイメージ取り出し
-				// R5G6B5に변환しておく
+				// 잠그고 이미지를 꺼낸다
+				// R5G6B5 로 변환해 둔다
 				BitmapData bmpdata = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
 													ImageLockMode.ReadOnly,
 													PixelFormat.Format16bppRgb565);
@@ -488,11 +488,11 @@ namespace gvtrademap_cs
 				Marshal.Copy(ptr, image, 0, length);
 				bitmap.UnlockBits(bmpdata);
 
-				// オリジナルは解放しておく
+				// 원본은 해제해 둔다
 				bitmap.Dispose();
 				bitmap = null;
 
-				// 분할して텍스쳐を구축する
+				// 분할해서 텍스쳐를 구축한다
 				m_load_str = "텍스쳐전송중...";
 				for (int y = 0; y < m_image_size.Y; y += TEXSIZE_STEP)
 				{
@@ -515,20 +515,20 @@ namespace gvtrademap_cs
 			}
 			catch
 			{
-				// 何かを실패
+				// 무언가 실패
 				return false;
 			}
 			return true;
 		}
 
 		/*-------------------------------------------------------------------------
-		 イメージとの合成
-		 Begin()を読んだ直후に呼ぶこと
-		 must_margeがtrueのとき必ず合成する
-		 デバイスロスト時は必ず合成する
-		 合成しないときは handler にnullを지정できる
+		 이미지와 합성
+		 Begin() 을 호출한 직후에 호출할 것
+		 must_marge 가 true 일 때는 반드시 합성한다
+		 디바이스 로스트 시에는 반드시 합성한다
+		 합성하지 않을 때는 handler 에 null 을 지정할 수 있다
 
-		 デバイスロスト時の処理を含むため, 必ず呼び出す必要がある
+		 디바이스 로스트 시의 처리를 포함하므로, 반드시 호출해야 한다
 		---------------------------------------------------------------------------*/
 		public void MergeImage(DrawHandler handler, bool must_merge)
 		{
@@ -541,34 +541,34 @@ namespace gvtrademap_cs
 			{
 				tex.RefreshTexture();
 			}
-			// 合成대상がなければ返る
+			// 합성 대상이 없으면 돌아간다
 			if (handler == null)
 			{
 				m_device_lost = false;
-				// 合成に掛かった시간	
+				// 합성에 걸린 시간
 				MargeImageMS = d.GetSectionTimeMilliseconds();
 				return;
 			}
 
-			// 合成
-			// 렌더링 타겟を지정
+			// 합성
+			// 렌더링 타겟을 지정
 			Surface depth = m_device.device.DepthStencilSurface;
 			Surface backbuffer = m_device.device.GetBackBuffer(0, 0, BackBufferType.Mono);
-			m_device.device.DepthStencilSurface = null;	 // zバッファ없음
+			m_device.device.DepthStencilSurface = null;	 // z 버퍼 없음
 
 			try
 			{
 				foreach (TextureUnit tex in m_textures)
 				{
-					// 렌더링 타겟を설정
+					// 렌더링 타겟을 설정
 
-					if (tex.Texture == null) continue;	  // 텍스쳐が作れていない
+					if (tex.Texture == null) continue;	  // 텍스쳐를 만들지 못했다
 
 					//					Surface	a	= ((Texture)null).GetSurfaceLevel(0);
 					m_device.device.SetRenderTarget(0, tex.Texture.GetSurfaceLevel(0));
 					m_device.UpdateClientSize();
 
-					// 그리기위치と스케일を退避
+					// 그리기 위치와 스케일을 대피
 					PushDrawParams();
 					m_offset = -tex.Offset;
 					SetScale(1, new Point(0, 0), false);
@@ -581,11 +581,11 @@ namespace gvtrademap_cs
 			}
 			catch
 			{
-				// 保険
+				// 보험
 				PopDrawParams();
 			}
 
-			// 렌더링 타겟を元に戻す
+			// 렌더링 타겟을 원래대로 되돌린다
 			m_device.device.DepthStencilSurface = depth;
 			m_device.device.SetRenderTarget(0, backbuffer);
 			m_device.UpdateClientSize();
@@ -594,7 +594,7 @@ namespace gvtrademap_cs
 			depth.Dispose();
 
 			m_device_lost = false;
-			// 合成に掛かった시간	
+			// 합성에 걸린 시간
 			MargeImageMS = d.GetSectionTimeMilliseconds();
 		}
 
@@ -603,12 +603,12 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		public void Draw()
 		{
-			// 읽기チェック
+			// 읽기 확인
 			if (m_image_size.X <= 0) return;
 			if (m_image_size.Y <= 0) return;
 
-			// Y방향クランプ없음
-			// 自由にスクロールする
+			// Y 방향 클램프 없음
+			// 자유롭게 스크롤한다
 
 			// 그리기
 			m_device.device.RenderState.ZBufferEnable = false;
@@ -617,8 +617,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기시작위치を求める
-		 화면외にどれだけ余りを持たせるか지정できる
+		 그리기 시작 위치를 구한다
+		 화면 밖에 얼마나 여유를 둘지 지정할 수 있다
 		---------------------------------------------------------------------------*/
 		private void ajust_draw_start_offset_x(float outside_length_x)
 		{
@@ -651,8 +651,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 마우스좌표と표시オフセットを解決した좌표を得る
-		 마우스좌표はクライアントレクトからの相対좌표であること
+		 마우스 좌표와 표시 오프셋을 해결한 좌표를 얻는다
+		 마우스 좌표는 클라이언트 사각형 기준의 상대 좌표여야 한다
 		---------------------------------------------------------------------------*/
 		public Point MousePos2GlobalPos(Point mouse_pos)
 		{
@@ -660,19 +660,19 @@ namespace gvtrademap_cs
 		}
 		public Vector2 MousePos2GlobalPos(Vector2 mouse_pos)
 		{
-			// 스케일の逆수
+			// 스케일의 역수
 			mouse_pos *= 1 / ImageScale;
 
 			Vector2 pos = mouse_pos - m_offset;
 
-			// イメージ사이즈に収まるように조정
+			// 이미지 크기에 들어가도록 조정
 			while (pos.X >= m_image_size.X) pos.X -= m_image_size.X;
 			return pos;
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기オフセットを得る
-		 그리기オフセットは整수に丸められている
+		 그리기 오프셋을 얻는다
+		 그리기 오프셋은 정수로 반올림되어 있다
 		---------------------------------------------------------------------------*/
 		public Vector2 GetDrawOffset()
 		{
@@ -683,7 +683,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 グローバルな지도좌표から그리기용の좌표に변환する
+		 전역 지도 좌표에서 그리기용 좌표로 변환한다
 		---------------------------------------------------------------------------*/
 		public Vector2 GlobalPos2LocalPos(Vector2 global_pos)
 		{
@@ -693,8 +693,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 オフセット좌표がクライアント내に入るように조정する
-		 X방향のみ
+		 오프셋 좌표가 클라이언트 안에 들어가도록 조정한다
+		 X 방향만
 		---------------------------------------------------------------------------*/
 		public Vector2 AjustLocalPos(Vector2 pos)
 		{
@@ -716,8 +716,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 グローバルな지도좌표から그리기용の좌표に변환する
-		 オフセット지정版
+		 전역 지도 좌표에서 그리기용 좌표로 변환한다
+		 오프셋 지정 버전
 		---------------------------------------------------------------------------*/
 		public Vector2 GlobalPos2LocalPos(Vector2 global_pos, Vector2 _offset)
 		{
@@ -727,11 +727,11 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기支援
+		 그리기 지원
 
-		 最終的な그리기좌표は
+		 최종적인 그리기 좌표는
 		 GlobalPos2LocalPos();
-		 で得ること
+		 으로 얻을 것
 		---------------------------------------------------------------------------*/
 		public void EnumDrawCallBack(DrawHandler handler, float outside_offset_x)
 		{
@@ -742,17 +742,17 @@ namespace gvtrademap_cs
 			Vector2 offset = GetDrawOffset();
 			do
 			{
-				// 그리기コールバック呼び出し
+				// 그리기 콜백 호출
 				handler(offset, this);
 
-				// オフセット조정
+				// 오프셋 조정
 				offset.X += ImageSize.X;
 			} while (offset.X < (((1f / ImageScale) * m_device.client_size.X) + outside_offset_x));
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기위치と스케일をpush
-		 1회しかpushできないので注意
+		 그리기 위치와 스케일을 push
+		 한 번만 push 할 수 있으므로 주의
 		---------------------------------------------------------------------------*/
 		public void PushDrawParams()
 		{
@@ -762,8 +762,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기위치と스케일をpop
-		 1회しかpopできないので注意
+		 그리기 위치와 스케일을 pop
+		 한 번만 pop 할 수 있으므로 주의
 		---------------------------------------------------------------------------*/
 		public void PopDrawParams()
 		{
