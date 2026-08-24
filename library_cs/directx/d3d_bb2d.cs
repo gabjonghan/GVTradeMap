@@ -22,9 +22,9 @@ namespace directx
 	{
 		private Vector2				m_min;
 		private Vector2				m_max;
-		private bool				m_is_1st;		// 최초の위치を설정したらtrue
-		private Vector2				m_offset_lt;	// 左상のオフセット
-		private Vector2				m_offset_rb;	// 右下のオフセット
+		private bool				m_is_1st;		// 최초의 위치를 설정하면 true
+		private Vector2				m_offset_lt;	// 좌상단의 오프셋
+		private Vector2				m_offset_rb;	// 우하단의 오프셋
 	
 		/*-------------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ namespace directx
 		public void Update(Vector2 pos)
 		{
 			if(!m_is_1st){
-				// 初めてなので単純に代入
+				// 처음이므로 단순히 대입
 				m_min		= pos;
 				m_max		= pos;
 				m_is_1st	= true;
@@ -69,24 +69,24 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 更新した결과を新しい D3dBB2d で返す
+		 갱신한 결과를 새로운 D3dBB2d 로 반환한다
 		---------------------------------------------------------------------------*/
 		public D3dBB2d IfUpdate(Vector2 pos)
 		{
 			D3dBB2d	bb	= new D3dBB2d();
 			if(m_is_1st){
-				// 初期化されていれば최대と最소を설정する
+				// 초기화되어 있으면 최대와 최소를 설정한다
 				bb.Update(Min);
 				bb.Update(Max);
 			}
-			bb.Update(pos);		// 更新してみる
+			bb.Update(pos);		// 갱신해 본다
 			bb.OffsetLT	= m_offset_lt;
 			bb.OffsetRB	= m_offset_rb;
 			return bb;
 		}
 	
 		/*-------------------------------------------------------------------------
-		 컬링チェック
+		 컬링 확인
 		---------------------------------------------------------------------------*/
 		public bool IsCulling(CullingRect rect)
 		{
@@ -94,7 +94,7 @@ namespace directx
 		}
 		public bool IsCulling(Vector2 offset, float scale, CullingRect rect)
 		{
-			// 설정してないときは컬링する
+			// 설정하지 않았을 때는 컬링한다
 			if(!m_is_1st)		return true;
 
 			Vector2		pos2	= offsetscale(m_max, offset, scale);
@@ -106,7 +106,7 @@ namespace directx
 			pos					+=  m_offset_lt;
 			if(pos.X >= rect.right_bottom.X)	return true;
 			if(pos.Y >= rect.right_bottom.Y)	return true;
-			// 컬링しない
+			// 컬링하지 않는다
 			return false;
 		}
 

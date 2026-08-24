@@ -1,9 +1,9 @@
 ﻿/*-------------------------------------------------------------------------
 
  Direct3D
- Deviceの初期化を担当する
- 継承して사용すること
- デバイスリセット時の処理付き
+ Device 의 초기화를 담당한다
+ 상속해서 사용할 것
+ 디바이스 리셋 시의 처리 포함
 
 ---------------------------------------------------------------------------*/
 
@@ -29,8 +29,8 @@ namespace directx
 	public abstract class d3d_base_device : IDisposable
 	{
 		public enum CreateType{
-			BestPerformance,				// デバイスの能力から最適なものを선택する
-			SoftwareVertexProcessing,		// 頂点をCPUが변환する
+			BestPerformance,				// 디바이스 성능에서 최적인 것을 선택한다
+			SoftwareVertexProcessing,		// 정점을 CPU 가 변환한다
 		};
 	
 		private System.Windows.Forms.Form			m_form;
@@ -56,9 +56,9 @@ namespace directx
 		public CreateType create_type				{	get{	return m_create_type;		}}
 
 		/*-------------------------------------------------------------------------
-		 Deviceを작성함
-		 작성できなかったときの例외はスルーするので呼び出し側で대응すること
-		 CreateType.BestPerformanceで작성される
+		 Device 를 작성한다
+		 작성하지 못했을 때의 예외는 그대로 던지므로 호출하는 쪽에서 대응할 것
+		 CreateType.BestPerformance 로 작성된다
 		---------------------------------------------------------------------------*/
 		public void Create(System.Windows.Forms.Form form, PresentParameters param)
 		{
@@ -66,9 +66,9 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 Deviceを작성함
-		 작성できなかったときの例외はスルーするので呼び出し側で대응すること
-		 CreateTypeを지정する
+		 Device 를 작성한다
+		 작성하지 못했을 때의 예외는 그대로 던지므로 호출하는 쪽에서 대응할 것
+		 CreateType 을 지정한다
 		---------------------------------------------------------------------------*/
 		public void Create(System.Windows.Forms.Form form, PresentParameters param, CreateType create_type)
 		{
@@ -76,54 +76,54 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 Deviceを작성함
-		 작성できなかったときの例외はスルーするので呼び出し側で대응すること
-		 CreateType, DeviceTypeを지정する
+		 Device 를 작성한다
+		 작성하지 못했을 때의 예외는 그대로 던지므로 호출하는 쪽에서 대응할 것
+		 CreateType, DeviceType 을 지정한다
 		---------------------------------------------------------------------------*/
 		public void Create(System.Windows.Forms.Form form, PresentParameters param, CreateType create_type, DeviceType device_type)
 		{
 			// 그리기대상
 			m_form				= form;
-			// デバイス타입
+			// 디바이스 타입
 			m_device_type		= device_type;
 			// 작성방법
 			m_create_type		= create_type;
 
-			// デフォ금허브 소のアダプタ번호
+			// 기본 어댑터 번호
 			m_adapter_index		= Manager.Adapters.Default.Adapter;
-			// デバイスの能力を取得する
+			// 디바이스 성능을 취득한다
 			m_caps				= Manager.GetDeviceCaps(m_adapter_index, device_type);
 
-			// 작성パラメータ
+			// 작성 파라미터
 			m_present_params	= param;
 
 			// 
 			m_create_flags		= 0;
 			switch(create_type){
 			case CreateType.BestPerformance:
-				// 最適なものを選ぶ
+				// 최적인 것을 고른다
 				if(m_caps.DeviceCaps.SupportsHardwareTransformAndLight){
-					// ハードウェアで頂点변환に대응している
+					// 하드웨어가 정점 변환을 지원한다
 					m_create_flags	|= CreateFlags.HardwareVertexProcessing;
 				}else{
-					// ハードウェアで頂点변환に대응していない
+					// 하드웨어가 정점 변환을 지원하지 않는다
 					m_create_flags	|= CreateFlags.SoftwareVertexProcessing;
 				}
 				if(   (m_caps.DeviceCaps.SupportsPureDevice)
 					&&(m_caps.DeviceCaps.SupportsHardwareTransformAndLight) ){
-					// ピュアデバイスである
+					// 퓨어 디바이스이다
 					m_create_flags	|= CreateFlags.PureDevice;
 				}
 				break;
 			case CreateType.SoftwareVertexProcessing:
-				// 정점처리をCPUが行う
+				// 정점 처리를 CPU 가 수행한다
 				m_create_flags	|= CreateFlags.SoftwareVertexProcessing;
 				break;
 			default:
-				throw new Exception("CreateTypeの지정が不正");
+				throw new Exception("CreateType 지정이 올바르지 않음");
 			}
 
-			// デバイスを작성
+			// 디바이스를 작성
 			m_d3d_device	= new Device(	m_adapter_index, device_type, form,
 											m_create_flags, m_present_params);
 		}
@@ -177,7 +177,7 @@ namespace directx
 			try{
 				m_d3d_device.Present();
 			}catch(DeviceLostException){
-				// デバイスロスト
+				// 디바이스 로스트
 				OnDeviceLostException();
 			}
 			catch (DriverInternalErrorException)
@@ -188,19 +188,19 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 デバイスロスト
+		 디바이스 로스트
 		---------------------------------------------------------------------------*/
 		protected virtual bool OnDeviceLostException()
 		{
 			int	result;
 
-			// リセット가능かどうかをチェック
+			// 리셋 가능한지 확인
 			if(!m_d3d_device.CheckCooperativeLevel(out result)){
-				// リセット가능ならリセット
+				// 리셋 가능하면 리셋
 				if(result == (int)ResultCode.DeviceNotReset){
 					m_d3d_device.Reset(m_present_params);
 				}else if (result == (int)ResultCode.DeviceLost){
-					// まだリセットできなければ, しばらくスリープ
+					// 아직 리셋할 수 없으면 잠시 대기
 					System.Threading.Thread.Sleep(20);
 					return false;
 				}
@@ -209,17 +209,17 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 지정されたフォーマットが사용가능かどうかを得る
-		 現在のデバイスを대상に調べる
-		 통상텍스쳐작성時にこの関수で결과を得るべきではない
-		 初期化時に결과を知っておくこと
+		 지정한 포맷을 사용할 수 있는지 여부를 얻는다
+		 현재 디바이스를 대상으로 조사한다
+		 통상 텍스쳐 작성 시에 이 함수로 결과를 얻어서는 안 된다
+		 초기화 시에 결과를 알아 둘 것
 		---------------------------------------------------------------------------*/
 		public bool CheckDeviceFormat(Usage usage, ResourceType resource_type, DepthFormat format)
 		{
 			if(m_d3d_device == null)	return false;
 			Format	af		= (m_present_params.Windowed)
 								? m_d3d_device.DisplayMode.Format		// 윈도우모드時
-								: m_present_params.BackBufferFormat;	// フルスクリーン時
+								: m_present_params.BackBufferFormat;	// 풀스크린일 때
 			return Manager.CheckDeviceFormat(	m_adapter_index,
 												m_device_type,
 												af,
@@ -232,7 +232,7 @@ namespace directx
 			if(m_d3d_device == null)	return false;
 			Format	af		= (m_present_params.Windowed)
 								? m_d3d_device.DisplayMode.Format		// 윈도우모드時
-								: m_present_params.BackBufferFormat;	// フルスクリーン時
+								: m_present_params.BackBufferFormat;	// 풀스크린일 때
 			return Manager.CheckDeviceFormat(	m_adapter_index,
 												m_device_type,
 												af,

@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------
-// 범용的なもの
-// staticなクラス
+// 범용적인 것들
+// static 클래스
 //-------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -20,15 +20,15 @@ namespace Utility
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// 범용的なもの, staticなクラス
+	/// 범용적인 것들, static 클래스
 	/// </summary>
 	static public class Useful
 	{
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// MyDocumentフォルダのパスを得る
+		/// MyDocument 폴더의 경로를 얻는다
 		/// </summary>
-		/// <returns>MyDocumentフォルダのパス</returns>
+		/// <returns>MyDocument 폴더의 경로</returns>
 		static public string GetMyDocumentPath()
 		{
 			return Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -36,12 +36,12 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// Controlのフォントをメイリオに변경する. 
-		/// メイリオがインストールされていない場合はなにもしない
+		/// Control 의 폰트를 메이리오로 변경한다.
+		/// 메이리오가 설치되어 있지 않은 경우에는 아무것도 하지 않는다
 		/// </summary>
-		/// <param name="ctrl">대상のコントロール</param>
-		/// <param name="point">フォント사이즈</param>
-		/// <returns>成功したらtrueを返す</returns>
+		/// <param name="ctrl">대상 컨트롤</param>
+		/// <param name="point">폰트 크기</param>
+		/// <returns>성공하면 true 를 반환한다</returns>
 		static public bool SetFontMeiryo(Control ctrl, float point)
 		{
 			try
@@ -49,7 +49,7 @@ namespace Utility
 				Font font = new Font("メイリオ", point, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 				if (font.Name != "メイリオ")
 				{
-					// メイリオフォントが작성できない
+					// 메이리오 폰트를 작성할 수 없다
 					return false;
 				}
 				ctrl.Font = font;
@@ -64,12 +64,12 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// Formのフォントをメイリオに변경する. 
-		/// Formが持つControl全てに설정される. 
-		/// メイリオがインストールされていない場合はなにもしない
+		/// Form 의 폰트를 메이리오로 변경한다.
+		/// Form 이 가진 Control 전부에 설정된다.
+		/// 메이리오가 설치되어 있지 않은 경우에는 아무것도 하지 않는다
 		/// </summary>
-		/// <param name="form">대상のコントロール</param>
-		/// <param name="point">フォント사이즈</param>
+		/// <param name="form">대상 컨트롤</param>
+		/// <param name="point">폰트 크기</param>
 		static public void SetFontMeiryo(Form form, float point)
 		{
 			//			SetFontMeiryo((Control)form, point);
@@ -81,10 +81,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// URL エンコード, UTF8
+		/// URL 인코드, UTF8
 		/// </summary>
-		/// <param name="str">변환する문자열</param>
-		/// <returns>변환후の문자열</returns>
+		/// <param name="str">변환할 문자열</param>
+		/// <returns>변환 후의 문자열</returns>
 		static public string UrlEncodeUTF8(string str)
 		{
 			return HttpUtility.UrlEncode(str, Encoding.UTF8);
@@ -92,10 +92,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// URL エンコード, EUC-JP
+		/// URL 인코드, EUC-JP
 		/// </summary>
-		/// <param name="str">변환する문자열</param>
-		/// <returns>변환후の문자열</returns>
+		/// <param name="str">변환할 문자열</param>
+		/// <returns>변환 후의 문자열</returns>
 		static public string UrlEncodeEUCJP(string str)
 		{
 			return HttpUtility.UrlEncode(str, Encoding.GetEncoding("euc-jp"));
@@ -103,10 +103,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// URL エンコード, シフトJIS
+		/// URL 인코드, 시프트 JIS
 		/// </summary>
-		/// <param name="str">변환する문자열</param>
-		/// <returns>변환후の문자열</returns>
+		/// <param name="str">변환할 문자열</param>
+		/// <returns>변환 후의 문자열</returns>
 		static public string UrlEncodeShiftJis(string str)
 		{
 			return HttpUtility.UrlEncode(str, Encoding.GetEncoding("UTF-8"));
@@ -114,10 +114,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ラジアンをデグリーに변환する
+		/// 라디안을 도(degree)로 변환한다
 		/// </summary>
-		/// <param name="radian">ラジアン</param>
-		/// <returns>デグリー</returns>
+		/// <param name="radian">라디안</param>
+		/// <returns>도(degree)</returns>
 		static public float ToDegree(float radian)
 		{
 			return radian * (float)(360d / (Math.PI * 2));
@@ -125,10 +125,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// デグリーをラジアンに변환する
+		/// 도(degree)를 라디안으로 변환한다
 		/// </summary>
-		/// <param name="degree">デグリー</param>
-		/// <returns>ラジアン</returns>
+		/// <param name="degree">도(degree)</param>
+		/// <returns>라디안</returns>
 		static public float ToRadian(float degree)
 		{
 			return degree * (float)((Math.PI * 2) / 360d);
@@ -136,10 +136,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 短い일時문자열を返す. 
-		/// 초を含まない
+		/// 짧은 일시 문자열을 반환한다.
+		/// 초를 포함하지 않는다
 		/// </summary>
-		/// <param name="dt">변환대상の일時</param>
+		/// <param name="dt">변환 대상 일시</param>
 		/// <returns>일時문자열</returns>
 		public static string ToShortDateTimeString(DateTime dt)
 		{
@@ -148,9 +148,9 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// したらば풍の일時문자열を返す
+		/// 시타라바 스타일의 일시 문자열을 반환한다
 		/// </summary>
-		/// <param name="dt">변환대상の일時</param>
+		/// <param name="dt">변환 대상 일시</param>
 		/// <returns>일時문자열</returns>
 		public static string TojbbsDateTimeString(DateTime dt)
 		{
@@ -184,11 +184,11 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 全角문자の수字を반角に변환する. 
-		/// 수字以외の문자が含まれていてもよい
+		/// 전각 숫자를 반각으로 변환한다.
+		/// 숫자 이외의 문자가 포함되어 있어도 된다
 		/// </summary>
-		/// <param name="str">변환대상の문자열</param>
-		/// <returns>변환후の문자열</returns>
+		/// <param name="str">변환 대상 문자열</param>
+		/// <returns>변환 후의 문자열</returns>
 		static public string AdjustNumber(string str)
 		{
 			str = str.Replace('０', '0');
@@ -207,11 +207,11 @@ namespace Utility
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// ToShortDateTimeString(), TojbbsDateTimeString()
-		/// で得られた문자열からDateTimeに변환する. 
-		/// 변환に실패した場合はnew DateTime()を返す. 
+		/// 로 얻어진 문자열을 DateTime 으로 변환한다.
+		/// 변환에 실패한 경우에는 new DateTime() 을 반환한다.
 		/// </summary>
-		/// <param name="datetime">변환대상の문자열</param>
-		/// <returns>변환후の일時</returns>
+		/// <param name="datetime">변환 대상 문자열</param>
+		/// <returns>변환 후의 일시</returns>
 		public static DateTime ToDateTime(string datetime)
 		{
 			try
@@ -219,7 +219,7 @@ namespace Utility
 				Match m;
 				if ((m = match(@"([0-9]+)/([0-9]+)/([0-9]+).* ([0-9]+):([0-9]+):([0-9]+)", datetime)) != null)
 				{
-					// したらばBBS
+					// 시타라바 BBS
 					return new DateTime(Convert.ToInt32(m.Groups[1].Value),
 											Convert.ToInt32(m.Groups[2].Value),
 											Convert.ToInt32(m.Groups[3].Value),
@@ -229,7 +229,7 @@ namespace Utility
 				}
 				else if ((m = match(@"([0-9]+)/([0-9]+)/([0-9]+) ([0-9]+):([0-9]+)", datetime)) != null)
 				{
-					// 短い版
+					// 짧은 버전
 					return new DateTime(Convert.ToInt32(m.Groups[1].Value),
 											Convert.ToInt32(m.Groups[2].Value),
 											Convert.ToInt32(m.Groups[3].Value),
@@ -249,13 +249,13 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 正規表現で調べる. 
-		/// マッチしたときは Match を返す. 
-		/// マッチしない場合は null を返す. 
+		/// 정규 표현식으로 조사한다.
+		/// 매치했을 때는 Match 를 반환한다.
+		/// 매치하지 않는 경우에는 null 을 반환한다.
 		/// </summary>
 		/// <param name="regex">正規表現</param>
-		/// <param name="str">대상の문자열</param>
-		/// <returns>マッチしたもの</returns>
+		/// <param name="str">대상 문자열</param>
+		/// <returns>매치한 것</returns>
 		static public Match match(string regex, string str)
 		{
 			Match m = Regex.Match(str, regex);
@@ -265,10 +265,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 1,000のような문자열を返す
+		/// 1,000 같은 문자열을 반환한다
 		/// </summary>
-		/// <param name="num">변환대상の値</param>
-		/// <returns>변환후の문자열</returns>
+		/// <param name="num">변환 대상 값</param>
+		/// <returns>변환 후의 문자열</returns>
 		static public string ToComma3(int num)
 		{
 			try
@@ -283,10 +283,10 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 1,000のような문자열を返す
+		/// 1,000 같은 문자열을 반환한다
 		/// </summary>
-		/// <param name="num">변환대상の値</param>
-		/// <returns>변환후の문자열</returns>
+		/// <param name="num">변환 대상 값</param>
+		/// <returns>변환 후의 문자열</returns>
 		static public string ToComma3(Int64 num)
 		{
 			try
@@ -301,14 +301,14 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// Assemblyを로드. 
-		/// MDX1.1がインストールされているかどうかを得ることができる. 
-		/// 읽기に실패したAssemblyNameを返す. 
-		/// 읽기に成功した場合はnullを返す. 
+		/// Assembly 를 로드한다.
+		/// MDX1.1 이 설치되어 있는지 여부를 알 수 있다.
+		/// 읽기에 실패한 AssemblyName 을 반환한다.
+		/// 읽기에 성공한 경우에는 null 을 반환한다.
 		/// </summary>
-		/// <param name="ass">アセンブリ명</param>
-		/// <param name="error_ass">읽기に실패したアセンブリ</param>
-		/// <returns>읽기に成功したらtrue</returns>
+		/// <param name="ass">어셈블리명</param>
+		/// <param name="error_ass">읽기에 실패한 어셈블리</param>
+		/// <returns>읽기에 성공하면 true</returns>
 		static public bool LoadReferencedAssembly(Assembly ass, out AssemblyName error_ass)
 		{
 			error_ass = null;
@@ -333,8 +333,8 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// OS명を得る. 
-		/// Windows XP のような문자열が得られる
+		/// OS 명을 얻는다.
+		/// Windows XP 같은 문자열이 얻어진다
 		/// </summary>
 		/// <param name="os">OS</param>
 		/// <returns>OS명</returns>
@@ -401,11 +401,11 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// CMDを実行する. 
-		/// STDOUTの내용を返す. 
+		/// CMD 를 실행한다.
+		/// STDOUT 의 내용을 반환한다.
 		/// </summary>
-		/// <param name="Argments">コマンドと引수</param>
-		/// <returns>STDOUTの내용</returns>
+		/// <param name="Argments">커맨드와 인수</param>
+		/// <returns>STDOUT 의 내용</returns>
 		public static string ExecCMD(string Argments)
 		{
 			ProcessStartInfo startInfo = new ProcessStartInfo();
@@ -423,12 +423,12 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// intをEnumに변환する. 
-		/// 변환に실패した場合nullを返す. 
+		/// int 를 Enum 으로 변환한다.
+		/// 변환에 실패한 경우 null 을 반환한다.
 		/// </summary>
-		/// <param name="enumType">Enumの타입 typeof(enum)</param>
+		/// <param name="enumType">Enum 의 타입 typeof(enum)</param>
 		/// <param name="value">변환대상</param>
-		/// <returns>변환후のEnum</returns>
+		/// <returns>변환 후의 Enum</returns>
 		static public object ToEnum(Type enumType, object value)
 		{
 			if (value == null) return null;
@@ -445,18 +445,18 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ListViewのtooltipをSubItems毎に설정する. 
+		/// ListView 의 tooltip 을 SubItems 별로 설정한다.
 		/// </summary>
 		/// <remarks>
-		/// <para>ListViewのtooltipをSubItems毎に설정する. </para>
-		/// <para>MouseMove내で呼ぶこと. </para>
-		/// <para>표시するtooltipはSubItemのTagをstringにキャストする. </para>
-		/// <para>ListView.ShowItemToolTipsはfalseであること. </para>
+		/// <para>ListView 의 tooltip 을 SubItems 별로 설정한다.</para>
+		/// <para>MouseMove 안에서 호출할 것.</para>
+		/// <para>표시할 tooltip 은 SubItem 의 Tag 를 string 으로 캐스트한다.</para>
+		/// <para>ListView.ShowItemToolTips 는 false 여야 한다.</para>
 		/// </remarks>
-		/// <param name="listview">대상のListView</param>
-		/// <param name="tooltip">대상のToolTip</param>
-		/// <param name="mouse_x">マウス위치 (listviewのクライアント좌표)</param>
-		/// <param name="mouse_y">マウス위치 (listviewのクライアント좌표)</param>
+		/// <param name="listview">대상 ListView</param>
+		/// <param name="tooltip">대상 ToolTip</param>
+		/// <param name="mouse_x">마우스 위치 (listview 의 클라이언트 좌표)</param>
+		/// <param name="mouse_y">마우스 위치 (listview 의 클라이언트 좌표)</param>
 		static public void UpdateListViewSubItemToolTip(ListView listview, ToolTip tooltip, int mouse_x, int mouse_y)
 		{
 			if (listview == null) return;
@@ -475,8 +475,8 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ツールチップを설정する. 
-		/// 今설정されているものと同じならなにもしない. 
+		/// 툴팁을 설정한다.
+		/// 지금 설정된 것과 같으면 아무것도 하지 않는다.
 		/// </summary>
 		/// <param name="tooltip"></param>
 		/// <param name="control"></param>
@@ -485,19 +485,19 @@ namespace Utility
 		{
 			if (tooltip.GetToolTip(control) != str)
 			{
-				// 同じ문자열を지정するとちかちかする
+				// 같은 문자열을 지정하면 깜빡거린다
 				tooltip.SetToolTip(control, str);
 			}
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 문자열をInt32に변환する. 
-		/// 실패した場合はdefalt_valueを返す
+		/// 문자열을 Int32 로 변환한다.
+		/// 실패한 경우에는 defalt_value 를 반환한다
 		/// </summary>
-		/// <param name="_from">변환대상の문자열</param>
-		/// <param name="defalte_value">실패時に返す値</param>
-		/// <returns>변환후の値</returns>
+		/// <param name="_from">변환 대상 문자열</param>
+		/// <param name="defalte_value">실패 시 반환할 값</param>
+		/// <returns>변환 후의 값</returns>
 		static public int ToInt32(string _from, int defalte_value)
 		{
 			int ret;
@@ -518,13 +518,13 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 문자열をPointに변환する. 
-		/// 실패した場合はdefalt_valueを返す
+		/// 문자열을 Point 로 변환한다.
+		/// 실패한 경우에는 defalt_value 를 반환한다
 		/// </summary>
-		/// <param name="x">변환대상の문자열x</param>
-		/// <param name="y">변환대상の문자열y</param>
-		/// <param name="defalte_value">실패時に返す値</param>
-		/// <returns>변환후の値</returns>
+		/// <param name="x">변환 대상 문자열 x</param>
+		/// <param name="y">변환 대상 문자열 y</param>
+		/// <param name="defalte_value">실패 시 반환할 값</param>
+		/// <returns>변환 후의 값</returns>
 		static public Point ToPoint(string x, string y, Point defalte_value)
 		{
 			int rx, ry;
@@ -691,7 +691,7 @@ namespace Utility
 		public static Size CalcClientSizeFromControlSize(Form form, Control ctrl, Size new_ctrl_size)
 		{
 			if (form == null || new_ctrl_size.Width <= 0 || new_ctrl_size.Height <= 0)
-				throw new ArgumentException("引수エラ\x30FC");
+				throw new ArgumentException("인수 오류");
 			Size size = form.ClientSize - ctrl.Size;
 			return new_ctrl_size + size;
 		}
@@ -704,7 +704,7 @@ namespace Utility
 		public static void ChangeClientSize_Center(Form form, Size new_client_size, bool is_hide_window_when_update)
 		{
 			if (form == null || new_client_size.Width <= 0 || new_client_size.Height <= 0)
-				throw new ArgumentException("引수エラ\x30FC");
+				throw new ArgumentException("인수 오류");
 			if (form.ClientSize == new_client_size)
 				return;
 			Point positionCenter = Useful.GetPositionCenter(form);
@@ -763,9 +763,9 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// DPIスケーリングの배率を得る
+		/// DPI 스케일링 배율을 얻는다
 		/// </summary>
-		/// <returns>MyDocumentフォルダのパス</returns>
+		/// <returns>MyDocument 폴더의 경로</returns>
 		static public float GetDpiRatio()
 		{
 			return Graphics.FromHwnd(IntPtr.Zero).DpiX / 96.0f;

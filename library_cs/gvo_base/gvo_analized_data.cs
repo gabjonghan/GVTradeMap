@@ -1,10 +1,10 @@
 ﻿/*-------------------------------------------------------------------------
 
- 캡처画선수상からの분석정보
- 로그분석からの정보
- を관리する
- TCP서버の関係で분석정보をまとめて관리することで
- どこから得た정보かを気にする必要がなくなる
+ 캡처 화면에서 얻은 분석 정보
+ 로그 분석에서 얻은 정보
+ 를 관리한다
+ TCP 서버 관계로 분석 정보를 한데 모아 관리함으로써
+ 어디서 얻은 정보인지 신경 쓸 필요가 없어진다
 
 ---------------------------------------------------------------------------*/
 
@@ -42,7 +42,7 @@ namespace gvo_base
 			get{
 				if(pos_x < 0)		return false;
 				if(pos_y < 0)		return false;
-				return true;		// 正常に캡처できた
+				return true;		// 정상적으로 캡처했다
 			}
 		}
 		public bool capture_days_success{	get{	return (days < 0)? false: true;	}}
@@ -111,7 +111,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 내용のクリア
+		 내용 초기화
 		---------------------------------------------------------------------------*/
 		public void Clear()
 		{
@@ -128,7 +128,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 コピー
+		 복사
 		---------------------------------------------------------------------------*/
 		public gvo_analized_data Clone()
 		{
@@ -147,7 +147,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 분석정보から구축
+		 분석 정보로부터 구축
 		---------------------------------------------------------------------------*/
 		static public gvo_analized_data FromAnalizedData(gvo_capture_base capture, gvo_map_cs_chat_base chat)
 		{
@@ -163,16 +163,16 @@ namespace gvo_base
 			data.m_build_ship_name		= chat.build_ship_name;
 			data.m_is_finish_build_ship	= chat.is_finish_build_ship;
 
-			// 造배関係は無条건でリセットする
+			// 조선 관계는 무조건 리셋한다
 			chat.ResetBuildShip();
 
 			if(data.capture_days_success){
-				// 일付が캡처できていれば이자をリセットする
-				chat.ResetInterest();	// 이자のリセット
+				// 날짜를 캡처했다면 이자를 리셋한다
+				chat.ResetInterest();	// 이자 리셋
 			}
 			if(data.capture_success){
-				// 全て캡처できていれば재해をリセットする
-				chat.ResetAccident();	// 재해のリセット
+				// 전부 캡처했다면 재해를 리셋한다
+				chat.ResetAccident();	// 재해 리셋
 			}
 			return data;
 		}

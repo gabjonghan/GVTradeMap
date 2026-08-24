@@ -1,5 +1,5 @@
 ﻿//-------------------------------------------------------------------------
-// 키アサイン관리
+// 키 할당 관리
 //-------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace Utility.KeyAssign
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// ショートカット実行용デリゲート
+	/// 단축키 실행용 델리게이트
 	/// </summary>
 	/// <param name="sender"></param>
 	/// <param name="arg"></param>
@@ -20,15 +20,15 @@ namespace Utility.KeyAssign
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// ショートカット実行時の引수
+	/// 단축키 실행 시의 인수
 	/// </summary>
 	public sealed class KeyAssignEventArg : EventArgs
 	{
 		private object							m_tag;
 
 		/// <summary>
-		/// ショートカットに関連付けられたobject, 
-		/// 통상Enumを사용する
+		/// 단축키에 연결된 object,
+		/// 통상 Enum 을 사용한다
 		/// </summary>
 		public object Tag						{	get{	return m_tag;		}}
 
@@ -45,20 +45,20 @@ namespace Utility.KeyAssign
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// アサインルール, 
-	/// System.Windows.Forms.Shortcutのみを할당가능にする版
+	/// 할당 규칙,
+	/// System.Windows.Forms.Shortcut 만 할당 가능하게 하는 버전
 	/// </summary>
 	public class KeyAssignRuleOnlyShortcut : KeyAssignRule
 	{
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// System.Windows.Forms.Shortcutの場合のみtrueを返す
+		/// System.Windows.Forms.Shortcut 인 경우에만 true 를 반환한다
 		/// </summary>
 		/// <param name="key">Keys</param>
-		/// <returns>アサイン가능ならtrue</returns>
+		/// <returns>할당 가능하면 true</returns>
 		public override bool CanAssignKeys(Keys key)
 		{
-			// System.Windows.Forms.Shortcutかどうかチェック
+			// System.Windows.Forms.Shortcut 인지 확인
 			if(!KeyAssignRule.IsShortcut(key))	return false;
 
 			// base
@@ -68,10 +68,10 @@ namespace Utility.KeyAssign
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// アサインルール, 
-	/// 할당가능かどうかと키の문자열への변환을실시. 
-	/// 継承してルールを변경することができる. 
-	/// 動的にルールを변경すると유저を混乱させる原因となるので注意. 
+	/// 할당 규칙,
+	/// 할당 가능한지 여부와 키의 문자열 변환을 담당한다.
+	/// 상속해서 규칙을 변경할 수 있다.
+	/// 동적으로 규칙을 변경하면 유저를 혼란시키는 원인이 되므로 주의.
 	/// </summary>
 	public class KeyAssignRule
 	{
@@ -85,10 +85,10 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// アサイン가능かどうかを得る. 
+		/// 할당 가능한지 여부를 얻는다.
 		/// </summary>
 		/// <param name="e">KeyEventArgs</param>
-		/// <returns>アサイン가능ならtrue</returns>
+		/// <returns>할당 가능하면 true</returns>
 		public bool CanAssignKeys(KeyEventArgs e)
 		{
 			return CanAssignKeys(e.KeyData);
@@ -96,14 +96,14 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// アサイン가능かどうかを得る. 
-		/// ESC, TAB, 英字単体등が가능. 
-		/// このメソッドをオーバーライドしてアサイン가능な키の組み合わせを
-		/// カスタマイズできる. 
-		/// このメソッドは最低限할당られないもののみfalseを返す. 
+		/// 할당 가능한지 여부를 얻는다.
+		/// ESC, TAB, 영문자 단독 등이 가능.
+		/// 이 메서드를 오버라이드해서 할당 가능한 키 조합을
+		/// 커스터마이즈할 수 있다.
+		/// 이 메서드는 최소한 할당할 수 없는 것만 false 를 반환한다.
 		/// </summary>
 		/// <param name="key">Keys</param>
-		/// <returns>アサイン가능ならtrue</returns>
+		/// <returns>할당 가능하면 true</returns>
 		public virtual bool CanAssignKeys(Keys key)
 		{
 			key	&= ~(Keys.Alt | Keys.Control | Keys.Shift);
@@ -118,7 +118,7 @@ namespace Utility.KeyAssign
 
 			// CapsLock
 			if(key == (Keys.Oemtilde | Keys.D0))				return false;
-			// ひらがな
+			// 히라가나
 			if(key == (Keys.OemBackslash | Keys.ShiftKey))		return false;
 			if(key == Keys.KanaMode)							return false;
 			// IME
@@ -142,24 +142,24 @@ namespace Utility.KeyAssign
 			if(key == (Keys.Oemtilde | Keys.D4))				return false;
 			if(key == (Keys.OemBackslash | Keys.ControlKey))	return false;
 	
-			// アサイン가능
+			// 할당 가능
 			return true;
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// System.Windows.Forms.Shortcutかどうかを得る. 
-		/// System.Windows.Forms.Shortcutのみをアサイン가능にするヘルパ. 
-		/// CanAssignKeys()をオーバーライドしたときに使えるかもしれない. 
+		/// System.Windows.Forms.Shortcut 인지 여부를 얻는다.
+		/// System.Windows.Forms.Shortcut 만 할당 가능하게 하는 헬퍼.
+		/// CanAssignKeys() 를 오버라이드했을 때 쓸 수 있을지도 모른다.
 		/// </summary>
 		/// <param name="key">key</param>
-		/// <returns>アサイン가능ならtrue</returns>
+		/// <returns>할당 가능하면 true</returns>
 		static public bool IsShortcut(Keys key)
 		{
-			// Noneはfalseを返す
+			// None 은 false 를 반환한다
 			if(key == Keys.None)	return false;
 
-			// 변환できればアサイン가능
+			// 변환할 수 있으면 할당 가능
 			object	a = Useful.ToEnum(typeof(Shortcut), (object)(int)key);
 			if(a == null)	return false;
 			return true;
@@ -167,17 +167,17 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키の문자열を得る. 
+		/// 키의 문자열을 얻는다.
 		/// </summary>
 		/// <param name="e">KeyEventArgs</param>
-		/// <returns>키내용の문자열</returns>
+		/// <returns>키 내용의 문자열</returns>
 		/// <remarks>
-		/// <para>키の문자열を得る. </para>
-		/// <para>何も押されていないときは"없음"を返す. </para>
-		/// <para>내部でCanAssignKeys()を呼び出し, アサイン가능な키かどうかを判断する. </para>
-		/// <para>アサイン가능でなければ"없음"を返す. </para>
-		/// <para>Ctrl, Shift, Altは特別でこれらの키のみが押された場合は</para>
-		/// <para>"Ctrl+"등を返す. </para>
+		/// <para>키의 문자열을 얻는다.</para>
+		/// <para>아무것도 누르지 않았을 때는 "없음"을 반환한다.</para>
+		/// <para>내부에서 CanAssignKeys() 를 호출해, 할당 가능한 키인지 판단한다.</para>
+		/// <para>할당 가능하지 않으면 "없음"을 반환한다.</para>
+		/// <para>Ctrl, Shift, Alt 는 특별해서 이 키들만 눌린 경우에는</para>
+		/// <para>"Ctrl+" 등을 반환한다.</para>
 		/// </remarks>
 		public string GetKeysString(KeyEventArgs e)
 		{
@@ -186,18 +186,18 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키の문자열を得る
+		/// 키의 문자열을 얻는다
 		/// </summary>
 		/// <param name="key">Keys</param>
-		/// <returns>키내용の문자열</returns>
+		/// <returns>키 내용의 문자열</returns>
 		/// <remarks>
-		/// <para>키の문자열を得る. </para>
-		/// <para>KeyEventArgs.KeyDataを渡すこと</para>
-		/// <para>何も押されていないときは"없음"を返す. </para>
-		/// <para>내部でCanAssignKeys()を呼び出し, アサイン가능な키かどうかを判断する. </para>
-		/// <para>アサイン가능でなければ"없음"を返す. </para>
-		/// <para>Ctrl, Shift, Altは特別でこれらの키のみが押された場合は</para>
-		/// <para>"Ctrl+"등を返す. </para>
+		/// <para>키의 문자열을 얻는다.</para>
+		/// <para>KeyEventArgs.KeyData 를 넘길 것</para>
+		/// <para>아무것도 누르지 않았을 때는 "없음"을 반환한다.</para>
+		/// <para>내부에서 CanAssignKeys() 를 호출해, 할당 가능한 키인지 판단한다.</para>
+		/// <para>할당 가능하지 않으면 "없음"을 반환한다.</para>
+		/// <para>Ctrl, Shift, Alt 는 특별해서 이 키들만 눌린 경우에는</para>
+		/// <para>"Ctrl+" 등을 반환한다.</para>
 		/// </remarks>
 		public string GetKeysString(Keys key)
 		{
@@ -206,7 +206,7 @@ namespace Utility.KeyAssign
 			if((key & Keys.Control) != 0)	str	+= "Ctrl+";
 			if((key & Keys.Shift) != 0)		str += "Shift+";
 
-			// 할당られる키かチェック
+			// 할당할 수 있는 키인지 확인
 			if(CanAssignKeys(key)){
 				str	+= keys_to_string(key);
 			}else{
@@ -217,8 +217,8 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키を문자열で得る
-		/// Oem1とかを少しマシにする
+		/// 키를 문자열로 얻는다
+		/// Oem1 같은 것을 조금 낫게 만든다
 		/// </summary>
 		/// <param name="key"></param>
 		/// <returns></returns>
@@ -260,41 +260,41 @@ namespace Utility.KeyAssign
 			case Keys.Multiply:		return "*";
 //			case Keys.None:			return "없음";
 			}
-			// その他
+			// 그 밖의 것
 			return key.ToString();
 		}
 	}
 	
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// 키アサイン관리
+	/// 키 할당 관리
 	/// </summary>
 	/// <remarks>
-	/// <para>키アサインを관리する. </para>
-	/// <para>1つの키アサインに할り振れる키は1つ. (Ctrl+C등)</para>
-	/// <para>List.AddAssign()を呼び, 키アサイン테이블을初期化する. </para>
-	/// <para>このクラスはIIniSaveLoadを継承しているため, IniBaseを사용した설정파일の읽기が가능. </para>
-	/// <para>ShowSettingDialog()でKeyAssignFormによる설정が가능</para>
-	/// <para>アサインを実行するにはProcessCmdKey()を呼ぶ. </para>
-	/// <para>ProcessCmdKey()は통상FormのProcessCmdKey()내で呼ぶ. </para>
-	/// <para>할당가능かどうかの判定にはAssignRuleが사용される. </para>
-	/// <para>独自の할당ルールを지정する場合は, AssignRuleを継承しコンストラクタに渡す. </para>
-	/// <para>引수없음のコンストラクタを사용すると, AssignRuleを사용する. </para>
-	/// <para>AssignRuleを継承したKeyAssignRuleOnlyShortcutはSystem.Windows.Forms.Shortcutのみを할당가능にする. </para>
-	/// <para>メニューやコンテキストメニューと同期させるには, </para>
-	/// <para>BindTagForMenuItem()でタグを関連付け, UpdateMenuShortcutKeys()でショートカット키の표시を更新する. </para>
-	/// <para>同期させるとメニュークリックのアサイン実行が自動で行われる. </para>
+	/// <para>키 할당을 관리한다.</para>
+	/// <para>하나의 키 할당에 배정할 수 있는 키는 하나. (Ctrl+C 등)</para>
+	/// <para>List.AddAssign() 을 호출해 키 할당 테이블을 초기화한다.</para>
+	/// <para>이 클래스는 IIniSaveLoad 를 상속하므로, IniBase 를 사용한 설정 파일 읽기가 가능.</para>
+	/// <para>ShowSettingDialog() 로 KeyAssignForm 을 통한 설정이 가능</para>
+	/// <para>할당을 실행하려면 ProcessCmdKey() 를 호출한다.</para>
+	/// <para>ProcessCmdKey() 는 통상 Form 의 ProcessCmdKey() 안에서 호출한다.</para>
+	/// <para>할당 가능한지 여부의 판정에는 AssignRule 이 사용된다.</para>
+	/// <para>독자적인 할당 규칙을 지정할 경우에는, AssignRule 을 상속해 생성자에 넘긴다.</para>
+	/// <para>인수 없는 생성자를 사용하면 AssignRule 을 사용한다.</para>
+	/// <para>AssignRule 을 상속한 KeyAssignRuleOnlyShortcut 은 System.Windows.Forms.Shortcut 만 할당 가능하게 한다.</para>
+	/// <para>메뉴나 컨텍스트 메뉴와 동기화하려면,</para>
+	/// <para>BindTagForMenuItem() 으로 태그를 연결하고, UpdateMenuShortcutKeys() 로 단축키 표시를 갱신한다.</para>
+	/// <para>동기화하면 메뉴 클릭으로도 할당 실행이 자동으로 이루어진다.</para>
 	/// </remarks>
 	public class KeyAssignManager : IIniSaveLoad
 	{
 		private KeyAssignList				m_list;						// assign list
-		private OnProcessCmdKey				m_on_processcmdkey;			// ショートカットの実行
-		private EventHandler				m_on_update_assign_list;	// アサイン목록が更新されたときに呼び出されるデリゲート
+		private OnProcessCmdKey				m_on_processcmdkey;			// 단축키 실행
+		private EventHandler				m_on_update_assign_list;	// 할당 목록이 갱신되었을 때 호출되는 델리게이트
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// アサイン목록を得る. 
-		/// 설정時はOnUpdateAssignList()が呼ばれる. 
+		/// 할당 목록을 얻는다.
+		/// 설정 시에는 OnUpdateAssignList() 가 호출된다.
 		/// </summary>
 		public KeyAssignList List			{	get{	return m_list;		}
 												set{	
@@ -306,7 +306,7 @@ namespace Utility.KeyAssign
 											}
 
 		/// <summary>
-		/// 키が押されたときのデリゲート
+		/// 키가 눌렸을 때의 델리게이트
 		/// </summary>
 		public event OnProcessCmdKey OnProcessCmdKey{
 			add{	m_on_processcmdkey	+= value;	}
@@ -314,7 +314,7 @@ namespace Utility.KeyAssign
 		}
 
 		/// <summary>
-		/// アサイン목록が更新されたときに呼び出されるデリゲート
+		/// 할당 목록이 갱신되었을 때 호출되는 델리게이트
 		/// </summary>
 		public event EventHandler OnUpdateAssignList{
 			add{	m_on_update_assign_list	+= value;	}
@@ -323,13 +323,13 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// IniBase읽기용그룹명の初期値
+		/// IniBase 읽기용 그룹명의 초기값
 		/// </summary>
 		public string DefaultIniGroupName		{	get{	return "KeyAssignManagerSettings";	}}
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 구축, 할당ルールにはAssignRuleが사용される
+		/// 구축, 할당 규칙에는 AssignRule 이 사용된다
 		/// </summary>
 		public KeyAssignManager()
 			: this(new KeyAssignRule())
@@ -338,7 +338,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 구축, 할당ルール지정版
+		/// 구축, 할당 규칙 지정 버전
 		/// </summary>
 		/// <param name="rule"></param>
 		public KeyAssignManager(KeyAssignRule rule)
@@ -348,22 +348,22 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ショートカットの実行. 
-		/// 통상メインformのProcessCmdKey내で呼び出す. 
-		/// Assignされた키が押された場合, OnProcessCmdKeyに등록された
-		/// デリゲートが呼び出される. 
-		/// 意図しない呼び出しをチェックするため, OnProcessCmdKeyがnullの場合例외を投げる
+		/// 단축키 실행.
+		/// 통상 메인 form 의 ProcessCmdKey 안에서 호출한다.
+		/// Assign 된 키가 눌린 경우, OnProcessCmdKey 에 등록된
+		/// 델리게이트가 호출된다.
+		/// 의도하지 않은 호출을 확인하기 위해, OnProcessCmdKey 가 null 인 경우 예외를 던진다
 		/// </summary>
 		/// <param name="keyData">keyData</param>
-		/// <returns>ショートカットを実行した場合true</returns>
+		/// <returns>단축키를 실행한 경우 true</returns>
 		public bool ProcessCmdKey(Keys keyData)
 		{
-			if(m_on_processcmdkey == null)	throw new Exception("OnProcessCmdKeyにデリゲートを등록してから사용してください. ");
+			if(m_on_processcmdkey == null)	throw new Exception("OnProcessCmdKey 에 델리게이트를 등록한 뒤 사용해 주십시오. ");
 
 			List<KeyAssignList.Assign>	alist	= m_list.GetAssignedList(keyData);
-			if(alist == null)	return false;		// 할당られた기능はない
+			if(alist == null)	return false;		// 할당된 기능은 없다
 
-			// 대응するアサイン분イベントを発生させる
+			// 대응하는 할당만큼 이벤트를 발생시킨다
 			foreach(KeyAssignList.Assign i in alist){
 				m_on_processcmdkey(this, new KeyAssignEventArg(i.Tag));
 			}
@@ -372,38 +372,38 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// メニューをクリックされたときのショートカットの実行. 
-		/// メニューのClickイベント내で呼ぶ. 
-		/// BindTagForMenuItem()でタグを설정しておけば自動で呼ばれる. 
+		/// 메뉴가 클릭되었을 때의 단축키 실행.
+		/// 메뉴의 Click 이벤트 안에서 호출한다.
+		/// BindTagForMenuItem() 으로 태그를 설정해 두면 자동으로 호출된다.
 		/// </summary>
-		/// <param name="sender">Clickイベントの引수そのまま</param>
-		/// <param name="e">Clickイベントの引수そのまま</param>
+		/// <param name="sender">Click 이벤트의 인수 그대로</param>
+		/// <param name="e">Click 이벤트의 인수 그대로</param>
 		public void OnClickToolStripMenu(object sender, EventArgs e)
 		{
-			if(m_on_processcmdkey == null)	throw new Exception("OnProcessCmdKeyにデリゲートを등록してから사용してください. ");
+			if(m_on_processcmdkey == null)	throw new Exception("OnProcessCmdKey 에 델리게이트를 등록한 뒤 사용해 주십시오. ");
 
-			// ToolStripMenuItem以외は無視
+			// ToolStripMenuItem 이외는 무시
 			if(!(sender is ToolStripMenuItem))	return;
 			ToolStripMenuItem	ts	= (ToolStripMenuItem)sender;
 
-			// Tagがnullかどうかだけチェック
+			// Tag 가 null 인지만 확인
 			if(ts.Tag == null)					return;
 
-			// ショートカット実行
+			// 단축키 실행
 			m_on_processcmdkey(this, new KeyAssignEventArg(ts.Tag));
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// メニュー아이템のタグを설정する. 
-		/// クリック時のデリゲートの등록も行う. 
-		/// デリゲートにはOnClickToolStripMenu()を할당る. 
-		/// このメソッドでメニュー아이템にTagを할당, 
-		/// UpdateMenuShortcutKeys()でショートカットの표시を更新する. 
-		/// クリックされた場合は自動でOnClickToolStripMenu()が呼ばれる. 
+		/// 메뉴 아이템의 태그를 설정한다.
+		/// 클릭 시의 델리게이트 등록도 함께 수행한다.
+		/// 델리게이트에는 OnClickToolStripMenu() 를 할당한다.
+		/// 이 메서드로 메뉴 아이템에 Tag 를 할당하고,
+		/// UpdateMenuShortcutKeys() 로 단축키 표시를 갱신한다.
+		/// 클릭된 경우에는 자동으로 OnClickToolStripMenu() 가 호출된다.
 		/// </summary>
-		/// <param name="item">メニュー아이템</param>
-		/// <param name="tag">タグ</param>
+		/// <param name="item">메뉴 아이템</param>
+		/// <param name="tag">태그</param>
 		public void BindTagForMenuItem(ToolStripMenuItem item, object tag)
 		{
 			if(item == null)	throw new ArgumentNullException();
@@ -415,10 +415,10 @@ namespace Utility.KeyAssign
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// メニューのショートカット키を更新する. 
-		/// メニューに표시されるショートカットと관리されているアサインを一致させる. 
-		/// ToolStripItem.TagがAssign.Tagと一致するものを검색し, ショートカットを更新する. 
-		/// 표시のみ설정するため, メニューのショートカットの기능は使わない. 
+		/// 메뉴의 단축키를 갱신한다.
+		/// 메뉴에 표시되는 단축키와 관리되고 있는 할당을 일치시킨다.
+		/// ToolStripItem.Tag 가 Assign.Tag 와 일치하는 것을 검색해, 단축키를 갱신한다.
+		/// 표시만 설정하므로, 메뉴의 단축키 기능은 사용하지 않는다.
 		/// ContextMenuStrip版
 		/// </summary>
 		/// <param name="menu">ContextMenuStrip</param>
@@ -431,10 +431,10 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// メニューのショートカット키を更新する. 
-		/// メニューに표시されるショートカットと관리されているアサインを一致させる. 
-		/// ToolStripItem.TagがAssign.Tagと一致するものを검색し, ショートカットを更新する. 
-		/// 표시のみ설정するため, メニューのショートカットの기능は使わない. 
+		/// 메뉴의 단축키를 갱신한다.
+		/// 메뉴에 표시되는 단축키와 관리되고 있는 할당을 일치시킨다.
+		/// ToolStripItem.Tag 가 Assign.Tag 와 일치하는 것을 검색해, 단축키를 갱신한다.
+		/// 표시만 설정하므로, 메뉴의 단축키 기능은 사용하지 않는다.
 		/// MenuStrip版
 		/// </summary>
 		/// <param name="menu">MenuStrip</param>
@@ -447,28 +447,28 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ショートカット키を更新する. 
-		/// Tagが一致する場合, 現在のショートカット키を할당る. 
-		/// 표시のみ설정するため, メニューのショートカットの기능は使わない. 
+		/// 단축키를 갱신한다.
+		/// Tag 가 일치하는 경우, 현재의 단축키를 할당한다.
+		/// 표시만 설정하므로, 메뉴의 단축키 기능은 사용하지 않는다.
 		/// </summary>
 		/// <param name="item">대상</param>
 		private void update_shortcut_keys(ToolStripItem item)
 		{
-			// ToolStripMenuItem以외は無視
+			// ToolStripMenuItem 이외는 무시
 			if(item is ToolStripMenuItem){
 				ToolStripMenuItem	smi = (ToolStripMenuItem)item;
 				foreach(ToolStripItem i in smi.DropDownItems){
-					// 子がいれば다시帰で潜る
+					// 자식이 있으면 재귀로 파고든다
 					update_shortcut_keys(i);
 				}
 
-				// Tagが一致するAssignに更新
+				// Tag 가 일치하는 Assign 으로 갱신
 				if(smi.Tag != null){
 					KeyAssignList.Assign	a	= m_list.GetAssign(smi.Tag);
 					if(a != null){
-						// smi.ShortcutKeysにはShortcutのみしか지정できないため, 
-						// 표시설정のみ行う
-						smi.ShortcutKeys				= Keys.None;	// ショートカット키としては없음
+						// smi.ShortcutKeys 에는 Shortcut 만 지정할 수 있으므로,
+						// 표시 설정만 수행한다
+						smi.ShortcutKeys				= Keys.None;	// 단축키로는 없음
 						smi.ShowShortcutKeys			= true;
 						smi.ShortcutKeyDisplayString	= (a.Keys == Keys.None)? "": a.KeysString;
 					}
@@ -478,7 +478,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 설정파일からの읽기
+		/// 설정 파일에서 읽기
 		/// </summary>
 		/// <param name="p">IniBase</param>
 		/// <param name="group">그룹명</param>
@@ -492,7 +492,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 설정파일に書き出し
+		/// 설정 파일에 기록
 		/// </summary>
 		/// <param name="p">IniBase</param>
 		/// <param name="group">그룹명</param>
@@ -506,19 +506,19 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키アサイン설정
-		/// 설정ダイア로그を開きアサインを설정する. 
-		/// 独自のダイア로그を사용するときは
-		/// KeyAssiginSettingHelperを利용する. 
+		/// 키 할당 설정
+		/// 설정 대화상자를 열어 할당을 설정한다.
+		/// 독자적인 대화상자를 사용할 때는
+		/// KeyAssiginSettingHelper 를 이용한다.
 		/// </summary>
-		/// <param name="form">親となるフォーム</param>
-		/// <returns>변경が行われたときtrue</returns>
+		/// <param name="form">부모가 되는 폼</param>
+		/// <returns>변경이 이루어졌을 때 true</returns>
 		public bool ShowSettingDialog(Form form)
 		{
 			using(KeyAssignListForm dlg = new KeyAssignListForm(m_list)){
 				if(dlg.ShowDialog(form) == DialogResult.OK){
-					// 설정변경を反映させる
-					// OnUpdateAssignList()を呼ぶ
+					// 설정 변경을 반영시킨다
+					// OnUpdateAssignList() 를 호출한다
 					this.List	= dlg.List;
 					return true;
 				}
@@ -529,13 +529,13 @@ namespace Utility.KeyAssign
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// アサイン목록. 
-	/// 설정변경용にDeepClone()できる. 
+	/// 할당 목록.
+	/// 설정 변경용으로 DeepClone() 할 수 있다.
 	/// </summary>
 	public sealed class KeyAssignList : IEnumerable<KeyAssignList.Assign>
 	{
 		private List<Assign>				m_list;
-		private KeyAssignRule				m_assign_rule;			// 할당ルール
+		private KeyAssignRule				m_assign_rule;			// 할당 규칙
 
 		/// <summary>
 		/// 목록수
@@ -553,7 +553,7 @@ namespace Utility.KeyAssign
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 구축, 
-		/// KeyAssignRuleを사용する
+		/// KeyAssignRule 을 사용한다
 		/// </summary>
 		public KeyAssignList()
 			: this(new KeyAssignRule())
@@ -563,7 +563,7 @@ namespace Utility.KeyAssign
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 구축, 
-		/// KeyAssignRuleを지정する
+		/// KeyAssignRule 을 지정한다
 		/// </summary>
 		/// <param name="rule"></param>
 		public KeyAssignList(KeyAssignRule rule)
@@ -572,20 +572,20 @@ namespace Utility.KeyAssign
 			m_assign_rule	= rule;
 
 			if(m_assign_rule == null){
-				throw new ArgumentNullException("AssignRuleの지정がnullです. ");
+				throw new ArgumentNullException("AssignRule 지정이 null 입니다. ");
 			}
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 구축, 
-		/// コピーコンストラクタ
+		/// 복사 생성자
 		/// </summary>
 		/// <param name="from"></param>
 		public KeyAssignList(KeyAssignList from)
 		{
 			m_list			= new List<Assign>();
-			m_assign_rule	= from.m_assign_rule;	// ルールは참조をコピー
+			m_assign_rule	= from.m_assign_rule;	// 규칙은 참조를 복사
 			foreach(Assign i in from.m_list){
 				m_list.Add(new Assign(i));
 			}
@@ -593,8 +593,8 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// コピー
-		/// KeyAssignRuleは참조のコピーなので注意
+		/// 복사
+		/// KeyAssignRule 은 참조 복사이므로 주의
 		/// </summary>
 		/// <returns></returns>
 		public KeyAssignList DeepClone()
@@ -605,13 +605,13 @@ namespace Utility.KeyAssign
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 추가, 
-		/// 初期値없음の場合はKeys.Noneを渡すこと
+		/// 초기값이 없는 경우에는 Keys.None 을 넘길 것
 		/// </summary>
-		/// <param name="name">アサイン명</param>
+		/// <param name="name">할당명</param>
 		/// <param name="group">그룹명</param>
-		/// <param name="default_key">初期アサイン</param>
-		/// <param name="tag">タグ</param>
-		/// <param name="ini_name">설정파일書き出し時の이름(英수が望ましい)</param>
+		/// <param name="default_key">초기 할당</param>
+		/// <param name="tag">태그</param>
+		/// <param name="ini_name">설정 파일 기록 시의 이름(영숫자가 바람직함)</param>
 		public void AddAssign(string name, string group, Keys default_key, object tag, string ini_name)
 		{
 			m_list.Add(new Assign(m_assign_rule, name, group, default_key, tag, ini_name));
@@ -621,16 +621,16 @@ namespace Utility.KeyAssign
 		/// <summary>
 		/// 추가, 
 		/// public void AddAssign(string name, string group, Keys default_key, object tag, string ini_name)
-		/// の少し引수が少ない版
+		/// 의 인수가 조금 적은 버전
 		/// </summary>
-		/// <param name="name">アサイン명</param>
+		/// <param name="name">할당명</param>
 		/// <param name="group">그룹명</param>
-		/// <param name="default_key">初期アサイン</param>
-		/// <param name="tag">タグ</param>
+		/// <param name="default_key">초기 할당</param>
+		/// <param name="tag">태그</param>
 		/// <remarks>
 		/// <para>AddAssign(name, group, default_key, tag, tag.ToString());</para>
-		/// <para>と呼んだのと同じ. </para>
-		/// <para>ini_nameを個別に설정しないならこのメソッドを사용する. </para>
+		/// <para>라고 호출한 것과 같다.</para>
+		/// <para>ini_name 을 개별로 설정하지 않는다면 이 메서드를 사용한다.</para>
 		/// </remarks>
 		public void AddAssign(string name, string group, Keys default_key, object tag)
 		{
@@ -639,15 +639,15 @@ namespace Utility.KeyAssign
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 그룹の목록を得る
-		/// ない場合はnullを返す
+		/// 그룹 목록을 얻는다
+		/// 없는 경우에는 null 을 반환한다
 		/// </summary>
 		/// <returns>그룹목록</returns>
 		public List<string> GetGroupList()
 		{
 			List<string>	list	= new List<string>();
 
-			// 一致するものを검색
+			// 일치하는 것을 검색
 			foreach(Assign a in m_list){
 				if(!is_found(a.Group, list)){
 					list.Add(a.Group);
@@ -668,15 +668,15 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 지정された그룹に属する목록を得る
-		/// ない場合はnullを返す
+		/// 지정된 그룹에 속하는 목록을 얻는다
+		/// 없는 경우에는 null 을 반환한다
 		/// </summary>
 		/// <param name="group">그룹명</param>
-		/// <returns>그룹に属する키アサイン목록</returns>
+		/// <returns>그룹에 속하는 키 할당 목록</returns>
 		public List<Assign> GetAssignedListFromGroup(string group)
 		{
 			List<Assign>	list	= new List<Assign>();
-			// 一致するものを검색
+			// 일치하는 것을 검색
 			foreach(Assign a in m_list){
 				if(a.Group == group){
 					list.Add(a);
@@ -688,11 +688,11 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 渡された키がアサインされた목록を返す
-		/// アサインされていない場合はnullを返す
+		/// 넘겨받은 키가 할당된 목록을 반환한다
+		/// 할당되어 있지 않은 경우에는 null 을 반환한다
 		/// </summary>
 		/// <param name="e">KeyEventArgs</param>
-		/// <returns>アサインされた키の목록</returns>
+		/// <returns>할당된 키의 목록</returns>
 		public List<Assign> GetAssignedList(KeyEventArgs e)
 		{
 			return GetAssignedList(e.KeyData);
@@ -700,30 +700,30 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 渡された키がアサインされた목록を返す
-		/// アサインされていない場合はnullを返す
-		/// KeyEventArgs.KeyCodeを渡すこと
+		/// 넘겨받은 키가 할당된 목록을 반환한다
+		/// 할당되어 있지 않은 경우에는 null 을 반환한다
+		/// KeyEventArgs.KeyCode 를 넘길 것
 		/// </summary>
 		/// <param name="key">키</param>
-		/// <returns>アサインされた키の목록</returns>
+		/// <returns>할당된 키의 목록</returns>
 		public List<Assign> GetAssignedList(Keys key)
 		{
 			List<Assign>	list	= new List<Assign>();
 
-			// 一致するものを검색
+			// 일치하는 것을 검색
 			foreach(Assign a in m_list){
 				if(a.IsAssignedKey(key)){
 					list.Add(a);
 				}
 			}
 
-			if(list.Count <= 0)	return null;	// アサインされていない
+			if(list.Count <= 0)	return null;	// 할당되어 있지 않다
 			return list;			
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키アサインを전부初期値に戻す
+		/// 키 할당을 전부 초기값으로 되돌린다
 		/// </summary>
 		public void DefaultAll()
 		{
@@ -734,13 +734,13 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// Tagに関連付けられた키アサインを得る
+		/// Tag 에 연결된 키 할당을 얻는다
 		/// </summary>
 		/// <param name="tag">Tag</param>
-		/// <returns>키アサイン</returns>
+		/// <returns>키 할당</returns>
 		public Assign GetAssign(object tag)
 		{
-			// 一致するものを검색
+			// 일치하는 것을 검색
 			foreach(Assign a in m_list){
 				if(a.Tag.Equals(tag))	return a;
 			}
@@ -749,11 +749,11 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// Tagに関連付けられた키アサインのショートカット키を문자열で得る. 
-		/// 할당없음, 関連付けられた키アサインがない場合は""を返す. 
+		/// Tag 에 연결된 키 할당의 단축키를 문자열로 얻는다.
+		/// 할당 없음이거나 연결된 키 할당이 없는 경우에는 "" 를 반환한다.
 		/// </summary>
 		/// <param name="tag">Tag</param>
-		/// <returns>ショートカット키の문자열</returns>
+		/// <returns>단축키의 문자열</returns>
 		public string GetAssignShortcutText(object tag)
 		{
 			Assign	a	= GetAssign(tag);
@@ -764,8 +764,8 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 설정파일からの읽기
-		/// IniBaseを대상としている
+		/// 설정 파일에서 읽기
+		/// IniBase 를 대상으로 한다
 		/// </summary>
 		/// <param name="p">IniBase</param>
 		/// <param name="group">그룹명</param>
@@ -781,8 +781,8 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 설정파일に書き出し
-		/// IniBaseを대상としている
+		/// 설정 파일에 기록
+		/// IniBase 를 대상으로 한다
 		/// </summary>
 		/// <param name="p">IniBase</param>
 		/// <param name="group">그룹명</param>
@@ -811,11 +811,11 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키アサイン
+		/// 키 할당
 		/// </summary>
 		public sealed class Assign
 		{
-			private KeyAssignRule			m_assign_rule;	// 할당ルール
+			private KeyAssignRule			m_assign_rule;	// 할당 규칙
 
 			private Keys					m_keys;			// KeyEventArgs.KeyData
 			private Keys					m_default_keys;	// KeyEventArgs.KeyData
@@ -826,51 +826,51 @@ namespace Utility.KeyAssign
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// 키アサインを문자열で得る
+			/// 키 할당을 문자열로 얻는다
 			/// </summary>
 			public string KeysString		{	get{	return GetKeysString(m_keys);	}}
 			/// <summary>
-			/// 키アサイン설정と取得
+			/// 키 할당 설정과 취득
 			/// </summary>
 			public Keys Keys				{	get{	return m_keys;					}
 									internal	set{	m_keys	= (CanAssignKeys(value))? value: Keys.None;	}}
 
 			/// <summary>
-			/// 初期値の키アサインを得る
+			/// 초기값의 키 할당을 얻는다
 			/// </summary>
 			public Keys DefaultKeys			{	get{	return m_default_keys;			}}
 			/// <summary>
-			/// 初期値の키アサインを문자열で得る
+			/// 초기값의 키 할당을 문자열로 얻는다
 			/// </summary>
 			public string DefaultKeysString	{	get{	return GetKeysString(m_default_keys);	}}
 			/// <summary>
-			/// アサイン명を得る
+			/// 할당명을 얻는다
 			/// </summary>
 			public string Name				{	get{	return m_name;					}}
 			/// <summary>
-			/// 그룹명を得る
+			/// 그룹명을 얻는다
 			/// </summary>
 			public string Group				{	get{	return m_group;					}}
 			/// <summary>
-			/// Tagを得る
+			/// Tag 를 얻는다
 			/// </summary>
 			public object Tag				{	get{	return m_tag;					}}
 			/// <summary>
-			/// 설정파일書き出し時の이름を得る
+			/// 설정 파일 기록 시의 이름을 얻는다
 			/// </summary>
 			public string IniName			{	get{	return m_ini_name;				}}
 
 			//-------------------------------------------------------------------------
 			/// <summary>
 			/// 구축
-			/// 初期アサインを최초のアサインとする
+			/// 초기 할당을 최초의 할당으로 삼는다
 			/// </summary>
-			/// <param name="rule">할당ルール</param>
-			/// <param name="name">アサイン명</param>
+			/// <param name="rule">할당 규칙</param>
+			/// <param name="name">할당명</param>
 			/// <param name="group">그룹명</param>
-			/// <param name="default_key">初期アサイン</param>
-			/// <param name="tag">タグ</param>
-			/// <param name="ini_name">설정파일書き出し時の이름(英수が望ましい)</param>
+			/// <param name="default_key">초기 할당</param>
+			/// <param name="tag">태그</param>
+			/// <param name="ini_name">설정 파일 기록 시의 이름(영숫자가 바람직함)</param>
 			internal Assign(KeyAssignRule rule, string name, string group, Keys default_key, object tag, string ini_name)
 				: this(rule, name, group, default_key, default_key, tag, ini_name)
 			{
@@ -879,19 +879,19 @@ namespace Utility.KeyAssign
 			//-------------------------------------------------------------------------
 			/// <summary>
 			/// 구축
-			/// 初期アサインとアサインを別々に설정する版
+			/// 초기 할당과 할당을 따로따로 설정하는 버전
 			/// </summary>
-			/// <param name="rule">할당ルール</param>
-			/// <param name="name">アサイン명</param>
+			/// <param name="rule">할당 규칙</param>
+			/// <param name="name">할당명</param>
 			/// <param name="group">그룹명</param>
-			/// <param name="default_key">初期アサイン</param>
-			/// <param name="key">アサイン</param>
-			/// <param name="tag">タグ</param>
-			/// <param name="ini_name">설정파일書き出し時の이름(英수が望ましい)</param>
+			/// <param name="default_key">초기 할당</param>
+			/// <param name="key">할당</param>
+			/// <param name="tag">태그</param>
+			/// <param name="ini_name">설정 파일 기록 시의 이름(영숫자가 바람직함)</param>
 			internal Assign(KeyAssignRule rule, string name, string group, Keys default_key, Keys key, object tag, string ini_name)
 			{
 				if(rule == null){
-					throw new ArgumentNullException("ショートカットに할당られるかを決定するためにAssignRuleが必要です. ");
+					throw new ArgumentNullException("단축키에 할당할 수 있는지 결정하기 위해 AssignRule 이 필요합니다. ");
 				}
 				m_assign_rule	= rule;
 
@@ -902,23 +902,23 @@ namespace Utility.KeyAssign
 				m_tag			= tag;
 				m_ini_name		= ini_name;
 
-				// アサイン不가능ならNoneにする
+				// 할당 불가능하면 None 으로 만든다
 				if(!CanAssignKeys(m_keys)){
 					m_keys			= Keys.None;
 				}
-				// 初期値で할당不可なら例외を投げる
+				// 초기값으로 할당 불가라면 예외를 던진다
 				if(   (m_default_keys != Keys.None)
 					&&(!CanAssignKeys(m_default_keys)) ){
-					throw new Exception("할당できない키の組み合わせが初期値に지정されました. ");
+					throw new Exception("할당할 수 없는 키 조합이 초기값으로 지정되었습니다. ");
 //					m_default_keys	= Keys.None;
 				}
 			}
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// 구축, コピーコンストラクタ, 
+			/// 구축, 복사 생성자,
 			/// </summary>
-			/// <param name="from">コピー元のAssign</param>
+			/// <param name="from">복사할 원본 Assign</param>
 			internal Assign(Assign from)
 				: this(	from.m_assign_rule,
 						from.Name,
@@ -932,11 +932,11 @@ namespace Utility.KeyAssign
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// アサインされた키かどうかを得る
-			/// Keys.Noneが渡された場合はfalseを返す
+			/// 할당된 키인지 여부를 얻는다
+			/// Keys.None 이 넘어온 경우에는 false 를 반환한다
 			/// </summary>
 			/// <param name="key">Keys</param>
-			/// <returns>アサインされていればtrue</returns>
+			/// <returns>할당되어 있으면 true</returns>
 			public bool IsAssignedKey(Keys key)
 			{
 				if(key == Keys.None)	return false;
@@ -945,7 +945,7 @@ namespace Utility.KeyAssign
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// 初期値に설정する
+			/// 초기값으로 설정한다
 			/// </summary>
 			internal void Default()
 			{
@@ -954,7 +954,7 @@ namespace Utility.KeyAssign
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// 설정파일からの읽기
+			/// 설정 파일에서 읽기
 			/// </summary>
 			/// <param name="p">IniBase</param>
 			/// <param name="group">그룹명</param>
@@ -964,13 +964,13 @@ namespace Utility.KeyAssign
 				if(String.IsNullOrEmpty(m_ini_name))	return;
 				if(p == null)							return;
 
-				// 할당不可ならNone
+				// 할당 불가라면 None
 				this.Keys		= (Keys)p.GetProfile(group, m_ini_name, (int)m_keys);
 			}
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// 설정파일に書き出し
+			/// 설정 파일에 기록
 			/// </summary>
 			/// <param name="p">IniBase</param>
 			/// <param name="group"></param>
@@ -985,10 +985,10 @@ namespace Utility.KeyAssign
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// 키の문자열を得る. 
-			/// 何も押されていないときは"없음"を返す. 
-			/// 할당가능でないものは"없음"を返す. 
-			/// 할당가능かどうかはKeyAssignRule.CanAssignKeys()の実装による. 
+			/// 키의 문자열을 얻는다.
+			/// 아무것도 누르지 않았을 때는 "없음"을 반환한다.
+			/// 할당 가능하지 않은 것은 "없음"을 반환한다.
+			/// 할당 가능한지 여부는 KeyAssignRule.CanAssignKeys() 의 구현에 따른다.
 			/// </summary>
 			/// <param name="key"></param>
 			/// <returns></returns>
@@ -999,11 +999,11 @@ namespace Utility.KeyAssign
 
 			//-------------------------------------------------------------------------
 			/// <summary>
-			/// 할당가능かどうかを得る. 
-			/// 할당가능かどうかはKeyAssignRule.CanAssignKeys()の実装による. 
+			/// 할당 가능한지 여부를 얻는다.
+			/// 할당 가능한지 여부는 KeyAssignRule.CanAssignKeys() 의 구현에 따른다.
 			/// </summary>
 			/// <param name="key">key</param>
-			/// <returns>할당가능ならtrue</returns>
+			/// <returns>할당 가능하면 true</returns>
 			public bool CanAssignKeys(Keys key)
 			{
 				return m_assign_rule.CanAssignKeys(key);

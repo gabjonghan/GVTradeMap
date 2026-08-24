@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------
-// ダブルバッファ化されたListView
-// ちらつきを경減する
+// 더블 버퍼링된 ListView
+// 깜빡임을 줄인다
 //-------------------------------------------------------------------------
 using System.Windows.Forms;
 
@@ -9,24 +9,24 @@ namespace Utility.Ctrl
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// ダブルバッファ化されたListView. 
-	/// ちらつきを경減する. 
-	/// ついでにSubItem毎のToolTip, カラム毎に아이템の문자열でのソートに대응. 
+	/// 더블 버퍼링된 ListView.
+	/// 깜빡임을 줄인다.
+	/// 덤으로 SubItem 별 ToolTip, 컬럼별로 아이템 문자열 정렬에 대응.
 	/// </summary>
 	/// <remarks>
-	/// <para>SubItem毎のToolTipはUtility.Useful.UpdateListViewSubItemToolTip()を사용する. </para>
-	/// <para>ToolTipを지정していない場合はSubItem毎のToolTipにならない. </para>
-	/// <para>아이템のソートはListViewItemSorterを사용する. </para>
-	/// <para>初期値ではソートしない. </para>
-	/// <para>사용する場合はEnableSort()で유효にすること. </para>
+	/// <para>SubItem 별 ToolTip 은 Utility.Useful.UpdateListViewSubItemToolTip() 을 사용한다.</para>
+	/// <para>ToolTip 을 지정하지 않은 경우에는 SubItem 별 ToolTip 이 되지 않는다.</para>
+	/// <para>아이템 정렬은 ListViewItemSorter 를 사용한다.</para>
+	/// <para>초기값에서는 정렬하지 않는다.</para>
+	/// <para>사용할 경우에는 EnableSort() 로 유효하게 할 것.</para>
 	/// </remarks>
 	public class ListViewDoubleBufferd : ListView
 	{
-		private ListViewItemSorter			m_sorter;		// ソート
+		private ListViewItemSorter			m_sorter;		// 정렬
 
 		/// <summary>
-		/// 대상のToolTip. 
-		/// 지정していない場合はSubItem毎にToolTipを설정しないので注意
+		/// 대상 ToolTip.
+		/// 지정하지 않은 경우에는 SubItem 별로 ToolTip 을 설정하지 않으므로 주의
 		/// </summary>
 		public ToolTip						ToolTip{	get;	set;	}
 
@@ -37,7 +37,7 @@ namespace Utility.Ctrl
 		public ListViewDoubleBufferd()
 		{
 			try{
-				// ダブルバッファにする
+				// 더블 버퍼로 만든다
 				this.DoubleBuffered	= true;
 			}catch{
 			}
@@ -46,15 +46,15 @@ namespace Utility.Ctrl
 			this.ToolTip		= null;
 			this.MouseMove		+= new MouseEventHandler(mouse_move);
 
-			// ソート
+			// 정렬
 			this.ColumnClick	+= new ColumnClickEventHandler(column_click);
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ソートを유효にする. 
+		/// 정렬을 유효하게 한다.
 		/// </summary>
-		/// <param name="is_normal">初期値を昇順ソートにする場合true</param>
+		/// <param name="is_normal">초기값을 오름차순 정렬로 할 경우 true</param>
 		public void EnableSort(bool is_normal)
 		{
 			m_sorter	= new ListViewItemSorter(is_normal);
@@ -62,7 +62,7 @@ namespace Utility.Ctrl
 
    		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ソートを무효にする. 
+		/// 정렬을 무효로 한다.
 		/// </summary>
 		public void DisableSort()
 		{
@@ -71,21 +71,21 @@ namespace Utility.Ctrl
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// マウスが動かされた. 
-		/// SubItem毎にToolTipを지정する. 
+		/// 마우스가 움직였다.
+		/// SubItem 별로 ToolTip 을 지정한다.
 		/// </summary>
 		/// <param name="sender">Sender</param>
 		/// <param name="e">Event Args</param>
 		private void mouse_move(object sender, MouseEventArgs e)
 		{
-			// SubItem毎にToolTipを지정する
+			// SubItem 별로 ToolTip 을 지정한다
 			Useful.UpdateListViewSubItemToolTip(this, this.ToolTip, e.X, e.Y);
 		}	
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// コラムがクリックされた. 
-		/// ソートする. 
+		/// 컬럼이 클릭되었다.
+		/// 정렬한다.
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>

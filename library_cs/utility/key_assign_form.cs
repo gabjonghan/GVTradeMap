@@ -1,5 +1,5 @@
 ﻿//-------------------------------------------------------------------------
-// 키アサイン
+// 키 할당
 //-------------------------------------------------------------------------
 using System;
 using System.Windows.Forms;
@@ -9,8 +9,8 @@ namespace Utility.KeyAssign
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// 키アサインフォーム, 
-	/// 1つの키アサインを編集する. 
+	/// 키 할당 폼,
+	/// 하나의 키 할당을 편집한다.
 	/// </summary>
 	public partial class KeyAssignForm : Form
 	{
@@ -19,7 +19,7 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 新しくアサインされた키を得る
+		/// 새로 할당된 키를 얻는다
 		/// </summary>
 		public Keys NewAssignKey{
 			get{
@@ -31,7 +31,7 @@ namespace Utility.KeyAssign
 		/// <summary>
 		/// 구축
 		/// </summary>
-		/// <param name="assign">編集する키アサイン</param>
+		/// <param name="assign">편집할 키 할당</param>
 		public KeyAssignForm(KeyAssignList.Assign assign)
 		{
 			InitializeComponent();
@@ -42,13 +42,13 @@ namespace Utility.KeyAssign
 
 			label1.Text			= assign.KeysString;
 
-			// なにも없음でOKを押すと할당없음となる
+			// 아무것도 없는 상태로 OK 를 누르면 할당 없음이 된다
 			m_new_assign		= Keys.None;
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 키が押された
+		/// 키가 눌렸다
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -57,14 +57,14 @@ namespace Utility.KeyAssign
 //			Console.WriteLine(e.KeyData.ToString());
 //			Console.WriteLine(((int)e.KeyData).ToString());
 	
-			// BEEP音を抑制する
-			// 入力がテキストボックスに反映されないようにする
+			// BEEP 음을 억제한다
+			// 입력이 텍스트 박스에 반영되지 않도록 한다
 			e.SuppressKeyPress	= true;
 	
-			// 入力された키を反映させる
+			// 입력된 키를 반영시킨다
 			textBox1.Text		= m_assign.GetKeysString(e.KeyData);
 
-			// 할당가능なら値を覚えておく
+			// 할당 가능하면 값을 기억해 둔다
 			m_new_assign		= (m_assign.CanAssignKeys(e.KeyData))
 									? e.KeyData
 									: Keys.None;
@@ -72,8 +72,8 @@ namespace Utility.KeyAssign
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// formがアクティブになった
-		/// テキストボックスにフォーカスを移す
+		/// form 이 활성화되었다
+		/// 텍스트 박스로 포커스를 옮긴다
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>

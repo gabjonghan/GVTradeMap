@@ -7,7 +7,7 @@
 /*-------------------------------------------------------------------------
  define
 ---------------------------------------------------------------------------*/
-// 쉐이더を強制的に사용しない
+// 쉐이더를 강제로 사용하지 않음
 //#define	NOUSE_SHADER
 
 /*-------------------------------------------------------------------------
@@ -44,7 +44,7 @@ namespace directx
 		private bool								m_is_use_font_sprite;
 	
 		// 쉐이더버전
-		// VS1.1 PS1.1が使えるかどうか
+		// VS1.1 PS1.1 을 쓸 수 있는지 여부
 		private bool								m_is_use_ve1_1_ps1_1;
 		private string								m_device_info_string;
 		private string								m_device_info_string_short;
@@ -59,10 +59,10 @@ namespace directx
 		private Vector2								m_client_size;
 
 		// 그리기스킵
-		// Present()が呼ばれるとクリアされる
-		private int									m_skip_count;		// 스킵フレーム수
-		private int									m_skip_max;			// 스킵する최대フレーム수
-		private bool								m_is_must_draw;		// 無条건に그리기する場合true
+		// Present() 가 호출되면 초기화된다
+		private int									m_skip_count;		// 스킵 프레임 수
+		private int									m_skip_max;			// 스킵할 최대 프레임 수
+		private bool								m_is_must_draw;		// 무조건 그릴 경우 true
 		
 		/*-------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ namespace directx
 		public d3d_device(System.Windows.Forms.Form form)
 			: base()
 		{
-			// 작성パラメータ
+			// 작성 파라미터
 			PresentParameters	param		= new PresentParameters();
 			param.Windowed					= true;
 			param.SwapEffect				= SwapEffect.Discard;
@@ -109,7 +109,7 @@ namespace directx
 			param.BackBufferCount			= 1;
 			param.BackBufferFormat			= Format.Unknown;
 
-			// デバイスを작성
+			// 디바이스를 작성
 			try{
 				base.Create(form, param);
 			}catch{
@@ -118,15 +118,15 @@ namespace directx
 			}
 	
 			try{
-				// リセット時のデリゲート추가
+				// 리셋 시의 델리게이트 추가
 				base.device.DeviceReset	+= new System.EventHandler(device_reset);
-				// 쉐이더の버전を調べる
+				// 쉐이더 버전을 조사한다
 				check_shader_support();
 
-				// フォントを작성
+				// 폰트를 작성
 				m_font			= new Microsoft.DirectX.Direct3D.Font(base.device, new System.Drawing.Font("MS UI Gothic", 9));
 				m_font_small	= new Microsoft.DirectX.Direct3D.Font(base.device, new System.Drawing.Font("MS UI Gothic", 8));
-// CreaTypeで그리기できないのでメイリオはやめ
+// CreaType 으로 그릴 수 없으므로 메이리오는 사용하지 않음
 //				m_font			= new Microsoft.DirectX.Direct3D.Font(base.device, new System.Drawing.Font("メイリオ", 9));
 //				m_font_small	= new Microsoft.DirectX.Direct3D.Font(base.device, new System.Drawing.Font("メイリオ", 7));
 
@@ -136,22 +136,22 @@ namespace directx
 				// 라인그리기
 				m_line	= new Line(base.device);
 
-				// ステートの初期化
+				// 스테이트 초기화
 				device_reset(this, null);
 
 				// 그리기支援
 				m_points			= new d3d_point(device);
 				m_sprite			= new d3d_sprite(device, is_use_ve1_1_ps1_1);
 	
-				// 시스템フォント
+				// 시스템 폰트
 				m_systemfont		= new d3d_systemfont(this);
-				// 텍스쳐化されたフォント
-				// あまり変動しない문자열그리기용
+				// 텍스쳐화된 폰트
+				// 그다지 변동하지 않는 문자열 그리기용
 				m_textured_font		= new d3d_textured_font(this, m_font);
 
-				// デバイスの정보を得る
+				// 디바이스 정보를 얻는다
 				get_device_information();
-				// クライアント사이즈更新
+				// 클라이언트 크기 갱신
 				UpdateClientSize();
 			}catch{
 				MessageBox.Show("DirectX 초기화후 설정에 실패하였습니다. ", "초기화오류");
@@ -189,17 +189,17 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더が사용가능か調べる
+		 쉐이더를 사용할 수 있는지 조사한다
 		---------------------------------------------------------------------------*/
 		private void check_shader_support()
 		{
-			// 버전が쉐이더 1.1 以降であることを確認する
+			// 버전이 쉐이더 1.1 이상인지 확인한다
 			Version	v1_1	= new Version(1,1);
 
-			// デバイスの能力
+			// 디바이스 성능
 			Caps	caps	= base.caps;
 
-			// サ포트される쉐이더の버전を確認します. 
+			// 지원되는 쉐이더 버전을 확인한다.
 			if((caps.VertexShaderVersion >= v1_1) && (caps.PixelShaderVersion >= v1_1)){
 				m_is_use_ve1_1_ps1_1	= true;
 			}else{
@@ -208,15 +208,15 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 デバイス정보を得る
-		 単純に문자열とする
+		 디바이스 정보를 얻는다
+		 단순히 문자열로 만든다
 		---------------------------------------------------------------------------*/
 		private void get_device_information()
 		{
 			Caps			caps		= base.caps;
 			AdapterDetails	details		= Manager.Adapters[base.adpter_index].Information;
 			
-			// 短い版
+			// 짧은 버전
 			m_device_info_string_short	= details.Description;
 
 			// 통상
@@ -226,16 +226,16 @@ namespace directx
 
 			m_device_info_string	+= "정점처리:";
 			if((base.create_flags & CreateFlags.HardwareVertexProcessing) != 0){
-				// ハードウェアで頂点변환に대응している
+				// 하드웨어가 정점 변환을 지원한다
 				m_device_info_string	+= "HardwareVertexProcessing";
 				if((base.create_flags & CreateFlags.PureDevice) != 0){
-					// ピュアデバイス
+					// 퓨어 디바이스
 					m_device_info_string	+= "(PureDevice)\n";
 				}else{
 					m_device_info_string	+= "\n";
 				}
 			}else{
-				// ハードウェアで頂点변환に대응していない
+				// 하드웨어가 정점 변환을 지원하지 않는다
 				if((base.create_flags & CreateFlags.SoftwareVertexProcessing) != 0){
 					m_device_info_string	+= "SoftwareVertexProcessing\n";
 				}
@@ -245,19 +245,19 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 デバイスリセット時の初期化
+		 디바이스 리셋 시의 초기화
 		---------------------------------------------------------------------------*/
 		private void device_reset(object sender, System.EventArgs e)
 		{
-			// 적당にステート설정
-			// 통상の반투명설정
-			//	頂点カラーでの반투명유효
-			//	텍스쳐に含まれる반투명유효
-			// 裏面ポリゴンの컬링없음
-			// Zバッファ유효
-			// ライティング무효
-			// バイリニアフィルタ
-			// UVクランプ
+			// 적당히 스테이트 설정
+			// 통상 반투명 설정
+			//	정점 컬러에서의 반투명 유효
+			//	텍스쳐에 포함된 반투명 유효
+			// 뒷면 폴리곤 컬링 없음
+			// Z 버퍼 유효
+			// 라이팅 무효
+			// 바이리니어 필터
+			// UV 클램프
 			base.device.RenderState.CullMode				= Cull.None;
 			base.device.RenderState.Lighting				= false;
 //			base.device.RenderState.ZBufferEnable			= false;
@@ -281,7 +281,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 無条건に그리기する플래그を설정する
+		 무조건 그리는 플래그를 설정한다
 		---------------------------------------------------------------------------*/
 		public void SetMustDrawFlag()
 		{
@@ -289,17 +289,17 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 그리기する必要があるかどうかを得る
-		   無条건に그리기する플래그が설정されている
-		   스킵수がskip_max이상
-		 のときtrueを返す
+		 그릴 필요가 있는지 여부를 얻는다
+		   무조건 그리는 플래그가 설정되어 있다
+		   스킵 수가 skip_max 이상
+		 일 때 true 를 반환한다
 		---------------------------------------------------------------------------*/
 		public bool IsNeedDraw()
 		{
 			if(m_is_must_draw)				return true;
 			if(m_skip_count >= m_skip_max)	return true;
-			m_skip_count++;	// 스킵수を増やす
-			return false;	// 그리기する必要がない
+			m_skip_count++;	// 스킵 수를 늘린다
+			return false;	// 그릴 필요가 없다
 		}
 
 		/*-------------------------------------------------------------------------
@@ -327,7 +327,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 クライアント사이즈の更新
+		 클라이언트 크기 갱신
 		---------------------------------------------------------------------------*/
 		public void UpdateClientSize()
 		{
@@ -340,10 +340,10 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 텍스쳐の그리기
-		 텍스쳐をsizeの대きさで그리기する
-		 UVは지정できない
-		 sizeと텍스쳐の사이즈が同じでない場合スケーリングされる
+		 텍스쳐 그리기
+		 텍스쳐를 size 크기로 그린다
+		 UV 는 지정할 수 없다
+		 size 와 텍스쳐 크기가 다르면 스케일링된다
 		---------------------------------------------------------------------------*/
 		public void DrawTexture(Texture tex, Vector3 pos, Vector2 size)
 		{
@@ -387,8 +387,8 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 単색矩形の그리기
-		 フィルされた矩形
+		 단색 사각형 그리기
+		 채워진 사각형
 		---------------------------------------------------------------------------*/
 		public void DrawFillRect(Vector3 pos, Vector2 size, int color)
 		{
@@ -417,8 +417,8 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 矩形の그리기
-		 フィルされない
+		 사각형 그리기
+		 채우지 않음
 		---------------------------------------------------------------------------*/
 		public void DrawLineRect(Vector3 pos, Vector2 size, int color)
 		{
@@ -463,7 +463,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 선の그리기
+		 선 그리기
 		---------------------------------------------------------------------------*/
 		public void DrawLine(Vector3 pos, Vector2 pos2, int color)
 		{
@@ -487,7 +487,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 선の그리기
+		 선 그리기
 		---------------------------------------------------------------------------*/
 		public void DrawLineStrip(Vector3 pos, Vector2[] vec, int color)
 		{
@@ -507,8 +507,8 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 문자열の그리기開始
-		 複수の문자열を그리기するとき용
+		 문자열 그리기 시작
+		 여러 문자열을 그릴 때용
 		---------------------------------------------------------------------------*/
 		public void BeginFont()
 		{
@@ -517,8 +517,8 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 문자열の그리기종료
-		 複수の문자열を그리기するとき용
+		 문자열 그리기 종료
+		 여러 문자열을 그릴 때용
 		---------------------------------------------------------------------------*/
 		public void EndFont()
 		{
@@ -527,7 +527,7 @@ namespace directx
 		}
 		
 		/*-------------------------------------------------------------------------
-		 문자열の그리기
+		 문자열 그리기
 		---------------------------------------------------------------------------*/
 		public void DrawText(font_type type, string str, int x, int y, Color color)
 		{
@@ -539,7 +539,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 문자열の그리기時の사이즈を得る
+		 문자열을 그릴 때의 크기를 얻는다
 		---------------------------------------------------------------------------*/
 		public Rectangle MeasureText(font_type type, string str, Color color)
 		{
@@ -551,9 +551,9 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 문자열の그리기
+		 문자열 그리기
 		 오른쪽 정렬
-		 xで終わるように그리기される
+		 x 에서 끝나도록 그려진다
 		---------------------------------------------------------------------------*/
 		public void DrawTextR(font_type type, string str, int x, int y, Color color)
 		{
@@ -567,9 +567,9 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 문자열の그리기
-		 センタリング
-		 xが真중にくるように그리기される
+		 문자열 그리기
+		 센터링
+		 x 가 한가운데 오도록 그려진다
 		---------------------------------------------------------------------------*/
 		public void DrawTextC(font_type type, string str, int x, int y, Color color)
 		{
@@ -583,8 +583,8 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 マウス위치を得る
-		 クライアント좌표を返す
+		 마우스 위치를 얻는다
+		 클라이언트 좌표를 반환한다
 		---------------------------------------------------------------------------*/
 		public Point GetClientMousePosition()
 		{

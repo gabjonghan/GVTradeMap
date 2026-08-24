@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
  화면캡처
- 캡처대상はGetDC()で得ること
- Vista Aero時は캡처が非常に중いので注意
+ 캡처 대상은 GetDC() 로 얻을 것
+ Vista Aero 에서는 캡처가 매우 느리므로 주의
 
 ---------------------------------------------------------------------------*/
 
@@ -26,8 +26,8 @@ namespace Utility
 	public class ScreenCapture : IDisposable
 	{
 		private Bitmap			m_bitmap;			// 캡처용
-		private	byte[]			m_image;			// 캡처イメージ
-		private int				m_stride;			// 캡처イメージストライド
+		private	byte[]			m_image;			// 캡처 이미지
+		private int				m_stride;			// 캡처 이미지 스트라이드
 		private Size			m_size;
 
 		/*-------------------------------------------------------------------------
@@ -65,7 +65,7 @@ namespace Utility
 		}
 
 		/*-------------------------------------------------------------------------
-		 イメージの구축
+		 이미지 구축
 		---------------------------------------------------------------------------*/
 		public void CreateImage()
 		{
@@ -74,25 +74,25 @@ namespace Utility
 			IntPtr		ptr		= bmpdata.Scan0;
 			int			length	= bmpdata.Height * bmpdata.Stride;
 			m_stride			= bmpdata.Stride;
-			// イメージバッファにコピーする
+			// 이미지 버퍼에 복사한다
 			update_image_buffer(length);
 			Marshal.Copy(ptr, m_image, 0, length);
 			m_bitmap.UnlockBits(bmpdata);
 		}
 
 		/*-------------------------------------------------------------------------
-		 イメージ용バッファを작성함
-		 すでに작성済みのときはなにもしない
-		 사이즈が異なる場合は작성し直す
+		 이미지용 버퍼를 작성한다
+		 이미 작성된 경우에는 아무것도 하지 않는다
+		 크기가 다른 경우에는 다시 작성한다
 		---------------------------------------------------------------------------*/
 		private void update_image_buffer(int length)
 		{
 			if(m_image == null){
-				// 작성していないので작성함
+				// 작성하지 않았으므로 작성한다
 				m_image			= new byte[length];
 			}else{
 				if(m_image.Length != length){
-					// 사이즈が異なるので작성し直す
+					// 크기가 다르므로 다시 작성한다
 					m_image		= new byte[length];
 				}
 			}

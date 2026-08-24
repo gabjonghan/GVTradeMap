@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------
-// Xmlを使ったini
-// iniと同じように사용できる
+// Xml 을 사용한 ini
+// ini 와 같은 방식으로 사용할 수 있다
 //-------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -12,9 +12,9 @@ namespace Utility.Xml
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// XmlIniを사용した설정관리. 
-	/// XmlIniのインスタンス化を自動で行うため, 
-	/// IniBaseのインターフェイスでのアクセスを実装するだけで설정の읽기が行える. 
+	/// XmlIni 를 사용한 설정 관리.
+	/// XmlIni 의 인스턴스화를 자동으로 처리하므로,
+	/// IniBase 의 인터페이스로 접근하는 부분만 구현하면 설정 읽기가 가능하다.
 	/// </summary>
 	public class XmlIniSetting : IniSettingBase
 	{
@@ -25,10 +25,10 @@ namespace Utility.Xml
 		/// <summary>
 		/// 구축
 		/// </summary>
-		/// <param name="file_name">읽기파일명(フルパスであること)</param>
+		/// <param name="file_name">읽어들일 파일명(전체 경로여야 한다)</param>
 		/// <param name="id">
-		/// <para>설정파일が正しいことを認識するID</para>
-		/// <para>アプリケーション毎にユニークなものにすること</para>
+		/// <para>설정 파일이 올바른지 확인하는 ID</para>
+		/// <para>애플리케이션마다 유니크한 값으로 할 것</para>
 		/// </param>
 		public XmlIniSetting(string file_name, string id)
 			: base()
@@ -42,7 +42,7 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// XmlIniから로드
+		/// XmlIni 로부터 로드
 		/// </summary>
 		public override void Load()
 		{
@@ -53,7 +53,7 @@ namespace Utility.Xml
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// XmlIniに書きだす. 
+		/// XmlIni 에 기록한다.
 		/// </summary>
 		public override void Save()
 		{
@@ -65,40 +65,40 @@ namespace Utility.Xml
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// Xmlを使ったini. 
-	/// iniと同じように사용できる. 
-	/// IniBaseのインターフェイスでアクセスできる. 
+	/// Xml 을 사용한 ini.
+	/// ini 와 같은 방식으로 사용할 수 있다.
+	/// IniBase 의 인터페이스로 접근할 수 있다.
 	/// </summary>
 	public class XmlIni : IniBase
 	{
 		/// <summary>
-		/// ルート명
+		/// 루트명
 		/// </summary>
 		protected const string				ROOT_NAME		= "XmlIniRoot";
 		/// <summary>
 		/// ID타입명
-		/// IDを格納するアトリビュート명として사용される
+		/// ID 를 담는 어트리뷰트명으로 사용된다
 		/// </summary>
 		protected const string				XMLINI_TYPE		= "XmlIniType";
 
 		/// <summary>
-		/// Xmlドキュメント
+		/// Xml 도큐먼트
 		/// </summary>
 		protected XmlDocument				m_document;
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ルートを得る
+		/// 루트를 얻는다
 		/// </summary>
 		protected XmlElement	root{		get{	return m_document.DocumentElement;	}}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 新しいDocument	を작성
+		/// 새 Document 를 작성
 		/// </summary>
 		/// <param name="id">
-		/// <para>설정파일が正しいことを認識するID</para>
-		/// <para>アプリケーション毎にユニークなものにすること</para>
+		/// <para>설정 파일이 올바른지 확인하는 ID</para>
+		/// <para>애플리케이션마다 유니크한 값으로 할 것</para>
 		/// </param>
 		public XmlIni(string id)
 		{
@@ -107,13 +107,13 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 읽기つつ작성
-		/// 읽기に실패した場合は新しいDocumentを작성함
+		/// 읽으면서 작성
+		/// 읽기에 실패한 경우에는 새 Document 를 작성한다
 		/// </summary>
 		/// <param name="file_name">읽기파일명</param>
 		/// <param name="id">
-		/// <para>설정파일が正しいことを認識するID</para>
-		/// <para>アプリケーション毎にユニークなものにすること</para>
+		/// <para>설정 파일이 올바른지 확인하는 ID</para>
+		/// <para>애플리케이션마다 유니크한 값으로 할 것</para>
 		/// </param>
 		public XmlIni(string file_name, string id)
 		{
@@ -126,19 +126,19 @@ namespace Utility.Xml
 		/// </summary>
 		/// <param name="file_name">읽기파일명</param>
 		/// <param name="id">
-		/// <para>설정파일が正しいことを認識するID</para>
-		/// <para>アプリケーション毎にユニークなものにすること</para>
+		/// <para>설정 파일이 올바른지 확인하는 ID</para>
+		/// <para>애플리케이션마다 유니크한 값으로 할 것</para>
 		/// </param>
-		/// <returns>읽기に成功した場合trueを返す</returns>
+		/// <returns>읽기에 성공한 경우 true 를 반환한다</returns>
 		public bool Load(string file_name, string id)
 		{
 			try{
 				m_document				= new XmlDocument();
 				m_document.Load(file_name);
 
-				// IDの識別
+				// ID 식별
 				if(!is_match_attribute(id)){
-					// 識別に실패
+					// 식별 실패
 					create_new_document(id);
 					return false;
 				}
@@ -153,9 +153,9 @@ namespace Utility.Xml
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 書き出し
+		/// 기록
 		/// </summary>
-		/// <param name="file_name">書き出し先파일명</param>
+		/// <param name="file_name">기록할 파일명</param>
 		public virtual void Save(string file_name)
 		{
 			m_document.Save(file_name);
@@ -163,24 +163,24 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ルートのアトリビュートを見てIDが一致するかどうか調べる
+		/// 루트의 어트리뷰트를 보고 ID 가 일치하는지 조사한다
 		/// </summary>
 		/// <param name="id"></param>
-		/// <returns>一致した場合true</returns>
+		/// <returns>일치한 경우 true</returns>
 		private bool is_match_attribute(string id)
 		{
 			XmlAttribute	attri	= this.root.Attributes[XMLINI_TYPE];
-			if(attri == null)		return false;	// アトリビュートがない
-			if(attri.Value != id)	return false;	// 一致しない
+			if(attri == null)		return false;	// 어트리뷰트가 없다
+			if(attri.Value != id)	return false;	// 일치하지 않는다
 
-			// 一致した
+			// 일치했다
 			return true;
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 新しいDocument	を작성
-		/// ROOTを작성함
+		/// 새 Document 를 작성
+		/// ROOT 를 작성한다
 		/// </summary>
 		/// <param name="id"></param>
 		protected void create_new_document(string id)
@@ -189,10 +189,10 @@ namespace Utility.Xml
 			m_document.AppendChild(
 				m_document.CreateXmlDeclaration("1.0", "UTF-8", null));
 
-			// ルートを작성
+			// 루트를 작성
 			m_document.AppendChild(create_element(ROOT_NAME));
 
-			// このXmlIniBaseを識別するID
+			// 이 XmlIniBase 를 식별하는 ID
 			XmlAttribute	attri	= m_document.CreateAttribute(XMLINI_TYPE);
 			attri.Value				= id;
 			this.root.Attributes.Append(attri);
@@ -201,42 +201,42 @@ namespace Utility.Xml
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
-		/// <returns>得られた데이터</returns>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
+		/// <returns>얻어진 데이터</returns>
 		public override string GetProfile(string group_name, string name, string default_value)
 		{
 			XmlNode		node	= get_element(group_name, name);
-			if(node == null)	return default_value;		// 要素がないので初期値を返す
+			if(node == null)	return default_value;		// 요소가 없으므로 초기값을 반환한다
 
-			string		text	= get_first_text(node);		// 최초のXmlTextの내용を得る
-			if(text == null)	return default_value;		// XmlTextがないので初期値を返す
-			return text;									// 得られた데이터
+			string		text	= get_first_text(node);		// 최초의 XmlText 내용을 얻는다
+			if(text == null)	return default_value;		// XmlText 가 없으므로 초기값을 반환한다
+			return text;									// 얻어진 데이터
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
 		/// <returns>
-		/// 得られた데이터
-		/// 대きさ0の配열の가능性有り
+		/// 얻어진 데이터
+		/// 크기 0 인 배열일 가능성 있음
 		/// </returns>
 		public override string[] GetProfile(string group_name, string name, string[] default_value)
 		{
 			XmlNode		node	= get_element(group_name, name);
-			if(node == null)	return default_value;		// 要素がないので初期値を返す
+			if(node == null)	return default_value;		// 요소가 없으므로 초기값을 반환한다
 
 			List<string>	list	= new List<string>();
 			foreach(XmlNode n in node.ChildNodes){
-				string		text	= get_first_text(n);	// 최초のXmlTextの내용を得る
+				string		text	= get_first_text(n);	// 최초의 XmlText 내용을 얻는다
 				if(text != null)	list.Add(text);
 			}
 			return list.ToArray();
@@ -244,32 +244,32 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// ノードの최초のテキストを得る. 
-		/// 子ノードのうち, 최초のXmlTextの내용を返す. 
-		/// 子ノードにXmlTextが含まれない場合はnullを返す. 
+		/// 노드의 최초 텍스트를 얻는다.
+		/// 자식 노드 중 최초 XmlText 의 내용을 반환한다.
+		/// 자식 노드에 XmlText 가 없는 경우에는 null 을 반환한다.
 		/// </summary>
 		/// <param name="node"></param>
 		/// <returns></returns>
 		private string get_first_text(XmlNode node)
 		{
 			if(node == null)			return null;
-			if(!node.HasChildNodes)		return null;	// ノードが子ノードを持っていない
+			if(!node.HasChildNodes)		return null;	// 노드가 자식 노드를 갖고 있지 않다
 
 			foreach(XmlNode i in node.ChildNodes){
 				if(i is XmlText){
-					return i.Value;						// ""の場合あり
+					return i.Value;						// "" 인 경우 있음
 				}
 			}
-			return null;								// 子ノードがXmlTextを持っていない
+			return null;								// 자식 노드가 XmlText 를 갖고 있지 않다
 		}
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터があるかどうかを得る
+		/// 데이터가 있는지 여부를 얻는다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <returns>데이터がある場合true</returns>
+		/// <returns>데이터가 있는 경우 true</returns>
 		protected override bool HasProfile(string group_name, string name)
 		{
 			return (get_element(group_name, name) != null)? true: false;
@@ -290,7 +290,7 @@ namespace Utility.Xml
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 데이터설정
-		/// 配열の내용は전부置きかえられる
+		/// 배열의 내용은 전부 대체된다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -302,8 +302,8 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// groupを得る
-		/// groupが無ければ작성함
+		/// group 을 얻는다
+		/// group 이 없으면 작성한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <returns>그룹</returns>
@@ -312,7 +312,7 @@ namespace Utility.Xml
 			XmlNode		group_node	= this.root[group_name];
 
 			if(group_node == null){
-				// 無ければ作る
+				// 없으면 만든다
 				group_node	= create_element(group_name);
 				this.root.AppendChild(group_node);
 			}
@@ -321,12 +321,12 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 설정정보を得る
-		/// group이름を渡す
+		/// 설정 정보를 얻는다
+		/// group 이름을 넘긴다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <returns>데이터ノード</returns>
+		/// <returns>데이터 노드</returns>
 		protected XmlNode get_element(string group_name, string name)
 		{
 			XmlNode		group_node	= get_group(group_name);
@@ -339,20 +339,20 @@ namespace Utility.Xml
 		/// 
 		/// </summary>
 		/// <param name="name"></param>
-		/// <returns>작성したElement</returns>
+		/// <returns>작성한 Element</returns>
 		private XmlElement create_element(string name)
 		{
 			try{
 				return m_document.CreateElement(name);
 			}catch{
-				throw new Exception(String.Format("Elementの작성に실패하였습니다. \n[ {0} ] に사용できない문자が含まれている가능性があります. ", name));
+				throw new Exception(String.Format("Element 작성에 실패하였습니다. \n[ {0} ] 에 사용할 수 없는 문자가 포함되어 있을 가능성이 있습니다. ", name));
 			}
 		}
 		
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -365,8 +365,8 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -375,7 +375,7 @@ namespace Utility.Xml
 		{
 			XmlNode		node		= get_edit_node(group_name, name);
 
-			// 要素を更新
+			// 요소를 갱신
 			foreach(string s in value){
 				XmlElement	array_node	= create_element("array");
 				array_node.AppendChild(m_document.CreateTextNode(s));
@@ -385,9 +385,9 @@ namespace Utility.Xml
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 編集するべきノードを得る. 
-		/// 정보更新용. ノードが無ければ작성して返す. 
-		/// ノードが既に存在していれば子供を全てを삭제して返す. 
+		/// 편집해야 할 노드를 얻는다.
+		/// 정보 갱신용. 노드가 없으면 작성해서 반환한다.
+		/// 노드가 이미 존재하면 자식을 전부 삭제하고 반환한다.
 		/// </summary>
 		/// <param name="group_name"></param>
 		/// <param name="name"></param>
@@ -397,17 +397,17 @@ namespace Utility.Xml
 			XmlNode		group_node	= get_group(group_name);
 			XmlNode		node		= group_node[name];
 
-			// 要素があるかチェック
+			// 요소가 있는지 확인
 			if(node != null){
-				// 子供を全部삭제
+				// 자식을 전부 삭제
 				node.RemoveAll();
 			}else{
-				// 新しい要素として추가
+				// 새 요소로 추가
 				node	= create_element(name);
 				group_node.AppendChild(node);
 			}
 
-			// 編集するべきNode
+			// 편집해야 할 Node
 			return node;
 		}
 	}

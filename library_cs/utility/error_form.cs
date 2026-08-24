@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
- 想定외エラー
- スタックトレースを표시しする
- 지정されたURLへのジャンプ가능
+ 예기치 못한 오류
+ 스택 트레이스를 표시한다
+ 지정된 URL 로 이동 가능
 
 ---------------------------------------------------------------------------*/
 
@@ -50,7 +50,7 @@ namespace Utility
 		{
 			InitializeComponent();
 
-			// エラー내용生成
+			// 오류 내용 생성
 			string		message		= "";
 
 			if(!String.IsNullOrEmpty(message_top)){
@@ -72,24 +72,24 @@ namespace Utility
 	
 			if(ex == null){
 				//
-				message		+= "エラー내용が불명";
+				message		+= "오류 내용이 불명";
 			}else{
 				message		+= "Message: " + ex.Message + "\nStackTrace:\n";
 				message		+= make_error_message(ex.StackTrace);
 			}
 			m_message	= message;
 
-			// windowタイトル
+			// window 타이틀
 			if(!String.IsNullOrEmpty(window_title)){
 				this.Text	= window_title;
 			}
 
-			// エラー내용
+			// 오류 내용
 			textBox1.AcceptsReturn	= true;
 			textBox1.Lines			= m_message.Split(new char[]{'\n'});
 			textBox1.Select(0, 0);
 
-			// エラー보고ボタン
+			// 오류 보고 버튼
 			if(!String.IsNullOrEmpty(url)){
 				m_url	= url;
 			}else{
@@ -100,7 +100,7 @@ namespace Utility
 		}
 
 		/*-------------------------------------------------------------------------
-		 エラー내용をクリップボードにコピーする
+		 오류 내용을 클립보드에 복사한다
 		---------------------------------------------------------------------------*/
 		private void button3_Click(object sender, EventArgs e)
 		{
@@ -108,7 +108,7 @@ namespace Utility
 		}
 
 		/*-------------------------------------------------------------------------
-		 エラー보고을실시ページを開く
+		 오류 보고를 하는 페이지를 연다
 		---------------------------------------------------------------------------*/
 		private void button2_Click(object sender, EventArgs e)
 		{
@@ -118,8 +118,8 @@ namespace Utility
 		}
 
 		/*-------------------------------------------------------------------------
-		 エラーメッセージを生成する
-		 ソースの장소を삭제していたが, 必要ないようなのでほとんど何もせず返すように변경
+		 오류 메시지를 생성한다
+		 소스 위치를 삭제했었지만, 필요 없어 보여서 거의 아무것도 하지 않고 반환하도록 변경
 		---------------------------------------------------------------------------*/
 		static private string make_error_message(string str)
 		{
@@ -127,7 +127,7 @@ namespace Utility
 				str		= str.Replace("\r\n", "\n");
 				return str;
 			}catch{
-				// 何か실패したときはそのまま返す
+				// 무언가 실패했을 때는 그대로 반환한다
 				return str;
 			}
 		}
