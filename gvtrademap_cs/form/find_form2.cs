@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
  전체검색
- モードレスダイアログとして使용すること
+ 모드리스 대화상자로 사용할 것
 
 ---------------------------------------------------------------------------*/
 
@@ -30,15 +30,15 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	public partial class find_form2 : Form
 	{
-		private const int				LIST_MAX = 2000;		// 목록に표시する최대
+		private const int				LIST_MAX = 2000;		// 목록에 표시할 최대 개수
 	
-		private gvt_lib					m_lib;					// よく使う기능をまとめたもの
+		private gvt_lib					m_lib;					// 자주 쓰는 기능을 모아 놓은 것
 		private GvoDatabase				m_db;					// DB
 		private spot					m_spot;					// 장소목록
 		private item_window				m_item_window;			// 아이템윈도우
 		private Point					m_gpos;
 
-		private ListViewItemSorter		m_sorter;				// ソート
+		private ListViewItemSorter		m_sorter;				// 정렬
 		private bool					m_now_find;
 	
 		/*-------------------------------------------------------------------------
@@ -64,71 +64,71 @@ namespace gvtrademap_cs
 			toolTip1.AutoPopDelay		= 30*1000;		// 30초표시
 			toolTip1.BackColor			= Color.LightYellow;
 
-			// 각ページの初期化
+			// 각 페이지 초기화
 			init_page1();
 			init_page2();
 			init_page3();
 		}
 
 		/*-------------------------------------------------------------------------
-		 검색ページの初期化
+		 검색 페이지 초기화
 		---------------------------------------------------------------------------*/
 		private void init_page1()
 		{
-			// フィルタ
+			// 필터
 			comboBox2.SelectedIndex		= (int)m_lib.setting.find_filter;
 			comboBox3.SelectedIndex		= (int)m_lib.setting.find_filter2;
 			comboBox4.SelectedIndex		= (int)m_lib.setting.find_filter3;
 	
-			// ヘッダのコラムを추가しておく
-			// コラムの사이즈は覚えておく必要がある
+			// 헤더 컬럼을 추가해 둔다
+			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView1.Columns.Add("찾은이름",	180);
 			listView1.Columns.Add("종류",	80);
 			listView1.Columns.Add("장소",	120);
 	
-			// 검색문자열を업데이트
+			// 검색 문자열을 갱신
 			update_find_strings();
-			// 검색결과を업데이트
+			// 검색 결과를 갱신
 			update_find_result(null);
-			// 장소ボタンの상태업데이트
+			// 장소 버튼의 상태 갱신
 			update_spot_button_status();
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소표시목록ページの初期化
+		 장소 표시 목록 페이지 초기화
 		---------------------------------------------------------------------------*/
 		private void init_page2()
 		{
-			// ヘッダのコラムを추가しておく
-			// コラムの사이즈は覚えておく必要がある
+			// 헤더 컬럼을 추가해 둔다
+			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView2.Columns.Add("장소",	120);
 			listView2.Columns.Add("종류",	150);
 			listView2.Columns.Add("",	100);
 
-			// 장소목록の업데이트
+			// 장소 목록 갱신
 			update_spot_list();
 		}
 		
 		/*-------------------------------------------------------------------------
-		 문화권ページの初期化
+		 문화권 페이지 초기화
 		---------------------------------------------------------------------------*/
 		private void init_page3()
 		{
-			// ヘッダのコラムを추가しておく
-			// コラムの사이즈は覚えておく必要がある
+			// 헤더 컬럼을 추가해 둔다
+			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView3.Columns.Add("이름",	180);
 			listView3.Columns.Add("종류",	80);
 			listView3.Columns.Add(" ",	120);
 
-			// 목록の업데이트
+			// 목록 갱신
 			update_cultural_sphere_list();
 
-			// ボタンの업데이트
+			// 버튼 갱신
 			update_cultural_sphere_button();
 		}
 
 		/*-------------------------------------------------------------------------
-		 검색ボタンを클릭
+		 검색 버튼을 클릭
 		---------------------------------------------------------------------------*/
 		private void button1_Click(object sender, EventArgs e)
 		{
@@ -142,21 +142,21 @@ namespace gvtrademap_cs
 		{
 			string		find_string	= comboBox1.Text;
 	
-			// 空白チェック
+			// 공백 확인
 			if(find_string == "")	return;
 
 			m_now_find		= true;
 
-			// 履歴に추가
+			// 이력에 추가
 			m_lib.setting.find_strings.Add(find_string);
 
-			// 좌표검색判定
+			// 좌표 검색 판정
 			if(do_centering_gpos(find_string)){
-				// 검색결과をクリア
-				listView1.Items.Clear();		// 아이템내용をクリア
-												// ヘッダコラムはクリアされない
+				// 검색 결과를 초기화
+				listView1.Items.Clear();		// 아이템 내용을 초기화
+												// 헤더 컬럼은 초기화되지 않는다
 
-				// センタリングリクエスト
+				// 센터링 리퀘스트
 				m_lib.setting.centering_gpos	= m_gpos;
 				m_lib.setting.req_centering_gpos.Request();
 			}else{
@@ -164,11 +164,11 @@ namespace gvtrademap_cs
 				// 검색
 				List<GvoDatabase.Find>	results	= m_db.FindAll(find_string);
 
-				// 검색문자열を업데이트
+				// 검색 문자열을 갱신
 				update_find_strings();
-				// 검색결과を업데이트
+				// 검색 결과를 갱신
 				update_find_result(results);
-				// 장소ボタンの상태업데이트
+				// 장소 버튼의 상태 갱신
 				update_spot_button_status();
 				this.Cursor	= Cursors.Default;
 			}
@@ -177,31 +177,31 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 검색履歴を업데이트
+		 검색 이력을 갱신
 		---------------------------------------------------------------------------*/
 		private void update_find_strings()
 		{
-			// 검색ボックス
+			// 검색 박스
 			comboBox1.DropDownHeight		= 200;
-			// 履歴をクリア
+			// 이력을 초기화
 			comboBox1.Items.Clear();
 			if(m_lib.setting.find_strings.Count > 0){
 				foreach(string s in m_lib.setting.find_strings){
 					comboBox1.Items.Add(s);
 				}
-				// 一番상を선택
+				// 맨 위를 선택
 				comboBox1.SelectedIndex		= 0;
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 검색결과を업데이트
+		 검색 결과를 갱신
 		---------------------------------------------------------------------------*/
 		private void update_find_result(List<GvoDatabase.Find> results)
 		{
 			listView1.BeginUpdate();
-			listView1.Items.Clear();		// 아이템내용をクリア
-											// ヘッダコラムはクリアされない
+			listView1.Items.Clear();		// 아이템 내용을 초기화
+											// 헤더 컬럼은 초기화되지 않는다
 
 			bool	is_overflow	= false;
 			if(results != null){
@@ -223,18 +223,18 @@ namespace gvtrademap_cs
 			}
 
 			if(is_overflow){
-				MessageBox.Show(this, LIST_MAX.ToString() + "건이상は스킵されました。", "검색결과が多すぎます");
+				MessageBox.Show(this, LIST_MAX.ToString() + "건 이상은 생략되었습니다.", "검색 결과가 너무 많습니다");
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 추가する
+		 추가한다
 		---------------------------------------------------------------------------*/
 		private void add_item(ListView listview, GvoDatabase.Find i)
 		{
-			// フィルタ
+			// 필터
 			if(i.Type != GvoDatabase.Find.FindType.CulturalSphere){
-				// 문화권以외のとき
+				// 문화권 이외일 때
 				switch(m_lib.setting.find_filter){
 				case _find_filter.world_info:
 					if(i.Type == GvoDatabase.Find.FindType.Database)	return;
@@ -258,8 +258,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 좌표の入力をチェックする
-		 좌표が入力されていればセンタリングする
+		 좌표 입력을 확인한다
+		 좌표가 입력되어 있으면 센터링한다
 		---------------------------------------------------------------------------*/
 		private bool do_centering_gpos(string str)
 		{
@@ -288,7 +288,7 @@ namespace gvtrademap_cs
 				if(gpos.X < 0)			return false;
 				if(gpos.Y < 0)			return false;
 
-				// 중心にする좌표
+				// 중심으로 삼을 좌표
 				m_gpos			= gpos;
 				return true;
 			}catch{
@@ -297,7 +297,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 선택されている아이템のTAGを得る
+		 선택되어 있는 아이템의 TAG 를 얻는다
 		---------------------------------------------------------------------------*/
 		private GvoDatabase.Find get_selected_item_tag()
 		{
@@ -305,7 +305,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 선택されている아이템のTAGを得る
+		 선택되어 있는 아이템의 TAG 를 얻는다
 		---------------------------------------------------------------------------*/
 		private GvoDatabase.Find get_selected_item_tag(ListView view)
 		{
@@ -316,20 +316,20 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 閉じられようとしている
+		 닫히려고 하고 있다
 		---------------------------------------------------------------------------*/
 		private void find_form2_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if(e.CloseReason == CloseReason.UserClosing){
-				// このフォームの x ボタンが押されたときのみ취소する
-				// Alt + F4 でもここを通る
+				// 이 폼의 x 버튼이 눌렸을 때만 취소한다
+				// Alt + F4 로도 여기를 지난다
 				e.Cancel	= true;
-				this.Hide();	// 비표시にする
+				this.Hide();	// 비표시로 만든다
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 ダブル클릭された
+		 더블 클릭되었다
 		---------------------------------------------------------------------------*/
 		private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
 		{
@@ -337,7 +337,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소ボタンの상태업데이트
+		 장소 버튼의 상태 갱신
 		---------------------------------------------------------------------------*/
 		private void update_spot_button_status()
 		{
@@ -354,7 +354,7 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 선택상태が업데이트された
+		 선택 상태가 갱신되었다
 		---------------------------------------------------------------------------*/
 		private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
 		{
@@ -362,8 +362,8 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 アクティブにされた
-		 フォーカスを검색ボックスに移す
+		 활성화되었다
+		 포커스를 검색 박스로 옮긴다
 		---------------------------------------------------------------------------*/
 		private void find_form2_Activated(object sender, EventArgs e)
 		{
@@ -371,7 +371,7 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 선택한아이템を장소표시ボタンが押された
+		 선택한 아이템을 장소 표시 버튼이 눌렸다
 		---------------------------------------------------------------------------*/
 		private void button3_Click(object sender, EventArgs e)
 		{
@@ -379,7 +379,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소표시する
+		 장소 표시한다
 		---------------------------------------------------------------------------*/
 		private void do_spot(GvoDatabase.Find item)
 		{
@@ -390,7 +390,7 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 フィルタ변경
+		 필터 변경
 		---------------------------------------------------------------------------*/
 		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -415,11 +415,11 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 목록내で우클릭された
+		 목록 안에서 우클릭되었다
 		---------------------------------------------------------------------------*/
 		private void listView1_MouseClick(object sender, MouseEventArgs e)
 		{
-			if((e.Button & MouseButtons.Right) == 0)	return;		// 우클릭のみ
+			if((e.Button & MouseButtons.Right) == 0)	return;		// 우클릭만
 
 			GvoDatabase.Find	tag		= get_selected_item_tag();
 			if(tag == null)								return;
@@ -429,14 +429,14 @@ namespace gvtrademap_cs
 
 			ItemDatabaseCustom.Data			db		= tag.Database;
 			if(db == null){
-				// 아이템DBと一致しない
+				// 아이템 DB 와 일치하지 않는다
 				open_recipe_wiki0_ToolStripMenuItem.Enabled		= false;
 				open_recipe_wiki1_ToolStripMenuItem.Enabled		= false;
 				copy_all_to_clipboardToolStripMenuItem.Enabled	= false;
 			}else{
 				copy_all_to_clipboardToolStripMenuItem.Enabled	= true;
 				if(db.IsSkill || db.IsReport){
-					// 스킬か보고
+					// 스킬 아니면 보고
 					open_recipe_wiki0_ToolStripMenuItem.Enabled	= false;
 					open_recipe_wiki1_ToolStripMenuItem.Enabled	= false;
 				}else{
@@ -445,7 +445,7 @@ namespace gvtrademap_cs
 						open_recipe_wiki0_ToolStripMenuItem.Enabled	= true;
 						open_recipe_wiki1_ToolStripMenuItem.Enabled	= false;
 					}else{
-						// 레시피以외
+						// 레시피 이외
 						open_recipe_wiki0_ToolStripMenuItem.Enabled	= false;
 						open_recipe_wiki1_ToolStripMenuItem.Enabled	= true;
 					}
@@ -455,7 +455,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 레시피정보wikiを開く
+		 레시피 정보 wiki 를 연다
 		 레시피검색
 		---------------------------------------------------------------------------*/
 		private void open_recipe_wiki0_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -467,8 +467,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 레시피정보wikiを開く
-		 작성가능かどうか검색
+		 레시피 정보 wiki 를 연다
+		 작성 가능한지 검색
 		---------------------------------------------------------------------------*/
 		private void open_recipe_wiki1_ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -479,7 +479,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 명칭をクリップボードにコピーする
+		 명칭을 클립보드에 복사한다
 		---------------------------------------------------------------------------*/
 		private void copy_name_to_clipboardToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -489,7 +489,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 디테일をクリップボードにコピーする
+		 상세를 클립보드에 복사한다
 		---------------------------------------------------------------------------*/
 		private void copy_all_to_clipboardToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -503,43 +503,43 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 ヘッダを클릭された
+		 헤더가 클릭되었다
 		---------------------------------------------------------------------------*/
 		private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
 		{
-			// ソートする
+			// 정렬한다
 			m_sorter.Sort(listView1, e.Column);
 		}
 
 		/*-------------------------------------------------------------------------
-		 검색モードにする
+		 검색 모드로 만든다
 		---------------------------------------------------------------------------*/
 		public void SetFindMode()
 		{
-			// 검색をアクティブにする
+			// 검색을 활성화한다
 			tabControl1.SelectedIndex	= 0;
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소결과の업데이트
-		 장소목록をアクティブにする
+		 장소 결과 갱신
+		 장소 목록을 활성화한다
 		---------------------------------------------------------------------------*/
 		public void UpdateSpotList()
 		{
 			if(m_spot.is_spot){
-				// 장소목록をアクティブにする
+				// 장소 목록을 활성화한다
 				tabControl1.SelectedIndex	= 2;
 			}else{
-				// 검색をアクティブにする
+				// 검색을 활성화한다
 				SetFindMode();
 			}
 	
-			// 목록の업데이트
+			// 목록 갱신
 			update_spot_list();
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소결과の업데이트
+		 장소 결과 갱신
 		---------------------------------------------------------------------------*/
 		private void update_spot_list()
 		{
@@ -552,7 +552,7 @@ namespace gvtrademap_cs
 			label3.Text					= m_spot.spot_type_str;
 			listView2.Columns[2].Text	= m_spot.spot_type_column_str;
 			
-			// 목록の추가
+			// 목록 추가
 			foreach(spot.spot_once s in list){
 				ListViewItem	item	= new ListViewItem(s.info.Name, 0);
 				item.Tag				= s;
@@ -563,15 +563,15 @@ namespace gvtrademap_cs
 			}
 			listView2.EndUpdate();
 
-			// ボタンの유효무효
+			// 버튼의 유효/무효
 			button2.Enabled			= (list.Count <= 0)? false: true;
 
-			// 선택を설정する
+			// 선택을 설정한다
 			update_select_info();
 		}
 
 		/*-------------------------------------------------------------------------
-		 선택されているinfoを선택する
+		 선택되어 있는 info 를 선택한다
 		---------------------------------------------------------------------------*/
 		private void update_select_info()
 		{
@@ -585,7 +585,7 @@ namespace gvtrademap_cs
 					spot.spot_once	s	= (spot.spot_once)tag;
 					if(s.info.Name != info.Name)	continue;
 
-					// 선택상태にし、見える위치にスクロールさせる
+					// 선택 상태로 만들고, 보이는 위치로 스크롤시킨다
 					i.Selected	= true;
 					i.EnsureVisible();
 					i.Focused	= true;
@@ -593,15 +593,15 @@ namespace gvtrademap_cs
 				}
 			}
 
-			// 선택중のinfoが含まれない場合は1番目を선택상태にする	
-			// 문화권の장소時
+			// 선택 중인 info 가 포함되지 않은 경우에는 첫 번째를 선택 상태로 만든다
+			// 문화권을 장소 지정할 때
 			if(listView2.Items.Count > 0){
 				listView2.Items[0].Selected		= true;
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소결과の선택が업데이트された
+		 장소 결과의 선택이 갱신되었다
 		---------------------------------------------------------------------------*/
 		private void listView2_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -614,12 +614,12 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소결과のコラムが클릭された
-		 ソートする
+		 장소 결과의 컬럼이 클릭되었다
+		 정렬한다
 		---------------------------------------------------------------------------*/
 		private void listView2_ColumnClick(object sender, ColumnClickEventArgs e)
 		{
-			// ソートする
+			// 정렬한다
 			m_sorter.Sort(listView2, e.Column);
 		}
 
@@ -632,16 +632,16 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 ESCが押されたときの닫기動作
+		 ESC 가 눌렸을 때의 닫기 동작
 		---------------------------------------------------------------------------*/
 		private void button4_Click(object sender, EventArgs e)
 		{
-			this.Hide();		// 표시を消す
+			this.Hide();		// 표시를 지운다
 		}
 
 
 		/*-------------------------------------------------------------------------
-		 문화권を장소표시するボタンを업데이트する
+		 문화권을 장소 표시하는 버튼을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_cultural_sphere_button()
 		{
@@ -649,8 +649,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 문화권목록の업데이트
-		 途중で업데이트されないため、初期化時のみ
+		 문화권 목록 갱신
+		 도중에 갱신되지 않으므로, 초기화 시에만
 		---------------------------------------------------------------------------*/
 		private void update_cultural_sphere_list()
 		{
@@ -659,7 +659,7 @@ namespace gvtrademap_cs
 			listView3.BeginUpdate();
 			listView3.Items.Clear();
 
-			// 목록の추가
+			// 목록 추가
 			foreach(GvoDatabase.Find i in results){
 				add_item(listView3, i);
 			}
@@ -667,7 +667,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 문화권を장소표시する
+		 문화권을 장소 표시한다
 		---------------------------------------------------------------------------*/
 		private void button5_Click(object sender, EventArgs e)
 		{
@@ -675,26 +675,26 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 문화권の선택업데이트
+		 문화권 선택 갱신
 		---------------------------------------------------------------------------*/
 		private void listView3_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			// ボタンの업데이트
+			// 버튼 갱신
 			update_cultural_sphere_button();
 		}
 
 		/*-------------------------------------------------------------------------
-		 カラム클릭
-		 ソートする
+		 컬럼 클릭
+		 정렬한다
 		---------------------------------------------------------------------------*/
 		private void listView3_ColumnClick(object sender, ColumnClickEventArgs e)
 		{
-			// ソートする
+			// 정렬한다
 			m_sorter.Sort(listView3, e.Column);
 		}
 
 		/*-------------------------------------------------------------------------
-		 문화권목록がダブル클릭された
+		 문화권 목록이 더블 클릭되었다
 		---------------------------------------------------------------------------*/
 		private void listView3_MouseDoubleClick(object sender, MouseEventArgs e)
 		{

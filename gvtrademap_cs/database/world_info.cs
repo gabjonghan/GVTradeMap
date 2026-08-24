@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 도시とか해역とか상륙지점정보
+ 도시나 해역, 상륙 지점 정보
 
 ---------------------------------------------------------------------------*/
 
@@ -62,14 +62,14 @@ namespace gvtrademap_cs {
 			Turkey,
 		};
 
-		// 도시の종류
+		// 도시의 종류
 		public enum CityType {
 			Capital,            // 수도
 			City,               // 도시
 			CapitalIslam,       // 수도(이슬람)
 			CityIslam,          // 도시(이슬람)
 		};
-		// 동맹の종류
+		// 동맹의 종류
 		public enum AllianceType {
 			Unknown,            // 없음(보급항등)
 			Alliance,           // 동맹
@@ -190,11 +190,11 @@ namespace gvtrademap_cs {
 		private gvt_lib m_lib;
 		private gvo_season m_season;
 
-		private draw_infonames m_draw_infonames;        // 도시명などの그리기
+		private draw_infonames m_draw_infonames;        // 도시명 등의 그리기
 
-		private hittest_list m_world;            // 세계の정보
+		private hittest_list m_world;            // 세계 정보
 		private MultiDictionary<string, GvoWorldInfo.Info> m_world_hash_table;
-		private GvoItemTypeDatabase m_item_type_db;   // 아이템の종류정보
+		private GvoItemTypeDatabase m_item_type_db;   // 아이템의 종류 정보
 
 		private hittest_list m_seas;        // 해역목록
 		private hittest_list m_cities;      // 도시목록
@@ -220,7 +220,7 @@ namespace gvtrademap_cs {
 		public gvo_season Season { get { return m_season; } }
 
 		/*-------------------------------------------------------------------------
-		 세계の정보관리
+		 세계 정보 관리
 		---------------------------------------------------------------------------*/
 		public GvoWorldInfo(gvt_lib lib, gvo_season season, string world_info_fname, string memo_path) {
 			m_lib = lib;
@@ -235,24 +235,24 @@ namespace gvtrademap_cs {
 
 			m_draw_infonames = new draw_infonames(lib, this);
 
-			// 서버と국を初期化
-			// 오류번호としておく
+			// 서버와 국가를 초기화
+			// 오류 번호로 해 둔다
 			m_server = GvoWorldInfo.Server.Unknown;
 			m_my_country = GvoWorldInfo.Country.Unknown;
 
-			// XML정보を로드
+			// XML 정보를 로드
 			Stopwatch stopwatch = new Stopwatch();
 			stopwatch.Start();
 			load_info_xml(world_info_fname);
 			Console.WriteLine("load_info_xml()=" + stopwatch.ElapsedMilliseconds.ToString());
 
-			// 메모を로드
+			// 메모를 로드
 			load_memo(memo_path);
 
-			// GvoDomains, GvoItemTypeDatabase등のDBとリンクする
+			// GvoDomains, GvoItemTypeDatabase 등의 DB 와 링크한다
 			link_database();
 
-			// 해역목록とその他목록を구축する
+			// 해역 목록과 그 외 목록을 구축한다
 			create_seas_list();
 		}
 
@@ -265,20 +265,20 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 GvoDomains, GvoItemTypeDatabase등のDBと링크
+		 GvoDomains, GvoItemTypeDatabase 등의 DB 와 링크
 		---------------------------------------------------------------------------*/
 		private void link_database() {
 			int index = 0;
 			foreach (Info i in m_world) {
 				if (i.InfoType != InfoType.Sea) {
-					// 해역以외
+					// 해역 이외
 					bool has_name_image = true;
 
 					if (i.CityInfo != null) {
 						has_name_image = i.CityInfo.HasNameImage;
 					}
 
-					// 그리기용の矩形を업데이트する
+					// 그리기용 사각형을 갱신한다
 					i.UpdateDrawRects(m_lib, i.Name);
 					if (has_name_image) index++;
 				}
@@ -286,7 +286,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 해역목록とその他목록を구축する
+		 해역 목록과 그 외 목록을 구축한다
 		---------------------------------------------------------------------------*/
 		private void create_seas_list() {
 			m_seas.Clear();
@@ -310,7 +310,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 메모を로드
+		 메모를 로드
 		---------------------------------------------------------------------------*/
 		private void load_memo(string path) {
 			foreach (Info i in m_world) {
@@ -319,7 +319,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 메모を書き出す
+		 메모를 기록한다
 		---------------------------------------------------------------------------*/
 		public void WriteMemo(string path) {
 			foreach (Info i in m_world) {
@@ -328,15 +328,15 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 맵좌표から검색
+		 맵 좌표로 검색
 		---------------------------------------------------------------------------*/
 		public Info FindInfo(Point map_pos) {
 			return (Info)m_world.HitTest(map_pos);
 		}
 
 		/*-------------------------------------------------------------------------
-		 맵좌표から검색
-		 해역を含まない
+		 맵 좌표로 검색
+		 해역을 포함하지 않는다
 		---------------------------------------------------------------------------*/
 		public Info FindInfo_WithoutSea(Point map_pos) {
 			Info i = (Info)m_world.HitTest(map_pos);
@@ -346,7 +346,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 이름から검색
+		 이름으로 검색
 		---------------------------------------------------------------------------*/
 		public Info FindInfo(string name) {
 			if (string.IsNullOrEmpty(name)) return null;
@@ -355,7 +355,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 전체검색
-		 검색する문자を含むものを전체검색する
+		 검색할 문자를 포함하는 것을 전체 검색한다
 		---------------------------------------------------------------------------*/
 		public void FindAll(string find_string, List<GvoDatabase.Find> list, GvoDatabase.Find.FindHandler handler) {
 			foreach (Info _info in m_world) {
@@ -364,9 +364,9 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 종류で검색
-		 검색する문자を含むものを전체검색する
-		 例えば 食料품 등での검색용
+		 종류로 검색
+		 검색할 문자를 포함하는 것을 전체 검색한다
+		 예를 들어 식료품 등으로 검색할 때 사용
 		---------------------------------------------------------------------------*/
 		public void FindAll_FromType(string find_string, List<GvoDatabase.Find> list, GvoDatabase.Find.FindHandler handler) {
 			foreach (Info _info in m_world) {
@@ -375,7 +375,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 문화권목록を작성함
+		 문화권 목록을 작성한다
 		---------------------------------------------------------------------------*/
 		public GvoDatabase.Find[] CulturalSphereList() {
 			List<GvoDatabase.Find> list = new List<GvoDatabase.Find>();
@@ -411,14 +411,14 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 디테일정보の읽기
-		 스레드読みに대응
+		 상세 정보 읽기
+		 스레드 읽기에 대응
 		---------------------------------------------------------------------------*/
 		public bool Load(string info_file_name, string domaininfo_file_name, string local_domaininfo_file_name) {
 			// 동맹현황읽기
 			load_domains_xml(domaininfo_file_name, local_domaininfo_file_name);
 
-			// 아이템분類정보읽기
+			// 아이템 분류 정보 읽기
 			m_item_type_db.Load();
 			load_items_xml(info_file_name);
 
@@ -428,7 +428,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이템DBとリンクさせる
+		 아이템 DB 와 링크시킨다
 		---------------------------------------------------------------------------*/
 		public void LinkItemDatabase(ItemDatabaseCustom item_db) {
 			foreach (Info _info in m_world) {
@@ -459,13 +459,13 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private void update_domains() {
 			foreach (Info _info in m_world) {
-				// DBを업데이트する
+				// DB 를 갱신한다
 				_info.UpdateDomains(m_item_type_db, m_server, m_my_country);
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 동맹국を변경する
+		 동맹국을 변경한다
 		---------------------------------------------------------------------------*/
 		public bool SetDomain(string city_name, GvoWorldInfo.Country country) {
 			GvoWorldInfo.Info info = FindInfo(city_name);
@@ -476,14 +476,14 @@ namespace gvtrademap_cs {
 			// 변경
 			info.CityInfo.SetDomain(m_server, country);
 
-			// 설정を反映させておく
+			// 설정을 반영해 둔다
 			update_domains();
 			return true;
 		}
 
 		/*-------------------------------------------------------------------------
 		 도시명그리기
-		 상륙지점も含む
+		 상륙 지점도 포함
 		---------------------------------------------------------------------------*/
 		public void DrawCityName() {
 			m_draw_infonames.DrawCityName();
@@ -497,7 +497,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 동맹국업데이트용の문자열を得る
+		 동맹국 갱신용 문자열을 얻는다
 		 "서버번호"+"도시번호"+"동맹국번호"
 		---------------------------------------------------------------------------*/
 		public string GetNetUpdateString(string city_name) {
@@ -511,7 +511,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 세율を考慮した価格を得る
+		 세율을 고려한 가격을 얻는다
 		---------------------------------------------------------------------------*/
 		static public int GetTaxPrice(int price) {
 			return price + (int)(def.TAX * price);
@@ -644,28 +644,28 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 서버명から Server を得る
+		 서버명으로 Server 를 얻는다
 		---------------------------------------------------------------------------*/
 		public static Server GetServerFromString(string str) {
 			return EnumParserUtility<GvoWorldInfo.Server>.ToEnum(str, GvoWorldInfo.Server.Unknown);
 		}
 
 		/*-------------------------------------------------------------------------
-		 국명を得る
+		 국명을 얻는다
 		---------------------------------------------------------------------------*/
 		public static string GetCountryString(Country _country) {
 			return EnumParserUtility<GvoWorldInfo.Country>.ToString(GvoWorldInfo.m_country_enum_param, _country, "무소속");
 		}
 
 		/*-------------------------------------------------------------------------
-		 국명から Country を得る
+		 국명으로 Country 를 얻는다
 		---------------------------------------------------------------------------*/
 		public static GvoWorldInfo.Country GetCountryFromString(string str) {
 			return EnumParserUtility<GvoWorldInfo.Country>.ToEnum(GvoWorldInfo.m_country_enum_param, str, GvoWorldInfo.Country.Unknown);
 		}
 
 		/*-------------------------------------------------------------------------
-		 도시の종류を得る
+		 도시의 종류를 얻는다
 		---------------------------------------------------------------------------*/
 		public static string GetCityTypeString(CityType _city_type) {
 			return EnumParserUtility<GvoWorldInfo.CityType>.ToString(GvoWorldInfo.m_citytype_enum_param, _city_type, "불명");
@@ -676,7 +676,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 동맹현황を得る
+		 동맹 상태를 얻는다
 		---------------------------------------------------------------------------*/
 		public static string GetAllianceTypeString(AllianceType _alliance) {
 			return EnumParserUtility<GvoWorldInfo.AllianceType>.ToString(GvoWorldInfo.m_alliancetype_enum_param, _alliance, "동맹없음");
@@ -687,7 +687,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 문화권を得る
+		 문화권을 얻는다
 		---------------------------------------------------------------------------*/
 		public static string GetCulturalSphereString(CulturalSphere cs) {
 			return EnumParserUtility<GvoWorldInfo.CulturalSphere>.ToString(GvoWorldInfo.m_culturalsphere_enum_param, cs, "불명");
@@ -745,14 +745,14 @@ namespace gvtrademap_cs {
 			private string m_name;        // 이름
 			private InfoType m_info_type;    // 종류(도시등)
 			private int m_url_index;        // URL번호
-			private string m_url;            // URLそのもの
-											 // 直接リンク
-			private GvoWorldInfo.Server m_server;         // プレイしている서버
+			private string m_url;            // URL 그 자체
+											 // 직접 링크
+			private GvoWorldInfo.Server m_server;         // 플레이 중인 서버
 			private GvoWorldInfo.CityInfo m_cityinfo;        // 도시정보
 			private GvoWorldInfo.SeaInfo m_seainfo;   // 해역정보
 
 			private string m_memo;        // 메모
-			private string[] m_memo_div_lines;  // 行単位に분할された메모
+			private string[] m_memo_div_lines;  // 행 단위로 분할된 메모
 
 			private Point m_string_offset1; // 도시명표시용 오프셋(아이콘 대)
 			private Point m_string_offset2; // 도시명표시용 오프셋(아이콘 소)
@@ -760,7 +760,7 @@ namespace gvtrademap_cs {
 			private d3d_sprite_rects.rect m_small_icon_rect;    // 아이콘 소 사각형
 			private d3d_sprite_rects.rect m_string_rect;        // 문자표시용 사각형
 
-			private List<Group> m_groups;    // group_index분の데이터
+			private List<Group> m_groups;    // group_index 만큼의 데이터
 
 			/*-------------------------------------------------------------------------
 
@@ -838,7 +838,7 @@ namespace gvtrademap_cs {
 			}
 
 			// 메모전체
-			// 行単位は전용の関수を使うこと
+			// 행 단위는 전용 함수를 쓸 것
 			public string Memo {
 				get { return m_memo; }
 				set {
@@ -860,7 +860,7 @@ namespace gvtrademap_cs {
 			public d3d_sprite_rects.rect SmallIconRect { get { return m_small_icon_rect; } }
 			public d3d_sprite_rects.rect NameRect { get { return m_string_rect; } set { m_string_rect = value; } }
 
-			// ツールチップ
+			// 툴팁
 			public string TooltipString { get { return __get_tool_tip_string(); } }
 
 			/*-------------------------------------------------------------------------
@@ -876,13 +876,13 @@ namespace gvtrademap_cs {
 				m_memo = "";
 				div_memo_lines();
 
-				// 判定용矩形を지정しておく
+				// 판정용 사각형을 지정해 둔다
 				base.rect = new Rectangle(-CHECK_MARGIN,
 													-CHECK_MARGIN,
 													CHECK_MARGIN * 2,
 													CHECK_MARGIN * 2);
 
-				m_server = GvoWorldInfo.Server.Euros;   // 初期値はユーロス
+				m_server = GvoWorldInfo.Server.Euros;   // 초기값은 에우로스
 				m_cityinfo = null;
 				m_seainfo = null;
 
@@ -892,8 +892,8 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 지정된아이템があるかを得る
-			 완전일치のみで조사
+			 지정된 아이템이 있는지 얻는다
+			 완전 일치로만 조사
 			---------------------------------------------------------------------------*/
 			public Group.Data HasItem(string find_item) {
 				foreach (Group g in m_groups) {
@@ -904,7 +904,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 메모の읽기
+			 메모 읽기
 			---------------------------------------------------------------------------*/
 			public void LoadMemo(string path) {
 				// 파일명작성
@@ -916,7 +916,7 @@ namespace gvtrademap_cs {
 					using (StreamReader sr = new StreamReader(
 						path, Encoding.GetEncoding("UTF-8"))) {
 
-						// 全부로드
+						// 전부 로드
 						m_memo = sr.ReadToEnd();
 					}
 					div_memo_lines();
@@ -927,15 +927,15 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 메모の書き出し
+			 메모 기록
 			---------------------------------------------------------------------------*/
 			public void WriteMemo(string path) {
 				// 파일명작성
 				path += m_name + "_memo.txt";
 
-				// 메모정보がなければ書き出さない
+				// 메모 정보가 없으면 기록하지 않는다
 				if (m_memo == "") {
-					// 파일があれば삭제する
+					// 파일이 있으면 삭제한다
 					file_ctrl.RemoveFile(path);
 					return;
 				}
@@ -946,13 +946,13 @@ namespace gvtrademap_cs {
 						sw.Write(Memo);
 					}
 				} catch {
-					// 書き出し실패
+					// 기록 실패
 				}
 			}
 
 			/*-------------------------------------------------------------------------
-			 教えてくれる인を조사
-			 教えてくれる인が居なければnullを返す
+			 가르쳐 주는 사람을 조사
+			 가르쳐 주는 사람이 없으면 null 을 반환한다
 			---------------------------------------------------------------------------*/
 			public string LearnPerson(string find_str) {
 				Group.Data d = m_groups[(int)GroupIndex._3].HasItem(find_str);
@@ -961,7 +961,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 수を得る
+			 개수를 얻는다
 			---------------------------------------------------------------------------*/
 			public int GetCount(GroupIndex index) {
 				if (index < 0) return 0;
@@ -970,7 +970,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 그룹を得る
+			 그룹을 얻는다
 			---------------------------------------------------------------------------*/
 			public Group GetGroup(GroupIndex index) {
 				if (index < 0) return null;
@@ -979,7 +979,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 그룹명から데이터を得る
+			 그룹명으로 데이터를 얻는다
 			---------------------------------------------------------------------------*/
 			private Info.Group get_group(string name) {
 				foreach (GvoWorldInfo.Info.Group group in m_groups) {
@@ -991,7 +991,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 데이터を得る
+			 데이터를 얻는다
 			---------------------------------------------------------------------------*/
 			public Group.Data GetData(GroupIndex index, int data_index) {
 				Group g = GetGroup(index);
@@ -1000,10 +1000,10 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 참조용に데이터업데이트
+			 참조용으로 데이터 갱신
 			---------------------------------------------------------------------------*/
 			public void UpdateDomains(GvoItemTypeDatabase type, GvoWorldInfo.Server server, GvoWorldInfo.Country my_country) {
-				m_server = server;  // プレイしている서버の업데이트
+				m_server = server;  // 플레이 중인 서버 갱신
 				foreach (Group g in m_groups) {
 					g.UpdateDomains(type, this.MyCountry != my_country);
 				}
@@ -1053,13 +1053,13 @@ namespace gvtrademap_cs {
 							m_icon_rect = lib.icons.GetIcon(icons.icon_index.map_red_circle);
 							break;
 					}
-					m_small_icon_rect = m_icon_rect;        // 同じ아이콘を사용する
+					m_small_icon_rect = m_icon_rect;        // 같은 아이콘을 사용한다
 					//m_string_rect = lib.nameTexture.getRect(name);
 				}
 			}
 
 			/*-------------------------------------------------------------------------
-			 아이템の그룹명を得る
+			 아이템의 그룹명을 얻는다
 			---------------------------------------------------------------------------*/
 			static public string GetGroupName(GroupIndex index) {
 				switch (index) {
@@ -1080,7 +1080,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 메모の行수を得る
+			 메모의 행 수를 얻는다
 			---------------------------------------------------------------------------*/
 			public int GetMemoLines() {
 				if (m_memo_div_lines == null) return 0;
@@ -1088,8 +1088,8 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 메모を得る
-			 行지정
+			 메모를 얻는다
+			 행 지정
 			---------------------------------------------------------------------------*/
 			public string GetMemo(int line_index) {
 				if (line_index < 0) return "";
@@ -1098,7 +1098,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 메모を行毎に분할する
+			 메모를 행 단위로 분할한다
 			---------------------------------------------------------------------------*/
 			private void div_memo_lines() {
 				if (m_memo == "") {
@@ -1109,7 +1109,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 아이템DBとリンクさせる
+			 아이템 DB 와 링크시킨다
 			---------------------------------------------------------------------------*/
 			internal void LinkItemDatabase(ItemDatabaseCustom item_db) {
 				foreach (Group g in m_groups) {
@@ -1118,10 +1118,10 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 HPを開くtooltipを得る
+			 HP 를 여는 tooltip 을 얻는다
 			---------------------------------------------------------------------------*/
 			public string GetToolTipString_HP() {
-				if (!IsUrl) return null;        // URLが등록されていない
+				if (!IsUrl) return null;        // URL 이 등록되어 있지 않다
 
 				if (UrlIndex != -1) {
 					if (InfoType == GvoWorldInfo.InfoType.City) {
@@ -1132,8 +1132,8 @@ namespace gvtrademap_cs {
 						return "D.K.K맵\n클릭으로 브라우저 열기";
 					}
 				} else {
-					// クリスタル商会
-					//					return "直接リンク\n좌클릭으로 ブラウザを開く";
+					// 크리스탈 상회
+					//					return "직접 링크\n좌클릭으로 브라우저를 연다";
 					return "대항해시대Online 상륙지 지도\n클릭으로 브라우저 열기";
 				}
 			}
@@ -1155,7 +1155,7 @@ namespace gvtrademap_cs {
 					list.Add(new GvoDatabase.Find(Name, Lang2));
 				}
 
-				// 아이템から검색
+				// 아이템에서 검색
 				foreach (Group g in m_groups) {
 					g.FindAll(find_string, list, Name, handler);
 				}
@@ -1163,17 +1163,17 @@ namespace gvtrademap_cs {
 
 			/*-------------------------------------------------------------------------
 			 전체검색
-			 종류별로の검색용
+			 종류별 검색용
 			---------------------------------------------------------------------------*/
 			public void FindAll_FromType(string find_string, List<GvoDatabase.Find> list, GvoDatabase.Find.FindHandler handler) {
-				// 아이템から검색
+				// 아이템에서 검색
 				foreach (Group g in m_groups) {
 					g.FindAll_FromType(find_string, list, Name, handler);
 				}
 			}
 
 			/*-------------------------------------------------------------------------
-			 ツールチップ용문자열の取得
+			 툴팁용 문자열 취득
 			---------------------------------------------------------------------------*/
 			private string __get_tool_tip_string() {
 				string tip = Name + "\n";
@@ -1181,7 +1181,7 @@ namespace gvtrademap_cs {
 					// 해역
 					return tip + SeaInfo.TooltipString;
 				} else {
-					// その他
+					// 그 밖의 것
 					switch (InfoType) {
 						case GvoWorldInfo.InfoType.City:
 							switch (AllianceType) {
@@ -1346,8 +1346,8 @@ namespace gvtrademap_cs {
 				}
 
 				/*-------------------------------------------------------------------------
-				 지정된아이템があるかを得る
-				 완전일치のみで조사
+				 지정된 아이템이 있는지 얻는다
+				 완전 일치로만 조사
 				---------------------------------------------------------------------------*/
 				public Data HasItem(string find_item) {
 					foreach (Data d in m_datas) {
@@ -1357,8 +1357,8 @@ namespace gvtrademap_cs {
 				}
 
 				/*-------------------------------------------------------------------------
-				 무역상인と번역가플래그を得る
-				 ついでに행상인플래그を설정する
+				 무역상인과 번역가 플래그를 얻는다
+				 덤으로 행상인 플래그를 설정한다
 				---------------------------------------------------------------------------*/
 				public int GetSakabaFlag() {
 					int flag = 0;
@@ -1368,7 +1368,7 @@ namespace gvtrademap_cs {
 						} else if (d.Tag == "#") {   // 무역상인
 							flag |= 8;
 						} else if (d.Tag == "") {
-							// 행상인扱い
+							// 행상인 취급
 							d.Tag = "-";
 						}
 					}
@@ -1376,14 +1376,14 @@ namespace gvtrademap_cs {
 				}
 
 				/*-------------------------------------------------------------------------
-				 수を得る
+				 개수를 얻는다
 				---------------------------------------------------------------------------*/
 				public int GetCount() {
 					return m_datas.Count;
 				}
 
 				/*-------------------------------------------------------------------------
-				 데이터を得る
+				 데이터를 얻는다
 				---------------------------------------------------------------------------*/
 				public Data GetData(int index) {
 					if (index < 0) return null;
@@ -1392,7 +1392,7 @@ namespace gvtrademap_cs {
 				}
 
 				/*-------------------------------------------------------------------------
-				 데이터を업데이트する
+				 데이터를 갱신한다
 				---------------------------------------------------------------------------*/
 				internal void UpdateDomains(GvoItemTypeDatabase item_type_db, bool is_tax) {
 					foreach (Data d in m_datas) {
@@ -1401,7 +1401,7 @@ namespace gvtrademap_cs {
 				}
 
 				/*-------------------------------------------------------------------------
-				 아이템DBとリンクさせる
+				 아이템 DB 와 링크시킨다
 				---------------------------------------------------------------------------*/
 				internal void LinkItemDatabase(ItemDatabaseCustom item_db, string name) {
 					foreach (Data d in m_datas) {
@@ -1425,7 +1425,7 @@ namespace gvtrademap_cs {
 
 				/*-------------------------------------------------------------------------
 				 전체검색
-				 종류별로の검색용
+				 종류별 검색용
 				---------------------------------------------------------------------------*/
 				public void FindAll_FromType(string find_string, List<GvoDatabase.Find> list, string info_name, GvoDatabase.Find.FindHandler handler) {
 					foreach (Data d in m_datas) {
@@ -1460,19 +1460,19 @@ namespace gvtrademap_cs {
 				 데이터
 				---------------------------------------------------------------------------*/
 				public class Data {
-					private Info m_info;                    // 属している도시など
+					private Info m_info;                    // 속해 있는 도시 등
 					private string m_name;            // 이름
-					private string m_tag;                // タグ
-					private string m_tag2;            // タグ2
-					private int m_group_index;    // 属している그룹번호
+					private string m_tag;                // 태그
+					private string m_tag2;            // 태그 2
+					private int m_group_index;    // 속해 있는 그룹 번호
 
-					// 외からの참조용
-					private bool m_is_bonus_item;    // 명産품
-					private string m_price;    // 가격, 인물명など
+					// 외부 참조용
+					private bool m_is_bonus_item;    // 명산품
+					private string m_price;    // 가격, 인물명 등
 					private Color m_color;        // 표시색
 					private Color m_price_color;            // 가격용색
-					private string m_investment;            // 必要な가격額
-					private ItemDatabaseCustom.Data m_item_db;        // 아이템DBの디테일
+					private string m_investment;            // 필요한 가격액
+					private ItemDatabaseCustom.Data m_item_db;        // 아이템 DB 의 상세
 
 					/*-------------------------------------------------------------------------
 					 
@@ -1537,7 +1537,7 @@ namespace gvtrademap_cs {
 						m_info = info;
 						m_group_index = index;
 
-						// 외からの참조용
+						// 외부 참조용
 						m_is_bonus_item = false;
 						m_price = "";
 						m_color = Color.Black;
@@ -1546,7 +1546,7 @@ namespace gvtrademap_cs {
 					}
 
 					/*-------------------------------------------------------------------------
-					 그리기용の색を得る
+					 그리기용 색을 얻는다
 					---------------------------------------------------------------------------*/
 					private Color _get_color() {
 						switch (m_tag) {
@@ -1557,9 +1557,9 @@ namespace gvtrademap_cs {
 							//레시피
 							//						case "%":		return Color.DarkGreen;
 
-							// 가격후목록入り
+							// 가격 후보 목록에 포함
 							case "*": return Color.Gray;
-							// 가격で得られる
+							// 가격으로 얻을 수 있다
 							case "$": return Color.Blue;
 							// 가격비교
 							//레시피
@@ -1572,18 +1572,18 @@ namespace gvtrademap_cs {
 							case "#": return Color.Green;
 							// 행상인
 							case "-": return Color.Gray;
-							// その他
+							// 그 밖의 것
 							default: return Color.Black;
 						}
 					}
 
 					/*-------------------------------------------------------------------------
-					 그리기용の가격を得る
-					 종류によっては가격ではないものが返る
+					 그리기용 가격을 얻는다
+					 종류에 따라서는 가격이 아닌 것이 반환된다
 					---------------------------------------------------------------------------*/
 					private string _get_price() {
 						switch (m_tag) {
-							// 가격で得られる
+							// 가격으로 얻을 수 있다
 							case "$": return "가격";
 							// 가격비교
 							case "%": return "가격비교";
@@ -1596,15 +1596,15 @@ namespace gvtrademap_cs {
 							// 행상인
 							case "-": return "행상인";
 
-							// その他
+							// 그 밖의 것
 							default:
 								return calc_price(false);
 						}
 					}
 
 					/*-------------------------------------------------------------------------
-					 가격を得る
-					 세율を考慮する
+					 가격을 얻는다
+					 세율을 고려한다
 					---------------------------------------------------------------------------*/
 					private string calc_price(bool is_tax) {
 						int p;
@@ -1621,10 +1621,10 @@ namespace gvtrademap_cs {
 						m_color = _get_color();
 						m_price_color = m_color;
 
-						// 교역품전용の정보
+						// 교역품 전용 정보
 						if (m_group_index == 0) {
 							// 교역품
-							// 명産품かどうかを조사
+							// 명산품인지 조사
 							m_is_bonus_item = item_type_db.IsBonusItem(Name);
 
 							// 가격
@@ -1635,7 +1635,7 @@ namespace gvtrademap_cs {
 								update_rank(item_type_db);
 							}
 						} else {
-							// その他
+							// 그 밖의 것
 							m_is_bonus_item = false;
 
 							// 가격
@@ -1645,7 +1645,7 @@ namespace gvtrademap_cs {
 					}
 
 					/*-------------------------------------------------------------------------
-					 조달などのランクを업데이트する
+					 조달 등의 랭크를 갱신한다
 					---------------------------------------------------------------------------*/
 					private void update_rank(GvoItemTypeDatabase type) {
 						int index = Useful.ToInt32(m_tag2, 0);
@@ -1660,7 +1660,7 @@ namespace gvtrademap_cs {
 								m_price_color = Color.Olive;
 								break;
 							case -3:
-								// -3は予約されているが, 데이터には含まれない
+								// -3 은 예약되어 있지만, 데이터에는 포함되지 않는다
 								m_price = "탐색";
 								m_price_color = Color.DarkViolet;
 								break;
@@ -1673,8 +1673,8 @@ namespace gvtrademap_cs {
 					}
 
 					/*-------------------------------------------------------------------------
-					 ランクを문자열に변환する
-					 R1～R19以외は??に변환される
+					 랭크를 문자열로 변환한다
+					 R1~R19 이외는 ?? 로 변환된다
 					---------------------------------------------------------------------------*/
 					private string rank_to_str(int rank) {
 						if (rank < 1) return "??";
@@ -1683,7 +1683,7 @@ namespace gvtrademap_cs {
 					}
 
 					/*-------------------------------------------------------------------------
-					 아이템DBとリンクさせる
+					 아이템 DB 와 링크시킨다
 					---------------------------------------------------------------------------*/
 					internal void LinkItemDatabase(ItemDatabaseCustom db, string info_name) {
 						if (String.IsNullOrEmpty(Name)) return;
@@ -1698,7 +1698,7 @@ namespace gvtrademap_cs {
 					}
 
 					/*-------------------------------------------------------------------------
-					 아이템명변경に대응する
+					 아이템명 변경에 대응한다
 					---------------------------------------------------------------------------*/
 					static private void update_rename(Data d) {
 						switch (d.m_name) {
@@ -1738,7 +1738,7 @@ namespace gvtrademap_cs {
 					}
 
 					/*-------------------------------------------------------------------------
-					 디테일とミックスしたツールチップ용の문자열を得る
+					 상세와 섞은 툴팁용 문자열을 얻는다
 					---------------------------------------------------------------------------*/
 					private string getMixedToolTipString() {
 						if (ItemDb == null) return "";
@@ -1777,18 +1777,18 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 해역정보
-		 主に풍향
+		 주로 풍향
 		---------------------------------------------------------------------------*/
 		public class SeaInfo {
 			private string m_name;
-			private Point m_wind_pos;        // 풍향を그리기する위치の중心
+			private Point m_wind_pos;        // 풍향을 그릴 위치의 중심
 			private float m_summer_angle;    // 여름의 풍향
 			private float m_winter_angle;    // 겨울의 풍향
-			private int m_speedup_rate;  // 최대속도상昇
+			private int m_speedup_rate;  // 최대 속도 상승
 			private int m_summer_angle_deg; // 여름의 풍향
 			private int m_winter_angle_deg; // 여름의 풍향
-			private string m_summer_angle_string;   // 16段階の풍향
-			private string m_winter_angle_string;   // 16段階の풍향
+			private string m_summer_angle_string;   // 16 단계의 풍향
+			private string m_winter_angle_string;   // 16 단계의 풍향
 
 			/*-------------------------------------------------------------------------
 
@@ -1832,12 +1832,12 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 각도から문자열に변환する
-			 与える각도が逆のため, 
-			   0도=남からの풍
-			   90도=서からの풍
-			   180도=북からの풍
-			   270도=동からの풍
+			 각도를 문자열로 변환한다
+			 주어지는 각도가 반대이므로,
+			   0 도 = 남쪽에서 부는 바람
+			   90 도 = 서쪽에서 부는 바람
+			   180 도 = 북쪽에서 부는 바람
+			   270 도 = 동쪽에서 부는 바람
 			---------------------------------------------------------------------------*/
 			private string angle_to_string(int angle) {
 				float tmp = (float)angle + ((360f / 16f) / 2);
@@ -1901,10 +1901,10 @@ namespace gvtrademap_cs {
 			private string m_name;        // 이름
 			private GvoWorldInfo.Country[] m_domains;        // 동맹현황
 			private int m_index;            // 도시번호
-			private GvoWorldInfo.CityType m_city_type;  // 도시の종류
-			private GvoWorldInfo.AllianceType m_alliance_type;  // 동맹の종류
+			private GvoWorldInfo.CityType m_city_type;  // 도시의 종류
+			private GvoWorldInfo.AllianceType m_alliance_type;  // 동맹의 종류
 			private GvoWorldInfo.CulturalSphere m_cultural_sphere;  // 문화권
-			private bool m_has_name_image;  // 이름の絵정보を持つときtrue
+			private bool m_has_name_image;  // 이름 그림 정보를 가질 때 true
 			private string m_lang1;
 			private string m_lang2;
 			private int m_sakaba_flag;
@@ -1945,22 +1945,22 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 동맹현황を설정
+			 동맹 상태를 설정
 			---------------------------------------------------------------------------*/
 			public void SetDomain(GvoWorldInfo.Server server_index, GvoWorldInfo.Country country_index) {
-				// 동맹국のときのみ설정する
+				// 동맹국일 때만 설정한다
 				if (this.AllianceType != GvoWorldInfo.AllianceType.Alliance) return;
 
 				m_domains[(int)server_index] = country_index;
 			}
 
 			/*-------------------------------------------------------------------------
-			 동맹현황を설정
-			 全서버に同じ値を설정する
-			 동맹국を지정できない도시용
+			 동맹 상태를 설정
+			 전체 서버에 같은 값을 설정한다
+			 동맹국을 지정할 수 없는 도시용
 			---------------------------------------------------------------------------*/
 			public void SetDomain(GvoWorldInfo.Country country_index) {
-				// 동맹국のときは一括설정무효
+				// 동맹국일 때는 일괄 설정 무효
 				if (this.AllianceType == GvoWorldInfo.AllianceType.Alliance) return;
 
 				for (int i = 0; i < this.m_domains.Length; i++) {
@@ -1973,7 +1973,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 동맹현황を得る
+			 동맹 상태를 얻는다
 			---------------------------------------------------------------------------*/
 			public GvoWorldInfo.Country GetDomain(GvoWorldInfo.Server server_index) {
 				return m_domains[(int)server_index];
@@ -2051,16 +2051,16 @@ namespace gvtrademap_cs {
 	}
 
 	/*-------------------------------------------------------------------------
-	 아이템の종류
-	 명産, 채집, 탐색ランク
-	 카테고리は아이템DBに이동した
+	 아이템의 종류
+	 명산, 채집, 탐색 랭크
+	 카테고리는 아이템 DB 로 이동했다
 	---------------------------------------------------------------------------*/
 	public class GvoItemTypeDatabase {
-		private MultiDictionary<string, ItemRank> m_bonus_items;            // 명産품扱いの아이템
-		private MultiDictionary<string, ItemRank> m_nanban_trade_items; // 남만품扱いの아이템
-		private MultiDictionary<string, ItemRank> m_fishting_ranks;  // 낚시ランク
-		private MultiDictionary<string, ItemRank> m_collect_ranks;  // 채집ランク
-		private MultiDictionary<string, ItemRank> m_supply_ranks;        // 조달ランク
+		private MultiDictionary<string, ItemRank> m_bonus_items;            // 명산품 취급 아이템
+		private MultiDictionary<string, ItemRank> m_nanban_trade_items; // 남만품 취급 아이템
+		private MultiDictionary<string, ItemRank> m_fishting_ranks;  // 낚시 랭크
+		private MultiDictionary<string, ItemRank> m_collect_ranks;  // 채집 랭크
+		private MultiDictionary<string, ItemRank> m_supply_ranks;        // 조달 랭크
 
 		/*-------------------------------------------------------------------------
 		 
@@ -2104,7 +2104,7 @@ namespace gvtrademap_cs {
 					}
 				}
 			} catch (Exception ex) {
-				Console.WriteLine("採取ランク등の읽기で問題発生");
+				Console.WriteLine("채취 랭크 등의 읽기에서 문제 발생");
 				Console.Write(ex.Message);
 			}
 		}
@@ -2140,7 +2140,7 @@ namespace gvtrademap_cs {
 
 
 		/*-------------------------------------------------------------------------
-		 명産품かどうか조사
+		 명산품인지 조사
 		---------------------------------------------------------------------------*/
 		public bool IsBonusItem(string name) {
 			if (m_bonus_items.GetValue(name) != null)
@@ -2150,7 +2150,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 남만품かどうか조사
+		 남만품인지 조사
 		---------------------------------------------------------------------------*/
 		public bool IsNanbanTradeItem(string name) {
 			return m_nanban_trade_items.GetValue(name) != null;
@@ -2165,32 +2165,32 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 낚시ランクを得る
+		 낚시 랭크를 얻는다
 		---------------------------------------------------------------------------*/
 		public int GetFishingRank(string name) {
 			return get_rank(m_fishting_ranks, name);
 		}
 
 		/*-------------------------------------------------------------------------
-		 채집ランクを得る
+		 채집 랭크를 얻는다
 		---------------------------------------------------------------------------*/
 		public int GetSaisyuRank(string name) {
 			return get_rank(m_collect_ranks, name);
 		}
 
 		/*-------------------------------------------------------------------------
-		 조달ランクを得る
+		 조달 랭크를 얻는다
 		---------------------------------------------------------------------------*/
 		public int GetChotatuRank(string name) {
 			return get_rank(m_supply_ranks, name);
 		}
 
 		/*-------------------------------------------------------------------------
-		 낚시, 채집, 조달용ランク取得
+		 낚시, 채집, 조달용 랭크 취득
 		---------------------------------------------------------------------------*/
 		public class ItemRank : IDictionaryNode<string> {
 			private string m_name;        // 아이템명
-			private int m_rank;    // 必要ランク
+			private int m_rank;    // 필요 랭크
 
 			/*-------------------------------------------------------------------------
 			 
