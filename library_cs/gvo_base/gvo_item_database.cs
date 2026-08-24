@@ -27,7 +27,7 @@ namespace gvo_base
 	---------------------------------------------------------------------------*/
 	public class ItemDatabase : MultiDictionary<string, ItemDatabase.Data>
 	{
-		private Dictionary<string, string>		m_ajust_name_list;		// 微妙な이름の間違い조정용
+		private Dictionary<string, string>		m_ajust_name_list;		// 미묘한 이름 오류 보정용
 
 		/*-------------------------------------------------------------------------
 		 
@@ -40,7 +40,7 @@ namespace gvo_base
 			Categoly4,
 			Unknown
 		};
-		// 종류の그룹
+		// 종류 그룹
 		public enum TypeGroup{
 			All,		// 전종류
 			CityName,	// 도시명
@@ -70,18 +70,18 @@ namespace gvo_base
 		public ItemDatabase()
 			: base()
 		{
-			// 이름수정목록の작성
+			// 이름 수정 목록 작성
 			create_ajust_name_list();
 		}
 		public ItemDatabase(string fname)
 			: this()
 		{
-			// DBの구축
+			// DB 구축
 			Load(fname);
 		}
 
 		/*-------------------------------------------------------------------------
-		 DBの구축
+		 DB 구축
 		---------------------------------------------------------------------------*/
 		public void Load(string fname)
 		{
@@ -110,7 +110,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 이름조정용목록を작성함
+		 이름 보정용 목록을 작성한다
 		---------------------------------------------------------------------------*/
 		private void create_ajust_name_list()
 		{
@@ -189,12 +189,12 @@ namespace gvo_base
 	
 		/*-------------------------------------------------------------------------
 		 검색
-		 完全一致のみ
-		 아이템とのリンク용
+		 완전 일치만
+		 아이템과의 링크용
 		---------------------------------------------------------------------------*/
 		public Data Find(string name)
 		{
-			// 이름の間違いを수정する
+			// 이름의 오류를 수정한다
 			name	= adjust_name(name);
 
 			return base.GetValue(name);
@@ -202,7 +202,7 @@ namespace gvo_base
 
 		/*-------------------------------------------------------------------------
 		 검색
-		 IDで검색
+		 ID 로 검색
 		---------------------------------------------------------------------------*/
 		public Data Find(int id)
 		{
@@ -214,11 +214,11 @@ namespace gvo_base
 		}
 		
 		/*-------------------------------------------------------------------------
-		 검색아이템명の이름수정
+		 검색 아이템명의 이름 보정
 		---------------------------------------------------------------------------*/
 		private string adjust_name(string name)
 		{
-			// ★ を省く
+			// ★ 를 생략한다
 			int	start_index	= name.IndexOf("★");
 			if(start_index >= 0){
 				name	= name.Substring(0, start_index);
@@ -233,8 +233,8 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 타입명から카테고리を得る
-		 食料품 などの이름から카테고리を得る
+		 타입명으로 카테고리를 얻는다
+		 식료품 등의 이름으로 카테고리를 얻는다
 		---------------------------------------------------------------------------*/
 		static public Categoly GetCategolyFromType(string name)
 		{
@@ -268,7 +268,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 카테고리그리기용の색を得る
+		 카테고리 그리기용 색을 얻는다
 		---------------------------------------------------------------------------*/
 		static public Color GetCategolyColor(Categoly cate)
 		{
@@ -282,8 +282,8 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 타입명から타입の그룹を得る
-		 食料품 などの이름から 교역품 등の그룹を得る
+		 타입명으로 타입 그룹을 얻는다
+		 식료품 등의 이름으로 교역품 등의 그룹을 얻는다
 		---------------------------------------------------------------------------*/
 		static public TypeGroup GetTypeGroupFromType(string name)
 		{
@@ -430,7 +430,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 타입の그룹を문자열に변환する
+		 타입 그룹을 문자열로 변환한다
 		---------------------------------------------------------------------------*/
 		static public string ToString(TypeGroup tg)
 		{
@@ -452,7 +452,7 @@ namespace gvo_base
 		}
 
 		/// <summary>
-		/// テクニック정보のコンバート
+		/// 테크닉 정보 변환
 		/// </summary>
 		private void technic_cnv()
 		{
@@ -560,10 +560,10 @@ namespace gvo_base
 			private string					m_name;
 			private string					m_type;
 			private string					m_document;
-			private Categoly				m_categoly;				// 교역품時の카테고리
-			private TypeGroup				m_type_group;			// 종류の그룹
+			private Categoly				m_categoly;				// 교역품일 때의 카테고리
+			private TypeGroup				m_type_group;			// 종류 그룹
 			private TypeGroup2				m_type_group2;			// 所持품카테고리
-			private bool					m_is_combat_item;		// 陸戦아이템のときtreu
+			private bool					m_is_combat_item;		// 육상전 아이템일 때 true
 
 			/*-------------------------------------------------------------------------
 			 
@@ -598,7 +598,7 @@ namespace gvo_base
 			}
 
 			/*-------------------------------------------------------------------------
-			 ItemDb.txt から구축
+			 ItemDb.txt 로부터 구축
 			---------------------------------------------------------------------------*/
 			public bool CreateFromString(string line)
 			{
@@ -615,13 +615,13 @@ namespace gvo_base
 					}
 
 					if(m_document.IndexOf("다시사용시간：") >= 0){
-						// 다시사용시간：が含まれれば陸戦아이템とする
+						// 재사용시간： 이 포함되면 육상전 아이템으로 본다
 						m_is_combat_item	= true;
 					}
 
-					// 교역품時の카테고리
+					// 교역품일 때의 카테고리
 					m_categoly		= ItemDatabase.GetCategolyFromType(m_type);
-					// 종류の그룹
+					// 종류 그룹
 					m_type_group	= ItemDatabase.GetTypeGroupFromType(m_type);
 					m_type_group2	= ItemDatabase.GetTypeGroupFromType2(m_type);
 				}catch{
@@ -631,7 +631,7 @@ namespace gvo_base
 			}
 
 			/*-------------------------------------------------------------------------
-			 ツールチップ용の문자열を得る
+			 툴팁용 문자열을 얻는다
 			---------------------------------------------------------------------------*/
 			public virtual string GetToolTipString()
 			{
@@ -642,29 +642,29 @@ namespace gvo_base
 			}
 
 			/*-------------------------------------------------------------------------
-			 레시피정보wikiを開く
+			 레시피 정보 wiki 를 연다
 			 레시피검색
 			---------------------------------------------------------------------------*/
 			public void OpenRecipeWiki0()
 			{
-				// EUCでURLエンコード
+				// EUC 로 URL 인코드
 				string	urlenc	= Useful.UrlEncodeEUCJP(this.Name);
 
-				// 검색결과を開く
+				// 검색 결과를 연다
 				Process.Start(gvo_def.URL2 + urlenc);	// 레시피검색
 			}
 
 			/*-------------------------------------------------------------------------
-			 레시피정보wikiを開く
-			 작성가능かどうか검색
+			 레시피 정보 wiki 를 연다
+			 작성 가능한지 검색
 			---------------------------------------------------------------------------*/
 			public void OpenRecipeWiki1()
 			{
-				// EUCでURLエンコード
+				// EUC 로 URL 인코드
 				string	urlenc	= Useful.UrlEncodeEUCJP(this.Name);
 
-				// 검색결과を開く
-				Process.Start(gvo_def.URL3 + urlenc);	// 레시피で작성가능か검색
+				// 검색 결과를 연다
+				Process.Start(gvo_def.URL3 + urlenc);	// 레시피로 작성 가능한지 검색
 			}
 
 			internal void MergeShipPartsDatabase(ShipPartsDataBase.ShipPart i)
