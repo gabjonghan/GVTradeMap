@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
  교역MapC#용
- TCPクライアント
+ TCP 클라이언트
 
 ---------------------------------------------------------------------------*/
 
@@ -55,7 +55,7 @@ namespace gvo_net_base
 		{
 			get{
 				lock(m_sync_object){
-					// コピーを返す
+					// 복사본을 반환한다
 					gvo_analized_data	data	= m_received_data.Clone();
 					m_received_data.Clear();
 					return data;
@@ -66,8 +66,8 @@ namespace gvo_net_base
 		{
 			get{
 				lock(m_sync_object){
-					// コピーを返す
-					// 내용はクリアされる
+					// 복사본을 반환한다
+					// 내용은 초기화된다
 					if(m_sea_info.Count <= 0)	return null;	// 정보없음
 					gvo_map_cs_chat_base.sea_area_type[] list	= m_sea_info.ToArray();
 					m_sea_info.Clear();
@@ -83,14 +83,14 @@ namespace gvo_net_base
 			: base(PROTOCOL_NAME, PROTOCOL_VERSION)
 		{
 			init();
-			// クライアントは데이터受信しない
+			// 클라이언트는 데이터를 수신하지 않는다
 			m_enable_receive_data	= false;
 		}
 		public gvo_tcp_client(Socket sct)
 			: base(PROTOCOL_NAME, PROTOCOL_VERSION, sct)
 		{
 			init();
-			// 서버は데이터受信する
+			// 서버는 데이터를 수신한다
 			m_enable_receive_data	= true;
 		}
 
@@ -99,7 +99,7 @@ namespace gvo_net_base
 		---------------------------------------------------------------------------*/
 		private void init()
 		{
-			// コマンド受信ハンドラ
+			// 커맨드 수신 핸들러
 			base.ReceivedCommand		+= new ReceivedCommandEventHandler(received_command_handler);
 
 			// 受信데이터
@@ -108,8 +108,8 @@ namespace gvo_net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 캡처정보の送信
-		 全て
+		 캡처 정보 송신
+		 전부
 		---------------------------------------------------------------------------*/
 		public void SendCaptureAll(int days, int x, int y, float angle, bool interest, gvo_map_cs_chat_base.accident accident)
 		{
@@ -137,8 +137,8 @@ namespace gvo_net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 캡처정보の送信
-		 일付のみ
+		 캡처 정보 송신
+		 날짜만
 		---------------------------------------------------------------------------*/
 		public void SendCaptureDays(int days, bool interest)
 		{
@@ -147,7 +147,7 @@ namespace gvo_net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 해역변동정보の送信
+		 해역 변동 정보 송신
 		---------------------------------------------------------------------------*/
 		public void SendSeaInfo(gvo_map_cs_chat_base.sea_area_type info)
 		{
@@ -161,7 +161,7 @@ namespace gvo_net_base
 		---------------------------------------------------------------------------*/
 		private void send_data(string command, string[] datas)
 		{
-			if(base.state != client_state.ready)	return;	// 通信가능でない
+			if(base.state != client_state.ready)	return;	// 통신 가능한 상태가 아님
 
 			try{
 				SendData(command, datas);
@@ -178,10 +178,10 @@ namespace gvo_net_base
 		---------------------------------------------------------------------------*/
 		private void received_command_handler(object sender, string[] datas)
 		{
-			// 受信플래그によっては전부の데이터を捨てる
+			// 수신 플래그에 따라서는 모든 데이터를 버린다
 			if(!m_enable_receive_data)	return;
 
-			// 受信時は完全にロックする
+			// 수신 시에는 완전히 잠근다
 			lock(m_sync_object){
 				switch(datas[0]){
 				case COMMAND_CAPALL:
@@ -192,11 +192,11 @@ namespace gvo_net_base
 						m_received_data.pos_y	= Convert.ToInt32(datas[3]);
 						m_received_data.angle	= Convert.ToSingle(datas[4]);
 						if(datas.Length >= 6){
-							// 이자정보を含む
+							// 이자 정보를 포함
 							m_received_data.interest	= (Convert.ToInt32(datas[5]) == 0)? false: true;
 						}
 						if(datas.Length >= 7){
-							// 재해정보を含む
+							// 재해 정보를 포함
 							m_received_data.accident	= gvo_map_cs_chat_base.ToAccident(datas[6]);
 						}
 					}catch{

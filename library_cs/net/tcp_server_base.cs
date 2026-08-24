@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- TCP서버ベース
- 複수のクライアントと接続できる
+ TCP 서버 베이스
+ 여러 클라이언트와 접속할 수 있다
 
 ---------------------------------------------------------------------------*/
 
@@ -19,7 +19,7 @@ using System.Net.Sockets;
 ---------------------------------------------------------------------------*/
 namespace net_base
 {
-	// 서버용イベントハンドラ
+	// 서버용 이벤트 핸들러
 	public delegate void ServerEventHandler(object sender, ServerEventArgs e);
 
 	/*-------------------------------------------------------------------------
@@ -67,7 +67,7 @@ namespace net_base
 		// 同期용
 		protected readonly object		m_sync_socket	= new object();
 
-		// イベント
+		// 이벤트
 		public event ServerEventHandler			AcceptedClient;
 		public event ReceivedDataEventHandler	ReceivedData;
 		public event ServerEventHandler			DisconnectedClient;
@@ -109,14 +109,14 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 Listenを停止する
-		 clientを全て停止させる
+		 Listen 을 정지한다
+		 client 를 모두 정지시킨다
 		---------------------------------------------------------------------------*/
 		public void Close()
 		{
 			lock(m_sync_socket){
 				if(m_state == server_state.listening){
-					// listenを停止する
+					// listen 을 정지한다
 					try{
 						m_server.Close();
 					}catch{
@@ -125,10 +125,10 @@ namespace net_base
 					m_state		= server_state.stoped;
 				}
 
-				// clientを全て停止する
+				// client 를 모두 정지한다
 				if(m_client_list != null){
-					// Dispose()내で목록から삭제されるため
-					// foreachが使えない
+					// Dispose() 안에서 목록으로부터 삭제되기 때문에
+					// foreach 를 쓸 수 없다
 					while(m_client_list.Count > 0){
 						m_client_list[0].Dispose();
 					}
@@ -138,7 +138,7 @@ namespace net_base
 		}
 	
 		/*-------------------------------------------------------------------------
-		 クライアントに送信
+		 클라이언트에 송신
 		---------------------------------------------------------------------------*/
 		public void Send(tcp_client_base client, string str)
 		{
@@ -149,7 +149,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 全てのクライアントに送信
+		 모든 클라이언트에 송신
 		---------------------------------------------------------------------------*/
 		public void SendToAllClients(string str)
 		{
@@ -163,15 +163,15 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 Listenを開始する
+		 Listen 을 시작한다
 		---------------------------------------------------------------------------*/
 		public void Listen(int portNum)
 		{
-			// IPv4の최초のアドレスを得る
+			// IPv4 의 첫 번째 주소를 얻는다
 			IPAddress[]	address_list	= net_useful.GetLocalIpAddress_Ipv4();
 			if(   (address_list == null)
 				||(address_list.Length <= 0) ){
-				throw new ApplicationException("PCのIPアドレス取得に실패");
+				throw new ApplicationException("PC 의 IP 주소 취득에 실패");
 			}
 			Listen(address_list[0], portNum);
 		}
@@ -182,10 +182,10 @@ namespace net_base
 		public void Listen(IPAddress host, int portNum, int backlog)
 		{
 			if(m_server == null){
-				throw new ApplicationException("서버が閉じています");
+				throw new ApplicationException("서버가 닫혀 있습니다");
 			}
 			if(m_state != server_state.init){
-				throw new ApplicationException("初期化상태ではありません");
+				throw new ApplicationException("초기화 상태가 아닙니다");
 			}
 
 			m_socket_ep		= new IPEndPoint(host, portNum);
@@ -194,13 +194,13 @@ namespace net_base
 			m_server.Listen(backlog);
 			m_state			= server_state.listening;
 
-			//接続要求施行を開始する
+			//접속 요청 접수를 시작한다
 			m_server.BeginAccept(new AsyncCallback(accept_callback), null);
 		}
 
 		/*-------------------------------------------------------------------------
-		 tcp_client_baseの작성
-		 継承時はこのメソッドをオーバーライドすること
+		 tcp_client_base 의 작성
+		 상속할 때는 이 메서드를 오버라이드할 것
 		---------------------------------------------------------------------------*/
 		protected virtual tcp_client_base CreateClient(Socket sct)
 		{
@@ -208,11 +208,11 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 BeginAcceptのコールバック
+		 BeginAccept 의 콜백
 		---------------------------------------------------------------------------*/
 		private void accept_callback(IAsyncResult ar)
 		{
-			//接続要求を受け入れる
+			//접속 요청을 받아들인다
 			Socket	soc	= null;
 			try{
 				lock(m_sync_socket){
@@ -223,22 +223,22 @@ namespace net_base
 				return;
 			}
 
-			// tcp_client_baseの작성
+			// tcp_client_base 의 작성
 			tcp_client_base	client	= this.CreateClient(soc);
 
-			// 최대수を超えていないか
+			// 최대 개수를 넘지 않았는지
 			if(m_client_list.Count >= m_max_client){
 				client.Close();
 			}else{
-				// コレクションに추가
+				// 컬렉션에 추가
 				lock(m_sync_socket){
 					m_client_list.Add(client);
 				}
 
-				// イベントハンドラの추가
+				// 이벤트 핸들러 추가
 				client.Disconnected		+= new EventHandler(client_disconnected);
 				client.ReceivedData		+= new ReceivedDataEventHandler(client_received_data);
-				// イベントを発生
+				// 이벤트 발생
 				OnAcceptedClient(new ServerEventArgs(client));
 
 				// 데이터受信開始
@@ -247,34 +247,34 @@ namespace net_base
 				}
 			}
 
-			// 接続要求施行を다시開する
+			// 접속 요청 접수를 재개한다
 			m_server.BeginAccept(new AsyncCallback(accept_callback), null);
 		}
 
 		/*-------------------------------------------------------------------------
-		 クライアントが切断した時
+		 클라이언트가 접속을 끊었을 때
 		---------------------------------------------------------------------------*/
 		private void client_disconnected(object sender, EventArgs e)
 		{
-			// 목록から삭제する
+			// 목록에서 삭제한다
 			lock(m_sync_socket){
 				m_client_list.Remove((tcp_client_base)sender);
 			}
-			// イベントを発生
+			// 이벤트 발생
 			OnDisconnectedClient(new ServerEventArgs((tcp_client_base)sender));
 		}
 
 		/*-------------------------------------------------------------------------
-		 데이터を受信した
+		 데이터를 수신했다
 		---------------------------------------------------------------------------*/
 		private void client_received_data(object sender, ReceivedDataEventArgs e)
 		{
-			//イベントを発生
+			//이벤트 발생
 			OnReceivedData(new ReceivedDataEventArgs((tcp_client_base)sender, e.received_string));
 		}
 
 		/*-------------------------------------------------------------------------
-		 クライアントと接続した
+		 클라이언트와 접속했다
 		---------------------------------------------------------------------------*/
 		protected virtual void OnAcceptedClient(ServerEventArgs e)
 		{
@@ -284,7 +284,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 데이터を受信した
+		 데이터를 수신했다
 		---------------------------------------------------------------------------*/
 		protected virtual void OnReceivedData(ReceivedDataEventArgs e)
 		{
@@ -294,7 +294,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 クライアントが切断した
+		 클라이언트가 접속을 끊었다
 		---------------------------------------------------------------------------*/
 		protected virtual void OnDisconnectedClient(ServerEventArgs e)
 		{

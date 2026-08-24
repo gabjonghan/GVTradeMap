@@ -2,9 +2,9 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// アセンブリに関する一般정보は以下の属性セットをとおして制御されます. 
-// アセンブリに関連付けられている정보を변경するには, 
-// これらの属性値を변경してください. 
+// 어셈블리에 대한 일반 정보는 아래 특성 집합을 통해 제어됩니다.
+// 어셈블리에 연결된 정보를 변경하려면
+// 아래 특성 값을 변경하십시오.
 [assembly: AssemblyTitle("gvo_net_base")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
@@ -14,23 +14,23 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// ComVisible を false に설정すると, その형はこのアセンブリ내で COM コンポーネントから 
-// 참조不가능になります. COM からこのアセンブリ내の형にアクセスする場合は, 
-// その형の ComVisible 属性を true に설정してください. 
+// ComVisible 을 false 로 설정하면 해당 형식은 이 어셈블리 안에서 COM 구성 요소로부터
+// 참조할 수 없게 됩니다. COM 에서 이 어셈블리 안의 형식에 접근하려면
+// 해당 형식의 ComVisible 특성을 true 로 설정하십시오.
 [assembly: ComVisible(false)]
 
-// 次の GUID は, このプロジェクトが COM に공開される場合の, typelib の ID です
+// 아래 GUID 는 이 프로젝트가 COM 에 공개될 때 쓰이는 typelib 의 ID 입니다
 [assembly: Guid("16fe4108-ee69-48e2-88be-16371da69c0f")]
 
-// アセンブリの버전정보は, 以下の 4 つの値で構成されています:
+// 어셈블리의 버전 정보는 아래 네 가지 값으로 구성됩니다:
 //
 //	  Major Version
 //	  Minor Version 
 //	  Build Number
 //	  Revision
 //
-// 전부の値を지정するか, 下のように '*' を使ってビルドおよびリビジョン번호を 
-// 既定値にすることができます:
+// 모든 값을 지정하거나, 아래처럼 '*' 를 사용해 빌드 및 리비전 번호를
+// 기본값으로 둘 수 있습니다:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

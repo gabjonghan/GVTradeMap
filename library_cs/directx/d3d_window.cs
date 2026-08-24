@@ -24,16 +24,16 @@ namespace directx {
 	public class d3d_windows {
 		// 윈도우내判定
 		public enum hit_check {
-			title,			  // フレームの상部
-			title_button,	   // タイトル내のボタン
-			client,			 // クライアント領域
-			inside,			 // 상記以외の윈도우내
+			title,			  // 프레임의 상부
+			title_button,	   // 타이틀 내의 버튼
+			client,			 // 클라이언트 영역
+			inside,			 // 위 항목 이외의 윈도우 안
 			outside			 // 윈도우외
 		};
 
 		/*-------------------------------------------------------------------------
 		 윈도우
-		 継承してクライアント領域を그리기すること
+		 상속해서 클라이언트 영역을 그릴 것
 		---------------------------------------------------------------------------*/
 		public class window {
 			private const int SMALL_HEADER_WIDTH = 48;
@@ -47,23 +47,23 @@ namespace directx {
 			private d3d_device m_device;
 
 			private mode m_window_mode;
-			private bool m_is_draw_header;		  // ヘッダを그리기するときtrue
-													// ヘッダを그리지않음ときは最소化できない
+			private bool m_is_draw_header;		  // 헤더를 그릴 때 true
+													// 헤더를 그리지 않을 때는 최소화할 수 없다
 
 			private Vector2 m_pos;					  // 윈도우위치
 			private Vector2 m_size;					 // 윈도우사이즈
-			private Vector2 m_client_pos;			   // クライアント領域시작위치
-			private Vector2 m_client_size;			  // クライアント領域사이즈
+			private Vector2 m_client_pos;			   // 클라이언트 영역 시작 위치
+			private Vector2 m_client_size;			  // 클라이언트 영역 크기
 
 			private Vector2 m_screen_size;			  // 화면사이즈
-														// クライアント領域그리기デリゲートが참조する
+														// 클라이언트 영역 그리기 델리게이트가 참조한다
 			private float m_z;
 
 			private int m_back_color;			   // 背景색
-			private int m_title_color;			  // タイトル색
-			private int m_frame_color;			  // フレーム색
+			private int m_title_color;			  // 타이틀 색
+			private int m_frame_color;			  // 프레임 색
 
-			private string m_title;				 // タイトル
+			private string m_title;				 // 타이틀
 
 			/*-------------------------------------------------------------------------
 			 
@@ -141,7 +141,7 @@ namespace directx {
 					m_client_pos = new Vector2(4, 10 + 4);
 					m_client_size = new Vector2(m_size.X - 4 * 2, m_size.Y - (10 + 4 * 2));
 				} else {
-					// ヘッダ없음
+					// 헤더 없음
 					m_client_pos = new Vector2(4, 4);
 					m_client_size = new Vector2(m_size.X - 4 * 2, m_size.Y - (4 * 2));
 				}
@@ -161,7 +161,7 @@ namespace directx {
 				m_pos = pos;
 				m_size = size;
 				m_z = z;
-				title = "タイトル";
+				title = "타이틀";
 
 				m_back_color = Color.FromArgb(180, 170, 170, 170).ToArgb();
 				title_color = Color.SkyBlue.ToArgb();
@@ -176,7 +176,7 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 マウス押し始め
+			 마우스를 누르기 시작
 			---------------------------------------------------------------------------*/
 			public bool OnMouseDown(Point pos, MouseButtons button) {
 				switch (HitTest(pos)) {
@@ -185,7 +185,7 @@ namespace directx {
 					case hit_check.title_button:
 						return true;
 					case hit_check.client:
-						// クライアント領域
+						// 클라이언트 영역
 						OnMouseDownClient(pos, button);
 						return true;
 				}
@@ -193,9 +193,9 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 マウスクリック
-			 押して離したとき
-			 ボタン계は기본的に離したときに動作する
+			 마우스 클릭
+			 눌렀다 뗐을 때
+			 버튼 계열은 기본적으로 뗐을 때 동작한다
 			---------------------------------------------------------------------------*/
 			public bool OnMouseClik(Point pos, MouseButtons button) {
 				switch (HitTest(pos)) {
@@ -204,12 +204,12 @@ namespace directx {
 						return true;
 					case hit_check.title_button:
 						if ((button & MouseButtons.Left) != 0) {
-							// 左クリック時のみ
+							// 좌클릭일 때만
 							ToggleWindowMode();
 						}
 						return true;
 					case hit_check.client:
-						// クライアント領域
+						// 클라이언트 영역
 						OnMouseClikClient(pos, button);
 						return true;
 				}
@@ -217,7 +217,7 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 マウスダブルクリック
+			 마우스 더블 클릭
 			---------------------------------------------------------------------------*/
 			public bool OnMouseDClik(Point pos, MouseButtons button) {
 				switch (HitTest(pos)) {
@@ -226,12 +226,12 @@ namespace directx {
 					case hit_check.title:
 					case hit_check.title_button:
 						if ((button & MouseButtons.Left) != 0) {
-							// 左ダブルクリック時のみ
+							// 좌더블클릭일 때만
 							ToggleWindowMode();
 						}
 						return true;
 					case hit_check.client:
-						// クライアント領域
+						// 클라이언트 영역
 						OnMouseDClikClient(pos, button);
 						return true;
 				}
@@ -239,7 +239,7 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 マウスホイール
+			 마우스 휠
 			---------------------------------------------------------------------------*/
 			public bool OnMouseWheel(Point pos, int delta) {
 				switch (HitTest(pos)) {
@@ -248,7 +248,7 @@ namespace directx {
 					case hit_check.title_button:
 						return true;
 					case hit_check.client:
-						// クライアント領域
+						// 클라이언트 영역
 						OnMouseWheelClient(pos, delta);
 						return true;
 				}
@@ -256,18 +256,18 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 ツールチップ용문자열
+			 툴팁용 문자열
 			---------------------------------------------------------------------------*/
 			public string OnToolTipString(Point pos) {
 				switch (HitTest(pos)) {
 					case hit_check.title:
-						if (window_mode == mode.normal) return title + "\nダブルクリックで最소化";
-						else return title + "\nダブルクリックで元の사이즈に戻す";
+						if (window_mode == mode.normal) return title + "\n더블 클릭하면 최소화";
+						else return title + "\n더블 클릭하면 원래 크기로 되돌림";
 					case hit_check.title_button:
-						if (window_mode == mode.normal) return "クリックで最소化";
-						else return "クリックで元の사이즈に戻す";
+						if (window_mode == mode.normal) return "클릭하면 최소화";
+						else return "클릭하면 원래 크기로 되돌림";
 					case hit_check.client:
-						// クライアント領域
+						// 클라이언트 영역
 						return OnToolTipStringClient(pos);
 				}
 				return null;
@@ -294,7 +294,7 @@ namespace directx {
 					m_device.DrawFillRect(new Vector3(m_pos.X, m_pos.Y, m_z), new Vector2(SMALL_HEADER_WIDTH, 10), color);
 					m_device.DrawLineRect(new Vector3(m_pos.X, m_pos.Y, m_z), new Vector2(SMALL_HEADER_WIDTH, 10), m_frame_color);
 
-					// 통상化ボタン
+					// 통상화 버튼
 					m_device.DrawLineRect(new Vector3(m_pos.X + SMALL_HEADER_WIDTH - 10, m_pos.Y, m_z), new Vector2(10, 10), Color.Black.ToArgb());
 					m_device.DrawLineRect(new Vector3(m_pos.X + SMALL_HEADER_WIDTH - 7, m_pos.Y + 3, m_z), new Vector2(4, 4), Color.FromArgb(50, 50, 50).ToArgb());
 				} else {
@@ -306,28 +306,28 @@ namespace directx {
 					}
 					m_device.DrawLineRect(new Vector3(m_pos.X, m_pos.Y, m_z), m_size, m_frame_color);
 
-					// 最소化ボタン
+					// 최소화 버튼
 					m_device.DrawFillRect(new Vector3(m_pos.X + m_size.X - 10, m_pos.Y, m_z), new Vector2(10, 10), Color.LightGray.ToArgb());
 					m_device.DrawLineRect(new Vector3(m_pos.X + m_size.X - 10, m_pos.Y, m_z), new Vector2(10, 10), Color.Black.ToArgb());
 					m_device.DrawLine(new Vector3(m_pos.X + m_size.X - 7, m_pos.Y + 7, m_z), new Vector2(m_pos.X + m_size.X - 2, m_pos.Y + 7), Color.FromArgb(50, 50, 50).ToArgb());
 
 					if (m_client_size.Y >= 0) {
-						// 그리기범위をクライアント領域に限定する
+						// 그리기 범위를 클라이언트 영역으로 한정한다
 						//						Viewport	view	= SetViewport(	(int)client_pos.X,
 						//															(int)client_pos.Y,
 						//															(int)client_size.X +1,
 						//															(int)client_size.Y +1);
 						// 그리기
 						OnDrawClient();
-						// 元に戻す
+						// 원래대로 되돌린다
 						//						m_device.device.Viewport	= view;
 					}
 				}
 			}
 
 			/*-------------------------------------------------------------------------
-			 ビュー포트を설정する
-			 변경前のビュー포트を返す
+			 뷰포트를 설정한다
+			 변경 전의 뷰포트를 반환한다
 			---------------------------------------------------------------------------*/
 			/*			public Viewport SetViewport(int x, int y, int width, int height)
 						{
@@ -348,11 +348,11 @@ namespace directx {
 						}
 			*/
 			/*-------------------------------------------------------------------------
-			 ボタン계の현재용背景그리기
-			 マウスを乗せたときに枠を出したいとき용
+			 버튼 계열의 현재 상태용 배경 그리기
+			 마우스를 올렸을 때 테두리를 표시하고 싶을 때용
 			---------------------------------------------------------------------------*/
 			public void DrawCurrentButtonBack(Vector3 pos, Vector2 size) {
-				// 枠付きで그리기
+				// 테두리를 붙여서 그리기
 				int color = title_color;
 				color &= 0x00ffffff;
 				color |= (128 << 24);
@@ -361,12 +361,12 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 ボタン계の현재용背景그리기
-			 マウスを乗せたときに出したいとき용
+			 버튼 계열의 현재 상태용 배경 그리기
+			 마우스를 올렸을 때 표시하고 싶을 때용
 			 枠없음
 			---------------------------------------------------------------------------*/
 			public void DrawCurrentButtonBack_WithoutFrame(Vector3 pos, Vector2 size) {
-				// 枠付きで그리기
+				// 테두리를 붙여서 그리기
 				int color = title_color;
 				color &= 0x00ffffff;
 				color |= (128 << 24);
@@ -374,7 +374,7 @@ namespace directx {
 			}
 
 			/*-------------------------------------------------------------------------
-			 ビュー포트を得る
+			 뷰포트를 얻는다
 			---------------------------------------------------------------------------*/
 			/*			public Viewport GetViewport()
 						{
@@ -382,7 +382,7 @@ namespace directx {
 						}
 			*/
 			/*-------------------------------------------------------------------------
-			 ヒットテスト
+			 히트 테스트
 			---------------------------------------------------------------------------*/
 			public hit_check HitTest(Point pos) {
 				return HitTest(new Vector2(pos.X, pos.Y));
@@ -403,7 +403,7 @@ namespace directx {
 					if (pos.Y < m_pos.Y) return hit_check.outside;
 					if (pos.Y >= m_pos.Y + m_size.Y) return hit_check.outside;
 
-					// 少なくとも윈도우내
+					// 적어도 윈도우 안
 					if (is_draw_header) {
 						if (pos.Y < m_pos.Y + 10) {
 							if (pos.X < m_pos.X + m_size.X - 10) return hit_check.title;
@@ -416,7 +416,7 @@ namespace directx {
 					if (pos.Y < client_pos.Y) return hit_check.inside;
 					if (pos.Y >= client_pos.Y + client_size.Y) return hit_check.inside;
 
-					// 残りはクライアント領域
+					// 나머지는 클라이언트 영역
 					return hit_check.client;
 				}
 			}
@@ -431,7 +431,7 @@ namespace directx {
 
 			/*-------------------------------------------------------------------------
 			 윈도우검색
-			 윈도우タイトルで검색
+			 윈도우 타이틀로 검색
 			---------------------------------------------------------------------------*/
 			public d3d_windows.window FindWindow(string title) {
 				if (m_ctrl == null) return null;
@@ -440,42 +440,42 @@ namespace directx {
 
 			/*-------------------------------------------------------------------------
 
-			 継承先でのオーバーライド용
+			 상속받은 쪽에서 오버라이드하기 위한 것
 			 
 			---------------------------------------------------------------------------*/
 
 			/*-------------------------------------------------------------------------
-			 クライアント領域の更新
+			 클라이언트 영역의 갱신
 			---------------------------------------------------------------------------*/
 			virtual protected void OnUpdateClient() {
 			}
 			/*-------------------------------------------------------------------------
-			 クライアント領域の그리기
+			 클라이언트 영역의 그리기
 			---------------------------------------------------------------------------*/
 			virtual protected void OnDrawClient() {
 			}
 			/*-------------------------------------------------------------------------
-			 マウス押し始め
+			 마우스를 누르기 시작
 			---------------------------------------------------------------------------*/
 			virtual protected void OnMouseDownClient(Point pos, MouseButtons button) {
 			}
 			/*-------------------------------------------------------------------------
-			 マウスクリック
+			 마우스 클릭
 			---------------------------------------------------------------------------*/
 			virtual protected void OnMouseClikClient(Point pos, MouseButtons button) {
 			}
 			/*-------------------------------------------------------------------------
-			 マウスダブルリック
+			 마우스 더블 클릭
 			---------------------------------------------------------------------------*/
 			virtual protected void OnMouseDClikClient(Point pos, MouseButtons button) {
 			}
 			/*-------------------------------------------------------------------------
-			 マウスホイール
+			 마우스 휠
 			---------------------------------------------------------------------------*/
 			virtual protected void OnMouseWheelClient(Point pos, int delta) {
 			}
 			/*-------------------------------------------------------------------------
-			 クライアント領域のツールチップの取得
+			 클라이언트 영역의 툴팁 취득
 			---------------------------------------------------------------------------*/
 			virtual protected string OnToolTipStringClient(Point pos) {
 				return null;
@@ -539,7 +539,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ヒットチェックのみ
+		 히트 체크만
 		---------------------------------------------------------------------------*/
 		public bool HitTest(Vector2 pos) {
 			foreach (window w in m_windows) {
@@ -559,8 +559,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ダブルクリック時
-		 범위외のときfalseを返す
+		 더블 클릭 시
+		 범위 밖일 때 false 를 반환한다
 		---------------------------------------------------------------------------*/
 		public bool OnMouseDoubleClick(Point pos, MouseButtons button) {
 			foreach (window w in m_windows) {
@@ -570,8 +570,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 マウス押し始め
-		 범위외のときfalseを返す
+		 마우스를 누르기 시작
+		 범위 밖일 때 false 를 반환한다
 		---------------------------------------------------------------------------*/
 		public bool OnMouseDown(Point pos, MouseButtons button) {
 			foreach (window w in m_windows) {
@@ -581,8 +581,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 クリック時
-		 범위외のときfalseを返す
+		 클릭 시
+		 범위 밖일 때 false 를 반환한다
 		---------------------------------------------------------------------------*/
 		public bool OnMouseClick(Point pos, MouseButtons button) {
 			foreach (window w in m_windows) {
@@ -592,8 +592,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 マウスホイール時
-		 범위외のときfalseを返す
+		 마우스 휠 조작 시
+		 범위 밖일 때 false 를 반환한다
 		---------------------------------------------------------------------------*/
 		public bool OnMouseWheel(Point pos, int delta) {
 			foreach (window w in m_windows) {
@@ -603,8 +603,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ용の문자열を返す
-		 ツールチップがないときnullを返す
+		 툴팁용 문자열을 반환한다
+		 툴팁이 없을 때는 null 을 반환한다
 		---------------------------------------------------------------------------*/
 		public string GetToolTipString(Point pos) {
 			foreach (window w in m_windows) {
@@ -615,8 +615,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 윈도우を검색する
-		 タイトルで검색
+		 윈도우를 검색한다
+		 타이틀로 검색
 		---------------------------------------------------------------------------*/
 		public d3d_windows.window FindWindow(string title) {
 			foreach (window w in m_windows) {
