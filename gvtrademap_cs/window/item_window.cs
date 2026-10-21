@@ -911,18 +911,11 @@ namespace gvtrademap_cs {
 			if (!info.IsUrl) return;
 
 			if (info.UrlIndex != -1) {
-				string url;
-				if (info.InfoType == GvoWorldInfo.InfoType.City) {
-					// 대상전
-					url = def.URL0 + info.UrlIndex.ToString();
-				} else {
-					// DKKmap
-					url = def.URL1 + info.UrlIndex.ToString() + ".html";
-				}
-				Process.Start("http://" + url);
+				// 인벤 지리 DB 의 도시·상륙지 상세
+				Process.Start(def.INVEN_AREACITY_URL + info.UrlIndex.ToString());
 			} else {
-				// 크리스탈 상회
-				Process.Start("http://" + def.URL5 + Useful.UrlEncodeEUCJP(info.Url));
+				// 번호가 없는 옛 데이터(url_string)는 지리 DB 목록을 연다
+				Process.Start(def.INVEN_AREACITY_LIST_URL);
 			}
 		}
 

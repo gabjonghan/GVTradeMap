@@ -123,11 +123,12 @@ namespace gvtrademap_cs {
 		public const string SPRITE_SHADER_RESOURCENAME = "gvtrademap_cs.fx.sprite.fxo";
 
 		// 상세 정보 페이지
-		public const string URL0 = "dol.egret.jp/gtf/?page=city&id=";
-		public const string URL1 = "www2.atwiki.jp/harrington/pages/";
+		// worldinfos.xml 의 url_index 는 인벤 지리 DB 의 code
+		// (원본의 dol.egret.jp·atwiki·livedoor wiki 링크는 일본어판용이라 교체)
+		public const string INVEN_AREACITY_URL = @"https://dho.inven.co.kr/dataninfo2/areacity/detail.php?code=";
+		public const string INVEN_AREACITY_LIST_URL = @"https://dho.inven.co.kr/dataninfo2/areacity/";
 		// 오류 보고처
 		public const string URL4 = URL_HP + @"/issues";
-		public const string URL5 = @"wiki.livedoor.jp/kristall/d/";
 		public const string URL6 = @"https://www.microsoft.com/ko-kr/download/details.aspx?id=35";
 		public const string JOY_URL = @"https://www.ssjoy.org/dho/";
 		public const string INVEN_URL = @"https://dho.inven.co.kr/";

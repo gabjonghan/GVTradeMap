@@ -1124,17 +1124,9 @@ namespace gvtrademap_cs {
 				if (!IsUrl) return null;        // URL 이 등록되어 있지 않다
 
 				if (UrlIndex != -1) {
-					if (InfoType == GvoWorldInfo.InfoType.City) {
-						// 대투자전
-						return "대투자전\n클릭으로 브라우저 열기";
-					} else {
-						// DKKmap
-						return "D.K.K맵\n클릭으로 브라우저 열기";
-					}
+					return "인벤 지리 DB\n클릭으로 브라우저 열기";
 				} else {
-					// 크리스탈 상회
-					//					return "직접 링크\n좌클릭으로 브라우저를 연다";
-					return "대항해시대Online 상륙지 지도\n클릭으로 브라우저 열기";
+					return "인벤 지리 DB 목록\n클릭으로 브라우저 열기";
 				}
 			}
 

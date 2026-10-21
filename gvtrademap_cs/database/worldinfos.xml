@@ -3,331 +3,331 @@
 
 	<!-- 도시정보 -->
 
-	<info name="암스테르담" url_index="32" info_type="City" angle="0">
+	<info name="암스테르담" url_index="5" info_type="City" angle="0">
 		<position x="96" y="2497" />
 		<name_offset1 x="4" y="-8" />
 		<name_offset2 x="4" y="-8" />
 		<city_detail index="10" city_type="Capital" alliance_type="Capital" cultural_sphere="Netherlands" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" bar_flags="7" />
 	</info>
-	<info name="앤트워프" url_index="33" info_type="City" angle="-30">
+	<info name="앤트워프" url_index="16" info_type="City" angle="-30">
 		<position x="48" y="2521" />
 		<name_offset1 x="-6" y="3" />
 		<name_offset2 x="-6" y="3" />
 		<city_detail index="8" city_type="City" alliance_type="Alliance" cultural_sphere="Netherlands" has_name_image="True" lang1="네덜란드어" bar_flags="0" />
 	</info>
-	<info name="뷔스비" url_index="108" info_type="City" angle="0">
+	<info name="뷔스비" url_index="97" info_type="City" angle="0">
 		<position x="847" y="2106" />
 		<name_offset1 x="6" y="-5" />
 		<name_offset2 x="6" y="-5" />
 		<city_detail index="105" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="0" />
 	</info>
-	<info name="오슬로" url_index="37" info_type="City" angle="0">
+	<info name="오슬로" url_index="19" info_type="City" angle="0">
 		<position x="492" y="1948" />
 		<name_offset1 x="5" y="-4" />
 		<name_offset2 x="3" y="-2" />
 		<city_detail index="13" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="0" />
 	</info>
-	<info name="코펜하겐" url_index="38" info_type="City" angle="0">
+	<info name="코펜하겐" url_index="33" info_type="City" angle="0">
 		<position x="519" y="2212" />
 		<name_offset1 x="12" y="-6" />
 		<name_offset2 x="12" y="-6" />
 		<city_detail index="14" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="0" />
 	</info>
-	<info name="스톡홀름" url_index="40" info_type="City" angle="0">
+	<info name="스톡홀름" url_index="32" info_type="City" angle="0">
 		<position x="841" y="1979" />
 		<name_offset1 x="-48" y="-11" />
 		<name_offset2 x="-48" y="-11" />
 		<city_detail index="16" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="5" />
 	</info>
-	<info name="단치히" url_index="95" info_type="City" angle="0">
+	<info name="단치히" url_index="96" info_type="City" angle="0">
 		<position x="861" y="2321" />
 		<name_offset1 x="8" y="2" />
 		<name_offset2 x="8" y="2" />
 		<city_detail index="94" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="독일어" bar_flags="0" />
 	</info>
-	<info name="함부르크" url_index="36" info_type="City" angle="0">
+	<info name="함부르크" url_index="17" info_type="City" angle="0">
 		<position x="358" y="2376" />
 		<name_offset1 x="2" y="1" />
 		<name_offset2 x="2" y="1" />
 		<city_detail index="11" city_type="City" alliance_type="Alliance" cultural_sphere="Germany" has_name_image="True" lang1="독일어" bar_flags="0" />
 	</info>
-	<info name="브레멘" url_index="107" info_type="City" angle="30">
+	<info name="브레멘" url_index="94" info_type="City" angle="30">
 		<position x="229" y="2400" />
 		<name_offset1 x="4" y="-16" />
 		<name_offset2 x="4" y="-16" />
 		<city_detail index="106" city_type="City" alliance_type="Alliance" cultural_sphere="Germany" has_name_image="True" lang1="독일어" bar_flags="0" />
 	</info>
-	<info name="그로닝겐" url_index="94" info_type="City" angle="0">
+	<info name="그로닝겐" url_index="95" info_type="City" angle="0">
 		<position x="143" y="2452" />
 		<name_offset1 x="8" y="-11" />
 		<name_offset2 x="8" y="-11" />
 		<city_detail index="93" city_type="City" alliance_type="Territory" cultural_sphere="Netherlands" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" bar_flags="0" />
 	</info>
-	<info name="베르겐" url_index="35" info_type="City" angle="0">
+	<info name="베르겐" url_index="20" info_type="City" angle="0">
 		<position x="242" y="1952" />
 		<name_offset1 x="6" y="-2" />
 		<name_offset2 x="4" y="-2" />
 		<city_detail index="12" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="0" />
 	</info>
-	<info name="헤르데르" url_index="34" info_type="City" angle="30">
+	<info name="헤르데르" url_index="92" info_type="City" angle="30">
 		<position x="66" y="2466" />
 		<name_offset1 x="0" y="-19" />
 		<name_offset2 x="0" y="-19" />
 		<city_detail index="9" city_type="City" alliance_type="Territory" cultural_sphere="Netherlands" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" lang2="영어" bar_flags="0" />
 	</info>
-	<info name="리가" url_index="41" info_type="City" angle="0">
+	<info name="리가" url_index="30" info_type="City" angle="0">
 		<position x="1073" y="2150" />
 		<name_offset1 x="2" y="4" />
 		<name_offset2 x="2" y="4" />
 		<city_detail index="17" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="슬라브어" bar_flags="0" />
 	</info>
-	<info name="뤼베크" url_index="39" info_type="City" angle="0">
+	<info name="뤼베크" url_index="31" info_type="City" angle="0">
 		<position x="478" y="2342" />
 		<name_offset1 x="0" y="1" />
 		<name_offset2 x="0" y="1" />
 		<city_detail index="15" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="독일어" bar_flags="0" />
 	</info>
-	<info name="에딘버러" url_index="28" info_type="City" angle="0">
+	<info name="에딘버러" url_index="81" info_type="City" angle="0">
 		<position x="16206" y="2123" />
 		<name_offset1 x="6" y="0" />
 		<name_offset2 x="6" y="0" />
 		<city_detail index="4" city_type="City" alliance_type="Territory" cultural_sphere="Britain" has_name_image="True" default_country="England" lang1="영어" lang2="켈트어" bar_flags="0" />
 	</info>
-	<info name="더블린" url_index="29" info_type="City" angle="0">
+	<info name="더블린" url_index="21" info_type="City" angle="0">
 		<position x="16045" y="2273" />
 		<name_offset1 x="0" y="-4" />
 		<name_offset2 x="2" y="-3" />
 		<city_detail index="3" city_type="City" alliance_type="Alliance" cultural_sphere="Britain" has_name_image="True" lang1="영어" bar_flags="0" />
 	</info>
-	<info name="도버" url_index="27" info_type="City" angle="0">
+	<info name="도버" url_index="93" info_type="City" angle="0">
 		<position x="16319" y="2482" />
 		<name_offset1 x="2" y="1" />
 		<name_offset2 x="4" y="2" />
 		<city_detail index="1" city_type="City" alliance_type="Territory" cultural_sphere="Britain" has_name_image="True" default_country="England" lang1="영어" lang2="네덜란드어" bar_flags="0" />
 	</info>
-	<info name="플리머스" url_index="25" info_type="City" angle="0">
+	<info name="플리머스" url_index="22" info_type="City" angle="0">
 		<position x="16083" y="2485" />
 		<name_offset1 x="-8" y="2" />
 		<name_offset2 x="-8" y="2" />
 		<city_detail index="2" city_type="City" alliance_type="Territory" cultural_sphere="Britain" has_name_image="True" default_country="England" lang1="영어" bar_flags="0" />
 	</info>
-	<info name="런던" url_index="24" info_type="City" angle="0">
+	<info name="런던" url_index="6" info_type="City" angle="0">
 		<position x="16322" y="2406" />
 		<name_offset1 x="-11" y="-17" />
 		<name_offset2 x="-11" y="-17" />
 		<city_detail index="0" city_type="Capital" alliance_type="Capital" cultural_sphere="Britain" has_name_image="True" default_country="England" lang1="영어" bar_flags="15" />
 	</info>
-	<info name="칼레" url_index="26" info_type="City" angle="0">
+	<info name="칼레" url_index="18" info_type="City" angle="0">
 		<position x="16312" y="2567" />
 		<name_offset1 x="-5" y="7" />
 		<name_offset2 x="-5" y="7" />
 		<city_detail index="7" city_type="City" alliance_type="Territory" cultural_sphere="NorthFrance" has_name_image="True" default_country="France" lang1="프랑스어" bar_flags="0" />
 	</info>
-	<info name="낭트" url_index="31" info_type="City" angle="0">
+	<info name="낭트" url_index="15" info_type="City" angle="0">
 		<position x="16110" y="2731" />
 		<name_offset1 x="4" y="2" />
 		<name_offset2 x="3" y="2" />
 		<city_detail index="5" city_type="City" alliance_type="Territory" cultural_sphere="NorthFrance" has_name_image="True" default_country="France" lang1="프랑스어" bar_flags="0" />
 	</info>
-	<info name="보르도" url_index="30" info_type="City" angle="0">
+	<info name="보르도" url_index="14" info_type="City" angle="0">
 		<position x="16117" y="2834" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="3" y="0" />
 		<city_detail index="6" city_type="City" alliance_type="Territory" cultural_sphere="NorthFrance" has_name_image="True" default_country="France" lang1="프랑스어" bar_flags="0" />
 	</info>
-	<info name="포르투" url_index="2" info_type="City" angle="0">
+	<info name="포르투" url_index="7" info_type="City" angle="0">
 		<position x="15775" y="3118" />
 		<name_offset1 x="4" y="-2" />
 		<name_offset2 x="4" y="-2" />
 		<city_detail index="19" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Portugal" lang1="포르투갈어" bar_flags="0" />
 	</info>
-	<info name="카사블랑카" url_index="4" info_type="City" angle="0">
+	<info name="카사블랑카" url_index="84" info_type="City" angle="0">
 		<position x="15775" y="3453" />
 		<name_offset1 x="0" y="5" />
 		<name_offset2 x="0" y="5" />
 		<city_detail index="25" city_type="City" alliance_type="Alliance" cultural_sphere="Iberian" has_name_image="True" lang1="포르투갈어" lang2="아라비아어" bar_flags="0" />
 	</info>
-	<info name="세우타" url_index="7" info_type="City" angle="0">
+	<info name="세우타" url_index="12" info_type="City" angle="0">
 		<position x="15960" y="3367" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 		<city_detail index="23" city_type="City" alliance_type="Alliance" cultural_sphere="Iberian" has_name_image="True" lang1="포르투갈어" bar_flags="0" />
 	</info>
-	<info name="세비야" url_index="5" info_type="City" angle="0">
+	<info name="세비야" url_index="1" info_type="City" angle="0">
 		<position x="15905" y="3261" />
 		<name_offset1 x="2" y="-10" />
 		<name_offset2 x="2" y="-10" />
 		<city_detail index="22" city_type="Capital" alliance_type="Capital" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="7" />
 	</info>
-	<info name="바르셀로나" url_index="9" info_type="City" angle="0">
+	<info name="바르셀로나" url_index="10" info_type="City" angle="0">
 		<position x="16356" y="3097" />
 		<name_offset1 x="-10" y="-10" />
 		<name_offset2 x="-10" y="-6" />
 		<city_detail index="31" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="0" />
 	</info>
-	<info name="팔마" url_index="10" info_type="City" angle="0">
+	<info name="팔마" url_index="11" info_type="City" angle="0">
 		<position x="16295" y="3213" />
 		<name_offset1 x="0" y="-10" />
 		<name_offset2 x="0" y="-8" />
 		<city_detail index="30" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="0" />
 	</info>
-	<info name="발렌시아" url_index="8" info_type="City" angle="0">
+	<info name="발렌시아" url_index="9" info_type="City" angle="0">
 		<position x="16168" y="3159" />
 		<name_offset1 x="-12" y="-10" />
 		<name_offset2 x="-18" y="-5" />
 		<city_detail index="29" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="0" />
 	</info>
-	<info name="히혼" url_index="23" info_type="City" angle="0">
+	<info name="히혼" url_index="83" info_type="City" angle="0">
 		<position x="15850" y="2933" />
 		<name_offset1 x="1" y="6" />
 		<name_offset2 x="1" y="6" />
 		<city_detail index="18" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" lang2="포르투갈어" bar_flags="0" />
 	</info>
-	<info name="파루" url_index="3" info_type="City" angle="0">
+	<info name="파루" url_index="82" info_type="City" angle="0">
 		<position x="15802" y="3258" />
 		<name_offset1 x="2" y="-5" />
 		<name_offset2 x="2" y="-4" />
 		<city_detail index="20" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Portugal" lang1="포르투갈어" lang2="스페인어" bar_flags="0" />
 	</info>
-	<info name="마데이라" url_index="21" info_type="City" angle="0">
+	<info name="마데이라" url_index="45" info_type="City" angle="0">
 		<position x="15477" y="3446" />
 		<name_offset1 x="0" y="8" />
 		<name_offset2 x="0" y="8" />
 		<city_detail index="26" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Portugal" lang1="포르투갈어" bar_flags="0" />
 	</info>
-	<info name="말라가" url_index="6" info_type="City" angle="0">
+	<info name="말라가" url_index="8" info_type="City" angle="0">
 		<position x="16052" y="3268" />
 		<name_offset1 x="2" y="-8" />
 		<name_offset2 x="2" y="-8" />
 		<city_detail index="24" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="0" />
 	</info>
-	<info name="몽펠리에" url_index="14" info_type="City" angle="0">
+	<info name="몽펠리에" url_index="85" info_type="City" angle="0">
 		<position x="37" y="3001" />
 		<name_offset1 x="-12" y="-10" />
 		<name_offset2 x="-20" y="-4" />
 		<city_detail index="32" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="France" lang1="프랑스어" bar_flags="0" />
 	</info>
-	<info name="라스팔마스" url_index="22" info_type="City" angle="0">
+	<info name="라스팔마스" url_index="46" info_type="City" angle="0">
 		<position x="15505" y="3665" />
 		<name_offset1 x="0" y="8" />
 		<name_offset2 x="0" y="8" />
 		<city_detail index="27" city_type="City" alliance_type="Territory" cultural_sphere="Iberian" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="0" />
 	</info>
-	<info name="리스본" url_index="1" info_type="City" angle="0">
+	<info name="리스본" url_index="2" info_type="City" angle="0">
 		<position x="15795" y="3203" />
 		<name_offset1 x="-37" y="-3" />
 		<name_offset2 x="-37" y="-3" />
 		<city_detail index="21" city_type="Capital" alliance_type="Capital" cultural_sphere="Iberian" has_name_image="True" default_country="Portugal" lang1="포르투갈어" bar_flags="15" />
 	</info>
-	<info name="안코나" url_index="55" info_type="City" angle="0">
+	<info name="안코나" url_index="91" info_type="City" angle="0">
 		<position x="574" y="2926" />
 		<name_offset1 x="2" y="2" />
 		<name_offset2 x="2" y="2" />
 		<city_detail index="44" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" bar_flags="0" />
 	</info>
-	<info name="베네치아" url_index="53" info_type="City" angle="0">
+	<info name="베네치아" url_index="3" info_type="City" angle="0">
 		<position x="543" y="2798" />
 		<name_offset1 x="2" y="-15" />
 		<name_offset2 x="2" y="-15" />
 		<city_detail index="45" city_type="Capital" alliance_type="Capital" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="Venezia" lang1="이탈리아어" lang2="아라비아어" bar_flags="7" />
 	</info>
-	<info name="칼리아리" url_index="20" info_type="City" angle="0">
+	<info name="칼리아리" url_index="87" info_type="City" angle="0">
 		<position x="335" y="3166" />
 		<name_offset1 x="5" y="2" />
 		<name_offset2 x="5" y="2" />
 		<city_detail index="37" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" lang2="스페인어" bar_flags="0" />
 	</info>
-	<info name="칼비" url_index="15" info_type="City" angle="0">
+	<info name="칼비" url_index="86" info_type="City" angle="0">
 		<position x="304" y="2977" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
 		<city_detail index="35" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" lang2="프랑스어" bar_flags="0" />
 	</info>
-	<info name="자다르" url_index="57" info_type="City" angle="0">
+	<info name="자다르" url_index="90" info_type="City" angle="0">
 		<position x="728" y="2909" />
 		<name_offset1 x="6" y="-3" />
 		<name_offset2 x="5" y="-3" />
 		<city_detail index="47" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="Venezia" lang1="이탈리아어" bar_flags="0" />
 	</info>
-	<info name="사사리" url_index="19" info_type="City" angle="0">
+	<info name="사사리" url_index="88" info_type="City" angle="0">
 		<position x="270" y="3101" />
 		<name_offset1 x="-4" y="-2" />
 		<name_offset2 x="-4" y="-2" />
 		<city_detail index="36" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" lang2="스페인어" bar_flags="0" />
 	</info>
-	<info name="제노바" url_index="12" info_type="City" angle="0">
+	<info name="제노바" url_index="24" info_type="City" angle="0">
 		<position x="304" y="2913" />
 		<name_offset1 x="4" y="-8" />
 		<name_offset2 x="4" y="-8" />
 		<city_detail index="34" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" bar_flags="7" />
 	</info>
-	<info name="시라쿠사" url_index="59" info_type="City" angle="0">
+	<info name="시라쿠사" url_index="27" info_type="City" angle="0">
 		<position x="612" y="3234" />
 		<name_offset1 x="8" y="6" />
 		<name_offset2 x="8" y="6" />
 		<city_detail index="43" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" bar_flags="0" />
 	</info>
-	<info name="트리에스테" url_index="56" info_type="City" angle="0">
+	<info name="트리에스테" url_index="89" info_type="City" angle="0">
 		<position x="649" y="2813" />
 		<name_offset1 x="6" y="-2" />
 		<name_offset2 x="4" y="-2" />
 		<city_detail index="46" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="Venezia" lang1="이탈리아어" bar_flags="0" />
 	</info>
-	<info name="나폴리" url_index="58" info_type="City" angle="0">
+	<info name="나폴리" url_index="23" info_type="City" angle="0">
 		<position x="620" y="3115" />
 		<name_offset1 x="4" y="-9" />
 		<name_offset2 x="4" y="-9" />
 		<city_detail index="42" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" lang2="아라비아어" bar_flags="7" />
 	</info>
-	<info name="피사" url_index="13" info_type="City" angle="0">
+	<info name="피사" url_index="25" info_type="City" angle="0">
 		<position x="369" y="2947" />
 		<name_offset1 x="12" y="-8" />
 		<name_offset2 x="12" y="-4" />
 		<city_detail index="38" city_type="City" alliance_type="Alliance" cultural_sphere="ItalySouthFrance" has_name_image="True" lang1="이탈리아어" bar_flags="4" />
 	</info>
-	<info name="마르세이유" url_index="11" info_type="City" angle="0">
+	<info name="마르세이유" url_index="4" info_type="City" angle="0">
 		<position x="126" y="2964" />
 		<name_offset1 x="-48" y="-17" />
 		<name_offset2 x="-48" y="-17" />
 		<city_detail index="33" city_type="Capital" alliance_type="Capital" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="France" lang1="프랑스어" bar_flags="7" />
 	</info>
-	<info name="라구사" url_index="54" info_type="City" angle="0">
+	<info name="라구사" url_index="26" info_type="City" angle="0">
 		<position x="803" y="2971" />
 		<name_offset1 x="7" y="-3" />
 		<name_offset2 x="7" y="-3" />
 		<city_detail index="48" city_type="City" alliance_type="Territory" cultural_sphere="ItalySouthFrance" has_name_image="True" default_country="Venezia" lang1="이탈리아어" bar_flags="0" />
 	</info>
-	<info name="아테네" url_index="45" info_type="City" angle="0">
+	<info name="아테네" url_index="38" info_type="City" angle="0">
 		<position x="1088" y="3257" />
 		<name_offset1 x="2" y="1" />
 		<name_offset2 x="2" y="1" />
 		<city_detail index="50" city_type="City" alliance_type="Alliance" cultural_sphere="Balkan" has_name_image="True" lang1="그리스어" lang2="터키어" bar_flags="7" />
 	</info>
-	<info name="간디아" url_index="50" info_type="City" angle="0">
+	<info name="간디아" url_index="39" info_type="City" angle="0">
 		<position x="1148" y="3367" />
 		<name_offset1 x="0" y="8" />
 		<name_offset2 x="0" y="8" />
 		<city_detail index="49" city_type="City" alliance_type="Alliance" cultural_sphere="Balkan" has_name_image="True" lang1="이탈리아어" lang2="그리스어" bar_flags="0" />
 	</info>
-	<info name="살로니카" url_index="49" info_type="City" angle="0">
+	<info name="살로니카" url_index="37" info_type="City" angle="0">
 		<position x="1035" y="3104" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="0" y="0" />
 		<city_detail index="51" city_type="City" alliance_type="Alliance" cultural_sphere="Balkan" has_name_image="True" lang1="그리스어" lang2="터키어" bar_flags="0" />
 	</info>
-	<info name="파마구스타" url_index="51" info_type="City" angle="0">
+	<info name="파마구스타" url_index="34" info_type="City" angle="0">
 		<position x="1531" y="3378" />
 		<name_offset1 x="-2" y="12" />
 		<name_offset2 x="-2" y="12" />
 		<city_detail index="52" city_type="City" alliance_type="Alliance" cultural_sphere="Balkan" has_name_image="True" lang1="그리스어" lang2="터키어" bar_flags="0" />
 	</info>
-	<info name="알제" url_index="18" info_type="City" angle="0">
+	<info name="알제" url_index="13" info_type="City" angle="0">
 		<position x="44" y="3289" />
 		<name_offset1 x="2" y="9" />
 		<name_offset2 x="2" y="9" />
 		<city_detail index="39" city_type="CityIslam" alliance_type="Territory" cultural_sphere="NorthAfrica" has_name_image="True" default_country="Turkey" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="알렉산드리아" url_index="46" info_type="City" angle="0">
+	<info name="알렉산드리아" url_index="40" info_type="City" angle="0">
 		<position x="1340" y="3548" />
 		<name_offset1 x="-70" y="2" />
 		<name_offset2 x="-70" y="2" />
@@ -339,61 +339,61 @@
 		<name_offset2 x="3" y="-17" />
 		<city_detail index="57" city_type="CapitalIslam" alliance_type="Capital" cultural_sphere="Turkey" has_name_image="True" default_country="Turkey" lang1="아라비아어" lang2="터키어" bar_flags="7" />
 	</info>
-	<info name="오데사" url_index="96" info_type="City" angle="0">
+	<info name="오데사" url_index="99" info_type="City" angle="0">
 		<position x="1374" y="2813" />
 		<name_offset1 x="-4" y="-1" />
 		<name_offset2 x="-2" y="-1" />
 		<city_detail index="96" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Turkey" has_name_image="True" lang1="터키어" bar_flags="0" />
 	</info>
-	<info name="카이로" url_index="48" info_type="City" angle="0">
+	<info name="카이로" url_index="41" info_type="City" angle="0">
 		<position x="1429" y="3596" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 		<city_detail index="54" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="NorthAfrica" has_name_image="True" lang1="아라비아어" lang2="고대이집트어" bar_flags="0" />
 	</info>
-	<info name="카파" url_index="43" info_type="City" angle="0">
+	<info name="카파" url_index="44" info_type="City" angle="0">
 		<position x="1647" y="2854" />
 		<name_offset1 x="22" y="0" />
 		<name_offset2 x="22" y="0" />
 		<city_detail index="58" city_type="CityIslam" alliance_type="Territory" cultural_sphere="Turkey" has_name_image="True" default_country="Turkey" lang1="터키어" bar_flags="0" />
 	</info>
-	<info name="세바스토폴" url_index="106" info_type="City" angle="0">
+	<info name="세바스토폴" url_index="100" info_type="City" angle="0">
 		<position x="1511" y="2861" />
 		<name_offset1 x="4" y="-22" />
 		<name_offset2 x="4" y="-22" />
 		<city_detail index="104" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Turkey" has_name_image="True" lang1="터키어" bar_flags="0" />
 	</info>
-	<info name="튀니스" url_index="16" info_type="City" angle="0">
+	<info name="튀니스" url_index="28" info_type="City" angle="0">
 		<position x="410" y="3272" />
 		<name_offset1 x="-36" y="0" />
 		<name_offset2 x="-36" y="0" />
 		<city_detail index="40" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="NorthAfrica" has_name_image="True" lang1="아라비아어" bar_flags="7" />
 	</info>
-	<info name="트리폴리" url_index="17" info_type="City" angle="0">
+	<info name="트리폴리" url_index="29" info_type="City" angle="0">
 		<position x="488" y="3432" />
 		<name_offset1 x="0" y="5" />
 		<name_offset2 x="0" y="5" />
 		<city_detail index="41" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="NorthAfrica" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="트레비존드" url_index="44" info_type="City" angle="0">
+	<info name="트레비존드" url_index="43" info_type="City" angle="0">
 		<position x="1706" y="3049" />
 		<name_offset1 x="16" y="4" />
 		<name_offset2 x="16" y="4" />
 		<city_detail index="59" city_type="CityIslam" alliance_type="Territory" cultural_sphere="Turkey" has_name_image="True" default_country="Turkey" lang1="터키어" lang2="아라비아어" bar_flags="0" />
 	</info>
-	<info name="베이루트" url_index="47" info_type="City" angle="0">
+	<info name="베이루트" url_index="35" info_type="City" angle="0">
 		<position x="1606" y="3401" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 		<city_detail index="56" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="NearEast" has_name_image="True" lang1="아라비아어" lang2="터키어" bar_flags="0" />
 	</info>
-	<info name="벵가지" url_index="97" info_type="City" angle="0">
+	<info name="벵가지" url_index="98" info_type="City" angle="0">
 		<position x="899" y="3487" />
 		<name_offset1 x="2" y="2" />
 		<name_offset2 x="2" y="2" />
 		<city_detail index="95" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="NorthAfrica" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="야파" url_index="52" info_type="City" angle="0">
+	<info name="야파" url_index="36" info_type="City" angle="0">
 		<position x="1555" y="3507" />
 		<name_offset1 x="5" y="-2" />
 		<name_offset2 x="5" y="-2" />
@@ -405,73 +405,73 @@
 		<name_offset2 x="0" y="-10" />
 		<city_detail index="113" city_type="City" alliance_type="Territory" cultural_sphere="Atlantic" has_name_image="True" default_country="Portugal" lang1="포르투갈어" bar_flags="0" />
 	</info>
-	<info name="산티아고" url_index="92" info_type="City" angle="0">
+	<info name="산티아고" url_index="78" info_type="City" angle="0">
 		<position x="13194" y="3962" />
 		<name_offset1 x="0" y="4" />
 		<name_offset2 x="0" y="4" />
 		<city_detail index="91" city_type="City" alliance_type="Alliance" cultural_sphere="Caribbean" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="산토도밍고" url_index="90" info_type="City" angle="0">
+	<info name="산토도밍고" url_index="77" info_type="City" angle="0">
 		<position x="13488" y="4027" />
 		<name_offset1 x="2" y="-17" />
 		<name_offset2 x="2" y="-17" />
 		<city_detail index="89" city_type="City" alliance_type="Alliance" cultural_sphere="Caribbean" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="5" />
 	</info>
-	<info name="산후안" url_index="91" info_type="City" angle="0">
+	<info name="산후안" url_index="76" info_type="City" angle="0">
 		<position x="13607" y="4051" />
 		<name_offset1 x="0" y="-8" />
 		<name_offset2 x="0" y="-8" />
 		<city_detail index="88" city_type="City" alliance_type="Alliance" cultural_sphere="Caribbean" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="자메이카" url_index="89" info_type="City" angle="0">
+	<info name="자메이카" url_index="79" info_type="City" angle="0">
 		<position x="13173" y="4044" />
 		<name_offset1 x="5" y="-10" />
 		<name_offset2 x="5" y="-5" />
 		<city_detail index="90" city_type="City" alliance_type="Alliance" cultural_sphere="Caribbean" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="하바나" url_index="93" info_type="City" angle="0">
+	<info name="하바나" url_index="80" info_type="City" angle="0">
 		<position x="12975" y="3860" />
 		<name_offset1 x="0" y="-5" />
 		<name_offset2 x="0" y="-5" />
 		<city_detail index="92" city_type="City" alliance_type="Alliance" cultural_sphere="Caribbean" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="포르토벨로" url_index="109" info_type="City" angle="0">
+	<info name="포르토벨로" url_index="111" info_type="City" angle="0">
 		<position x="12841" y="4164" />
 		<name_offset1 x="3" y="0" />
 		<name_offset2 x="3" y="0" />
 		<city_detail index="112" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="5" />
 	</info>
-	<info name="윌렘스타트" url_index="125" info_type="City" angle="0">
+	<info name="윌렘스타트" url_index="117" info_type="City" angle="0">
 		<position x="13252" y="4311" />
 		<name_offset1 x="0" y="-12" />
 		<name_offset2 x="0" y="-8" />
 		<city_detail index="124" city_type="City" alliance_type="Territory" cultural_sphere="Caribbean" has_name_image="True" default_country="Netherlands" lang1="네덜란드어" bar_flags="2" />
 	</info>
-	<info name="카라카스" url_index="124" info_type="City" angle="0">
+	<info name="카라카스" url_index="126" info_type="City" angle="0">
 		<position x="13347" y="4424" />
 		<name_offset1 x="0" y="5" />
 		<name_offset2 x="0" y="5" />
 		<city_detail index="123" city_type="City" alliance_type="Territory" cultural_sphere="EastLatinAmerica" has_name_image="True" default_country="Venezia" lang1="이탈리아어" bar_flags="2" />
 	</info>
-	<info name="트루히요" url_index="115" info_type="City" angle="0">
+	<info name="트루히요" url_index="120" info_type="City" angle="0">
 		<position x="12711" y="4037" />
 		<name_offset1 x="0" y="5" />
 		<name_offset2 x="0" y="5" />
 		<city_detail index="122" city_type="City" alliance_type="Territory" cultural_sphere="EastLatinAmerica" has_name_image="True" default_country="Spain" lang1="스페인어" bar_flags="2" />
 	</info>
-	<info name="나소" url_index="147" info_type="City" angle="0">
+	<info name="나소" url_index="115" info_type="City" angle="0">
 		<position x="13101" y="3723" />
 		<name_offset1 x="10" y="0" />
 		<name_offset2 x="10" y="0" />
 		<city_detail index="116" city_type="City" alliance_type="Piratical" cultural_sphere="Caribbean" has_name_image="True" bar_flags="0" />
 	</info>
-	<info name="마라카이보" url_index="118" info_type="City" angle="0">
+	<info name="마라카이보" url_index="121" info_type="City" angle="0">
 		<position x="13132" y="4393" />
 		<name_offset1 x="-6" y="-12" />
 		<name_offset2 x="-6" y="-12" />
 		<city_detail index="125" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="베라크루스" url_index="120" info_type="City" angle="0">
+	<info name="베라크루스" url_index="118" info_type="City" angle="0">
 		<position x="12093" y="4048" />
 		<name_offset1 x="20" y="-14" />
 		<name_offset2 x="16" y="-12" />
@@ -483,433 +483,433 @@
 		<name_offset2 x="0" y="-5" />
 		<city_detail index="114" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="그랜드케이맨" url_index="123" info_type="City" angle="0">
+	<info name="그랜드케이맨" url_index="116" info_type="City" angle="0">
 		<position x="12992" y="3990" />
 		<name_offset1 x="-3" y="7" />
 		<name_offset2 x="-3" y="7" />
 		<city_detail index="121" city_type="City" alliance_type="Territory" cultural_sphere="Caribbean" has_name_image="True" default_country="England" lang1="영어" bar_flags="2" />
 	</info>
-	<info name="카옌" url_index="110" info_type="City" angle="0">
+	<info name="카옌" url_index="112" info_type="City" angle="0">
 		<position x="13918" y="4653" />
 		<name_offset1 x="-4" y="4" />
 		<name_offset2 x="-4" y="4" />
 		<city_detail index="102" city_type="City" alliance_type="Territory" cultural_sphere="EastLatinAmerica" has_name_image="True" default_country="France" lang1="프랑스어" bar_flags="2" />
 	</info>
-	<info name="바이아" url_index="121" info_type="City" angle="0">
+	<info name="바이아" url_index="122" info_type="City" angle="0">
 		<position x="14647" y="5326" />
 		<name_offset1 x="-4" y="-2" />
 		<name_offset2 x="-2" y="-2" />
 		<city_detail index="117" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="포르투갈어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="페르남부쿠" url_index="111" info_type="City" angle="0">
+	<info name="페르남부쿠" url_index="113" info_type="City" angle="0">
 		<position x="14807" y="5080" />
 		<name_offset1 x="-6" y="-2" />
 		<name_offset2 x="-4" y="-2" />
 		<city_detail index="103" city_type="City" alliance_type="Territory" cultural_sphere="EastLatinAmerica" has_name_image="True" default_country="Portugal" lang1="포르투갈어" bar_flags="2" />
 	</info>
-	<info name="리우데자네이루" url_index="122" info_type="City" angle="0">
+	<info name="리우데자네이루" url_index="123" info_type="City" angle="0">
 		<position x="14452" y="5699" />
 		<name_offset1 x="4" y="-10" />
 		<name_offset2 x="4" y="-8" />
 		<city_detail index="118" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="포르투갈어" lang2="마야어" bar_flags="5" />
 	</info>
-	<info name="부에노스아이레스" url_index="117" info_type="City" angle="0">
+	<info name="부에노스아이레스" url_index="124" info_type="City" angle="0">
 		<position x="13717" y="6106" />
 		<name_offset1 x="0" y="-10" />
 		<name_offset2 x="0" y="-10" />
 		<city_detail index="119" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="산안토니오" url_index="116" info_type="City" angle="0">
+	<info name="산안토니오" url_index="125" info_type="City" angle="0">
 		<position x="13477" y="6301" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 		<city_detail index="120" city_type="City" alliance_type="Alliance" cultural_sphere="EastLatinAmerica" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="아비장" url_index="63" info_type="City" angle="0">
+	<info name="아비장" url_index="50" info_type="City" angle="0">
 		<position x="16195" y="4557" />
 		<name_offset1 x="0" y="-14" />
 		<name_offset2 x="0" y="-14" />
 		<city_detail index="62" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="포르투갈어" lang2="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="아르긴" url_index="60" info_type="City" angle="0">
+	<info name="아르긴" url_index="47" info_type="City" angle="0">
 		<position x="15604" y="3972" />
 		<name_offset1 x="5" y="-2" />
 		<name_offset2 x="5" y="-2" />
 		<city_detail index="28" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="포르투갈어" bar_flags="0" />
 	</info>
-	<info name="카보베르데" url_index="61" info_type="City" angle="0">
+	<info name="카보베르데" url_index="48" info_type="City" angle="0">
 		<position x="15467" y="4201" />
 		<name_offset1 x="0" y="12" />
 		<name_offset2 x="0" y="12" />
 		<city_detail index="60" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="포르투갈어" bar_flags="0" />
 	</info>
-	<info name="카리비브" url_index="67" info_type="City" angle="0">
+	<info name="카리비브" url_index="54" info_type="City" angle="0">
 		<position x="615" y="5586" />
 		<name_offset1 x="7" y="-2" />
 		<name_offset2 x="5" y="-2" />
 		<city_detail index="66" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="케이프타운" url_index="68" info_type="City" angle="0">
+	<info name="케이프타운" url_index="55" info_type="City" angle="0">
 		<position x="974" y="6000" />
 		<name_offset1 x="-10" y="-20" />
 		<name_offset2 x="-10" y="-20" />
 		<city_detail index="67" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="5" />
 	</info>
-	<info name="세인트조지스" url_index="64" info_type="City" angle="0">
+	<info name="세인트조지스" url_index="51" info_type="City" angle="0">
 		<position x="68" y="4523" />
 		<name_offset1 x="2" y="-14" />
 		<name_offset2 x="2" y="-14" />
 		<city_detail index="63" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="포르투갈어" lang2="서아프리카어" bar_flags="5" />
 	</info>
-	<info name="상투메" url_index="65" info_type="City" angle="0">
+	<info name="상투메" url_index="52" info_type="City" angle="0">
 		<position x="229" y="4759" />
 		<name_offset1 x="0" y="10" />
 		<name_offset2 x="0" y="10" />
 		<city_detail index="64" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="포르투갈어" lang2="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="시에라리온" url_index="62" info_type="City" angle="0">
+	<info name="시에라리온" url_index="49" info_type="City" angle="0">
 		<position x="15751" y="4437" />
 		<name_offset1 x="6" y="-3" />
 		<name_offset2 x="6" y="-3" />
 		<city_detail index="61" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="포르투갈어" lang2="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="두알라" url_index="113" info_type="City" angle="0">
+	<info name="두알라" url_index="101" info_type="City" angle="0">
 		<position x="420" y="4636" />
 		<name_offset1 x="8" y="-3" />
 		<name_offset2 x="6" y="-3" />
 		<city_detail index="108" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="베냉" url_index="112" info_type="City" angle="0">
+	<info name="베냉" url_index="102" info_type="City" angle="0">
 		<position x="198" y="4537" />
 		<name_offset1 x="7" y="-2" />
 		<name_offset2 x="5" y="-2" />
 		<city_detail index="107" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="벵겔라" url_index="98" info_type="City" angle="0">
+	<info name="벵겔라" url_index="103" info_type="City" angle="0">
 		<position x="594" y="5207" />
 		<name_offset1 x="6" y="0" />
 		<name_offset2 x="6" y="0" />
 		<city_detail index="97" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="루안다" url_index="66" info_type="City" angle="0">
+	<info name="루안다" url_index="53" info_type="City" angle="0">
 		<position x="553" y="5019" />
 		<name_offset1 x="6" y="-2" />
 		<name_offset2 x="5" y="-2" />
 		<city_detail index="65" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="0" />
 	</info>
-	<info name="킬와" url_index="100" info_type="City" angle="0">
+	<info name="킬와" url_index="105" info_type="City" angle="0">
 		<position x="1767" y="5090" />
 		<name_offset1 x="-6" y="-2" />
 		<name_offset2 x="-4" y="-2" />
 		<city_detail index="99" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="잔지바르" url_index="72" info_type="City" angle="0">
+	<info name="잔지바르" url_index="59" info_type="City" angle="0">
 		<position x="1822" y="4978" />
 		<name_offset1 x="5" y="-4" />
 		<name_offset2 x="5" y="-4" />
 		<city_detail index="72" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="5" />
 	</info>
-	<info name="소팔라" url_index="69" info_type="City" angle="0">
+	<info name="소팔라" url_index="56" info_type="City" angle="0">
 		<position x="1572" y="5497" />
 		<name_offset1 x="-5" y="-2" />
 		<name_offset2 x="-3" y="-2" />
 		<city_detail index="68" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="타마타브" url_index="71" info_type="City" angle="0">
+	<info name="타마타브" url_index="58" info_type="City" angle="0">
 		<position x="2253" y="5422" />
 		<name_offset1 x="-5" y="-2" />
 		<name_offset2 x="-3" y="-2" />
 		<city_detail index="71" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="나탈" url_index="99" info_type="City" angle="0">
+	<info name="나탈" url_index="104" info_type="City" angle="0">
 		<position x="1477" y="5901" />
 		<name_offset1 x="-5" y="2" />
 		<name_offset2 x="-3" y="2" />
 		<city_detail index="98" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="말린디" url_index="103" info_type="City" angle="0">
+	<info name="말린디" url_index="106" info_type="City" angle="0">
 		<position x="1900" y="4776" />
 		<name_offset1 x="0" y="-10" />
 		<name_offset2 x="1" y="-8" />
 		<city_detail index="109" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="모가디슈" url_index="74" info_type="City" angle="0">
+	<info name="모가디슈" url_index="61" info_type="City" angle="0">
 		<position x="2177" y="4571" />
 		<name_offset1 x="-7" y="-2" />
 		<name_offset2 x="-5" y="-2" />
 		<city_detail index="73" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="모잠비크" url_index="70" info_type="City" angle="0">
+	<info name="모잠비크" url_index="57" info_type="City" angle="0">
 		<position x="1873" y="5333" />
 		<name_offset1 x="7" y="-3" />
 		<name_offset2 x="7" y="-3" />
 		<city_detail index="69" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="몸바사" url_index="73" info_type="City" angle="0">
+	<info name="몸바사" url_index="60" info_type="City" angle="0">
 		<position x="1842" y="4831" />
 		<name_offset1 x="-6" y="-5" />
 		<name_offset2 x="-4" y="-5" />
 		<city_detail index="70" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="스와힐리어" bar_flags="0" />
 	</info>
-	<info name="아덴" url_index="77" info_type="City" angle="0">
+	<info name="아덴" url_index="62" info_type="City" angle="0">
 		<position x="2068" y="4260" />
 		<name_offset1 x="0" y="-9" />
 		<name_offset2 x="0" y="-4" />
 		<city_detail index="74" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="5" />
 	</info>
-	<info name="제다" url_index="101" info_type="City" angle="0">
+	<info name="제다" url_index="110" info_type="City" angle="0">
 		<position x="1784" y="3942" />
 		<name_offset1 x="8" y="0" />
 		<name_offset2 x="6" y="0" />
 		<city_detail index="101" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="도파르" url_index="104" info_type="City" angle="0">
+	<info name="도파르" url_index="108" info_type="City" angle="0">
 		<position x="2444" y="4123" />
 		<name_offset1 x="-12" y="0" />
 		<name_offset2 x="-12" y="0" />
 		<city_detail index="111" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="수에즈" url_index="76" info_type="City" angle="0">
+	<info name="수에즈" url_index="64" info_type="City" angle="0">
 		<position x="1583" y="3668" />
 		<name_offset1 x="10" y="0" />
 		<name_offset2 x="10" y="0" />
 		<city_detail index="76" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="세이라" url_index="105" info_type="City" angle="0">
+	<info name="세이라" url_index="109" info_type="City" angle="0">
 		<position x="1924" y="4311" />
 		<name_offset1 x="-8" y="-2" />
 		<name_offset2 x="-6" y="0" />
 		<city_detail index="110" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="소코트라" url_index="102" info_type="City" angle="0">
+	<info name="소코트라" url_index="107" info_type="City" angle="0">
 		<position x="2471" y="4284" />
 		<name_offset1 x="7" y="0" />
 		<name_offset2 x="-16" y="-7" />
 		<city_detail index="100" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="무스카트" url_index="80" info_type="City" angle="0">
+	<info name="무스카트" url_index="65" info_type="City" angle="0">
 		<position x="2687" y="3853" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 		<city_detail index="77" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="마사와" url_index="75" info_type="City" angle="0">
+	<info name="마사와" url_index="63" info_type="City" angle="0">
 		<position x="1794" y="4171" />
 		<name_offset1 x="-5" y="-6" />
 		<name_offset2 x="-5" y="-6" />
 		<city_detail index="75" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
 	</info>
-	<info name="바스라" url_index="78" info_type="City" angle="0">
+	<info name="바스라" url_index="67" info_type="City" angle="0">
 		<position x="2195" y="3723" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 		<city_detail index="79" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Persia" has_name_image="True" lang1="페르시아어" lang2="아라비아어" bar_flags="0" />
 	</info>
-	<info name="호르무즈" url_index="79" info_type="City" angle="0">
+	<info name="호르무즈" url_index="66" info_type="City" angle="0">
 		<position x="2526" y="3716" />
 		<name_offset1 x="0" y="-8" />
 		<name_offset2 x="0" y="-6" />
 		<city_detail index="78" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Persia" has_name_image="True" lang1="페르시아어" bar_flags="0" />
 	</info>
-	<info name="캘리컷" url_index="83" info_type="City" angle="0">
+	<info name="캘리컷" url_index="70" info_type="City" angle="0">
 		<position x="3453" y="4314" />
 		<name_offset1 x="2" y="-3" />
 		<name_offset2 x="2" y="-3" />
 		<city_detail index="82" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="7" />
 	</info>
-	<info name="캘커타" url_index="88" info_type="City" angle="0">
+	<info name="캘커타" url_index="75" info_type="City" angle="0">
 		<position x="3976" y="3935" />
 		<name_offset1 x="4" y="-12" />
 		<name_offset2 x="4" y="-12" />
 		<city_detail index="87" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
 	</info>
-	<info name="고아" url_index="82" info_type="City" angle="0">
+	<info name="고아" url_index="-1" info_type="City" angle="0">
 		<position x="3323" y="4102" />
 		<name_offset1 x="6" y="0" />
 		<name_offset2 x="4" y="0" />
 		<city_detail index="81" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
 	</info>
-	<info name="코친" url_index="84" info_type="City" angle="0">
+	<info name="코친" url_index="71" info_type="City" angle="0">
 		<position x="3470" y="4383" />
 		<name_offset1 x="0" y="-2" />
 		<name_offset2 x="0" y="-2" />
 		<city_detail index="83" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
 	</info>
-	<info name="실론" url_index="85" info_type="City" angle="0">
+	<info name="실론" url_index="73" info_type="City" angle="0">
 		<position x="3658" y="4472" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 		<city_detail index="84" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
 	</info>
-	<info name="디우" url_index="81" info_type="City" angle="0">
+	<info name="디우" url_index="68" info_type="City" angle="0">
 		<position x="3210" y="3948" />
 		<name_offset1 x="12" y="-16" />
 		<name_offset2 x="12" y="-16" />
 		<city_detail index="80" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
 	</info>
-	<info name="퐁디셰리" url_index="86" info_type="City" angle="0">
+	<info name="퐁디셰리" url_index="72" info_type="City" angle="0">
 		<position x="3648" y="4294" />
 		<name_offset1 x="9" y="-2" />
 		<name_offset2 x="9" y="-2" />
 		<city_detail index="85" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
 	</info>
-	<info name="마술리파탐" url_index="87" info_type="City" angle="0">
+	<info name="마술리파탐" url_index="74" info_type="City" angle="0">
 		<position x="3678" y="4160" />
 		<name_offset1 x="0" y="-9" />
 		<name_offset2 x="-3" y="-7" />
 		<city_detail index="86" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
 	</info>
-	<info name="아체" url_index="127" info_type="City" angle="0">
+	<info name="아체" url_index="128" info_type="City" angle="0">
 		<position x="4222" y="4567" />
 		<name_offset1 x="3" y="5" />
 		<name_offset2 x="3" y="5" />
 		<city_detail index="126" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="자카르타" url_index="128" info_type="City" angle="0">
+	<info name="자카르타" url_index="131" info_type="City" angle="0">
 		<position x="4818" y="4988" />
 		<name_offset1 x="2" y="-8" />
 		<name_offset2 x="2" y="-8" />
 		<city_detail index="127" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="1" />
 	</info>
-	<info name="수라바야" url_index="129" info_type="City" angle="0">
+	<info name="수라바야" url_index="132" info_type="City" angle="0">
 		<position x="5210" y="5043" />
 		<name_offset1 x="0" y="-22" />
 		<name_offset2 x="0" y="-22" />
 		<city_detail index="128" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="파타니" url_index="135" info_type="City" angle="0">
+	<info name="파타니" url_index="133" info_type="City" angle="0">
 		<position x="4646" y="4519" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 		<city_detail index="129" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="태국 미얀마어" bar_flags="0" />
 	</info>
-	<info name="팔렘방" url_index="131" info_type="City" angle="0">
+	<info name="팔렘방" url_index="130" info_type="City" angle="0">
 		<position x="4632" y="4824" />
 		<name_offset1 x="-3" y="1" />
 		<name_offset2 x="-3" y="1" />
 		<city_detail index="130" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="반자르마신" url_index="130" info_type="City" angle="0">
+	<info name="반자르마신" url_index="137" info_type="City" angle="0">
 		<position x="5241" y="4885" />
 		<name_offset1 x="-5" y="-12" />
 		<name_offset2 x="-5" y="-12" />
 		<city_detail index="131" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="페구" url_index="134" info_type="City" angle="0">
+	<info name="페구" url_index="143" info_type="City" angle="0">
 		<position x="4396" y="4133" />
 		<name_offset1 x="7" y="-6" />
 		<name_offset2 x="7" y="-6" />
 		<city_detail index="132" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="태국 미얀마어" bar_flags="0" />
 	</info>
-	<info name="마카사르" url_index="132" info_type="City" angle="0">
+	<info name="마카사르" url_index="138" info_type="City" angle="0">
 		<position x="5480" y="4916" />
 		<name_offset1 x="0" y="11" />
 		<name_offset2 x="0" y="11" />
 		<city_detail index="133" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="말라카" url_index="126" info_type="City" angle="0">
+	<info name="말라카" url_index="129" info_type="City" angle="0">
 		<position x="4684" y="4687" />
 		<name_offset1 x="6" y="-6" />
 		<name_offset2 x="6" y="-6" />
 		<city_detail index="134" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="지아딘" url_index="136" info_type="City" angle="0">
+	<info name="지아딘" url_index="135" info_type="City" angle="0">
 		<position x="4885" y="4403" />
 		<name_offset1 x="4" y="-10" />
 		<name_offset2 x="4" y="-10" />
 		<city_detail index="135" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="크메르어" bar_flags="0" />
 	</info>
-	<info name="룬" url_index="133" info_type="City" angle="0">
+	<info name="룬" url_index="139" info_type="City" angle="0">
 		<position x="5959" y="4940" />
 		<name_offset1 x="8" y="0" />
 		<name_offset2 x="8" y="0" />
 		<city_detail index="136" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="마닐라" url_index="140" info_type="City" angle="0">
+	<info name="마닐라" url_index="141" info_type="City" angle="0">
 		<position x="5579" y="4266" />
 		<name_offset1 x="-8" y="1" />
 		<name_offset2 x="-8" y="1" />
 		<city_detail index="137" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="브루나이" url_index="141" info_type="City" angle="0">
+	<info name="브루나이" url_index="142" info_type="City" angle="0">
 		<position x="5241" y="4550" />
 		<name_offset1 x="3" y="1" />
 		<name_offset2 x="3" y="1" />
 		<city_detail index="138" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="디바오" url_index="139" info_type="City" angle="0">
+	<info name="디바오" url_index="140" info_type="City" angle="0">
 		<position x="5764" y="4478" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 		<city_detail index="139" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="로프부리" url_index="137" info_type="City" angle="0">
+	<info name="로프부리" url_index="134" info_type="City" angle="0">
 		<position x="4646" y="4232" />
 		<name_offset1 x="0" y="-12" />
 		<name_offset2 x="0" y="-12" />
 		<city_detail index="140" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="태국 미얀마어" bar_flags="0" />
 	</info>
-	<info name="쿠칭" url_index="138" info_type="City" angle="0">
+	<info name="쿠칭" url_index="136" info_type="City" angle="0">
 		<position x="5053" y="4677" />
 		<name_offset1 x="2" y="5" />
 		<name_offset2 x="2" y="5" />
 		<city_detail index="141" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="딜리" url_index="142" info_type="City" angle="0">
+	<info name="딜리" url_index="144" info_type="City" angle="0">
 		<position x="5802" y="5087" />
 		<name_offset1 x="5" y="-8" />
 		<name_offset2 x="5" y="-8" />
 		<city_detail index="142" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="잠비" url_index="143" info_type="City" angle="0">
+	<info name="잠비" url_index="145" info_type="City" angle="0">
 		<position x="4564" y="4755" />
 		<name_offset1 x="-5" y="-2" />
 		<name_offset2 x="-5" y="-2" />
 		<city_detail index="143" city_type="City" alliance_type="Alliance" cultural_sphere="SoutheastAsia" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="암보이나" url_index="144" info_type="City" angle="0">
+	<info name="암보이나" url_index="146" info_type="City" angle="0">
 		<position x="5822" y="4913" />
 		<name_offset1 x="2" y="3" />
 		<name_offset2 x="2" y="3" />
 		<city_detail index="144" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" lang2="네덜란드어" bar_flags="2" />
 	</info>
-	<info name="테르나테" url_index="145" info_type="City" angle="0">
+	<info name="테르나테" url_index="147" info_type="City" angle="0">
 		<position x="5788" y="4711" />
 		<name_offset1 x="2" y="-15" />
 		<name_offset2 x="2" y="-15" />
 		<city_detail index="145" city_type="City" alliance_type="Alliance" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" lang2="네덜란드어" bar_flags="2" />
 	</info>
-	<info name="홀로" url_index="146" info_type="City" angle="0">
+	<info name="홀로" url_index="148" info_type="City" angle="0">
 		<position x="5525" y="4516" />
 		<name_offset1 x="0" y="-10" />
 		<name_offset2 x="0" y="-6" />
 		<city_detail index="146" city_type="City" alliance_type="Piratical" cultural_sphere="Indochina" has_name_image="True" lang1="말레이 타갈로그어" bar_flags="0" />
 	</info>
-	<info name="카카두" url_index="148" info_type="City" angle="0">
+	<info name="카카두" url_index="158" info_type="City" angle="0">
 		<position x="6345" y="5702" />
 		<name_offset1 x="3" y="8" />
 		<name_offset2 x="3" y="8" />
 		<city_detail index="147" city_type="City" alliance_type="Alliance" cultural_sphere="Oceania" has_name_image="True" lang1="오세아니아어" bar_flags="0" />
 	</info>
-	<info name="호바트" url_index="149" info_type="City" angle="0">
+	<info name="호바트" url_index="159" info_type="City" angle="0">
 		<position x="7046" y="6944" />
 		<name_offset1 x="8" y="0" />
 		<name_offset2 x="8" y="0" />
 		<city_detail index="148" city_type="City" alliance_type="Alliance" cultural_sphere="Oceania" has_name_image="True" lang1="오세아니아어" bar_flags="0" />
 	</info>
-	<info name="왕가누이" url_index="150" info_type="City" angle="0">
+	<info name="왕가누이" url_index="160" info_type="City" angle="0">
 		<position x="8325" y="6578" />
 		<name_offset1 x="1" y="-6" />
 		<name_offset2 x="1" y="-6" />
 		<city_detail index="149" city_type="City" alliance_type="Alliance" cultural_sphere="Oceania" has_name_image="True" lang1="오세아니아어" bar_flags="0" />
 	</info>
-	<info name="쿠가리" url_index="152" info_type="City" angle="0">
+	<info name="쿠가리" url_index="165" info_type="City" angle="0">
 		<position x="7292" y="6253" />
 		<name_offset1 x="-6" y="0" />
 		<name_offset2 x="-4" y="0" />
 		<city_detail index="151" city_type="City" alliance_type="Alliance" cultural_sphere="Oceania" has_name_image="True" lang1="오세아니아어" bar_flags="0" />
 	</info>
-	<info name="핀자라" url_index="151" info_type="City" angle="0">
+	<info name="핀자라" url_index="166" info_type="City" angle="0">
 		<position x="5576" y="6475" />
 		<name_offset1 x="6" y="1" />
 		<name_offset2 x="6" y="1" />
@@ -921,67 +921,67 @@
 		<name_offset2 x="18" y="-6" />
 		<city_detail index="150" city_type="City" alliance_type="Unknown" cultural_sphere="Unknown" has_name_image="True" lang1="보급항" bar_flags="0" />
 	</info>
-	<info name="아카풀코" url_index="155" info_type="City" angle="0">
+	<info name="아카풀코" url_index="162" info_type="City" angle="0">
 		<position x="11843" y="4256" />
 		<name_offset1 x="0" y="-8" />
 		<name_offset2 x="0" y="-8" />
 		<city_detail index="153" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="스페인어" lang2="케추아어" bar_flags="0" />
 	</info>
-	<info name="과테말라" url_index="156" info_type="City" angle="0">
+	<info name="과테말라" url_index="161" info_type="City" angle="0">
 		<position x="12178" y="4246" />
 		<name_offset1 x="-1" y="-7" />
 		<name_offset2 x="-1" y="-7" />
 		<city_detail index="154" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="마야어" bar_flags="0" />
 	</info>
-	<info name="파나마" url_index="157" info_type="City" angle="0">
+	<info name="파나마" url_index="154" info_type="City" angle="0">
 		<position x="12718" y="4246" />
 		<name_offset1 x="-4" y="-5" />
 		<name_offset2 x="-4" y="-5" />
 		<city_detail index="155" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="스페인어" lang2="마야어" bar_flags="0" />
 	</info>
-	<info name="툼베스" url_index="160" info_type="City" angle="0">
+	<info name="툼베스" url_index="153" info_type="City" angle="0">
 		<position x="12609" y="4800" />
 		<name_offset1 x="10" y="0" />
 		<name_offset2 x="8" y="0" />
 		<city_detail index="156" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="케추아어" bar_flags="0" />
 	</info>
-	<info name="람바예케" url_index="159" info_type="City" angle="0">
+	<info name="람바예케" url_index="152" info_type="City" angle="0">
 		<position x="12698" y="5043" />
 		<name_offset1 x="10" y="3" />
 		<name_offset2 x="8" y="1" />
 		<city_detail index="157" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="케추아어" bar_flags="0" />
 	</info>
-	<info name="리마" url_index="154" info_type="City" angle="0">
+	<info name="리마" url_index="151" info_type="City" angle="0">
 		<position x="12845" y="5258" />
 		<name_offset1 x="2" y="-8" />
 		<name_offset2 x="2" y="-8" />
 		<city_detail index="158" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="케추아어" lang2="스페인어" bar_flags="3" />
 	</info>
-	<info name="코피아포" url_index="158" info_type="City" angle="0">
+	<info name="코피아포" url_index="150" info_type="City" angle="0">
 		<position x="13156" y="5795" />
 		<name_offset1 x="6" y="0" />
 		<name_offset2 x="6" y="0" />
 		<city_detail index="159" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="케추아어" bar_flags="0" />
 	</info>
-	<info name="발파라이소" url_index="153" info_type="City" angle="0">
+	<info name="발파라이소" url_index="149" info_type="City" angle="0">
 		<position x="13026" y="6055" />
 		<name_offset1 x="9" y="0" />
 		<name_offset2 x="9" y="0" />
 		<city_detail index="160" city_type="City" alliance_type="Alliance" cultural_sphere="WestLatinAmerica" has_name_image="True" lang1="케추아어" bar_flags="0" />
 	</info>
-	<info name="괌" url_index="161" info_type="City" angle="0">
+	<info name="괌" url_index="157" info_type="City" angle="0">
 		<position x="6588" y="4208" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 		<city_detail index="161" city_type="City" alliance_type="Alliance" cultural_sphere="Oceania" has_name_image="True" lang1="오세아니아어" bar_flags="0" />
 	</info>
-	<info name="사마라이" url_index="162" info_type="City" angle="0">
+	<info name="사마라이" url_index="156" info_type="City" angle="0">
 		<position x="6865" y="5152" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 		<city_detail index="162" city_type="City" alliance_type="Alliance" cultural_sphere="Oceania" has_name_image="True" lang1="오세아니아어" bar_flags="0" />
 	</info>
-	<info name="히바오아" url_index="163" info_type="City" angle="0">
+	<info name="히바오아" url_index="167" info_type="City" angle="0">
 		<position x="10134" y="4998" />
 		<name_offset1 x="2" y="7" />
 		<name_offset2 x="2" y="7" />
@@ -1065,7 +1065,7 @@
 		<name_offset2 x="-25" y="2" />
 		<city_detail index="176" city_type="City" alliance_type="Unknown" cultural_sphere="Taiwan" has_name_image="True" lang1="중국어" bar_flags="2" />
 	</info>
-	<info name="상트페테르부르크" url_index="495" info_type="City" angle="0">
+	<info name="상트페테르부르크" url_index="-1" info_type="City" angle="0">
 		<position x="1230" y="1965" />
 		<name_offset1 x="1" y="1" />
 		<name_offset2 x="1" y="1" />
@@ -1107,7 +1107,7 @@
 		<name_offset2 x="8" y="8" />
 		<city_detail index="207" city_type="City" alliance_type="Unknown" cultural_sphere="Unknown" has_name_image="True" lang1="보급항" bar_flags="0" />
 	</info>
-	<info name="포트로얄" url_index="147" info_type="City" angle="0">
+	<info name="포트로얄" url_index="-1" info_type="City" angle="0">
 		<position x="13182" y="4071" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
@@ -1338,273 +1338,273 @@
 
 	<!-- 상륙지(1차필드) -->
 
-	<info name="발트해 남서쪽" url_index="471" info_type="Shore" angle="0">
+	<info name="발트해 남서쪽" url_index="1037" info_type="Shore" angle="0">
 		<position x="752" y="2328" />
 		<name_offset1 x="2" y="6" />
 		<name_offset2 x="2" y="6" />
 	</info>
-	<info name="발트해 남동쪽" url_index="472" info_type="Shore" angle="0">
+	<info name="발트해 남동쪽" url_index="1038" info_type="Shore" angle="0">
 		<position x="957" y="2232" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="보스니아만 서쪽" url_index="489" info_type="Shore" angle="0">
+	<info name="보스니아만 서쪽" url_index="1040" info_type="Shore" angle="0">
 		<position x="854" y="1699" />
 		<name_offset1 x="-3" y="-4" />
 		<name_offset2 x="-3" y="-4" />
 	</info>
-	<info name="스칸디나비아 서쪽" url_index="441" info_type="Shore" angle="0">
+	<info name="스칸디나비아 서쪽" url_index="1041" info_type="Shore" angle="0">
 		<position x="382" y="1716" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="발트해 북쪽" url_index="476" info_type="Shore" angle="0">
+	<info name="발트해 북쪽" url_index="1039" info_type="Shore" angle="0">
 		<position x="1032" y="1928" />
 		<name_offset1 x="-2" y="-3" />
 		<name_offset2 x="-2" y="-3" />
 	</info>
-	<info name="브리튼 섬 남쪽" url_index="484" info_type="Shore" angle="0">
+	<info name="브리튼 섬 남쪽" url_index="1016" info_type="Shore" angle="0">
 		<position x="16206" y="2465" />
 		<name_offset1 x="-2" y="-3" />
 		<name_offset2 x="-2" y="-3" />
 	</info>
-	<info name="브리튼 섬 동쪽" url_index="485" info_type="Shore" angle="0">
+	<info name="브리튼 섬 동쪽" url_index="1036" info_type="Shore" angle="0">
 		<position x="16236" y="2215" />
 		<name_offset1 x="6" y="-2" />
 		<name_offset2 x="6" y="-2" />
 	</info>
-	<info name="브리튼 섬 북쪽" url_index="486" info_type="Shore" angle="0">
+	<info name="브리튼 섬 북쪽" url_index="1035" info_type="Shore" angle="0">
 		<position x="16093" y="2058" />
 		<name_offset1 x="5" y="-1" />
 		<name_offset2 x="5" y="-1" />
 	</info>
-	<info name="프랑스 북서쪽" url_index="483" info_type="Shore" angle="0">
+	<info name="프랑스 북서쪽" url_index="1034" info_type="Shore" angle="0">
 		<position x="16172" y="2636" />
 		<name_offset1 x="10" y="4" />
 		<name_offset2 x="10" y="4" />
 	</info>
-	<info name="모로코 서쪽" url_index="492" info_type="Shore" angle="0">
+	<info name="모로코 서쪽" url_index="1047" info_type="Shore" angle="0">
 		<position x="15802" y="3446" />
 		<name_offset1 x="4" y="2" />
 		<name_offset2 x="4" y="2" />
 	</info>
-	<info name="아프리카 북서쪽" url_index="407" info_type="Shore" angle="0">
+	<info name="아프리카 북서쪽" url_index="1048" info_type="Shore" angle="0">
 		<position x="15686" y="3607" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="아프리카 북쪽" url_index="406" info_type="Shore" angle="0">
+	<info name="아프리카 북쪽" url_index="1046" info_type="Shore" angle="0">
 		<position x="16100" y="3395" />
 		<name_offset1 x="5" y="3" />
 		<name_offset2 x="5" y="3" />
 	</info>
-	<info name="비스케이만 남쪽" url_index="477" info_type="Shore" angle="0">
+	<info name="비스케이만 남쪽" url_index="1033" info_type="Shore" angle="0">
 		<position x="15949" y="2936" />
 		<name_offset1 x="0" y="5" />
 		<name_offset2 x="0" y="5" />
 	</info>
-	<info name="남 지중해 아프리카 북쪽" url_index="503" info_type="Shore" angle="0">
+	<info name="남 지중해 아프리카 북쪽" url_index="1045" info_type="Shore" angle="0">
 		<position x="885" y="3528" />
 		<name_offset1 x="0" y="5" />
 		<name_offset2 x="0" y="5" />
 	</info>
-	<info name="이집트 북쪽" url_index="413" info_type="Shore" angle="0">
+	<info name="이집트 북쪽" url_index="1044" info_type="Shore" angle="0">
 		<position x="1121" y="3525" />
 		<name_offset1 x="0" y="2" />
 		<name_offset2 x="0" y="2" />
 	</info>
-	<info name="터키 서쪽" url_index="463" info_type="Shore" angle="0">
+	<info name="터키 서쪽" url_index="1017" info_type="Shore" angle="0">
 		<position x="1203" y="3176" />
 		<name_offset1 x="6" y="5" />
 		<name_offset2 x="6" y="5" />
 	</info>
-	<info name="카이로 건너편" url_index="419" info_type="Shore" angle="0">
+	<info name="카이로 건너편" url_index="1019" info_type="Shore" angle="0">
 		<position x="1371" y="3600" />
 		<name_offset1 x="-8" y="6" />
 		<name_offset2 x="-8" y="6" />
 	</info>
-	<info name="나일강 중부" url_index="467" info_type="Shore" angle="0">
+	<info name="나일강 중부" url_index="1020" info_type="Shore" angle="0">
 		<position x="1514" y="3764" />
 		<name_offset1 x="0" y="-7" />
 		<name_offset2 x="0" y="-7" />
 	</info>
-	<info name="나일강 상류" url_index="464" info_type="Shore" angle="0">
+	<info name="나일강 상류" url_index="1021" info_type="Shore" angle="0">
 		<position x="1401" y="3959" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="흑해 북서쪽" url_index="500" info_type="Shore" angle="0">
+	<info name="흑해 북서쪽" url_index="1042" info_type="Shore" angle="0">
 		<position x="1340" y="2858" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="터키 북쪽" url_index="461" info_type="Shore" angle="0">
+	<info name="터키 북쪽" url_index="1018" info_type="Shore" angle="0">
 		<position x="1552" y="3029" />
 		<name_offset1 x="-20" y="8" />
 		<name_offset2 x="-20" y="8" />
 	</info>
-	<info name="흑해 동쪽" url_index="501" info_type="Shore" angle="0">
+	<info name="흑해 동쪽" url_index="1043" info_type="Shore" angle="0">
 		<position x="1897" y="3008" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="멕시코만 남서쪽" url_index="525" info_type="Shore" angle="0">
+	<info name="멕시코만 남서쪽" url_index="1071" info_type="Shore" angle="0">
 		<position x="12014" y="4003" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="남비 북해안 고지" url_index="448" info_type="Shore" angle="0">
+	<info name="남비 북해안 고지" url_index="1065" info_type="Shore" angle="0">
 		<position x="13535" y="4403" />
 		<name_offset1 x="1" y="15" />
 		<name_offset2 x="1" y="15" />
 	</info>
-	<info name="아마존강 상류" url_index="456" info_type="Shore" angle="0">
+	<info name="아마존강 상류" url_index="1067" info_type="Shore" angle="0">
 		<position x="13470" y="4919" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="남미 북동쪽" url_index="522" info_type="Shore" angle="0">
+	<info name="남미 북동쪽" url_index="1072" info_type="Shore" angle="0">
 		<position x="14418" y="4930" />
 		<name_offset1 x="0" y="4" />
 		<name_offset2 x="0" y="4" />
 	</info>
-	<info name="남미 남동쪽" url_index="523" info_type="Shore" angle="0">
+	<info name="남미 남동쪽" url_index="1073" info_type="Shore" angle="0">
 		<position x="14120" y="5932" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="아프리카 서쪽" url_index="400" info_type="Shore" angle="0">
+	<info name="아프리카 서쪽" url_index="1049" info_type="Shore" angle="0">
 		<position x="15624" y="4307" />
 		<name_offset1 x="5" y="-4" />
 		<name_offset2 x="5" y="-4" />
 	</info>
-	<info name="대서양중앙 서쪽" url_index="502" info_type="Shore" angle="0">
+	<info name="대서양중앙 서쪽" url_index="1050" info_type="Shore" angle="0">
 		<position x="15994" y="4584" />
 		<name_offset1 x="4" y="-12" />
 		<name_offset2 x="4" y="-12" />
 	</info>
-	<info name="아프리카 기니 만 북쪽" url_index="395" info_type="Shore" angle="0">
+	<info name="아프리카 기니 만 북쪽" url_index="1051" info_type="Shore" angle="0">
 		<position x="376" y="4591" />
 		<name_offset1 x="5" y="-3" />
 		<name_offset2 x="5" y="-3" />
 	</info>
-	<info name="아프리카 남서쪽" url_index="399" info_type="Shore" angle="0">
+	<info name="아프리카 남서쪽" url_index="1052" info_type="Shore" angle="0">
 		<position x="540" y="5337" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="아프리카 남남서쪽" url_index="401" info_type="Shore" angle="0">
+	<info name="아프리카 남남서쪽" url_index="1053" info_type="Shore" angle="0">
 		<position x="731" y="5774" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="아프리카 남쪽" url_index="398" info_type="Shore" angle="0">
+	<info name="아프리카 남쪽" url_index="1054" info_type="Shore" angle="0">
 		<position x="1251" y="6065" />
 		<name_offset1 x="0" y="-5" />
 		<name_offset2 x="0" y="-5" />
 	</info>
-	<info name="아프리카 남남동쪽" url_index="402" info_type="Shore" angle="0">
+	<info name="아프리카 남남동쪽" url_index="1055" info_type="Shore" angle="0">
 		<position x="1504" y="5761" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="아프리카 남동쪽" url_index="403" info_type="Shore" angle="0">
+	<info name="아프리카 남동쪽" url_index="1022" info_type="Shore" angle="0">
 		<position x="1692" y="5426" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="마다가스카르 서쪽" url_index="491" info_type="Shore" angle="0">
+	<info name="마다가스카르 서쪽" url_index="1056" info_type="Shore" angle="0">
 		<position x="2013" y="5504" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="인도양 아프리카 동쪽" url_index="409" info_type="Shore" angle="0">
+	<info name="인도양 아프리카 동쪽" url_index="1057" info_type="Shore" angle="0">
 		<position x="2259" y="4451" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="홍해 서쪽" url_index="498" info_type="Shore" angle="0">
+	<info name="홍해 서쪽" url_index="1058" info_type="Shore" angle="0">
 		<position x="1699" y="3976" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="홍해 동쪽" url_index="499" info_type="Shore" angle="0">
+	<info name="홍해 동쪽" url_index="1059" info_type="Shore" angle="0">
 		<position x="1883" y="4010" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="아라비아 해 북서쪽" url_index="404" info_type="Shore" angle="0">
+	<info name="아라비아 해 북서쪽" url_index="1060" info_type="Shore" angle="0">
 		<position x="2348" y="4171" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="페르시아 만 북쪽" url_index="487" info_type="Shore" angle="0">
+	<info name="페르시아 만 북쪽" url_index="1023" info_type="Shore" angle="0">
 		<position x="2396" y="3778" />
 		<name_offset1 x="0" y="-6" />
 		<name_offset2 x="0" y="-6" />
 	</info>
-	<info name="아라비아 해 북동쪽" url_index="405" info_type="Shore" angle="0">
+	<info name="아라비아 해 북동쪽" url_index="1024" info_type="Shore" angle="0">
 		<position x="2827" y="3784" />
 		<name_offset1 x="4" y="-14" />
 		<name_offset2 x="4" y="-14" />
 	</info>
-	<info name="인도 서쪽" url_index="410" info_type="Shore" angle="0">
+	<info name="인도 서쪽" url_index="1061" info_type="Shore" angle="0">
 		<position x="3309" y="3979" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="벵갈만 북동쪽" url_index="488" info_type="Shore" angle="0">
+	<info name="벵갈만 북동쪽" url_index="1062" info_type="Shore" angle="0">
 		<position x="4232" y="3976" />
 		<name_offset1 x="-8" y="-6" />
 		<name_offset2 x="-8" y="-6" />
 	</info>
-	<info name="수마트라 섬 남서쪽" url_index="556" info_type="Shore" angle="0">
+	<info name="수마트라 섬 남서쪽" url_index="1077" info_type="Shore" angle="0">
 		<position x="4496" y="4899" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="자바섬 북해안" url_index="560" info_type="Shore" angle="0">
+	<info name="자바섬 북해안" url_index="1076" info_type="Shore" angle="0">
 		<position x="5012" y="5008" />
 		<name_offset1 x="0" y="-14" />
 		<name_offset2 x="0" y="-14" />
 	</info>
-	<info name="셀레베스 섬 동쪽" url_index="562" info_type="Shore" angle="0">
+	<info name="셀레베스 섬 동쪽" url_index="1078" info_type="Shore" angle="0">
 		<position x="5566" y="4813" />
 		<name_offset1 x="6" y="0" />
 		<name_offset2 x="6" y="0" />
 	</info>
-	<info name="오스트레일리아 북서해안" url_string="오스트레일리아 북서해안" info_type="Shore" angle="0">
+	<info name="오스트레일리아 북서해안" url_index="1082" info_type="Shore" angle="0">
 		<position x="5822" y="6000" />
 		<name_offset1 x="5" y="2" />
 		<name_offset2 x="5" y="2" />
 	</info>
-	<info name="라파누이 서해안" url_string="라파누이 서해안" info_type="Shore" angle="0">
+	<info name="라파누이 서해안" url_index="1085" info_type="Shore" angle="0">
 		<position x="11405" y="5682" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 	</info>
-	<info name="남미 남서해안" url_string="남미 남서해안" info_type="Shore" angle="0">
+	<info name="남미 남서해안" url_index="1086" info_type="Shore" angle="0">
 		<position x="12951" y="6615" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="뉴기니 섬 남해안" url_string="뉴기니 섬 남해안" info_type="Shore" angle="0">
+	<info name="뉴기니 섬 남해안" url_index="1081" info_type="Shore" angle="0">
 		<position x="6482" y="5073" />
 		<name_offset1 x="0" y="-13" />
 		<name_offset2 x="0" y="-13" />
 	</info>
-	<info name="남미 북서해안" url_string="남미 북서해안" info_type="Shore" angle="0">
+	<info name="남미 북서해안" url_index="1090" info_type="Shore" angle="0">
 		<position x="12681" y="4564" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
 
-	<info name="갈라파고스 섬 남쪽" url_string="갈라파고스 섬 남쪽" info_type="Shore" angle="0">
+	<info name="갈라파고스 섬 남쪽" url_index="1091" info_type="Shore" angle="0">
 		<position x="12096" y="4916" />
 		<name_offset1 x="0" y="5" />
 		<name_offset2 x="0" y="5" />
 	</info>
-	<info name="폰페이 섬 남쪽" url_string="폰페이 섬 남쪽" info_type="Shore" angle="0">
+	<info name="폰페이 섬 남쪽" url_index="1087" info_type="Shore" angle="0">
 		<position x="7234" y="4499" />
 		<name_offset1 x="0" y="4" />
 		<name_offset2 x="0" y="4" />
@@ -1678,357 +1678,357 @@
 	
 	<!-- 2차 필드, 교외 -->
 
-	<info name="오슬로 북쪽" url_index="412" info_type="OutsideCity" angle="0">
+	<info name="오슬로 북쪽" url_index="1028" info_type="OutsideCity" angle="0">
 		<position x="488" y="1836" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="뤼베크 남동쪽" url_index="495" info_type="OutsideCity" angle="0">
+	<info name="뤼베크 남동쪽" url_index="1027" info_type="OutsideCity" angle="0">
 		<position x="540" y="2413" />
 		<name_offset1 x="0" y="3" />
 		<name_offset2 x="0" y="3" />
 	</info>
-	<info name="더블린 북쪽" url_index="156" info_type="OutsideCity" angle="0">
+	<info name="더블린 북쪽" url_index="1002" info_type="OutsideCity" angle="0">
 		<position x="15949" y="2280" />
 		<name_offset1 x="-20" y="0" />
 		<name_offset2 x="-20" y="0" />
 	</info>
-	<info name="칼레 남쪽" url_index="423" info_type="OutsideCity" angle="0">
+	<info name="칼레 남쪽" url_index="1026" info_type="OutsideCity" angle="0">
 		<position x="16356" y="2653" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="낭트 남쪽" url_index="468" info_type="OutsideCity" angle="0">
+	<info name="낭트 남쪽" url_index="1001" info_type="OutsideCity" angle="0">
 		<position x="16178" y="2765" />
 		<name_offset1 x="5" y="-1" />
 		<name_offset2 x="5" y="-1" />
 	</info>
-	<info name="제노바 북서쪽" url_index="533" info_type="OutsideCity" angle="0">
+	<info name="제노바 북서쪽" url_index="1025" info_type="OutsideCity" angle="0">
 		<position x="242" y="2796" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
 	</info>
-	<info name="나폴리 근교" url_index="534" info_type="OutsideCity" angle="0">
+	<info name="나폴리 근교" url_index="1003" info_type="OutsideCity" angle="0">
 		<position x="663" y="3073" />
 		<name_offset1 x="-8" y="8" />
 		<name_offset2 x="-8" y="8" />
 	</info>
-	<info name="간디아 서쪽" url_index="424" info_type="OutsideCity" angle="0">
+	<info name="간디아 서쪽" url_index="1012" info_type="OutsideCity" angle="0">
 		<position x="1275" y="3265" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="파마구스타 서쪽" url_index="481" info_type="OutsideCity" angle="0">
+	<info name="파마구스타 서쪽" url_index="1006" info_type="OutsideCity" angle="0">
 		<position x="1528" y="3268" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="아테네 북서쪽" url_index="393" info_type="OutsideCity" angle="0">
+	<info name="아테네 북서쪽" url_index="1010" info_type="OutsideCity" angle="0">
 		<position x="1053" y="3196" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="아테네 서쪽" url_index="392" info_type="OutsideCity" angle="0">
+	<info name="아테네 서쪽" url_index="1011" info_type="OutsideCity" angle="0">
 		<position x="1029" y="3258" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="살로니카 남서쪽" url_index="438" info_type="OutsideCity" angle="0">
+	<info name="살로니카 남서쪽" url_index="1009" info_type="OutsideCity" angle="0">
 		<position x="1005" y="2991" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="베이루트 북쪽" url_index="479" info_type="OutsideCity" angle="0">
+	<info name="베이루트 북쪽" url_index="1007" info_type="OutsideCity" angle="0">
 		<position x="1716" y="3340" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="야파 남동쪽" url_index="494" info_type="OutsideCity" angle="0">
+	<info name="야파 남동쪽" url_index="1008" info_type="OutsideCity" angle="0">
 		<position x="1596" y="3555" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="튀니스 서쪽" url_index="444" info_type="OutsideCity" angle="0">
+	<info name="튀니스 서쪽" url_index="1004" info_type="OutsideCity" angle="0">
 		<position x="287" y="3354" />
 		<name_offset1 x="2" y="0" />
 		<name_offset2 x="2" y="0" />
 	</info>
-	<info name="트리폴리 동쪽" url_index="462" info_type="OutsideCity" angle="0">
+	<info name="트리폴리 동쪽" url_index="1005" info_type="OutsideCity" angle="0">
 		<position x="471" y="3545" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="베라크루스 남동쪽" url_index="528" info_type="OutsideCity" angle="0">
+	<info name="베라크루스 남동쪽" url_index="1068" info_type="OutsideCity" angle="0">
 		<position x="12137" y="4085" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="베라크루스 남쪽" url_index="527" info_type="OutsideCity" angle="0">
+	<info name="베라크루스 남쪽" url_index="1069" info_type="OutsideCity" angle="0">
 		<position x="12062" y="4085" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="산토도밍고 서쪽" url_index="439" info_type="OutsideCity" angle="0">
+	<info name="산토도밍고 서쪽" url_index="1063" info_type="OutsideCity" angle="0">
 		<position x="13429" y="4000" />
 		<name_offset1 x="2" y="-30" />
 		<name_offset2 x="2" y="-30" />
 	</info>
-	<info name="하바나 동쪽" url_index="416" info_type="OutsideCity" angle="0">
+	<info name="하바나 동쪽" url_index="1064" info_type="OutsideCity" angle="0">
 		<position x="13029" y="3870" />
 		<name_offset1 x="0" y="-8" />
 		<name_offset2 x="0" y="-8" />
 	</info>
-	<info name="루안다 북쪽" url_index="496" info_type="OutsideCity" angle="0">
+	<info name="루안다 북쪽" url_index="1029" info_type="OutsideCity" angle="0">
 		<position x="564" y="4916" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="몸바사 서쪽" url_index="493" info_type="OutsideCity" angle="0">
+	<info name="몸바사 서쪽" url_index="1030" info_type="OutsideCity" angle="0">
 		<position x="1712" y="4882" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="마사와 서남쪽" url_index="537" info_type="OutsideCity" angle="0">
+	<info name="마사와 서남쪽" url_index="1013" info_type="OutsideCity" angle="0">
 		<position x="1685" y="4222" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="바스라 북서쪽" url_index="469" info_type="OutsideCity" angle="0">
+	<info name="바스라 북서쪽" url_index="1066" info_type="OutsideCity" angle="0">
 		<position x="2109" y="3692" />
 		<name_offset1 x="3" y="-3" />
 		<name_offset2 x="3" y="-3" />
 	</info>
-	<info name="캘리컷 북쪽" url_index="420" info_type="OutsideCity" angle="0">
+	<info name="캘리컷 북쪽" url_index="1031" info_type="OutsideCity" angle="0">
 		<position x="3429" y="4239" />
 		<name_offset1 x="0" y="-4" />
 		<name_offset2 x="0" y="-4" />
 	</info>
-	<info name="실론 동쪽" url_index="442" info_type="OutsideCity" angle="0">
+	<info name="실론 동쪽" url_index="1032" info_type="OutsideCity" angle="0">
 		<position x="3716" y="4475" />
 		<name_offset1 x="10" y="0" />
 		<name_offset2 x="10" y="0" />
 	</info>
-	<info name="퐁디셰리 남쪽" url_index="490" info_type="OutsideCity" angle="0">
+	<info name="퐁디셰리 남쪽" url_index="1014" info_type="OutsideCity" angle="0">
 		<position x="3607" y="4338" />
 		<name_offset1 x="14" y="-1" />
 		<name_offset2 x="14" y="-1" />
 	</info>
-	<info name="캘커타 남서쪽" url_index="421" info_type="OutsideCity" angle="0">
+	<info name="캘커타 남서쪽" url_index="1015" info_type="OutsideCity" angle="0">
 		<position x="3873" y="3931" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="메리다 남서쪽" url_index="531" info_type="OutsideCity" angle="0">
+	<info name="메리다 남서쪽" url_index="1070" info_type="OutsideCity" angle="0">
 		<position x="12370" y="3993" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="페구 북쪽" url_index="566" info_type="OutsideCity" angle="0">
+	<info name="페구 북쪽" url_index="1074" info_type="OutsideCity" angle="0">
 		<position x="4413" y="4048" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="지아딘 북서쪽" url_index="558" info_type="OutsideCity" angle="0">
+	<info name="지아딘 북서쪽" url_index="1075" info_type="OutsideCity" angle="0">
 		<position x="4817" y="4277" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="브루나이 남동쪽" url_index="569" info_type="OutsideCity" angle="0">
+	<info name="브루나이 남동쪽" url_index="1080" info_type="OutsideCity" angle="0">
 		<position x="5261" y="4632" />
 		<name_offset1 x="0" y="3" />
 		<name_offset2 x="0" y="3" />
 	</info>
-	<info name="말라카 북서쪽" url_index="572" info_type="OutsideCity" angle="0">
+	<info name="말라카 북서쪽" url_index="1079" info_type="OutsideCity" angle="0">
 		<position x="4629" y="4643" />
 		<name_offset1 x="-2" y="-6" />
 		<name_offset2 x="-2" y="-6" />
 	</info>
-	<info name="왕가누이 서쪽" url_string="왕가누이 서쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="왕가누이 서쪽" url_index="1084" info_type="OutsideCity" angle="0">
 		<position x="8315" y="6482" />
 		<name_offset1 x="7" y="-10" />
 		<name_offset2 x="7" y="-10" />
 	</info>
-	<info name="호바트 북쪽" url_string="호바트 북쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="호바트 북쪽" url_index="1083" info_type="OutsideCity" angle="0">
 		<position x="7019" y="6872" />
 		<name_offset1 x="0" y="-17" />
 		<name_offset2 x="0" y="-17" />
 	</info>
-	<info name="코피아포 북서쪽" url_string="코피아포 북서쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="코피아포 북서쪽" url_index="1092" info_type="OutsideCity" angle="0">
 		<position x="13217" y="5723" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="리마 북쪽" url_string="리마 북쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="리마 북쪽" url_index="1088" info_type="OutsideCity" angle="0">
 		<position x="12882" y="5179" />
 		<name_offset1 x="-3" y="-4" />
 		<name_offset2 x="-3" y="-4" />
 	</info>
-	<info name="리마 북동쪽" url_string="리마 북동쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="리마 북동쪽" url_index="1089" info_type="OutsideCity" angle="0">
 		<position x="12951" y="5214" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="포르토벨로 북서쪽" url_string="포르토벨로 북서쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="포르토벨로 북서쪽" url_index="1094" info_type="OutsideCity" angle="0">
 		<position x="12814" y="4130" />
 		<name_offset1 x="-4" y="-3" />
 		<name_offset2 x="-4" y="-3" />
 	</info>
-	<info name="파나마 북동쪽" url_string="파나마 북동쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="파나마 북동쪽" url_index="1093" info_type="OutsideCity" angle="0">
 		<position x="12797" y="4249" />
 		<name_offset1 x="0" y="3" />
 		<name_offset2 x="0" y="3" />
 	</info>
-	<info name="솔즈베리 평원" url_index="443" info_type="Shore2" angle="0">
+	<info name="솔즈베리 평원" url_index="10163" info_type="Shore2" angle="0">
 		<position x="16206" y="2396" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="보인 계곡" url_index="157" info_type="Shore2" angle="0">
+	<info name="보인 계곡" url_index="10024" info_type="Shore2" angle="0">
 		<position x="15983" y="2331" />
 		<name_offset1 x="0" y="3" />
 		<name_offset2 x="0" y="3" />
 	</info>
-	<info name="카르낙 거석군" url_index="422" info_type="Shore2" angle="0">
+	<info name="카르낙 거석군" url_index="10014" info_type="Shore2" angle="0">
 		<position x="16178" y="2810" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="캄파니아 지방" url_index="535" info_type="Shore2" angle="0">
+	<info name="캄파니아 지방" url_index="10034" info_type="Shore2" angle="0">
 		<position x="608" y="3042" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="마케도니아 지방" url_index="428" info_type="Shore2" angle="0">
+	<info name="마케도니아 지방" url_index="10094" info_type="Shore2" angle="0">
 		<position x="1005" y="2950" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="올림피아 지방" url_index="414" info_type="Shore2" angle="0">
+	<info name="올림피아 지방" url_index="10114" info_type="Shore2" angle="0">
 		<position x="1022" y="3295" />
 		<name_offset1 x="-2" y="12" />
 		<name_offset2 x="-2" y="12" />
 	</info>
-	<info name="포키스 지방" url_index="482" info_type="Shore2" angle="0">
+	<info name="포키스 지방" url_index="10104" info_type="Shore2" angle="0">
 		<position x="991" y="3169" />
 		<name_offset1 x="0" y="-4" />
 		<name_offset2 x="0" y="-4" />
 	</info>
-	<info name="크레타섬 내륙" url_index="436" info_type="Shore2" angle="0">
+	<info name="크레타섬 내륙" url_index="10124" info_type="Shore2" angle="0">
 		<position x="1275" y="3227" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="파포스" url_index="470" info_type="Shore2" angle="0">
+	<info name="파포스" url_index="10064" info_type="Shore2" angle="0">
 		<position x="1528" y="3230" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="비루사의 언덕" url_index="480" info_type="Shore2" angle="0">
+	<info name="비루사의 언덕" url_index="10044" info_type="Shore2" angle="0">
 		<position x="287" y="3432" />
 		<name_offset1 x="0" y="4" />
 		<name_offset2 x="0" y="4" />
 	</info>
-	<info name="렙티스마그나 유적" url_index="497" info_type="Shore2" angle="0">
+	<info name="렙티스마그나 유적" url_index="10054" info_type="Shore2" angle="0">
 		<position x="471" y="3624" />
 		<name_offset1 x="5" y="-4" />
 		<name_offset2 x="5" y="-4" />
 	</info>
-	<info name="히살리크 언덕" url_index="430" info_type="Shore2" angle="0">
+	<info name="히살리크 언덕" url_index="10173" info_type="Shore2" angle="0">
 		<position x="1312" y="3155" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="비블로스" url_index="478" info_type="Shore2" angle="0">
+	<info name="비블로스" url_index="10074" info_type="Shore2" angle="0">
 		<position x="1788" y="3289" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="기자지방" url_index="536" info_type="Shore2" angle="0">
+	<info name="기자지방" url_index="10193" info_type="Shore2" angle="0">
 		<position x="1309" y="3678" />
 		<name_offset1 x="-6" y="4" />
 		<name_offset2 x="-6" y="4" />
 	</info>
-	<info name="룩소르지방" url_index="434" info_type="Shore2" angle="0">
+	<info name="룩소르지방" url_index="10203" info_type="Shore2" angle="0">
 		<position x="1538" y="3829" />
 		<name_offset1 x="-20" y="0" />
 		<name_offset2 x="-20" y="0" />
 	</info>
-	<info name="아스완 남부" url_index="432" info_type="Shore2" angle="0">
+	<info name="아스완 남부" url_index="10213" info_type="Shore2" angle="0">
 		<position x="1367" y="4034" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="아나트리아 고원" url_index="394" info_type="Shore2" angle="0">
+	<info name="아나트리아 고원" url_index="10183" info_type="Shore2" angle="0">
 		<position x="1603" y="3111" />
 		<name_offset1 x="0" y="6" />
 		<name_offset2 x="0" y="6" />
 	</info>
-	<info name="코나라크 지방" url_index="437" info_type="Shore2" angle="0">
+	<info name="코나라크 지방" url_index="10154" info_type="Shore2" angle="0">
 		<position x="3819" y="4010" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="유카탄반도 내륙" url_index="542" info_type="Shore2" angle="0">
+	<info name="유카탄반도 내륙" url_index="10704" info_type="Shore2" angle="0">
 		<position x="12397" y="4051" />
 		<name_offset1 x="-3" y="4" />
 		<name_offset2 x="-3" y="4" />
 	</info>
-	<info name="마야 저지대" url_index="543" info_type="Shore2" angle="0">
+	<info name="마야 저지대" url_index="10694" info_type="Shore2" angle="0">
 		<position x="12062" y="4133" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="테노치티틀란" url_index="564" info_type="Shore2" angle="0">
+	<info name="테노치티틀란" url_index="127" info_type="Shore2" angle="0">
 		<position x="12137" y="4133" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="짐바브웨 내륙" url_index="440" info_type="Shore2" angle="0">
+	<info name="짐바브웨 내륙" url_index="10223" info_type="Shore2" angle="0">
 		<position x="1641" y="5354" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="이디오피아 북부" url_index="538" info_type="Shore2" angle="0">
+	<info name="이디오피아 북부" url_index="10134" info_type="Shore2" angle="0">
 		<position x="1685" y="4301" />
 		<name_offset1 x="-4" y="0" />
 		<name_offset2 x="-4" y="0" />
 	</info>
-	<info name="쿠헤라흐마트" url_index="435" info_type="Shore2" angle="0">
+	<info name="쿠헤라흐마트" url_index="10233" info_type="Shore2" angle="0">
 		<position x="2396" y="3706" />
 		<name_offset1 x="0" y="-4" />
 		<name_offset2 x="0" y="-4" />
 	</info>
-	<info name="신드 지방" url_index="452" info_type="Shore2" angle="0">
+	<info name="신드 지방" url_index="10243" info_type="Shore2" angle="0">
 		<position x="2827" y="3678" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="우르 지방" url_index="411" info_type="Shore2" angle="0">
+	<info name="우르 지방" url_index="10664" info_type="Shore2" angle="0">
 		<position x="2051" y="3637" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="탄자울지방" url_index="450" info_type="Shore2" angle="0">
+	<info name="탄자울지방" url_index="10144" info_type="Shore2" angle="0">
 		<position x="3572" y="4390" />
 		<name_offset1 x="16" y="0" />
 		<name_offset2 x="16" y="0" />
 	</info>
-	<info name="자바섬 오지" url_string="자바섬 오지" info_type="Shore2" angle="0">
+	<info name="자바섬 오지" url_index="10763" info_type="Shore2" angle="0">
 		<position x="5056" y="5036" />
 		<name_offset1 x="0" y="12" />
 		<name_offset2 x="0" y="12" />
 	</info>
-	<info name="시엠레아브 근교" url_string="시엠레아브 근교" info_type="Shore2" angle="0">
+	<info name="시엠레아브 근교" url_index="10753" info_type="Shore2" angle="0">
 		<position x="4752" y="4219" />
 		<name_offset1 x="6" y="0" />
 		<name_offset2 x="6" y="0" />
 	</info>
-	<info name="파간지방" url_string="파간지방" info_type="Shore2" angle="0">
+	<info name="파간지방" url_index="10744" info_type="Shore2" angle="0">
 		<position x="4451" y="3969" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="라파누이 오지" url_string="라파누이 오지" info_type="Shore2" angle="0">
+	<info name="라파누이 오지" url_index="10853" info_type="Shore2" angle="0">
 		<position x="11405" y="5610" />
 		<name_offset1 x="0" y="-5" />
 		<name_offset2 x="0" y="-5" />
@@ -2038,7 +2038,7 @@
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="울루루 주변" url_string="울루루 주변" info_type="Shore2" angle="0">
+	<info name="울루루 주변" url_index="10823" info_type="Shore2" angle="0">
 		<position x="5829" y="6120" />
 		<name_offset1 x="6" y="0" />
 		<name_offset2 x="6" y="0" />
@@ -2048,34 +2048,34 @@
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
 	</info>
-	<info name="카이로 남동쪽" url_string="카이로 남동쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="카이로 남동쪽" url_index="1096" info_type="OutsideCity" angle="0">
 		<position x="1466" y="3648" />
 		<name_offset1 x="4" y="6" />
 		<name_offset2 x="4" y="6" />
 	</info>
-	<info name="수에즈 북서쪽" url_string="수에즈 북서쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="수에즈 북서쪽" url_index="1095" info_type="OutsideCity" angle="0">
 		<position x="1627" y="3627" />
 		<name_offset1 x="4" y="-3" />
 		<name_offset2 x="4" y="-3" />
 	</info>
 	
-	<info name="갈라파고스 섬 안쪽" url_string="갈라파고스 섬 안쪽" info_type="Shore2" angle="0">
+	<info name="갈라파고스 섬 안쪽" url_index="10913" info_type="Shore2" angle="0">
 		<position x="12096" y="4855" />
 		<name_offset1 x="0" y="-12" />
 		<name_offset2 x="0" y="-12" />
 	</info>
 	
-	<info name="폰페이 섬 안쪽" url_string="폰페이 섬 안쪽" info_type="Shore2" angle="0">
+	<info name="폰페이 섬 안쪽" url_index="10873" info_type="Shore2" angle="0">
 		<position x="7234" y="4437" />
 		<name_offset1 x="0" y="-4" />
 		<name_offset2 x="0" y="-4" />
 	</info>
-	<info name="과테말라 북동쪽" url_string="과테말라 북동쪽(교외)" info_type="OutsideCity" angle="0">
+	<info name="과테말라 북동쪽" url_index="1097" info_type="OutsideCity" angle="0">
 		<position x="12205" y="4201" />
 		<name_offset1 x="4" y="0" />
 		<name_offset2 x="4" y="0" />
 	</info>
-	<info name="코판 강 북쪽 해안" url_string="코판 강 북쪽 해안" info_type="Shore2" angle="0">
+	<info name="코판 강 북쪽 해안" url_index="1098" info_type="Shore2" angle="0">
 		<position x="12205" y="4164" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
@@ -2156,23 +2156,23 @@
 		<name_offset2 x="0" y="0" />
 	</info>
 
-	<info name="파라과이 강 상류" url_index="523" info_type="Shore2" angle="0">
+	<info name="파라과이 강 상류" url_index="-1" info_type="Shore2" angle="0">
 		<position x="13994" y="5829" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
 
-	<info name="아마존 오지" url_index="456" info_type="Shore2" angle="0">
+	<info name="아마존 오지" url_index="-1" info_type="Shore2" angle="0">
 		<position x="13323" y="4831" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="잠베지 강 중류" url_index="402" info_type="Shore2" angle="0">
+	<info name="잠베지 강 중류" url_index="-1" info_type="Shore2" angle="0">
 		<position x="1449" y="5682" />
 		<name_offset1 x="-5" y="0" />
 		<name_offset2 x="-5" y="0" />
 	</info>
-	<info name="코카서스" url_index="501" info_type="Shore2" angle="0">
+	<info name="코카서스" url_index="-1" info_type="Shore2" angle="0">
 		<position x="1955" y="2916" />
 		<name_offset1 x="5" y="0" />
 		<name_offset2 x="5" y="0" />
@@ -3221,7 +3221,7 @@
 		<name_offset2 x="0" y="0" />
 		<city_detail index="200" city_type="City" alliance_type="Territory" cultural_sphere="Britain" default_country="England" has_name_image="True" lang1="영어" bar_flags="0" />
 	</info>
-	<info name="프랑크푸르트" url_index="495" info_type="InlandCity" angle="0">
+	<info name="프랑크푸르트" url_index="-1" info_type="InlandCity" angle="0">
 		<position x="359" y="2539" />
 		<name_offset1 x="0" y="3" />
 		<name_offset2 x="0" y="3" />
