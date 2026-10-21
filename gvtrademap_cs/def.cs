@@ -7,6 +7,7 @@
 /*-------------------------------------------------------------------------
  using
 ---------------------------------------------------------------------------*/
+using System.IO;
 
 /*-------------------------------------------------------------------------
 
@@ -77,6 +78,38 @@ namespace gvtrademap_cs {
 		public const string MAP_FULLFNAME2 = MAP_PATH + "worldmap_c.png";
 		public const string MIX_MAP_FULLFNAME1 = MAP_PATH + "worldmap_r_mix.png";
 		public const string MIX_MAP_FULLFNAME2 = MAP_PATH + "worldmap_c_mix.png";
+
+		/*-------------------------------------------------------------------------
+		 지도 번호로 지도 파일명을 얻는다
+		 Map3 이후는 worldmap_3.png ~ worldmap_10.png
+		---------------------------------------------------------------------------*/
+		static public string GetMapFileName(MapIndex index) {
+			switch (index) {
+				case MapIndex.Map1: return MAP_FULLFNAME1;
+				case MapIndex.Map2: return MAP_FULLFNAME2;
+				default: return MAP_PATH + "worldmap_" + ((int)index + 1).ToString() + ".png";
+			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 지도 번호로 항로도 즐겨찾기 합성 후의 지도 파일명을 얻는다
+		---------------------------------------------------------------------------*/
+		static public string GetMixMapFileName(MapIndex index) {
+			switch (index) {
+				case MapIndex.Map1: return MIX_MAP_FULLFNAME1;
+				case MapIndex.Map2: return MIX_MAP_FULLFNAME2;
+				default: return MAP_PATH + "worldmap_" + ((int)index + 1).ToString() + "_mix.png";
+			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 지도 파일이 있는지 확인한다
+		 범위 밖의 번호(ini 의 값이 깨진 경우 등)는 false
+		---------------------------------------------------------------------------*/
+		static public bool IsMapExists(MapIndex index) {
+			if ((index < MapIndex.Map1) || (index >= MapIndex.Max)) return false;
+			return File.Exists(GetMapFileName(index));
+		}
 
 		public const string FAVORITEROUTE_FULLFNAME = MAP_PATH + "favoriteroute.bmp";
 		public const string MAP_MASK_FULLFNAME = MAP_PATH + "worldmap_mask.png";

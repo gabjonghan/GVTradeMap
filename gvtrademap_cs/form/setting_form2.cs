@@ -85,7 +85,16 @@ namespace gvtrademap_cs {
 			toolTip1.BackColor = Color.LightYellow;
 			toolTip1.SetToolTip(comboBox2, "플레이하는 서버를 선택");
 			toolTip1.SetToolTip(comboBox3, "소속되어 있는 국가를 선택");
-			toolTip1.SetToolTip(comboBox1, "지도를 선택");
+			toolTip1.SetToolTip(comboBox1, "지도를 선택\n지도3 이후는 map 폴더에 worldmap_3.png ~ worldmap_10.png 를 넣으면 사용할 수 있습니다\n파일이 없는 지도를 선택하면 지도1이 표시됩니다");
+
+			// 지도 목록
+			// 콤보의 순서 = MapIndex 의 순서
+			comboBox1.Items.Clear();
+			for (MapIndex i = MapIndex.Map1; i < MapIndex.Max; i++) {
+				string name = "지도" + ((int)i + 1).ToString();
+				if (!def.IsMapExists(i)) name += " (" + Path.GetFileName(def.GetMapFileName(i)) + " 없음)";
+				comboBox1.Items.Add(name);
+			}
 			toolTip1.SetToolTip(comboBox5, "위도, 경도선의 그리기방법을 선택\n단위는 측량에서 얻어지는 값과 같습니다 (0~16384)\n초기값은 좌표만 그리기");
 			toolTip1.SetToolTip(textBox1, "항로공유용 그룹명을 지정\n비워두면 항로가 공유되지 않습니다");
 			toolTip1.SetToolTip(textBox2, "항로공유 그리기시 표시되는 이름을 지정\n지정된 이름을 항로공유하는 다른 멤버에게 전합니다.\n비워두면 항로가 공유되지 않습니다");

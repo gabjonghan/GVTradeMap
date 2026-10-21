@@ -19,9 +19,19 @@ using Utility.Ini;
 namespace gvtrademap_cs
 {
 	// 지도
+	// Map1, Map2 는 기본 지도. Map3 이후는 map\worldmap_N.png 를 넣었을 때만 사용할 수 있다
+	// ini 에는 번호로 저장되므로 순서를 바꾸지 말 것
 	public enum MapIndex{
-		Map1,				// 맵 1번
-		Map2,				// 맵 2번
+		Map1,				// 맵 1번 (worldmap_r.png)
+		Map2,				// 맵 2번 (worldmap_c.png)
+		Map3,
+		Map4,
+		Map5,
+		Map6,
+		Map7,
+		Map8,
+		Map9,
+		Map10,
 		Max
 	};
 	public enum MapIcon{

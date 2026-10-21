@@ -489,6 +489,8 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private void load_map() {
 			if (is_load) return;		// 무언가 로딩 중
+			// 지도 파일이 없는 번호(추가 지도를 지운 경우, ini 가 깨진 경우 등)는 지도1로 되돌린다
+			if (!def.IsMapExists(m_lib.setting.map)) m_lib.setting.map = MapIndex.Map1;
 			if ((m_map_index == m_lib.setting.map)
 			   && (m_use_mixed_map == m_lib.setting.use_mixed_map)) return;	 // 변경없음
 
@@ -839,15 +841,6 @@ namespace gvtrademap_cs {
 		 지도읽기스레드
 		---------------------------------------------------------------------------*/
 		private void load_map_proc() {
-			string[] map_name_tbl = new string[]{
-				def.MAP_FULLFNAME1,
-				def.MAP_FULLFNAME2,
-			};
-			string[] map_name_tbl2 = new string[]{
-				def.MIX_MAP_FULLFNAME1,
-				def.MIX_MAP_FULLFNAME2,
-			};
-
 			// 진척 상태 취득용으로 초기화
 			m_lib.loop_image.InitializeCreateImage();
 			if (!m_db.SeaArea.IsLoadedMask) {
@@ -857,28 +850,30 @@ namespace gvtrademap_cs {
 			// 지도 읽기
 			m_map_index = m_lib.setting.map;
 			m_use_mixed_map = m_lib.setting.use_mixed_map;
+			string map_fname = def.GetMapFileName(m_map_index);
+			string mix_map_fname = def.GetMixMapFileName(m_map_index);
 
 			if (m_use_mixed_map) {
 				// 합성한 지도를 사용한다
 
 				// 합성하지 않았으면 합성한다
-				favoriteroute.MixMap(map_name_tbl[(int)m_map_index],
+				favoriteroute.MixMap(map_fname,
 										def.FAVORITEROUTE_FULLFNAME,
-										map_name_tbl2[(int)m_map_index],
+										mix_map_fname,
 										ImageFormat.Png);
 				//										ImageFormat.Jpeg);
 				//										ImageFormat.Bmp);
 
-				if (File.Exists(map_name_tbl2[(int)m_map_index])) {
+				if (File.Exists(mix_map_fname)) {
 					// 항로도 즐겨찾기 합성 후의 지도가 있다
-					m_lib.loop_image.CreateImage(map_name_tbl2[(int)m_map_index]);
+					m_lib.loop_image.CreateImage(mix_map_fname);
 				} else {
 					// 항로도 즐겨찾기 합성 후의 지도가 없다
-					m_lib.loop_image.CreateImage(map_name_tbl[(int)m_map_index]);
+					m_lib.loop_image.CreateImage(map_fname);
 				}
 			} else {
 				// 항로도 즐겨찾기 합성 후의 지도를 사용하지 않는다
-				m_lib.loop_image.CreateImage(map_name_tbl[(int)m_map_index]);
+				m_lib.loop_image.CreateImage(map_fname);
 			}
 
 			// 해역군을 마스크에서 작성
@@ -2047,10 +2042,13 @@ namespace gvtrademap_cs {
 			switch (func) {
 				case KeyFunction.map_change:
 					// 지도바꾸기
+					// 지도 파일이 있는 번호만 순서대로 돈다
 					if (!is_load) {
-						if (++m_lib.setting.map >= MapIndex.Max) {
-							m_lib.setting.map = MapIndex.Map1;
-						}
+						MapIndex next = m_lib.setting.map;
+						do {
+							if (++next >= MapIndex.Max) next = MapIndex.Map1;
+						} while ((next != m_lib.setting.map) && !def.IsMapExists(next));
+						m_lib.setting.map = next;
 					}
 					break;
 				case KeyFunction.map_reset_scale:
