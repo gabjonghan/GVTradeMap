@@ -342,7 +342,7 @@
 			// 
 			this.exexgvoacToolStripMenuItem.Name = "exexgvoacToolStripMenuItem";
 			this.exexgvoacToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-			this.exexgvoacToolStripMenuItem.Text = "해역 변동 수집 시작...";
+			this.exexgvoacToolStripMenuItem.Text = "해역 변동 수집 시작 (일본판 전용)...";
 			// 
 			// toolStripSeparator6
 			// 

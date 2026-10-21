@@ -172,7 +172,8 @@ namespace gvtrademap_cs {
 			m_key_assign_manager.List.AddAssign("항로도 목록 열기", "설정 창", Keys.L | Keys.Control, KeyFunction.setting_window_button_11);
 			m_key_assign_manager.List.AddAssign("전체 검색 창 열기", "설정 창", Keys.F | Keys.Control, KeyFunction.setting_window_button_12);
 			m_key_assign_manager.List.AddAssign("설정 대화상자 열기", "설정 창", Keys.None, KeyFunction.setting_window_button_13);
-			m_key_assign_manager.List.AddAssign("해역 정보 수집 시작", "설정 창", Keys.A | Keys.Control, KeyFunction.setting_window_button_exec_gvoac);
+			// 일본판 전용 도구(gvoac.exe)를 실행하므로 실수로 실행되지 않도록 기본 단축키는 없음
+			m_key_assign_manager.List.AddAssign("해역 정보 수집 시작 (일본판 전용)", "설정 창", Keys.None, KeyFunction.setting_window_button_exec_gvoac);
 			m_key_assign_manager.List.AddAssign("항로도 스크린샷 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_00);
 			m_key_assign_manager.List.AddAssign("대항해시대Online 채팅 로그 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_01);
 			m_key_assign_manager.List.AddAssign("대항해시대Online 메일 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_02);

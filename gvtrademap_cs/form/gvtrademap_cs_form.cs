@@ -2207,11 +2207,7 @@ namespace gvtrademap_cs {
 					break;
 				case KeyFunction.setting_window_button_exec_gvoac:
 					// 해역 정보 수집을 시작한다
-					try {
-						Process.Start(def.SEAAREA_APP_FNAME);
-					} catch {
-						MessageBox.Show("해역 정보 수집 시작에 실패하였습니다. ", "시작 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
+					ExecSeaAreaApp();
 					break;
 				case KeyFunction.window_change_border_style:
 					// 윈도우 테두리 표시/비표시
@@ -2335,6 +2331,28 @@ namespace gvtrademap_cs {
 			m_lib.device.SetMustDrawFlag();
 		}
 		#endregion
+
+		/*-------------------------------------------------------------------------
+		 해역 정보 수집 애플리케이션(gvoac.exe)을 실행한다
+		 일본판 전용 도구이므로 메뉴·버튼·키 할당으로 사용자가 직접 실행할 때만 동작한다
+		 (기본 단축키는 할당하지 않는다)
+		---------------------------------------------------------------------------*/
+		public static bool ExecSeaAreaApp() {
+			if (!File.Exists(def.SEAAREA_APP_FNAME)) {
+				MessageBox.Show(def.SEAAREA_APP_FNAME + " 를 찾을 수 없습니다.\n"
+								+ "해역 정보 수집은 일본판 전용 도구(" + def.SEAAREA_APP_FNAME + ")가 필요한 기능입니다.\n"
+								+ "사용하려면 교역MAP C# 폴더에 " + def.SEAAREA_APP_FNAME + " 를 넣어 주십시오.",
+								"해역 정보 수집", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return false;
+			}
+			try {
+				Process.Start(def.SEAAREA_APP_FNAME);
+			} catch {
+				MessageBox.Show("해역 정보 수집 시작에 실패하였습니다. ", "시작 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return false;
+			}
+			return true;
+		}
 
 		/*-------------------------------------------------------------------------
 		 다중 실행 시에 이미 실행 중인 교역MAP C# 을 활성화한다

@@ -187,11 +187,8 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		private void button4_Click(object sender, EventArgs e)
 		{
-			try{
-				Process.Start(def.SEAAREA_APP_FNAME);
+			if(gvtrademap_cs_form.ExecSeaAreaApp()){
 				button2.PerformClick();		// 취소 취급
-			}catch{
-				MessageBox.Show("해역정보 수집 시작에 실패하였습니다. ", "시작오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}
