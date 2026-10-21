@@ -215,38 +215,38 @@ namespace gvo_base {
 			base.ResetAnalizedList();
 
 			// index0 의 항목
-			base.AddAnalizeList(@"배가 식인상어에 습격당하고 있습니다.", type.index0, accident.shark1);
-			base.AddAnalizeList(@"인喰いザメが現れました！", type.index0, accident.shark2);
+			base.AddAnalizeList(@"선원이 식인상어에게 습격당하고 있습니다.", type.index0, accident.shark1);
+			base.AddAnalizeList(@"식인상어가 나타났다!", type.index0, accident.shark2);
 			base.AddAnalizeList(@"화재가 발생했습니다!", type.index0, accident.fire);
-			base.AddAnalizeList(@"수초が舵に絡まっています！", type.index0, accident.seaweed);
-			base.AddAnalizeList(@"気味の悪い歌声が聞こえてきました", type.index0, accident.seiren);
+			base.AddAnalizeList(@"해초가 키에 엉켜버렸습니다!", type.index0, accident.seaweed);
+			base.AddAnalizeList(@"기분 나쁜 노랫소리가 들립니다", type.index0, accident.seiren);
 			base.AddAnalizeList(@"자기장이 이상합니다. 나침반이 제대로 움직이지 않습니다.", type.index0, accident.compass);
-			base.AddAnalizeList(@"폭풍が来ました！　돛を広げていると전覆してしまいます！", type.index0, accident.storm);
-			base.AddAnalizeList(@"눈보라になりました！　돛を広げていると凍りついてしまいます", type.index0, accident.blizzard);
+			base.AddAnalizeList(@"폭풍이 왔습니다! 돛을 펼쳐놓으면 전복하고 맙니다!", type.index0, accident.storm);
+			base.AddAnalizeList(@"눈보라가 되었습니다! 돛을 펼쳐놓으면 얼어버립니다", type.index0, accident.blizzard);
 			base.AddAnalizeList(@"쥐가 대량 발생했습니다!", type.index0, accident.mouse);
 			base.AddAnalizeList(@"전염병이 발생했습니다!", type.index0, accident.plague);
 			base.AddAnalizeList(@"괴혈병이 발생했습니다!", type.index0, accident.scurvy);
-			base.AddAnalizeList(@"정체모를괴물が現れました", type.index0, accident.UMA);
-			base.AddAnalizeList(@"このあたりで何かいい物が見つかるかもしれません", type.index0, accident.treasure1);
-			base.AddAnalizeList(@"このあたりで何か見つかるかもしれません", type.index0, accident.treasure2);
-			base.AddAnalizeList(@"このあたりで高価なものが見つかるかもしれません", type.index0, accident.treasure3);
-			base.AddAnalizeList(@"全배が戦場を離れました", type.index0, accident.escape_battle);
+			base.AddAnalizeList(@"정체 모를 괴물이 나타났습니다", type.index0, accident.UMA);
+			base.AddAnalizeList(@"이 근처에서 뭔가 좋은 물건이 발견될지도 모릅니다", type.index0, accident.treasure1);
+			base.AddAnalizeList(@"이 근처에서 무엇인가 발견될지도 모릅니다", type.index0, accident.treasure2);
+			base.AddAnalizeList(@"이 근처에서 고가의 물품이 발견될지도 모릅니다", type.index0, accident.treasure3);
+			base.AddAnalizeList(@"모든 선박이 전장을 떠났습니다", type.index0, accident.escape_battle);
 
 			// 
-			base.AddAnalizeList(@"に승리しました！", type.any_index, accident.win_battle);
-			base.AddAnalizeList(@"に패배しました…", type.any_index, accident.lose_battle);
+			base.AddAnalizeList(@"에게 승리했습니다！", type.any_index, accident.win_battle);
+			base.AddAnalizeList(@"에게 패배했습니다…", type.any_index, accident.lose_battle);
 
 			// 이자
 			base.AddAnalizeList_Interest(accident.interest);
 
 			// 해역변동
-			base.AddAnalizeList(@"^(.+)が위험해역に戻りました！", type.regex, accident.sea_type_normal);
-			base.AddAnalizeList(@"^(.+)が안전해역となりました！", type.regex, accident.sea_type_safty);
-			base.AddAnalizeList(@"^(.+)が무법해역となりました！", type.regex, accident.sea_type_lawless);
+			base.AddAnalizeList(@"^(.+)가 위험해역으로 돌아왔습니다!", type.regex, accident.sea_type_normal);
+			base.AddAnalizeList(@"^(.+)가 안전해역이 되었습니다!", type.regex, accident.sea_type_safty);
+			base.AddAnalizeList(@"^(.+)가 무법해역이 되었습니다!", type.regex, accident.sea_type_lawless);
 
 			// 造배
 			base.AddAnalizeList(@"^(.+)의 건조를 주문했습니다.", type.regex, accident.buildship_start);
-			base.AddAnalizeList(@"^(.+)의 강화を依頼しました", type.regex, accident.buildship_start);
+			base.AddAnalizeList(@"^(.+)의 강화 의뢰를 했습니다", type.regex, accident.buildship_start);
 			base.AddAnalizeList(@"`의 진수가 무사히 끝났습니다", type.any_index, accident.buildship_finish);
 		}
 

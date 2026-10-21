@@ -252,7 +252,7 @@ namespace gvo_base
 		---------------------------------------------------------------------------*/
 		protected void AddAnalizeList_Interest(object tag)
 		{
-			m_analize_list.Add(new analize_data("예금 이자로", type.index0, tag));
+			m_analize_list.Add(new analize_data("예금 이자를", type.index0, tag));
 		}
 
 		/*-------------------------------------------------------------------------

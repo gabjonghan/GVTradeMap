@@ -239,29 +239,29 @@ namespace gvo_base
 		static public Categoly GetCategolyFromType(string name)
 		{
 			switch(name){
-			case "食料품":
+			case "식료품":
 			case "조미료":
 			case "잡화":
-			case "医薬품":
-			case "家畜":
+			case "의약품":
+			case "가축":
 				return Categoly.Categoly1;
 			case "주류":
-			case "鉱돌":
+			case "광석":
 			case "염료":
-			case "工業품":
-			case "嗜好품":
+			case "공업품":
+			case "기호품":
 				return Categoly.Categoly2;
-			case "繊維":
+			case "섬유":
 			case "직물":
 			case "무기류":
 			case "총포류":
 			case "공예품":
 			case "미술품":
 				return Categoly.Categoly3;
-			case "향辛料":
+			case "향신료":
 			case "귀금속":
-			case "향料":
-			case "宝돌":
+			case "향료":
+			case "보석":
 				return Categoly.Categoly4;
 			}
 			return Categoly.Unknown;
@@ -288,72 +288,79 @@ namespace gvo_base
 		static public TypeGroup GetTypeGroupFromType(string name)
 		{
 			switch(name){
-			case "食料품":
-			case "家畜":
+			case "식료품":
+			case "가축":
 			case "주류":
 			case "조미료":
-			case "嗜好품":
-			case "향辛料":
-			case "향料":
-			case "医薬품":
-			case "繊維":
+			case "기호품":
+			case "향신료":
+			case "향료":
+			case "의약품":
+			case "섬유":
 			case "염료":
 			case "직물":
 			case "귀금속":
-			case "鉱돌":
-			case "宝돌":
+			case "광석":
+			case "보석":
 			case "공예품":
 			case "미술품":
 			case "잡화":
 			case "무기류":
 			case "총포류":
-			case "工業품":
+			case "공업품":
 				return TypeGroup.Trade;
-			case "消耗품":
-			case "추천장":
-			case "레시피帳":
-			case "보물 상자":
+			case "소비품":
+			case "추천서":
+			case "레시피":
+			case "보물상자":
 			case "행운권":
 			case "소재":
-			case "애완동물 권리서":
+			case "애완동물":
 			case "부동산 권리 증서":
-			case "배権利書":
+			case "선박 교환권":
 			case "가구":
 			case "물자":
 				return TypeGroup.Item;
-			case "소형돛배":
-			case "중소형돛배":
-			case "중형돛배":
-			case "중대형돛배":
-			case "대형돛배":
+			case "소형범선":
+			case "중소형범선":
+			case "중소형 범선":
+			case "중형범선":
+			case "중형 범선":
+			case "중대형범선":
+			case "중대형 범선":
+			case "대형범선":
+			case "대형 범선":
 			case "중소형갤리":
+			case "중소형 갤리":
 			case "중형갤리":
 			case "중대형갤리":
 			case "대형갤리":
+			case "대형 갤리":
 				return TypeGroup.Ship;
-			case "배首선수상":
+			case "선수상":
 			case "추가장갑":
-			case "特殊병기":
-			case "補助돛":
-			case "舷側포":
-			case "배首포":
-			case "배尾포":
+			case "특수장비":
+			case "보조돛":
+			case "선측포":
+			case "선수포":
+			case "선미포":
 			case "문장":
 				return TypeGroup.Rigging;
-			case "頭장비품":
-			case "体장비품":
-			case "足장비품":
-			case "手장비품":
-			case "武器・도구":
+			case "머리 장비품":
+			case "몸 장비품":
+			case "다리 장비품":
+			case "팔 장비품":
+			case "무기/도구":
 			case "장신구":
 				return TypeGroup.Equip;
 			case "모험스킬":
 			case "교역스킬":
 			case "전투스킬":
 			case "언어스킬":
-			case "아이템効果스킬":
+			case "아이템 효과":
 			case "부관스킬":
-			case "배스킬스킬":
+			case "옵션스킬(선박)":
+			case "전용함스킬(선박)":
 				return TypeGroup.Skill;
 			case "보고":
 				return TypeGroup.Report;
@@ -368,60 +375,66 @@ namespace gvo_base
 		{
 			switch (name)
 			{
-				case "食料품":
-				case "家畜":
+				case "식료품":
+				case "가축":
 				case "주류":
 				case "조미료":
-				case "嗜好품":
-				case "향辛料":
-				case "향料":
-				case "医薬품":
-				case "繊維":
+				case "기호품":
+				case "향신료":
+				case "향료":
+				case "의약품":
+				case "섬유":
 				case "염료":
 				case "직물":
 				case "귀금속":
-				case "鉱돌":
-				case "宝돌":
+				case "광석":
+				case "보석":
 				case "공예품":
 				case "미술품":
 				case "잡화":
 				case "무기류":
 				case "총포류":
-				case "工業품":
+				case "공업품":
 					return TypeGroup2.Trade;
-				case "消耗품":
-				case "추천장":
-				case "레시피帳":
-				case "보물 상자":
+				case "소비품":
+				case "추천서":
+				case "레시피":
+				case "보물상자":
 				case "행운권":
 				case "소재":
-				case "애완동물 권리서":
+				case "애완동물":
 				case "가구":
 					return TypeGroup2.Item;
-				case "소형돛배":
-				case "중소형돛배":
-				case "중형돛배":
-				case "중대형돛배":
-				case "대형돛배":
+				case "소형범선":
+				case "중소형범선":
+				case "중소형 범선":
+				case "중형범선":
+				case "중형 범선":
+				case "중대형범선":
+				case "중대형 범선":
+				case "대형범선":
+				case "대형 범선":
 				case "중소형갤리":
+				case "중소형 갤리":
 				case "중형갤리":
 				case "중대형갤리":
 				case "대형갤리":
+				case "대형 갤리":
 					return TypeGroup2.Ship;
-				case "배首선수상":
+				case "선수상":
 				case "추가장갑":
-				case "特殊병기":
-				case "補助돛":
-				case "舷側포":
-				case "배首포":
-				case "배尾포":
+				case "특수장비":
+				case "보조돛":
+				case "선측포":
+				case "선수포":
+				case "선미포":
 				case "문장":
 					return TypeGroup2.Item;
-				case "頭장비품":
-				case "体장비품":
-				case "足장비품":
-				case "手장비품":
-				case "武器・도구":
+				case "머리 장비품":
+				case "몸 장비품":
+				case "다리 장비품":
+				case "팔 장비품":
+				case "무기/도구":
 				case "장신구":
 					return TypeGroup2.Item;
 				default:
@@ -442,7 +455,7 @@ namespace gvo_base
 			case TypeGroup.Item:		return "아이템";
 			case TypeGroup.Equip:		return "장비";
 			case TypeGroup.Ship:		return "배";
-			case TypeGroup.Rigging:		return "艤装";
+			case TypeGroup.Rigging:		return "의장";
 			case TypeGroup.Skill:		return "스킬";
 			case TypeGroup.Report:		return "보고";
 			case TypeGroup.Technic:		return "테크닉";
@@ -573,7 +586,7 @@ namespace gvo_base
 			public string Name{				get{	return m_name;			}}
 			public string Type{				get{	return m_type;			}}
 			public string Document{			get{	return m_document;		}}
-			public bool IsRecipe{			get{	return (Type == "레시피帳")? true: false;	}}
+			public bool IsRecipe{			get{	return (Type == "레시피")? true: false;	}}
 			public bool IsSkill{			get{
 													if(Type == "모험스킬")	return true;
 													if(Type == "교역스킬")	return true;
