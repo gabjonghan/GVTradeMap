@@ -134,60 +134,20 @@ namespace gvo_base
 			m_ajust_name_list.Add("행운권(NO.13)", "행운권（NO.13）");
 			m_ajust_name_list.Add("행운권(NO.14)", "행운권（NO.14）");
 			m_ajust_name_list.Add("행운권(No.14)", "행운권（NO.14）");
-			m_ajust_name_list.Add("鉱돌精錬の書", "鉱돌製錬の書");
-			m_ajust_name_list.Add("合金製錬の書", "合金精錬の書");
-			m_ajust_name_list.Add("귀금속の精錬법", "귀금속の製錬법");
-			m_ajust_name_list.Add("アラブ神獣の선수상彫刻術", "アラブの神獣の선수상彫刻術");
-			m_ajust_name_list.Add("ボンバルタ", "ボンバルダ");
-			m_ajust_name_list.Add("牛革製ベスト", "牛皮製ベスト");
-			m_ajust_name_list.Add("花嫁衣装の縫製書", "花嫁衣裳の縫製법");
 			m_ajust_name_list.Add("소형배용고급 상납품 포장", "소형고급 상납품 포장");
 			m_ajust_name_list.Add("중형배용고급 상납품 포장", "중형고급 상납품 포장");
 			m_ajust_name_list.Add("대형배용고급 상납품 포장", "대형고급 상납품 포장");
 			m_ajust_name_list.Add("고급 상납품(소형배용)", "고급 상납품（소형배용）");
 			m_ajust_name_list.Add("고급 상납품(중형배용)", "고급 상납품（중형배용）");
 			m_ajust_name_list.Add("고급 상납품(대형배용)", "고급 상납품（대형배용）");
-			m_ajust_name_list.Add("全艤装補助돛縫製법", "全艤装補助돛組立법");
-			m_ajust_name_list.Add("ペットの育て方초급編", "ペットの育て方　초급編");
-			m_ajust_name_list.Add("セット料理集第1集", "セット料理集제 1권");
-			m_ajust_name_list.Add("フォルダンミルクレープ", "フォンダン・ミルクレープ");
-			m_ajust_name_list.Add("果実を使ったお菓子", "果物を使ったお菓子");
-			m_ajust_name_list.Add("방어職인の공예技법", "防具職인の공예技법");
-			m_ajust_name_list.Add("버섯バターソテー", "버섯のバターソテー");
-			m_ajust_name_list.Add("フルーツ盛り合わせ", "フルーツの盛り合わせ");
-			m_ajust_name_list.Add("ブッシュドノエル", "ブッシュ・ド・ノエル");
-			m_ajust_name_list.Add("実용衣装裁縫術・제 1권", "実용衣装縫製術・제 1권");
-			m_ajust_name_list.Add("ローマ神話の선수상彫刻術", "ローマ神話の彫刻術");
-			m_ajust_name_list.Add("一味違う！手作り소物", "一味違う！　手作り소物");
-			m_ajust_name_list.Add("ゲルマン諸語", "ゲルマン諸語翻訳메모");
-			m_ajust_name_list.Add("동유럽諸語", "동유럽諸語翻訳메모");
-			m_ajust_name_list.Add("ロマンス諸語", "ロマンス諸語翻訳메모");
-			m_ajust_name_list.Add("アルタイ諸語", "アルタイ諸語翻訳메모");
-			m_ajust_name_list.Add("セム・ハム諸語", "セム・ハム諸語翻訳메모");
-			m_ajust_name_list.Add("アメリカ諸語", "アメリカ諸語翻訳메모");
-			m_ajust_name_list.Add("아프리카諸語", "아프리카諸語翻訳메모");
-			m_ajust_name_list.Add("인도洋諸語", "인도洋諸語翻訳메모");
 			m_ajust_name_list.Add("데미 캘버린포 10문", "데미 캘버린10문");
 			m_ajust_name_list.Add("데미 캘버린포 12문", "데미 캘버린12문");
 			m_ajust_name_list.Add("데미 캘버린포 14문", "데미 캘버린14문");
 			m_ajust_name_list.Add("데미 캘버린포 16문", "데미 캘버린16문");
-			m_ajust_name_list.Add("漁師の心得・鮮魚保存법", "漁師の心得　鮮魚保存법");
 			m_ajust_name_list.Add("팰콘2포", "팰콘포 2문");
 			m_ajust_name_list.Add("팰콘4포", "팰콘포 4문");
 			m_ajust_name_list.Add("팰콘6포", "팰콘포 6문");
 			m_ajust_name_list.Add("팰콘8포", "팰콘포 8문");
-			m_ajust_name_list.Add("マクラジャボトル", "マラクジャボトル");
-			m_ajust_name_list.Add("マクラジャジュース", "マラクジャジュース");
-			m_ajust_name_list.Add("경량シーダ추가장갑", "경량シーダー추가장갑");
-			m_ajust_name_list.Add("소袖♂", "소袖");
-			m_ajust_name_list.Add("소袖♀", "소袖");
-			m_ajust_name_list.Add("折鳥帽子♂", "折烏帽子");
-			m_ajust_name_list.Add("かんざし♀", "かんざし");
-			m_ajust_name_list.Add("通天冠♂", "通天冠");
-			m_ajust_name_list.Add("歩揺♀","歩揺");
-			m_ajust_name_list.Add("四方평定巾♂","四方평定巾");
-			m_ajust_name_list.Add("窄袖衫襦♀","窄袖衫襦");
-			m_ajust_name_list.Add("直裾深衣♂","直裾深衣");
 		}
 	
 		/*-------------------------------------------------------------------------
@@ -688,8 +648,8 @@ namespace gvo_base
 						m_document	+= tmp[i].Trim() + "\n";
 					}
 
-					if(m_document.IndexOf("다시사용시간：") >= 0){
-						// 재사용시간： 이 포함되면 육상전 아이템으로 본다
+					if(m_document.IndexOf("재사용시간") >= 0){
+						// 재사용시간 이 포함되면 육상전 아이템으로 본다 (item_db.txt 의 표기는 "재사용시간:225")
 						m_is_combat_item	= true;
 					}
 

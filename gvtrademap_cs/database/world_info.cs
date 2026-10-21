@@ -1693,32 +1693,31 @@ namespace gvtrademap_cs {
 					 아이템명 변경에 대응한다
 					---------------------------------------------------------------------------*/
 					static private void update_rename(Data d) {
+						// cityinfos.xml 이 한국어판 아이템명으로 정리되어 일본어 옛 이름은 더 이상 나오지 않는다.
+						// 예전 데이터에 남아 있을 수 있는 한국어 옛 이름만 새 이름으로 바꾼다.
 						switch (d.m_name) {
-							case "仕立て도구": {
-									d.m_name = "裁縫도구";
+							case "원단 도구": {
+									d.m_name = "재봉도구";
 									d.m_tag2 = "10000";
 								}
 								break;
-							case "회避指남書제 1권":
-								d.m_name = "連撃指남書제 1권";
+							case "회피 지도서 제 1권":
+								d.m_name = "연격 지침서 제 1권";
 								break;
-							case "공격指남書제 1권":
-								d.m_name = "猛攻指남書제 1권";
+							case "공격 지도서 제 1권":
+								d.m_name = "맹공 지침서 제 1권";
 								break;
-							case "회復指남書제 1권":
-								d.m_name = "活용指남書제 1권";
+							case "회복 지도서 제 1권":
+								d.m_name = "활용 지침서 제 1권";
 								break;
-							case "방어指남書제 1권":
-								d.m_name = "奇手指남書제 1권";
+							case "방어 지도서 제 1권":
+								d.m_name = "기수 지침서 제 1권";
 								break;
-							case "パデットロール":
-								d.m_name = "パデッドロール";
+							case "진찰실 제조법":
+								d.m_name = "조선소재，진찰실";
 								break;
-							case "診察실の製법":
-								d.m_name = "조선소재・診察실";
-								break;
-							case "天子の선수상":
-								d.m_name = "天使の선수상";
+							case "천자상":
+								d.m_name = "천사상";
 								break;
 							case "해역":
 								d.m_name = "지리";
