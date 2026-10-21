@@ -33,9 +33,11 @@ namespace gvo_base
 		// 스크린샷 경로
 		public const string		GVO_SCREENSHOT_PATH			= GVO_USERDATA_PATH + @"ScreenShot\";
 
-		// URL
-		public const string		URL2						= @"http://www.umiol.com/db/recipe.php?cmd=recsrc&submit=%B8%A1%BA%F7&recsrckey=";
-		public const string		URL3						= @"http://www.umiol.com/db/recipe.php?cmd=prosrc&submit=%B8%A1%BA%F7&prosrckey=";
+		// URL (검색어는 UTF-8 로 URL 인코드해서 끝에 붙인다)
+		// 레시피 책 검색 (대항해시대 조이)
+		public const string		URL2						= @"https://www.ssjoy.org/dho/?act=&mid=recipeBook&vid=&citySrl%5B%5D=&city%5B%5D=&searchKeyword=";
+		// 레시피 검색 (대항해시대 조이)
+		public const string		URL3						= @"https://www.ssjoy.org/dho/?act=&mid=recipe&vid=&ingredientSrl%5B%5D=&ingredient%5B%5D=&productSrl%5B%5D=&product%5B%5D=&searchKeyword=";
 
 		/*-------------------------------------------------------------------------
 		 대항해시대Online 로그의 전체 경로를 얻는다

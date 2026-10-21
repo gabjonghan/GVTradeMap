@@ -655,26 +655,26 @@ namespace gvo_base
 			}
 
 			/*-------------------------------------------------------------------------
-			 레시피 정보 wiki 를 연다
+			 레시피 정보 사이트를 연다
 			 레시피검색
 			---------------------------------------------------------------------------*/
 			public void OpenRecipeWiki0()
 			{
-				// EUC 로 URL 인코드
-				string	urlenc	= Useful.UrlEncodeEUCJP(this.Name);
+				// UTF-8 로 URL 인코드
+				string	urlenc	= Useful.UrlEncodeUTF8(this.Name);
 
 				// 검색 결과를 연다
 				Process.Start(gvo_def.URL2 + urlenc);	// 레시피검색
 			}
 
 			/*-------------------------------------------------------------------------
-			 레시피 정보 wiki 를 연다
+			 레시피 정보 사이트를 연다
 			 작성 가능한지 검색
 			---------------------------------------------------------------------------*/
 			public void OpenRecipeWiki1()
 			{
-				// EUC 로 URL 인코드
-				string	urlenc	= Useful.UrlEncodeEUCJP(this.Name);
+				// UTF-8 로 URL 인코드
+				string	urlenc	= Useful.UrlEncodeUTF8(this.Name);
 
 				// 검색 결과를 연다
 				Process.Start(gvo_def.URL3 + urlenc);	// 레시피로 작성 가능한지 검색

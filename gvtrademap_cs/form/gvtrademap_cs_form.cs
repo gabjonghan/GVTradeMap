@@ -112,6 +112,9 @@ namespace gvtrademap_cs {
 		private Thread m_load_info_t;	   // 정보읽기스레드
 		private Thread m_share_t;		   // 항로공유스레드
 		private Thread m_chat_log_t;		// 채팅 분석 스레드
+		private Thread m_update_check_t;	// 업데이트 확인 스레드
+		private string[] m_update_notice;	// 새 버전이 있을 때 업데이트 내용, 없으면 null
+		private readonly object m_update_notice_sync = new object();
 
 		// ***
 		private LoadInfosStatus _LoadInfosStatus;
@@ -322,6 +325,15 @@ namespace gvtrademap_cs {
 			m_chat_log_t = new Thread(new ThreadStart(chat_log_proc));
 			m_chat_log_t.Name = "analize chat log";
 			m_chat_log_t.Start();
+			// 업데이트 확인스레드
+			// 인터넷 연결 설정이 켜져 있을 때만, 결과는 do_tasks() 에서 표시한다
+			// 응답이 늦어도 종료를 막지 않도록 백그라운드 스레드로 하고 종료 대기도 하지 않는다
+			if (m_lib.setting.connect_network) {
+				m_update_check_t = new Thread(new ThreadStart(update_check_proc));
+				m_update_check_t.Name = "update check";
+				m_update_check_t.IsBackground = true;
+				m_update_check_t.Start();
+			}
 
 #if DEBUG_DRAW_CPU_BAR
 			// for debug
@@ -555,6 +567,18 @@ namespace gvtrademap_cs {
 			if (m_req_sea_routes_form.IsRequest()) {
 				show_sea_routes_dialog();
 				this.Activate();
+			}
+			// 새 버전 알림
+			// 시작 시 한 번만
+			string[] update_notice = null;
+			lock (m_update_notice_sync) {
+				update_notice = m_update_notice;
+				m_update_notice = null;
+			}
+			if (update_notice != null) {
+				check_update_result dlg = new check_update_result(update_notice);
+				dlg.ShowDialog(this);
+				dlg.Dispose();
 			}
 
 			// 본인 배의 위치 등 갱신
@@ -873,6 +897,19 @@ namespace gvtrademap_cs {
 			//			debug_transform_pos(13283, 2173);
 			//			debug_transform_pos(13086, 2797);
 			//			debug_transform_pos(12714, 3565);
+		}
+
+		/*-------------------------------------------------------------------------
+		 업데이트확인스레드
+		 새 버전이 있을 때만 알림 내용을 남긴다
+		 실패해도 아무것도 표시하지 않는다 (수동 확인은 설정 대화상자에서)
+		---------------------------------------------------------------------------*/
+		private void update_check_proc() {
+			string[] data;
+			if (update_checker.Check(out data) != update_checker.result.updated) return;
+			lock (m_update_notice_sync) {
+				m_update_notice = data;
+			}
 		}
 
 		/*-------------------------------------------------------------------------

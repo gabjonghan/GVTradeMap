@@ -18,6 +18,20 @@ namespace Utility
 	{
 		//-------------------------------------------------------------------------
 		/// <summary>
+		/// TLS 1.2 를 유효하게 한다
+		/// .NET 2.0 의 SecurityProtocolType 에는 Tls12 가 없으므로 값(3072)으로 지정한다
+		/// TLS 1.2 를 지원하지 않는 환경에서는 예외가 나므로 기존 설정 그대로 둔다
+		/// </summary>
+		static HttpDownload()
+		{
+			try{
+				ServicePointManager.SecurityProtocol	|= (SecurityProtocolType)3072;
+			}catch{
+			}
+		}
+
+		//-------------------------------------------------------------------------
+		/// <summary>
 		/// 다운로드해서 파일에 기록한다
 		/// </summary>
 		/// <param name="url">URL</param>

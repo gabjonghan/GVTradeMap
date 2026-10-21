@@ -527,45 +527,25 @@ namespace gvtrademap_cs {
 		private void button4_Click(object sender, EventArgs e) {
 			Cursor = Cursors.WaitCursor;
 			// 버전을 확인한다
-			bool result = HttpDownload.Download(def.VERSION_URL, def.VERSION_FNAME);
+			string[] data;
+			update_checker.result result = update_checker.Check(out data);
 			Cursor = Cursors.Default;
 
-			if (!result) {
-				// 업데이트하지 않는다
-				MessageBox.Show(this, "업데이트 정보를 가져오지 못했습니다. \n인터넷 연결을 확인해 주십시오. ", "업데이트 확인 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			// 업데이트된 데이터가 있는지 확인한다
-			string line = "";
-			List<string> data = new List<string>();
-			int version = 0;
-			try {
-				using (StreamReader sr = new StreamReader(
-					def.VERSION_FNAME, Encoding.GetEncoding("UTF-8"))) {
-
-					// 버전
-					line = sr.ReadLine();
-					version = Convert.ToInt32(line);
-
-					// 나머지
-					while ((line = sr.ReadLine()) != null) {
-						data.Add(line);
+			switch (result) {
+				case update_checker.result.updated: {
+						// 업데이트되어 있다
+						check_update_result dlg = new check_update_result(data);
+						dlg.ShowDialog(this);
+						dlg.Dispose();
 					}
-				}
-			} catch {
-				MessageBox.Show(this, "버전 정보를 확인할 수 없습니다. \n업데이트 확인에 실패하였습니다. ", "업데이트 확인 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			if (version > def.VERSION) {
-				// 업데이트되어 있다
-				check_update_result dlg = new check_update_result(data.ToArray());
-				dlg.ShowDialog(this);
-				dlg.Dispose();
-			} else {
-				// 업데이트되어 있지 않다
-				MessageBox.Show(this, "업데이트된 소프트웨어를 찾지 못했습니다. \n사용 중인 버전이 최신입니다. ", "업데이트 확인 결과", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					break;
+				case update_checker.result.latest:
+					// 업데이트되어 있지 않다
+					MessageBox.Show(this, "업데이트된 소프트웨어를 찾지 못했습니다. \n사용 중인 버전이 최신입니다. ", "업데이트 확인 결과", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					break;
+				default:
+					MessageBox.Show(this, "업데이트 정보를 가져오지 못했습니다. \n인터넷 연결을 확인해 주십시오. ", "업데이트 확인 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					break;
 			}
 		}
 

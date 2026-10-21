@@ -16,14 +16,16 @@ namespace gvtrademap_cs {
 
 	---------------------------------------------------------------------------*/
 	public static partial class def {
-		// HP 의 원본
-		public const string URL_HP = @"http://www.geocities.jp/cookiezephyros/";
+		// HP (한국어판 저장소)
+		// 원본 HP(http://www.geocities.jp/cookiezephyros/)는 geocities.jp 서비스 종료로 사라졌다
+		public const string URL_HP = @"https://github.com/gabjonghan/GVTradeMap";
 
 		// 업데이트확인용
+		// VERSION_URL 의 1행째와 VERSION 을 비교한다. 릴리스 시 저장소 루트의 version.dat 도 함께 갱신할 것
 		static public int VERSION = 1323004;
-		static public string VERSION_URL = URL_HP + @"download/gvtrademap_cs_version.dat";
+		static public string VERSION_URL = @"https://raw.githubusercontent.com/gabjonghan/GVTradeMap/master/version.dat";
 		static public string VERSION_FNAME = "version.txt";
-		static public string DOWNLOAD_URL = URL_HP + @"gvtrademap.html";
+		static public string DOWNLOAD_URL = URL_HP + @"/releases";
 
 		// Window title 및 버전 정보
 		//		public const string		WINDOW_TITLE				= "대항해시대Online 교역MAP C# ver.1.22β1";
@@ -90,10 +92,10 @@ namespace gvtrademap_cs {
 		// 상세 정보 페이지
 		public const string URL0 = "dol.egret.jp/gtf/?page=city&id=";
 		public const string URL1 = "www2.atwiki.jp/harrington/pages/";
-		//		public const string		URL4						= @"http://showroom256.hp.infoseek.co.jp/cgi-bin/read.cgi";
-		public const string URL4 = @"http://jbbs.livedoor.jp/netgame/7161/";
+		// 오류 보고처
+		public const string URL4 = URL_HP + @"/issues";
 		public const string URL5 = @"wiki.livedoor.jp/kristall/d/";
-		public const string URL6 = @"https://www.microsoft.com/en-us/download/details.aspx?id=35";
+		public const string URL6 = @"https://www.microsoft.com/ko-kr/download/details.aspx?id=35";
 		public const string JOY_URL = @"https://www.ssjoy.org/dho/";
 
 		public const string URL_HP_ORIGINAL = @"http://gvtrademap.daa.jp/";

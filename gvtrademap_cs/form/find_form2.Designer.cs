@@ -215,14 +215,14 @@
 			// 
 			this.open_recipe_wiki0_ToolStripMenuItem.Name = "open_recipe_wiki0_ToolStripMenuItem";
 			this.open_recipe_wiki0_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki0_ToolStripMenuItem.Text = "레시피 상세를 레시피 정보 wiki 에서 조사";
+			this.open_recipe_wiki0_ToolStripMenuItem.Text = "레시피 책 내용을 대항해시대 조이에서 검색";
 			this.open_recipe_wiki0_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki0_ToolStripMenuItem_Click);
 			// 
 			// open_recipe_wiki1_ToolStripMenuItem
 			// 
 			this.open_recipe_wiki1_ToolStripMenuItem.Name = "open_recipe_wiki1_ToolStripMenuItem";
 			this.open_recipe_wiki1_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki1_ToolStripMenuItem.Text = "레시피로 작성 가능한지 레시피 정보 wiki 에서 조사";
+			this.open_recipe_wiki1_ToolStripMenuItem.Text = "제작 가능한 레시피를 대항해시대 조이에서 검색";
 			this.open_recipe_wiki1_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki1_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3

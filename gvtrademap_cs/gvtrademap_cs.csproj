@@ -180,6 +180,7 @@
     <Compile Include="gvo\speed_calculator.cs" />
     <Compile Include="spot.cs" />
     <Compile Include="transform.cs" />
+    <Compile Include="update_checker.cs" />
     <Compile Include="sprite_rects\icons.cs" />
     <Compile Include="window\item_window.cs" />
     <Compile Include="loop_x_image.cs" />
