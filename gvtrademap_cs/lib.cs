@@ -65,6 +65,8 @@ namespace gvtrademap_cs {
 		window_minimize,
 		window_change_border_style,
 		window_close,
+		site_open_inven,				  // 대항해시대 인벤을 연다
+		site_open_joy,					  // 대항해시대 조이를 연다
 
 		unknown_function = 65535,		  // 정의되지 않은 기능
 	};
@@ -172,14 +174,16 @@ namespace gvtrademap_cs {
 			m_key_assign_manager.List.AddAssign("설정 열기", "설정윈도우", Keys.None, KeyFunction.setting_window_button_13);
 			m_key_assign_manager.List.AddAssign("해역정보수집을 시작", "설정윈도우", Keys.A | Keys.Control, KeyFunction.setting_window_button_exec_gvoac);
 			m_key_assign_manager.List.AddAssign("항로도 스크린샷 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_00);
-			m_key_assign_manager.List.AddAssign("대항해시대Online 메일 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_01);
-			m_key_assign_manager.List.AddAssign("대항해시대Online 채팅 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_02);
+			m_key_assign_manager.List.AddAssign("대항해시대Online 채팅 로그 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_01);
+			m_key_assign_manager.List.AddAssign("대항해시대Online 메일 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_02);
 			m_key_assign_manager.List.AddAssign("대항해시대Online 스크린샷 폴더 열기", "폴더", Keys.None, KeyFunction.folder_open_03);
 			m_key_assign_manager.List.AddAssign("최신화면 표시 ON/OFF", "윈도우", Keys.None, KeyFunction.window_top_most);
 			m_key_assign_manager.List.AddAssign("창 최대화/이전크기로", "윈도우", Keys.None, KeyFunction.window_maximize);
 			m_key_assign_manager.List.AddAssign("최소화", "윈도우", Keys.None, KeyFunction.window_minimize);
 			m_key_assign_manager.List.AddAssign("테두리 표시/비표시", "윈도우", Keys.None, KeyFunction.window_change_border_style);
 			m_key_assign_manager.List.AddAssign("프로그램 종료", "윈도우", Keys.None, KeyFunction.window_close);
+			m_key_assign_manager.List.AddAssign("대항해시대 인벤 열기", "사이트", Keys.None, KeyFunction.site_open_inven);
+			m_key_assign_manager.List.AddAssign("대항해시대 조이 열기", "사이트", Keys.None, KeyFunction.site_open_joy);
 		}
 	}
 }

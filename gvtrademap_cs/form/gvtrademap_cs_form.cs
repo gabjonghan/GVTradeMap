@@ -389,6 +389,8 @@ namespace gvtrademap_cs {
 			m_lib.KeyAssignManager.BindTagForMenuItem(openpathlogToolStripMenuItem, KeyFunction.folder_open_01);
 			m_lib.KeyAssignManager.BindTagForMenuItem(openpathmailToolStripMenuItem, KeyFunction.folder_open_02);
 			m_lib.KeyAssignManager.BindTagForMenuItem(openpathscreenshotToolStripMenuItem, KeyFunction.folder_open_03);
+			m_lib.KeyAssignManager.BindTagForMenuItem(opensite_inven_ToolStripMenuItem, KeyFunction.site_open_inven);
+			m_lib.KeyAssignManager.BindTagForMenuItem(opensite_joy_ToolStripMenuItem, KeyFunction.site_open_joy);
 			m_lib.KeyAssignManager.BindTagForMenuItem(changeBorderStyleToolStripMenuItem, KeyFunction.window_change_border_style);
 			m_lib.KeyAssignManager.BindTagForMenuItem(closeFormToolStripMenuItem, KeyFunction.window_close);
 			m_lib.KeyAssignManager.BindTagForMenuItem(clear_spotToolStripMenuItem, KeyFunction.cancel_spot);
@@ -2109,6 +2111,14 @@ namespace gvtrademap_cs {
 				case KeyFunction.folder_open_00:
 					// 항로도 스크린샷 폴더를 연다
 					Process.Start(Path.Combine(m_current_path, def.SS_PATH));
+					break;
+				case KeyFunction.site_open_inven:
+					// 대항해시대 인벤을 연다
+					Process.Start(def.INVEN_URL);
+					break;
+				case KeyFunction.site_open_joy:
+					// 대항해시대 조이를 연다
+					Process.Start(def.JOY_URL);
 					break;
 				case KeyFunction.cancel_spot:
 					// 장소 중지

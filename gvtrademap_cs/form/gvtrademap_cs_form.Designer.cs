@@ -43,6 +43,9 @@
 			this.openpathlogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openpathmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openpathscreenshotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+			this.opensite_inven_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.opensite_joy_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.ToolStripMenuItem_country0 = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_country1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,10 +97,13 @@
 			openpathToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.openpathlogToolStripMenuItem,
 			this.openpathmailToolStripMenuItem,
-			this.openpathscreenshotToolStripMenuItem});
+			this.openpathscreenshotToolStripMenuItem,
+			this.toolStripSeparator8,
+			this.opensite_inven_ToolStripMenuItem,
+			this.opensite_joy_ToolStripMenuItem});
 			openpathToolStripMenuItem.Name = "openpathToolStripMenuItem";
 			openpathToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			openpathToolStripMenuItem.Text = "대항해시대 온라인의 폴더 열기";
+			openpathToolStripMenuItem.Text = "대항해시대 온라인 폴더 및 사이트 열기";
 			// 
 			// openpathlogToolStripMenuItem
 			// 
@@ -116,6 +122,23 @@
 			this.openpathscreenshotToolStripMenuItem.Name = "openpathscreenshotToolStripMenuItem";
 			this.openpathscreenshotToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
 			this.openpathscreenshotToolStripMenuItem.Text = "스크린샷 폴더 열기...";
+			//
+			// toolStripSeparator8
+			//
+			this.toolStripSeparator8.Name = "toolStripSeparator8";
+			this.toolStripSeparator8.Size = new System.Drawing.Size(277, 6);
+			//
+			// opensite_inven_ToolStripMenuItem
+			//
+			this.opensite_inven_ToolStripMenuItem.Name = "opensite_inven_ToolStripMenuItem";
+			this.opensite_inven_ToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+			this.opensite_inven_ToolStripMenuItem.Text = "대항해시대 인벤 열기...";
+			//
+			// opensite_joy_ToolStripMenuItem
+			//
+			this.opensite_joy_ToolStripMenuItem.Name = "opensite_joy_ToolStripMenuItem";
+			this.opensite_joy_ToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+			this.opensite_joy_ToolStripMenuItem.Text = "대항해시대 조이 열기...";
 			// 
 			// contextMenuStrip1
 			// 
@@ -519,6 +542,9 @@
 		private System.Windows.Forms.ToolStripMenuItem openpathlogToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openpathmailToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openpathscreenshotToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+		private System.Windows.Forms.ToolStripMenuItem opensite_inven_ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem opensite_joy_ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem setseaareastateToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem normal_sea_area_ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem safty_sea_area_ToolStripMenuItem;

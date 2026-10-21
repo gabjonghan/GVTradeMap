@@ -130,6 +130,7 @@ namespace gvtrademap_cs {
 		public const string URL5 = @"wiki.livedoor.jp/kristall/d/";
 		public const string URL6 = @"https://www.microsoft.com/ko-kr/download/details.aspx?id=35";
 		public const string JOY_URL = @"https://www.ssjoy.org/dho/";
+		public const string INVEN_URL = @"https://dho.inven.co.kr/";
 
 		public const string URL_HP_ORIGINAL = @"http://gvtrademap.daa.jp/";
 
