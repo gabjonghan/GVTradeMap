@@ -226,14 +226,14 @@
 			this.listBox1.HorizontalScrollbar = true;
 			this.listBox1.ItemHeight = 15;
 			this.listBox1.Items.AddRange(new object[] {
-            "기본설정",
-            "항로도설정",
-            "캡쳐, 로그분석",
-            "인터넷연결, 항로공유",
-            "표시항목",
+            "기본 설정",
+            "항로도 설정",
+            "캡처, 로그 분석",
+            "인터넷 연결, 항로 공유",
+            "표시 항목",
             "기타",
-            "키보드할당",
-            "버전정보"});
+            "키보드 할당",
+            "버전 정보"});
 			this.listBox1.Location = new System.Drawing.Point(14, 12);
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(174, 304);
@@ -320,7 +320,7 @@
 			this.groupBox1.Size = new System.Drawing.Size(478, 307);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "기본설정";
+			this.groupBox1.Text = "기본 설정";
 			// 
 			// groupBox8
 			// 
@@ -362,7 +362,7 @@
 			this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox5.FormattingEnabled = true;
 			this.comboBox5.Items.AddRange(new object[] {
-            "그리지않음",
+            "그리지 않음",
             "1000단위 그리기",
             "100단위 그리기",
             "좌표만 그리기"});
@@ -392,7 +392,7 @@
 			this.checkBox8.Name = "checkBox8";
 			this.checkBox8.Size = new System.Drawing.Size(180, 16);
 			this.checkBox8.TabIndex = 12;
-			this.checkBox8.Text = "폰트를 배율에 따라 조정안함";
+			this.checkBox8.Text = "배율에 따라 글꼴 크기를 조정하지 않음";
 			this.checkBox8.UseVisualStyleBackColor = true;
 			// 
 			// comboBox7
@@ -404,7 +404,7 @@
             "도시, 상륙지, 해역명 표시",
             "도시, 해역명 표시",
             "대도시 표시",
-            "전체 명칭 비표시"});
+            "명칭 모두 숨김"});
 			this.comboBox7.Location = new System.Drawing.Point(7, 74);
 			this.comboBox7.Name = "comboBox7";
 			this.comboBox7.Size = new System.Drawing.Size(175, 20);
@@ -419,7 +419,7 @@
             "작은 아이콘 전체 표시",
             "작은 아이콘 도시명, 상륙지 표시",
             "작은 아이콘 대도시 표시",
-            "아이콘 비표시"});
+            "아이콘 숨김"});
 			this.comboBox6.Location = new System.Drawing.Point(7, 46);
 			this.comboBox6.Name = "comboBox6";
 			this.comboBox6.Size = new System.Drawing.Size(175, 20);
@@ -502,7 +502,7 @@
 			this.groupBox5.Size = new System.Drawing.Size(478, 307);
 			this.groupBox5.TabIndex = 0;
 			this.groupBox5.TabStop = false;
-			this.groupBox5.Text = "캡처, 로그분석";
+			this.groupBox5.Text = "캡처, 로그 분석";
 			// 
 			// groupBox14
 			// 
@@ -525,7 +525,7 @@
 			this.groupBox17.Size = new System.Drawing.Size(149, 95);
 			this.groupBox17.TabIndex = 1;
 			this.groupBox17.TabStop = false;
-			this.groupBox17.Text = "포트번호";
+			this.groupBox17.Text = "포트 번호";
 			// 
 			// textBox5
 			// 
@@ -552,7 +552,7 @@
 			this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
 			this.textBox7.Size = new System.Drawing.Size(293, 95);
 			this.textBox7.TabIndex = 0;
-			this.textBox7.Text = "해당모드는 화면캡처정보, 로그분석정보를 네비게이션 클라이언트에서 얻습니다.\r\n해당모드는 TCP서버를 시작하게 됩니다.\r\n네크워크 보안에 주의가 필" +
+			this.textBox7.Text = "이 모드는 화면 캡처 정보와 로그 분석 정보를 네비게이션 클라이언트에서 얻습니다.\r\n이 모드는 TCP 서버를 시작합니다.\r\n네트워크 보안에 주의가 필" +
     "요합니다.";
 			// 
 			// groupBox15
@@ -588,7 +588,7 @@
 			this.groupBox16.Size = new System.Drawing.Size(149, 49);
 			this.groupBox16.TabIndex = 15;
 			this.groupBox16.TabStop = false;
-			this.groupBox16.Text = "화면캡처 간격";
+			this.groupBox16.Text = "화면 캡처 간격";
 			// 
 			// comboBox4
 			// 
@@ -621,7 +621,7 @@
 			this.checkBox5.Name = "checkBox5";
 			this.checkBox5.Size = new System.Drawing.Size(112, 16);
 			this.checkBox5.TabIndex = 17;
-			this.checkBox5.Text = "로그분석을 실시";
+			this.checkBox5.Text = "로그 분석 실행";
 			this.checkBox5.UseVisualStyleBackColor = true;
 			// 
 			// radioButton2
@@ -632,7 +632,7 @@
 			this.radioButton2.Size = new System.Drawing.Size(96, 16);
 			this.radioButton2.TabIndex = 24;
 			this.radioButton2.TabStop = true;
-			this.radioButton2.Text = "TCP서버모드";
+			this.radioButton2.Text = "TCP 서버 모드";
 			this.radioButton2.UseVisualStyleBackColor = true;
 			this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
 			// 
@@ -644,7 +644,7 @@
 			this.radioButton1.Size = new System.Drawing.Size(71, 16);
 			this.radioButton1.TabIndex = 23;
 			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "통상모드";
+			this.radioButton1.Text = "일반 모드";
 			this.radioButton1.UseVisualStyleBackColor = true;
 			this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
 			// 
@@ -666,7 +666,7 @@
 			this.groupBox9.Size = new System.Drawing.Size(478, 69);
 			this.groupBox9.TabIndex = 13;
 			this.groupBox9.TabStop = false;
-			this.groupBox9.Text = "인터넷연결";
+			this.groupBox9.Text = "인터넷 연결";
 			// 
 			// checkBox1
 			// 
@@ -675,7 +675,7 @@
 			this.checkBox1.Name = "checkBox1";
 			this.checkBox1.Size = new System.Drawing.Size(216, 16);
 			this.checkBox1.TabIndex = 7;
-			this.checkBox1.Text = "인터넷에서 업데이트정보 등을 받음";
+			this.checkBox1.Text = "인터넷에서 업데이트 정보 등을 받음";
 			this.checkBox1.UseVisualStyleBackColor = true;
 			this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -686,7 +686,7 @@
 			this.checkBox9.Name = "checkBox9";
 			this.checkBox9.Size = new System.Drawing.Size(259, 16);
 			this.checkBox9.TabIndex = 8;
-			this.checkBox9.Text = "시작시교역 MAP@Web 아이콘 메모를 얻음";
+			this.checkBox9.Text = "시작 시 교역 MAP @Web 아이콘 메모를 받음";
 			this.checkBox9.UseVisualStyleBackColor = true;
 			// 
 			// groupBox6
@@ -702,7 +702,7 @@
 			this.groupBox6.Size = new System.Drawing.Size(478, 92);
 			this.groupBox6.TabIndex = 12;
 			this.groupBox6.TabStop = false;
-			this.groupBox6.Text = "항로공유";
+			this.groupBox6.Text = "항로 공유";
 			// 
 			// checkBox6
 			// 
@@ -767,7 +767,7 @@
 			this.groupBox10.Size = new System.Drawing.Size(478, 199);
 			this.groupBox10.TabIndex = 0;
 			this.groupBox10.TabStop = false;
-			this.groupBox10.Text = "표시항목";
+			this.groupBox10.Text = "표시 항목";
 			// 
 			// tabControl1
 			// 
@@ -797,8 +797,8 @@
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage1.Size = new System.Drawing.Size(456, 145);
 			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Text = "@Web아이콘";
-			this.tabPage1.ToolTipText = "@Web 아이콘 표시할때 표시할항목 설정";
+			this.tabPage1.Text = "@Web 아이콘";
+			this.tabPage1.ToolTipText = "@Web 아이콘을 표시할 때 표시할 항목 설정";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
 			// checkBox105
@@ -811,7 +811,7 @@
 			this.checkBox105.Name = "checkBox105";
 			this.checkBox105.Size = new System.Drawing.Size(100, 24);
 			this.checkBox105.TabIndex = 5;
-			this.checkBox105.Text = "자기장이상";
+			this.checkBox105.Text = "자기장 이상";
 			this.checkBox105.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox105.UseVisualStyleBackColor = true;
 			// 
@@ -839,7 +839,7 @@
 			this.checkBox103.Name = "checkBox103";
 			this.checkBox103.Size = new System.Drawing.Size(64, 24);
 			this.checkBox103.TabIndex = 3;
-			this.checkBox103.Text = "수초";
+			this.checkBox103.Text = "해초";
 			this.checkBox103.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox103.UseVisualStyleBackColor = true;
 			// 
@@ -881,7 +881,7 @@
 			this.checkBox100.Name = "checkBox100";
 			this.checkBox100.Size = new System.Drawing.Size(88, 24);
 			this.checkBox100.TabIndex = 0;
-			this.checkBox100.Text = "풍향전반";
+			this.checkBox100.Text = "풍향 전반";
 			this.checkBox100.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox100.UseVisualStyleBackColor = true;
 			// 
@@ -906,8 +906,8 @@
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage2.Size = new System.Drawing.Size(456, 145);
 			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "메모아이콘";
-			this.tabPage2.ToolTipText = "메모아이콘 표시할 때 표시항목 설정";
+			this.tabPage2.Text = "메모 아이콘";
+			this.tabPage2.ToolTipText = "메모 아이콘을 표시할 때 표시할 항목 설정";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
 			// checkBox212
@@ -934,7 +934,7 @@
 			this.checkBox211.Name = "checkBox211";
 			this.checkBox211.Size = new System.Drawing.Size(94, 24);
 			this.checkBox211.TabIndex = 17;
-			this.checkBox211.Text = "자유선택4";
+			this.checkBox211.Text = "자유 선택4";
 			this.checkBox211.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox211.UseVisualStyleBackColor = true;
 			// 
@@ -948,7 +948,7 @@
 			this.checkBox210.Name = "checkBox210";
 			this.checkBox210.Size = new System.Drawing.Size(94, 24);
 			this.checkBox210.TabIndex = 16;
-			this.checkBox210.Text = "자유선택3";
+			this.checkBox210.Text = "자유 선택3";
 			this.checkBox210.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox210.UseVisualStyleBackColor = true;
 			// 
@@ -962,7 +962,7 @@
 			this.checkBox209.Name = "checkBox209";
 			this.checkBox209.Size = new System.Drawing.Size(94, 24);
 			this.checkBox209.TabIndex = 15;
-			this.checkBox209.Text = "자유선택2";
+			this.checkBox209.Text = "자유 선택2";
 			this.checkBox209.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox209.UseVisualStyleBackColor = true;
 			// 
@@ -976,7 +976,7 @@
 			this.checkBox208.Name = "checkBox208";
 			this.checkBox208.Size = new System.Drawing.Size(94, 24);
 			this.checkBox208.TabIndex = 14;
-			this.checkBox208.Text = "자유선택1";
+			this.checkBox208.Text = "자유 선택1";
 			this.checkBox208.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox208.UseVisualStyleBackColor = true;
 			// 
@@ -990,7 +990,7 @@
 			this.checkBox207.Name = "checkBox207";
 			this.checkBox207.Size = new System.Drawing.Size(64, 24);
 			this.checkBox207.TabIndex = 13;
-			this.checkBox207.Text = "맘보";
+			this.checkBox207.Text = "개복치";
 			this.checkBox207.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox207.UseVisualStyleBackColor = true;
 			this.checkBox207.CheckedChanged += new System.EventHandler(this.checkBox207_CheckedChanged);
@@ -1019,7 +1019,7 @@
 			this.checkBox205.Name = "checkBox205";
 			this.checkBox205.Size = new System.Drawing.Size(100, 24);
 			this.checkBox205.TabIndex = 11;
-			this.checkBox205.Text = "자기장이상";
+			this.checkBox205.Text = "자기장 이상";
 			this.checkBox205.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox205.UseVisualStyleBackColor = true;
 			// 
@@ -1047,7 +1047,7 @@
 			this.checkBox203.Name = "checkBox203";
 			this.checkBox203.Size = new System.Drawing.Size(64, 24);
 			this.checkBox203.TabIndex = 9;
-			this.checkBox203.Text = "수초";
+			this.checkBox203.Text = "해초";
 			this.checkBox203.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox203.UseVisualStyleBackColor = true;
 			// 
@@ -1089,7 +1089,7 @@
 			this.checkBox200.Name = "checkBox200";
 			this.checkBox200.Size = new System.Drawing.Size(88, 24);
 			this.checkBox200.TabIndex = 6;
-			this.checkBox200.Text = "풍향전반";
+			this.checkBox200.Text = "풍향 전반";
 			this.checkBox200.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox200.UseVisualStyleBackColor = true;
 			// 
@@ -1113,7 +1113,7 @@
 			this.tabPage3.Size = new System.Drawing.Size(456, 145);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "재해";
-			this.tabPage3.ToolTipText = "재해아이콘 표시할 때 표시할항목 설정";
+			this.tabPage3.ToolTipText = "재해 아이콘을 표시할 때 표시할 항목 설정";
 			this.tabPage3.UseVisualStyleBackColor = true;
 			// 
 			// checkBox310
@@ -1126,7 +1126,7 @@
 			this.checkBox310.Name = "checkBox310";
 			this.checkBox310.Size = new System.Drawing.Size(132, 24);
 			this.checkBox310.TabIndex = 23;
-			this.checkBox310.Text = "무언가 좋은 물건";
+			this.checkBox310.Text = "뭔가 좋은 물건";
 			this.checkBox310.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox310.UseVisualStyleBackColor = true;
 			// 
@@ -1154,7 +1154,7 @@
 			this.checkBox308.Name = "checkBox308";
 			this.checkBox308.Size = new System.Drawing.Size(116, 24);
 			this.checkBox308.TabIndex = 21;
-			this.checkBox308.Text = "정체모를 괴물";
+			this.checkBox308.Text = "정체 모를 괴물";
 			this.checkBox308.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox308.UseVisualStyleBackColor = true;
 			// 
@@ -1210,7 +1210,7 @@
 			this.checkBox304.Name = "checkBox304";
 			this.checkBox304.Size = new System.Drawing.Size(100, 24);
 			this.checkBox304.TabIndex = 17;
-			this.checkBox304.Text = "자기장이상";
+			this.checkBox304.Text = "자기장 이상";
 			this.checkBox304.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox304.UseVisualStyleBackColor = true;
 			// 
@@ -1238,7 +1238,7 @@
 			this.checkBox302.Name = "checkBox302";
 			this.checkBox302.Size = new System.Drawing.Size(64, 24);
 			this.checkBox302.TabIndex = 15;
-			this.checkBox302.Text = "수초";
+			this.checkBox302.Text = "해초";
 			this.checkBox302.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox302.UseVisualStyleBackColor = true;
 			// 
@@ -1282,8 +1282,8 @@
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage4.Size = new System.Drawing.Size(456, 145);
 			this.tabPage4.TabIndex = 3;
-			this.tabPage4.Text = "항로예상선";
-			this.tabPage4.ToolTipText = "항로예상선 표시할 때 표시항목 설정";
+			this.tabPage4.Text = "항로 예상선";
+			this.tabPage4.ToolTipText = "항로 예상선을 표시할 때 표시할 항목 설정";
 			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
 			// checkBox403
@@ -1295,7 +1295,7 @@
 			this.checkBox403.Name = "checkBox403";
 			this.checkBox403.Size = new System.Drawing.Size(280, 24);
 			this.checkBox403.TabIndex = 2;
-			this.checkBox403.Text = "일시적으로 측량스킬이 끊어졌을 때의 예상위치";
+			this.checkBox403.Text = "일시적으로 측량 스킬이 끊어졌을 때의 예상 위치";
 			this.checkBox403.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox403.UseVisualStyleBackColor = true;
 			// 
@@ -1308,7 +1308,7 @@
 			this.checkBox401.Name = "checkBox401";
 			this.checkBox401.Size = new System.Drawing.Size(168, 24);
 			this.checkBox401.TabIndex = 1;
-			this.checkBox401.Text = "속도로 구한 도달예상 위치";
+			this.checkBox401.Text = "속도로 구한 도달 예상 위치";
 			this.checkBox401.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox401.UseVisualStyleBackColor = true;
 			// 
@@ -1322,7 +1322,7 @@
 			this.checkBox402.Name = "checkBox402";
 			this.checkBox402.Size = new System.Drawing.Size(220, 24);
 			this.checkBox402.TabIndex = 3;
-			this.checkBox402.Text = "과거의 위치로 분석한 항로예상선";
+			this.checkBox402.Text = "과거 위치로 분석한 항로 예상선";
 			this.checkBox402.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox402.UseVisualStyleBackColor = true;
 			// 
@@ -1336,7 +1336,7 @@
 			this.checkBox400.Name = "checkBox400";
 			this.checkBox400.Size = new System.Drawing.Size(180, 24);
 			this.checkBox400.TabIndex = 0;
-			this.checkBox400.Text = "나침반에서 분석한 예상선";
+			this.checkBox400.Text = "나침반으로 분석한 예상선";
 			this.checkBox400.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.checkBox400.UseVisualStyleBackColor = true;
 			this.checkBox400.CheckedChanged += new System.EventHandler(this.checkBox400_CheckedChanged);
@@ -1363,7 +1363,7 @@
 			this.groupBox12.Size = new System.Drawing.Size(478, 307);
 			this.groupBox12.TabIndex = 0;
 			this.groupBox12.TabStop = false;
-			this.groupBox12.Text = "버전정보";
+			this.groupBox12.Text = "버전 정보";
 			// 
 			// button4
 			// 
@@ -1372,7 +1372,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(203, 23);
 			this.button4.TabIndex = 25;
-			this.button4.Text = "소프트웨어 업데이트를 확인";
+			this.button4.Text = "소프트웨어 업데이트 확인";
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
@@ -1394,7 +1394,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(399, 12);
 			this.label1.TabIndex = 17;
-			this.label1.Text = "에 공개되어있는 교역MAP C#판을 모험가용으로 기능을 확장한 것입니다";
+			this.label1.Text = "에 공개된 교역MAP C#판을 모험가용으로 기능 확장한 것입니다";
 			// 
 			// linkLabel2
 			// 
@@ -1405,7 +1405,7 @@
 			this.linkLabel2.Size = new System.Drawing.Size(276, 19);
 			this.linkLabel2.TabIndex = 16;
 			this.linkLabel2.TabStop = true;
-			this.linkLabel2.Text = "본 소프트웨어는 대항해시대온라인 슈르배포소상";
+			this.linkLabel2.Text = "본 소프트웨어는 대항해시대 Online 툴 배포처";
 			this.linkLabel2.UseCompatibleTextRendering = true;
 			this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
 			// 
@@ -1488,7 +1488,7 @@
 			this.groupBox20.Size = new System.Drawing.Size(479, 46);
 			this.groupBox20.TabIndex = 7;
 			this.groupBox20.TabStop = false;
-			this.groupBox20.Text = "과거의 항로도(비표시)";
+			this.groupBox20.Text = "과거 항로도(숨김)";
 			// 
 			// label8
 			// 
@@ -1497,7 +1497,7 @@
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(77, 12);
 			this.label8.TabIndex = 15;
-			this.label8.Text = "항로도보유수";
+			this.label8.Text = "항로도 보유 수";
 			// 
 			// textBox9
 			// 
@@ -1518,7 +1518,7 @@
 			this.groupBox19.Size = new System.Drawing.Size(478, 63);
 			this.groupBox19.TabIndex = 6;
 			this.groupBox19.TabStop = false;
-			this.groupBox19.Text = "즐겨찾기항로도";
+			this.groupBox19.Text = "즐겨찾기 항로도";
 			// 
 			// checkBox19
 			// 
@@ -1527,7 +1527,7 @@
 			this.checkBox19.Name = "checkBox19";
 			this.checkBox19.Size = new System.Drawing.Size(112, 16);
 			this.checkBox19.TabIndex = 3;
-			this.checkBox19.Text = "재해팝업 그리기";
+			this.checkBox19.Text = "재해 팝업 그리기";
 			this.checkBox19.UseVisualStyleBackColor = true;
 			// 
 			// checkBox18
@@ -1562,7 +1562,7 @@
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(117, 12);
 			this.label7.TabIndex = 15;
-			this.label7.Text = "표시할 최저항해일수";
+			this.label7.Text = "표시할 최저 항해 일수";
 			// 
 			// textBox8
 			// 
@@ -1581,7 +1581,7 @@
 			this.checkBox14.Name = "checkBox14";
 			this.checkBox14.Size = new System.Drawing.Size(196, 16);
 			this.checkBox14.TabIndex = 1;
-			this.checkBox14.Text = "최신항로도외에는 반투명그리기";
+			this.checkBox14.Text = "최신 항로도 외에는 반투명으로 그리기";
 			this.checkBox14.UseVisualStyleBackColor = true;
 			// 
 			// label6
@@ -1591,7 +1591,7 @@
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(81, 12);
 			this.label6.TabIndex = 13;
-			this.label6.Text = "항로도 보존수";
+			this.label6.Text = "항로도 보존 수";
 			// 
 			// textBox3
 			// 
@@ -1623,7 +1623,7 @@
 			this.groupBox21.Size = new System.Drawing.Size(478, 307);
 			this.groupBox21.TabIndex = 0;
 			this.groupBox21.TabStop = false;
-			this.groupBox21.Text = "키보드할당";
+			this.groupBox21.Text = "키보드 할당";
 			// 
 			// button6
 			// 
@@ -1632,7 +1632,7 @@
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(136, 27);
 			this.button6.TabIndex = 7;
-			this.button6.Text = "전체초기값 복원";
+			this.button6.Text = "전체 초기값 복원";
 			this.button6.UseVisualStyleBackColor = true;
 			// 
 			// button5
@@ -1710,7 +1710,7 @@
 			this.checkBox7.Name = "checkBox7";
 			this.checkBox7.Size = new System.Drawing.Size(382, 16);
 			this.checkBox7.TabIndex = 14;
-			this.checkBox7.Text = "정보윈도우의 좌표 표시를 지도 이미지의 좌표계로 표시(디버깅용)";
+			this.checkBox7.Text = "정보 창의 좌표를 지도 이미지 좌표계로 표시(디버깅용)";
 			this.checkBox7.UseVisualStyleBackColor = true;
 			// 
 			// checkBox4
@@ -1720,7 +1720,7 @@
 			this.checkBox4.Name = "checkBox4";
 			this.checkBox4.Size = new System.Drawing.Size(288, 16);
 			this.checkBox4.TabIndex = 13;
-			this.checkBox4.Text = "선박건조 중이 아니더라도 항상 조선 카운터 표시";
+			this.checkBox4.Text = "선박 건조 중이 아니어도 항상 조선 카운터 표시";
 			this.checkBox4.UseVisualStyleBackColor = true;
 			// 
 			// checkBox16
@@ -1730,7 +1730,7 @@
 			this.checkBox16.Name = "checkBox16";
 			this.checkBox16.Size = new System.Drawing.Size(247, 16);
 			this.checkBox16.TabIndex = 8;
-			this.checkBox16.Text = "교역 MAP@Web 아이콘 그리기를 최적화";
+			this.checkBox16.Text = "교역 MAP @Web 아이콘 그리기 최적화";
 			this.checkBox16.UseVisualStyleBackColor = true;
 			this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
 			// 
@@ -1741,7 +1741,7 @@
 			this.checkBox13.Name = "checkBox13";
 			this.checkBox13.Size = new System.Drawing.Size(140, 16);
 			this.checkBox13.TabIndex = 11;
-			this.checkBox13.Text = "선 그리기시 부드럽게";
+			this.checkBox13.Text = "선을 부드럽게 그리기";
 			this.checkBox13.UseVisualStyleBackColor = true;
 			// 
 			// checkBox2
@@ -1762,7 +1762,7 @@
 			this.checkBox12.Name = "checkBox12";
 			this.checkBox12.Size = new System.Drawing.Size(172, 16);
 			this.checkBox12.TabIndex = 12;
-			this.checkBox12.Text = "윈도우를 항상 맨 위에 표시";
+			this.checkBox12.Text = "창을 항상 맨 위에 표시";
 			this.checkBox12.UseVisualStyleBackColor = true;
 			// 
 			// checkBox10
@@ -1772,7 +1772,7 @@
 			this.checkBox10.Name = "checkBox10";
 			this.checkBox10.Size = new System.Drawing.Size(216, 16);
 			this.checkBox10.TabIndex = 7;
-			this.checkBox10.Text = "우클릭동작을 윈도우 표준에 맞추기";
+			this.checkBox10.Text = "우클릭 동작을 Windows 표준에 맞추기";
 			this.checkBox10.UseVisualStyleBackColor = true;
 			// 
 			// checkBox11
@@ -1782,7 +1782,7 @@
 			this.checkBox11.Name = "checkBox11";
 			this.checkBox11.Size = new System.Drawing.Size(224, 16);
 			this.checkBox11.TabIndex = 10;
-			this.checkBox11.Text = "항로도즐겨찾기와 합성한지도를 사용";
+			this.checkBox11.Text = "즐겨찾기 항로도와 합성한 지도를 사용";
 			this.checkBox11.UseVisualStyleBackColor = true;
 			// 
 			// setting_form2

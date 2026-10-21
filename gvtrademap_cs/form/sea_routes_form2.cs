@@ -75,10 +75,10 @@ namespace gvtrademap_cs {
 			// 헤더 컬럼을 추가해 둔다
 			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView1.Columns.Add("표시", 50);
-			listView1.Columns.Add("시작위치", 160);
-			listView1.Columns.Add("종료위치", 160);
-			listView1.Columns.Add("항해일수", 60);
-			listView1.Columns.Add("항해시간", 170);
+			listView1.Columns.Add("시작 위치", 160);
+			listView1.Columns.Add("종료 위치", 160);
+			listView1.Columns.Add("항해 일수", 60);
+			listView1.Columns.Add("항해 시간", 170);
 		}
 
 		/*-------------------------------------------------------------------------
@@ -88,10 +88,10 @@ namespace gvtrademap_cs {
 			// 헤더 컬럼을 추가해 둔다
 			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView2.Columns.Add("표시", 50);
-			listView2.Columns.Add("시작위치", 160);
-			listView2.Columns.Add("종료위치", 160);
-			listView2.Columns.Add("항해일수", 60);
-			listView2.Columns.Add("항해시간", 170);
+			listView2.Columns.Add("시작 위치", 160);
+			listView2.Columns.Add("종료 위치", 160);
+			listView2.Columns.Add("항해 일수", 60);
+			listView2.Columns.Add("항해 시간", 170);
 		}
 
 		/*-------------------------------------------------------------------------
@@ -101,10 +101,10 @@ namespace gvtrademap_cs {
 			// 헤더 컬럼을 추가해 둔다
 			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView3.Columns.Add("표시", 50);
-			listView3.Columns.Add("시작위치", 160);
-			listView3.Columns.Add("종료위치", 160);
-			listView3.Columns.Add("항해일수", 60);
-			listView3.Columns.Add("항해시간", 170);
+			listView3.Columns.Add("시작 위치", 160);
+			listView3.Columns.Add("종료 위치", 160);
+			listView3.Columns.Add("항해 일수", 60);
+			listView3.Columns.Add("항해 시간", 170);
 		}
 
 		/*-------------------------------------------------------------------------
@@ -181,7 +181,7 @@ namespace gvtrademap_cs {
 		 즐겨찾기 항로도 목록의 내용을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_favorite_sea_routes_list() {
-			tabPage2.Text = String.Format("항로도즐겨찾기({0})", m_db.SeaRoute.favorite_sea_routes.Count);
+			tabPage2.Text = String.Format("즐겨찾기 항로도({0})", m_db.SeaRoute.favorite_sea_routes.Count);
 			update_list_count(m_view2);
 		}
 
@@ -189,7 +189,7 @@ namespace gvtrademap_cs {
 		 휴지통 항로도 목록의 내용을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_trash_sea_routes_list() {
-			tabPage3.Text = String.Format("과거의항로도(비표시)({0})", m_db.SeaRoute.trash_sea_routes.Count);
+			tabPage3.Text = String.Format("과거 항로도(숨김)({0})", m_db.SeaRoute.trash_sea_routes.Count);
 			update_list_count(m_view3);
 		}
 
@@ -404,8 +404,8 @@ namespace gvtrademap_cs {
 		 삭제확인
 		---------------------------------------------------------------------------*/
 		private bool ask_remove() {
-			if (MessageBox.Show("선택한항로도를 삭제합니다. \n삭제하면 복구가 불가능합니다. \n괜찮겠습니까?",
-								"항로도삭제확인",
+			if (MessageBox.Show("선택한 항로도를 삭제합니다. \n삭제하면 복구할 수 없습니다. \n계속할까요?",
+								"항로도 삭제 확인",
 								MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.No) return false;
 			return true;
 		}
@@ -510,7 +510,7 @@ namespace gvtrademap_cs {
 			GvoWorldInfo.Info info2 = m_db.World.FindInfo_WithoutSea(transform.ToPoint(i.MapPointLast));
 			string last_name = (info2 != null) ? info2.Name : "";
 
-			string show_str = (i.IsEnableDraw) ? "표시" : "비표시";
+			string show_str = (i.IsEnableDraw) ? "표시" : "숨김";
 			if (!is_draw_show_flag) show_str = "---";
 
 			ListViewItem item = new ListViewItem(show_str, 0);

@@ -77,7 +77,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		public setting_window(gvt_lib lib, GvoDatabase db, gvtrademap_cs_form form)
 			: base(lib.device, new Vector2(WINDOW_POS_X, WINDOW_POS_Y), new Vector2(WINDOW_SIZE_X, WINDOW_SIZE_Y), WINDOW_POS_Z) {
-			base.title = "설정윈도우";
+			base.title = "설정 창";
 
 			m_form = form;
 			m_lib = lib;
@@ -356,18 +356,18 @@ namespace gvtrademap_cs {
 			setting_icons_index index = setting_icons_index.save_searoutes + pos.X;
 			string tip;
 			switch (index) {
-				case setting_icons_index.save_searoutes: tip = "항로기록（예측량）"; break;
-				case setting_icons_index.share_routes: tip = "공유하고 있는 선박표시（설정 필요）"; break;
-				case setting_icons_index.web_icons: tip = "@Web아이콘 표시\n우클릭으로 표시항목 설정"; break;
-				case setting_icons_index.memo_icons: tip = "메모아이콘 표시\n우클릭으로 표시항목 설정"; break;
-				case setting_icons_index.searoutes: tip = "항로선표시"; break;
-				case setting_icons_index.popup_day_interval: tip = "말풍선표시"; break;
-				case setting_icons_index.accident: tip = "재해표시\n우클릭으로 표시항목설정"; break;
-				case setting_icons_index.center_my_ship: tip = "현재위치 중심으로 표시"; break;
-				case setting_icons_index.myship_angle: tip = "나침반의 각도선, 진로예상선표시\n우클릭으로 표시항목 설정"; break;
-				case setting_icons_index.sea_area: tip = "위험해역변동시스템설정"; break;
-				case setting_icons_index.screen_shot: tip = "항로의 스크린샷보존"; break;
-				case setting_icons_index.show_searoutes_list: tip = "항로도목록\n우클릭으로 항로도 설정"; break;
+				case setting_icons_index.save_searoutes: tip = "항로 기록 (측량 필요)"; break;
+				case setting_icons_index.share_routes: tip = "공유 중인 배 표시 (설정 필요)"; break;
+				case setting_icons_index.web_icons: tip = "@Web 아이콘 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.memo_icons: tip = "메모 아이콘 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.searoutes: tip = "항로선 표시"; break;
+				case setting_icons_index.popup_day_interval: tip = "날짜 말풍선 표시"; break;
+				case setting_icons_index.accident: tip = "재해 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.center_my_ship: tip = "현재 위치를 중심으로 표시"; break;
+				case setting_icons_index.myship_angle: tip = "나침반 각도선, 진로 예상선 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.sea_area: tip = "위험해역 변동 시스템 설정"; break;
+				case setting_icons_index.screen_shot: tip = "항로도 스크린샷 저장"; break;
+				case setting_icons_index.show_searoutes_list: tip = "항로도 목록\n우클릭으로 항로도 설정"; break;
 				default:
 					return null;
 			}
@@ -397,9 +397,9 @@ namespace gvtrademap_cs {
 			pos.X -= rect.X;
 
 			if (pos.X < 16) {
-				return "전체 검색 대화상자를 연다" + get_assign_shortcut_text(KeyFunction.setting_window_button_12);
+				return "전체 검색 창 열기" + get_assign_shortcut_text(KeyFunction.setting_window_button_12);
 			} else {
-				return "설정 대화상자를 연다" + get_assign_shortcut_text(KeyFunction.setting_window_button_13);
+				return "설정 대화상자 열기" + get_assign_shortcut_text(KeyFunction.setting_window_button_13);
 			}
 		}
 

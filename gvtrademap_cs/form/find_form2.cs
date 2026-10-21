@@ -82,7 +82,7 @@ namespace gvtrademap_cs
 	
 			// 헤더 컬럼을 추가해 둔다
 			// 컬럼 크기는 기억해 둘 필요가 있다
-			listView1.Columns.Add("찾은이름",	180);
+			listView1.Columns.Add("찾은 이름",	180);
 			listView1.Columns.Add("종류",	80);
 			listView1.Columns.Add("장소",	120);
 	

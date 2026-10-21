@@ -459,7 +459,7 @@ namespace gvtrademap_cs {
 				case (int)window_index.build_ship:
 					if ((mouseButtons & MouseButtons.Right) == 0) return true;
 					// 우클릭
-					if (MessageBox.Show("조선카운터를 리셋합니까?", "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+					if (MessageBox.Show("조선 카운터를 초기화할까요?", "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
 						m_db.BuildShipCounter.FinishBuildShip();
 					}
 					return true;
@@ -474,7 +474,7 @@ namespace gvtrademap_cs {
 		public string OnToolTipString(Point pos) {
 			switch (m_windows.HitTest_Index(pos)) {
 				case (int)window_index.position: {
-						string str = "지도 확대축소율\n계절(";
+						string str = "지도 확대/축소 비율\n계절(";
 						str += m_db.GvoSeason.next_season_start_shortstr;
 						str += "까지)\n본인 배의 위치\n십자 표시 위치\n마우스 위치";
 						if (m_lib.setting.debug_flag_show_potision) {
@@ -494,19 +494,19 @@ namespace gvtrademap_cs {
 					}
 				case (int)window_index.interest: return m_db.InterestDays.GetPopupString();
 				case (int)window_index.build_ship: {
-						return m_db.BuildShipCounter.GetPopupString() + "\n(우클릭으로 리셋)";
+						return m_db.BuildShipCounter.GetPopupString() + "\n(우클릭으로 초기화)";
 					}
 				case (int)window_index.tcp_server: {
 						gvo_server_service server = m_myship_info.server_service;
 						gvo_tcp_client client = server.GetClient();
 						if (client == null) {
 							if (server.is_listening) {
-								return "TCP서버모드\n연결대기";
+								return "TCP 서버 모드\n연결 대기 중";
 							} else {
-								return "TCP서버모드\n서버 시작에 실패";
+								return "TCP 서버 모드\n서버 시작 실패";
 							}
 						} else {
-							return "TCP서버모드\n연결됨\n통신 대상:" + client.remote_ep.ToString();
+							return "TCP 서버 모드\n연결됨\n통신 대상: " + client.remote_ep.ToString();
 						}
 					}
 			}

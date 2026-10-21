@@ -788,7 +788,7 @@ namespace gvtrademap_cs {
 				float x = size_x - (size_x / 2);
 
 				// 도시디테일
-				draw_progress("도시디테일...", _LoadInfosStatus.StatusMessage,
+				draw_progress("도시 상세 정보...", _LoadInfosStatus.StatusMessage,
 								x, y, size_x,
 								_LoadInfosStatus.NowStep,
 								_LoadInfosStatus.MaxStep, Color.Tomato.ToArgb());
@@ -920,7 +920,7 @@ namespace gvtrademap_cs {
 			}
 
 			// 디테일정보읽기
-			_LoadInfosStatus.IncStep("도시정보 가져오기");
+			_LoadInfosStatus.IncStep("도시 정보 가져오기");
 			m_db.World.Load(def.INFO_FULLNAME, def.NEW_DOMAINS_INDEX_FULLFNAME, def.LOCAL_NEW_DOMAINS_INDEX_FULLFNAME);
 
 			// 아이템 DB 와 링크시킨다
@@ -928,7 +928,7 @@ namespace gvtrademap_cs {
 
 			// Web아이콘읽기
 			// 네트워크에서 가져올지 여부와 관계없이 읽으려 한다
-			_LoadInfosStatus.IncStep("Web아이콘 가져오기");
+			_LoadInfosStatus.IncStep("@Web 아이콘 가져오기");
 			m_db.WebIcons.Load(def.WEB_ICONS_FULLFNAME);
 
 			// 검색 대화상자를 표시한다
@@ -1667,14 +1667,14 @@ namespace gvtrademap_cs {
 			// 해역 변동 시스템 갱신
 			string name = m_db.SeaArea.Find(m_memo_icon_pos);
 			if (name == null) {
-				normal_sea_area_ToolStripMenuItem.Text = "--을 위험해역(통상상태)으로 설정";
+				normal_sea_area_ToolStripMenuItem.Text = "--을 위험해역(일반 상태)으로 설정";
 				normal_sea_area_ToolStripMenuItem.Enabled = false;
 				safty_sea_area_ToolStripMenuItem.Text = "--을 안전해역으로 설정";
 				safty_sea_area_ToolStripMenuItem.Enabled = false;
 				lawless_sea_area_ToolStripMenuItem.Text = "--을 무법해역으로 설정";
 				lawless_sea_area_ToolStripMenuItem.Enabled = false;
 			} else {
-				normal_sea_area_ToolStripMenuItem.Text = name + "을 위험해역(통상상태)으로 설정";
+				normal_sea_area_ToolStripMenuItem.Text = name + "을 위험해역(일반 상태)으로 설정";
 				normal_sea_area_ToolStripMenuItem.Enabled = true;
 				safty_sea_area_ToolStripMenuItem.Text = name + "을 안전해역으로 설정";
 				safty_sea_area_ToolStripMenuItem.Enabled = true;
@@ -1691,7 +1691,7 @@ namespace gvtrademap_cs {
 		private void set_target_memo_icon_ToolStripMenuItem_Click(object sender, EventArgs e) {
 			m_db.MapMark.Add(m_memo_icon_pos,
 							map_mark.map_mark_type.icon11,
-							"목적지주변입니다");
+							"목적지 주변입니다");
 			m_memo_icon_data = null;
 
 			// 추가됐는데 비표시면 곤란하므로 강제 표시로 한다

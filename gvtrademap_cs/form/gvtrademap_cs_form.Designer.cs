@@ -265,7 +265,7 @@
 			this.set_target_memo_icon_ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(111)))), ((int)(((byte)(161)))));
 			this.set_target_memo_icon_ToolStripMenuItem.Name = "set_target_memo_icon_ToolStripMenuItem";
 			this.set_target_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.set_target_memo_icon_ToolStripMenuItem.Text = "목적지 메모아이콘을 여기에 추가";
+			this.set_target_memo_icon_ToolStripMenuItem.Text = "목적지 메모 아이콘을 여기에 추가";
 			this.set_target_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.set_target_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator2
@@ -279,21 +279,21 @@
 			this.add_memo_icon_ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(111)))), ((int)(((byte)(161)))));
 			this.add_memo_icon_ToolStripMenuItem.Name = "add_memo_icon_ToolStripMenuItem";
 			this.add_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.add_memo_icon_ToolStripMenuItem.Text = "메모아이콘을 추가...";
+			this.add_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 추가...";
 			this.add_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.add_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// edit_memo_icon_ToolStripMenuItem
 			// 
 			this.edit_memo_icon_ToolStripMenuItem.Name = "edit_memo_icon_ToolStripMenuItem";
 			this.edit_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.edit_memo_icon_ToolStripMenuItem.Text = "메모아이콘을 편집...";
+			this.edit_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 편집...";
 			this.edit_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.edit_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// remove_memo_icon_ToolStripMenuItem
 			// 
 			this.remove_memo_icon_ToolStripMenuItem.Name = "remove_memo_icon_ToolStripMenuItem";
 			this.remove_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.remove_memo_icon_ToolStripMenuItem.Text = "메모아이콘을 삭제";
+			this.remove_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 삭제";
 			this.remove_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.remove_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
@@ -305,14 +305,14 @@
 			// 
 			this.remove_all_target_memo_icon_ToolStripMenuItem.Name = "remove_all_target_memo_icon_ToolStripMenuItem";
 			this.remove_all_target_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.remove_all_target_memo_icon_ToolStripMenuItem.Text = "전체 목적지 메모아이콘을 삭제";
+			this.remove_all_target_memo_icon_ToolStripMenuItem.Text = "목적지 메모 아이콘 모두 삭제";
 			this.remove_all_target_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.remove_all_target_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// remove_all_memo_icon_ToolStripMenuItem
 			// 
 			this.remove_all_memo_icon_ToolStripMenuItem.Name = "remove_all_memo_icon_ToolStripMenuItem";
 			this.remove_all_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.remove_all_memo_icon_ToolStripMenuItem.Text = "전체 메모아이콘을 삭제";
+			this.remove_all_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 모두 삭제";
 			this.remove_all_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.remove_all_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator5
@@ -324,7 +324,7 @@
 			// 
 			this.openpathscreenshot2ToolStripMenuItem.Name = "openpathscreenshot2ToolStripMenuItem";
 			this.openpathscreenshot2ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.openpathscreenshot2ToolStripMenuItem.Text = "항로도의 스크린샷 폴더 열기...";
+			this.openpathscreenshot2ToolStripMenuItem.Text = "항로도 스크린샷 폴더 열기...";
 			// 
 			// setseaareastateToolStripMenuItem
 			// 
@@ -336,13 +336,13 @@
 			this.lawless_sea_area_ToolStripMenuItem});
 			this.setseaareastateToolStripMenuItem.Name = "setseaareastateToolStripMenuItem";
 			this.setseaareastateToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.setseaareastateToolStripMenuItem.Text = "해역변동 시스템 설정";
+			this.setseaareastateToolStripMenuItem.Text = "해역 변동 시스템 설정";
 			// 
 			// exexgvoacToolStripMenuItem
 			// 
 			this.exexgvoacToolStripMenuItem.Name = "exexgvoacToolStripMenuItem";
 			this.exexgvoacToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-			this.exexgvoacToolStripMenuItem.Text = "해역변동 수집을 시작...";
+			this.exexgvoacToolStripMenuItem.Text = "해역 변동 수집 시작...";
 			// 
 			// toolStripSeparator6
 			// 
@@ -388,14 +388,14 @@
 			// 
 			this.spotToolStripMenuItem1.Name = "spotToolStripMenuItem1";
 			this.spotToolStripMenuItem1.Size = new System.Drawing.Size(351, 22);
-			this.spotToolStripMenuItem1.Text = "장소표시";
+			this.spotToolStripMenuItem1.Text = "장소 표시";
 			this.spotToolStripMenuItem1.Click += new System.EventHandler(this.spotToolStripMenuItem1_Click);
 			// 
 			// clear_spotToolStripMenuItem
 			// 
 			this.clear_spotToolStripMenuItem.Name = "clear_spotToolStripMenuItem";
 			this.clear_spotToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.clear_spotToolStripMenuItem.Text = "장소표시해제";
+			this.clear_spotToolStripMenuItem.Text = "장소 표시 해제";
 			// 
 			// toolStripSeparator4
 			// 
@@ -458,7 +458,7 @@
 			// 
 			this.changeBorderStyleToolStripMenuItem.Name = "changeBorderStyleToolStripMenuItem";
 			this.changeBorderStyleToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.changeBorderStyleToolStripMenuItem.Text = "윈도우 테두리 표시/비표시";
+			this.changeBorderStyleToolStripMenuItem.Text = "창 테두리 표시/숨김";
 			// 
 			// closeFormToolStripMenuItem
 			// 

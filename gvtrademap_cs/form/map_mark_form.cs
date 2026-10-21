@@ -76,9 +76,9 @@ namespace gvtrademap_cs
 
 			toolTip1.SetToolTip(button9, "상어");
 			toolTip1.SetToolTip(button10, "화재");
-			toolTip1.SetToolTip(button11, "수초");
+			toolTip1.SetToolTip(button11, "해초");
 			toolTip1.SetToolTip(button12, "사이렌");
-			toolTip1.SetToolTip(button13, "지자기이상");
+			toolTip1.SetToolTip(button13, "자기장 이상");
 			toolTip1.SetToolTip(button14, "어장");
 
 			toolTip1.SetToolTip(button15, "개복치");

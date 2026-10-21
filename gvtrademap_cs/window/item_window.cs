@@ -47,7 +47,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private gvt_lib m_lib;					  // 
 		private GvoDatabase m_db;					   // DB
-		private spot m_spot;						// 장소표시
+		private spot m_spot;						// 장소 표시
 		private gvtrademap_cs_form m_form;					  // 우클릭 메뉴 전용
 
 		private GvoWorldInfo.Info m_info;					   // 그리기대상
@@ -86,7 +86,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		public item_window(gvt_lib lib, GvoDatabase db, spot _spot, TextBox memo_text_box, ListView list_view, gvtrademap_cs_form form)
 			: base(lib.device, new Vector2(WINDOW_POS_X, WINDOW_POS_Y), new Vector2(WINDOW_SIZE_X, WINDOW_SIZE_Y), WINDOW_POS_Z) {
-			base.title = "아이템윈도우";
+			base.title = "아이템 창";
 
 			m_window_size = new Vector2(0, 0);
 			m_memo_text_box = memo_text_box;
@@ -267,7 +267,7 @@ namespace gvtrademap_cs {
 			}
 
 			// 8dot 만큼의 갭을 가진다
-			d3d_windows.window iw = base.FindWindow("설정윈도우");
+			d3d_windows.window iw = base.FindWindow("설정 창");
 			if (iw != null) base.size = new Vector2(iw.normal_size.X, base.screen_size.Y - 4 * 2);
 			else base.size = new Vector2(WINDOW_SIZE_X, base.screen_size.Y - 4 * 2);
 
@@ -334,7 +334,7 @@ namespace gvtrademap_cs {
 			// 아이템목록
 			// 아이템 개수가 잘 들어가도록 크기를 조정한다
 			int size_y = (int)base.client_size.Y - (pos_y + STEP_Y) - (int)base.pos.Y;
-			d3d_windows.window iw = base.FindWindow("설정윈도우");
+			d3d_windows.window iw = base.FindWindow("설정 창");
 			if (iw != null) size_y -= (int)iw.size.Y;
 
 			ht = m_hittest_list[(int)item_index.item_list];
@@ -856,7 +856,7 @@ namespace gvtrademap_cs {
 			if (info.InfoType != GvoWorldInfo.InfoType.City) return;
 			if (info.CulturalSphere == GvoWorldInfo.CulturalSphere.Unknown) return;
 
-			// 장소표시
+			// 장소 표시
 			SpotItem(new GvoDatabase.Find(info.CulturalSphere, ""));
 		}
 
@@ -956,9 +956,9 @@ namespace gvtrademap_cs {
 					return info.GetToolTipString_HP();
 				case (int)item_index.county_name: {
 						string tmp = info.TooltipString;
-						tmp += "\n좌클릭으로 중심이동";
+						tmp += "\n좌클릭으로 중심 이동";
 						if (info.InfoType == GvoWorldInfo.InfoType.City) {
-							tmp += "\n우클릭으로 속해있는 문화권의 장소표시";
+							tmp += "\n우클릭으로 소속 문화권의 장소 표시";
 						}
 						return tmp;
 					}
@@ -966,7 +966,7 @@ namespace gvtrademap_cs {
 				case (int)item_index.lang2:
 					if ((info.Lang1 != "")
 						|| (info.Lang2 != "")) {
-						return "사용언어\n좌클릭으로 장소표시";
+						return "사용 언어\n좌클릭으로 장소 표시";
 					}
 					break;
 				case (int)item_index.country:
@@ -974,12 +974,12 @@ namespace gvtrademap_cs {
 						case GvoWorldInfo.InfoType.City:
 							switch (info.AllianceType) {
 								case GvoWorldInfo.AllianceType.Piratical:
-								case GvoWorldInfo.AllianceType.Unknown: return info.AllianceTypeStr + "\n좌클릭으로 장소표시";
-								case GvoWorldInfo.AllianceType.Alliance: return info.AllianceTypeStr + " " + info.CountryStr + "\n좌클릭으로 장소표시\n우클릭으로 동맹국변경";
+								case GvoWorldInfo.AllianceType.Unknown: return info.AllianceTypeStr + "\n좌클릭으로 장소 표시";
+								case GvoWorldInfo.AllianceType.Alliance: return info.AllianceTypeStr + " " + info.CountryStr + "\n좌클릭으로 장소 표시\n우클릭으로 동맹국 변경";
 
 								case GvoWorldInfo.AllianceType.Capital:
 								case GvoWorldInfo.AllianceType.Territory:
-									return info.CountryStr + " " + info.AllianceTypeStr + "\n좌클릭으로 장소표시";
+									return info.CountryStr + " " + info.AllianceTypeStr + "\n좌클릭으로 장소 표시";
 							}
 							break;
 						case GvoWorldInfo.InfoType.OutsideCity:
@@ -987,7 +987,7 @@ namespace gvtrademap_cs {
 						case GvoWorldInfo.InfoType.Sea:
 						case GvoWorldInfo.InfoType.Shore:
 						case GvoWorldInfo.InfoType.Shore2:
-							//					return Info.InfoTypeStr + "\n좌클릭으로 장소표시";
+							//					return Info.InfoTypeStr + "\n좌클릭으로 장소 표시";
 							return info.InfoTypeStr;
 					}
 					break;
@@ -1025,10 +1025,10 @@ namespace gvtrademap_cs {
 			pos.X /= ICONS_STEP_X;	  // Index;
 
 			switch (pos.X) {
-				case 0: return "의뢰 중개인/주점 아가씨/판매원\n좌클릭으로 장소표시";
-				case 1: return "서고\n좌클릭으로 장소표시";
-				case 2: return "번역가\n좌클릭으로 장소표시";
-				case 3: return "무역상인\n좌클릭으로 장소표시";
+				case 0: return "의뢰 중개인/주점 아가씨/판매원\n좌클릭으로 장소 표시";
+				case 1: return "서고\n좌클릭으로 장소 표시";
+				case 2: return "번역가\n좌클릭으로 장소 표시";
+				case 3: return "무역상인\n좌클릭으로 장소 표시";
 			}
 			return null;
 		}
