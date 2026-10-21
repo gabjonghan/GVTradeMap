@@ -28,6 +28,7 @@ namespace gvo_base
 	public class ItemDatabase : MultiDictionary<string, ItemDatabase.Data>
 	{
 		private Dictionary<string, string>		m_ajust_name_list;		// 미묘한 이름 오류 보정용
+		private Dictionary<string, Data>		m_normalized_list;		// 표기 차이를 무시한 검색용, 겹치는 키는 null
 
 		/*-------------------------------------------------------------------------
 		 
@@ -86,6 +87,7 @@ namespace gvo_base
 		public void Load(string fname)
 		{
 			base.Clear();
+			m_normalized_list	= new Dictionary<string, Data>();
 			try{
 				using (StreamReader	sr	= new StreamReader(
 					fname, Encoding.GetEncoding("UTF-8"))) {
@@ -96,6 +98,7 @@ namespace gvo_base
 
 						if(_data.CreateFromString(line)){
 							base.Add(_data);
+							add_normalized(_data);
 						}else{
 							// 분석실패
 						}
@@ -197,7 +200,65 @@ namespace gvo_base
 			// 이름의 오류를 수정한다
 			name	= adjust_name(name);
 
-			return base.GetValue(name);
+			Data	d	= base.GetValue(name);
+			if(d != null)	return d;
+
+			// 띄어쓰기, 전각/반각, ♂♀ 등의 표기 차이만 있는 경우
+			return find_normalized(name);
+		}
+
+		/*-------------------------------------------------------------------------
+		 표기 차이를 무시한 비교용 이름을 얻는다
+		 cityinfos.xml 등과 item_db.txt 사이의 띄어쓰기·괄호·성별 기호 차이를 흡수한다
+		---------------------------------------------------------------------------*/
+		static private string normalize_name(string name)
+		{
+			StringBuilder	sb	= new StringBuilder(name.Length);
+			foreach(char c in name){
+				switch(c){
+				case '（':	sb.Append('(');	break;
+				case '）':	sb.Append(')');	break;
+				case '［':	sb.Append('[');	break;
+				case '］':	sb.Append(']');	break;
+				case '：':	sb.Append(':');	break;
+				case '！':	sb.Append('!');	break;
+				case '♂':
+				case '♀':
+				case '・':
+				case '·':
+					break;
+				default:
+					if(!char.IsWhiteSpace(c))	sb.Append(c);
+					break;
+				}
+			}
+			return sb.ToString();
+		}
+
+		/*-------------------------------------------------------------------------
+		 표기 차이를 무시한 검색용 목록에 추가한다
+		 다른 아이템과 같은 키가 되는 경우는 어느 쪽인지 알 수 없으므로 null 로 해 둔다
+		---------------------------------------------------------------------------*/
+		private void add_normalized(Data d)
+		{
+			string	key	= normalize_name(d.Name);
+			Data	old;
+			if(m_normalized_list.TryGetValue(key, out old)){
+				if((old != null) && (old.Name != d.Name))	m_normalized_list[key]	= null;
+				return;
+			}
+			m_normalized_list.Add(key, d);
+		}
+
+		/*-------------------------------------------------------------------------
+		 표기 차이를 무시해서 검색
+		---------------------------------------------------------------------------*/
+		private Data find_normalized(string name)
+		{
+			if(m_normalized_list == null)	return null;
+			Data	d;
+			if(m_normalized_list.TryGetValue(normalize_name(name), out d))	return d;
+			return null;
 		}
 
 		/*-------------------------------------------------------------------------
