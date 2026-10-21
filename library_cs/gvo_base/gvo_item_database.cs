@@ -578,7 +578,8 @@ namespace gvo_base
 				return false;
 			foreach (ShipPartsDataBase.ShipPart i in db.PartsList)
 			{
-				ItemDatabase.Data data = GetValue(i.Name);
+				// ShipParts.xml 은 띄어쓰기 없이 적힌 이름이 많으므로(평갑판형소형선체 등) 표기 차이를 무시하는 Find 로 찾는다
+				ItemDatabase.Data data = Find(i.Name);
 				if (data != null)
 					data.MergeShipPartsDatabase(i);
 			}
