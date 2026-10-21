@@ -431,6 +431,13 @@ namespace gvtrademap_cs {
 			once.Add("노르웨이 해저분지2", new Vector2(0, 295), new Vector2(74, 155), false);
 			m_groups.Add(once);
 
+			// 그린란드
+			// 마스크에는 칠해져 있었지만 해역 정의가 빠져 있던 x=4043~4343 구간
+			once = new sea_area_once("그린란드");
+			once.Add("북그린란드섬 앞바다", new Vector2(4043, 0), new Vector2(301, 294), true);
+			once.Add("남그린란드섬 앞바다", new Vector2(4043, 295), new Vector2(301, 155), true);
+			m_groups.Add(once);
+
 			// 유럽 극북
 			once = new sea_area_once("유럽 극북");
 			once.Add("서 바렌츠해", new Vector2(1, 0), new Vector2(447, 294), true);
