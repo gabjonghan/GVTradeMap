@@ -17932,4 +17932,111 @@
 	</group>
   </cityinfo>
 
+  <!-- 2023-2024 추가 도시: 정리 wiki(gvo.gamedb.info) 도시별 교역품 기준, 가격·투자액 미상 -->
+  <cityinfo name="예테보리">
+	<group name="[교역]">
+	  <item name="호밀" />
+	  <item name="메귀리" />
+	  <item name="유럽 가재" />
+	  <item name="쐐기풀" />
+	  <item name="목재" />
+	  <item name="아마" />
+	  <item name="모피" option="*" />
+	  <item name="피혁" option="*" />
+	  <item name="고급가구" option="*" />
+	  <item name="달라헤스트" />
+	</group>
+  </cityinfo>
+  <cityinfo name="가봉">
+	<group name="[교역]">
+	  <item name="사탕수수" />
+	  <item name="야자유" />
+	  <item name="진주조" option="*" />
+	  <item name="커피" />
+	  <item name="석유" />
+	  <item name="산호" />
+	  <item name="공작석" />
+	  <item name="다이아몬드" option="*" />
+	  <item name="상아" option="*" />
+	</group>
+  </cityinfo>
+  <cityinfo name="이냠바네">
+	<group name="[교역]">
+	  <item name="보리" />
+	  <item name="사탕수수" />
+	  <item name="벼" />
+	  <item name="커피" />
+	  <item name="루이보스" option="*" />
+	  <item name="아프리카 목각" option="*" />
+	  <item name="은" />
+	  <item name="산호" />
+	  <item name="에메랄드" option="*" />
+	</group>
+  </cityinfo>
+  <cityinfo name="얀부">
+	<group name="[교역]">
+	  <item name="밀" />
+	  <item name="양파" />
+	  <item name="커피" />
+	  <item name="석유" />
+	  <item name="검은색 광석" option="*" />
+	  <item name="낙타모" />
+	  <item name="화약" option="*" />
+	  <item name="산호" option="*" />
+	</group>
+  </cityinfo>
+  <cityinfo name="마나마">
+	<group name="[교역]">
+	  <item name="양고기" />
+	  <item name="올리브유" />
+	  <item name="녹색 광석" />
+	  <item name="양모" />
+	  <item name="페르시아 융단" />
+	  <item name="타프타" option="*" />
+	  <item name="바질" />
+	  <item name="생강" />
+	  <item name="터키석" option="*" />
+	  <item name="진주" option="*" />
+	</group>
+  </cityinfo>
+  <cityinfo name="망갈로르">
+	<group name="[교역]">
+	  <item name="철광석" option="*" />
+	  <item name="자단" option="*" />
+	  <item name="황마" />
+	  <item name="면화" />
+	  <item name="산양모" />
+	  <item name="캐시미어" />
+	  <item name="황동 세공" option="*" />
+	  <item name="생강" />
+	  <item name="백단" />
+	  <item name="자스민" />
+	</group>
+  </cityinfo>
+  <cityinfo name="비샤카파트남">
+	<group name="[교역]">
+	  <item name="양" />
+	  <item name="인도 쪽" />
+	  <item name="철광석" option="*" />
+	  <item name="붉은색 광석" option="*" />
+	  <item name="목재" />
+	  <item name="홍차" />
+	  <item name="면화" />
+	  <item name="후추" option="*" />
+	  <item name="계피" />
+	</group>
+  </cityinfo>
+  <cityinfo name="보스턴">
+	<group name="[교역]">
+	  <item name="어육" />
+	  <item name="소금" />
+	  <item name="담배" />
+	  <item name="홍차" option="*" />
+	  <item name="럼주" />
+	  <item name="강철" option="*" />
+	  <item name="석유" option="*" />
+	  <item name="피혁제품" option="*" />
+	  <item name="고급의류" option="*" />
+	</group>
+  </cityinfo>
   </cityinfo_root>
