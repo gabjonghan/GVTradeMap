@@ -140,10 +140,6 @@ namespace gvo_base
 			m_ajust_name_list.Add("고급 상납품(소형배용)", "고급 상납품（소형배용）");
 			m_ajust_name_list.Add("고급 상납품(중형배용)", "고급 상납품（중형배용）");
 			m_ajust_name_list.Add("고급 상납품(대형배용)", "고급 상납품（대형배용）");
-			m_ajust_name_list.Add("데미 캘버린포 10문", "데미 캘버린10문");
-			m_ajust_name_list.Add("데미 캘버린포 12문", "데미 캘버린12문");
-			m_ajust_name_list.Add("데미 캘버린포 14문", "데미 캘버린14문");
-			m_ajust_name_list.Add("데미 캘버린포 16문", "데미 캘버린16문");
 			m_ajust_name_list.Add("팰콘2포", "팰콘포 2문");
 			m_ajust_name_list.Add("팰콘4포", "팰콘포 4문");
 			m_ajust_name_list.Add("팰콘6포", "팰콘포 6문");
@@ -157,10 +153,14 @@ namespace gvo_base
 		---------------------------------------------------------------------------*/
 		public Data Find(string name)
 		{
+			// item_db.txt 에 그대로 있으면 보정표보다 우선한다
+			Data	d	= base.GetValue(name);
+			if(d != null)	return d;
+
 			// 이름의 오류를 수정한다
 			name	= adjust_name(name);
 
-			Data	d	= base.GetValue(name);
+			d	= base.GetValue(name);
 			if(d != null)	return d;
 
 			// 띄어쓰기, 전각/반각, ♂♀ 등의 표기 차이만 있는 경우

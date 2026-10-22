@@ -237,9 +237,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -457,9 +457,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -697,9 +697,9 @@
 	  <item name="발칸포 6문" price="81900" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -851,9 +851,9 @@
 	  <item name="발칸포 6문" price="81900" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -962,7 +962,7 @@
 	  <item name="납광석" price="391" />
 	  <item name="철광석" option="*" price="566" />
 	  <item name="동광석" price="690" />
-	  <item name="주석광석" price="423" />
+	  <item name="주석" price="423" />
 	  <item name="공작석" option="*" price="1650" investment="240k" />
 	  <item name="보석세공" option="*" price="3752" investment="600k" />
 	  <item name="석탄" option="*" price="415" />
@@ -1102,9 +1102,9 @@
 	  <item name="모터포 4문" price="61300" />
 	  <item name="모터포 6문" price="137900" />
 	  <item name="모터포 8문" price="245200" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="칼로네이드포 4문" price="14500" />
 	  <item name="파일로포 4문" price="12500" />
 	  <item name="파일로포 6문" price="38000" />
@@ -1115,9 +1115,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -1453,7 +1453,7 @@
 	  <item name="닭" price="44" />
 	  <item name="양" price="108" />
 	  <item name="당근" price="80" />
-	  <item name="파슬리" option="*" price="96" />
+	  <item name="파셀리" option="*" price="96" />
 	</group>
 	<group name="[도구]">
 	  <item name="해독제" price="100" />
@@ -1614,9 +1614,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -1756,7 +1756,7 @@
 	  <item name="라벤더" option="*" price="673" investment="120k" />
 	  <item name="납광석" option="*" price="392" />
 	  <item name="동광석" option="*" price="692" />
-	  <item name="주석광석" price="424" />
+	  <item name="주석" price="424" />
 	  <item name="공작석" option="*" price="1650" investment="240k" />
 	  <item name="양손검" price="1250" />
 	  <item name="흑연" price="780" />
@@ -1901,9 +1901,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -1938,7 +1938,7 @@
 	  <item name="양모" price="324" />
 	  <item name="서양갑옷" price="2246" />
 	  <item name="종이" option="*" price="240" investment="240k" />
-	  <item name="황동" option="*" price="638" investment="320k" />
+	  <item name="놋쇠" option="*" price="638" investment="320k" />
 	  <item name="청동" option="*" price="860" />
 	  <item name="철재" option="*" price="703" investment="180k" />
 	</group>
@@ -2165,9 +2165,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -2356,9 +2356,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -2634,9 +2634,9 @@
 	  <item name="모터포 4문" price="61300" />
 	  <item name="모터포 6문" price="137900" />
 	  <item name="모터포 8문" price="245200" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" option="*" price="31200" />
-	  <item name="페리에포 8문" option="*" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" option="*" price="31200" />
+	  <item name="벨리에포 8문" option="*" price="70400" />
 	  <item name="칼로네이드포 4문" option="*" price="14500" />
 	  <item name="파일로포 4문" price="12500" />
 	  <item name="파일로포 6문" price="38000" />
@@ -2647,9 +2647,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -2684,7 +2684,7 @@
 	  <item name="와인" price="376" />
 	  <item name="소금" price="208" />
 	  <item name="라드" option="*" price="227" />
-	  <item name="주석광석" option="*" price="424" />
+	  <item name="주석" option="*" price="424" />
 	  <item name="치즈" price="304" />
 	  <item name="피혁" price="372" />
 	</group>
@@ -2854,10 +2854,10 @@
 	  <item name="보리" price="32" />
 	  <item name="어육" price="128" />
 	  <item name="헤이즐넛" price="334" />
-	  <item name="고수" option="*" price="271" investment="120k" />
+	  <item name="코리안더" option="*" price="271" investment="120k" />
 	  <item name="타임" option="*" price="243" investment="240k" />
 	  <item name="바질" price="104" />
-	  <item name="레몬" price="256" />
+	  <item name="레몬밤" price="256" />
 	  <item name="황마" price="124" />
 	  <item name="산호" option="*" price="2985" investment="500k" />
 	</group>
@@ -3199,9 +3199,9 @@
 	  <item name="모터포 4문" price="61300" />
 	  <item name="모터포 6문" price="137900" />
 	  <item name="모터포 8문" price="245200" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 4문" price="9200" />
 	  <item name="하이페리에포 6문" price="36800" />
 	  <item name="하이페리에포 8문" price="83100" />
@@ -3215,9 +3215,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -3296,7 +3296,7 @@
 	  <item name="포탄" price="1470" />
 	  <item name="대포" option="*" price="3253" investment="180k" />
 	  <item name="화승총" price="2474" />
-	  <item name="황동" option="*" price="638" investment="180k" />
+	  <item name="놋쇠" option="*" price="638" investment="180k" />
 	  <item name="강철" price="972" />
 	  <item name="소금" price="207" />
 	</group>
@@ -3439,9 +3439,9 @@
 	  <item name="모터포 4문" price="61300" />
 	  <item name="모터포 6문" price="137900" />
 	  <item name="모터포 8문" price="245200" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="칼로네이드포 4문" price="14500" />
 	  <item name="파일로포 4문" price="12500" />
 	  <item name="파일로포 6문" price="38000" />
@@ -3452,9 +3452,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 4문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	</group>
@@ -3482,11 +3482,11 @@
 	<group name="[교역]">
 	  <item name="올리브" price="206" />
 	  <item name="어육" price="127" />
-	  <item name="파슬리" price="95" />
+	  <item name="파셀리" price="95" />
 	  <item name="와인비니거" price="431" />
 	  <item name="아몬드" price="123" />
 	  <item name="오레가노" price="418" />
-	  <item name="고수" option="*" price="271" investment="240k" />
+	  <item name="코리안더" option="*" price="271" investment="240k" />
 	  <item name="샐러리" price="83" />
 	  <item name="타임" price="243" />
 	  <item name="산호" option="*" price="2760" investment="240k" />
@@ -3698,7 +3698,7 @@
 	<group name="[교역]">
 	  <item name="어육" price="128" />
 	  <item name="닭고기" price="288" />
-	  <item name="파슬리" price="96" />
+	  <item name="파셀리" price="96" />
 	  <item name="달걀" price="25" />
 	  <item name="돼지" price="56" />
 	  <item name="쉐리" option="*" price="384" investment="120k" />
@@ -3816,7 +3816,7 @@
   <cityinfo name="몽펠리에">
 	<group name="[교역]">
 	  <item name="건포도" price="208" />
-	  <item name="파슬리" price="96" />
+	  <item name="파셀리" price="96" />
 	  <item name="버섯" price="32" />
 	  <item name="오리" price="55" />
 	  <item name="작약" option="*" price="311" investment="500k" />
@@ -4102,9 +4102,9 @@
 	  <item name="모터포 4문" price="61300" />
 	  <item name="모터포 6문" price="137900" />
 	  <item name="모터포 8문" price="245200" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 4문" price="9200" />
 	  <item name="하이페리에포 6문" price="36800" />
 	  <item name="하이페리에포 8문" price="83100" />
@@ -4118,9 +4118,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -4197,7 +4197,7 @@
   <cityinfo name="안코나">
 	<group name="[교역]">
 	  <item name="와인" price="375" />
-	  <item name="고미술품" price="3272" />
+	  <item name="고대 미술품" price="3272" />
 	  <item name="버섯" price="32" />
 	  <item name="닭" price="44" />
 	</group>
@@ -4219,7 +4219,7 @@
   <cityinfo name="베네치아">
 	<group name="[교역]">
 	  <item name="후추" price="5619" />
-	  <item name="파슬리" price="95" />
+	  <item name="파셀리" price="95" />
 	  <item name="레이스" price="1720" />
 	  <item name="비단 원단" option="*" />
 	  <item name="유리세공" price="1102" />
@@ -4460,9 +4460,9 @@
 	  <item name="엑스플로더포 4문" price="28500" />
 	  <item name="엑스플로더포 6문" price="64000" />
 	  <item name="엑스플로더포 8문" price="113900" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 4문" price="9200" />
 	  <item name="하이페리에포 6문" price="36800" />
 	  <item name="하이페리에포 8문" price="83100" />
@@ -4478,9 +4478,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -4641,7 +4641,7 @@
 	  <item name="은" price="2511" />
 	  <item name="은세공" option="*" price="2674" investment="240k" />
 	  <item name="고급의류" option="*" price="3650" />
-	  <item name="고미술품" price="3271" />
+	  <item name="고대 미술품" price="3271" />
 	</group>
 	<group name="[도구]">
 	  <item name="유럽 귀족남자 상의" option="*" price="123200" investment="120k" />
@@ -4805,9 +4805,9 @@
 	  <item name="엑스플로더포 4문" price="28500" />
 	  <item name="엑스플로더포 6문" price="64000" />
 	  <item name="엑스플로더포 8문" price="113900" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="칼로네이드포 4문" price="14500" />
 	  <item name="파일로포 4문" price="12500" />
 	  <item name="파일로포 6문" price="38000" />
@@ -4818,9 +4818,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -5016,9 +5016,9 @@
 	  <item name="엑스플로더포 4문" price="28500" />
 	  <item name="엑스플로더포 6문" price="64000" />
 	  <item name="엑스플로더포 8문" price="113900" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="칼로네이드포 4문" price="14500" />
 	  <item name="파일로포 4문" price="12500" />
 	  <item name="파일로포 6문" price="38000" />
@@ -5029,9 +5029,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -5264,9 +5264,9 @@
 	  <item name="엑스플로더포 4문" price="28500" />
 	  <item name="엑스플로더포 6문" price="64000" />
 	  <item name="엑스플로더포 8문" price="113900" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="칼로네이드포 4문" price="14500" />
 	  <item name="파일로포 4문" price="12500" />
 	  <item name="파일로포 6문" price="38000" />
@@ -5277,9 +5277,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -5501,9 +5501,9 @@
 	  <item name="엑스플로더포 4문" price="28500" />
 	  <item name="엑스플로더포 6문" price="64000" />
 	  <item name="엑스플로더포 8문" price="113900" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 4문" price="9200" />
 	  <item name="하이페리에포 6문" price="36800" />
 	  <item name="하이페리에포 8문" price="83100" />
@@ -5519,9 +5519,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -5590,7 +5590,7 @@
 	  <item name="와인" price="376" />
 	  <item name="꿀" price="767" />
 	  <item name="호두" price="432" />
-	  <item name="자두" price="287" />
+	  <item name="말린 자두" price="287" />
 	  <item name="공단" option="*" price="2899" investment="400k" />
 	  <item name="종이" option="*" price="264" investment="180k" />
 	  <item name="청동상" price="863" />
@@ -5826,9 +5826,9 @@
 	  <item name="엑스플로더포 4문" price="28500" />
 	  <item name="엑스플로더포 6문" price="64000" />
 	  <item name="엑스플로더포 8문" price="113900" />
-	  <item name="페리에포 4문" price="7800" />
-	  <item name="페리에포 6문" price="31200" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 4문" price="9200" />
 	  <item name="하이페리에포 6문" price="36800" />
 	  <item name="하이페리에포 8문" price="83100" />
@@ -5844,9 +5844,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -6057,7 +6057,7 @@
 	  <item name="꿀" option="*" price="766" />
 	  <item name="오크모스" option="*" price="600" investment="240k" />
 	  <item name="대리석상" price="2530" />
-	  <item name="고미술품" price="3273" />
+	  <item name="고대 미술품" price="3273" />
 	  <item name="곡도" option="*" price="871" investment="180k" />
 	  <item name="대리석" option="*" price="1113" />
 	  <item name="양피지" price="981" />
@@ -6208,9 +6208,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -6352,7 +6352,7 @@
 	  <item name="피클" option="*" price="223" />
 	  <item name="오레가노" price="419" />
 	  <item name="오크모스" option="*" price="600" investment="240k" />
-	  <item name="고미술품" option="*" price="3280" investment="400k" />
+	  <item name="고대 미술품" option="*" price="3280" investment="400k" />
 	  <item name="대리석" price="1110" />
 	  <item name="왁스" option="*" price="670" investment="120k" />
 	</group>
@@ -6572,9 +6572,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -6876,9 +6876,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -7078,9 +7078,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -7300,9 +7300,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -7415,7 +7415,7 @@
 	  <item name="밀" option="*" price="39" />
 	  <item name="누에콩" price="52" />
 	  <item name="아몬드" option="*" price="123" investment="120k" />
-	  <item name="고수" option="*" price="271" investment="180k" />
+	  <item name="코리안더" option="*" price="271" investment="180k" />
 	  <item name="강달소라" price="3791" />
 	  <item name="마 원단" option="*" price="331" investment="240k" />
 	  <item name="철광석" price="566" />
@@ -7563,9 +7563,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -7748,9 +7748,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -7880,9 +7880,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -8022,9 +8022,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -8255,9 +8255,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="발칸포 4문" price="29300" />
 	  <item name="발칸포 6문" price="89100" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="소형 충각" price="1000" />
 	  <item name="충각" price="4800" />
 	  <item name="소형 조교" price="3000" />
@@ -8635,9 +8635,9 @@
 	  <item name="드래코니스포 8문" price="103600" />
 	  <item name="앙페르포 4문" price="26600" />
 	  <item name="앙페르포 6문" price="81000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="소형 충각" price="1000" />
 	  <item name="충각" price="4800" />
 	  <item name="소형 조교" price="3000" />
@@ -8903,7 +8903,7 @@
 	  <item name="모터포 8문" price="245200" />
 	  <item name="데미캐논포 8문" price="55900" />
 	  <item name="데미캐논포 10문" price="99400" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 8문" price="83100" />
 	  <item name="파일로포 8문" price="71000" />
 	  <item name="파일로포 10문" price="110500" />
@@ -8912,9 +8912,9 @@
 	  <item name="드래코니스포 8문" price="103600" />
 	  <item name="드래코니스포 10문" price="161300" />
 	  <item name="드래코니스포 12문" price="198500" />
-	  <item name="카프리스포 8문" price="103600" />
-	  <item name="카프리스포 10문" price="161300" />
-	  <item name="카프리스포 12문" price="198500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="카플리스포 10문" price="161300" />
+	  <item name="카플리스포 12문" price="198500" />
 	  <item name="충각" price="4800" />
 	  <item name="조교" price="24000" />
 	  <item name="선수루" price="16000" />
@@ -9211,9 +9211,9 @@
 	  <item name="드래코니스포 8문" price="103600" />
 	  <item name="앙페르포 4문" price="26600" />
 	  <item name="앙페르포 6문" price="81000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="소형 충각" price="1000" />
 	  <item name="충각" price="4800" />
 	  <item name="소형 조교" price="3000" />
@@ -9374,7 +9374,7 @@
 	  <item name="모터포 8문" price="245200" />
 	  <item name="데미캐논포 8문" price="55900" />
 	  <item name="데미캐논포 10문" price="99400" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 8문" price="83100" />
 	  <item name="파일로포 8문" price="71000" />
 	  <item name="파일로포 10문" price="110500" />
@@ -9382,9 +9382,9 @@
 	  <item name="드래코니스포 8문" price="103600" />
 	  <item name="드래코니스포 10문" price="161300" />
 	  <item name="드래코니스포 12문" price="198500" />
-	  <item name="카프리스포 8문" price="103600" />
-	  <item name="카프리스포 10문" price="161300" />
-	  <item name="카프리스포 12문" price="198500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="카플리스포 10문" price="161300" />
+	  <item name="카플리스포 12문" price="198500" />
 	  <item name="충각" price="4800" />
 	  <item name="조교" price="24000" />
 	  <item name="선수루" price="16000" />
@@ -9585,7 +9585,7 @@
 	  <item name="모터포 8문" price="245200" />
 	  <item name="데미캐논포 8문" price="55900" />
 	  <item name="데미캐논포 10문" price="99400" />
-	  <item name="페리에포 8문" price="70400" />
+	  <item name="벨리에포 8문" price="70400" />
 	  <item name="하이페리에포 8문" price="83100" />
 	  <item name="파일로포 8문" price="71000" />
 	  <item name="파일로포 10문" price="110500" />
@@ -9594,9 +9594,9 @@
 	  <item name="드래코니스포 8문" price="103600" />
 	  <item name="드래코니스포 10문" price="161300" />
 	  <item name="드래코니스포 12문" price="198500" />
-	  <item name="카프리스포 8문" price="103600" />
-	  <item name="카프리스포 10문" price="161300" />
-	  <item name="카프리스포 12문" price="198500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="카플리스포 10문" price="161300" />
+	  <item name="카플리스포 12문" price="198500" />
 	  <item name="충각" price="4800" />
 	  <item name="조교" price="24000" />
 	  <item name="선수루" price="16000" />
@@ -9865,7 +9865,7 @@
 	  <item name="제라늄" price="496" />
 	  <item name="철광석" option="*" price="566" />
 	  <item name="동광석" option="*" price="692" />
-	  <item name="주석광석" price="424" />
+	  <item name="주석" price="424" />
 	  <item name="다이아몬드" option="*" price="2774" />
 	</group>
 	<group name="[도구]">
@@ -10028,7 +10028,7 @@
 	  <item name="목화" price="267" />
 	  <item name="옥수수" option="*" price="47" investment="240k" />
 	  <item name="석탄" option="*" price="418" investment="120k" />
-	  <item name="주석광석" price="424" />
+	  <item name="주석" price="424" />
 	</group>
 	<group name="[도구]">
 	  <item name="만취하게 하는 술" price="300" />
@@ -10142,9 +10142,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -10349,9 +10349,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -10687,9 +10687,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -10847,9 +10847,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -11307,9 +11307,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -11472,9 +11472,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -11680,9 +11680,9 @@
 	  <item name="발칸포 6문" price="89100" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="슈미네포 4문" price="29300" />
@@ -12024,7 +12024,7 @@
 	  <item name="파일로포 8문" price="71000" />
 	  <item name="파일로포 10문" price="110500" />
 	  <item name="드래코니스포 8문" price="103600" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="소형 충각" price="1000" />
 	  <item name="충각" price="4800" />
 	  <item name="소형 조교" price="3000" />
@@ -12127,7 +12127,7 @@
 	<group name="[교역]">
 	  <item name="소금" price="206" />
 	  <item name="바나나" price="132" />
-	  <item name="정향" price="337" />
+	  <item name="크로브" price="337" />
 	  <item name="철광석" price="566" />
 	  <item name="별갑" option="*" price="1320" investment="180k" />
 	</group>
@@ -12147,11 +12147,11 @@
 	<group name="[교역]">
 	  <item name="타로토란" price="68" />
 	  <item name="닭" price="44" />
-	  <item name="고수" price="272" />
+	  <item name="코리안더" price="272" />
 	  <item name="모시풀" price="156" />
 	  <item name="안식향" price="830" />
 	  <item name="패츌리" price="1222" />
-	  <item name="주석광석" price="424" />
+	  <item name="주석" price="424" />
 	</group>
 	<group name="[도구]">
 	  <item name="해적조끼" price="18500" />
@@ -12422,7 +12422,7 @@
 	  <item name="판야" price="346" />
 	  <item name="피혁" price="423" />
 	  <item name="비단 원단" price="2500" />
-	  <item name="주석광석" price="482" />
+	  <item name="주석" price="482" />
 	</group>
 	<group name="[도구]">
 	  <item name="해적조끼" price="18500" />
@@ -12660,7 +12660,7 @@
 	<group name="[교역]">
 	  <item name="옥수수" price="47" />
 	  <item name="바나나" price="131" />
-	  <item name="정향" price="335" />
+	  <item name="크로브" price="335" />
 	  <item name="노니" price="436" />
 	  <item name="철광석" price="567" />
 	  <item name="철재" option="*" price="703" />
@@ -12735,7 +12735,7 @@
 	  <item name="파일로포 8문" price="71000" />
 	  <item name="파일로포 10문" price="110500" />
 	  <item name="드래코니스포 8문" price="103600" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 8문" price="103600" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="880" />
@@ -12951,7 +12951,7 @@
 	  <item name="옥수수" price="50" />
 	  <item name="커피" price="380" />
 	  <item name="캐슈넛" price="330" />
-	  <item name="황동" price="700" />
+	  <item name="놋쇠" price="700" />
 	  <item name="토마토" price="100" />
 	  <item name="금세공" option="*" price="2680" investment="320k" />
 	  <item name="오팔" option="*" price="2388" investment="320k" />
@@ -13117,9 +13117,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="발칸포 4문" price="29300" />
 	  <item name="발칸포 6문" price="89100" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="800" />
@@ -13497,7 +13497,7 @@
 	  <item name="조선 은" />
 	  <item name="맥반석" />
 	  <item name="호안석" />
-	  <item name="고려창자" />
+	  <item name="고려청자" />
 	  <item name="나전칠기" />
 	  <item name="조선 서적" />
 	  <item name="대도" />
@@ -13540,7 +13540,7 @@
 	  <item name="조선 은" />
 	  <item name="맥반석" />
 	  <item name="호안석" />
-	  <item name="고려창자" />
+	  <item name="고려청자" />
 	  <item name="나전칠기" />
 	  <item name="조선 서적" />
 	  <item name="대도" />
@@ -13604,7 +13604,7 @@
 	  <item name="조선 은" />
 	  <item name="맥반석" />
 	  <item name="호안석" />
-	  <item name="고려창자" />
+	  <item name="고려청자" />
 	  <item name="나전칠기" />
 	  <item name="조선 서적" />
 	  <item name="대도" />
@@ -14134,7 +14134,7 @@
   <cityinfo name="코콜라">
 	<group name="[교역]">
 	  <item name="통나무" price="122" />
-	  <item name="황동" price="767" investment="60k" />
+	  <item name="놋쇠" price="767" investment="60k" />
 	  <item name="강철" price="777" />
 	  <item name="철광석" price="453" />
 	  <item name="동광석" price="554" />
@@ -14243,9 +14243,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -14422,9 +14422,9 @@
 	  <item name="앙페르포 6문" price="81000" />
 	  <item name="프랑고포 4문" price="12500" />
 	  <item name="프랑고포 6문" price="38000" />
-	  <item name="카프리스포 4문" price="18200" />
-	  <item name="카프리스포 6문" price="55500" />
-	  <item name="카프리스포 8문" price="103600" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
 	  <item name="메테오라포 4문" price="26600" />
 	  <item name="메테오라포 6문" price="81000" />
 	  <item name="소형 충각" price="1000" />
@@ -14720,7 +14720,7 @@
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="노란색 광석" price="-1" />
 	  <item name="돌" price="-2" />
 	  <item name="풀" price="-2" />
@@ -14770,8 +14770,8 @@
 	  <item name="통나무" price="-1" />
 	  <item name="아니스" price="-1" />
 	  <item name="딱총나무" price="-1" />
-	  <item name="레몬" price="-1" />
-	  <item name="고수" price="-1" />
+	  <item name="레몬밤" price="-1" />
+	  <item name="코리안더" price="-1" />
 	  <item name="풀" price="-2" />
 	  <item name="버섯" price="-2" />
 	  <item name="호밀" price="-2" />
@@ -14823,7 +14823,7 @@
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="돌" price="-2" />
 	  <item name="풀" price="-2" />
 	  <item name="버섯" price="-2" />
@@ -14898,7 +14898,7 @@
   <cityinfo name="카이로 건너편">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="식물성 기름" price="-1" />
 	  <item name="벨라돈나" price="-1" />
 	  <item name="모래" price="-2" />
@@ -14936,7 +14936,7 @@
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" option="?" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="돌" price="-2" />
 	  <item name="풀" option="?" price="-2" />
 	  <item name="팥" price="-2" />
@@ -15129,7 +15129,7 @@
   <cityinfo name="아프리카 남동쪽">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="식물성 기름" price="-1" />
 	  <item name="향목" price="-1" />
 	  <item name="녹색 광석" price="-1" />
@@ -15224,7 +15224,7 @@
 	  <item name="통나무" price="-1" />
 	  <item name="검은색 진흙" price="-1" />
 	  <item name="붉은색 광석" price="-1" />
-	  <item name="고수" price="-1" />
+	  <item name="코리안더" price="-1" />
 	  <item name="커민" price="-1" />
 	  <item name="생사" price="-1" />
 	  <item name="모래" price="-2" />
@@ -15240,7 +15240,7 @@
 	  <item name="인도 꼭두서니" price="-1" />
 	  <item name="공작의 깃털" price="-1" />
 	  <item name="후추" price="-1" />
-	  <item name="고수" price="-1" />
+	  <item name="코리안더" price="-1" />
 	  <item name="모래" price="-2" />
 	  <item name="순무" price="-2" />
 	  <item name="버섯" price="-2" />
@@ -15411,7 +15411,7 @@
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="붉은색 광석" price="-1" />
 	  <item name="검은색 광석" price="-1" />
 	  <item name="납광석" price="-1" />
@@ -15425,7 +15425,7 @@
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
 	  <item name="식물성 기름" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="검은색 광석" price="-1" />
 	  <item name="붉은색 광석" price="-1" />
 	  <item name="풀" price="-2" />
@@ -15451,7 +15451,7 @@
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="식물성 기름" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="휀넬" price="-1" />
 	  <item name="풀" price="-2" />
 	  <item name="버섯" price="-2" />
@@ -15464,7 +15464,7 @@
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="흰 꽃" price="-1" />
-	  <item name="파슬리" price="-1" />
+	  <item name="파셀리" price="-1" />
 	  <item name="바질" price="-1" />
 	  <item name="딜" price="-1" />
 	  <item name="풀" price="-2" />
@@ -15494,7 +15494,7 @@
 	  <item name="풀" price="-1" />
 	  <item name="빨간 꽃" price="-1" />
 	  <item name="통나무" price="-1" />
-	  <item name="고수" price="-1" />
+	  <item name="코리안더" price="-1" />
 	  <item name="돌" price="-2" />
 	  <item name="풀" price="-2" />
 	  <item name="나무 열매" price="-2" />
@@ -15520,7 +15520,7 @@
 	  <item name="풀" price="-1" />
 	  <item name="식물성 기름" price="-1" />
 	  <item name="월계수" price="-1" />
-	  <item name="고수" price="-1" />
+	  <item name="코리안더" price="-1" />
 	  <item name="석재" price="-1" />
 	  <item name="돌" price="-2" />
 	  <item name="풀" price="-2" />
@@ -15574,7 +15574,7 @@
   <cityinfo name="야파 남동쪽">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="검은색 진흙" price="-1" />
 	  <item name="시더우드" price="-1" />
 	  <item name="돌" price="-2" />
@@ -15694,7 +15694,7 @@
   <cityinfo name="마사와 서남쪽">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="검은색 진흙" price="-1" />
 	  <item name="커피" price="-1" />
 	  <item name="돌" price="-2" />
@@ -15717,7 +15717,7 @@
   <cityinfo name="캘리컷 북쪽">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="식물성 기름" price="-1" />
 	  <item name="향목" price="-1" />
 	  <item name="생사" price="-1" />
@@ -16024,7 +16024,7 @@
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
 	  <item name="식물성 기름" price="-1" />
-	  <item name="파슬리" price="-1" />
+	  <item name="파셀리" price="-1" />
 	  <item name="꿀" price="-1" />
 	  <item name="진주" price="-1" />
 	  <item name="돌" price="-2" />
@@ -16149,7 +16149,7 @@
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="모래" price="-1" />
-	  <item name="고수" price="-1" />
+	  <item name="코리안더" price="-1" />
 	  <item name="대리석" price="-1" />
 	  <item name="은" price="-1" />
 	  <item name="사금" price="-1" />
@@ -16409,7 +16409,7 @@
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="돌" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="식물성 기름" price="-1" />
 	  <item name="노란색 광석" price="-1" />
 	  <item name="목화" price="-1" />
@@ -16445,7 +16445,7 @@
   <cityinfo name="일본 열도 남동쪽">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="목화" price="-1" />
 	  <item name="흑연" price="-1" />
 	  <item name="나무껍질" price="-1" />
@@ -16472,7 +16472,7 @@
   <cityinfo name="중국 남동쪽">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
-	  <item name="마" price="-1" />
+	  <item name="삼" price="-1" />
 	  <item name="옻나무" price="-1" />
 	  <item name="목화" price="-1" />
 	  <item name="흑연" price="-1" />
@@ -16938,7 +16938,7 @@
   </cityinfo>
   <cityinfo name="모잠비크 해협">
 	<group name="[교역]">
-	  <item name="흑줄점전갱이" />
+	  <item name="흑점줄전갱이" />
 	  <item name="통나무" price="-1" />
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
@@ -17332,7 +17332,7 @@
 	  <item name="갑오징어" />
 	  <item name="보리멸" />
 	  <item name="창꼬치" />
-	  <item name="장미툼돔" />
+	  <item name="장미퉁돔" />
 	  <item name="가다랑어" />
 	  <item name="가오리" />
 	  <item name="갈돔" />
