@@ -1118,13 +1118,13 @@
 		<position x="10550" y="3085" />
 		<name_offset1 x="3" y="2" />
 		<name_offset2 x="3" y="2" />
-		<city_detail index="209" city_type="City" alliance_type="Alliance" cultural_sphere="Unknown" has_name_image="True" lang1="북미어" bar_flags="3" />
+		<city_detail index="209" city_type="City" alliance_type="Alliance" cultural_sphere="WestNorthAmerica" has_name_image="True" lang1="북미어" bar_flags="3" />
 	</info>
 	<info name="타코마" url_index="" info_type="City" angle="0">
 		<position x="10521" y="2603" />
 		<name_offset1 x="10" y="-10" />
 		<name_offset2 x="0" y="0" />
-		<city_detail index="210" city_type="City" alliance_type="Alliance" cultural_sphere="Unknown" has_name_image="True" lang1="북미어" bar_flags="0" />
+		<city_detail index="210" city_type="City" alliance_type="Alliance" cultural_sphere="WestNorthAmerica" has_name_image="True" lang1="북미어" bar_flags="0" />
 	</info>
 	<info name="시트카" info_type="City" angle="0">
 		<position x="10351" y="2258" />
@@ -2258,7 +2258,7 @@
 		<position x="14448" y="3090" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="40" summer_angle_deg="85" winter_angle_deg="92">
+		<sea_detail speedup_rate="40" summer_angle_deg="75" winter_angle_deg="90">
 			<name_position x="14479" y="3138" />
 		</sea_detail>
 	</info>
@@ -2530,7 +2530,7 @@
 		<position x="13265" y="3774" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="30" summer_angle_deg="250" winter_angle_deg="250">
+		<sea_detail speedup_rate="30" summer_angle_deg="270" winter_angle_deg="250">
 			<name_position x="13347" y="3822" />
 		</sea_detail>
 	</info>
@@ -2538,7 +2538,7 @@
 		<position x="12677" y="3911" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="30" summer_angle_deg="225" winter_angle_deg="225">
+		<sea_detail speedup_rate="30" summer_angle_deg="270" winter_angle_deg="225">
 			<name_position x="12732" y="3959" />
 		</sea_detail>
 	</info>
@@ -2562,7 +2562,7 @@
 		<position x="12171" y="3795" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="30" summer_angle_deg="225" winter_angle_deg="225">
+		<sea_detail speedup_rate="30" summer_angle_deg="270" winter_angle_deg="225">
 			<name_position x="12226" y="3842" />
 		</sea_detail>
 	</info>
@@ -2578,7 +2578,7 @@
 		<position x="14414" y="4359" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="40" summer_angle_deg="240" winter_angle_deg="225">
+		<sea_detail speedup_rate="40" summer_angle_deg="270" winter_angle_deg="225">
 			<name_position x="14455" y="4410" />
 		</sea_detail>
 	</info>
@@ -2586,7 +2586,7 @@
 		<position x="14100" y="4670" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="40" summer_angle_deg="280" winter_angle_deg="260">
+		<sea_detail speedup_rate="40" summer_angle_deg="285" winter_angle_deg="260">
 			<name_position x="14188" y="4725" />
 		</sea_detail>
 	</info>
@@ -2594,7 +2594,7 @@
 		<position x="14653" y="4786" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="40" summer_angle_deg="280" winter_angle_deg="260">
+		<sea_detail speedup_rate="40" summer_angle_deg="285" winter_angle_deg="260">
 			<name_position x="14722" y="4834" />
 		</sea_detail>
 	</info>
@@ -2602,7 +2602,7 @@
 		<position x="14804" y="5805" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="40" summer_angle_deg="320" winter_angle_deg="315">
+		<sea_detail speedup_rate="40" summer_angle_deg="345" winter_angle_deg="315">
 			<name_position x="14852" y="5853" />
 		</sea_detail>
 	</info>
@@ -2610,7 +2610,7 @@
 		<position x="13942" y="6243" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="40" summer_angle_deg="315" winter_angle_deg="250">
+		<sea_detail speedup_rate="40" summer_angle_deg="300" winter_angle_deg="250">
 			<name_position x="14062" y="6291" />
 		</sea_detail>
 	</info>
@@ -2940,7 +2940,7 @@
 		<position x="444" y="1162" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="70">
+		<sea_detail speedup_rate="?" summer_angle_deg="90" winter_angle_deg="70">
 			<name_position x="529" y="1217" />
 		</sea_detail>
 	</info>
@@ -2948,7 +2948,7 @@
 		<position x="14989" y="868" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="90">
+		<sea_detail speedup_rate="?" summer_angle_deg="45" winter_angle_deg="90">
 			<name_position x="15043" y="923" />
 		</sea_detail>
 	</info>
@@ -2956,7 +2956,7 @@
 		<position x="15932" y="868" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="290">
+		<sea_detail speedup_rate="?" summer_angle_deg="195" winter_angle_deg="290">
 			<name_position x="16035" y="923" />
 		</sea_detail>
 	</info>
@@ -2964,7 +2964,7 @@
 		<position x="649" y="868" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="270">
+		<sea_detail speedup_rate="?" summer_angle_deg="285" winter_angle_deg="270">
 			<name_position x="717" y="923" />
 		</sea_detail>
 	</info>
@@ -2972,7 +2972,7 @@
 		<position x="1983" y="868" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="300">
+		<sea_detail speedup_rate="?" summer_angle_deg="285" winter_angle_deg="300">
 			<name_position x="2051" y="923" />
 		</sea_detail>
 	</info>
@@ -2980,7 +2980,7 @@
 		<position x="1709" y="1162" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="270">
+		<sea_detail speedup_rate="?" summer_angle_deg="110" winter_angle_deg="270">
 			<name_position x="1709" y="1217" />
 		</sea_detail>
 	</info>
@@ -2988,7 +2988,7 @@
 		<position x="2933" y="868" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="270">
+		<sea_detail speedup_rate="?" summer_angle_deg="315" winter_angle_deg="270">
 			<name_position x="2974" y="923" />
 		</sea_detail>
 	</info>
@@ -2996,7 +2996,7 @@
 		<position x="3966" y="560" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="270">
+		<sea_detail speedup_rate="?" summer_angle_deg="0" winter_angle_deg="270">
 			<name_position x="4000" y="615" />
 		</sea_detail>
 	</info>
@@ -3004,7 +3004,7 @@
 		<position x="5419" y="714" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="220">
+		<sea_detail speedup_rate="?" summer_angle_deg="180" winter_angle_deg="220">
 			<name_position x="5470" y="769" />
 		</sea_detail>
 	</info>
@@ -3020,7 +3020,7 @@
 		<position x="7453" y="1039" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="160">
+		<sea_detail speedup_rate="?" summer_angle_deg="285" winter_angle_deg="160">
 			<name_position x="7521" y="1094" />
 		</sea_detail>
 	</info>
@@ -3036,7 +3036,7 @@
 		<position x="8667" y="2085" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="23" summer_angle_deg="?" winter_angle_deg="260">
+		<sea_detail speedup_rate="23" summer_angle_deg="195" winter_angle_deg="260">
 			<name_position x="8752" y="2140" />
 		</sea_detail>
 	</info>
@@ -3044,7 +3044,7 @@
 		<position x="7983" y="2085" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="130">
+		<sea_detail speedup_rate="?" summer_angle_deg="45" winter_angle_deg="130">
 			<name_position x="8068" y="2140" />
 		</sea_detail>
 	</info>
@@ -3052,7 +3052,7 @@
 		<position x="6964" y="2085" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="15">
+		<sea_detail speedup_rate="?" summer_angle_deg="45" winter_angle_deg="15">
 			<name_position x="7053" y="2140" />
 		</sea_detail>
 	</info>
@@ -3060,7 +3060,7 @@
 		<position x="6574" y="2085" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="110">
+		<sea_detail speedup_rate="?" summer_angle_deg="75" winter_angle_deg="110">
 			<name_position x="6643" y="2140" />
 		</sea_detail>
 	</info>
@@ -3068,7 +3068,7 @@
 		<position x="13939" y="389" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="140">
+		<sea_detail speedup_rate="?" summer_angle_deg="45" winter_angle_deg="140">
 			<name_position x="14076" y="444" />
 		</sea_detail>
 	</info>
@@ -3076,7 +3076,7 @@
 		<position x="13864" y="1381" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="30">
+		<sea_detail speedup_rate="?" summer_angle_deg="45" winter_angle_deg="30">
 			<name_position x="14000" y="1435" />
 		</sea_detail>
 	</info>
@@ -3086,7 +3086,7 @@
 		<position x="8718" y="3333" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="26" summer_angle_deg="225" winter_angle_deg="240">
+		<sea_detail speedup_rate="26" summer_angle_deg="225" winter_angle_deg="300">
 			<name_position x="8684" y="3384" />
 		</sea_detail>
 	</info>
@@ -3095,7 +3095,7 @@
 		<position x="12513" y="1750" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="240">
+		<sea_detail speedup_rate="?" summer_angle_deg="15" winter_angle_deg="240">
 			<name_position x="12564" y="1798" />
 		</sea_detail>
 	</info>
@@ -3103,7 +3103,7 @@
 		<position x="12992" y="1750" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="160">
+		<sea_detail speedup_rate="?" summer_angle_deg="285" winter_angle_deg="160">
 			<name_position x="13043" y="1798" />
 		</sea_detail>
 	</info>
@@ -3111,7 +3111,7 @@
 		<position x="11159" y="3952" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="290">
+		<sea_detail speedup_rate="?" summer_angle_deg="195" winter_angle_deg="290">
 			<name_position x="11241" y="4000" />
 		</sea_detail>
 	</info>
@@ -3119,7 +3119,7 @@
 		<position x="10496" y="3589" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="29" summer_angle_deg="?" winter_angle_deg="120">
+		<sea_detail speedup_rate="29" summer_angle_deg="45" winter_angle_deg="120">
 			<name_position x="10588" y="3637" />
 		</sea_detail>
 	</info>
@@ -3127,7 +3127,7 @@
 		<position x="10291" y="2721" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="29" summer_angle_deg="?" winter_angle_deg="10">
+		<sea_detail speedup_rate="29" summer_angle_deg="45" winter_angle_deg="10">
 			<name_position x="10393" y="2769" />
 		</sea_detail>
 	</info>
@@ -3135,7 +3135,7 @@
 		<position x="9812" y="3282" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="33" summer_angle_deg="?" winter_angle_deg="110">
+		<sea_detail speedup_rate="33" summer_angle_deg="75" winter_angle_deg="110">
 			<name_position x="9863" y="3330" />
 		</sea_detail>
 	</info>
@@ -3143,7 +3143,7 @@
 		<position x="9710" y="2085" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="28" summer_angle_deg="?" winter_angle_deg="110">
+		<sea_detail speedup_rate="28" summer_angle_deg="270" winter_angle_deg="110">
 			<name_position x="9761" y="2140" />
 		</sea_detail>
 	</info>
@@ -3151,7 +3151,7 @@
 		<position x="9710" y="1039" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="320">
+		<sea_detail speedup_rate="?" summer_angle_deg="285" winter_angle_deg="320">
 			<name_position x="9761" y="1094" />
 		</sea_detail>
 	</info>
@@ -3159,7 +3159,7 @@
 		<position x="10530" y="1039" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="70">
+		<sea_detail speedup_rate="?" summer_angle_deg="90" winter_angle_deg="70">
 			<name_position x="10598" y="1094" />
 		</sea_detail>
 	</info>
@@ -3167,7 +3167,7 @@
 		<position x="11699" y="738" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="270">
+		<sea_detail speedup_rate="?" summer_angle_deg="120" winter_angle_deg="270">
 			<name_position x="11751" y="786" />
 		</sea_detail>
 	</info>
@@ -3175,7 +3175,7 @@
 		<position x="13470" y="738" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="340">
+		<sea_detail speedup_rate="?" summer_angle_deg="315" winter_angle_deg="340">
 			<name_position x="13556" y="786" />
 		</sea_detail>
 	</info>
@@ -3183,7 +3183,7 @@
 		<position x="12582" y="1230" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="340">
+		<sea_detail speedup_rate="?" summer_angle_deg="0" winter_angle_deg="340">
 			<name_position x="12650" y="1278" />
 		</sea_detail>
 	</info>
@@ -3191,7 +3191,7 @@
 		<position x="13539" y="1265" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
-		<sea_detail speedup_rate="?" summer_angle_deg="?" winter_angle_deg="240">
+		<sea_detail speedup_rate="?" summer_angle_deg="180" winter_angle_deg="240">
 			<name_position x="13590" y="1312" />
 		</sea_detail>
 	</info>
@@ -3226,5 +3226,137 @@
 		<name_offset1 x="0" y="3" />
 		<name_offset2 x="0" y="3" />
 		<city_detail index="206" city_type="City" alliance_type="Territory" cultural_sphere="Germany" default_country="Germany" has_name_image="True" lang1="독일어" bar_flags="0" />
+	</info>
+
+	<!-- 2023-2024 bN2DhXKD/gvtrademap_cs 포크에서 추가된 장소(좌표는 공통 도시 기준으로 환산) -->
+	<info name="보스턴" url_index="-1" info_type="City" angle="0">
+		<position x="13234" y="3056" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="221" city_type="City" alliance_type="Alliance" cultural_sphere="EastNorthAmerica" has_name_image="True" lang1="북미어" bar_flags="0" />
+	</info>
+	<info name="가봉" url_index="-1" info_type="City" angle="0">
+		<position x="365" y="4804" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="222" city_type="City" alliance_type="Alliance" cultural_sphere="WestAfrica" has_name_image="True" lang1="서아프리카어" bar_flags="0" />
+	</info>
+	<info name="이냠바네" url_index="-1" info_type="City" angle="0">
+		<position x="1606" y="5603" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="223" city_type="City" alliance_type="Alliance" cultural_sphere="EastAfrica" has_name_image="True" lang1="" bar_flags="0" />
+	</info>
+	<info name="망갈로르" url_index="-1" info_type="City" angle="0">
+		<position x="3412" y="4270" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="224" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
+	</info>
+	<info name="비샤카파트남" url_index="-1" info_type="City" angle="0">
+		<position x="3801" y="4068" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="225" city_type="City" alliance_type="Alliance" cultural_sphere="India" has_name_image="True" lang1="인도어" bar_flags="0" />
+	</info>
+	<info name="마나마" url_index="-1" info_type="City" angle="0">
+		<position x="2287" y="3826" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="226" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Persia" has_name_image="True" lang1="페르시아어" bar_flags="0" />
+	</info>
+	<info name="얀부" url_index="-1" info_type="City" angle="0">
+		<position x="1781" y="3894" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="227" city_type="CityIslam" alliance_type="Alliance" cultural_sphere="Arab" has_name_image="True" lang1="아라비아어" bar_flags="0" />
+	</info>
+	<info name="예테보리" url_index="-1" info_type="City" angle="0">
+		<position x="536" y="2075" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="228" city_type="City" alliance_type="Alliance" cultural_sphere="NorthEurope" has_name_image="True" lang1="노르웨이어" bar_flags="0" />
+	</info>
+	<info name="새크라멘토" url_index="-1" info_type="City" angle="0">
+		<position x="10619" y="3012" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="229" city_type="City" alliance_type="Alliance" cultural_sphere="Unknown" has_name_image="True" lang1="" bar_flags="0" />
+	</info>
+	<info name="오마하" url_index="-1" info_type="City" angle="0">
+		<position x="12417" y="3055" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+		<city_detail index="230" city_type="City" alliance_type="Alliance" cultural_sphere="Unknown" has_name_image="True" lang1="" bar_flags="0" />
+	</info>
+	<info name="시베리아 지방" url_index="-1" info_type="Shore" angle="0">
+		<position x="3269" y="1446" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="오호츠크 해 서쪽" url_index="-1" info_type="Shore" angle="0">
+		<position x="6174" y="2254" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="바이칼 호 주변" url_index="-1" info_type="Shore2" angle="0">
+		<position x="5716" y="2254" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="흑해 북동쪽" url_index="-1" info_type="Shore" angle="0">
+		<position x="1716" y="2803" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="우스튜르트 고원" url_index="-1" info_type="Shore2" angle="0">
+		<position x="2109" y="2806" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="잠베지 강 중류" url_index="-1" info_type="Shore2" angle="0">
+		<position x="1251" y="5353" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="벵갈만 북쪽" url_index="-1" info_type="Shore" angle="0">
+		<position x="4154" y="3876" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="히말라야 산맥 주변" url_index="-1" info_type="Shore2" angle="0">
+		<position x="4153" y="3757" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="나이아가라 강 유역" url_index="-1" info_type="Shore2" angle="0">
+		<position x="12777" y="2971" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="로키 지방" url_index="-1" info_type="Shore2" angle="0">
+		<position x="10727" y="2516" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="바빌론" url_index="-1" info_type="Shore2" angle="0">
+		<position x="1883" y="3456" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="제너두" url_index="-1" info_type="Shore2" angle="0">
+		<position x="5227" y="3097" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="도원향" url_index="-1" info_type="Shore2" angle="0">
+		<position x="4755" y="3631" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
+	</info>
+	<info name="아발론" url_index="-1" info_type="Shore2" angle="0">
+		<position x="16247" y="2445" />
+		<name_offset1 x="0" y="0" />
+		<name_offset2 x="0" y="0" />
 	</info>
 </info_root>
