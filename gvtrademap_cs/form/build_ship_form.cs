@@ -50,34 +50,35 @@ namespace gvtrademap_cs
 			MinimizeBox		= false;
 			ShowInTaskbar	= false;
 			StartPosition	= FormStartPosition.CenterParent;
-			AutoScaleMode	= AutoScaleMode.Font;
-			ClientSize		= new Size(280, 112);
+			AutoScaleMode	= AutoScaleMode.None;
+			float	dpi		= Useful.GetDpiRatio();
+			ClientSize		= new Size((int)(280 * dpi), (int)(112 * dpi));
 
 			Label	label1	= new Label();
 			label1.Text		= "선박명";
-			label1.Bounds	= new Rectangle(12, 15, 80, 20);
+			label1.Bounds	= new Rectangle((int)(12 * dpi), (int)(15 * dpi), (int)(80 * dpi), (int)(20 * dpi));
 
 			m_name			= new TextBox();
-			m_name.Bounds	= new Rectangle(96, 12, 172, 22);
+			m_name.Bounds	= new Rectangle((int)(96 * dpi), (int)(12 * dpi), (int)(172 * dpi), (int)(22 * dpi));
 
 			Label	label2	= new Label();
 			label2.Text		= "건조 일수";
-			label2.Bounds	= new Rectangle(12, 45, 80, 20);
+			label2.Bounds	= new Rectangle((int)(12 * dpi), (int)(45 * dpi), (int)(80 * dpi), (int)(20 * dpi));
 
 			m_days			= new NumericUpDown();
 			m_days.Minimum	= 0;
 			m_days.Maximum	= 999;
-			m_days.Bounds	= new Rectangle(96, 42, 72, 22);
+			m_days.Bounds	= new Rectangle((int)(96 * dpi), (int)(42 * dpi), (int)(72 * dpi), (int)(22 * dpi));
 
 			Button	ok		= new Button();
 			ok.Text			= "시작";
 			ok.DialogResult	= DialogResult.OK;
-			ok.Bounds		= new Rectangle(112, 76, 75, 25);
+			ok.Bounds		= new Rectangle((int)(112 * dpi), (int)(76 * dpi), (int)(75 * dpi), (int)(25 * dpi));
 
 			Button	cancel	= new Button();
 			cancel.Text			= "취소";
 			cancel.DialogResult	= DialogResult.Cancel;
-			cancel.Bounds		= new Rectangle(193, 76, 75, 25);
+			cancel.Bounds		= new Rectangle((int)(193 * dpi), (int)(76 * dpi), (int)(75 * dpi), (int)(25 * dpi));
 
 			Controls.AddRange(new Control[]{ label1, m_name, label2, m_days, ok, cancel });
 			AcceptButton	= ok;

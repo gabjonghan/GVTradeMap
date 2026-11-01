@@ -46,37 +46,43 @@ namespace gvtrademap_cs
 			Text			= "게임 자료";
 			ShowInTaskbar	= false;
 			StartPosition	= FormStartPosition.CenterParent;
-			AutoScaleMode	= AutoScaleMode.Font;
-			ClientSize		= new Size(640, 480);
-			MinimumSize		= new Size(480, 320);
+			AutoScaleMode	= AutoScaleMode.None;
+			float	dpi		= Useful.GetDpiRatio();
+			ClientSize		= new Size((int)(760 * dpi), (int)(520 * dpi));
+			MinimumSize		= new Size((int)(480 * dpi), (int)(320 * dpi));
 
 			m_list			= new ListBox();
 			m_list.Dock		= DockStyle.Left;
-			m_list.Width	= 130;
+			m_list.Width	= (int)(130 * dpi);
 			m_list.IntegralHeight	= false;
+			// 한글은 대체 글꼴로 그려져 기본 줄 높이로는 겹친다
+			m_list.DrawMode	= DrawMode.OwnerDrawFixed;
+			m_list.DrawItem	+= new DrawItemEventHandler(list_DrawItem);
 			m_list.SelectedIndexChanged	+= new EventHandler(list_SelectedIndexChanged);
 
-			Panel	top		= new Panel();
-			top.Dock		= DockStyle.Top;
-			top.Height		= 30;
+			FlowLayoutPanel	top	= new FlowLayoutPanel();
+			top.Dock			= DockStyle.Top;
+			top.AutoSize		= true;
+			top.AutoSizeMode	= AutoSizeMode.GrowAndShrink;
+			top.WrapContents	= false;
 
 			m_visible			= new CheckBox();
 			m_visible.Text		= "지도에 표시";
-			m_visible.Bounds	= new Rectangle(6, 5, 100, 20);
+			m_visible.AutoSize	= true;
 			m_visible.CheckedChanged	+= new EventHandler(visible_CheckedChanged);
 
 			m_find				= new TextBox();
-			m_find.Bounds		= new Rectangle(110, 4, 140, 22);
+			m_find.Width		= (int)(140 * dpi);
 			m_find.TextChanged	+= new EventHandler(find_TextChanged);
 
 			Button	reload		= new Button();
 			reload.Text			= "다시 읽기";
-			reload.Bounds		= new Rectangle(256, 3, 76, 24);
+			reload.AutoSize		= true;
 			reload.Click		+= new EventHandler(reload_Click);
 
 			Button	folder		= new Button();
 			folder.Text			= "자료 폴더";
-			folder.Bounds		= new Rectangle(336, 3, 76, 24);
+			folder.AutoSize		= true;
 			folder.Click		+= new EventHandler(folder_Click);
 
 			top.Controls.AddRange(new Control[]{ m_visible, m_find, reload, folder });
@@ -93,9 +99,9 @@ namespace gvtrademap_cs
 			m_points.View			= View.Details;
 			m_points.FullRowSelect	= true;
 			m_points.HideSelection	= false;
-			m_points.Columns.Add("이름", 240);
-			m_points.Columns.Add("구역", 130);
-			m_points.Columns.Add("좌표", 80);
+			m_points.Columns.Add("이름", (int)(280 * dpi));
+			m_points.Columns.Add("구역", (int)(150 * dpi));
+			m_points.Columns.Add("좌표", (int)(90 * dpi));
 			m_points.DoubleClick	+= new EventHandler(points_DoubleClick);
 
 			Panel	right	= new Panel();
@@ -109,6 +115,7 @@ namespace gvtrademap_cs
 			Controls.Add(m_list);
 
 			Useful.SetFontMeiryo(this, def.MEIRYO_POINT);
+			m_list.ItemHeight	= (int)(m_list.Font.GetHeight() * 1.5f);
 			update_categories();
 		}
 
@@ -165,7 +172,7 @@ namespace gvtrademap_cs
 			m_text.Visible		= c.text != "";
 			// 좌표가 없는 분류는 설명문이 전체를 쓴다
 			m_text.Dock			= has_points? DockStyle.Top: DockStyle.Fill;
-			m_text.Height		= 90;
+			m_text.Height		= (int)(90 * Useful.GetDpiRatio());
 
 			update_points();
 		}
@@ -193,6 +200,16 @@ namespace gvtrademap_cs
 				m_points.Items.Add(item);
 			}
 			m_points.EndUpdate();
+		}
+
+		private void list_DrawItem(object sender, DrawItemEventArgs e)
+		{
+			e.DrawBackground();
+			if(e.Index >= 0){
+				TextRenderer.DrawText(e.Graphics, m_list.Items[e.Index].ToString(), m_list.Font, e.Bounds, e.ForeColor,
+										TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
+			}
+			e.DrawFocusRectangle();
 		}
 
 		private void list_SelectedIndexChanged(object sender, EventArgs e)
