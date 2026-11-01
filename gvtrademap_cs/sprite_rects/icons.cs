@@ -19,10 +19,10 @@ using directx;
 namespace gvtrademap_cs {
 	public class icons : d3d_sprite_rects {
 		public enum icon_index {
-			// 일付変わり時の말풍선아이콘
-			days_big_shadow,	// 影
+			// 날짜가 바뀔 때의 말풍선 아이콘
+			days_big_shadow,	// 그림자
 
-			// 일付표시용수字
+			// 날짜 표시용 숫자
 			number_0,
 			number_1,
 			number_2,
@@ -34,7 +34,7 @@ namespace gvtrademap_cs {
 			number_8,
 			number_9,
 
-			// 본인の배
+			// 본인의 배
 			myship,
 
 			// 국아이콘
@@ -51,7 +51,7 @@ namespace gvtrademap_cs {
 			country_10,
 			country_11,
 
-			// タブ아이콘
+			// 탭 아이콘
 			tab_0,
 			tab_1,
 			tab_2,
@@ -78,7 +78,7 @@ namespace gvtrademap_cs {
 			tab_gray_10,
 			tab_gray_11,
 
-			// 인물とかの아이콘
+			// 인물 등의 아이콘
 			tab2_0,
 			tab2_1,
 			tab2_2,
@@ -110,7 +110,7 @@ namespace gvtrademap_cs {
 			setting_gray_7,
 			setting_gray_8,
 
-			// 스크린샷と항로도삭제はグレイ표시없음
+			// 스크린샷과 항로도 삭제는 회색 표시 없음
 			setting_10,
 			setting_11,
 			setting_11_1,
@@ -123,20 +123,20 @@ namespace gvtrademap_cs {
 			spot_1,
 			spot_2,
 
-			// 상륙지점の지도
+			// 상륙 지점 지도
 			map_icon,
 
-			// 선택용三角
+			// 선택용 삼각형
 			select_0,
 			select_1,
 
-			// 선택용クロスカーソル
+			// 선택용 십자 커서
 			select_cross,
 
-			// 설정ボタン
+			// 설정 버튼
 			setting_button,
 
-			// 속도표시용背景
+			// 속도 표시용 배경
 			speed_background,
 
 			// 장소용국아이콘
@@ -153,7 +153,7 @@ namespace gvtrademap_cs {
 			spot_country_10,
 			spot_country_11,
 
-			// 인물とかの아이콘
+			// 인물 등의 아이콘
 			spot_tab2_0,
 			spot_tab2_1,
 			spot_tab2_2,
@@ -230,14 +230,14 @@ namespace gvtrademap_cs {
 			spot_tab_10,
 			spot_tab_11,
 
-			// 항로공유 도시に居る
+			// 항로 공유 도시에 있음
 			share_city,
 
 			// 도시, 교외
 			city_icon_0,	// 수도
 			city_icon_1,	// 도시
-			city_icon_2,	// 수도(イスラム)
-			city_icon_3,	// 도시(イスラム)
+			city_icon_2,	// 수도(이슬람)
+			city_icon_3,	// 도시(이슬람)
 			city_icon_4,
 			city_icon_5,
 			city_icon_6,
@@ -250,20 +250,20 @@ namespace gvtrademap_cs {
 			degree,
 
 			// 스크립트로부터 잘라낸 것
-			// 일付変わり時の아이콘
+			// 날짜가 바뀔 때의 아이콘
 			days_mini_6,
-			// 일付変わり時の말풍선아이콘
+			// 날짜가 바뀔 때의 말풍선 아이콘
 			days_big_6,
-			days_big_100,	   // 100일以降の좌우が대きいもの
+			days_big_100,	   // 100 일 이후의 좌우가 큰 것
 
 			string00,		   // 일
 			string01,		   // 항로공유
-			string02,		   // 이자まで
-			string03,		   // 季節
+			string02,		   // 이자까지
+			string03,		   // 계절
 			string04,		   // 지도
-			string05,		   // 冬
-			string06,		   // 夏
-			string07,		   // 조선から
+			string05,		   // 겨울
+			string06,		   // 여름
+			string07,		   // 조선으로부터
 
 			// 지도용 본거지 항구 상륙지 2차필드 아이콘
 			map_capital,	// 185번째 인덱스
@@ -293,6 +293,12 @@ namespace gvtrademap_cs {
 			
 			wind_arrow,			// 풍향
 
+			// 주점 종업원, 부관 탭
+			tab_staff,
+			spot_tab_staff,
+			tab_adjutant,
+			spot_tab_adjutant,
+
 			max
 		};
 
@@ -303,16 +309,16 @@ namespace gvtrademap_cs {
 			: base(device, fname) {
 			if (device.device == null) return;
 
-			// 矩形등록
+			// 사각형 등록
 			add_rects();
 		}
 
 		/*-------------------------------------------------------------------------
-		 矩形등록
-		 icon_indexの順で할당る
+		 사각형 등록
+		 icon_index 순으로 할당한다
 		---------------------------------------------------------------------------*/
 		private void add_rects() {
-			// 影
+			// 그림자
 			AddRect(new Vector2(-5, -6 - 8), new Rectangle(24, 160, 23, 15));
 
 			// 일수 표시용 숫자
@@ -371,7 +377,7 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(0, 0), new Rectangle(168, 0, 16, 16));
 			AddRect(new Vector2(0, 0), new Rectangle(184, 0, 16, 16));
 
-			// 인물とかの아이콘 
+			// 인물 등의 아이콘
 			AddRect(new Vector2(0, 0), new Rectangle(24, 48, 16, 16));  // 100번째 사각형
 			AddRect(new Vector2(0, 0), new Rectangle(40, 48, 16, 16));  // 101번쨰 사각형
 
@@ -423,17 +429,17 @@ namespace gvtrademap_cs {
 			// web
 			AddRect(new Vector2(0, 0), new Rectangle(232, 0, 17, 17));
 
-			// 선택용三角
+			// 선택용 삼각형
 			AddRect(new Vector2(0, -3), new Rectangle(40, 144, 8, 8));
 			AddRect(new Vector2(0, -3), new Rectangle(48, 144, 8, 8));
 
-			// 선택용クロスカーソル
+			// 선택용 십자 커서
 			AddRect(new Vector2(-6, -6), new Rectangle(24, 144, 14, 14));
 
-			// 설정ボタン
+			// 설정 버튼
 			AddRect(new Vector2(0, 0), new Rectangle(128, 144, 48, 17));
 
-			// 속도표시용背景
+			// 속도 표시용 배경
 			AddRect(new Vector2(0, 0), new Rectangle(80, 144, 47, 16));
 
 			// 장소용 국가아이콘
@@ -450,7 +456,7 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(-12, -8), new Rectangle(0, 160, 24, 16));
 			AddRect(new Vector2(-12, -8), new Rectangle(0, 176, 24, 16));
 
-			// 장소용 인물이나の아이콘
+			// 장소용 인물 등의 아이콘
 			AddRect(new Vector2(-8, -8), new Rectangle(24, 48, 16, 16));
 			AddRect(new Vector2(-8, -8), new Rectangle(40, 48, 16, 16));
 
@@ -481,7 +487,7 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(-8, -8), new Rectangle(152, 64, 16, 16));
 			AddRect(new Vector2(-8, -8), new Rectangle(168, 64, 16, 16));
 			AddRect(new Vector2(-8, -8), new Rectangle(184, 64, 16, 16));
-			AddRect(new Vector2(-8, -13), new Rectangle(201, 65, 15, 15));// 목적지のみ特殊
+			AddRect(new Vector2(-8, -13), new Rectangle(201, 65, 15, 15));// 목적지만 특수
 
 			// web icon
 			//   풍향
@@ -532,7 +538,7 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(-8, -8), new Rectangle(168, 16, 16, 16));
 			AddRect(new Vector2(-8, -8), new Rectangle(184, 16, 16, 16));
 
-			// 항로공유 도시に居る
+			// 항로 공유 도시에 있음
 			AddRect(new Vector2(-4, -4), new Rectangle(80, 160, 10, 10));
 
 			// 도시, 교외
@@ -593,10 +599,16 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(-2, -2), new Rectangle(195, 248, 6, 6));  // 24, 연두색 원
 
 			AddRect(new Vector2(-4, -8), new Rectangle(210, 223, 10, 15)); // WindArrowIcon
+
+			// 주점 종업원 탭
+			AddRect(new Vector2(0, 0), new Rectangle(144, 128, 16, 16));
+			AddRect(new Vector2(-8, -8), new Rectangle(144, 128, 16, 16));
+			AddRect(new Vector2(0, 0), new Rectangle(168, 128, 16, 16));
+			AddRect(new Vector2(-8, -8), new Rectangle(168, 128, 16, 16));
 		}
 
 		/*-------------------------------------------------------------------------
-		 矩形を得る
+		 사각형을 얻는다
 		---------------------------------------------------------------------------*/
 		public d3d_sprite_rects.rect GetIcon(icon_index index) {
 			return GetRect((int)index);

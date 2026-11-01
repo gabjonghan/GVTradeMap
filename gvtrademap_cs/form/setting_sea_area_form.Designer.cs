@@ -122,7 +122,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(247, 23);
 			this.button4.TabIndex = 15;
-			this.button4.Text = "해역정보수집시작";
+			this.button4.Text = "해역 정보 수집 시작 (일본판 전용)";
 			this.toolTip1.SetToolTip(this.button4, "해역변동 수집시작\r\n해역변동수집은\r\n일본 게시판 및 위키의\r\n해역변동정보를 얻음" +
 		" ");
 			this.button4.UseVisualStyleBackColor = true;

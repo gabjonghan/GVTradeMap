@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 드래그&ドロップされた해역정보
+ 드래그 앤 드롭된 해역 정보
 
 ---------------------------------------------------------------------------*/
 
@@ -30,7 +30,7 @@ namespace gvtrademap_cs
 		private List<sea_area_once_from_dd>		m_list;
 		private GvoDatabase						m_db;
 
-		// フィルタ후の목록
+		// 필터 후의 목록
 		private List<sea_area_once_from_dd>		m_filterd_list;
 
 		/*-------------------------------------------------------------------------
@@ -82,7 +82,7 @@ namespace gvtrademap_cs
 				item.SubItems.Add(Useful.TojbbsDateTimeString(o.date));
 
 				bool	check_date	= (o.date < DateTime.Now)? false: true;
-				item.SubItems.Add((check_date)? "継続중": "期限切れ");
+				item.SubItems.Add((check_date)? "계속 중": "기한 만료");
 
 				switch(o._sea_type){
 				case sea_area.sea_area_once.sea_type.safty:
@@ -94,15 +94,15 @@ namespace gvtrademap_cs
 				}
 				item.SubItems[4].ForeColor		= (check_date)? Color.Green: Color.Red;
 
-				// フィルタ
+				// 필터
 				if(checkBox1.Checked){
-					// 서버によるフィルタ
+					// 서버에 의한 필터
 					if(m_db.World.MyServer != GvoWorldInfo.GetServerFromString(o.server_str)){
 						continue;
 					}
 				}
 				if(checkBox2.Checked){
-					// 期限によるフィルタ
+					// 기한에 의한 필터
 					if(o.date < DateTime.Now){
 						continue;
 					}
@@ -114,7 +114,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 チェックボックスの내용が변경された
+		 체크 박스의 내용이 변경되었다
 		---------------------------------------------------------------------------*/
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
 		{
@@ -122,7 +122,7 @@ namespace gvtrademap_cs
 			update_list();
 		}
 		/*-------------------------------------------------------------------------
-		 チェックボックスの내용が변경された
+		 체크 박스의 내용이 변경되었다
 		---------------------------------------------------------------------------*/
 		private void checkBox2_CheckedChanged(object sender, EventArgs e)
 		{
@@ -131,7 +131,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 閉じられた
+		 닫혔다
 		---------------------------------------------------------------------------*/
 		private void sea_area_dd_form_FormClosed(object sender, FormClosedEventArgs e)
 		{

@@ -1,5 +1,5 @@
 ﻿//-------------------------------------------------------------------------
-// ハッシュで관리されたDB
+// 해시로 관리되는 DB
 //-------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Utility
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// 키を返す要素
+	/// 키를 반환하는 요소
 	/// </summary>
 	/// <typeparam name="TKey"></typeparam>
 	public interface IDictionaryNode<TKey>
@@ -23,15 +23,15 @@ namespace Utility
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// TKeyが중複가능なハッシュ테이블
+	/// TKey 가 중복 가능한 해시 테이블
 	/// </summary>
 	/// <typeparam name="TKey">키</typeparam>
-	/// <typeparam name="TValue">要素</typeparam>
+	/// <typeparam name="TValue">요소</typeparam>
 	public class MultiDictionary<TKey, TValue> : IEnumerable<TValue>
 		where TValue : IDictionaryNode<TKey>
 	{
 		/// <summary>
-		/// ハッシュ테이블
+		/// 해시 테이블
 		/// </summary>
 		protected Dictionary<TKey, List<TValue>>		m_database;
 
@@ -48,7 +48,7 @@ namespace Utility
 		/// <summary>
 		/// 추가
 		/// </summary>
-		/// <param name="t">要素</param>
+		/// <param name="t">요소</param>
 		public void Add(TValue t)
 		{
 			List<TValue>	list	= null;
@@ -64,18 +64,18 @@ namespace Utility
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 삭제. 
-		/// 최초に見つかったtを삭제する. 
-		/// t.Keyに중複する要素がある場合は, 중複수に応じて시간がかかる. 
-		/// O(중複수)
+		/// 처음 발견된 t 를 삭제한다.
+		/// t.Key 에 중복되는 요소가 있는 경우에는, 중복 개수에 따라 시간이 걸린다.
+		/// O(중복 개수)
 		/// </summary>
-		/// <param name="t">要素</param>
+		/// <param name="t">요소</param>
 		public void Remove(TValue t)
 		{
 			List<TValue>	list	= null;
 			if(m_database.TryGetValue(t.Key, out list)){
 				list.Remove(t);
 				if(list.Count <= 0){
-					// 要素が全てなくなったらハッシュ테이블からも삭제する
+					// 요소가 전부 없어지면 해시 테이블에서도 삭제한다
 					Remove(t.Key);
 				}
 			}
@@ -84,8 +84,8 @@ namespace Utility
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 삭제. 
-		/// 지정された키の要素を全て삭제する. 
-		/// O(1)に近い速度で実行できる. 
+		/// 지정된 키의 요소를 전부 삭제한다.
+		/// O(1) 에 가까운 속도로 실행할 수 있다.
 		/// </summary>
 		/// <param name="key">키</param>
 		public void Remove(TKey key)
@@ -95,12 +95,12 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 要素の取得. 
-		/// 최초に見つかった要素を返す. 
-		/// 要素が無ければnullを返す. 
+		/// 요소 취득.
+		/// 처음 발견된 요소를 반환한다.
+		/// 요소가 없으면 null 을 반환한다.
 		/// </summary>
 		/// <param name="key">키</param>
-		/// <returns>要素</returns>
+		/// <returns>요소</returns>
 		public TValue GetValue(TKey key)
 		{
 			List<TValue>	list	= null;
@@ -112,12 +112,12 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 要素の取得. 
-		/// 지정された키を持つ要素を全て返す. 
-		/// 要素が無ければnullを返す. 
+		/// 요소 취득.
+		/// 지정된 키를 가진 요소를 전부 반환한다.
+		/// 요소가 없으면 null 을 반환한다.
 		/// </summary>
 		/// <param name="key">키</param>
-		/// <returns>要素목록</returns>
+		/// <returns>요소 목록</returns>
 		public TValue[] GetValueList(TKey key)
 		{
 			List<TValue>	list	= null;
@@ -129,7 +129,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 全ての要素を삭제
+		/// 모든 요소를 삭제
 		/// </summary>
 		public void Clear()
 		{
@@ -138,8 +138,8 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
-		/// 열挙される順序は不定
+		/// 열거
+		/// 열거되는 순서는 정해져 있지 않다
 		/// </summary>
 		/// <returns></returns>
 		public IEnumerator<TValue> GetEnumerator()
@@ -153,8 +153,8 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
-		/// 열挙される順序は不定
+		/// 열거
+		/// 열거되는 순서는 정해져 있지 않다
 		/// </summary>
 		/// <returns></returns>
 		IEnumerator IEnumerable.GetEnumerator()
@@ -165,12 +165,12 @@ namespace Utility
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// シーケンシャルにアクセスできるハッシュ테이블. 
-	/// 添字でのアクセスが가능. 
-	/// TKeyは중複できない. 
+	/// 순차적으로 접근할 수 있는 해시 테이블.
+	/// 첨자로 접근 가능.
+	/// TKey 는 중복될 수 없다.
 	/// </summary>
 	/// <typeparam name="TKey">키</typeparam>
-	/// <typeparam name="TValue">要素</typeparam>
+	/// <typeparam name="TValue">요소</typeparam>
 	public class SequentialDictionary<TKey, TValue> : IEnumerable<TValue>
 		where TValue : IDictionaryNode<TKey>
 	{
@@ -179,7 +179,7 @@ namespace Utility
 		/// </summary>
 		protected List<TValue>					m_sequential_database;
 		/// <summary>
-		/// ハッシュ관리
+		/// 해시 관리
 		/// </summary>
 		protected Dictionary<TKey, TValue>		m_database;
 
@@ -196,27 +196,27 @@ namespace Utility
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 추가. 
-		/// 추가された順番でアクセスできる
-		/// t.Keyが存在する場合例외を投げる
+		/// 추가된 순서로 접근할 수 있다
+		/// t.Key 가 이미 존재하면 예외를 던진다
 		/// </summary>
-		/// <param name="t">要素</param>
+		/// <param name="t">요소</param>
 		public void Add(TValue t)
 		{
 			try{
 				m_database.Add(t.Key, t);
 			}catch(Exception e){
-				// すでに키が存在する
-				// 例외をそのまま投げる
+				// 이미 키가 존재한다
+				// 예외를 그대로 던진다
 				throw e;
 			}
-			// ハッシュ테이블に등록できたら추가
+			// 해시 테이블에 등록되면 추가
 			m_sequential_database.Add(t);
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 삭제. 
-		/// 최초に見つかったtを삭제する
+		/// 처음 발견된 t 를 삭제한다
 		/// </summary>
 		/// <param name="t">키</param>
 		public void Remove(TValue t)
@@ -228,25 +228,25 @@ namespace Utility
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 삭제. 
-		/// 지정された키の要素を삭제する
+		/// 지정된 키의 요소를 삭제한다
 		/// </summary>
 		/// <param name="key">키</param>
 		public void Remove(TKey key)
 		{
 			TValue	d	= GetValue(key);
-			if(d == null)	return;			// 키の要素がない
+			if(d == null)	return;			// 키의 요소가 없다
 
 			Remove(d);
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 要素の取得. 
-		/// 최초に見つかった要素を返す. 
-		/// 要素が無ければnullを返す. 
+		/// 요소 취득.
+		/// 처음 발견된 요소를 반환한다.
+		/// 요소가 없으면 null 을 반환한다.
 		/// </summary>
 		/// <param name="key">키</param>
-		/// <returns>要素</returns>
+		/// <returns>요소</returns>
 		public TValue GetValue(TKey key)
 		{
 			TValue	d;
@@ -258,7 +258,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 全ての要素を삭제
+		/// 모든 요소를 삭제
 		/// </summary>
 		public void Clear()
 		{
@@ -268,7 +268,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
+		/// 열거
 		/// </summary>
 		/// <returns></returns>
 		public IEnumerator<TValue> GetEnumerator()
@@ -280,7 +280,7 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 열挙
+		/// 열거
 		/// </summary>
 		/// <returns></returns>
 		IEnumerator IEnumerable.GetEnumerator()

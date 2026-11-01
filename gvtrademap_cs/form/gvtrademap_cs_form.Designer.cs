@@ -3,25 +3,25 @@
 	partial class gvtrademap_cs_form
 	{
 		/// <summary>
-		/// 必要なデザイナ変수です. 
+		/// 필요한 디자이너 변수입니다.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
 		/// <summary>
-		/// 사용중のリソースを전부クリーンアップします. 
+		/// 사용 중인 리소스를 전부 정리합니다.
 		/// </summary>
-		/// <param Name="disposing">マネージ リソースが破棄される場合 true, 破棄されない場合は false です. </param>
+		/// <param Name="disposing">관리 리소스가 파기되는 경우 true, 파기되지 않는 경우는 false 입니다.</param>
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && (components != null))
 			{
-				// ここに書かないと例외時스레드を종료させられない?
-				// 스레드を종료させる
+				// 여기에 쓰지 않으면 예외 발생 시 스레드를 종료시킬 수 없다?
+				// 스레드를 종료시킨다
 				finish_all_threads();
 
-				// アンマネージドリソースの破棄
+				// 언매니지드 리소스 파기
 				if(m_db != null)	m_db.Dispose();
-				// libは必ず最후(Direct3D Deviceが最후に破棄される)
+				// lib 는 반드시 마지막(Direct3D Device 가 마지막에 파기된다)
 				if(m_lib != null)	m_lib.Dispose();
 
 				components.Dispose();
@@ -29,11 +29,11 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows フォーム デザイナで生成されたコード
+		#region Windows 폼 디자이너에서 생성된 코드
 
 		/// <summary>
-		/// デザイナ サ포트に必要なメソッドです. このメソッドの내용を
-		/// コード エディタで변경しないでください. 
+		/// 디자이너 지원에 필요한 메서드입니다. 이 메서드의 내용을
+		/// 코드 에디터에서 변경하지 마십시오.
 		/// </summary>
 		private void InitializeComponent()
 		{
@@ -43,6 +43,9 @@
 			this.openpathlogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openpathmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openpathscreenshotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+			this.opensite_inven_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.opensite_joy_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.ToolStripMenuItem_country0 = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_country1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,10 +97,13 @@
 			openpathToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.openpathlogToolStripMenuItem,
 			this.openpathmailToolStripMenuItem,
-			this.openpathscreenshotToolStripMenuItem});
+			this.openpathscreenshotToolStripMenuItem,
+			this.toolStripSeparator8,
+			this.opensite_inven_ToolStripMenuItem,
+			this.opensite_joy_ToolStripMenuItem});
 			openpathToolStripMenuItem.Name = "openpathToolStripMenuItem";
 			openpathToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			openpathToolStripMenuItem.Text = "대항해시대 온라인의 폴더 열기";
+			openpathToolStripMenuItem.Text = "대항해시대 온라인 폴더 및 사이트 열기";
 			// 
 			// openpathlogToolStripMenuItem
 			// 
@@ -116,6 +122,23 @@
 			this.openpathscreenshotToolStripMenuItem.Name = "openpathscreenshotToolStripMenuItem";
 			this.openpathscreenshotToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
 			this.openpathscreenshotToolStripMenuItem.Text = "스크린샷 폴더 열기...";
+			//
+			// toolStripSeparator8
+			//
+			this.toolStripSeparator8.Name = "toolStripSeparator8";
+			this.toolStripSeparator8.Size = new System.Drawing.Size(277, 6);
+			//
+			// opensite_inven_ToolStripMenuItem
+			//
+			this.opensite_inven_ToolStripMenuItem.Name = "opensite_inven_ToolStripMenuItem";
+			this.opensite_inven_ToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+			this.opensite_inven_ToolStripMenuItem.Text = "대항해시대 인벤 열기...";
+			//
+			// opensite_joy_ToolStripMenuItem
+			//
+			this.opensite_joy_ToolStripMenuItem.Name = "opensite_joy_ToolStripMenuItem";
+			this.opensite_joy_ToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+			this.opensite_joy_ToolStripMenuItem.Text = "대항해시대 조이 열기...";
 			// 
 			// contextMenuStrip1
 			// 
@@ -146,7 +169,7 @@
 			this.ToolStripMenuItem_country1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.ToolStripMenuItem_country1.Name = "ToolStripMenuItem_country1";
 			this.ToolStripMenuItem_country1.Size = new System.Drawing.Size(168, 22);
-			this.ToolStripMenuItem_country1.Text = "스페인";
+			this.ToolStripMenuItem_country1.Text = "에스파니아";
 			this.ToolStripMenuItem_country1.Click += new System.EventHandler(this.ToolStripMenuItem_country1_Click);
 			// 
 			// ToolStripMenuItem_country2
@@ -191,7 +214,7 @@
 			this.ToolStripMenuItem_country6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.ToolStripMenuItem_country6.Name = "ToolStripMenuItem_country6";
 			this.ToolStripMenuItem_country6.Size = new System.Drawing.Size(168, 22);
-			this.ToolStripMenuItem_country6.Text = "오스만투르크";
+			this.ToolStripMenuItem_country6.Text = "오스만 투르크";
 			this.ToolStripMenuItem_country6.Click += new System.EventHandler(this.ToolStripMenuItem_country6_Click);
 			// 
 			// ToolStripMenuItem_country00
@@ -242,7 +265,7 @@
 			this.set_target_memo_icon_ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(111)))), ((int)(((byte)(161)))));
 			this.set_target_memo_icon_ToolStripMenuItem.Name = "set_target_memo_icon_ToolStripMenuItem";
 			this.set_target_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.set_target_memo_icon_ToolStripMenuItem.Text = "목적지 메모아이콘을 여기에 추가";
+			this.set_target_memo_icon_ToolStripMenuItem.Text = "목적지 메모 아이콘을 여기에 추가";
 			this.set_target_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.set_target_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator2
@@ -256,21 +279,21 @@
 			this.add_memo_icon_ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(111)))), ((int)(((byte)(161)))));
 			this.add_memo_icon_ToolStripMenuItem.Name = "add_memo_icon_ToolStripMenuItem";
 			this.add_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.add_memo_icon_ToolStripMenuItem.Text = "메모아이콘을 추가...";
+			this.add_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 추가...";
 			this.add_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.add_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// edit_memo_icon_ToolStripMenuItem
 			// 
 			this.edit_memo_icon_ToolStripMenuItem.Name = "edit_memo_icon_ToolStripMenuItem";
 			this.edit_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.edit_memo_icon_ToolStripMenuItem.Text = "메모아이콘을 편집...";
+			this.edit_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 편집...";
 			this.edit_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.edit_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// remove_memo_icon_ToolStripMenuItem
 			// 
 			this.remove_memo_icon_ToolStripMenuItem.Name = "remove_memo_icon_ToolStripMenuItem";
 			this.remove_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.remove_memo_icon_ToolStripMenuItem.Text = "메모아이콘을 삭제";
+			this.remove_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 삭제";
 			this.remove_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.remove_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
@@ -282,14 +305,14 @@
 			// 
 			this.remove_all_target_memo_icon_ToolStripMenuItem.Name = "remove_all_target_memo_icon_ToolStripMenuItem";
 			this.remove_all_target_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.remove_all_target_memo_icon_ToolStripMenuItem.Text = "전체 목적지 메모아이콘을 삭제";
+			this.remove_all_target_memo_icon_ToolStripMenuItem.Text = "목적지 메모 아이콘 모두 삭제";
 			this.remove_all_target_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.remove_all_target_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// remove_all_memo_icon_ToolStripMenuItem
 			// 
 			this.remove_all_memo_icon_ToolStripMenuItem.Name = "remove_all_memo_icon_ToolStripMenuItem";
 			this.remove_all_memo_icon_ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.remove_all_memo_icon_ToolStripMenuItem.Text = "전체 메모아이콘을 삭제";
+			this.remove_all_memo_icon_ToolStripMenuItem.Text = "메모 아이콘 모두 삭제";
 			this.remove_all_memo_icon_ToolStripMenuItem.Click += new System.EventHandler(this.remove_all_memo_icon_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator5
@@ -301,7 +324,7 @@
 			// 
 			this.openpathscreenshot2ToolStripMenuItem.Name = "openpathscreenshot2ToolStripMenuItem";
 			this.openpathscreenshot2ToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.openpathscreenshot2ToolStripMenuItem.Text = "항로도의 스크린샷 폴더 열기...";
+			this.openpathscreenshot2ToolStripMenuItem.Text = "항로도 스크린샷 폴더 열기...";
 			// 
 			// setseaareastateToolStripMenuItem
 			// 
@@ -313,13 +336,13 @@
 			this.lawless_sea_area_ToolStripMenuItem});
 			this.setseaareastateToolStripMenuItem.Name = "setseaareastateToolStripMenuItem";
 			this.setseaareastateToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.setseaareastateToolStripMenuItem.Text = "해역변동 시스템 설정";
+			this.setseaareastateToolStripMenuItem.Text = "해역 변동 시스템 설정";
 			// 
 			// exexgvoacToolStripMenuItem
 			// 
 			this.exexgvoacToolStripMenuItem.Name = "exexgvoacToolStripMenuItem";
 			this.exexgvoacToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-			this.exexgvoacToolStripMenuItem.Text = "해역변동 수집을 시작...";
+			this.exexgvoacToolStripMenuItem.Text = "해역 변동 수집 시작 (일본판 전용)...";
 			// 
 			// toolStripSeparator6
 			// 
@@ -365,14 +388,14 @@
 			// 
 			this.spotToolStripMenuItem1.Name = "spotToolStripMenuItem1";
 			this.spotToolStripMenuItem1.Size = new System.Drawing.Size(351, 22);
-			this.spotToolStripMenuItem1.Text = "장소표시";
+			this.spotToolStripMenuItem1.Text = "장소 표시";
 			this.spotToolStripMenuItem1.Click += new System.EventHandler(this.spotToolStripMenuItem1_Click);
 			// 
 			// clear_spotToolStripMenuItem
 			// 
 			this.clear_spotToolStripMenuItem.Name = "clear_spotToolStripMenuItem";
 			this.clear_spotToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.clear_spotToolStripMenuItem.Text = "장소표시해제";
+			this.clear_spotToolStripMenuItem.Text = "장소 표시 해제";
 			// 
 			// toolStripSeparator4
 			// 
@@ -383,14 +406,14 @@
 			// 
 			this.open_recipe_wiki0_ToolStripMenuItem.Name = "open_recipe_wiki0_ToolStripMenuItem";
 			this.open_recipe_wiki0_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki0_ToolStripMenuItem.Text = "레시피의 내용을 레시피정보wiki에서 조사";
+			this.open_recipe_wiki0_ToolStripMenuItem.Text = "레시피 책 내용을 대항해시대 조이에서 검색";
 			this.open_recipe_wiki0_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki0_toolStripMenuItem_Click);
 			// 
 			// open_recipe_wiki1_ToolStripMenuItem
 			// 
 			this.open_recipe_wiki1_ToolStripMenuItem.Name = "open_recipe_wiki1_ToolStripMenuItem";
 			this.open_recipe_wiki1_ToolStripMenuItem.Size = new System.Drawing.Size(351, 22);
-			this.open_recipe_wiki1_ToolStripMenuItem.Text = "레시피에서 작성가능 여부를 레시피정보wiki에서 조사";
+			this.open_recipe_wiki1_ToolStripMenuItem.Text = "제작 가능한 레시피를 대항해시대 조이에서 검색";
 			this.open_recipe_wiki1_ToolStripMenuItem.Click += new System.EventHandler(this.open_recipe_wiki1_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
@@ -435,7 +458,7 @@
 			// 
 			this.changeBorderStyleToolStripMenuItem.Name = "changeBorderStyleToolStripMenuItem";
 			this.changeBorderStyleToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-			this.changeBorderStyleToolStripMenuItem.Text = "윈도우 테두리 표시/비표시";
+			this.changeBorderStyleToolStripMenuItem.Text = "창 테두리 표시/숨김";
 			// 
 			// closeFormToolStripMenuItem
 			// 
@@ -519,6 +542,9 @@
 		private System.Windows.Forms.ToolStripMenuItem openpathlogToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openpathmailToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openpathscreenshotToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+		private System.Windows.Forms.ToolStripMenuItem opensite_inven_ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem opensite_joy_ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem setseaareastateToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem normal_sea_area_ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem safty_sea_area_ToolStripMenuItem;

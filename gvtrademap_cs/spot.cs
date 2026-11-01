@@ -28,11 +28,11 @@ namespace gvtrademap_cs
 		public enum type{
 			none,						// 장소없음
 			country_flags,				// 국기표시
-			icons_0,					// 看판娘
+			icons_0,					// 주점 아가씨
 			icons_1,					// 서고
 			icons_2,					// 번역가
 			icons_3,					// 무역상인
-			has_item,					// 지정した아이템がある
+			has_item,					// 지정한 아이템이 있다
 			language,					// 언어
 
 			tab_0,						// 교역
@@ -46,6 +46,8 @@ namespace gvtrademap_cs
 			tab_7,						// 돛제작자
 			tab_8,						// 조각가
 			tab_9,						// 행상인
+			tab_9_1,					// 주점 종업원
+			tab_9_2,					// 부관
 			tab_10,						// 메모
 
 			city_name,					// 도시명
@@ -59,7 +61,7 @@ namespace gvtrademap_cs
 		{
 			private GvoWorldInfo.Info			m_info;				// 장소대상
 			private string					m_name;				// 이름
-			private string					m_ex;				// 추가する문자열
+			private string					m_ex;				// 추가할 문자열
 			
 			/*-------------------------------------------------------------------------
 			 
@@ -91,7 +93,7 @@ namespace gvtrademap_cs
 		private type						m_spot_type;		// 장소타입
 		private string						m_find_string;		// 검색문자열
 
-		private List<spot_once>				m_spot_list;		// 외부참조向け목록
+		private List<spot_once>				m_spot_list;		// 외부 참조용 목록
 
 		/*-------------------------------------------------------------------------
 		 
@@ -118,12 +120,12 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소の종류を설정する
-		 장소をやめるには Type.none を渡す
+		 장소 종류를 설정한다
+		 장소를 해제하려면 Type.none 을 넘긴다
 		---------------------------------------------------------------------------*/
 		public void SetSpot(type _type, string find_str)
 		{
-			// 前회の내용をクリア
+			// 지난번 내용을 초기화
 			m_spots.Clear();
 			m_spot_list.Clear();
 			m_find_string	= find_str;
@@ -131,7 +133,7 @@ namespace gvtrademap_cs
 			m_spot_type		= _type;
 			switch(_type){
 			case type.country_flags:		// 국기
-				// 국목록を작성함
+				// 국가 목록을 작성한다
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					if(i.InfoType == GvoWorldInfo.InfoType.City){
 						m_spots.Add(i);
@@ -139,7 +141,7 @@ namespace gvtrademap_cs
 					}
 				}
 				break;
-			case type.icons_0:				// 看판娘
+			case type.icons_0:				// 주점 아가씨
 			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
 			case type.icons_3:				// 무역상인
@@ -150,7 +152,7 @@ namespace gvtrademap_cs
 					}
 				}
 				break;
-			case type.has_item:				// 지정した아이템がある
+			case type.has_item:				// 지정한 아이템이 있다
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					GvoWorldInfo.Info.Group.Data	d	= i.HasItem(find_str);
 					if(d != null){
@@ -168,7 +170,7 @@ namespace gvtrademap_cs
 						m_spot_list.Add(new spot_once(i, find_str, ""));
 					}else{
 						if(i.LearnPerson(find_str) != null){
-							// 언어取得
+							// 언어 취득
 							m_spots.Add(i);
 							m_spot_list.Add(new spot_once(i, find_str, i.LearnPerson(find_str)));
 						}
@@ -186,6 +188,8 @@ namespace gvtrademap_cs
 			case type.tab_7:				// 돛제작자
 			case type.tab_8:				// 조각가
 			case type.tab_9:				// 행상인
+			case type.tab_9_1:				// 주점 종업원
+			case type.tab_9_2:				// 부관
 				int	index	= (int)(_type - type.tab_0);
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					if(i.GetCount(GvoWorldInfo.Info.GroupIndex._0 + index) > 0){
@@ -231,7 +235,7 @@ namespace gvtrademap_cs
 			if(m_spot_type == type.none)	return;
 			if(m_spots.Count == 0)			return;
 
-			// 暗くする
+			// 어둡게 한다
 			m_device.DrawFillRect(new Vector3(0, 0, 0.3f+0.01f), new Vector2(m_device.client_size.X, m_device.client_size.Y), Color.FromArgb(160, 0, 0, 0).ToArgb());
 
 			m_loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_proc), 64f);
@@ -247,7 +251,7 @@ namespace gvtrademap_cs
 				draw_spot_mycountry(offset);
 				spot_flags(offset);
 				break;
-			case type.icons_0:				// 看판娘
+			case type.icons_0:				// 주점 아가씨
 			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
 			case type.icons_3:				// 무역상인
@@ -255,7 +259,7 @@ namespace gvtrademap_cs
 				spot_cities(offset);
 				spot_icons(offset);
 				break;
-			case type.has_item:				// 지정した아이템がある
+			case type.has_item:				// 지정한 아이템이 있다
 				draw_spot(offset);
 				spot_cities(offset);
 				break;
@@ -275,6 +279,8 @@ namespace gvtrademap_cs
 			case type.tab_7:				// 돛제작자
 			case type.tab_8:				// 조각가
 			case type.tab_9:				// 행상인
+			case type.tab_9_1:				// 주점 종업원
+			case type.tab_9_2:				// 부관
 			case type.tab_10:				// 메모
 				draw_spot(offset);
 //				spot_cities(OffsetPosition);
@@ -337,7 +343,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 장소표시
-		 본인の국のみ
+		 본인 국가만
 		---------------------------------------------------------------------------*/
 		private void draw_spot_mycountry(Vector2 offset)
 		{
@@ -384,7 +390,7 @@ namespace gvtrademap_cs
 			foreach(GvoWorldInfo.Info i in m_spots){
 				icons.icon_index	index	= icons.icon_index.spot_2;
 				if(i.LearnPerson(m_find_string) != null){
-					// 覚えられるところ
+					// 기억할 수 있는 곳
 					index	= icons.icon_index.spot_0;
 				}
 
@@ -400,7 +406,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 언어용장소표시
-		 覚えられる도시に인아이콘표시
+		 기억할 수 있는 도시에 아이콘 표시
 		---------------------------------------------------------------------------*/
 		private void spot_learn_lang(Vector2 offset)
 		{
@@ -420,7 +426,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 장소표시
-		 아이콘たち
+		 아이콘들
 		---------------------------------------------------------------------------*/
 		private void spot_icons(Vector2 offset)
 		{
@@ -451,7 +457,7 @@ namespace gvtrademap_cs
 				icons.icon_index	index;
 				switch(i.InfoType){
 				case GvoWorldInfo.InfoType.City:			// 도시
-					// 도시の종류により아이콘を変える
+					// 도시 종류에 따라 아이콘을 바꾼다
 					index	= icons.icon_index.city_icon_0;
 					index	+= (int)i.CityType;
 					break;
@@ -480,7 +486,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 장소표시
-		 タブ
+		 탭
 		---------------------------------------------------------------------------*/
 		private void spot_tab(Vector2 offset)
 		{
@@ -488,22 +494,27 @@ namespace gvtrademap_cs
 			if(size < 0.5)				size = 0.5f;
 			else if (size > 1.0f)	   size = 1.0f;
 	
+			// 주점 종업원, 부관은 나중에 추가한 아이콘이고, 메모는 원래 칸을 쓴다
+			icons.icon_index	icon	= icons.icon_index.spot_tab_staff;
+			if(m_spot_type < type.tab_9_1)			icon	= icons.icon_index.spot_tab_0 + (int)(m_spot_type - type.tab_0);
+			else if(m_spot_type == type.tab_9_2)	icon	= icons.icon_index.spot_tab_adjutant;
+			else if(m_spot_type == type.tab_10)		icon	= icons.icon_index.spot_tab_11;
+
 			m_device.sprites.BeginDrawSprites(m_icons.texture, offset, m_loop_image.ImageScale, new Vector2(size, size));
 			foreach(GvoWorldInfo.Info i in m_spots){
-				m_device.sprites.AddDrawSprites(new Vector3(i.position.X, i.position.Y, 0.3f),
-										m_icons.GetIcon(icons.icon_index.spot_tab_0 + (int)(int)(m_spot_type - type.tab_0)) );
+				m_device.sprites.AddDrawSprites(new Vector3(i.position.X, i.position.Y, 0.3f), m_icons.GetIcon(icon));
 			}
 			m_device.sprites.EndDrawSprites();
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ용문자열を得る
+		 툴팁용 문자열을 얻는다
 		---------------------------------------------------------------------------*/
 		public string GetToolTipString(Point pos)
 		{
 			switch(m_spot_type){
 			case type.country_flags:		// 국기
-			case type.icons_0:				// 看판娘
+			case type.icons_0:				// 주점 아가씨
 			case type.icons_1:				// 서고
 			case type.icons_2:				// 번역가
 			case type.icons_3:				// 무역상인
@@ -511,17 +522,19 @@ namespace gvtrademap_cs
 			case type.tab_1:				// 도구
 			case type.tab_2:				// 공방
 			case type.tab_3:				// 인물
-			case type.tab_4:				// 조선공
-			case type.tab_4_1:				// 조선소주인
+			case type.tab_4:				// 조선소주인
+			case type.tab_4_1:				// 조선공
 			case type.tab_5:				// 무기장인
 			case type.tab_6:				// 제재소장인
 			case type.tab_7:				// 돛제작자
 			case type.tab_8:				// 조각가
 			case type.tab_9:				// 행상인
+			case type.tab_9_1:				// 주점 종업원
+			case type.tab_9_2:				// 부관
 			case type.city_name:			// 도시명
 				break;
 
-			case type.has_item:				// 지정した아이템がある
+			case type.has_item:				// 지정한 아이템이 있다
 				foreach(GvoWorldInfo.Info i in m_spots){
 					if(i.HitTest(pos)){
 						GvoWorldInfo.Info.Group.Data	d	= i.HasItem(m_find_string);
@@ -548,21 +561,21 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소타입を문자열で得る
+		 장소 타입을 문자열로 얻는다
 		---------------------------------------------------------------------------*/
 		static public string GetTypeString(type _type)
 		{
 			switch(_type){
 			case type.none:						return "장소없음";
 			case type.country_flags:			return "국기";
-			case type.icons_0:					return "看판娘";
+			case type.icons_0:					return "주점 아가씨";
 			case type.icons_1:					return "서고";
 			case type.icons_2:					return "번역가";
 			case type.icons_3:					return "무역상인";
 			case type.has_item:					return "아이템등";
 			case type.language:					return "사용언어";
-			case type.tab_0:					return "교역所";
-			case type.tab_1:					return "도구屋";
+			case type.tab_0:					return "교역소";
+			case type.tab_1:					return "도구점";
 			case type.tab_2:					return "공방";
 			case type.tab_3:					return "인물";
 			case type.tab_4:					return "조선소주인";
@@ -572,15 +585,17 @@ namespace gvtrademap_cs
 			case type.tab_7:					return "돛제작자";
 			case type.tab_8:					return "조각가";
 			case type.tab_9:					return "행상인";
+			case type.tab_9_1:					return "주점 종업원";
+			case type.tab_9_2:					return "부관";
 			case type.tab_10:					return "메모";
 			case type.city_name:				return "도시명";
 			case type.cultural_sphere:			return "문화권";
 			}
-			return "불명な타입";
+			return "불명한 타입";
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소타입からEx문자열を得る
+		 장소 타입에서 Ex 문자열을 얻는다
 		 장소목록용
 		---------------------------------------------------------------------------*/
 		static public string GetExColumnString(type _type)
@@ -592,8 +607,8 @@ namespace gvtrademap_cs
 			case type.icons_1:					return "";
 			case type.icons_2:					return "";
 			case type.icons_3:					return "";
-			case type.has_item:					return "価格등";
-			case type.language:					return "언어習得";
+			case type.has_item:					return "가격 등";
+			case type.language:					return "언어 습득";
 			case type.tab_0:					return "";
 			case type.tab_1:					return "";
 			case type.tab_2:					return "";
@@ -605,6 +620,8 @@ namespace gvtrademap_cs
 			case type.tab_7:					return "";
 			case type.tab_8:					return "";
 			case type.tab_9:					return "";
+			case type.tab_9_1:					return "";
+			case type.tab_9_2:					return "";
 			case type.tab_10:					return "";
 			case type.city_name:				return "";
 			case type.cultural_sphere:			return "";

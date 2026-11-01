@@ -98,7 +98,7 @@
 			this.listView1.ShowItemToolTips = true;
 			this.listView1.Size = new System.Drawing.Size(735, 192);
 			this.listView1.TabIndex = 6;
-			this.toolTip1.SetToolTip(this.listView1, "おまじない");
+			this.toolTip1.SetToolTip(this.listView1, "더미");
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			this.listView1.VirtualMode = true;
@@ -131,7 +131,7 @@
 			// 
 			this.hide_ToolStripMenuItem.Name = "hide_ToolStripMenuItem";
 			this.hide_ToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
-			this.hide_ToolStripMenuItem.Text = "비표시(&H)";
+			this.hide_ToolStripMenuItem.Text = "숨김(&H)";
 			this.hide_ToolStripMenuItem.Click += new System.EventHandler(this.hide_ToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
@@ -150,7 +150,7 @@
 			// 
 			this.delete_DToolStripMenuItem.Name = "delete_DToolStripMenuItem";
 			this.delete_DToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
-			this.delete_DToolStripMenuItem.Text = "과거의 항로도 목록으로 이동(&D)";
+			this.delete_DToolStripMenuItem.Text = "과거 항로도 목록으로 이동(&D)";
 			this.delete_DToolStripMenuItem.Click += new System.EventHandler(this.delete_DToolStripMenuItem_Click);
 			// 
 			// move_trash_RToolStripMenuItem
@@ -169,7 +169,7 @@
 			// 
 			this.all_select_AToolStripMenuItem.Name = "all_select_AToolStripMenuItem";
 			this.all_select_AToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
-			this.all_select_AToolStripMenuItem.Text = "전부선택(&A)";
+			this.all_select_AToolStripMenuItem.Text = "모두 선택(&A)";
 			this.all_select_AToolStripMenuItem.Click += new System.EventHandler(this.all_select_AToolStripMenuItem_Click);
 			// 
 			// listView2
@@ -187,7 +187,7 @@
 			this.listView2.ShowItemToolTips = true;
 			this.listView2.Size = new System.Drawing.Size(735, 192);
 			this.listView2.TabIndex = 7;
-			this.toolTip1.SetToolTip(this.listView2, "주술");
+			this.toolTip1.SetToolTip(this.listView2, "");
 			this.listView2.UseCompatibleStateImageBehavior = false;
 			this.listView2.View = System.Windows.Forms.View.Details;
 			this.listView2.VirtualMode = true;
@@ -219,7 +219,7 @@
 			// 
 			this.toolStripMenuItem2.Name = "toolStripMenuItem2";
 			this.toolStripMenuItem2.Size = new System.Drawing.Size(223, 22);
-			this.toolStripMenuItem2.Text = "비표시(&H)";
+			this.toolStripMenuItem2.Text = "숨김(&H)";
 			this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
 			// 
 			// toolStripSeparator3
@@ -231,7 +231,7 @@
 			// 
 			this.toolStripMenuItem3.Name = "toolStripMenuItem3";
 			this.toolStripMenuItem3.Size = new System.Drawing.Size(223, 22);
-			this.toolStripMenuItem3.Text = "과거의 항로도 목록으로 이동(&D)";
+			this.toolStripMenuItem3.Text = "과거 항로도 목록으로 이동(&D)";
 			this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
 			// 
 			// toolStripMenuItem4
@@ -250,7 +250,7 @@
 			// 
 			this.toolStripMenuItem5.Name = "toolStripMenuItem5";
 			this.toolStripMenuItem5.Size = new System.Drawing.Size(223, 22);
-			this.toolStripMenuItem5.Text = "전부선택(&A)";
+			this.toolStripMenuItem5.Text = "모두 선택(&A)";
 			this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
 			// 
 			// listView3
@@ -268,7 +268,7 @@
 			this.listView3.ShowItemToolTips = true;
 			this.listView3.Size = new System.Drawing.Size(735, 192);
 			this.listView3.TabIndex = 8;
-			this.toolTip1.SetToolTip(this.listView3, "주술");
+			this.toolTip1.SetToolTip(this.listView3, "");
 			this.listView3.UseCompatibleStateImageBehavior = false;
 			this.listView3.View = System.Windows.Forms.View.Details;
 			this.listView3.VirtualMode = true;
@@ -290,7 +290,7 @@
 			// 
 			this.toolStripMenuItem6.Name = "toolStripMenuItem6";
 			this.toolStripMenuItem6.Size = new System.Drawing.Size(237, 22);
-			this.toolStripMenuItem6.Text = "즐겨찾기항로도목록に이동(&M)";
+			this.toolStripMenuItem6.Text = "즐겨찾기 항로도 목록으로 이동(&M)";
 			this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
 			// 
 			// toolStripMenuItem8
@@ -309,7 +309,7 @@
 			// 
 			this.toolStripMenuItem9.Name = "toolStripMenuItem9";
 			this.toolStripMenuItem9.Size = new System.Drawing.Size(237, 22);
-			this.toolStripMenuItem9.Text = "전부선택(&A)";
+			this.toolStripMenuItem9.Text = "모두 선택(&A)";
 			this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
 			// 
 			// tabControl1
@@ -336,7 +336,7 @@
 			this.tabPage1.Size = new System.Drawing.Size(750, 204);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "항로도";
-			this.tabPage1.ToolTipText = "통상의 항로도목록. 설정항목의 유지수 설정을 초과하는 오래된 항로도는 자동으로 과거의 항로도에 이동됩니다.";
+			this.tabPage1.ToolTipText = "일반 항로도 목록. 설정의 항로도 보유 수를 넘는 오래된 항로도는 자동으로 과거 항로도로 이동됩니다.";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
 			// tabPage2
@@ -348,8 +348,8 @@
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage2.Size = new System.Drawing.Size(750, 204);
 			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "항로도즐겨찾기";
-			this.tabPage2.ToolTipText = "즐겨찾기 항로도를 등록. 자동으로 삭제되지 않습니다.";
+			this.tabPage2.Text = "즐겨찾기 항로도";
+			this.tabPage2.ToolTipText = "즐겨찾기 항로도를 등록합니다. 자동으로 삭제되지 않습니다.";
 			// 
 			// tabPage3
 			// 
@@ -361,7 +361,7 @@
 			this.tabPage3.Size = new System.Drawing.Size(750, 204);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "휴지통";
-			this.tabPage3.ToolTipText = "과거의 항로도 목록으로 그리지 않습니다. 이 때문에, CPU부하가 가볍고 많은 항로도를 유지할 수 있습니다.";
+			this.tabPage3.ToolTipText = "과거 항로도 목록은 그리지 않습니다. 그래서 CPU 부하가 적고 많은 항로도를 유지할 수 있습니다.";
 			// 
 			// label1
 			// 
@@ -381,7 +381,7 @@
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(188, 23);
 			this.button3.TabIndex = 7;
-			this.button3.Text = "선택상태 해제";
+			this.button3.Text = "선택 상태 해제";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 

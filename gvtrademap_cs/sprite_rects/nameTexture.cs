@@ -60,7 +60,7 @@ namespace gvtrademap_cs {
 		public Texture elseTexture { get { return m_elseTexture; } }
 		
 		/*-------------------------------------------------------------------------
-		 初期化
+		 초기화
 		---------------------------------------------------------------------------*/
 		public nameTexture(d3d_device device) {
 			if (device == null) {
@@ -114,7 +114,7 @@ namespace gvtrademap_cs {
 			
 			m_texture_format = Format.A1R5G5B5;
 			if (!m_d3d_device.CheckDeviceFormat(Usage.RenderTarget, ResourceType.Textures, Format.A1R5G5B5)) {
-				// A1R5G5B5の렌더링 타겟が作れない
+				// A1R5G5B5 렌더링 타겟을 만들 수 없다
 				m_texture_format = Format.A8R8G8B8;
 			}
 
@@ -126,11 +126,11 @@ namespace gvtrademap_cs {
 			Surface backBuffer = m_d3d_device.device.GetBackBuffer(0, 0, BackBufferType.Mono);
 
 			if (depth != null) {
-				m_d3d_device.device.DepthStencilSurface = null;      // zバッファ없음
+				m_d3d_device.device.DepthStencilSurface = null;      // z 버퍼 없음
 			}
 			m_d3d_device.device.SetRenderTarget(0, m_cityTexture.GetSurfaceLevel(0));
 
-			// 화면のクリア
+			// 화면 클리어
 			m_d3d_device.Clear(ClearFlags.Target, Color.FromArgb(0, 0, 0, 0));
 			// 렌더링
 			m_d3d_device.device.RenderState.ZBufferEnable = false;
@@ -139,7 +139,7 @@ namespace gvtrademap_cs {
 
 			m_d3d_device.device.SetRenderTarget(0, m_elseTexture.GetSurfaceLevel(0));
 
-			// 화면のクリア
+			// 화면 클리어
 			m_d3d_device.Clear(ClearFlags.Target, Color.FromArgb(0, 0, 0, 0));
 			// 렌더링
 			
@@ -156,7 +156,7 @@ namespace gvtrademap_cs {
 
 			m_d3d_device.device.RenderState.ZBufferEnable = true;
 
-			// 렌더링 타겟を元に戻す
+			// 렌더링 타겟을 원래대로 되돌린다
 			if (depth != null) {
 				m_d3d_device.device.DepthStencilSurface = depth;
 			}
@@ -237,7 +237,8 @@ namespace gvtrademap_cs {
 					}
 				} else {
 					i.NameRect = new d3d_sprite_rects.rect(m_textureSize, m_offset, rect);
-					m_nameRect.Add(i.Name, i.NameRect);
+					// worldinfos.xml 에 같은 이름이 두 번 있어도 멈추지 않는다
+					m_nameRect[i.Name] = i.NameRect;
 				}
 
 				yIndex++;

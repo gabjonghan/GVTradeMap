@@ -1,10 +1,10 @@
 ﻿/*-------------------------------------------------------------------------
 
- 설정ダイア로그2
- 카테고리毎に분けた
- 표시항목を合体させた
- 버전정보を合体させた
- 해역변동は合体させてない
+ 설정 대화상자 2
+ 카테고리별로 나눴다
+ 표시 항목을 합쳤다
+ 버전 정보를 합쳤다
+ 해역 변동은 합치지 않았다
 
 ---------------------------------------------------------------------------*/
 
@@ -59,20 +59,20 @@ namespace gvtrademap_cs {
 		public setting_form2(GlobalSettings _setting, KeyAssignList assign_list, string device_info) {
 			init(_setting, assign_list, device_info, tab_index.general, DrawSettingPage.WebIcons);
 		}
-		// 그리기항목설정時용
+		// 그리기 항목 설정 시용
 		public setting_form2(GlobalSettings _setting, KeyAssignList assign_list, string device_info, DrawSettingPage _draw_setting_page) {
 			init(_setting, assign_list, device_info, tab_index.draw_flags, _draw_setting_page);
 		}
-		// ページ지정
+		// 페이지 지정
 		public setting_form2(GlobalSettings _setting, KeyAssignList assign_list, string device_info, tab_index _tab_index) {
 			init(_setting, assign_list, device_info, _tab_index, DrawSettingPage.WebIcons);
 		}
 
 		/*-------------------------------------------------------------------------
-		 初期化
+		 초기화
 		---------------------------------------------------------------------------*/
 		private void init(GlobalSettings _setting, KeyAssignList assign_list, string device_info, tab_index index, DrawSettingPage page) {
-			// 설정내용をコピーして持つ
+			// 설정 내용을 복사해서 가진다
 			m_setting = _setting.Clone();
 			m_key_assign_list = assign_list.DeepClone();
 
@@ -80,70 +80,79 @@ namespace gvtrademap_cs {
 			Useful.SetFontMeiryo(this, 8f);
 			Useful.SetFontMeiryo(listBox1, 9f);
 
-			// ツールチップを등록する
+			// 툴팁을 등록한다
 			toolTip1.AutoPopDelay = 30 * 1000;	  // 30초표시
 			toolTip1.BackColor = Color.LightYellow;
 			toolTip1.SetToolTip(comboBox2, "플레이하는 서버를 선택");
 			toolTip1.SetToolTip(comboBox3, "소속되어 있는 국가를 선택");
-			toolTip1.SetToolTip(comboBox1, "지도를 선택");
-			toolTip1.SetToolTip(comboBox5, "위도, 경도선의 그리기방법을 선택\n단위는 측량에서 얻어지는 값과 같습니다 (0~16384)\n초기값은 좌표만 그리기");
-			toolTip1.SetToolTip(textBox1, "항로공유용 그룹명을 지정\n비워두면 항로가 공유되지 않습니다");
-			toolTip1.SetToolTip(textBox2, "항로공유 그리기시 표시되는 이름을 지정\n지정된 이름을 항로공유하는 다른 멤버에게 전합니다.\n비워두면 항로가 공유되지 않습니다");
+			toolTip1.SetToolTip(comboBox1, "지도를 선택\n지도3 이후는 map 폴더에 worldmap_3.png ~ worldmap_10.png 를 넣으면 사용할 수 있습니다\n파일이 없는 지도를 선택하면 지도1이 표시됩니다");
+
+			// 지도 목록
+			// 콤보의 순서 = MapIndex 의 순서
+			comboBox1.Items.Clear();
+			for (MapIndex i = MapIndex.Map1; i < MapIndex.Max; i++) {
+				string name = "지도" + ((int)i + 1).ToString();
+				if (!def.IsMapExists(i)) name += " (" + Path.GetFileName(def.GetMapFileName(i)) + " 없음)";
+				comboBox1.Items.Add(name);
+			}
+			toolTip1.SetToolTip(comboBox5, "위도, 경도선의 그리기 방법을 선택\n단위는 측량에서 얻어지는 값과 같습니다 (0~16384)\n초기값은 좌표만 그리기");
+			toolTip1.SetToolTip(textBox1, "항로 공유용 그룹명을 지정\n비워두면 항로가 공유되지 않습니다");
+			toolTip1.SetToolTip(textBox2, "항로 공유 그리기 시 표시되는 이름을 지정\n지정된 이름을 항로 공유하는 다른 멤버에게 전합니다.\n비워두면 항로가 공유되지 않습니다");
 			toolTip1.SetToolTip(checkBox8, "체크하면 도시명, 도시아이콘 등 최대한 같은 크기로 표시함\n체크하지 않으면 지도의 축척에 맞춰서 크기를 표시함\n체크하지 않으면 그리기가 빨라집니다");
 			toolTip1.SetToolTip(checkBox1, "인터넷 연결 여부를 지정\n체크하면 시작할 때 데이터업데이트, 항로공유가 가능하게 됩니다\n한국어판에서는 동작여부를 보장하지 않습니다");
-			toolTip1.SetToolTip(checkBox2, "마우스의 앞/뒤 버튼으로 스킬・도구창을 열기");
-			toolTip1.SetToolTip(checkBox6, "항로공유를 사용하는 경우 체크하세요.\n인터넷으로 업데이트 정보 등을 받으려면 체크해야 합니다.");
-			toolTip1.SetToolTip(checkBox9, "시작시 인터넷으로부터 @Web아이콘을 얻어옵니다.\n얻어진 @Web아이콘은 내 컴퓨터에 보존됩니다.\n시작시 매번 받을 필요가 없는 경우 체크를 해제하십시오.");
-			toolTip1.SetToolTip(comboBox6, "도시아이콘의 사이즈를 선택\n해안선이 아이콘으로 가려지는것이 싫은 경우 작은 아이콘 또는 아이콘 표시 안함을 선택");
+			toolTip1.SetToolTip(checkBox2, "마우스의 앞/뒤 버튼으로 스킬/도구 창 열기");
+			toolTip1.SetToolTip(checkBox6, "항로 공유를 사용하는 경우 체크하세요.\n인터넷으로 업데이트 정보 등을 받으려면 체크해야 합니다.");
+			toolTip1.SetToolTip(checkBox9, "시작 시 인터넷에서 @Web 아이콘을 받아옵니다.\n받은 @Web 아이콘은 내 컴퓨터에 보존됩니다.\n시작시 매번 받을 필요가 없는 경우 체크를 해제하십시오.");
+			toolTip1.SetToolTip(comboBox6, "도시 아이콘의 크기를 선택\n해안선이 아이콘에 가려지는 것이 싫은 경우 작은 아이콘 또는 아이콘 표시 안함을 선택");
 			toolTip1.SetToolTip(comboBox7, "도시명 그리기 여부를 선택\n그리지 않더라도 도시 주변에 마우스를 가져가면 도시명 팝업이 뜨게 됩니다.");
 			toolTip1.SetToolTip(comboBox8, "스크린샷 포맷을 선택\n초기값은 bmp");
-			toolTip1.SetToolTip(checkBox4, "조선중이 아니더라도 조선카운터를 표시할지를 설정");
+			toolTip1.SetToolTip(checkBox4, "선박 건조 중이 아니어도 조선 카운터를 표시할지 설정");
 
 			string str = "우클릭시의 동작을 선택\n";
 			str += "체크함\n";
 			str += "  우클릭으로 컨텍스트 메뉴를 열기\n";
-			str += "  우클릭으로 도시선택이 가능\n";
-			str += "  장소해제는 ESC키로만\n";
+			str += "  우클릭으로 도시 선택 가능\n";
+			str += "  장소 표시 해제는 ESC 키로만\n";
 			str += "체크안함\n";
 			str += "  Ctrl+우클릭으로 컨텍스트 메뉴를 열기\n";
-			str += "  우클릭으로 도시선택 불가능\n";
-			str += "  장소해제는 ESC키나 다른도시를 선택\n";
+			str += "  우클릭으로 도시 선택 불가능\n";
+			str += "  장소 표시 해제는 ESC 키 또는 다른 도시 선택\n";
 			toolTip1.SetToolTip(checkBox10, str);
-			toolTip1.SetToolTip(checkBox11, "항로도즐겨찾기를 합성한 지도를 사용\n이항목은 항로도 즐겨찾기 사용/미사용 전환을 위해 사용됨");
-			toolTip1.SetToolTip(checkBox12, "윈도우를 항상 맨 앞으로 표시");
-			toolTip1.SetToolTip(checkBox13, "항로도, 나침반の각도선, 항로예상선의 그리기방법을 지정\n체크시 안티앨리어싱 사용");
-			toolTip1.SetToolTip(checkBox14, "가장 최근의 항로도를 제외하고 반투명으로 그리기\n일자, 재해팝업도 반투명이 됩니다");
-			toolTip1.SetToolTip(checkBox16, "@Web아이콘 그리기시 같은 종류로 거리가 가까운 경우 하나로 합침\n@Web아이콘 표시시 좀더 깔끔해집니다");
+			toolTip1.SetToolTip(checkBox11, "즐겨찾기 항로도를 합성한 지도를 사용\n즐겨찾기 항로도 표시를 켜고 끌 때 사용합니다");
+			toolTip1.SetToolTip(checkBox12, "창을 항상 맨 위에 표시");
+			toolTip1.SetToolTip(checkBox13, "항로도, 나침반 각도선, 항로 예상선의 그리기 방법을 지정\n체크 시 안티앨리어싱 사용");
+			toolTip1.SetToolTip(checkBox14, "가장 최근 항로도를 제외하고 반투명으로 그리기\n날짜, 재해 팝업도 반투명이 됩니다");
+			toolTip1.SetToolTip(checkBox16, "@Web 아이콘을 그릴 때 같은 종류이고 거리가 가까우면 하나로 합침\n@Web 아이콘 표시가 좀 더 깔끔해집니다");
 
 			toolTip1.SetToolTip(checkBox3, "화면캡처 방법을 지정\nWindows Vista 사용시 측량인식이 잘 되지 않을 경우 체크하십시오\nWindows7은 체크가 필요없습니다.");
-			toolTip1.SetToolTip(checkBox5, "재해팝업, 이자 경과일수, 해역변동시스템용 로그분석을 사용");
+			toolTip1.SetToolTip(checkBox5, "재해 팝업, 이자 경과 일수, 해역 변동 시스템용 로그 분석을 사용\n한국판 게임은 채팅 로그가 없어 기본으로 꺼져 있습니다\n이자·조선 카운터와 해역 변동은 지도 우클릭 메뉴로 직접 설정할 수 있습니다");
 			toolTip1.SetToolTip(checkBox17, "캡처한 화면을 선수상의 오른쪽에 표시\n나침반 각도 분석 및 확인용\n일반적으로 체크할 필요가 없습니다.");
 			toolTip1.SetToolTip(comboBox4, "화면캡처 간격을 선택\n짧은간격으로 캡처할수록 나침반의 각도변경에 대한 반응이 빨라지지만 CPU를 많이 사용합니다\nCPU가 감당할 수 있는 경우 0.5초에 1회 또는 그 이하를 선택해 주세요\n초기값은 1초에 1회");
-			toolTip1.SetToolTip(textBox6, "TCP서버가 사용하는 포트번호를 지정\n특별히 변경할 필요는 없습니다");
-			toolTip1.SetToolTip(checkBox7, "정보윈도우의 좌표계나 측량계가 아닌 지도계にします\n開発時の위치取得용です");
+			toolTip1.SetToolTip(textBox6, "TCP 서버가 사용하는 포트 번호를 지정\n특별히 변경할 필요는 없습니다");
+			toolTip1.SetToolTip(checkBox7, "정보 창의 좌표계를 측량 좌표가 아닌 지도 좌표로 표시합니다\n개발 시 위치 취득용입니다");
 
-			str = "표시할 최저항해일수를 지정\n";
-			str += "이 설정은 최신의 항로도에는 영향을 주지 않습니다\n";
+			str = "표시할 최저 항해 일수를 지정\n";
+			str += "이 설정은 최신 항로도에는 영향을 주지 않습니다\n";
 			str += "좁은 범위의 항해시 항로도가 뒤죽박죽이 되는 현상을 줄여줍니다\n";
-			str += "만약 3개로 설정시 항해일수 2일 이하의 항로도는 그리지 않습니다\n";
-			str += "0으로 설정하면 전체항로도를 그리게 됩니다\n";
+			str += "예를 들어 3으로 설정하면 항해 일수 2일 이하의 항로도는 그리지 않습니다\n";
+			str += "0으로 설정하면 모든 항로도를 그립니다\n";
 			str += "초기값은 0";
 			toolTip1.SetToolTip(textBox8, str);
 
 			toolTip1.SetToolTip(checkBox18, "즐겨찾기 항로도를 반투명으로 그리기");
 			toolTip1.SetToolTip(checkBox19, "즐겨찾기 항로도의 재해 팝업도 그리기");
-			str = "과거의 항로도를 몇개까지 목록에 저장할지 설정\n";
-			str += "그리기와 다르게, 이 경우에는 CPU부하가 낮아 많은 항로도를 보존해도 문제가 없습니다.\n";
+			str = "과거 항로도를 몇 개까지 목록에 저장할지 설정\n";
+			str += "그리지 않으므로 CPU 부하가 낮아 많은 항로도를 보존해도 문제가 없습니다.\n";
 			str += "초기값은 200";
 			toolTip1.SetToolTip(textBox9, str);
 
-			str = "항로도를 보존を保持する수を지정します\n";
-			str += "保持수を多くすると그리기負荷が増えます\n";
-			str += "해に出る도に항로도を전체삭제している方は1を지정してください\n";
-			str += "初期値は20です";
+			str = "항로도를 보관할 개수를 지정합니다\n";
+			str += "보관 개수를 늘리면 그리기 부하가 커집니다\n";
+			str += "바다에 나갈 때마다 항로도를 전체 삭제하는 분은 1 을 지정해 주십시오\n";
+			str += "초기값은 20 입니다";
 			toolTip1.SetToolTip(textBox3, str);
 
-			// 설정항목を反映させる
+			// 설정 항목을 반영시킨다
 			comboBox2.SelectedIndex = (int)m_setting.server;
 			comboBox3.SelectedItem = GvoWorldInfo.GetCountryString(this.m_setting.country);
 			comboBox1.SelectedIndex = (int)m_setting.map;
@@ -193,7 +202,7 @@ namespace gvtrademap_cs {
 				}
 			} catch {
 				textBox5.AppendText("PC명\n");
-				textBox5.AppendText("IPアドレスの取得に실패");
+				textBox5.AppendText("IP 주소 취득에 실패");
 			}
 
 			// 모드설정
@@ -203,19 +212,19 @@ namespace gvtrademap_cs {
 				radioButton1.Checked = true;
 			}
 
-			// デバイス정보
+			// 디바이스 정보
 			textBox4.Lines = device_info.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.None);
 
 			// 버전정보
 			label5.Text = def.WINDOW_TITLE;
 
-			// 표시항목の初期化
+			// 표시 항목 초기화
 			init_draw_setting(page);
 
-			// 유효, 무효の업데이트
+			// 유효, 무효 갱신
 			update_gray_ctrl();
 
-			// 初期ページ
+			// 초기 페이지
 			listBox1.SelectedIndex = (int)index;
 
 			// HP
@@ -227,7 +236,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 표시항목の初期化
+		 표시 항목 초기화
 		---------------------------------------------------------------------------*/
 		private void init_draw_setting(DrawSettingPage page) {
 			// @Web icons
@@ -281,18 +290,18 @@ namespace gvtrademap_cs {
 				checkBox403.Checked = m_setting.draw_setting_myship_expect_pos;
 			}
 
-			// 표시するページ설정
+			// 표시할 페이지 설정
 			if ((int)page < 0) page = DrawSettingPage.WebIcons;
 			if (page > DrawSettingPage.MyShipAngle) page = DrawSettingPage.MyShipAngle;
 			tabControl1.SelectTab((int)page);
 		}
 
 		/*-------------------------------------------------------------------------
-		 목록ボックスの선택내용が변경された
+		 목록 박스의 선택 내용이 변경되었다
 		---------------------------------------------------------------------------*/
 		private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
-			// どうもパネルの順番が一定ではない感じなので
-			// 直接지정する
+			// 아무래도 패널 순서가 일정하지 않은 것 같으므로
+			// 직접 지정한다
 			switch (listBox1.SelectedIndex) {
 				case 0:	 // 기본설정
 					panelManager1.SelectedPanel = managedPanel1;
@@ -309,7 +318,7 @@ namespace gvtrademap_cs {
 				case 4:	 // 표시항목
 					panelManager1.SelectedPanel = managedPanel4;
 					break;
-				case 5:	 // その他
+				case 5:	 // 그 밖의 것
 					panelManager1.SelectedPanel = managedPanel5;
 					break;
 				case 6:	 // 키보드할당
@@ -322,7 +331,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 閉じられた
+		 닫혔다
 		---------------------------------------------------------------------------*/
 		private void setting_form2_FormClosed(object sender, FormClosedEventArgs e) {
 			m_setting.server = GvoWorldInfo.GetServerFromString(comboBox2.Text);
@@ -368,7 +377,7 @@ namespace gvtrademap_cs {
 			m_setting.enable_analize_log_chat = checkBox5.Checked;
 			m_setting.draw_capture_info = checkBox17.Checked;
 
-			// 표시항목の保存
+			// 표시 항목 저장
 			save_draw_setting();
 
 			// 키할당
@@ -376,7 +385,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 표시항목の保存
+		 표시 항목 저장
 		---------------------------------------------------------------------------*/
 		private void save_draw_setting() {
 			{
@@ -432,7 +441,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 유효, 무효の업데이트
+		 유효, 무효 갱신
 		---------------------------------------------------------------------------*/
 		private void radioButton1_CheckedChanged(object sender, EventArgs e) {
 			update_gray_ctrl();
@@ -457,7 +466,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 グレイ표시を업데이트する
+		 회색 표시를 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_gray_ctrl() {
 			// 항로공유
@@ -505,7 +514,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 HPを開く
+		 HP 를 연다
 		---------------------------------------------------------------------------*/
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
 			Process.Start(def.URL_HP);
@@ -513,8 +522,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 HPを開く
-		 대항해시대Online ツール配布所
+		 HP 를 연다
+		 대항해시대Online 툴 배포처
 		---------------------------------------------------------------------------*/
 		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
 			Process.Start(def.URL_HP_ORIGINAL);
@@ -522,50 +531,30 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 최신버전チェック
+		 최신 버전 확인
 		---------------------------------------------------------------------------*/
 		private void button4_Click(object sender, EventArgs e) {
 			Cursor = Cursors.WaitCursor;
-			// 버전を확인する
-			bool result = HttpDownload.Download(def.VERSION_URL, def.VERSION_FNAME);
+			// 버전을 확인한다
+			string[] data;
+			update_checker.result result = update_checker.Check(out data);
 			Cursor = Cursors.Default;
 
-			if (!result) {
-				// 업데이트しない
-				MessageBox.Show(this, "업데이트정보が取得できませんでした. \nインターネットの연결を확인してください. ", "업데이트확인오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			// 업데이트された데이터があるかどうか확인する
-			string line = "";
-			List<string> data = new List<string>();
-			int version = 0;
-			try {
-				using (StreamReader sr = new StreamReader(
-					def.VERSION_FNAME, Encoding.GetEncoding("UTF-8"))) {
-
-					// 버전
-					line = sr.ReadLine();
-					version = Convert.ToInt32(line);
-
-					// 残り
-					while ((line = sr.ReadLine()) != null) {
-						data.Add(line);
+			switch (result) {
+				case update_checker.result.updated: {
+						// 업데이트되어 있다
+						check_update_result dlg = new check_update_result(data);
+						dlg.ShowDialog(this);
+						dlg.Dispose();
 					}
-				}
-			} catch {
-				MessageBox.Show(this, "버전정보が확인できません. \n업데이트확인に실패하였습니다. ", "업데이트확인오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			if (version > def.VERSION) {
-				// 업데이트されている
-				check_update_result dlg = new check_update_result(data.ToArray());
-				dlg.ShowDialog(this);
-				dlg.Dispose();
-			} else {
-				// 업데이트されていない
-				MessageBox.Show(this, "업데이트されたソフトウェアは見つかりませんでした. \nお使いの버전が최신です. ", "업데이트확인결과", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					break;
+				case update_checker.result.latest:
+					// 업데이트되어 있지 않다
+					MessageBox.Show(this, "업데이트된 소프트웨어를 찾지 못했습니다. \n사용 중인 버전이 최신입니다. ", "업데이트 확인 결과", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					break;
+				default:
+					MessageBox.Show(this, "업데이트 정보를 가져오지 못했습니다. \n인터넷 연결을 확인해 주십시오. ", "업데이트 확인 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					break;
 			}
 		}
 

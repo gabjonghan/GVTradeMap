@@ -1,19 +1,19 @@
 ﻿/*-------------------------------------------------------------------------
 
  대항해시대Online화면캡처
- 배の각도は2度간격で確定
- 360段階の분해능から180段階の値を得る
- 0度は実機の仕様により向けない
+ 배의 각도는 2 도 간격으로 확정
+ 360 단계의 분해능에서 180 단계의 값을 얻는다
+ 0 도는 실제 게임의 사양상 향할 수 없다
 
- 無理やり引き剥がしたので実装がちょっとあれだがdirectxを必要としない
+ 억지로 떼어냈기 때문에 구현이 좀 그렇지만 directx 를 필요로 하지 않는다
 
 ---------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------
  define
 ---------------------------------------------------------------------------*/
-// 나침반분석デバッグ
-#define	DEBUG_WRITE_ANALYZE_POINT		// 분석위치を赤く塗る
+// 나침반 분석 디버그
+#define	DEBUG_WRITE_ANALYZE_POINT		// 분석 위치를 빨갛게 칠한다
 
 /*-------------------------------------------------------------------------
  using
@@ -35,12 +35,12 @@ namespace gvo_base {
 	---------------------------------------------------------------------------*/
 	public class gvo_capture_base : IDisposable {
 		// 전용의 변환테이블을 사용하기 때문에, 분해능 변경 불가능
-		protected const int COMPASS_DIV = 360;			  // 나침반の분해능
-															// 180の배수であること
-		protected const int COMPASS_1ST_STEP = 2;			   // 최초の검색時の간격
-		protected const int COMPASS_2ND_RANGE = 4 * 2;			  // 디테일검색時の범위(+-なのでこの値の배の범위を調べる)
-		protected const int COMPASS_DIV_90 = COMPASS_DIV / 4;   // 90度분の분해능
-		protected const int COMPASS_DIV_45 = COMPASS_DIV / 8;   // 45度분の분해능
+		protected const int COMPASS_DIV = 360;			  // 나침반의 분해능
+															// 180 의 배수여야 한다
+		protected const int COMPASS_1ST_STEP = 2;			   // 최초 검색 시의 간격
+		protected const int COMPASS_2ND_RANGE = 4 * 2;			  // 상세 검색 시의 범위(+- 이므로 이 값의 두 배 범위를 조사한다)
+		protected const int COMPASS_DIV_90 = COMPASS_DIV / 4;   // 90 도분의 분해능
+		protected const int COMPASS_DIV_45 = COMPASS_DIV / 8;   // 45 도분의 분해능
 
 		/*-------------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ namespace gvo_base {
 			xp,
 			vista,
 		};
-		private mode m_capture_mode;		// 動作모드
+		private mode m_capture_mode;		// 동작 모드
 
 		private ScreenCapture m_capture1;		   // 측량 및 날짜용
 		private ScreenCapture m_capture2;		 // 진향방향용
@@ -57,7 +57,7 @@ namespace gvo_base {
 		// 분석결과
 		private Point m_point;		  // 분석후의 측량좌표
 		private int m_days;			 // 분석후의 일수
-		private float m_angle;		  // 나침반方向
+		private float m_angle;		  // 나침반 방향
 
 		protected Point[] m_compass_pos;		// 나침반으로부터 각도산출용
 		protected float[] m_ajust_compass;  // 조정용 테이블
@@ -88,7 +88,7 @@ namespace gvo_base {
 			get {
 				if (point.X < 0) return false;
 				if (point.Y < 0) return false;
-				return true;		// 正常に캡처できた
+				return true;		// 정상적으로 캡처했다
 			}
 		}
 		public bool capture_days_success { get { return (days < 0) ? false : true; } }
@@ -125,7 +125,7 @@ namespace gvo_base {
 
 		---------------------------------------------------------------------------*/
 		public gvo_capture_base() {
-			// 캡처용히트맵を작성함
+			// 캡처용 히트맵을 작성한다
 			m_capture1 = CreateScreenCapture(64, 24);
 			m_capture2 = CreateScreenCapture(128, 128);
 
@@ -134,7 +134,7 @@ namespace gvo_base {
 			m_enable_days = true;	   // 항해일수분석유효
 			m_enable_angle = true;	  // 나침반분석유효
 
-			// 분석결과初期化
+			// 분석 결과 초기화
 			m_point = new Point(-1, -1);
 			m_days = -1;
 			m_angle = -1;
@@ -142,16 +142,16 @@ namespace gvo_base {
 			// 캡처모드
 			capture_mode = mode.xp;
 
-			// 나침반からの각도산출용테이블을작성함
+			// 나침반으로부터 각도를 산출하기 위한 테이블을 작성한다
 			create_compass_tbl();
-			// 조정테이블の작성
+			// 조정 테이블 작성
 			create_ajust_compass_tbl();
 		}
 
 		/*-------------------------------------------------------------------------
-		 screen_captureを작성함
-		 screen_captureを継承したものを사용する場合オーバーライドすること
-		 コンストラクタ내で呼ばれるので注意
+		 screen_capture 를 작성한다
+		 screen_capture 를 상속한 것을 사용할 경우 오버라이드할 것
+		 생성자 안에서 호출되므로 주의
 		---------------------------------------------------------------------------*/
 		protected virtual ScreenCapture CreateScreenCapture(int size_x, int size_y) {
 			return new ScreenCapture(size_x, size_y);
@@ -164,8 +164,8 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 대항해시대Onlineの윈도우を捜す
-		 見つかった場合はtrueを返す
+		 대항해시대Online 의 윈도우를 찾는다
+		 찾은 경우에는 true 를 반환한다
 		---------------------------------------------------------------------------*/
 		static public bool IsFoundGvoWindow() {
 			IntPtr hwnd = FindGvoWindow();
@@ -174,8 +174,8 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 대항해시대Onlineの윈도우を得る
-		 見つからなかった場合は IntPtr.Zero を返す
+		 대항해시대Online 의 윈도우를 얻는다
+		 찾지 못한 경우에는 IntPtr.Zero 를 반환한다
 		---------------------------------------------------------------------------*/
 		static public IntPtr FindGvoWindow() {
 			return user32.FindWindowA(gvo_def.GVO_CLASS_NAME,
@@ -183,25 +183,25 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 대항해시대Onlineの윈도우を捜し
-		 見つかれば화면좌표で矩形を返す
-		 見つかれば윈도우ハンドルを返す
-		 見つからなければnullを返す
+		 대항해시대Online 의 윈도우를 찾아
+		 찾으면 화면 좌표로 사각형을 반환한다
+		 찾으면 윈도우 핸들을 반환한다
+		 찾지 못하면 null 을 반환한다
 		---------------------------------------------------------------------------*/
 		static public IntPtr FindGvoWindow(out Rectangle rect) {
 			rect = new Rectangle();
 
-			// 윈도우を捜す
+			// 윈도우를 찾는다
 			IntPtr hwnd = FindGvoWindow();
 
 			if (hwnd == IntPtr.Zero) return IntPtr.Zero;
 
-			// クライアント領域を화면좌표に변환する
+			// 클라이언트 영역을 화면 좌표로 변환한다
 			Point p = new Point();
 			user32.GetClientRect(hwnd, ref rect);
 			user32.ClientToScreen(hwnd, ref p);
 
-			// 사이즈が0なら最소化されてる
+			// 크기가 0 이면 최소화된 상태다
 			if (rect.Width <= 0) return IntPtr.Zero;
 			if (rect.Height <= 0) return IntPtr.Zero;
 
@@ -211,12 +211,12 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 화면を캡처し, 일付や좌표, 進行方向を得る
+		 화면을 캡처해서 날짜와 좌표, 진행 방향을 얻는다
 		---------------------------------------------------------------------------*/
 		public virtual bool CaptureAll() {
-			// 화면を캡처
+			// 화면을 캡처
 			if (!capture_dol_window()) {
-				// 실패時は全て初期値を설정する
+				// 실패 시에는 전부 초기값을 설정한다
 				m_point = new Point(-1, -1);
 				m_days = -1;
 				m_angle = -1;
@@ -240,22 +240,22 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 화면を캡처する
+		 화면을 캡처한다
 		---------------------------------------------------------------------------*/
 		private bool capture_dol_window() {
 			Rectangle rect;
 			IntPtr hwnd = FindGvoWindow(out rect);
-			if (hwnd == IntPtr.Zero) return false;	  // 見つからない
+			if (hwnd == IntPtr.Zero) return false;	  // 찾지 못했다
 
 			if (capture_mode == mode.xp) {
-				// XP,VistaのAero以외
+				// XP, Vista 의 Aero 이외
 
-				// オフセットは0にする
+				// 오프셋은 0 으로 한다
 				rect.X = 0;
 				rect.Y = 0;
 			} else {
 				// Vista Aero
-				// 直接캡처できないのでデスクトップを得る
+				// 직접 캡처할 수 없으므로 데스크톱을 얻는다
 				hwnd = IntPtr.Zero;
 			}
 
@@ -263,7 +263,7 @@ namespace gvo_base {
 			IntPtr hdc = user32.GetDC(hwnd);
 			if (hdc == IntPtr.Zero) return false;	   // 캡처실패
 
-			// 캡처する
+			// 캡처한다
 			DoCapture(hdc, rect);
 
 			user32.ReleaseDC(hwnd, hdc);
@@ -271,11 +271,11 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 화면を캡처する
+		 화면을 캡처한다
 		---------------------------------------------------------------------------*/
 		protected virtual void DoCapture(IntPtr hdc, Rectangle rect) {
-			// 1つ目の캡처
-			// 측량정보を得る
+			// 첫 번째 캡처
+			// 측량 정보를 얻는다
 			if (m_enable_point) {
 				m_capture1.DoCapture(hdc,
 										new Point(0, 0),
@@ -283,7 +283,7 @@ namespace gvo_base {
 													rect.Y + (rect.Height - 272)),
 										new Size(60, 11));
 			}
-			// 항해일수を得る
+			// 항해 일수를 얻는다
 			if (m_enable_days) {
 				m_capture1.DoCapture(hdc,
 										new Point(0, 12),
@@ -292,8 +292,8 @@ namespace gvo_base {
 										new Size(21, 11));
 			}
 
-			// 2つ目の캡처
-			// 나침반を得る
+			// 두 번째 캡처
+			// 나침반을 얻는다
 			if (m_enable_angle) {
 				m_capture2.DoCapture(hdc,
 										new Point(0, 0),
@@ -304,7 +304,7 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 수値を분석する
+		 숫자를 분석한다
 		---------------------------------------------------------------------------*/
 		private bool analize_number(int index, out int num) {
 			string[] check_tbl = new string[]{
@@ -353,7 +353,7 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 측량좌표を得る
+		 측량 좌표를 얻는다
 		---------------------------------------------------------------------------*/
 		private void analize_point() {
 			m_point.X = 0;
@@ -403,7 +403,7 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 일付を得る
+		 날짜를 얻는다
 		---------------------------------------------------------------------------*/
 		private void analize_days() {
 			string[] check_tbl = new string[] {
@@ -424,7 +424,7 @@ namespace gvo_base {
 			int max;
 			int start;
 
-			// 桁を調べる
+			// 자릿수를 조사한다
 			int index;
 			int color_0, color_1;
 			index = (stride * 16) + 10 * 3;
@@ -437,8 +437,8 @@ namespace gvo_base {
 						+ image[index + 2];
 
 			if (color_0 > 128 * 3 || color_1 > 128 * 3) {
-				// 3桁か1桁
-				// さらにチェックする
+				// 3 자리 아니면 1 자리
+				// 추가로 확인한다
 				index = (stride * 16) + 2 * 3;
 				color_0 = image[index + 0]
 							+ image[index + 1]
@@ -449,16 +449,16 @@ namespace gvo_base {
 							+ image[index + 2];
 
 				if (color_0 > 128 * 3 || color_1 > 128 * 3) {
-					// 3桁で분석する
+					// 3 자리로 분석한다
 					max = 3;
 					start = 16 - 8 * 2;
 				} else {
-					// 1桁で분석する
+					// 1 자리로 분석한다
 					max = 1;
 					start = 8;
 				}
 			} else {
-				// 2桁で분석する
+				// 2 자리로 분석한다
 				max = 2;
 				start = 12 - 8;
 			}
@@ -499,60 +499,60 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 進行方向を得る
-		 나침반から분석する
+		 진행 방향을 얻는다
+		 나침반으로 분석한다
 		---------------------------------------------------------------------------*/
 		private void analize_angle() {
-			// 初期値
+			// 초기값
 			m_angle = -1;
 
-			// 캡처が成功してなければ분석しない
+			// 캡처가 성공하지 않았으면 분석하지 않는다
 			if (!capture_success) return;
 
-			// 대まかな분해능で調べる
+			// 대략적인 분해능으로 조사한다
 			int index = analize_angle_1st_step();
 			if (index < 0) return;
 
-			// 대まかな분해능の인덱스を覚えておく
+			// 대략적인 분해능의 인덱스를 기억해 둔다
 			m_1st_com_index = index;
 
 			float angle = 0;
 			float angle2 = 0;
 #if aa
-			// 一番解선수상度の高い135～225度で분석する
+			// 가장 해상도가 높은 135~225 도에서 분석한다
 			if(   (index >= COMPASS_DIV_45)
 				&&(index < COMPASS_DIV_45+COMPASS_DIV_90*1) ){
-				// +90度の위치
+				// +90 도 위치
 				angle	= analize_angle_2nd_step2(index + COMPASS_DIV_90);
 				angle	-= COMPASS_DIV_90;
-				angle	+= 1;		// 270度をきっちり出すための조정
+				angle	+= 1;		// 270 도를 정확히 내기 위한 조정
 			}else if( (index >= COMPASS_DIV_45+COMPASS_DIV_90*1)
 					&&(index < COMPASS_DIV_45+COMPASS_DIV_90*2) ){
-				// そのまま
+				// 그대로
 				angle	= analize_angle_2nd_step(index);
 			}else if( (index >= COMPASS_DIV_45+COMPASS_DIV_90*2)
 //					&&(index < COMPASS_DIV_45+COMPASS_DIV_90*3) ){
-					&&(index <= (COMPASS_DIV_45+COMPASS_DIV_90*3)-1) ){	// 314を含む
-				// -90度の위치
+					&&(index <= (COMPASS_DIV_45+COMPASS_DIV_90*3)-1) ){	// 314 를 포함
+				// -90 도 위치
 				angle	= analize_angle_2nd_step2(index - COMPASS_DIV_90);
 				angle	+= COMPASS_DIV_90;
 			}else{
-				// +180度の위치
+				// +180 도 위치
 				angle	= analize_angle_2nd_step2(index + COMPASS_DIV_90*2);
 				angle	-= COMPASS_DIV_90*2;
 
 ////////////////////////////////////////////////
-				// 44度の無理やり判定
-				// これがないと46度と判別できない
+				// 44 도의 억지 판정
+				// 이게 없으면 46 도와 구별할 수 없다
 				if((int)angle == 314){
 					angle	= 315f;
 				}
 ////////////////////////////////////////////////
 			}
 #else
-			// 下반분の180度분で분석する
-			// 노란색の화살표の위치で見ない
-			//			if(index > COMPASS_DIV_90*3 +4){	// 受け渡し時の微妙な조정値を含む
+			// 아래 절반의 180 도분으로 분석한다
+			// 노란색 화살표 위치로는 보지 않는다
+			//			주고받을 때의 미묘한 조정값을 포함
 			//			if(index > COMPASS_DIV_90*3){
 			if (index > COMPASS_DIV_90 * 3 + 2) {   // 다시조정
 				angle = analize_angle_2nd_step2(index + COMPASS_DIV_90 * 2);
@@ -591,7 +591,7 @@ namespace gvo_base {
 				m_an_index = 3;
 			}
 
-			// 인덱스開示
+			// 인덱스 공개
 			m_com_index = angle;
 			m_com_index2 = angle2;
 
@@ -624,12 +624,12 @@ namespace gvo_base {
 
 							m_an_index2	= 3;
 						}
-						// 인덱스開示
+						// 인덱스 공개
 						m_com_index2		= angle;
 						if(m_com_index2 >= COMPASS_DIV)	m_com_index2	-= COMPASS_DIV;
 						if(m_com_index2 < 0)			m_com_index2	+= COMPASS_DIV;
 
-						// 수정테이블을용いて각도に변환
+						// 수정 테이블을 사용해 각도로 변환
 						m_angle2	= update_angle_with_ajust(angle);
 			*/
 			////////////////
@@ -637,9 +637,9 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 대まかな분해능で調べる
-		 細かく調べる前段階
-		 실패した場合は-1を返す
+		 대략적인 분해능으로 조사한다
+		 세밀하게 조사하기 전 단계
+		 실패한 경우에는 -1 을 반환한다
 		---------------------------------------------------------------------------*/
 		private int analize_angle_1st_step() {
 			for (int i = 0; i < COMPASS_DIV; i += COMPASS_1ST_STEP) {
@@ -649,12 +649,12 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 노란색の위치で분석
+		 노란색 위치로 분석
 		---------------------------------------------------------------------------*/
 		/*
 				private float analize_angle_2nd_step(int index)
 				{
-					// index 付近を詳しく調べる
+					// index 부근을 상세히 조사한다
 					// 시작위치
 					int	start	= index;
 					for(int i=0; i<COMPASS_2ND_RANGE; i++){
@@ -668,15 +668,15 @@ namespace gvo_base {
 						if(analize_angle_sub(tmp))	last	= tmp;
 					}
 
-					// 真ん중を각도とする
+					// 한가운데를 각도로 삼는다
 					return ((float)(start + last)) * 0.5f;
 				}
 		*/
 		/*-------------------------------------------------------------------------
-		 白색の위치で분석
+		 흰색 위치로 분석
 		---------------------------------------------------------------------------*/
 		private float analize_angle_2nd_step2(int index) {
-			// index 付近を詳しく調べる
+			// index 부근을 상세히 조사한다
 			// 시작위치
 			int start = index;
 			for (int i = 0; i < COMPASS_2ND_RANGE; i++) {
@@ -690,14 +690,14 @@ namespace gvo_base {
 				if (analize_angle_sub2(tmp)) last = tmp;
 			}
 
-			// 真ん중を각도とする
+			// 한가운데를 각도로 삼는다
 			return ((float)(start + last)) * 0.5f;
 		}
 
 		/*-------------------------------------------------------------------------
-		 進行方向を得る
-		 나침반から분석する
-		 지정された장소を調べる
+		 진행 방향을 얻는다
+		 나침반으로 분석한다
+		 지정된 위치를 조사한다
 		---------------------------------------------------------------------------*/
 		private bool analize_angle_sub(int i) {
 			byte[] image = m_capture2.Image;
@@ -706,7 +706,7 @@ namespace gvo_base {
 			int index;
 			int r, g, b;
 
-			// 테이블の범위に丸める
+			// 테이블 범위로 반올림한다
 			//			i		&= COMPASS_DIV-1;
 			if (i >= COMPASS_DIV) i -= COMPASS_DIV;
 			if (i < 0) i += COMPASS_DIV;
@@ -717,7 +717,7 @@ namespace gvo_base {
 			r = image[index + 2];
 
 			if ((r > (b + 10)) && (g > (b + 10))) {
-				// 노란색い点が見つかった
+				// 노란 점을 찾았다
 #if DEBUG_WRITE_ANALYZE_POINT
 				image[index + 0] = 0;
 				image[index + 1] = 0;
@@ -729,10 +729,10 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 進行方向を得る
-		 나침반から분석する
-		 지정された장소を調べる
-		 白の화살표분석용
+		 진행 방향을 얻는다
+		 나침반으로 분석한다
+		 지정된 위치를 조사한다
+		 흰 화살표 분석용
 		---------------------------------------------------------------------------*/
 		private bool analize_angle_sub2(int i) {
 			byte[] image = m_capture2.Image;
@@ -741,7 +741,7 @@ namespace gvo_base {
 			int index;
 			int r, g, b;
 
-			// 테이블の범위に丸める
+			// 테이블 범위로 반올림한다
 			//			i		&= COMPASS_DIV-1;
 			if (i >= COMPASS_DIV) i -= COMPASS_DIV;
 			if (i < 0) i += COMPASS_DIV;
@@ -752,7 +752,7 @@ namespace gvo_base {
 			r = image[index + 2];
 
 			if ((r >= 137) && (r == g) && (g == b)) {
-				// 白い点が見つかった
+				// 흰 점을 찾았다
 #if DEBUG_WRITE_ANALYZE_POINT
 				image[index + 0] = 0;
 				image[index + 1] = 0;
@@ -764,9 +764,9 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 각도を설정する
-		 iは 0～(COMPASS_DIV-1)
-		 少しこの범위をはみ出るのは問題ない
+		 각도를 설정한다
+		 i 는 0~(COMPASS_DIV-1)
+		 이 범위를 조금 벗어나는 것은 문제없다
 		---------------------------------------------------------------------------*/
 		/*
 				private void update_angle(float i)
@@ -777,7 +777,7 @@ namespace gvo_base {
 				}
 		*/
 		/*-------------------------------------------------------------------------
-		 나침반からの각도산출용테이블을작성함
+		 나침반으로부터 각도를 산출하기 위한 테이블을 작성한다
 		---------------------------------------------------------------------------*/
 		private void create_compass_tbl() {
 			m_compass_pos = new Point[]{
@@ -821,7 +821,7 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 나침반분석の수정테이블の작성
+		 나침반 분석의 수정 테이블 작성
 		---------------------------------------------------------------------------*/
 		private void create_ajust_compass_tbl() {
 			m_ajust_compass = new float[]{
@@ -866,27 +866,27 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 수정테이블을용いて각도に변환	
+		 수정 테이블을 사용해 각도로 변환
 		---------------------------------------------------------------------------*/
 		private float update_angle_with_ajust(float angle_index) {
-			// 소수部は捨てる
+			// 소수부는 버린다
 			int index = (int)angle_index;
 
 			if (index >= COMPASS_DIV) index -= COMPASS_DIV;
 			if (index < 0) index += COMPASS_DIV;
-			if (index >= COMPASS_DIV) return -1f;   // 범위エラー
-			if (index < 0) return -1f;  // 범위エラー
+			if (index >= COMPASS_DIV) return -1f;   // 범위 오류
+			if (index < 0) return -1f;  // 범위 오류
 
-			// 조정された각도を테이블から得る
-			// 조정테이블は작성に시간が掛かるので注意
-			// 각도は2度刻みとなる
+			// 조정된 각도를 테이블에서 얻는다
+			// 조정 테이블은 작성에 시간이 걸리므로 주의
+			// 각도는 2 도 단위가 된다
 			return m_ajust_compass[index];
 		}
 
 		/*-------------------------------------------------------------------------
-		 각도からベクトルを得る
-		 angleはdegree
-		 북が0で時計회り
+		 각도로부터 벡터를 얻는다
+		 angle 은 degree
+		 북쪽이 0 이고 시계 방향
 		---------------------------------------------------------------------------*/
 		static public PointF AngleToVector(float angle) {
 			if (angle < 0) return new PointF(0, 0);

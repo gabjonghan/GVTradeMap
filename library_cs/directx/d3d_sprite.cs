@@ -2,8 +2,8 @@
 
  Direct3D
  스프라이트
- 1枚の텍스쳐から대량に그리기する目的용
- 쉐이더が使えるときは쉐이더を사용する
+ 텍스쳐 한 장에서 대량으로 그리기 위한 용도
+ 쉐이더를 쓸 수 있을 때는 쉐이더를 사용한다
 
 ---------------------------------------------------------------------------*/
 
@@ -26,7 +26,7 @@ namespace directx {
 	---------------------------------------------------------------------------*/
 	public class d3d_sprite : IDisposable {
 		private const int DRAW_SPRITE_ONCE = 128;
-		private const int SWAP_BFFER_MAX = 16;	  // 쉐이더時のバッファ수
+		private const int SWAP_BFFER_MAX = 16;	  // 쉐이더 사용 시의 버퍼 수
 
 		/*-------------------------------------------------------------------------
 
@@ -35,16 +35,16 @@ namespace directx {
 
 		private CustomVertex.TransformedColoredTextured[] m_vertex_list;
 		private int m_sprite_count;
-		private Texture m_texture;		  // 一時的に保持する텍스쳐
+		private Texture m_texture;		  // 일시적으로 보관하는 텍스쳐
 
 		private Vector2 m_map_offset;
 		private float m_map_scale;
 		private Vector2 m_global_scale;
 
-		// 現在のフレームに그리기した스프라이트수
+		// 현재 프레임에 그린 스프라이트 수
 		private int m_draw_sprites_in_frame;
 
-		// 쉐이더사용時
+		// 쉐이더 사용 시
 		private Effect m_effect;
 		private VertexDeclaration m_decl;
 		private d3d_writable_vb_with_index m_vb;
@@ -54,12 +54,12 @@ namespace directx {
 
 		---------------------------------------------------------------------------*/
 		public int draw_sprites_in_frame { get { return m_draw_sprites_in_frame; } }
-		// 외部で特別に쉐이더を사용するとき용
-		// 통상は得る必要がない
+		// 외부에서 특별히 쉐이더를 사용할 때용
+		// 평소에는 얻을 필요가 없다
 		public Effect effect { get { return m_effect; } }
 
 		/*-------------------------------------------------------------------------
-		 フレームの開始
+		 프레임 시작
 		---------------------------------------------------------------------------*/
 		public void BeginFrame() {
 			m_draw_sprites_in_frame = 0;
@@ -71,17 +71,17 @@ namespace directx {
 		public d3d_sprite(Device device, bool is_use_ve1_1_ps1_1) {
 			m_d3d_device = device;
 
-			// バッファ
+			// 버퍼
 			m_vertex_list = new CustomVertex.TransformedColoredTextured[DRAW_SPRITE_ONCE * 6];
 			m_sprite_count = 0;
 
-			// 쉐이더사용時
+			// 쉐이더 사용 시
 			m_effect = null;
 			m_decl = null;
 			m_vb = null;
 			m_vbo = null;
 
-			// 쉐이더が使えるなら使う
+			// 쉐이더를 쓸 수 있으면 사용한다
 			if (is_use_ve1_1_ps1_1) {
 				Assembly ass = Assembly.GetExecutingAssembly();
 				initialize_shader(ass.GetManifestResourceStream("directx.fx.sprite.fxo"));
@@ -97,7 +97,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 エフェクトの解放
+		 이펙트 해제
 		---------------------------------------------------------------------------*/
 		public void DisposeEffect() {
 			if (m_effect != null) m_effect.Dispose();
@@ -109,9 +109,9 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더사용初期化
-		 스프라이트용エフェクトを読み込んで初期化される
-		 .fxでも.fxoでもよい
+		 쉐이더 사용 초기화
+		 스프라이트용 이펙트를 읽어들여 초기화한다
+		 .fx 든 .fxo 든 상관없다
 		---------------------------------------------------------------------------*/
 		/*
 				private void initialize_shader(string fname)
@@ -129,10 +129,10 @@ namespace directx {
 				}
 		*/
 		/*-------------------------------------------------------------------------
-		 쉐이더사용初期化
-		 스프라이트용エフェクトを読み込んで初期化される
-		 埋め込みリソースからの읽기
-		 .fxoであること
+		 쉐이더 사용 초기화
+		 스프라이트용 이펙트를 읽어들여 초기화한다
+		 임베드된 리소스로부터 읽기
+		 .fxo 여야 한다
 		---------------------------------------------------------------------------*/
 		private void initialize_shader(Stream stream) {
 			string error;
@@ -148,8 +148,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더사용용初期化
-		 Effectは설정済みであること
+		 쉐이더 사용용 초기화
+		 Effect 는 이미 설정되어 있어야 한다
 		---------------------------------------------------------------------------*/
 		private void initialize_shader() {
 			try {
@@ -170,15 +170,15 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기開始
-		 同じ텍스쳐を사용する스프라이트그리기용
+		 스프라이트 그리기 시작
+		 같은 텍스쳐를 사용하는 스프라이트 그리기용
 		---------------------------------------------------------------------------*/
 		public void BeginDrawSprites(Texture tex) {
-			// 쉐이더ー사용용설정
+			// 쉐이더 사용 시 설정
 			begin_draw_sprites_shader(tex);
 
 			if (m_effect == null) {
-				// 쉐이더ー未사용용설정
+				// 쉐이더 미사용 시 설정
 				m_texture = tex;
 				m_map_offset = new Vector2(0, 0);
 				m_map_scale = 1;
@@ -188,39 +188,39 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기開始
-		 同じ텍스쳐を사용する스프라이트그리기용
+		 스프라이트 그리기 시작
+		 같은 텍스쳐를 사용하는 스프라이트 그리기용
 		---------------------------------------------------------------------------*/
 		private void begin_draw_sprites_shader(Texture tex) {
 			if (m_effect == null) return;
 
 			try {
-				// 쉐이더定수を설정します. 
+				// 쉐이더 상수를 설정한다.
 				float[] vector = { m_d3d_device.Viewport.Width, m_d3d_device.Viewport.Height };
 				m_effect.SetValue("ViewportSize", vector);
 				m_effect.SetValue("Texture", tex);
 
 				// Technique
-				// 통상の스프라이트
+				// 통상 스프라이트
 				m_effect.Technique = "Sprite";
 			} catch {
 				// 실패
-				// 쉐이더ーの사용をやめる
+				// 쉐이더 사용을 중단한다
 				DisposeEffect();
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기開始
-		 同じ텍스쳐を사용する스프라이트그리기용
-		 グローバルパラメータ지정
+		 스프라이트 그리기 시작
+		 같은 텍스쳐를 사용하는 스프라이트 그리기용
+		 글로벌 파라미터 지정
 		---------------------------------------------------------------------------*/
 		public void BeginDrawSprites(Texture tex, Vector2 map_offset, float map_scale, Vector2 global_scale) {
-			// 쉐이더ー사용용설정
+			// 쉐이더 사용 시 설정
 			begin_draw_sprites_shader(tex, map_offset, map_scale, global_scale);
 
 			if (m_effect == null) {
-				// 쉐이더ー未사용용설정
+				// 쉐이더 미사용 시 설정
 				m_texture = tex;
 				m_map_offset = map_offset;
 				m_map_scale = map_scale;
@@ -230,15 +230,15 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기開始
-		 同じ텍스쳐を사용する스프라이트그리기용
-		 グローバルパラメータ지정
+		 스프라이트 그리기 시작
+		 같은 텍스쳐를 사용하는 스프라이트 그리기용
+		 글로벌 파라미터 지정
 		---------------------------------------------------------------------------*/
 		public void begin_draw_sprites_shader(Texture tex, Vector2 map_offset, float map_scale, Vector2 global_scale) {
 			if (m_effect == null) return;
 
 			try {
-				// 쉐이더定수を설정します. 
+				// 쉐이더 상수를 설정한다.
 				float[] vector = { m_d3d_device.Viewport.Width, m_d3d_device.Viewport.Height };
 				float[] _offset = { map_offset.X, map_offset.Y };
 				float[] gscale = { global_scale.X, global_scale.Y };
@@ -249,10 +249,10 @@ namespace directx {
 				m_effect.SetValue("GlobalScale", gscale);
 
 				// technique
-				m_effect.Technique = "SpriteWithGlobalParams";	  // グローバルパラメータと拡縮と회전付き
+				m_effect.Technique = "SpriteWithGlobalParams";	  // 글로벌 파라미터 + 확대축소 + 회전 포함
 			} catch {
 				// 실패
-				// 쉐이더ーの사용をやめる
+				// 쉐이더 사용을 중단한다
 				DisposeEffect();
 			}
 		}
@@ -279,15 +279,15 @@ namespace directx {
 
 		//#if aaa
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
-		 등배, 白, 不투명
+		 스프라이트 그리기 추가
+		 등배, 흰색, 불투명
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSprites(Vector3 pos, d3d_sprite_rects.rect _rect) {
 			return AddDrawSprites(pos, _rect, -1);
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 등배, 색지정
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSprites(Vector3 pos, d3d_sprite_rects.rect _rect, int color) {
@@ -301,7 +301,7 @@ namespace directx {
 				pos = goffsetscale(pos);
 				Vector2 size = gscale(_rect.size);
 
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -327,7 +327,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 스케일지정
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSprites(Vector3 pos, d3d_sprite_rects.rect _rect, Vector2 scale) {
@@ -335,7 +335,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 스케일지정, 색지정
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSprites(Vector3 pos, d3d_sprite_rects.rect _rect, Vector2 scale, int color) {
@@ -356,7 +356,7 @@ namespace directx {
 				size.X *= scale.X;
 				size.Y *= scale.Y;
 
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -381,8 +381,8 @@ namespace directx {
 		}
 		//#endif
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
-		 등배, 白, 不투명
+		 스프라이트 그리기 추가
+		 등배, 흰색, 불투명
 		 화면외컬링없음
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect) {
@@ -390,7 +390,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 등배, 색지정
 		 화면외컬링없음
 		---------------------------------------------------------------------------*/
@@ -405,7 +405,7 @@ namespace directx {
 				pos = goffsetscale(pos);
 				Vector2 size = gscale(_rect.size);
 
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -424,7 +424,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 스케일지정
 		 화면외컬링없음
 		---------------------------------------------------------------------------*/
@@ -433,7 +433,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 스케일지정, 색지정
 		 화면외컬링없음
 		---------------------------------------------------------------------------*/
@@ -457,7 +457,7 @@ namespace directx {
 
 				pos.X += offset.X;
 				pos.Y += offset.Y;
-				// 整수化
+				// 정수화
 				pos.X = (float)(int)pos.X;
 				pos.Y = (float)(int)pos.Y;
 				pos.X += offset2.X;
@@ -474,7 +474,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기종료
+		 스프라이트 그리기 종료
 		---------------------------------------------------------------------------*/
 		public void EndDrawSprites() {
 			if (m_sprite_count > 0) {
@@ -483,15 +483,15 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기
-		 ある程度まとまった수を描く
-		 텍스쳐は설정済みであること
+		 스프라이트 그리기
+		 어느 정도 모인 수만큼 그린다
+		 텍스쳐는 이미 설정되어 있어야 한다
 		---------------------------------------------------------------------------*/
 		private void draw_sprites() {
 			if (m_effect != null) {
 				// 쉐이더사용
-				m_vb.SetData<sprite_vertex>(m_vbo);	 // 頂点데이터설정
-														//				m_vb.SetData<sprite_vertex>(m_vbo, m_sprite_count * 4);		// なぜか중いのでやめ
+				m_vb.SetData<sprite_vertex>(m_vbo);	 // 정점 데이터 설정
+														//왠지 느려서 사용 중단
 
 				m_effect.Begin(0);
 				m_effect.BeginPass(0);
@@ -503,7 +503,7 @@ namespace directx {
 											0, 0, m_sprite_count * 4, 0, m_sprite_count * 2);
 				m_effect.EndPass();
 				m_effect.End();
-				m_vb.Flip();			// 次のバッファへ
+				m_vb.Flip();			// 다음 버퍼로
 			} else {
 				// 통상
 				// draw primitives
@@ -515,8 +515,8 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の추가
-		 vertex bufferに추가
+		 스프라이트 추가
+		 vertex buffer 에 추가
 		---------------------------------------------------------------------------*/
 		private void add_sprite_to_vertex_buffer(Vector3 pos, Vector2 size, d3d_sprite_rects.rect _rect, int color) {
 			int index = m_sprite_count * 6;
@@ -532,7 +532,7 @@ namespace directx {
 				m_vertex_list[index + i].Color = color;
 			}
 
-			// 左상三角形
+			// 좌상단 삼각형
 			m_vertex_list[index + 1].X += size.X;
 			m_vertex_list[index + 2].Y += size.Y;
 
@@ -544,7 +544,7 @@ namespace directx {
 			m_vertex_list[index + 2].Tu = _rect.uv[2].X;
 			m_vertex_list[index + 2].Tv = _rect.uv[2].Y;
 
-			// 右下三角形
+			// 우하단 삼각형
 			m_vertex_list[index + 3].X += size.X;
 			m_vertex_list[index + 4].X += size.X;
 			m_vertex_list[index + 4].Y += size.Y;
@@ -563,7 +563,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の추가
+		 스프라이트 추가
 		 쉐이더사용
 		---------------------------------------------------------------------------*/
 		private void add_sprite_to_vertex_buffer_shader(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad, Vector2 scale, int color, Vector2 offset) {
@@ -584,44 +584,44 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 회전지정
-		 각도はラジアン
+		 각도는 라디안
 		 화면외컬링없음
-		 회전지정は화면외컬링없음のみ
+		 회전 지정은 화면 밖 컬링 없음일 때만
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, new Vector2(1, 1), -1);
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 스케일지정, 회전지정
-		 각도はラジアン
+		 각도는 라디안
 		 화면외컬링없음
-		 회전지정は화면외컬링없음のみ
+		 회전 지정은 화면 밖 컬링 없음일 때만
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad, Vector2 scale) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, scale, -1);
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 색지정, 회전지정
-		 각도はラジアン
+		 각도는 라디안
 		 화면외컬링없음
-		 회전지정は화면외컬링없음のみ
+		 회전 지정은 화면 밖 컬링 없음일 때만
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad, int color) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, new Vector2(1, 1), color);
 		}
 
 		/*-------------------------------------------------------------------------
-		 스프라이트の그리기 추가
+		 스프라이트 그리기 추가
 		 스케일지정, 색지정, 회전지정
-		 각도はラジアン
+		 각도는 라디안
 		 화면외컬링없음
-		 회전지정は화면외컬링없음のみ
+		 회전 지정은 화면 밖 컬링 없음일 때만
 		---------------------------------------------------------------------------*/
 		public bool AddDrawSpritesNC(Vector3 pos, d3d_sprite_rects.rect _rect, float angle_rad, Vector2 scale, int color) {
 			return AddDrawSpritesNC(pos, _rect, angle_rad, scale, color, new Vector2(0, 0));
@@ -634,8 +634,8 @@ namespace directx {
 				pos = goffsetscale(pos);
 				Vector2 scale2 = gscale(scale);
 
-				Matrix mat = Matrix.RotationZ(angle_rad);		   // Z軸회전
-				mat = Matrix.Scaling(scale2.X, scale2.Y, 1) * mat;  // 拡대縮소
+				Matrix mat = Matrix.RotationZ(angle_rad);		   // Z 축 회전
+				mat = Matrix.Scaling(scale2.X, scale2.Y, 1) * mat;  // 확대 축소
 
 				Vector3 p0 = new Vector3(_rect.offset[0].X, _rect.offset[0].Y, 0);
 				Vector3 p1 = new Vector3(_rect.offset[1].X, _rect.offset[1].Y, 0);
@@ -709,7 +709,7 @@ namespace directx {
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더용頂点
+		 쉐이더용 정점
 		---------------------------------------------------------------------------*/
 		[StructLayout(LayoutKind.Sequential)]
 		protected struct sprite_vertex {
@@ -722,14 +722,14 @@ namespace directx {
 			public int color;	   // color				4
 
 			/*-------------------------------------------------------------------------
-			 頂点정보
+			 정점 정보
 			---------------------------------------------------------------------------*/
 			public static VertexElement[] VertexElements = {
-				// Position (12バイト)
+				// Position (12바이트)
 				new VertexElement(0, 0, DeclarationType.Float3,
 										DeclarationMethod.Default,
 										DeclarationUsage.Position, 0),
-				// uv (8バイト)
+				// uv (8바이트)
 				new VertexElement(0, 12, DeclarationType.Float2,
 										DeclarationMethod.Default,
 										DeclarationUsage.TextureCoordinate, 0),
@@ -742,7 +742,7 @@ namespace directx {
 										DeclarationMethod.Default,
 										DeclarationUsage.TextureCoordinate, 2),
 
-				// Color  (4バイト)
+				// Color  (4바이트)
 				new VertexElement(0, 12+8+16+12, DeclarationType.Color,
 										DeclarationMethod.Default,
 										DeclarationUsage.Color, 0),
@@ -750,7 +750,7 @@ namespace directx {
 			};
 
 			/*-------------------------------------------------------------------------
-			 頂点1つの사이즈
+			 정점 하나의 크기
 			---------------------------------------------------------------------------*/
 			public static int SizeInBytes {
 				get { return Marshal.SizeOf(typeof(sprite_vertex)); }

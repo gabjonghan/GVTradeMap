@@ -51,13 +51,13 @@ namespace gvo_net_base
 		public gvo_tcp_server()
 			: base(gvo_tcp_client.PROTOCOL_NAME, gvo_tcp_client.PROTOCOL_VERSION)
 		{
-			// マルチ유저は未대응
+			// 멀티 유저는 미대응
 			base.max_client		= 1;
 		}
 	
 		/*-------------------------------------------------------------------------
-		 tcp_client_baseの작성
-		 継承時はこのメソッドをオーバーライドすること
+		 tcp_client_base 의 작성
+		 상속할 때는 이 메서드를 오버라이드할 것
 		---------------------------------------------------------------------------*/
 		protected override tcp_client_base CreateClient(Socket sct)
 		{

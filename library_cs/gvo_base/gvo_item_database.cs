@@ -27,7 +27,8 @@ namespace gvo_base
 	---------------------------------------------------------------------------*/
 	public class ItemDatabase : MultiDictionary<string, ItemDatabase.Data>
 	{
-		private Dictionary<string, string>		m_ajust_name_list;		// 微妙な이름の間違い조정용
+		private Dictionary<string, string>		m_ajust_name_list;		// 미묘한 이름 오류 보정용
+		private Dictionary<string, Data>		m_normalized_list;		// 표기 차이를 무시한 검색용, 겹치는 키는 null
 
 		/*-------------------------------------------------------------------------
 		 
@@ -40,7 +41,7 @@ namespace gvo_base
 			Categoly4,
 			Unknown
 		};
-		// 종류の그룹
+		// 종류 그룹
 		public enum TypeGroup{
 			All,		// 전종류
 			CityName,	// 도시명
@@ -70,22 +71,23 @@ namespace gvo_base
 		public ItemDatabase()
 			: base()
 		{
-			// 이름수정목록の작성
+			// 이름 수정 목록 작성
 			create_ajust_name_list();
 		}
 		public ItemDatabase(string fname)
 			: this()
 		{
-			// DBの구축
+			// DB 구축
 			Load(fname);
 		}
 
 		/*-------------------------------------------------------------------------
-		 DBの구축
+		 DB 구축
 		---------------------------------------------------------------------------*/
 		public void Load(string fname)
 		{
 			base.Clear();
+			m_normalized_list	= new Dictionary<string, Data>();
 			try{
 				using (StreamReader	sr	= new StreamReader(
 					fname, Encoding.GetEncoding("UTF-8"))) {
@@ -96,6 +98,7 @@ namespace gvo_base
 
 						if(_data.CreateFromString(line)){
 							base.Add(_data);
+							add_normalized(_data);
 						}else{
 							// 분석실패
 						}
@@ -110,7 +113,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 이름조정용목록を작성함
+		 이름 보정용 목록을 작성한다
 		---------------------------------------------------------------------------*/
 		private void create_ajust_name_list()
 		{
@@ -131,78 +134,108 @@ namespace gvo_base
 			m_ajust_name_list.Add("행운권(NO.13)", "행운권（NO.13）");
 			m_ajust_name_list.Add("행운권(NO.14)", "행운권（NO.14）");
 			m_ajust_name_list.Add("행운권(No.14)", "행운권（NO.14）");
-			m_ajust_name_list.Add("鉱돌精錬の書", "鉱돌製錬の書");
-			m_ajust_name_list.Add("合金製錬の書", "合金精錬の書");
-			m_ajust_name_list.Add("귀금속の精錬법", "귀금속の製錬법");
-			m_ajust_name_list.Add("アラブ神獣の선수상彫刻術", "アラブの神獣の선수상彫刻術");
-			m_ajust_name_list.Add("ボンバルタ", "ボンバルダ");
-			m_ajust_name_list.Add("牛革製ベスト", "牛皮製ベスト");
-			m_ajust_name_list.Add("花嫁衣装の縫製書", "花嫁衣裳の縫製법");
 			m_ajust_name_list.Add("소형배용고급 상납품 포장", "소형고급 상납품 포장");
 			m_ajust_name_list.Add("중형배용고급 상납품 포장", "중형고급 상납품 포장");
 			m_ajust_name_list.Add("대형배용고급 상납품 포장", "대형고급 상납품 포장");
 			m_ajust_name_list.Add("고급 상납품(소형배용)", "고급 상납품（소형배용）");
 			m_ajust_name_list.Add("고급 상납품(중형배용)", "고급 상납품（중형배용）");
 			m_ajust_name_list.Add("고급 상납품(대형배용)", "고급 상납품（대형배용）");
-			m_ajust_name_list.Add("全艤装補助돛縫製법", "全艤装補助돛組立법");
-			m_ajust_name_list.Add("ペットの育て方초급編", "ペットの育て方　초급編");
-			m_ajust_name_list.Add("セット料理集第1集", "セット料理集제 1권");
-			m_ajust_name_list.Add("フォルダンミルクレープ", "フォンダン・ミルクレープ");
-			m_ajust_name_list.Add("果実を使ったお菓子", "果物を使ったお菓子");
-			m_ajust_name_list.Add("방어職인の공예技법", "防具職인の공예技법");
-			m_ajust_name_list.Add("버섯バターソテー", "버섯のバターソテー");
-			m_ajust_name_list.Add("フルーツ盛り合わせ", "フルーツの盛り合わせ");
-			m_ajust_name_list.Add("ブッシュドノエル", "ブッシュ・ド・ノエル");
-			m_ajust_name_list.Add("実용衣装裁縫術・제 1권", "実용衣装縫製術・제 1권");
-			m_ajust_name_list.Add("ローマ神話の선수상彫刻術", "ローマ神話の彫刻術");
-			m_ajust_name_list.Add("一味違う！手作り소物", "一味違う！　手作り소物");
-			m_ajust_name_list.Add("ゲルマン諸語", "ゲルマン諸語翻訳메모");
-			m_ajust_name_list.Add("동유럽諸語", "동유럽諸語翻訳메모");
-			m_ajust_name_list.Add("ロマンス諸語", "ロマンス諸語翻訳메모");
-			m_ajust_name_list.Add("アルタイ諸語", "アルタイ諸語翻訳메모");
-			m_ajust_name_list.Add("セム・ハム諸語", "セム・ハム諸語翻訳메모");
-			m_ajust_name_list.Add("アメリカ諸語", "アメリカ諸語翻訳메모");
-			m_ajust_name_list.Add("아프리카諸語", "아프리카諸語翻訳메모");
-			m_ajust_name_list.Add("인도洋諸語", "인도洋諸語翻訳메모");
-			m_ajust_name_list.Add("데미 캘버린포 10문", "데미 캘버린10문");
-			m_ajust_name_list.Add("데미 캘버린포 12문", "데미 캘버린12문");
-			m_ajust_name_list.Add("데미 캘버린포 14문", "데미 캘버린14문");
-			m_ajust_name_list.Add("데미 캘버린포 16문", "데미 캘버린16문");
-			m_ajust_name_list.Add("漁師の心得・鮮魚保存법", "漁師の心得　鮮魚保存법");
 			m_ajust_name_list.Add("팰콘2포", "팰콘포 2문");
 			m_ajust_name_list.Add("팰콘4포", "팰콘포 4문");
 			m_ajust_name_list.Add("팰콘6포", "팰콘포 6문");
 			m_ajust_name_list.Add("팰콘8포", "팰콘포 8문");
-			m_ajust_name_list.Add("マクラジャボトル", "マラクジャボトル");
-			m_ajust_name_list.Add("マクラジャジュース", "マラクジャジュース");
-			m_ajust_name_list.Add("경량シーダ추가장갑", "경량シーダー추가장갑");
-			m_ajust_name_list.Add("소袖♂", "소袖");
-			m_ajust_name_list.Add("소袖♀", "소袖");
-			m_ajust_name_list.Add("折鳥帽子♂", "折烏帽子");
-			m_ajust_name_list.Add("かんざし♀", "かんざし");
-			m_ajust_name_list.Add("通天冠♂", "通天冠");
-			m_ajust_name_list.Add("歩揺♀","歩揺");
-			m_ajust_name_list.Add("四方평定巾♂","四方평定巾");
-			m_ajust_name_list.Add("窄袖衫襦♀","窄袖衫襦");
-			m_ajust_name_list.Add("直裾深衣♂","直裾深衣");
 		}
 	
 		/*-------------------------------------------------------------------------
 		 검색
-		 完全一致のみ
-		 아이템とのリンク용
+		 완전 일치만
+		 아이템과의 링크용
 		---------------------------------------------------------------------------*/
+		public Data Find(string name, Predicate<string> is_type)
+		{
+			// 같은 이름의 행이 여럿이면 분류가 맞는 행을 우선한다
+			Data[]	list	= base.GetValueList(name);
+			if((list != null) && (list.Length > 1)){
+				foreach(Data d in list){
+					if(is_type(d.Type))	return d;
+				}
+			}
+			return Find(name);
+		}
+
 		public Data Find(string name)
 		{
-			// 이름の間違いを수정する
+			// item_db.txt 에 그대로 있으면 보정표보다 우선한다
+			Data	d	= base.GetValue(name);
+			if(d != null)	return d;
+
+			// 이름의 오류를 수정한다
 			name	= adjust_name(name);
 
-			return base.GetValue(name);
+			d	= base.GetValue(name);
+			if(d != null)	return d;
+
+			// 띄어쓰기, 전각/반각, ♂♀ 등의 표기 차이만 있는 경우
+			return find_normalized(name);
+		}
+
+		/*-------------------------------------------------------------------------
+		 표기 차이를 무시한 비교용 이름을 얻는다
+		 cityinfos.xml 등과 item_db.txt 사이의 띄어쓰기·괄호·성별 기호 차이를 흡수한다
+		---------------------------------------------------------------------------*/
+		static private string normalize_name(string name)
+		{
+			StringBuilder	sb	= new StringBuilder(name.Length);
+			foreach(char c in name){
+				switch(c){
+				case '（':	sb.Append('(');	break;
+				case '）':	sb.Append(')');	break;
+				case '［':	sb.Append('[');	break;
+				case '］':	sb.Append(']');	break;
+				case '：':	sb.Append(':');	break;
+				case '！':	sb.Append('!');	break;
+				case '♂':
+				case '♀':
+				case '・':
+				case '·':
+					break;
+				default:
+					if(!char.IsWhiteSpace(c))	sb.Append(c);
+					break;
+				}
+			}
+			return sb.ToString();
+		}
+
+		/*-------------------------------------------------------------------------
+		 표기 차이를 무시한 검색용 목록에 추가한다
+		 다른 아이템과 같은 키가 되는 경우는 어느 쪽인지 알 수 없으므로 null 로 해 둔다
+		---------------------------------------------------------------------------*/
+		private void add_normalized(Data d)
+		{
+			string	key	= normalize_name(d.Name);
+			Data	old;
+			if(m_normalized_list.TryGetValue(key, out old)){
+				if((old != null) && (old.Name != d.Name))	m_normalized_list[key]	= null;
+				return;
+			}
+			m_normalized_list.Add(key, d);
+		}
+
+		/*-------------------------------------------------------------------------
+		 표기 차이를 무시해서 검색
+		---------------------------------------------------------------------------*/
+		private Data find_normalized(string name)
+		{
+			if(m_normalized_list == null)	return null;
+			Data	d;
+			if(m_normalized_list.TryGetValue(normalize_name(name), out d))	return d;
+			return null;
 		}
 
 		/*-------------------------------------------------------------------------
 		 검색
-		 IDで검색
+		 ID 로 검색
 		---------------------------------------------------------------------------*/
 		public Data Find(int id)
 		{
@@ -214,11 +247,11 @@ namespace gvo_base
 		}
 		
 		/*-------------------------------------------------------------------------
-		 검색아이템명の이름수정
+		 검색 아이템명의 이름 보정
 		---------------------------------------------------------------------------*/
 		private string adjust_name(string name)
 		{
-			// ★ を省く
+			// ★ 를 생략한다
 			int	start_index	= name.IndexOf("★");
 			if(start_index >= 0){
 				name	= name.Substring(0, start_index);
@@ -233,42 +266,42 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 타입명から카테고리を得る
-		 食料품 などの이름から카테고리を得る
+		 타입명으로 카테고리를 얻는다
+		 식료품 등의 이름으로 카테고리를 얻는다
 		---------------------------------------------------------------------------*/
 		static public Categoly GetCategolyFromType(string name)
 		{
 			switch(name){
-			case "食料품":
+			case "식료품":
 			case "조미료":
 			case "잡화":
-			case "医薬품":
-			case "家畜":
+			case "의약품":
+			case "가축":
 				return Categoly.Categoly1;
 			case "주류":
-			case "鉱돌":
+			case "광석":
 			case "염료":
-			case "工業품":
-			case "嗜好품":
+			case "공업품":
+			case "기호품":
 				return Categoly.Categoly2;
-			case "繊維":
+			case "섬유":
 			case "직물":
 			case "무기류":
 			case "총포류":
 			case "공예품":
 			case "미술품":
 				return Categoly.Categoly3;
-			case "향辛料":
+			case "향신료":
 			case "귀금속":
-			case "향料":
-			case "宝돌":
+			case "향료":
+			case "보석":
 				return Categoly.Categoly4;
 			}
 			return Categoly.Unknown;
 		}
 
 		/*-------------------------------------------------------------------------
-		 카테고리그리기용の색を得る
+		 카테고리 그리기용 색을 얻는다
 		---------------------------------------------------------------------------*/
 		static public Color GetCategolyColor(Categoly cate)
 		{
@@ -282,78 +315,86 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 타입명から타입の그룹を得る
-		 食料품 などの이름から 교역품 등の그룹を得る
+		 타입명으로 타입 그룹을 얻는다
+		 식료품 등의 이름으로 교역품 등의 그룹을 얻는다
 		---------------------------------------------------------------------------*/
 		static public TypeGroup GetTypeGroupFromType(string name)
 		{
 			switch(name){
-			case "食料품":
-			case "家畜":
+			case "식료품":
+			case "가축":
 			case "주류":
 			case "조미료":
-			case "嗜好품":
-			case "향辛料":
-			case "향料":
-			case "医薬품":
-			case "繊維":
+			case "기호품":
+			case "향신료":
+			case "향료":
+			case "의약품":
+			case "섬유":
 			case "염료":
 			case "직물":
 			case "귀금속":
-			case "鉱돌":
-			case "宝돌":
+			case "광석":
+			case "보석":
 			case "공예품":
 			case "미술품":
 			case "잡화":
 			case "무기류":
 			case "총포류":
-			case "工業품":
+			case "공업품":
 				return TypeGroup.Trade;
-			case "消耗품":
-			case "추천장":
-			case "레시피帳":
-			case "보물 상자":
+			case "소비품":
+			case "추천서":
+			case "레시피":
+			case "보물상자":
 			case "행운권":
 			case "소재":
-			case "애완동물 권리서":
+			case "선박 소재":
+			case "애완동물":
 			case "부동산 권리 증서":
-			case "배権利書":
+			case "선박 교환권":
 			case "가구":
 			case "물자":
 				return TypeGroup.Item;
-			case "소형돛배":
-			case "중소형돛배":
-			case "중형돛배":
-			case "중대형돛배":
-			case "대형돛배":
+			case "소형범선":
+			case "중소형범선":
+			case "중소형 범선":
+			case "중형범선":
+			case "중형 범선":
+			case "중대형범선":
+			case "중대형 범선":
+			case "대형범선":
+			case "대형 범선":
 			case "중소형갤리":
+			case "중소형 갤리":
 			case "중형갤리":
 			case "중대형갤리":
 			case "대형갤리":
+			case "대형 갤리":
 				return TypeGroup.Ship;
-			case "배首선수상":
+			case "선수상":
 			case "추가장갑":
-			case "特殊병기":
-			case "補助돛":
-			case "舷側포":
-			case "배首포":
-			case "배尾포":
+			case "특수장비":
+			case "보조돛":
+			case "선측포":
+			case "선수포":
+			case "선미포":
 			case "문장":
 				return TypeGroup.Rigging;
-			case "頭장비품":
-			case "体장비품":
-			case "足장비품":
-			case "手장비품":
-			case "武器・도구":
+			case "머리 장비품":
+			case "몸 장비품":
+			case "다리 장비품":
+			case "팔 장비품":
+			case "무기/도구":
 			case "장신구":
 				return TypeGroup.Equip;
 			case "모험스킬":
 			case "교역스킬":
 			case "전투스킬":
 			case "언어스킬":
-			case "아이템効果스킬":
+			case "아이템 효과":
 			case "부관스킬":
-			case "배스킬스킬":
+			case "옵션스킬(선박)":
+			case "전용함스킬(선박)":
 				return TypeGroup.Skill;
 			case "보고":
 				return TypeGroup.Report;
@@ -368,60 +409,67 @@ namespace gvo_base
 		{
 			switch (name)
 			{
-				case "食料품":
-				case "家畜":
+				case "식료품":
+				case "가축":
 				case "주류":
 				case "조미료":
-				case "嗜好품":
-				case "향辛料":
-				case "향料":
-				case "医薬품":
-				case "繊維":
+				case "기호품":
+				case "향신료":
+				case "향료":
+				case "의약품":
+				case "섬유":
 				case "염료":
 				case "직물":
 				case "귀금속":
-				case "鉱돌":
-				case "宝돌":
+				case "광석":
+				case "보석":
 				case "공예품":
 				case "미술품":
 				case "잡화":
 				case "무기류":
 				case "총포류":
-				case "工業품":
+				case "공업품":
 					return TypeGroup2.Trade;
-				case "消耗품":
-				case "추천장":
-				case "레시피帳":
-				case "보물 상자":
+				case "소비품":
+				case "추천서":
+				case "레시피":
+				case "보물상자":
 				case "행운권":
 				case "소재":
-				case "애완동물 권리서":
+				case "선박 소재":
+				case "애완동물":
 				case "가구":
 					return TypeGroup2.Item;
-				case "소형돛배":
-				case "중소형돛배":
-				case "중형돛배":
-				case "중대형돛배":
-				case "대형돛배":
+				case "소형범선":
+				case "중소형범선":
+				case "중소형 범선":
+				case "중형범선":
+				case "중형 범선":
+				case "중대형범선":
+				case "중대형 범선":
+				case "대형범선":
+				case "대형 범선":
 				case "중소형갤리":
+				case "중소형 갤리":
 				case "중형갤리":
 				case "중대형갤리":
 				case "대형갤리":
+				case "대형 갤리":
 					return TypeGroup2.Ship;
-				case "배首선수상":
+				case "선수상":
 				case "추가장갑":
-				case "特殊병기":
-				case "補助돛":
-				case "舷側포":
-				case "배首포":
-				case "배尾포":
+				case "특수장비":
+				case "보조돛":
+				case "선측포":
+				case "선수포":
+				case "선미포":
 				case "문장":
 					return TypeGroup2.Item;
-				case "頭장비품":
-				case "体장비품":
-				case "足장비품":
-				case "手장비품":
-				case "武器・도구":
+				case "머리 장비품":
+				case "몸 장비품":
+				case "다리 장비품":
+				case "팔 장비품":
+				case "무기/도구":
 				case "장신구":
 					return TypeGroup2.Item;
 				default:
@@ -430,7 +478,7 @@ namespace gvo_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 타입の그룹を문자열に변환する
+		 타입 그룹을 문자열로 변환한다
 		---------------------------------------------------------------------------*/
 		static public string ToString(TypeGroup tg)
 		{
@@ -442,7 +490,7 @@ namespace gvo_base
 			case TypeGroup.Item:		return "아이템";
 			case TypeGroup.Equip:		return "장비";
 			case TypeGroup.Ship:		return "배";
-			case TypeGroup.Rigging:		return "艤装";
+			case TypeGroup.Rigging:		return "의장";
 			case TypeGroup.Skill:		return "스킬";
 			case TypeGroup.Report:		return "보고";
 			case TypeGroup.Technic:		return "테크닉";
@@ -452,7 +500,7 @@ namespace gvo_base
 		}
 
 		/// <summary>
-		/// テクニック정보のコンバート
+		/// 테크닉 정보 변환
 		/// </summary>
 		private void technic_cnv()
 		{
@@ -544,7 +592,8 @@ namespace gvo_base
 				return false;
 			foreach (ShipPartsDataBase.ShipPart i in db.PartsList)
 			{
-				ItemDatabase.Data data = GetValue(i.Name);
+				// ShipParts.xml 은 띄어쓰기 없이 적힌 이름이 많으므로(평갑판형소형선체 등) 표기 차이를 무시하는 Find 로 찾는다
+				ItemDatabase.Data data = Find(i.Name);
 				if (data != null)
 					data.MergeShipPartsDatabase(i);
 			}
@@ -560,10 +609,10 @@ namespace gvo_base
 			private string					m_name;
 			private string					m_type;
 			private string					m_document;
-			private Categoly				m_categoly;				// 교역품時の카테고리
-			private TypeGroup				m_type_group;			// 종류の그룹
+			private Categoly				m_categoly;				// 교역품일 때의 카테고리
+			private TypeGroup				m_type_group;			// 종류 그룹
 			private TypeGroup2				m_type_group2;			// 所持품카테고리
-			private bool					m_is_combat_item;		// 陸戦아이템のときtreu
+			private bool					m_is_combat_item;		// 육상전 아이템일 때 true
 
 			/*-------------------------------------------------------------------------
 			 
@@ -573,7 +622,7 @@ namespace gvo_base
 			public string Name{				get{	return m_name;			}}
 			public string Type{				get{	return m_type;			}}
 			public string Document{			get{	return m_document;		}}
-			public bool IsRecipe{			get{	return (Type == "레시피帳")? true: false;	}}
+			public bool IsRecipe{			get{	return (Type == "레시피")? true: false;	}}
 			public bool IsSkill{			get{
 													if(Type == "모험스킬")	return true;
 													if(Type == "교역스킬")	return true;
@@ -598,7 +647,7 @@ namespace gvo_base
 			}
 
 			/*-------------------------------------------------------------------------
-			 ItemDb.txt から구축
+			 ItemDb.txt 로부터 구축
 			---------------------------------------------------------------------------*/
 			public bool CreateFromString(string line)
 			{
@@ -614,14 +663,14 @@ namespace gvo_base
 						m_document	+= tmp[i].Trim() + "\n";
 					}
 
-					if(m_document.IndexOf("다시사용시간：") >= 0){
-						// 다시사용시간：が含まれれば陸戦아이템とする
+					if(m_document.IndexOf("재사용시간") >= 0){
+						// 재사용시간 이 포함되면 육상전 아이템으로 본다 (item_db.txt 의 표기는 "재사용시간:225")
 						m_is_combat_item	= true;
 					}
 
-					// 교역품時の카테고리
+					// 교역품일 때의 카테고리
 					m_categoly		= ItemDatabase.GetCategolyFromType(m_type);
-					// 종류の그룹
+					// 종류 그룹
 					m_type_group	= ItemDatabase.GetTypeGroupFromType(m_type);
 					m_type_group2	= ItemDatabase.GetTypeGroupFromType2(m_type);
 				}catch{
@@ -631,7 +680,7 @@ namespace gvo_base
 			}
 
 			/*-------------------------------------------------------------------------
-			 ツールチップ용の문자열を得る
+			 툴팁용 문자열을 얻는다
 			---------------------------------------------------------------------------*/
 			public virtual string GetToolTipString()
 			{
@@ -642,29 +691,29 @@ namespace gvo_base
 			}
 
 			/*-------------------------------------------------------------------------
-			 레시피정보wikiを開く
+			 레시피 정보 사이트를 연다
 			 레시피검색
 			---------------------------------------------------------------------------*/
 			public void OpenRecipeWiki0()
 			{
-				// EUCでURLエンコード
-				string	urlenc	= Useful.UrlEncodeEUCJP(this.Name);
+				// UTF-8 로 URL 인코드
+				string	urlenc	= Useful.UrlEncodeUTF8(this.Name);
 
-				// 검색결과を開く
+				// 검색 결과를 연다
 				Process.Start(gvo_def.URL2 + urlenc);	// 레시피검색
 			}
 
 			/*-------------------------------------------------------------------------
-			 레시피정보wikiを開く
-			 작성가능かどうか검색
+			 레시피 정보 사이트를 연다
+			 작성 가능한지 검색
 			---------------------------------------------------------------------------*/
 			public void OpenRecipeWiki1()
 			{
-				// EUCでURLエンコード
-				string	urlenc	= Useful.UrlEncodeEUCJP(this.Name);
+				// UTF-8 로 URL 인코드
+				string	urlenc	= Useful.UrlEncodeUTF8(this.Name);
 
-				// 검색결과を開く
-				Process.Start(gvo_def.URL3 + urlenc);	// 레시피で작성가능か검색
+				// 검색 결과를 연다
+				Process.Start(gvo_def.URL3 + urlenc);	// 레시피로 작성 가능한지 검색
 			}
 
 			internal void MergeShipPartsDatabase(ShipPartsDataBase.ShipPart i)

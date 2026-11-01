@@ -1,9 +1,9 @@
 ﻿/*-------------------------------------------------------------------------
 
- 도시とか해역とか상륙지점の명前그리기
- 쉐이더が使えれば쉐이더を使う
- 통상の그리기は중いのでできれば쉐이더を使いたい
- 쉐이더はこの그리기용に최적화されている
+ 도시나 해역, 상륙 지점의 이름 그리기
+ 쉐이더를 쓸 수 있으면 쉐이더를 사용한다
+ 통상 그리기는 느리므로 되도록 쉐이더를 쓰고 싶다
+ 쉐이더는 이 그리기용으로 최적화되어 있다
 
 ---------------------------------------------------------------------------*/
 
@@ -62,7 +62,7 @@ namespace gvtrademap_cs {
 
 			m_device = lib.device.device;
 
-			// 쉐이더사용時
+			// 쉐이더 사용 시
 			m_is_create_buffers = false;
 			m_is_error = false;
 
@@ -122,8 +122,8 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 도시명그리기
-		 도시아이콘含む
-		 쉐이더사용時は전용の構造を구축する
+		 도시 아이콘 포함
+		 쉐이더 사용 시에는 전용 구조를 구축한다
 		---------------------------------------------------------------------------*/
 		public void DrawCityName() {
 			create_buffers();
@@ -193,7 +193,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 도시명그리기
-		 상륙지점も含む
+		 상륙 지점도 포함
 		---------------------------------------------------------------------------*/
 		private void draw_cityname_proc(Vector2 offset, LoopXImage image) {
 			if (m_lib.setting.map_draw_names == MapDrawNames.Hide) {
@@ -250,7 +250,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 아이콘그리기
-		 상륙지점も含む
+		 상륙 지점도 포함
 		---------------------------------------------------------------------------*/
 		private void draw_cityicon_proc(Vector2 offset, LoopXImage image) {
 			if (m_lib.setting.map_icon == MapIcon.Hide) {
@@ -342,7 +342,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		도시명그리기
-		상륙지점も含む
+		상륙 지점도 포함
 		쉐이더사용
 	   ---------------------------------------------------------------------------*/
 		private void draw_cityname_shader_proc(Vector2 offset, LoopXImage image) {
@@ -362,10 +362,10 @@ namespace gvtrademap_cs {
 			if (m_lib.loop_image.ImageScale < 0.8f || m_lib.setting.map_draw_names == MapDrawNames.OnlyBigCity) {
 				draw_buffer(m_city_names3_vb, m_world.Cities.Count);
 			} else if (m_lib.setting.map_icon == MapIcon.Big) {
-				// 대きい아이콘		
+				// 큰 아이콘
 				draw_buffer(m_city_names1_vb, m_world.Cities.Count);
 			} else {
-				// 소さい아이콘	
+				// 작은 아이콘
 				draw_buffer(m_city_names2_vb, m_world.Cities.Count);
 			}
 			effect.EndPass();
@@ -374,7 +374,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 아이콘그리기
-		 상륙지점も含む
+		 상륙 지점도 포함
 		 쉐이더사용
 		---------------------------------------------------------------------------*/
 		private void draw_cityicon_shader_proc(Vector2 offset, LoopXImage image) {
@@ -407,8 +407,8 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 해역명그리기
-		 풍향含む
-		 쉐이더사용時は전용の構造を구축する
+		 풍향 포함
+		 쉐이더 사용 시에는 전용 구조를 구축한다
 		---------------------------------------------------------------------------*/
 		public void DrawSeaName() {
 			create_buffers();
@@ -518,12 +518,12 @@ namespace gvtrademap_cs {
 			effect.Begin(0);
 			effect.BeginPass(0);
 
-			m_lib.device.device.VertexDeclaration = m_decl;  // 頂点の디테일
+			m_lib.device.device.VertexDeclaration = m_decl;  // 정점의 상세
 			if (m_world.Season.now_season == gvo_season.season.summer) {
-				// 夏
+				// 여름
 				draw_buffer(m_sea_icons1_vb, m_world.Seas.Count * 3);
 			} else {
-				// 冬
+				// 겨울
 				draw_buffer(m_sea_icons2_vb, m_world.Seas.Count * 3);
 			}
 
@@ -555,28 +555,28 @@ namespace gvtrademap_cs {
 				effect.SetValue("GlobalScale", gscale);
 
 				// technique
-				effect.Technique = "SpriteWithGlobalParams";        // グローバルパラメータと拡縮と회전付き
+				effect.Technique = "SpriteWithGlobalParams";        // 글로벌 파라미터 + 확대축소 + 회전 포함
 			} catch {
-				// 쉐이더ーの사용をやめる
+				// 쉐이더 사용을 중단한다
 				m_lib.device.sprites.DisposeEffect();
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 バッファを구축する
-		 구축されていればなにもしない
+		 버퍼를 구축한다
+		 구축되어 있으면 아무것도 하지 않는다
 		---------------------------------------------------------------------------*/
 		private void create_buffers() {
 			m_lib.nameTexture.init(m_world);
 
-			if (!m_lib.device.is_use_ve1_1_ps1_1) return;     // 쉐이더を使わない
-			if (m_is_create_buffers) return;        // 작성されている
+			if (!m_lib.device.is_use_ve1_1_ps1_1) return;     // 쉐이더를 쓰지 않는다
+			if (m_is_create_buffers) return;        // 작성되어 있다
 			if (m_is_error) return;  // 오류
 
 			try {
 				m_decl = new VertexDeclaration(m_lib.device.device, sprite_vertex.VertexElements);
 
-				// 도시명と상륙지점명のバッファ작성
+				// 도시명과 상륙 지점명의 버퍼 작성
 				create_city_buffer();
 				create_sea_buffer();
 
@@ -598,8 +598,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 バーテクスバッファを작성
-		 1도작성したら변경しないため, スワップバッファを持たない
+		 버텍스 버퍼를 작성
+		 한 번 작성하면 변경하지 않으므로, 스왑 버퍼를 두지 않는다
 		---------------------------------------------------------------------------*/
 		private d3d_writable_vb_with_index create_buffer(int sprite_count) {
 			return new d3d_writable_vb_with_index(m_lib.device.device,
@@ -609,7 +609,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 도시명と상륙지점명のバッファ작성 
+		 도시명과 상륙 지점명의 버퍼 작성
 		---------------------------------------------------------------------------*/
 		private void create_city_buffer() {
 			m_icons1_vb = create_buffer(m_world.Cities.Count + m_world.Shores.Count + m_world.NoSeas.Count);
@@ -692,7 +692,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 해역명と풍향のバッファ작성 
+		 해역명과 풍향의 버퍼 작성
 		---------------------------------------------------------------------------*/
 		private void create_sea_buffer() {
 			m_sea_icons1_vb = create_buffer(m_world.Seas.Count * 3);
@@ -720,24 +720,24 @@ namespace gvtrademap_cs {
 				if (i.SeaInfo != null) {
 					Point pos = new Point(i.position.X - 1, i.position.Y + 1);
 
-					// 夏
+					// 여름
 					set_vbo(ref vbo1, index, pos, new Point(-diff, diff), windRect, i.SeaInfo.SummerAngle, -1);
 					index++;
-					// 冬
+					// 겨울
 					set_vbo(ref vbo2, index, pos, new Point(-diff, diff), windRect, i.SeaInfo.WinterAngle, -1);
 					index++;
 				}
 			}
 
-			// 頂点を전送
+			// 정점을 전송
 			m_sea_icons1_vb.SetData<sprite_vertex>(vbo1);
 			m_sea_icons2_vb.SetData<sprite_vertex>(vbo2);
 			m_sea_names_vb.SetData<sprite_vertex>(vbo3);
 		}
 
 		/*-------------------------------------------------------------------------
-		 頂点情報を설정する
-		 1つの스프라이트분
+		 정점 정보를 설정한다
+		 스프라이트 하나분
 		 회전지정
 		---------------------------------------------------------------------------*/
 		private void set_vbo(ref sprite_vertex[] tbl, int index, Point position, Point offset, d3d_sprite_rects.rect _rect, float angle_rad, int color) {
@@ -770,7 +770,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 쉐이더용頂点
+		 쉐이더용 정점
 		---------------------------------------------------------------------------*/
 		[StructLayout(LayoutKind.Sequential)]
 		protected struct sprite_vertex {
@@ -783,14 +783,14 @@ namespace gvtrademap_cs {
 			public int color;     // Color				4
 
 			/*-------------------------------------------------------------------------
-			 頂点情報
+			 정점 정보
 			---------------------------------------------------------------------------*/
 			public static VertexElement[] VertexElements = {
-				// Position (12バイト)
+				// Position (12바이트)
 				new VertexElement(0, 0, DeclarationType.Float3,
 										DeclarationMethod.Default,
 										DeclarationUsage.Position, 0),
-				// uv (8バイト)
+				// uv (8바이트)
 				new VertexElement(0, 12, DeclarationType.Float2,
 										DeclarationMethod.Default,
 										DeclarationUsage.TextureCoordinate, 0),
@@ -803,7 +803,7 @@ namespace gvtrademap_cs {
 										DeclarationMethod.Default,
 										DeclarationUsage.TextureCoordinate, 2),
 
-				// Color  (4バイト)
+				// Color  (4바이트)
 				new VertexElement(0, 12+8+16+12, DeclarationType.Color,
 										DeclarationMethod.Default,
 										DeclarationUsage.Color, 0),
@@ -811,7 +811,7 @@ namespace gvtrademap_cs {
 			};
 
 			/*-------------------------------------------------------------------------
-			 頂点1つの사이즈
+			 정점 하나의 크기
 			---------------------------------------------------------------------------*/
 			public static int SizeInBytes {
 				get { return Marshal.SizeOf(typeof(sprite_vertex)); }
@@ -819,7 +819,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 DPIスケーリング배率取得
+		 DPI 스케일링 배율 취득
 		---------------------------------------------------------------------------*/
 		private float GetDpiScaleRatio() {
 			if (this.m_lib.setting.enable_dpi_scaling) {

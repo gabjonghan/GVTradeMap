@@ -1,11 +1,11 @@
 ﻿/*-------------------------------------------------------------------------
 
  위도, 경도그리기
- 게임の仕様상
+ 게임 사양상
  GAME_WIDTH		= 16384;
  GAME_HEIGHT	= 8192;
- を사용する
- 100毎に선が引かれる
+ 을 사용한다
+ 100 마다 선이 그어진다
 
 ---------------------------------------------------------------------------*/
 
@@ -32,20 +32,20 @@ namespace gvtrademap_cs
 	{
 		/*-------------------------------------------------------------------------
 		 선그리기
-		 1000단위の선となる
+		 1000 단위의 선이 된다
 		---------------------------------------------------------------------------*/
 		static public void DrawLines(gvt_lib lib)
 		{
 			lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_lines_proc), 0);
 
-			// 세로방향は1회の그리기でよい
+			// 세로 방향은 한 번의 그리기로 충분하다
 			LoopXImage	image	= lib.loop_image;
 			Vector2		size	= image.Device.client_size;
 			Vector2	offset = image.GetDrawOffset();
 
 			int index	= 0;
 			for(float y=0; y<def.GAME_HEIGHT; y+=1000, index++){
-				// 지도좌표に변환
+				// 지도 좌표로 변환
 				Vector2	pos0	= transform.game_pos2_map_pos(new Vector2(0, y), image);
 				Vector2 pos		= image.GlobalPos2LocalPos(pos0, offset);
 
@@ -65,7 +65,7 @@ namespace gvtrademap_cs
 	
 			int			index	= 0;
 			for(float x=0; x<def.GAME_WIDTH; x+=1000, index++){
-				// 지도좌표に변환
+				// 지도 좌표로 변환
 				Vector2	pos0	= transform.game_pos2_map_pos(new Vector2(x, 0), image);
 				Vector2 pos		= image.GlobalPos2LocalPos(pos0, offset);
 
@@ -78,20 +78,20 @@ namespace gvtrademap_cs
 	
 		/*-------------------------------------------------------------------------
 		 선그리기
-		 100단위の선となる
+		 100 단위의 선이 된다
 		---------------------------------------------------------------------------*/
 		static public void DrawLines100(gvt_lib lib)
 		{
 			lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_lines100_proc), 0);
 
-			// 세로방향は1회の그리기でよい
+			// 세로 방향은 한 번의 그리기로 충분하다
 			LoopXImage	image	= lib.loop_image;
 			Vector2		size	= image.Device.client_size;
 			Vector2	offset = image.GetDrawOffset();
 
 			int index	= 0;
 			for(float y=0; y<def.GAME_HEIGHT; y+=100, index++){
-				// 지도좌표に변환
+				// 지도 좌표로 변환
 				Vector2	pos0	= transform.game_pos2_map_pos(new Vector2(0, y), image);
 				Vector2 pos		= image.GlobalPos2LocalPos(pos0, offset);
 
@@ -114,7 +114,7 @@ namespace gvtrademap_cs
 	
 			int			index	= 0;
 			for(float x=0; x<def.GAME_WIDTH; x+=100, index++){
-				// 지도좌표に변환
+				// 지도 좌표로 변환
 				Vector2	pos0	= transform.game_pos2_map_pos(new Vector2(x, 0), image);
 				Vector2 pos		= image.GlobalPos2LocalPos(pos0, offset);
 
@@ -130,7 +130,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 위도, 경도그리기
-		 화면の상と우に그리기される
+		 화면의 위와 오른쪽에 그려진다
 		---------------------------------------------------------------------------*/
 		static public void DrawPoints(gvt_lib lib)
 		{
@@ -140,7 +140,7 @@ namespace gvtrademap_cs
 			lib.device.device.RenderState.ZBufferEnable		= false;
 			lib.loop_image.EnumDrawCallBack(new LoopXImage.DrawHandler(draw_points_proc), 0);
 
-			// 세로방향は1회の그리기でよい	
+			// 세로 방향은 한 번의 그리기로 충분하다
 			Vector2		size	= lib.loop_image.Device.client_size;
 			Vector2	offset = lib.loop_image.GetDrawOffset();
 			for(float y=0; y<def.GAME_HEIGHT; y+=1000){

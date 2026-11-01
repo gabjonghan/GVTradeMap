@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- TCP서버ベース
- 通信プロトコル実装용ベース
+ TCP 서버 베이스
+ 통신 프로토콜 구현용 베이스
 
 ---------------------------------------------------------------------------*/
 
@@ -25,8 +25,8 @@ namespace net_base
 	---------------------------------------------------------------------------*/
 	public class tcp_server_protocol_base : tcp_server_base
 	{
-		private	string				m_protocol_name;		// プロトコル명
-		private int					m_version;				// プロトコル버전
+		private	string				m_protocol_name;		// 프로토콜명
+		private int					m_version;				// 프로토콜 버전
 
 		private readonly object		m_sync_object	= new object();
 
@@ -52,22 +52,22 @@ namespace net_base
 		public tcp_server_protocol_base(string protocol_name, int version)
 			: base()
 		{
-			m_protocol_name		= protocol_name;		// プロトコル명
-			m_version			= version;				// プロトコル버전
+			m_protocol_name		= protocol_name;		// 프로토콜명
+			m_version			= version;				// 프로토콜 버전
 
 			base.ReceivedData	+= new ReceivedDataEventHandler(received_handler);
 		}
 
 		/*-------------------------------------------------------------------------
-		 데이터受信
+		 데이터 수신
 		---------------------------------------------------------------------------*/
 		private void received_handler(object sender, ReceivedDataEventArgs e)
 		{
 		}
 
 		/*-------------------------------------------------------------------------
-		 tcp_client_baseの작성
-		 継承時はこのメソッドをオーバーライドすること
+		 tcp_client_base 의 작성
+		 상속할 때는 이 메서드를 오버라이드할 것
 		---------------------------------------------------------------------------*/
 		protected override tcp_client_base CreateClient(Socket sct)
 		{
@@ -75,7 +75,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 全てのクライアントに送信
+		 모든 클라이언트에 송신
 		---------------------------------------------------------------------------*/
 		public void SendDataToAllClients(string command, string[] datas)
 		{

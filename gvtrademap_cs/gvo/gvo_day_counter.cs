@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
  경과일수카운터
- 完全な경과일수とはならない가능性があるが, 
- 허용범위の정확도は保てる
+ 완전한 경과 일수가 되지는 않을 수 있지만,
+ 허용 범위의 정확도는 유지된다
 
 ---------------------------------------------------------------------------*/
 
@@ -23,12 +23,12 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	public class gvo_day_counter
 	{
-		private const int					DEF_COUNTER_MAX	= 99;	// 카운터がカンストする初期値
+		private const int					DEF_COUNTER_MAX	= 99;	// 카운터가 최대치에 도달하는 초기값
 	
-		private int							m_days;					// 確定분
-		private int							m_voyage_days_start;	// チェック開始時の항해일수
-		private int							m_voyage_days;			// 현재の항해일수
-		private int							m_counter_max;			// 카운터がカンストする일수
+		private int							m_days;					// 확정분
+		private int							m_voyage_days_start;	// 확인 시작 시점의 항해 일수
+		private int							m_voyage_days;			// 현재 항해 일수
+		private int							m_counter_max;			// 카운터가 최대치에 도달하는 일수
 
 		/*-------------------------------------------------------------------------
 		 
@@ -81,18 +81,18 @@ namespace gvtrademap_cs
 		protected virtual void UpdateBase(int days)
 		{
 			if(m_voyage_days_start < 0){
-				// 최초の업데이트
+				// 최초 갱신
 				m_voyage_days_start	= days;
 				m_voyage_days		= days;
 			}else{
-				// 항해일수が前회よりも소さかったら
-				// 確定일수を업데이트する
+				// 항해 일수가 지난번보다 작으면
+				// 확정 일수를 갱신한다
 				if(days < m_voyage_days){
 					m_days				+= m_voyage_days - m_voyage_days_start;
 					m_voyage_days_start	= days;
 					m_voyage_days		= days;
 				}
-				// 今회の항해일수
+				// 이번 항해 일수
 				m_voyage_days	= days;
 			}
 		}
@@ -107,7 +107,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 리셋
-		 now_daysを基準とする
+		 now_days 를 기준으로 삼는다
 		---------------------------------------------------------------------------*/
 		public void Reset(int now_days)
 		{
@@ -117,18 +117,18 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 경과일수を得る
-		 m_counter_max일でカンストする
+		 경과 일수를 얻는다
+		 m_counter_max 일에서 최대치에 도달한다
 		---------------------------------------------------------------------------*/
 		public int GetDays()
 		{
-			// 確定분+항해일수
+			// 확정분 + 항해 일수
 			int	days	= get_true_days();
 			return (days <= m_counter_max)? days: m_counter_max;
 		}
 
 		/*-------------------------------------------------------------------------
-		 경과일수を得る
+		 경과 일수를 얻는다
 		---------------------------------------------------------------------------*/
 		protected int get_true_days()
 		{

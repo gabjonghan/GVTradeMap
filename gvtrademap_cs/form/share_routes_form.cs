@@ -77,7 +77,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 閉じられた
+		 닫혔다
 		---------------------------------------------------------------------------*/
 		private void share_routes_form_FormClosed(object sender, FormClosedEventArgs e)
 		{
@@ -92,16 +92,16 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 ヘッダを클릭
+		 헤더를 클릭
 		---------------------------------------------------------------------------*/
 		private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
 		{
-			// ソートする
+			// 정렬한다
 			m_sorter.Sort(listView1, e.Column);
 		}
 
 		/*-------------------------------------------------------------------------
-		 ダブル클릭
+		 더블 클릭
 		---------------------------------------------------------------------------*/
 		private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
 		{

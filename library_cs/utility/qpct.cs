@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- QueryPerformanceCounter()を使ったタイマ
- 処理시간を計ったりできる
+ QueryPerformanceCounter() 를 사용한 타이머
+ 처리 시간을 잴 수 있다
 
 ---------------------------------------------------------------------------*/
 
@@ -26,11 +26,11 @@ namespace Utility
 		[DllImport("kernel32.dll")]
 		extern static short QueryPerformanceFrequency(ref long x);
 
-		private long				m_last_counter;						// GetElapsedTime()용前회のカウント値
+		private long				m_last_counter;						// GetElapsedTime() 용 지난번 카운트 값
 		private long				m_section_start_counter;			// 
 
-		private long				m_qpf_ticks_per_sec;				// 1초間に増えるカウンタ
-		private float				m_inv_qpf_ticks_per_sec;			// 1초間に増えるカウンタの逆수
+		private long				m_qpf_ticks_per_sec;				// 1 초 동안 증가하는 카운터
+		private float				m_inv_qpf_ticks_per_sec;			// 1 초 동안 증가하는 카운터의 역수
 
 		/*-------------------------------------------------------------------------
 		 
@@ -47,12 +47,12 @@ namespace Utility
 			m_qpf_ticks_per_sec		= ticks_per_sec;
 			m_inv_qpf_ticks_per_sec	= (float)(1d / (double)ticks_per_sec);
 
-			// 1度目は捨てる
+			// 첫 번째는 버린다
 			GetElapsedTime();
 		}
 
 		/*-------------------------------------------------------------------------
-		 前회からの経過시간を得る
+		 지난번부터의 경과 시간을 얻는다
 		 1.f == 1초
 		---------------------------------------------------------------------------*/
 		public float GetElapsedTime()
@@ -61,13 +61,13 @@ namespace Utility
 
 			QueryPerformanceCounter(ref t);
 			float	elapsed_time	= m_inv_qpf_ticks_per_sec * (float)(t - m_last_counter);
-			m_last_counter	= t;	// 次회용に覚えておく
+			m_last_counter	= t;	// 다음번을 위해 기억해 둔다
 			return elapsed_time;
 		}
 
 		/*-------------------------------------------------------------------------
-		 前회からの経過시간を得る
-		 ミリセカンドで得る
+		 지난번부터의 경과 시간을 얻는다
+		 밀리세컨드로 얻는다
 		 1000 == 1초
 		---------------------------------------------------------------------------*/
 		public int GetElapsedTimeMilliseconds()
@@ -76,8 +76,8 @@ namespace Utility
 		}
 
 		/*-------------------------------------------------------------------------
-		 区間経過시간
-		 計測開始
+		 구간 경과 시간
+		 계측 시작
 		---------------------------------------------------------------------------*/
 		public void StartSection()
 		{
@@ -88,7 +88,7 @@ namespace Utility
 		}
 
 		/*-------------------------------------------------------------------------
-		 計測開始からの経過시간
+		 측정 시작부터의 경과 시간
 		---------------------------------------------------------------------------*/
 		public float GetSectionTime()
 		{
@@ -99,8 +99,8 @@ namespace Utility
 		}
 
 		/*-------------------------------------------------------------------------
-		 지정された시간が経過するまで待つ
-		 長시간待たせるとCPU시간を多く消費するので注意
+		 지정된 시간이 경과할 때까지 기다린다
+		 오래 기다리게 하면 CPU 시간을 많이 소비하므로 주의
 		---------------------------------------------------------------------------*/
 		public void WaitSectionTime(float section)
 		{

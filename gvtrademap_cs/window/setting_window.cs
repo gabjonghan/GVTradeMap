@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- 좌の윈도우
- 설정아이콘を그리기する
+ 왼쪽 윈도우
+ 설정 아이콘을 그린다
 
 ---------------------------------------------------------------------------*/
 
@@ -27,18 +27,18 @@ namespace gvtrademap_cs {
 
 	---------------------------------------------------------------------------*/
 	class setting_window : d3d_windows.window {
-		// 위치と사이즈(사이즈は自動で조정される)
+		// 위치와 크기(크기는 자동으로 조정된다)
 		private const int WINDOW_POS_X = 3;
 		private const int WINDOW_POS_Y = 3;
 		private const float WINDOW_POS_Z = 0.2f;
-		private const int WINDOW_SIZE_X = 250;  // 初期사이즈
-		private const int WINDOW_SIZE_Y = 200;  // 初期사이즈
+		private const int WINDOW_SIZE_X = 250;  // 초기 크기
+		private const int WINDOW_SIZE_Y = 200;  // 초기 크기
 
-		// クライアント사이즈
-		// 세로は윈도우사이즈から계산される
+		// 클라이언트 크기
+		// 세로는 윈도우 크기로부터 계산된다
 		private const int CLIENT_SIZE_X = (16 + 4) * (int)setting_icons_index.max + 6;
 
-		// 配置간격
+		// 배치 간격
 		private const int SETTING_ICONS_STEP = def.ICON_SIZE_X + 0;
 
 		/*-------------------------------------------------------------------------
@@ -48,11 +48,11 @@ namespace gvtrademap_cs {
 		private gvt_lib m_lib;					  // 
 		private GvoDatabase m_db;					   // DB
 
-		private hittest_list m_hittest_list;				// 矩形관리
+		private hittest_list m_hittest_list;				// 사각형 관리
 
 		private enum item_index {
 			setting,			// 설정
-			setting_button,	 // 설정ボタン
+			setting_button,	 // 설정 버튼
 			max
 		};
 
@@ -77,7 +77,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		public setting_window(gvt_lib lib, GvoDatabase db, gvtrademap_cs_form form)
 			: base(lib.device, new Vector2(WINDOW_POS_X, WINDOW_POS_Y), new Vector2(WINDOW_SIZE_X, WINDOW_SIZE_Y), WINDOW_POS_Z) {
-			base.title = "설정윈도우";
+			base.title = "설정 창";
 
 			m_form = form;
 			m_lib = lib;
@@ -88,7 +88,7 @@ namespace gvtrademap_cs {
 
 			// 설정
 			m_hittest_list.Add(new hittest());
-			// 설정ボタン
+			// 설정 버튼
 			m_hittest_list.Add(new hittest());
 		}
 
@@ -98,12 +98,12 @@ namespace gvtrademap_cs {
 		override protected void OnUpdateClient() {
 			base.client_size = new Vector2(CLIENT_SIZE_X, def.ICON_SIZE_Y);
 
-			// 좌下固定
+			// 좌하단 고정
 			base.pos = new Vector2(WINDOW_POS_X, screen_size.Y - base.size.Y - 4);
 
 			Point offset = transform.ToPoint(base.client_pos);
 
-			// オフセットの업데이트
+			// 오프셋 갱신
 			foreach (hittest h in m_hittest_list) {
 				h.position = offset;
 			}
@@ -114,7 +114,7 @@ namespace gvtrademap_cs {
 			ht = m_hittest_list[(int)item_index.setting];
 			ht.rect = new Rectangle(1, 0, SETTING_ICONS_STEP * (int)setting_icons_index.max, def.ICON_SIZE_Y);
 
-			// 설정ボタン
+			// 설정 버튼
 			ht = m_hittest_list[(int)item_index.setting_button];
 			ht.rect = new Rectangle((int)base.client_size.X - 48, 0, 48, def.ICON_SIZE_Y);
 		}
@@ -123,10 +123,10 @@ namespace gvtrademap_cs {
 		 그리기
 		---------------------------------------------------------------------------*/
 		override protected void OnDrawClient() {
-			// 설정목록の背景
+			// 설정 목록의 배경
 			draw_seting_back();
 
-			// 현재の마우스がある장소설정
+			// 현재 마우스가 있는 위치 설정
 			draw_current_setting_back();
 
 			base.device.sprites.BeginDrawSprites(m_lib.icons.texture);
@@ -134,7 +134,7 @@ namespace gvtrademap_cs {
 				// 설정
 				draw_setting();
 
-				// 설정ボタン
+				// 설정 버튼
 				draw_setting_button();
 
 			}
@@ -142,7 +142,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 설정목록の背景
+		 설정 목록의 배경
 		---------------------------------------------------------------------------*/
 		private void draw_seting_back() {
 			hittest ht = m_hittest_list[(int)item_index.setting];
@@ -153,7 +153,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 현재の마우스がある장소설정
+		 현재 마우스가 있는 위치 설정
 		---------------------------------------------------------------------------*/
 		private void draw_current_setting_back() {
 			Point pos = base.device.GetClientMousePosition();
@@ -170,7 +170,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 설정ボタン
+		 설정 버튼
 		---------------------------------------------------------------------------*/
 		private void draw_setting_button() {
 			hittest ht = m_hittest_list[(int)item_index.setting_button];
@@ -230,7 +230,7 @@ namespace gvtrademap_cs {
 											: icons.icon_index.setting_gray_7));
 			pos.X += SETTING_ICONS_STEP;
 
-			// 残り3つはグレー표시없음
+			// 나머지 3 개는 회색 표시 없음
 			for (int i = 0; i < 3; i++) {
 				base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(icons.icon_index.setting_10 + i));
 				pos.X += SETTING_ICONS_STEP;
@@ -249,7 +249,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 마우스ダブル클릭
+		 마우스 더블 클릭
 		---------------------------------------------------------------------------*/
 		override protected void OnMouseDClikClient(Point pos, MouseButtons button) {
 			if ((button & MouseButtons.Left) != 0) {
@@ -289,7 +289,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 実行する기능を得る
+		 실행할 기능을 얻는다
 		---------------------------------------------------------------------------*/
 		private KeyFunction get_extc_function(setting_icons_index index) {
 			switch (index) {
@@ -307,12 +307,12 @@ namespace gvtrademap_cs {
 				case setting_icons_index.show_searoutes_list: return KeyFunction.setting_window_button_11;
 			}
 
-			// 未定義の기능を返す
+			// 정의되지 않은 기능을 반환한다
 			return KeyFunction.unknown_function;
 		}
 
 		/*-------------------------------------------------------------------------
-		 설정ボタン
+		 설정 버튼
 		---------------------------------------------------------------------------*/
 		private void on_mouse_l_click_setting_button(Point pos) {
 			hittest ht = m_hittest_list[(int)item_index.setting_button];
@@ -330,8 +330,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시용の문자열を得る
-		 표시すべき문자열がない場合nullを返す
+		 툴팁 표시용 문자열을 얻는다
+		 표시할 문자열이 없는 경우에는 null 을 반환한다
 		---------------------------------------------------------------------------*/
 		override protected string OnToolTipStringClient(Point pos) {
 			switch (m_hittest_list.HitTest_Index(pos)) {
@@ -342,8 +342,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시용の문자열を得る
-		 표시すべき문자열がない場合nullを返す
+		 툴팁 표시용 문자열을 얻는다
+		 표시할 문자열이 없는 경우에는 null 을 반환한다
 		 설정아이콘
 		---------------------------------------------------------------------------*/
 		private string get_tooltip_string_setting(Point pos) {
@@ -356,18 +356,18 @@ namespace gvtrademap_cs {
 			setting_icons_index index = setting_icons_index.save_searoutes + pos.X;
 			string tip;
 			switch (index) {
-				case setting_icons_index.save_searoutes: tip = "항로기록（예측량）"; break;
-				case setting_icons_index.share_routes: tip = "공유하고 있는 선박표시（설정 필요）"; break;
-				case setting_icons_index.web_icons: tip = "@Web아이콘 표시\n우클릭으로 표시항목 설정"; break;
-				case setting_icons_index.memo_icons: tip = "메모아이콘 표시\n우클릭으로 표시항목 설정"; break;
-				case setting_icons_index.searoutes: tip = "항로선표시"; break;
-				case setting_icons_index.popup_day_interval: tip = "말풍선표시"; break;
-				case setting_icons_index.accident: tip = "재해표시\n우클릭으로 표시항목설정"; break;
-				case setting_icons_index.center_my_ship: tip = "현재위치 중심으로 표시"; break;
-				case setting_icons_index.myship_angle: tip = "나침반의 각도선, 진로예상선표시\n우클릭으로 표시항목 설정"; break;
-				case setting_icons_index.sea_area: tip = "위험해역변동시스템설정"; break;
-				case setting_icons_index.screen_shot: tip = "항로의 스크린샷보존"; break;
-				case setting_icons_index.show_searoutes_list: tip = "항로도목록\n우클릭으로 항로도 설정"; break;
+				case setting_icons_index.save_searoutes: tip = "항로 기록 (측량 필요)"; break;
+				case setting_icons_index.share_routes: tip = "공유 중인 배 표시 (설정 필요)"; break;
+				case setting_icons_index.web_icons: tip = "@Web 아이콘 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.memo_icons: tip = "메모 아이콘 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.searoutes: tip = "항로선 표시"; break;
+				case setting_icons_index.popup_day_interval: tip = "날짜 말풍선 표시"; break;
+				case setting_icons_index.accident: tip = "재해 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.center_my_ship: tip = "현재 위치를 중심으로 표시"; break;
+				case setting_icons_index.myship_angle: tip = "나침반 각도선, 진로 예상선 표시\n우클릭으로 표시 항목 설정"; break;
+				case setting_icons_index.sea_area: tip = "위험해역 변동 시스템 설정"; break;
+				case setting_icons_index.screen_shot: tip = "항로도 스크린샷 저장"; break;
+				case setting_icons_index.show_searoutes_list: tip = "항로도 목록\n우클릭으로 항로도 설정"; break;
 				default:
 					return null;
 			}
@@ -375,8 +375,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 アサインされた키の문자열を得る
-		 アサインされていなければ""を返す
+		 할당된 키의 문자열을 얻는다
+		 할당되어 있지 않으면 "" 를 반환한다
 		---------------------------------------------------------------------------*/
 		private string get_assign_shortcut_text(KeyFunction function) {
 			string shortcut = m_lib.KeyAssignManager.List.GetAssignShortcutText(function);
@@ -386,9 +386,9 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시용の문자열を得る
-		 표시すべき문자열がない場合nullを返す
-		 설정ボタン
+		 툴팁 표시용 문자열을 얻는다
+		 표시할 문자열이 없는 경우에는 null 을 반환한다
+		 설정 버튼
 		---------------------------------------------------------------------------*/
 		private string get_tooltip_string_setting_button(Point pos) {
 			hittest ht = m_hittest_list[(int)item_index.setting_button];
@@ -397,9 +397,9 @@ namespace gvtrademap_cs {
 			pos.X -= rect.X;
 
 			if (pos.X < 16) {
-				return "전체검색ダイア로그を開く" + get_assign_shortcut_text(KeyFunction.setting_window_button_12);
+				return "전체 검색 창 열기" + get_assign_shortcut_text(KeyFunction.setting_window_button_12);
 			} else {
-				return "설정ダイア로그を開く" + get_assign_shortcut_text(KeyFunction.setting_window_button_13);
+				return "설정 대화상자 열기" + get_assign_shortcut_text(KeyFunction.setting_window_button_13);
 			}
 		}
 
@@ -460,7 +460,7 @@ namespace gvtrademap_cs {
 						string info = m_lib.device.deviec_info_string;
 						using (setting_form2 dlg = new setting_form2(m_lib.setting, m_lib.KeyAssignManager.List, info, setting_form2.tab_index.sea_routes)) {
 							if (dlg.ShowDialog(base.device.form) == DialogResult.OK) {
-								// 설정항목を反映させる
+								// 설정 항목을 반영시킨다
 								m_form.UpdateSettings(dlg);
 							}
 						}
@@ -476,7 +476,7 @@ namespace gvtrademap_cs {
 			string info = m_lib.device.deviec_info_string;
 			using (setting_form2 dlg = new setting_form2(m_lib.setting, m_lib.KeyAssignManager.List, info, type)) {
 				if (dlg.ShowDialog(base.device.form) == DialogResult.OK) {
-					// 설정항목を反映させる
+					// 설정 항목을 반영시킨다
 					m_form.UpdateSettings(dlg);
 				}
 			}

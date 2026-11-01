@@ -1,12 +1,13 @@
 ﻿/*-------------------------------------------------------------------------
 
- 定수定義
+ 상수 정의
 
 ---------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------
  using
 ---------------------------------------------------------------------------*/
+using System.IO;
 
 /*-------------------------------------------------------------------------
 
@@ -16,31 +17,35 @@ namespace gvtrademap_cs {
 
 	---------------------------------------------------------------------------*/
 	public static partial class def {
-		// HPの元
-		public const string URL_HP = @"http://www.geocities.jp/cookiezephyros/";
+		// HP (한국어판 저장소)
+		// 원본 HP(http://www.geocities.jp/cookiezephyros/)는 geocities.jp 서비스 종료로 사라졌다
+		public const string URL_HP = @"https://github.com/gabjonghan/GVTradeMap";
 
 		// 업데이트확인용
+		// VERSION_URL 의 1행째와 VERSION 을 비교한다. 릴리스 시 저장소 루트의 version.dat 도 함께 갱신할 것
 		static public int VERSION = 1323004;
-		static public string VERSION_URL = URL_HP + @"download/gvtrademap_cs_version.dat";
+		static public string VERSION_URL = @"https://raw.githubusercontent.com/gabjonghan/GVTradeMap/master/version.dat";
 		static public string VERSION_FNAME = "version.txt";
-		static public string DOWNLOAD_URL = URL_HP + @"gvtrademap.html";
+		static public string DOWNLOAD_URL = URL_HP + @"/releases";
 
-		// Window title 及び버전정보
+		// Window title 및 버전 정보
 		//		public const string		WINDOW_TITLE				= "대항해시대Online 교역MAP C# ver.1.22β1";
 		public const string WINDOW_TITLE = "대항해시대Online 교역MAP C# ver.1.32.3+4";
 
-		// 해역변동수집アプリケーション
+		// 해역 변동 수집 애플리케이션
 		public const string SEAAREA_APP_FNAME = "gvoac.exe";
 
-		// パス
+		// 경로
 		public const string DB_PATH = "database\\";
 		public const string MAP_PATH = "map\\";
 		public const string SEAROUTE_PATH = "temp\\";
 		public const string MEMO_PATH = "memo\\";
 		public const string SS_PATH = "SS\\";
 
-		// 파일명(パス含む)
+		// 파일명(경로 포함)
 		public const string WEB_ICONS_FULLFNAME = DB_PATH + "webicons.txt";
+		public const string GAME_INFO_PATH = DB_PATH + "gameinfo";
+		public const string GAME_INFO_SETTING_FULLFNAME = SEAROUTE_PATH + "game_info_visible.txt";
 		public const string ITEMDB_FULLNAME = DB_PATH + "item_db.txt";
 		public const string INFO_FULLNAME = DB_PATH + "cityinfos.xml";
 		public const string ITEM_TYPE_DB = DB_PATH + "itemtype_db.xml";
@@ -63,18 +68,50 @@ namespace gvtrademap_cs {
 		  public const string		FISHING_RANKS_FULLFNAME		= INFO_PATH + "낚시R.txt";
 		  public const string		COLLECT_RANKS_FULLFNAME		= INFO_PATH + "채집R.txt";
 		  public const string		SUPPLY_RANKS_FULLFNAME		= INFO_PATH + "조달R.txt";
-		  public const string		BONUS_ITEMS_FULLFNAME		= INFO_PATH + "特産품.txt";
+		  public const string		BONUS_ITEMS_FULLFNAME		= INFO_PATH + "특산품.txt";
 		  public const string		NANBAN_TRADE_ITEMS_FULLFNAME	= INFO_LOCAL_PATH + "남만품.txt";
 		  */
 
 		// 설정파일
 		public const string INI_FNAME = "gvtrademap_cs.ini";
 
-		// 지도파일(パス含む)
+		// 지도 파일(경로 포함)
 		public const string MAP_FULLFNAME1 = MAP_PATH + "worldmap_r.png";
 		public const string MAP_FULLFNAME2 = MAP_PATH + "worldmap_c.png";
 		public const string MIX_MAP_FULLFNAME1 = MAP_PATH + "worldmap_r_mix.png";
 		public const string MIX_MAP_FULLFNAME2 = MAP_PATH + "worldmap_c_mix.png";
+
+		/*-------------------------------------------------------------------------
+		 지도 번호로 지도 파일명을 얻는다
+		 Map3 이후는 worldmap_3.png ~ worldmap_10.png
+		---------------------------------------------------------------------------*/
+		static public string GetMapFileName(MapIndex index) {
+			switch (index) {
+				case MapIndex.Map1: return MAP_FULLFNAME1;
+				case MapIndex.Map2: return MAP_FULLFNAME2;
+				default: return MAP_PATH + "worldmap_" + ((int)index + 1).ToString() + ".png";
+			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 지도 번호로 항로도 즐겨찾기 합성 후의 지도 파일명을 얻는다
+		---------------------------------------------------------------------------*/
+		static public string GetMixMapFileName(MapIndex index) {
+			switch (index) {
+				case MapIndex.Map1: return MIX_MAP_FULLFNAME1;
+				case MapIndex.Map2: return MIX_MAP_FULLFNAME2;
+				default: return MAP_PATH + "worldmap_" + ((int)index + 1).ToString() + "_mix.png";
+			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 지도 파일이 있는지 확인한다
+		 범위 밖의 번호(ini 의 값이 깨진 경우 등)는 false
+		---------------------------------------------------------------------------*/
+		static public bool IsMapExists(MapIndex index) {
+			if ((index < MapIndex.Map1) || (index >= MapIndex.Max)) return false;
+			return File.Exists(GetMapFileName(index));
+		}
 
 		public const string FAVORITEROUTE_FULLFNAME = MAP_PATH + "favoriteroute.bmp";
 		public const string MAP_MASK_FULLFNAME = MAP_PATH + "worldmap_mask.png";
@@ -84,21 +121,23 @@ namespace gvtrademap_cs {
 		public const string ICONSIMAGE_FULLNAME = MAP_PATH + "gv_pics20.dds";
 
 		// 스프라이트그리기용쉐이더
-		// 쉐이더は埋め込みリソース
+		// 쉐이더는 임베드된 리소스
 		public const string SPRITE_SHADER_RESOURCENAME = "gvtrademap_cs.fx.sprite.fxo";
 
-		// 디테일정보ページ
-		public const string URL0 = "dol.egret.jp/gtf/?page=city&id=";
-		public const string URL1 = "www2.atwiki.jp/harrington/pages/";
-		//		public const string		URL4						= @"http://showroom256.hp.infoseek.co.jp/cgi-bin/read.cgi";
-		public const string URL4 = @"http://jbbs.livedoor.jp/netgame/7161/";
-		public const string URL5 = @"wiki.livedoor.jp/kristall/d/";
-		public const string URL6 = @"https://www.microsoft.com/en-us/download/details.aspx?id=35";
+		// 상세 정보 페이지
+		// worldinfos.xml 의 url_index 는 인벤 지리 DB 의 code
+		// (원본의 dol.egret.jp·atwiki·livedoor wiki 링크는 일본어판용이라 교체)
+		public const string INVEN_AREACITY_URL = @"https://dho.inven.co.kr/dataninfo2/areacity/detail.php?code=";
+		public const string INVEN_AREACITY_LIST_URL = @"https://dho.inven.co.kr/dataninfo2/areacity/";
+		// 오류 보고처
+		public const string URL4 = URL_HP + @"/issues";
+		public const string URL6 = @"https://www.microsoft.com/ko-kr/download/details.aspx?id=35";
 		public const string JOY_URL = @"https://www.ssjoy.org/dho/";
+		public const string INVEN_URL = @"https://dho.inven.co.kr/";
 
 		public const string URL_HP_ORIGINAL = @"http://gvtrademap.daa.jp/";
 
-		// 게임내좌표の한계
+		// 게임 내 좌표의 한계
 		public const int GAME_WIDTH = 16384;
 		public const int GAME_HEIGHT = 8192;
 
@@ -109,14 +148,14 @@ namespace gvtrademap_cs {
 		public const int ICON_SIZE_X = 16;
 		public const int ICON_SIZE_Y = 16;
 
-		// メイリオフォントのデフォ금허브 소사이즈
-		// MS ゴシック UI と同じくらいの사이즈になるような値
+		// 메이리오 폰트의 기본 크기
+		// MS 고딕 UI 와 비슷한 크기가 되도록 하는 값
 		public const float MEIRYO_POINT = 8f;
 
-		// 그리기스킵の최대
+		// 그리기 스킵의 최대
 		public const int SKIP_DRAW_FRAME_MAX = 5;
 
-		// 연결先포트번호
+		// 연결 대상 포트 번호
 		public const int DEFALUT_PORT_INDEX = 16612;
 	}
 }

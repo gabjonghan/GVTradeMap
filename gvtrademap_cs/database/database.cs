@@ -26,20 +26,21 @@ namespace gvtrademap_cs {
 		/*-------------------------------------------------------------------------
 
 		---------------------------------------------------------------------------*/
-		private GvoWorldInfo m_world_info;	  // 세계の정보
+		private GvoWorldInfo m_world_info;	  // 세계 정보
 		private gvo_capture m_capture;		  // 캡처
 		private SeaRoutes m_searoute;		   // 항로도
 		private speed_calculator m_speed;		   // 속도
 		private ShareRoutes m_share_routes;	 // 항로공유
 		private WebIcons m_web_icons;	   // @web icon
 		private gvo_chat m_gvochat;		 // 로그분석
-		private interest_days m_interest_days;  // 이자からの경과일수
+		private interest_days m_interest_days;  // 이자로부터의 경과 일수
 		private gvo_build_ship_counter m_build_ship_counter;	// 조선일수관리
 		private map_mark m_map_mark;			// 메모아이콘
+		private game_info m_game_info;			// 게임 자료
 		private ItemDatabaseCustom m_item_database; // 아이템DB
 		private ShipPartsDataBase m_ship_parts_database;	// 배부품DB
 		private sea_area m_sea_area;			// 위험해역변동시스템
-		private gvo_season m_season;			// 季節チェック
+		private gvo_season m_season;			// 계절 확인
 
 		private gvt_lib m_lib;
 
@@ -56,6 +57,7 @@ namespace gvtrademap_cs {
 		public interest_days InterestDays { get { return m_interest_days; } }
 		public gvo_build_ship_counter BuildShipCounter { get { return m_build_ship_counter; } }
 		public map_mark MapMark { get { return m_map_mark; } }
+		public game_info GameInfo { get { return m_game_info; } }
 		public ItemDatabaseCustom ItemDatabase { get { return m_item_database; } }
 		public sea_area SeaArea { get { return m_sea_area; } }
 		public gvo_season GvoSeason { get { return m_season; } }
@@ -66,10 +68,10 @@ namespace gvtrademap_cs {
 		public GvoDatabase(gvt_lib lib) {
 			m_lib = lib;
 
-			// 季節チェック
+			// 계절 확인
 			m_season = new gvo_season();
 
-			// 세계の정보
+			// 세계 정보
 			m_world_info = new GvoWorldInfo(lib, m_season, def.WORLDINFOS_FULLNAME, def.MEMO_PATH);
 
 			// 아이템DB
@@ -89,12 +91,13 @@ namespace gvtrademap_cs {
 			m_web_icons = new WebIcons(lib);
 			// 메모아이콘
 			m_map_mark = new map_mark(lib, def.MEMO_ICONS_FULLFNAME);
+			m_game_info = new game_info(lib, def.GAME_INFO_PATH, def.GAME_INFO_SETTING_FULLFNAME);
 			// 항로공유
 			m_share_routes = new ShareRoutes(lib);
 			// 화면캡처
 			m_capture = new gvo_capture(lib);
 
-			// 이자からの경과일수
+			// 이자로부터의 경과 일수
 			m_interest_days = new interest_days(lib.setting);
 			// 조선일수관리
 			m_build_ship_counter = new gvo_build_ship_counter(lib.setting);
@@ -104,8 +107,8 @@ namespace gvtrademap_cs {
 
 			// 로그분석
 			m_gvochat = new gvo_chat(m_sea_area);
-			// 1도로그분석をしておく
-			// 분석내용は捨てる
+			// 로그 분석을 한 번 해 둔다
+			// 분석 내용은 버린다
 			m_gvochat.AnalyzeNewestChatLog();
 			m_gvochat.ResetAll();
 		}
@@ -124,26 +127,27 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 설정항목の書き出し
+		 설정 항목 기록
 		---------------------------------------------------------------------------*/
 		public void WriteSettings() {
-			// 항로도の書き出し
+			// 항로도 기록
 			m_searoute.Write(def.SEAROUTE_FULLFNAME);
-			// 즐겨찾기항로도の書き出し
+			// 즐겨찾기 항로도 기록
 			m_searoute.WriteFavorite(def.FAVORITE_SEAROUTE_FULLFNAME);
-			// ごみ箱항로도の書き出し
+			// 휴지통 항로도 기록
 			m_searoute.WriteTrash(def.TRASH_SEAROUTE_FULLFNAME);
 
-			// 디테일정보書き出し
+			// 상세 정보 기록
 			m_world_info.WriteDomains(def.LOCAL_NEW_DOMAINS_INDEX_FULLFNAME);
 
-			// 메모書き出し
+			// 메모 기록
 			m_world_info.WriteMemo(def.MEMO_PATH);
 
-			// 메모아이콘書き出し
+			// 메모 아이콘 기록
 			m_map_mark.Write(def.MEMO_ICONS_FULLFNAME);
+			m_game_info.WriteSetting();
 
-			// 위험해역변동시스템정보書き出し
+			// 위험해역 변동 시스템 정보 기록
 			m_sea_area.WriteSetting(def.SEAAREA_FULLFNAME);
 		}
 
@@ -166,31 +170,32 @@ namespace gvtrademap_cs {
 			m_searoute.DrawRoutesLines();
 
 			if (!m_lib.setting.is_mixed_info_names) {
-				// 해역명と풍향그리기
+				// 해역명과 풍향 그리기
 				m_world_info.DrawSeaName();
-				// 도시명と상륙지점명그리기
+				// 도시명과 상륙 지점명 그리기
 				m_world_info.DrawCityName();
 			}
 
-			// 吹き出し그리기
+			// 말풍선 그리기
 			m_searoute.DrawPopups();
 
 			// 메모아이콘
 			m_map_mark.Draw();
+			m_game_info.Draw();
 		}
 
 		/*-------------------------------------------------------------------------
-		 지도と도시명の合成용
-		 도시명合成しない場合は해역변동시스템のみ合成する
+		 지도와 도시명 합성용
+		 도시명을 합성하지 않는 경우에는 해역 변동 시스템만 합성한다
 		---------------------------------------------------------------------------*/
 		public void DrawForMargeInfoNames(Vector2 draw_offset, LoopXImage image) {
 			// 해역변동시스템
 			m_sea_area.Draw();
 
 			if (m_lib.setting.is_mixed_info_names) {
-				// 해역명と풍향그리기
+				// 해역명과 풍향 그리기
 				m_world_info.DrawSeaName();
-				// 도시명と상륙지점명그리기
+				// 도시명과 상륙 지점명 그리기
 				m_world_info.DrawCityName();
 			}
 		}
@@ -223,25 +228,25 @@ namespace gvtrademap_cs {
 
 			// 검색
 			if (m_lib.setting.find_filter2 == _find_filter2.name) {
-				// 명칭 등から검색
-				// 세계の정보から검색
+				// 명칭 등에서 검색
+				// 세계 정보에서 검색
 				if (m_lib.setting.find_filter == _find_filter.both
 					|| m_lib.setting.find_filter == _find_filter.world_info) {
 					World.FindAll(find_string, list, handler);
 				}
-				// 아이템DBから검색
+				// 아이템 DB 에서 검색
 				if (m_lib.setting.find_filter == _find_filter.both
 					|| m_lib.setting.find_filter == _find_filter.item_database) {
 					m_item_database.FindAll(find_string, list, handler);
 				}
 			} else {
 				// 종류별로검색
-				// 세계の정보から검색
+				// 세계 정보에서 검색
 				if (m_lib.setting.find_filter == _find_filter.both
 					|| m_lib.setting.find_filter == _find_filter.world_info) {
 					World.FindAll_FromType(find_string, list, handler);
 				}
-				// 아이템DBから검색
+				// 아이템 DB 에서 검색
 				if (m_lib.setting.find_filter == _find_filter.both
 					|| m_lib.setting.find_filter == _find_filter.item_database) {
 					m_item_database.FindAll_FromType(find_string, list, handler);
@@ -251,11 +256,11 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 문화권목록を得る
+		 문화권 목록을 얻는다
 		---------------------------------------------------------------------------*/
 		public List<Find> GetCulturalSphereList() {
 			// 문화권검색
-			// 必ず特定の목록が得られる
+			// 반드시 특정 목록을 얻을 수 있다
 			return new List<Find>(World.CulturalSphereList());
 		}
 
@@ -265,24 +270,24 @@ namespace gvtrademap_cs {
 		public class Find {
 			public enum FindType {
 				Data,			   // 아이템
-				DataPrice,		  // 아이템の가격내
+				DataPrice,		  // 아이템 가격 내
 				Database,		   // 아이템DB
 				InfoName,		   // 도시명
 				Lang,			   // 사용언어
 				CulturalSphere,	 // 문화권
 			};
 
-			private FindType m_type;				// 見つかった종류
+			private FindType m_type;				// 발견된 종류
 
 			private GvoWorldInfo.Info.Group.Data m_data;				// 아이템
 			private ItemDatabase.Data m_database;		   // 아이템DB
 			private string m_info_name;	 // 도시명
-											// 장소용に Type が database 以외は내용が入る
+											// 장소용으로 Type 이 database 이외이면 내용이 들어간다
 			private string m_lang;			  // 사용언어
-			private GvoWorldInfo.CulturalSphere m_cultural_sphere;  // 문화권검색時
+			private GvoWorldInfo.CulturalSphere m_cultural_sphere;  // 문화권 검색 시
 			private string m_cultural_sphere_tool_tip;
 
-			// str1 に str2 が含まれるかどうかを返す
+			// str1 에 str2 가 포함되는지 여부를 반환한다
 			public delegate bool FindHandler(string str1, string str2);
 
 			/*-------------------------------------------------------------------------
@@ -295,7 +300,7 @@ namespace gvtrademap_cs {
 			public string Lang { get { return m_lang; } }
 			public GvoWorldInfo.CulturalSphere CulturalSphere { get { return m_cultural_sphere; } }
 
-			// 목록への표시용
+			// 목록 표시용
 			public string NameString {
 				get {
 					switch (Type) {
@@ -424,7 +429,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 一致判定
+			 일치 판정
 			 부분일치
 			---------------------------------------------------------------------------*/
 			static public bool FindHander1(string str1, string str2) {
@@ -435,7 +440,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 一致判定
+			 일치 판정
 			 완전일치
 			---------------------------------------------------------------------------*/
 			static public bool FindHander2(string str1, string str2) {
@@ -443,7 +448,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 一致判定
+			 일치 판정
 			 앞부분일치
 			---------------------------------------------------------------------------*/
 			static public bool FindHander3(string str1, string str2) {
@@ -451,7 +456,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 一致判定
+			 일치 판정
 			 뒷부분일치
 			---------------------------------------------------------------------------*/
 			static public bool FindHander4(string str1, string str2) {

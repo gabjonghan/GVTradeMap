@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- 해역변동시스템のエリア표시
- マスクからエリアを작성함기능付き
+ 해역 변동 시스템의 영역 표시
+ 마스크에서 영역을 작성하는 기능 포함
 
 ---------------------------------------------------------------------------*/
 
@@ -30,11 +30,11 @@ namespace gvtrademap_cs {
 	---------------------------------------------------------------------------*/
 	public class sea_area : IDisposable {
 		/*-------------------------------------------------------------------------
-		 해역군1つ
+		 해역군 하나
 		---------------------------------------------------------------------------*/
 		public class sea_area_once : IDisposable {
 			/*-------------------------------------------------------------------------
-			 해역1つ
+			 해역 하나
 			---------------------------------------------------------------------------*/
 			class data : TextureUnit {
 				private string m_name;
@@ -42,7 +42,7 @@ namespace gvtrademap_cs {
 				private Vector2 m_size;
 				private bool m_is_create_from_mask;
 
-				// 矩形判定용
+				// 사각형 판정용
 				private hittest m_hittest;
 
 				/*-------------------------------------------------------------------------
@@ -66,10 +66,10 @@ namespace gvtrademap_cs {
 				}
 
 				/*-------------------------------------------------------------------------
-				 マスクから작성
+				 마스크에서 작성
 				---------------------------------------------------------------------------*/
 				public void CreateFromMask(d3d_device device, ref byte[] image, Size size, int stride) {
-					// マスクから作る必要のない해역は矩形でよい
+					// 마스크에서 만들 필요가 없는 해역은 사각형으로 충분하다
 					if (!m_is_create_from_mask) return;
 
 					Rectangle rect = new Rectangle((int)m_pos.X, (int)m_pos.Y, (int)m_size.X & ~1, (int)m_size.Y & ~1);
@@ -81,11 +81,11 @@ namespace gvtrademap_cs {
 				---------------------------------------------------------------------------*/
 				public void Draw(Vector2 offset, LoopXImage image, int color) {
 					if (IsCreate) {
-						// マスクから作った텍스쳐あり
+						// 마스크에서 만든 텍스쳐 있음
 						Draw(new Vector3(offset.X, offset.Y, 0.79f), image.ImageScale, color);
 					} else {
-						// 単純な矩形
-						// マスクを作らない분텍스쳐容량を削る
+						// 단순한 사각형
+						// 마스크를 만들지 않는 만큼 텍스쳐 용량을 줄인다
 						Vector2 pos0 = m_pos;
 						Vector2 pos = image.GlobalPos2LocalPos(pos0, offset);
 						Vector2 size = m_size;
@@ -105,7 +105,7 @@ namespace gvtrademap_cs {
 				}
 
 				/*-------------------------------------------------------------------------
-				 ヒットテスト
+				 히트 테스트
 				---------------------------------------------------------------------------*/
 				public bool HitTest(Point pos) {
 					return m_hittest.HitTest(pos);
@@ -164,7 +164,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 マスクから작성
+			 마스크에서 작성
 			---------------------------------------------------------------------------*/
 			public void CreateFromMask(d3d_device device, ref byte[] image, Size size, int stride) {
 				foreach (data d in m_list) {
@@ -173,7 +173,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 ツールチップ용の문자열を得る
+			 툴팁용 문자열을 얻는다
 			---------------------------------------------------------------------------*/
 			public string GetToolTipString() {
 				string str = "";
@@ -193,7 +193,7 @@ namespace gvtrademap_cs {
 				if (m_type == sea_type.normal) return;	  // 통상상태
 
 				int color;
-				// 지도の종류によって색を若干変える
+				// 지도 종류에 따라 색을 약간 바꾼다
 				if (m_type == sea_type.safty) {
 					// 안전
 					if (type == color_type.type1) color = Color.FromArgb(alpha, 0, 128, 220).ToArgb();
@@ -209,8 +209,8 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 ヒットテスト
-			 지도좌표で渡すこと
+			 히트 테스트
+			 지도 좌표로 넘길 것
 			---------------------------------------------------------------------------*/
 			public bool HitTest(Point pos) {
 				foreach (data d in m_list) {
@@ -220,7 +220,7 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 sea_typeを문자열で得る
+			 sea_type 을 문자열로 얻는다
 			---------------------------------------------------------------------------*/
 			public static string ToString(sea_type t) {
 				switch (t) {
@@ -268,7 +268,7 @@ namespace gvtrademap_cs {
 		private int m_progress_max;
 		private int m_progress_current;
 		private string m_progress_info_str;
-		private bool m_is_loaded_mask;	  // マスクを읽기済のときtrue
+		private bool m_is_loaded_mask;	  // 마스크를 읽어들였을 때 true
 
 		/*-------------------------------------------------------------------------
 		 
@@ -431,6 +431,13 @@ namespace gvtrademap_cs {
 			once.Add("노르웨이 해저분지2", new Vector2(0, 295), new Vector2(74, 155), false);
 			m_groups.Add(once);
 
+			// 그린란드
+			// 마스크에는 칠해져 있었지만 해역 정의가 빠져 있던 x=4043~4343 구간
+			once = new sea_area_once("그린란드");
+			once.Add("북그린란드섬 앞바다", new Vector2(4043, 0), new Vector2(301, 294), true);
+			once.Add("남그린란드섬 앞바다", new Vector2(4043, 295), new Vector2(301, 155), true);
+			m_groups.Add(once);
+
 			// 유럽 극북
 			once = new sea_area_once("유럽 극북");
 			once.Add("서 바렌츠해", new Vector2(1, 0), new Vector2(447, 294), true);
@@ -531,7 +538,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 書き出し
+		 기록
 		---------------------------------------------------------------------------*/
 		public void WriteSetting(string fname) {
 			try {
@@ -546,12 +553,12 @@ namespace gvtrademap_cs {
 					}
 				}
 			} catch {
-				// 書き出し실패
+				// 기록 실패
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 マスク읽기용정보の初期化
+		 마스크 읽기용 정보 초기화
 		---------------------------------------------------------------------------*/
 		public void InitializeFromMaskInfo() {
 			m_progress_max = 0;
@@ -560,19 +567,19 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 マスクから작성함
-		 マスクが必要ない해역はなにもしない
+		 마스크에서 작성한다
+		 마스크가 필요 없는 해역은 아무것도 하지 않는다
 		---------------------------------------------------------------------------*/
 		public bool CreateFromMask(string fname) {
 			try {
 				InitializeFromMaskInfo();
 
-				// イメージの읽기
+				// 이미지 읽기
 				Bitmap bitmap = new Bitmap(fname);
 				Size size = new Size(bitmap.Width, bitmap.Height);
 
-				// ロックしてイメージ取り出し
-				// R5G6B5に변환しておく
+				// 잠그고 이미지를 꺼낸다
+				// R5G6B5 로 변환해 둔다
 				BitmapData bmpdata = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
 													ImageLockMode.ReadOnly,
 													PixelFormat.Format16bppRgb565);
@@ -584,7 +591,7 @@ namespace gvtrademap_cs {
 				Marshal.Copy(ptr, image, 0, length);
 				bitmap.UnlockBits(bmpdata);
 
-				// オリジナルは解放しておく
+				// 원본은 해제해 둔다
 				bitmap.Dispose();
 				bitmap = null;
 
@@ -599,11 +606,11 @@ namespace gvtrademap_cs {
 				m_progress_info_str = "완료";
 
 				image = null;
-				m_is_loaded_mask = true;		// マスクを읽기済
+				m_is_loaded_mask = true;		// 마스크 읽기 완료
 
 				System.GC.Collect();
 			} catch {
-				// 何かを실패
+				// 무언가 실패
 				return false;
 			}
 			return true;
@@ -621,8 +628,8 @@ namespace gvtrademap_cs {
 			m_angle2 += ANGLE_STEP2;
 			if (m_angle2 >= 360) m_angle2 -= 360;
 
-			// アニメーションやめ
-			// 可変フレームレートになったため
+			// 애니메이션 중단
+			// 가변 프레임 레이트가 되었기 때문
 			m_angle = 30;
 			m_angle2 = 30;
 		}
@@ -648,7 +655,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 상태を설정する
+		 상태를 설정한다
 		---------------------------------------------------------------------------*/
 		public bool SetType(string name, sea_area.sea_area_once.sea_type type) {
 			sea_area.sea_area_once d = find(name);
@@ -658,7 +665,7 @@ namespace gvtrademap_cs {
 			if ((int)type < 0) type = sea_area_once.sea_type.normal;
 			if ((int)type > (int)sea_area_once.sea_type.lawless) type = sea_area_once.sea_type.normal;
 
-			// 以前と違う場合지도の合成をリクエストする
+			// 이전과 다른 경우 지도 합성을 리퀘스트한다
 			if (d.type != type) {
 				d.type = type;
 				m_lib.setting.req_update_map.Request();
@@ -668,7 +675,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 리셋
-		 전체해역군を통상상태にする
+		 전체 해역군을 통상 상태로 만든다
 		---------------------------------------------------------------------------*/
 		public void ResetSeaType() {
 			foreach (sea_area.sea_area_once d in m_groups) {
@@ -677,16 +684,16 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 지도좌표から해역군명を得る
-		 得られた이름は SetType() に사용できる
-		 해역군명が得られない場合はnullを返す
+		 지도 좌표에서 해역군명을 얻는다
+		 얻은 이름은 SetType() 에 사용할 수 있다
+		 해역군명을 얻지 못한 경우에는 null 을 반환한다
 		---------------------------------------------------------------------------*/
 		public string Find(Vector2 pos) {
 			return Find(transform.ToPoint(pos));
 		}
 		public string Find(Point pos) {
 			foreach (sea_area.sea_area_once d in m_groups) {
-				if (d.HitTest(pos)) return d.name;	  // 見つかった해역군명を返す
+				if (d.HitTest(pos)) return d.name;	  // 발견된 해역군명을 반환한다
 			}
 			return null;
 		}
@@ -699,12 +706,12 @@ namespace gvtrademap_cs {
 			foreach (sea_area.sea_area_once d in m_groups) {
 				if (d.name == name) return d;
 			}
-			// 지정된이름の해역군が存在しない
+			// 지정된 이름의 해역군이 존재하지 않는다
 			return null;
 		}
 
 		/*-------------------------------------------------------------------------
-		 드래그&ドロップからの분석
+		 드래그 앤 드롭에서의 분석
 		---------------------------------------------------------------------------*/
 		public static List<sea_area_once_from_dd> AnalizeFromDD(string str) {
 			List<sea_area_once_from_dd> list = new List<sea_area_once_from_dd>();
@@ -719,14 +726,14 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 드래그&ドロップからの분석を反映
-		 목록전부を反映させる
+		 드래그 앤 드롭에서의 분석을 반영
+		 목록 전부를 반영시킨다
 		---------------------------------------------------------------------------*/
 		public void UpdateFromDD(List<sea_area_once_from_dd> list, bool is_clear) {
 			if (list == null) return;
-			if (is_clear) ResetSeaType();		   // 전부を위험해역にする
+			if (is_clear) ResetSeaType();		   // 전부를 위험해역으로 만든다
 
-			// 逆順で反映させる
+			// 역순으로 반영시킨다
 			for (int i = list.Count - 1; i >= 0; i--) {
 				SetType(list[i].name, list[i]._sea_type);
 			}
@@ -734,13 +741,13 @@ namespace gvtrademap_cs {
 	}
 
 	/*-------------------------------------------------------------------------
-	 해역군1つ
-	 드래그&ドロップからの분석내용
+	 해역군 하나
+	 드래그 앤 드롭에서의 분석 내용
 	---------------------------------------------------------------------------*/
 	public class sea_area_once_from_dd {
 		private string m_name;		  // 해역군명
 		private string m_server;		// 서버
-		private DateTime m_date;			// 期限
+		private DateTime m_date;			// 기한
 		private sea_area.sea_area_once.sea_type m_sea_type;	 // 현황
 
 		/*-------------------------------------------------------------------------
@@ -759,21 +766,21 @@ namespace gvtrademap_cs {
 		public sea_area_once_from_dd() {
 			m_name = "";						// 해역군명
 			m_server = "";					  // 서버
-			m_date = new DateTime();			// 期限
+			m_date = new DateTime();			// 기한
 			m_sea_type = sea_area.sea_area_once.sea_type.normal;		// 현황
 		}
 
 		/*-------------------------------------------------------------------------
 		 분석
 		 1데이터분
-		 フォーマット
-		   서버,해역명,상태,종료일時,補足
-		 補足はあってもなくてもよい
+		 포맷
+		   서버,해역명,상태,종료일시,보충
+		 보충은 있어도 없어도 된다
 		---------------------------------------------------------------------------*/
 		public bool Analize(string line) {
 			try {
 				string[] split = line.Split(new char[] { ',' });
-				if (split.Length < 4) return false;	 // 항목が少なすぎる
+				if (split.Length < 4) return false;	 // 항목이 너무 적다
 
 				m_server = split[0];
 				m_name = split[1];
