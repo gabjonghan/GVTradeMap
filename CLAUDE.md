@@ -17,7 +17,7 @@ Cookie Zephyros의 일본어 원본 `gvtrademap_cs`(대항해시대Online 교역
 msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any CPU"
 ```
 
-현재 개발 머신 상태(확인함): Visual Studio·Windows SDK가 설치돼 있지 않아 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe`로 빌드하면 `utility.csproj`에서 **MSB3091 (resgen.exe 없음)**으로 실패한다. 빌드하려면 VS 또는 Windows SDK 7.0A(NetFx35 Tools)가 필요하다. 빌드 불가 상태에서 "빌드해서 확인했다"고 보고하지 말 것.
+현재 개발 머신 상태(확인함): Visual Studio·Windows SDK가 설치돼 있지 않아 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe`로 빌드하면 `utility.csproj`에서 **MSB3091 (resgen.exe 없음)**으로 실패한다. 빌드하려면 VS 또는 Windows SDK 7.0A(NetFx35 Tools)가 필요하다. 대신 `python tools/build_run.py <출력 폴더>` 로 resx 까지 묶어 **실제로 실행되는 앱**을 만들 수 있다(dotnet SDK 의 Roslyn + CLR 2.0, ILMerge 없음). UI·데이터를 고쳤으면 이 앱을 띄워 확인할 것. 파서만 따로 돌린 결과나 컴파일 통과를 "앱에서 된다"로 보고하지 말 것.
 
 대신 **컴파일 검사**는 가능하다: dotnet SDK 의 Roslyn(`C:\Program Files\dotnet\sdk\<ver>\Roslyn\bincore\csc.dll`)으로 각 csproj 의 `Compile` 목록을 의존 순서(utility → PanelManager → net → gvo_base → directx → gvo_net_base → 앱)대로 `-nostdlib+ -langversion:6 -platform:x86 -define:DEBUG;TRACE -unsafe+`, 참조는 `Framework\v2.0.50727\*.dll` 과 MDX 1.1 DLL(Direct3DX 만 1.0.2911.0, 나머지 1.0.2902.0)로 넘기면 된다. resx 는 처리되지 않으므로 "컴파일 확인"이지 "빌드 확인"이 아니다. 만든 `gvo_base.dll` 등은 CLR 2.0(`Framework\v2.0.50727`)이 있어 작은 콘솔 프로그램으로 DB 로딩·매칭을 실제 실행해 볼 수 있다. 소스의 C# 버전은 6(`using static` 등 사용)이다.
 
@@ -26,6 +26,7 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 - 셰이더는 자동 빌드되지 않는다. `library_cs/directx/fx/sprite.fx`를 고치면 같은 폴더의 `fxc_cnv.bat`(fxc `/Tfx_2_0`)를 직접 돌려 `sprite.fxo`를 갱신해야 한다. `.fxo`는 directx 어셈블리에 `directx.fx.sprite.fxo`로 임베드된다.
 - Release로 빌드할 때는 `bin\Debug` 안의 데이터 폴더들을 `bin\Release`로 복사해야 한다(원본 `gvtrademap_cs/README.txt`).
 - 테스트 프로젝트·테스트 프레임워크는 없다. 검증은 실제 실행으로만 가능하다.
+- 실행 확인 시 주의: 입력은 자체 루프로 처리되어 합성 클릭(`orca computer click`)은 메뉴를 띄우지 못한다. 실제 입력(`mouse_event`)을 쓴다. 지도 메뉴는 기본 설정에서 **Ctrl+우클릭**이다(`compatible_windows_rclick`). 게임 화면 캡처와 DPI 조합은 게임 없이는 확인할 수 없다.
 
 ## 아키텍처
 
@@ -73,6 +74,7 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 - `worldinfos.xml` 의 `url_index` 는 인벤 지리 DB 의 code 다(원본의 일본 사이트 번호에서 교체). 인벤에 없는 장소는 `-1`.
 - 장소명은 한국 서버 표기를 따른다: 인벤 지리 DB 를 먼저 보고, 없으면 KR v2.0.4 표기를 쓴다. `worldinfos.xml` 과 `cityinfos.xml` 의 이름은 정확히 같아야 하고(다르면 품목이 조용히 버려짐), 같은 이름이 두 번 있으면 안 된다.
 - `gvtrademap_cs/データフォーマット.txt`(Shift-JIS) — 구버전 텍스트 포맷 문서지만 **필드 의미(주점 인덱스 비트, 도시 종류, 동맹 종류, 국가 번호)는 현행 XML 속성에 그대로 대응**하므로 데이터 편집 시 참고 문서다.
+- `cityinfos.xml` 의 `[조선공]`, `[부관]`, `[주점 종업원]` 은 인벤 도시 페이지(`areacity/detail.php`, `areacity_detail_adjutant.php`)와 KR v2.0.4 를 출처로 한다. 사람 항목은 `option="~"`(price 에 위치·직업·스킬), `option="^"`(주점 종업원)이며 아이템 DB 에 없다.
 - `database/gameinfo/*.txt` — 게임 자료 창의 분류. 파일을 추가하면 분류가 늘고 코드 수정은 필요 없다(`이름=x,y` 는 지도 표시 좌표, `// 제목` 은 이후 좌표의 구역명, 나머지는 설명문). UTF-8 BOM.
 - 런타임 생성 폴더: `temp\`(항로도·해역), `memo\`, `SS\`, `map\`. 설정은 `gvtrademap_cs.ini`에 `IIniSaveLoad.IniLoad/IniSave` 구현(`GlobalSettings`, `KeyAssignManager`)으로 저장된다.
 
