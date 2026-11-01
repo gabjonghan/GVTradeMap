@@ -293,6 +293,10 @@ namespace gvtrademap_cs {
 			
 			wind_arrow,			// 풍향
 
+			// 주점 종업원 탭
+			tab_staff,
+			spot_tab_staff,
+
 			max
 		};
 
@@ -593,6 +597,10 @@ namespace gvtrademap_cs {
 			AddRect(new Vector2(-2, -2), new Rectangle(195, 248, 6, 6));  // 24, 연두색 원
 
 			AddRect(new Vector2(-4, -8), new Rectangle(210, 223, 10, 15)); // WindArrowIcon
+
+			// 주점 종업원 탭
+			AddRect(new Vector2(0, 0), new Rectangle(144, 128, 16, 16));
+			AddRect(new Vector2(-8, -8), new Rectangle(144, 128, 16, 16));
 		}
 
 		/*-------------------------------------------------------------------------

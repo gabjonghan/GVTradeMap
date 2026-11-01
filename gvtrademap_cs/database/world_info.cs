@@ -734,8 +734,8 @@ namespace gvtrademap_cs {
 		public class Info : hittest, IDictionaryNode<string> {
 			private string[] m_group_name_tbl = new string[]{
 												"[교역]", "[도구]", "[공방]", "[인물]",
-												"[배]", "[주점 종업원]", "[대포]", "[추가장갑]",
-												"[돛]", "[선수상]", "[행상인]",
+												"[배]", "[조선공]", "[대포]", "[추가장갑]",
+												"[돛]", "[선수상]", "[행상인]", "[주점 종업원]",
 												"",
 											};
 
@@ -1068,12 +1068,13 @@ namespace gvtrademap_cs {
 					case Info.GroupIndex._2: return "대장장이";
 					case Info.GroupIndex._3: return "인물";
 					case Info.GroupIndex._4: return "조선소주인";
-					case Info.GroupIndex._4_1: return "주점 종업원";
+					case Info.GroupIndex._4_1: return "조선공";
 					case Info.GroupIndex._5: return "무기장인";
 					case Info.GroupIndex._6: return "제재소장인";
 					case Info.GroupIndex._7: return "돛제작자";
 					case Info.GroupIndex._8: return "조각가";
 					case Info.GroupIndex._9: return "행상인";
+					case Info.GroupIndex._10: return "주점 종업원";
 					case Info.GroupIndex.max: return "메모";
 				}
 				return "기타";
@@ -1299,12 +1300,13 @@ namespace gvtrademap_cs {
 				_2,  // 공방
 				_3,  // 인물
 				_4,  // 조선소주인
-				_4_1,   // 주점 종업원
+				_4_1,   // 조선공
 				_5,  // 대포
 				_6,  // 추가장갑
 				_7,  // 돛
 				_8,  // 선수상
 				_9,  // 행상인
+				_10,  // 주점 종업원
 				max
 			};
 

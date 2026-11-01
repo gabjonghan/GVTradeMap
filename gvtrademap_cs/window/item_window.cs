@@ -36,7 +36,7 @@ namespace gvtrademap_cs {
 		private const int WINDOW_SIZE_Y = 200;  // 초기 크기
 
 		// 배치 간격
-		private const int TABS_STEP_X = def.ICON_SIZE_X + 4;
+		private const int TABS_STEP_X = def.ICON_SIZE_X + 3;
 		private const int ICONS_STEP_X = def.ICON_SIZE_X + 4;
 		// 기본적인 세로 방향 간격
 		private const int STEP_Y0 = def.ICON_SIZE_Y + 2;	// 상부의 아이콘용
@@ -51,6 +51,10 @@ namespace gvtrademap_cs {
 		private gvtrademap_cs_form m_form;					  // 우클릭 메뉴 전용
 
 		private GvoWorldInfo.Info m_info;					   // 그리기대상
+		private const int TAB_STAFF = 11;		// 주점 종업원 탭
+		private const int TAB_MEMO = 12;		// 메모 탭
+		private const int TAB_MAX = 13;
+
 		private int m_tab_index;				// 현재 탭 위치
 
 		private hittest_list m_hittest_list;				// 사각형 관리
@@ -343,7 +347,7 @@ namespace gvtrademap_cs {
 
 			// 탭
 			ht = m_hittest_list[(int)item_index.tabs];
-			ht.rect = new Rectangle(2, pos_y, TABS_STEP_X * 12, def.ICON_SIZE_Y);
+			ht.rect = new Rectangle(2, pos_y, TABS_STEP_X * TAB_MAX, def.ICON_SIZE_Y);
 			pos_y += STEP_Y;
 
 			// 세로 크기를 갱신한다
@@ -584,7 +588,7 @@ namespace gvtrademap_cs {
 		}
 		private int get_item_list_count(int index) {
 			if (info == null) return 0;
-			if (index == 11) return info.GetMemoLines();		// 메모
+			if (index == TAB_MEMO) return info.GetMemoLines();		// 메모
 			return info.GetCount(GvoWorldInfo.Info.GroupIndex._0 + index);
 		}
 
@@ -655,12 +659,17 @@ namespace gvtrademap_cs {
 
 			Vector3 pos = new Vector3(rect.X, rect.Y, base.z);
 
-			for (int i = 0; i < 12; i++) {
-				icons.icon_index index = icons.icon_index.tab_gray_0;
-				if (info != null) {
-					if (get_item_list_count(i) > 0) index = icons.icon_index.tab_0;
+			for (int i = 0; i < TAB_MAX; i++) {
+				bool enable = (info != null) && (get_item_list_count(i) > 0);
+				if (i == TAB_STAFF) {
+					// 회색 아이콘이 따로 없으므로 어둡게 그린다
+					base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(icons.icon_index.tab_staff), enable ? -1 : Color.Gray.ToArgb());
+				} else {
+					// 메모는 아이콘의 원래 칸을 쓴다
+					int icon = (i == TAB_MEMO) ? 11 : i;
+					icons.icon_index index = enable ? icons.icon_index.tab_0 : icons.icon_index.tab_gray_0;
+					base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(index + icon));
 				}
-				base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(index + i));
 				pos.X += TABS_STEP_X;
 			}
 		}
@@ -703,8 +712,8 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private void ajust_tab_index(int index) {
 			// 루프시킨다
-			if (index < 0) index = 11;
-			if (index >= 12) index = 0;
+			if (index < 0) index = TAB_MAX - 1;
+			if (index >= TAB_MAX) index = 0;
 
 			m_tab_index = index;
 
@@ -1038,7 +1047,7 @@ namespace gvtrademap_cs {
 			pos.X -= rect.X;
 			pos.X /= TABS_STEP_X;
 
-			if (0 < pos.X && pos.X < 12) {
+			if (0 <= pos.X && pos.X < TAB_MAX) {
 				return GvoWorldInfo.Info.GetGroupName((GvoWorldInfo.Info.GroupIndex)pos.X) + "\n우클릭으로 장소 표시";
 			}
 			return null;
@@ -1048,7 +1057,7 @@ namespace gvtrademap_cs {
 		 메모 윈도우 상태 갱신
 		---------------------------------------------------------------------------*/
 		private void update_memo_window() {
-			if (m_tab_index == 11) {
+			if (m_tab_index == TAB_MEMO) {
 				EnableMemoWindow(true);
 				EnableItemWindow(false);
 			} else {
