@@ -36,7 +36,7 @@ namespace gvtrademap_cs {
 		private const int WINDOW_SIZE_Y = 200;  // 초기 크기
 
 		// 배치 간격
-		private const int TABS_STEP_X = def.ICON_SIZE_X + 3;
+		private const int TABS_STEP_X = def.ICON_SIZE_X + 1;
 		private const int ICONS_STEP_X = def.ICON_SIZE_X + 4;
 		// 기본적인 세로 방향 간격
 		private const int STEP_Y0 = def.ICON_SIZE_Y + 2;	// 상부의 아이콘용
@@ -52,8 +52,9 @@ namespace gvtrademap_cs {
 
 		private GvoWorldInfo.Info m_info;					   // 그리기대상
 		private const int TAB_STAFF = 11;		// 주점 종업원 탭
-		private const int TAB_MEMO = 12;		// 메모 탭
-		private const int TAB_MAX = 13;
+		private const int TAB_ADJUTANT = 12;	// 부관 탭
+		private const int TAB_MEMO = 13;		// 메모 탭
+		private const int TAB_MAX = 14;
 
 		private int m_tab_index;				// 현재 탭 위치
 
@@ -272,8 +273,9 @@ namespace gvtrademap_cs {
 
 			// 8dot 만큼의 갭을 가진다
 			d3d_windows.window iw = base.FindWindow("설정 창");
-			if (iw != null) base.size = new Vector2(iw.normal_size.X, base.screen_size.Y - 4 * 2);
-			else base.size = new Vector2(WINDOW_SIZE_X, base.screen_size.Y - 4 * 2);
+			// WinForms 목록은 DPI 만큼 글자가 커지므로 너비도 함께 늘린다
+			float width = ((iw != null) ? iw.normal_size.X : WINDOW_SIZE_X) * Useful.GetDpiRatio();
+			base.size = new Vector2(width, base.screen_size.Y - 4 * 2);
 
 			// 사각형을 다시 설정한다
 			update_rects();
@@ -661,9 +663,10 @@ namespace gvtrademap_cs {
 
 			for (int i = 0; i < TAB_MAX; i++) {
 				bool enable = (info != null) && (get_item_list_count(i) > 0);
-				if (i == TAB_STAFF) {
+				if ((i == TAB_STAFF) || (i == TAB_ADJUTANT)) {
 					// 회색 아이콘이 따로 없으므로 어둡게 그린다
-					base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(icons.icon_index.tab_staff), enable ? -1 : Color.Gray.ToArgb());
+					icons.icon_index added = (i == TAB_STAFF) ? icons.icon_index.tab_staff : icons.icon_index.tab_adjutant;
+					base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(added), enable ? -1 : Color.Gray.ToArgb());
 				} else {
 					// 메모는 아이콘의 원래 칸을 쓴다
 					int icon = (i == TAB_MEMO) ? 11 : i;
@@ -1129,29 +1132,42 @@ namespace gvtrademap_cs {
 			// 내용 초기화
 			m_list_view.Clear();
 
+			float dpi = Useful.GetDpiRatio();
 			// 헤더
 			switch (m_tab_index) {
 				case 0:
-					m_list_view.Columns.Add("명칭", 80);
-					m_list_view.Columns.Add("★", 25, HorizontalAlignment.Center);
-					m_list_view.Columns.Add("종류", 52, HorizontalAlignment.Center);
+					m_list_view.Columns.Add("명칭", (int)(80 * dpi));
+					m_list_view.Columns.Add("★", (int)(25 * dpi), HorizontalAlignment.Center);
+					m_list_view.Columns.Add("종류", (int)(52 * dpi), HorizontalAlignment.Center);
 					if (info.InfoType == GvoWorldInfo.InfoType.City) {
-						m_list_view.Columns.Add("가격", 55, HorizontalAlignment.Right);
+						m_list_view.Columns.Add("가격", (int)(55 * dpi), HorizontalAlignment.Right);
 					} else {
-						m_list_view.Columns.Add("스킬", 60, HorizontalAlignment.Center);
+						m_list_view.Columns.Add("스킬", (int)(60 * dpi), HorizontalAlignment.Center);
 					}
 					break;
 				case 3: // 스킬, 보고
-					m_list_view.Columns.Add("명칭", 140);
-					m_list_view.Columns.Add("인물", 120);
+					m_list_view.Columns.Add("명칭", (int)(140 * dpi));
+					m_list_view.Columns.Add("인물", (int)(120 * dpi));
 					break;
 				case 10:	// 행상인
-					m_list_view.Columns.Add("명칭", 160);
-					m_list_view.Columns.Add("인물", 60);
+					m_list_view.Columns.Add("명칭", (int)(160 * dpi));
+					m_list_view.Columns.Add("인물", (int)(60 * dpi));
+					break;
+				case 5:		// 조선공
+					m_list_view.Columns.Add("명칭", (int)(120 * dpi));
+					m_list_view.Columns.Add("위치", (int)(120 * dpi));
+					break;
+				case TAB_STAFF:
+					m_list_view.Columns.Add("명칭", (int)(160 * dpi));
+					m_list_view.Columns.Add("구분", (int)(80 * dpi));
+					break;
+				case TAB_ADJUTANT:
+					m_list_view.Columns.Add("명칭", (int)(75 * dpi));
+					m_list_view.Columns.Add("직업, 스킬", (int)(165 * dpi));
 					break;
 				default:
-					m_list_view.Columns.Add("명칭", 160);
-					m_list_view.Columns.Add("가격", 80, HorizontalAlignment.Right);
+					m_list_view.Columns.Add("명칭", (int)(160 * dpi));
+					m_list_view.Columns.Add("가격", (int)(80 * dpi), HorizontalAlignment.Right);
 					break;
 			}
 

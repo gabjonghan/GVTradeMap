@@ -293,9 +293,11 @@ namespace gvtrademap_cs {
 			
 			wind_arrow,			// 풍향
 
-			// 주점 종업원 탭
+			// 주점 종업원, 부관 탭
 			tab_staff,
 			spot_tab_staff,
+			tab_adjutant,
+			spot_tab_adjutant,
 
 			max
 		};
@@ -601,6 +603,8 @@ namespace gvtrademap_cs {
 			// 주점 종업원 탭
 			AddRect(new Vector2(0, 0), new Rectangle(144, 128, 16, 16));
 			AddRect(new Vector2(-8, -8), new Rectangle(144, 128, 16, 16));
+			AddRect(new Vector2(0, 0), new Rectangle(168, 128, 16, 16));
+			AddRect(new Vector2(-8, -8), new Rectangle(168, 128, 16, 16));
 		}
 
 		/*-------------------------------------------------------------------------

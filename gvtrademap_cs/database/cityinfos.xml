@@ -3,6 +3,19 @@
   <!-- 도시정보 -->
   
   <cityinfo name="암스테르담">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="빈센트" option="~" price="직업 측량기사 / 보조 측량, 지리학, 조달, 인식, 조리, 외과의술, 감시 / 언어 네덜란드어 / 부관 방풍, 청소, 예방, 북대서양 회항, 북해 회항, 조리 보조, 연막탄 방어" />
+	  <item name="실비아" option="~" price="직업 조리사 / 보조 채집, 식료품 거래, 조미료 거래, 조리, 운용, 보관, 공예 / 언어 네덜란드어 / 부관 방파, 방화, 영양학, 네덜란드 교신, 조리 보조, 조리 위임, 화염탄 방어" />
+	  <item name="에드거" option="~" price="직업 박물학자 / 보조 지리학, 탐색, 고고학, 종교학, 생물학, 보물 감정 / 언어 네덜란드어, 노르웨이어, 라틴어, 슬라브어, 켈트어 / 부관 예방, 북해 회항, 봉제 보조, 화염탄 강화" />
+	  <item name="오스발드" option="~" price="직업 광역해적 / 보조 총포류 거래, 노 젓기, 회피, 검술, 수탈, 돌격, 포술, 총격, 수리 / 언어 스페인어 / 부관 북대서양 회항, 카리브해 회항, 주조 보조, 연막탄 방어, 적재화물 강탈" />
+	  <item name="코네리아" option="~" price="직업 도적 / 보조 탐색, 자물쇠 따기, 미술, 보물 감정, 보석 거래, 바디 랭귀지, 검술, 수탈, 응급처치 / 언어 네덜란드어 / 부관 오락, 북해 회항, 네덜란드 교신, 포도탄 강화, 적재화물 강탈" />
+	  <item name="필립" option="~" price="직업 사냥꾼 / 보조 지리학, 생태 조사, 채집, 생물학, 검술, 방어, 수탈, 총격 / 언어 네덜란드어 / 부관 방화, 북대서양 회항, 아프리카 서해안 회항, 북해 회항, 기습, 보관 보조" />
+	  <item name="한스" option="~" price="직업 방적상 / 보조 회계, 섬유 거래, 직물 거래, 봉제, 회피 / 언어 독일어, 네덜란드어 / 부관 방풍, 방화, 적재화물 정리, 숙면, 정찰, 봉제 보조, 봉제 위임, 연막탄 강화" />
+	  <item name="헤르만" option="~" price="직업 지도장인 / 보조 돛 조종, 측량, 지리학, 인식, 염료 거래, 조타, 수리 / 언어 스페인어, 포르투갈어 / 부관 청소, 숙면, 북대서양 회항, 북해 회항, 조리 보조, 화염탄 방어" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="요한나" option="^" />
 	</group>
@@ -329,6 +342,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="앤트워프">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="밀" price="40" />
 	  <item name="소시지" option="*" price="323" />
@@ -551,6 +567,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="비스뷔">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="아마" price="167" />
 	  <item name="모피" price="1138" />
@@ -569,6 +588,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="오슬로">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="순무" price="35" />
 	  <item name="메귀리" price="32" />
@@ -614,6 +636,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="코펜하겐">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="보리" price="32" />
 	  <item name="쇠고기" price="567" />
@@ -751,6 +776,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="스톡홀름">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="잉그리드" option="^" />
 	</group>
@@ -929,6 +957,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="단치히">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="모피" price="1138" />
 	  <item name="목재" price="591" />
@@ -987,6 +1018,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="함부르크">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="맥주" price="247" />
 	  <item name="은방울꽃" price="742" />
@@ -1178,6 +1212,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="브레멘">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="맥주" price="248" />
 	  <item name="모피" price="1138" />
@@ -1264,6 +1301,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="그로닝겐">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="진" price="515" />
 	  <item name="꿀" price="766" />
@@ -1366,6 +1406,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="베르겐">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="오리고기" option="*" price="267" />
 	  <item name="아콰비트" option="*" price="502" />
@@ -1490,6 +1533,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="헤르데르">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="128" />
 	  <item name="닭고기" price="288" />
@@ -1512,6 +1558,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="리가">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="오리고기" option="*" price="268" />
 	  <item name="호밀" price="32" />
@@ -1549,6 +1598,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="뤼베크">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="밀" price="40" />
 	  <item name="소금" price="208" />
@@ -1699,6 +1751,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="에딘버러">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="쇠고기" price="567" />
 	  <item name="어육" price="135" />
@@ -1727,6 +1782,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="더블린">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="소시지" option="*" price="324" />
 	  <item name="돼지고기" price="304" />
@@ -1782,6 +1840,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="도버">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="말린 살구" price="344" />
 	  <item name="브랜디" price="656" />
@@ -1798,6 +1859,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="플리머스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="치즈" price="304" />
 	  <item name="라벤더" option="*" price="673" investment="120k" />
@@ -1981,6 +2045,19 @@
 	</group>
   </cityinfo>
   <cityinfo name="런던">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="다비드" option="~" price="직업 사학가 / 보조 인식, 탐색, 자물쇠 따기, 고고학, 종교학, 보물 감정, 공예품 거래, 검술 / 언어 이탈리아어, 라틴어, 그리스어, 터키어 / 부관 오락, 동지중해 회항, 베네치아 교신" />
+	  <item name="덩컨" option="~" price="직업 운반업자 / 보조 회계, 보석 거래, 무기류 거래, 총포류 거래, 주조, 경계, 보관 / 언어 영어, 스페인어 / 부관 설득, 북해 회항, 정찰, 에스파니아 교신, 잉글랜드 교신, 사슬탄 방어" />
+	  <item name="볼프강" option="~" price="직업 검사 / 보조 주조, 검술, 방어, 수탈, 돌격, 총격, 전술, 응급처치 / 언어 영어 / 부관 방풍, 적재화물 정리, 일갈, 기습, 잉글랜드 교신, 구속" />
+	  <item name="빈센트" option="~" price="직업 측량기사 / 보조 측량, 지리학, 조달, 인식, 조리, 외과의술, 감시 / 언어 네덜란드어 / 부관 방풍, 청소, 예방, 북대서양 회항, 북해 회항, 조리 보조, 연막탄 방어" />
+	  <item name="아이작" option="~" price="직업 발굴가 / 보조 행군, 탐색, 자물쇠 따기, 고고학, 미술, 감시 / 언어 네덜란드어, 켈트어, 헤브라이어, 고대 이집트어 / 부관 방풍, 일갈, 북해 회항, 주조 보조, 통상탄 방어" />
+	  <item name="에마" option="~" price="직업 회계사 / 보조 회계, 주류 거래, 기호품 거래, 귀금속 거래, 보석 거래, 봉제, 운용, 전술 / 언어 영어, 독일어 / 부관 적재화물 정리, 숙면, 설득, 북해 회항, 잉글랜드 교신" />
+	  <item name="폴" option="~" price="직업 선교사 / 보조 인식, 탐색, 종교학, 미술, 사교, 통솔 / 언어 영어, 이탈리아어, 라틴어 / 부관 숙면, 북해 회항, 정찰, 잉글랜드 교신, 공예 보조, 사슬탄 강화" />
+	  <item name="하워드" option="~" price="직업 상급사관 / 보조 회피, 포술, 탄도학, 수평사격, 수리, 전술 / 언어 영어, 독일어 / 부관 방화, 일갈, 북해 회항, 잉글랜드 교신, 주조 보조, 사슬탄 강화, 화염탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="안젤라" option="^" />
 	</group>
@@ -2313,6 +2390,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="칼레">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="소시지" price="324" />
 	  <item name="소" price="279" />
@@ -2448,6 +2528,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="낭트">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="쇠고기" price="568" />
 	  <item name="밀" price="40" />
@@ -2579,6 +2662,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="보르도">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="오리고기" price="267" />
 	  <item name="쇠고기" option="*" price="567" investment="180k" />
@@ -2757,6 +2843,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="포르투">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="128" />
 	  <item name="밀" price="39" />
@@ -2918,6 +3007,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카사블랑카">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="밭벼" price="36" />
 	  <item name="용연향" price="3585" />
@@ -2934,6 +3026,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="세우타">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="팥" price="68" />
 	  <item name="보리" price="32" />
@@ -3052,6 +3147,20 @@
 	</group>
   </cityinfo>
   <cityinfo name="세비야">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="니나" option="~" price="직업 광역해적 / 보조 기뢰발견, 미술품 거래, 조타, 수탈, 돌격, 포술, 수평사격, 수리, 외과의술 / 언어 스페인어 / 부관 방파, 고양이 사육, 기습, 화염탄 강화, 적재화물 강탈" />
+	  <item name="로렌시오" option="~" price="직업 사제 / 보조 탐색, 고고학, 종교학, 미술, 사교 / 언어 스페인어, 이탈리아어, 라틴어 / 부관 설득, 북대서양 회항, 에스파니아 교신, 베네치아 교신, 프랑스 교신, 봉제 위임, 통상탄 방어" />
+	  <item name="루치아노" option="~" price="직업 용병 / 보조 귀금속 거래, 무기류 거래, 검술, 돌격, 수평사격, 총격, 수리 / 언어 프랑스어, 이탈리아어 / 부관 방파, 일갈, 설득, 기습, 사슬탄 방어, 포도탄 강화" />
+	  <item name="빅토르" option="~" price="직업 전술가 / 보조 기뢰발견, 총포류 거래, 주조, 총격, 수리, 조선, 통솔, 전술, 기뢰 설치 / 언어 스페인어 / 부관 적재화물 정리, 서지중해 회항, 에스파니아 교신, 주조 보조, 사슬탄 강화" />
+	  <item name="에르난" option="~" price="직업 준사관 / 보조 귀금속 거래, 조타, 포술, 탄도학, 통솔, 전술 / 언어 스페인어 / 부관 방풍, 방화, 설득, 중재, 에스파니아 교신, 연발탄 방어, 화염탄 방어, 방해" />
+	  <item name="오스발드" option="~" price="직업 광역해적 / 보조 총포류 거래, 노 젓기, 회피, 검술, 수탈, 돌격, 포술, 총격, 수리 / 언어 스페인어 / 부관 북대서양 회항, 카리브해 회항, 주조 보조, 연막탄 방어, 적재화물 강탈" />
+	  <item name="페데리코" option="~" price="직업 원양탐험가 / 보조 돛 조종, 지리학, 낚시, 인식, 운용, 보관, 통솔 / 언어 스페인어, 프랑스어 / 부관 고양이 사육, 북대서양 회항, 카리브해 회항, 서지중해 회항, 동지중해 회항, 연막탄 방어" />
+	  <item name="필립" option="~" price="직업 사냥꾼 / 보조 지리학, 생태 조사, 채집, 생물학, 검술, 방어, 수탈, 총격 / 언어 네덜란드어 / 부관 방화, 북대서양 회항, 아프리카 서해안 회항, 북해 회항, 기습, 보관 보조" />
+	  <item name="호르피나" option="~" price="직업 군의 / 보조 생존, 생태 조사, 주류 거래, 의약품 거래, 공예, 응급처치, 외과의술 / 언어 스페인어, 이탈리아어 / 부관 방풍, 방파, 우회, 영양학, 예방, 연막탄 방어" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="로잘리오" option="^" />
 	</group>
@@ -3397,6 +3506,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="바르셀로나">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="납광석" price="390" />
 	  <item name="피혁제품" price="977" />
@@ -3592,6 +3704,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="팔마">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="올리브" price="206" />
 	  <item name="어육" price="127" />
@@ -3653,6 +3768,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="발렌시아">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="오리고기" price="267" />
 	  <item name="올리브" price="224" />
@@ -3792,6 +3910,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="히혼">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="말린 딸기" price="299" />
 	  <item name="돼지" price="56" />
@@ -3811,6 +3932,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="파루">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="128" />
 	  <item name="닭고기" price="288" />
@@ -3834,6 +3958,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마데이라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="128" />
 	  <item name="사탕수수" price="192" />
@@ -3862,6 +3989,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="말라가">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="마늘" price="242" />
 	  <item name="리큐르" price="474" />
@@ -3930,6 +4060,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="몽펠리에">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="건포도" price="208" />
 	  <item name="파셀리" price="96" />
@@ -3951,6 +4084,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="라스팔마스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="사탕수수" option="*" price="192" />
@@ -3986,6 +4122,19 @@
 	</group>
   </cityinfo>
   <cityinfo name="리스본">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="루이스" option="~" price="직업 원양탐험가 / 보조 돛 조종, 지리학, 낚시, 인식, 운용, 보관, 외과의술 / 언어 포르투갈어, 스와힐리어, 서아프리카어 / 부관 북대서양 회항, 아프리카 서해안 회항, 남대서양 회항, 아프리카 동해안 회항, 화염탄 방어" />
+	  <item name="리카르도" option="~" price="직업 토박이 해적 / 보조 향료 거래, 총포류 거래, 조타, 노 젓기, 검술, 수탈, 포술, 외과의술 / 언어 포르투갈어 / 부관 방파, 우회, 정찰, 기습, 보관 보조, 구속" />
+	  <item name="발레리" option="~" price="직업 무기상인 / 보조 기뢰발견, 회계, 무기류 거래, 총포류 거래, 공업품 거래, 주조, 조선 / 언어 프랑스어 / 부관 일갈, 서지중해 회항, 정찰, 기습, 프랑스 교신, 주조 보조, 연막탄 강화" />
+	  <item name="아이작" option="~" price="직업 발굴가 / 보조 행군, 탐색, 자물쇠 따기, 고고학, 미술, 감시 / 언어 네덜란드어, 켈트어, 헤브라이어, 고대 이집트어 / 부관 방풍, 일갈, 북해 회항, 주조 보조, 통상탄 방어" />
+	  <item name="에스메랄다" option="~" price="직업 해군사관 / 보조 회계, 검술, 포술, 탄도학, 총격, 수리, 통솔, 전술 / 언어 포르투갈어, 아라비아어 / 부관 청소, 북대서양 회항, 아프리카 서해안 회항, 포르투갈 교신, 연막탄 방어" />
+	  <item name="우리엘" option="~" price="직업 약품상 / 보조 회계, 조미료 거래, 주류 거래, 기호품 거래, 의약품 거래, 공예, 회피, 방어, 응급처치 / 언어 포르투갈어 / 부관 예방, 북대서양 회항, 카리브해 회항, 공예 보조, 공예 위임" />
+	  <item name="카르디나" option="~" price="직업 식품상 / 보조 회계, 식료품 거래, 가축 거래, 조리, 운용, 보관 / 언어 포르투갈어 / 부관 방파, 고양이 사육, 영양학, 포르투갈 교신, 네덜란드 교신, 보관 보조, 보관 위임, 화염탄 방어" />
+	  <item name="헤르만" option="~" price="직업 지도장인 / 보조 돛 조종, 측량, 지리학, 인식, 염료 거래, 조타, 수리 / 언어 스페인어, 포르투갈어 / 부관 청소, 숙면, 북대서양 회항, 북해 회항, 조리 보조, 화염탄 방어" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="크리스티나" option="^" />
 	</group>
@@ -4327,6 +4476,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="안코나">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="와인" price="375" />
 	  <item name="고대 미술품" price="3272" />
@@ -4349,6 +4501,20 @@
 	</group>
   </cityinfo>
   <cityinfo name="베네치아">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="니코라" option="~" price="직업 수습 연금술사 / 보조 채집, 종교학, 의약품 거래, 광물 거래, 공업품 거래, 보관, 공예, 연금술 / 언어 이탈리아어, 라틴어 / 부관 방화, 일갈, 동지중해 회항, 공예 보조, 연막탄 강화" />
+	  <item name="다비드" option="~" price="직업 사학가 / 보조 인식, 탐색, 자물쇠 따기, 고고학, 종교학, 보물 감정, 공예품 거래, 검술 / 언어 이탈리아어, 라틴어, 그리스어, 터키어 / 부관 오락, 동지중해 회항, 베네치아 교신" />
+	  <item name="루치아노" option="~" price="직업 용병 / 보조 귀금속 거래, 무기류 거래, 검술, 돌격, 수평사격, 총격, 수리 / 언어 프랑스어, 이탈리아어 / 부관 방파, 일갈, 설득, 기습, 사슬탄 방어, 포도탄 강화" />
+	  <item name="에르다" option="~" price="직업 향료상인 / 보조 조미료 거래, 향신료 거래, 의약품 거래, 염료 거래, 향료 거래, 사교 / 언어 이탈리아어, 아라비아어 / 부관 방파, 방화, 정찰, 베네치아 교신, 오스만 투르크 교신, 조리 위임, 방해" />
+	  <item name="이고르" option="~" price="직업 조선공 / 보조 돛 조종, 주조, 조타, 회피, 포술, 수리, 조선, 통솔, 전술 / 언어 이탈리아어 / 부관 방파, 적재화물 정리, 베네치아 교신, 주조 보조, 사슬탄 방어" />
+	  <item name="지크프리트" option="~" price="직업 포술가 / 보조 보급, 광물 거래, 조타, 포술, 탄도학, 관통, 수리 / 언어 이탈리아어 / 부관 방화, 예방, 숙면, 보관 보조, 연발탄 방어, 사슬탄 방어, 연막탄 방어" />
+	  <item name="카르디나" option="~" price="직업 식품상 / 보조 회계, 식료품 거래, 가축 거래, 조리, 운용, 보관 / 언어 포르투갈어 / 부관 방파, 고양이 사육, 영양학, 포르투갈 교신, 네덜란드 교신, 보관 보조, 보관 위임, 화염탄 방어" />
+	  <item name="피르맹" option="~" price="직업 고고학자 / 보조 인식, 탐색, 자물쇠 따기, 고고학, 종교학, 보물 감정, 향신료 거래 / 언어 프랑스어, 페르시아어, 스와힐리어 / 부관 예방, 아프리카 동해안 회항, 홍해 회항, 프랑스 교신, 화염탄 강화" />
+	  <item name="피오레" option="~" price="직업 사제 / 보조 탐색, 고고학, 종교학, 미술, 미술품 거래, 사교, 방어, 통솔 / 언어 이탈리아어, 라틴어 / 부관 청소, 중재, 서지중해 회항, 동지중해 회항, 정찰" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="에레오노라" option="^" />
 	</group>
@@ -4700,6 +4866,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="칼리아리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="올리브유" price="275" />
 	  <item name="어육" price="128" />
@@ -4721,6 +4890,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="칼비">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="치즈" price="303" />
 	  <item name="닭고기" price="287" />
@@ -4741,6 +4913,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="자다르">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="꿀" price="764" />
 	  <item name="닭" price="44" />
@@ -4759,6 +4934,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="사사리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="양" price="108" />
@@ -4778,6 +4956,18 @@
 	</group>
   </cityinfo>
   <cityinfo name="제노바">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="니코라" option="~" price="직업 수습 연금술사 / 보조 채집, 종교학, 의약품 거래, 광물 거래, 공업품 거래, 보관, 공예, 연금술 / 언어 이탈리아어, 라틴어 / 부관 방화, 일갈, 동지중해 회항, 공예 보조, 연막탄 강화" />
+	  <item name="베아트리체" option="~" price="직업 필로조프 / 보조 자물쇠 따기, 종교학, 보관, 공예, 연금술, 응급처치, 외과의술 / 언어 이탈리아어, 라틴어, 아라비아어 / 부관 방풍, 고양이 사육, 숙면, 동지중해 회항, 화염탄 강화" />
+	  <item name="오라치오" option="~" price="직업 미술상 / 보조 미술, 대화술, 회계, 직물 거래, 염료 거래, 미술품 거래, 공예품 거래, 봉제 / 언어 이탈리아어 / 부관 방풍, 방화, 숙면, 베네치아 교신, 오스만 투르크 교신, 화염탄 방어" />
+	  <item name="죠셉" option="~" price="직업 향료상인 / 보조 회계, 조미료 거래, 향신료 거래, 의약품 거래, 염료 거래, 향료 거래, 사교 / 언어 포르투갈어, 인도어 / 부관 방풍, 청소, 고양이 사육, 설득, 정찰, 통상탄 방어" />
+	  <item name="페르난도" option="~" price="직업 낚시꾼 / 보조 돛 조종, 낚시, 채집, 생물학, 보관, 탄도학 / 언어 영어, 이탈리아어 / 부관 적재화물 정리, 영양학, 북대서양 회항, 서지중해 회항, 동지중해 회항, 정찰, 보관 위임" />
+	  <item name="폴" option="~" price="직업 선교사 / 보조 인식, 탐색, 종교학, 미술, 사교, 통솔 / 언어 영어, 이탈리아어, 라틴어 / 부관 숙면, 북해 회항, 정찰, 잉글랜드 교신, 공예 보조, 사슬탄 강화" />
+	  <item name="피에트로" option="~" price="직업 광물상 / 보조 회계, 광물 거래, 무기류 거래, 공업품 거래, 주조, 경계 / 언어 이탈리아어 / 부관 방파, 적재화물 정리, 예방, 베네치아 교신, 주조 보조, 주조 위임, 화염탄 강화, 연막탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="베아트리스" option="^" />
 	</group>
@@ -5026,6 +5216,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="시라쿠사">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="올리브" price="224" />
 	  <item name="어육" price="128" />
@@ -5222,6 +5415,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="트리에스테">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="와인" price="375" />
 	  <item name="달걀" price="25" />
@@ -5241,8 +5437,19 @@
 	</group>
   </cityinfo>
   <cityinfo name="나폴리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="니나" option="~" price="직업 광역해적 / 보조 기뢰발견, 미술품 거래, 조타, 수탈, 돌격, 포술, 수평사격, 수리, 외과의술 / 언어 스페인어 / 부관 방파, 고양이 사육, 기습, 화염탄 강화, 적재화물 강탈" />
+	  <item name="레이젠" option="~" price="직업 보물탐색가 / 보조 행군, 자물쇠 따기, 고고학, 종교학, 미술, 보물 감정, 보석 거래, 공예품 거래 / 언어 영어, 네덜란드어, 켈트어 / 부관 우회, 중재, 네덜란드 교신, 방해" />
+	  <item name="마르셀리노" option="~" price="직업 탐험가 / 보조 낚시, 인식, 채집, 구조, 고고학 / 언어 스페인어, 라틴어 / 부관 오락, 영양학, 북대서양 회항, 정찰, 에스파니아 교신, 포르투갈 교신, 보관 보조, 화염탄 방어" />
+	  <item name="미셀" option="~" price="직업 용병 / 보조 주류 거래, 보관, 조타, 검술, 수탈, 돌격, 총격, 외과의술 / 언어 프랑스어 / 부관 방파, 방화, 일갈, 중재, 정찰, 구속" />
+	  <item name="페르난도" option="~" price="직업 낚시꾼 / 보조 돛 조종, 낚시, 채집, 생물학, 보관, 탄도학 / 언어 영어, 이탈리아어 / 부관 적재화물 정리, 영양학, 북대서양 회항, 서지중해 회항, 동지중해 회항, 정찰, 보관 위임" />
+	  <item name="호르피나" option="~" price="직업 군의 / 보조 생존, 생태 조사, 주류 거래, 의약품 거래, 공예, 응급처치, 외과의술 / 언어 스페인어, 이탈리아어 / 부관 방풍, 방파, 우회, 영양학, 예방, 연막탄 방어" />
+	</group>
 	<group name="[주점 종업원]">
-	  <item name="죠반나" option="^" />
+	  <item name="조반나" option="^" />
 	</group>
 	<group name="[교역]">
 	  <item name="쇠고기" option="*" price="568" investment="225K 초과 240K 이하" />
@@ -5493,6 +5700,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="피사">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="쇠고기" option="*" price="566" />
 	  <item name="피클" price="223" />
@@ -5746,6 +5956,20 @@
 	</group>
   </cityinfo>
   <cityinfo name="마르세이유">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="미셀" option="~" price="직업 용병 / 보조 주류 거래, 보관, 조타, 검술, 수탈, 돌격, 총격, 외과의술 / 언어 프랑스어 / 부관 방파, 방화, 일갈, 중재, 정찰, 구속" />
+	  <item name="발레리" option="~" price="직업 무기상인 / 보조 기뢰발견, 회계, 무기류 거래, 총포류 거래, 공업품 거래, 주조, 조선 / 언어 프랑스어 / 부관 일갈, 서지중해 회항, 정찰, 기습, 프랑스 교신, 주조 보조, 연막탄 강화" />
+	  <item name="샤를롯트" option="~" price="직업 방적상 / 보조 돛 조종, 회계, 섬유 거래, 직물 거래, 염료 거래, 경계, 사교 / 언어 프랑스어, 이탈리아어, 터키어 / 부관 방화, 프랑스 교신, 오스만 투르크 교신, 봉제 위임, 방해" />
+	  <item name="에드거" option="~" price="직업 박물학자 / 보조 지리학, 탐색, 고고학, 종교학, 생물학, 보물 감정 / 언어 네덜란드어, 노르웨이어, 라틴어, 슬라브어, 켈트어 / 부관 예방, 북해 회항, 봉제 보조, 화염탄 강화" />
+	  <item name="우리엘" option="~" price="직업 약품상 / 보조 회계, 조미료 거래, 주류 거래, 기호품 거래, 의약품 거래, 공예, 회피, 방어, 응급처치 / 언어 포르투갈어 / 부관 예방, 북대서양 회항, 카리브해 회항, 공예 보조, 공예 위임" />
+	  <item name="제롬" option="~" price="직업 포술가 / 보조 보급, 총포류 거래, 조타, 포술, 수평사격, 속사, 수리 / 언어 프랑스어 / 부관 방화, 일갈, 설득, 봉제 보조, 포도탄 강화, 사슬탄 강화, 화염탄 강화" />
+	  <item name="피르맹" option="~" price="직업 고고학자 / 보조 인식, 탐색, 자물쇠 따기, 고고학, 종교학, 보물 감정, 향신료 거래 / 언어 프랑스어, 페르시아어, 스와힐리어 / 부관 예방, 아프리카 동해안 회항, 홍해 회항, 프랑스 교신, 화염탄 강화" />
+	  <item name="피에르" option="~" price="직업 박물학자 / 보조 지리학, 탐색, 고고학, 종교학, 생물학, 미술 / 언어 프랑스어, 그리스어, 헤브라이어, 고대 이집트어, 페르시아어 / 부관 영양학, 동지중해 회항, 공예 보조, 연막탄 강화" />
+	  <item name="후란시느" option="~" price="직업 재봉사 / 보조 채집, 섬유 거래, 직물 거래, 염료 거래, 가축 거래, 미술품 거래, 봉제, 사교 / 언어 프랑스어 / 부관 우회, 청소, 방화, 오락, 봉제 보조, 적재화물 강탈" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="일레느" option="^" />
 	</group>
@@ -6100,6 +6324,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="라구사">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="오리고기" option="*" price="268" />
 	  <item name="올리브" price="223" />
@@ -6234,6 +6461,19 @@
 	</group>
   </cityinfo>
   <cityinfo name="아테네">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="덩컨" option="~" price="직업 운반업자 / 보조 회계, 보석 거래, 무기류 거래, 총포류 거래, 주조, 경계, 보관 / 언어 영어, 스페인어 / 부관 설득, 북해 회항, 정찰, 에스파니아 교신, 잉글랜드 교신, 사슬탄 방어" />
+	  <item name="랜슬롯" option="~" price="직업 현상금 사냥꾼 / 보조 향신료 거래, 사교, 조타, 회피, 포술, 탄도학, 관통 / 언어 영어, 인도어 / 부관 방화, 일갈, 홍해 회항, 인도양 회항, 기습, 연발탄 방어" />
+	  <item name="로렌시오" option="~" price="직업 사제 / 보조 탐색, 고고학, 종교학, 미술, 사교 / 언어 스페인어, 이탈리아어, 라틴어 / 부관 설득, 북대서양 회항, 에스파니아 교신, 베네치아 교신, 프랑스 교신, 봉제 위임, 통상탄 방어" />
+	  <item name="리사" option="~" price="직업 측량기사 / 보조 측량, 지리학, 조달, 인식, 구조, 탐색, 인양, 봉제, 수리 / 언어 네덜란드어, 그리스어, 켈트어 / 부관 방풍, 예방, 통상탄 방어" />
+	  <item name="어번" option="~" price="직업 환전상 / 보조 주연, 회계, 공업품 거래, 주조, 운용, 공예, 감시 / 언어 프랑스어 / 부관 우회, 적재화물 정리, 오락, 중재, 주조 위임, 공예 위임, 방해" />
+	  <item name="에오" option="~" price="직업 경전사 / 보조 행군, 관리기술, 노 젓기, 검술, 응용검술, 수탈, 돌격, 통솔 / 언어 이탈리아어, 그리스어, 터키어 / 부관 방파, 방화, 기습, 통상탄 방어" />
+	  <item name="키카" option="~" price="직업 아르티장 / 보조 측량, 조달, 낚시, 주조, 운용, 보관, 검술, 소화 / 언어 이탈리아어 / 부관 우회, 방화, 영양학, 베네치아 교신, 봉제 위임, 통상탄 방어" />
+	  <item name="피오레" option="~" price="직업 사제 / 보조 탐색, 고고학, 종교학, 미술, 미술품 거래, 사교, 방어, 통솔 / 언어 이탈리아어, 라틴어 / 부관 청소, 중재, 서지중해 회항, 동지중해 회항, 정찰" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="뮬리네" option="^" />
 	</group>
@@ -6434,6 +6674,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="간디아">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="올리브" option="*" price="280" />
 	  <item name="어육" price="*137" />
@@ -6534,6 +6777,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="살로니카">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="올리브" price="223" />
 	  <item name="어육" price="127" />
@@ -6664,6 +6910,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="파마구스타">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="올리브" price="223" />
 	  <item name="어육" price="127" />
@@ -6802,6 +7051,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="알제">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="팥" price="67" />
 	  <item name="양파" price="71" />
@@ -6912,6 +7164,19 @@
 	</group>
   </cityinfo>
   <cityinfo name="알렉산드리아">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="다기르" option="~" price="직업 생물학자 / 보조 생태 조사, 행군, 생물학, 가축 거래, 조리, 검술 / 언어 슬라브어, 아라비아어, 고대 이집트어, 터키어 / 부관 영양학, 예방, 아프리카 서해안 회항, 오스만 투르크 교신, 포도탄 강화" />
+	  <item name="시린" option="~" price="직업 약제사 / 보조 조달, 채집, 구조, 향신료 거래, 의약품 거래, 공예, 상품지식, 외과의술 / 언어 아라비아어, 터키어, 페르시아어 / 부관 영양학, 예방, 조리 위임" />
+	  <item name="아슬란" option="~" price="직업 캐러밴 / 보조 측량, 지리학, 조달, 행군, 식료품 거래, 향신료 거래, 가축 거래, 저격술 / 언어 고대 이집트어, 터키어, 인도어 / 부관 영양학, 인도양 회항, 오스만 투르크 교신, 구속" />
+	  <item name="아이샤" option="~" price="직업 인양 전문가 / 보조 지리학, 자물쇠 따기, 인양, 예항, 탄도학, 수리 / 언어 그리스어, 고대 이집트어, 터키어 / 부관 청소, 숙면, 오스만 투르크 교신, 주조 보조, 보관 보조, 적재화물 강탈" />
+	  <item name="에슬라" option="~" price="직업 민속학자 / 보조 측량, 지리학, 자물쇠 따기, 고고학, 던지기 기술, 검술, 통솔 / 언어 헤브라이어, 터키어, 페르시아어, 케추아어 / 부관 일갈, 중남미 서해안 회항, 공예 위임, 구속" />
+	  <item name="엔벨" option="~" price="직업 유적 탐험가 / 보조 생존, 탐색, 자물쇠 따기, 고고학, 던지기 기술, 함정, 운용, 보관, 수리 / 언어 아라비아어, 터키어 / 부관 방풍, 고양이 사육, 연막탄 방어, 방해" />
+	  <item name="칼라" option="~" price="직업 보석상 / 보조 보물 감정, 회계, 광물 거래, 보석 거래, 공예품 거래, 공업품 거래, 공예 / 언어 터키어, 인도어 / 부관 청소, 설득, 인도양 회항, 오스만 투르크 교신, 공예 보조, 통상탄 방어" />
+	  <item name="하산" option="~" price="직업 교역상인 / 보조 회계, 식료품 거래, 조미료 거래, 섬유 거래, 직물 거래, 잡화 거래, 조리, 경계, 운용 / 언어 그리스어, 터키어 / 부관 동지중해 회항, 오스만 투르크 교신, 조리 보조, 사슬탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="율리아" option="^" />
 	</group>
@@ -7121,6 +7386,18 @@
 	</group>
   </cityinfo>
   <cityinfo name="이스탄불">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="라시드" option="~" price="직업 도적 / 보조 탐색, 자물쇠 따기, 미술, 보물 감정, 미술품 거래, 바디 랭귀지, 검술, 수탈 / 언어 터키어 / 부관 중재, 동지중해 회항, 정찰, 기습, 오스만 투르크 교신, 적재화물 강탈" />
+	  <item name="아슬란" option="~" price="직업 캐러밴 / 보조 측량, 지리학, 조달, 행군, 식료품 거래, 향신료 거래, 가축 거래, 저격술 / 언어 고대 이집트어, 터키어, 인도어 / 부관 영양학, 인도양 회항, 오스만 투르크 교신, 구속" />
+	  <item name="아이샤" option="~" price="직업 인양 전문가 / 보조 지리학, 자물쇠 따기, 인양, 예항, 탄도학, 수리 / 언어 그리스어, 고대 이집트어, 터키어 / 부관 청소, 숙면, 오스만 투르크 교신, 주조 보조, 보관 보조, 적재화물 강탈" />
+	  <item name="엔벨" option="~" price="직업 유적 탐험가 / 보조 생존, 탐색, 자물쇠 따기, 고고학, 던지기 기술, 함정, 운용, 보관, 수리 / 언어 아라비아어, 터키어 / 부관 방풍, 고양이 사육, 연막탄 방어, 방해" />
+	  <item name="이크발" option="~" price="직업 사략해적 / 보조 직물 거래, 조타, 노 젓기, 검술, 수탈, 돌격, 포술 / 언어 터키어 / 부관 적재화물 정리, 일갈, 동지중해 회항, 정찰, 기습, 연발탄 방어, 적재화물 강탈" />
+	  <item name="칼라" option="~" price="직업 보석상 / 보조 보물 감정, 회계, 광물 거래, 보석 거래, 공예품 거래, 공업품 거래, 공예 / 언어 터키어, 인도어 / 부관 청소, 설득, 인도양 회항, 오스만 투르크 교신, 공예 보조, 통상탄 방어" />
+	  <item name="케말" option="~" price="직업 총사 / 보조 행군, 기뢰발견, 총포류 거래, 속사, 총격, 저격술, 응급처치 / 언어 터키어, 마야어 / 부관 우회, 예방, 동남미 동해안 회항, 기습, 주조 위임, 포도탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="라디아" option="^" />
 	</group>
@@ -7336,6 +7613,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="오데사">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="밀" price="39" />
 	  <item name="보리" price="32" />
@@ -7386,6 +7666,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카이로">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="누에콩" price="52" />
 	  <item name="양파" price="71" />
@@ -7560,6 +7843,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카파">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="목재" price="591" />
 	  <item name="치즈" price="303" />
@@ -7598,6 +7884,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="세바스토폴">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="밀" price="39" />
 	  <item name="보리" price="32" />
@@ -7631,6 +7920,20 @@
 	</group>
   </cityinfo>
   <cityinfo name="튀니스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="베아트리체" option="~" price="직업 필로조프 / 보조 자물쇠 따기, 종교학, 보관, 공예, 연금술, 응급처치, 외과의술 / 언어 이탈리아어, 라틴어, 아라비아어 / 부관 방풍, 고양이 사육, 숙면, 동지중해 회항, 화염탄 강화" />
+	  <item name="시린" option="~" price="직업 약제사 / 보조 조달, 채집, 구조, 향신료 거래, 의약품 거래, 공예, 상품지식, 외과의술 / 언어 아라비아어, 터키어, 페르시아어 / 부관 영양학, 예방, 조리 위임" />
+	  <item name="아넷트" option="~" price="직업 주류상 / 보조 낚시, 주연, 회계, 식료품 거래, 주류 거래, 기호품 거래, 향료 거래, 공예, 관리기술 / 언어 프랑스어, 아라비아어 / 부관 방화, 오락, 설득, 구속" />
+	  <item name="이크발" option="~" price="직업 사략해적 / 보조 직물 거래, 조타, 노 젓기, 검술, 수탈, 돌격, 포술 / 언어 터키어 / 부관 적재화물 정리, 일갈, 동지중해 회항, 정찰, 기습, 연발탄 방어, 적재화물 강탈" />
+	  <item name="자파르" option="~" price="직업 경호원 / 보조 구조, 직물 거래, 경계, 회피, 방어, 포술, 수평사격, 수리, 응급처치 / 언어 아라비아어, 터키어 / 부관 고양이 사육, 동지중해 회항, 오스만 투르크 교신, 통상탄 방어" />
+	  <item name="질베르" option="~" price="직업 아르티장 / 보조 낚시, 채집, 탐색, 생물학, 봉제, 보관, 응용검술, 수리 / 언어 독일어, 프랑스어 / 부관 방파, 방화, 숙면, 동지중해 회항, 적재화물 강탈" />
+	  <item name="피에트로" option="~" price="직업 광물상 / 보조 회계, 광물 거래, 무기류 거래, 공업품 거래, 주조, 경계 / 언어 이탈리아어 / 부관 방파, 적재화물 정리, 예방, 베네치아 교신, 주조 보조, 주조 위임, 화염탄 강화, 연막탄 강화" />
+	  <item name="하산" option="~" price="직업 교역상인 / 보조 회계, 식료품 거래, 조미료 거래, 섬유 거래, 직물 거래, 잡화 거래, 조리, 경계, 운용 / 언어 그리스어, 터키어 / 부관 동지중해 회항, 오스만 투르크 교신, 조리 보조, 사슬탄 강화" />
+	  <item name="한스" option="~" price="직업 방적상 / 보조 회계, 섬유 거래, 직물 거래, 봉제, 회피 / 언어 독일어, 네덜란드어 / 부관 방풍, 방화, 적재화물 정리, 숙면, 정찰, 봉제 보조, 봉제 위임, 연막탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="샤자르" option="^" />
 	</group>
@@ -7850,6 +8153,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="트리폴리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="순무" price="36" />
 	  <item name="메귀리" price="32" />
@@ -8004,6 +8310,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="트레비존드">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="마늘" price="242" />
 	  <item name="면원단" price="666" />
@@ -8159,6 +8468,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="베이루트">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="누에콩" price="52" />
 	  <item name="양파" option="*" price="71" />
@@ -8290,6 +8602,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="벵가지">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="석유" price="510" />
 	  <item name="양모" price="323" />
@@ -8309,6 +8624,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="야파">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="사탕수수" option="*" price="200" />
@@ -8348,6 +8666,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아조레스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="와인" price="375" />
@@ -8370,6 +8691,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="산티아고">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="파인애플" price="774" />
 	  <item name="땅콩" price="127" />
@@ -8402,6 +8726,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="산토도밍고">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="와이라" option="^" />
 	</group>
@@ -8573,6 +8900,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="산후안">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="호박" price="95" />
 	  <item name="사탕수수" option="*" price="192" investment="120k" />
@@ -8597,6 +8927,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="자메이카">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="사탕수수" option="*" price="192" />
 	  <item name="감자" price="115" />
@@ -8638,6 +8971,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="하바나">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="럼주" price="415" />
 	  <item name="커피" price="375" />
@@ -8717,6 +9053,17 @@
 	</group>
   </cityinfo>
   <cityinfo name="포르토벨로">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="고드후리" option="~" price="직업 척후대 / 보조 항해기술, 보관, 조타, 응용검술, 방어, 기뢰 설치, 감시 / 언어 영어, 마야어 / 부관 방화, 설득, 북해 회항, 중남미 동해안 회항, 정찰, 방해" />
+	  <item name="소니아" option="~" price="직업 생물학자 / 보조 생태 조사, 조달, 낚시, 행군, 채집, 생물학, 던지기 기술, 사교, 검술 / 언어 스페인어, 서아프리카어, 마야어 / 부관 우회, 고양이 사육, 보관 보조" />
+	  <item name="알폰스" option="~" price="직업 측량기사 / 보조 측량, 지리학, 보급, 인식, 항해기술, 향신료 거래, 운용 / 언어 스페인어 / 부관 방풍, 영양학, 북대서양 회항, 카리브해 회항, 중남미 동해안 회항, 에스파니아 교신, 통상탄 방어" />
+	  <item name="질베르" option="~" price="직업 아르티장 / 보조 낚시, 채집, 탐색, 생물학, 봉제, 보관, 응용검술, 수리 / 언어 독일어, 프랑스어 / 부관 방파, 방화, 숙면, 동지중해 회항, 적재화물 강탈" />
+	  <item name="케말" option="~" price="직업 총사 / 보조 행군, 기뢰발견, 총포류 거래, 속사, 총격, 저격술, 응급처치 / 언어 터키어, 마야어 / 부관 우회, 예방, 동남미 동해안 회항, 기습, 주조 위임, 포도탄 강화" />
+	  <item name="크로드" option="~" price="직업 번역가 / 보조 탐색, 종교학, 대화술, 언어학, 향료 거래, 사교 / 언어 프랑스어, 이탈리아어, 라틴어, 헤브라이어, 고대 이집트어 / 부관 방파, 중재, 프랑스 교신, 방해" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="라울" option="^" />
 	</group>
@@ -8780,6 +9127,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="윌렘스타트">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="고구마" price="75" />
 	  <item name="어육" price="127" />
@@ -8956,6 +9306,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카라카스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="에메랄드" option="*" price="3023" investment="320k" />
 	  <item name="커피" price="375" />
@@ -9065,6 +9418,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="트루히요">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="커피" option="*" price="376" investment="180k" />
 	  <item name="옥수수" price="47" />
@@ -9244,6 +9600,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="나소">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="소금" price="207" />
@@ -9271,6 +9630,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마라카이보">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="금" option="*" price="3343" investment="400k" />
 	  <item name="석유" option="*" price="508" investment="240k" />
@@ -9306,6 +9668,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="베라크루스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="커피" price="375" />
 	  <item name="옥수수" price="47" />
@@ -9358,6 +9723,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="메리다">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="호박" price="96" />
 	  <item name="옥수수" price="47" />
@@ -9381,6 +9749,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="그랜드케이맨">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="데킬라" price="1100" />
 	  <item name="파인애플" option="*" price="860" />
@@ -9547,6 +9918,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카옌">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="커피" option="*" price="375" investment="240k" />
 	  <item name="사탕수수" price="192" />
@@ -9725,6 +10099,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="바이아">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="목화" price="267" />
 	  <item name="사탕수수" price="192" />
@@ -9762,6 +10139,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="페르남부쿠">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="통나무" option="*" price="259" />
 	  <item name="옥수수" option="*" price="47" investment="180k" />
@@ -9937,6 +10317,16 @@
 	</group>
   </cityinfo>
   <cityinfo name="리우데자네이루">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="나자리오" option="~" price="직업 전술가 / 보조 총포류 거래, 총격, 수리, 조선, 통솔, 전술, 기뢰 설치, 병기기술 / 언어 포르투갈어 / 부관 방화, 중남미 동해안 회항, 포르투갈 교신, 주조 보조, 화염탄 방어, 화염탄 강화" />
+	  <item name="마우리시오" option="~" price="직업 보급대 / 보조 보급, 구조, 보관, 수리, 응급처치, 외과의술, 소화 / 언어 스페인어 / 부관 우회, 청소, 오락, 숙면, 중남미 동해안 회항, 에스파니아 교신, 사슬탄 방어" />
+	  <item name="베른할트" option="~" price="직업 공예사 / 보조 채집, 보물 감정, 주연, 주류 거래, 보석 거래, 공예품 거래, 공예, 관리기술, 수리, 감시 / 언어 네덜란드어, 스페인어 / 부관 공예 보조, 공예 위임, 연막탄 방어" />
+	  <item name="알리시아" option="~" price="직업 척후대 / 보조 지리학, 구조, 경계, 조타, 회피, 방어, 전술, 기뢰 설치 / 언어 스페인어, 마야어 / 부관 청소, 고양이 사육, 중재, 홍해 회항, 보관 위임" />
+	  <item name="쥬리오" option="~" price="직업 대장공 / 보조 채집, 광물 거래, 무기류 거래, 총포류 거래, 주조, 포술, 저격술 / 언어 이탈리아어 / 부관 방파, 중재, 베네치아 교신, 주조 보조, 주조 위임, 연발탄 방어, 사슬탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="지셀" option="^" />
 	</group>
@@ -9985,6 +10375,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="부에노스아이레스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="은" option="*" price="876" investment="400k" />
 	  <item name="소" price="280" />
@@ -10011,6 +10404,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="산안토니오">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="은" option="*" price="876" />
 	  <item name="소" price="280" />
@@ -10030,6 +10426,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아비장">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="야자유" option="*" price="190" />
 	  <item name="커피" price="375" />
@@ -10052,6 +10451,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아르긴">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="128" />
 	  <item name="양고기" option="*" price="316" />
@@ -10072,6 +10474,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카보베르데">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" />
 	  <item name="사탕수수" option="*" price="192" investment="120k" />
@@ -10121,6 +10526,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카리비브">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="양고기" price="314" />
@@ -10143,6 +10551,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="케이프타운">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="아리데스" option="^" />
 	</group>
@@ -10204,6 +10615,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="세인트조지스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="라에마" option="^" />
 	</group>
@@ -10266,6 +10680,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="상투메">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="야자술" option="*" price="254" />
 	  <item name="코코넛" price="257" />
@@ -10288,6 +10705,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="시에라리온">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="야자유" price="184" />
 	  <item name="커피" price="378" />
@@ -10319,6 +10739,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="두알라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="커피" price="378" />
 	  <item name="목화" price="267" />
@@ -10333,6 +10756,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="베냉">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="상아" price="1689" />
 	  <item name="석유" price="510" />
@@ -10344,6 +10770,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="벵겔라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="은" option="*" price="2511" investment="240k" />
 	  <item name="동광석" price="692" />
@@ -10356,6 +10785,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="루안다">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="사탕수수" option="*" price="192" />
 	  <item name="야자유" price="193" />
@@ -10514,6 +10946,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="킬와">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="금" option="*" price="3957" investment="240k" />
 	  <item name="철광석" option="*" price="566" investment="180k" />
@@ -10532,6 +10967,12 @@
 	</group>
   </cityinfo>
   <cityinfo name="잔지바르">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="체스터" option="~" price="직업 응급처치관 / 보조 의약품 거래, 수평사격, 수리, 조선, 기뢰 설치, 응급처치, 외과의술, 감시 / 언어 영어, 스와힐리어 / 부관 방파, 인도양 회항, 정찰, 주조 위임, 화염탄 방어" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="가더" option="^" />
 	</group>
@@ -10695,6 +11136,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="소팔라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="보리" price="32" />
 	  <item name="밀" option="*" price="39" investment="180k" />
@@ -10769,6 +11213,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="타마타브">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="모피" price="1138" />
 	  <item name="목재" price="591" />
@@ -10790,6 +11237,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="나탈">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="사탕수수" price="192" />
 	  <item name="옥수수" price="47" />
@@ -10813,6 +11263,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="말린디">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="상아" price="1689" />
 	  <item name="목재" price="591" />
@@ -10853,6 +11306,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="모가디슈">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="쇠고기" option="*" price="567" />
 	  <item name="어육" price="129" />
@@ -10896,6 +11352,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="모잠비크">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="보리" price="32" />
 	  <item name="사탕수수" price="167" />
@@ -11020,6 +11479,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="몸바사">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="산호" price="2880" />
 	  <item name="갑향" price="853" />
@@ -11044,6 +11506,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아덴">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="사할" option="^" />
 	</group>
@@ -11206,6 +11671,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="제다">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="커피" price="375" />
 	  <item name="밀" price="37" />
@@ -11223,6 +11691,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="도파르">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="유향" price="1323" />
 	  <item name="야자섬유" price="129" />
@@ -11240,6 +11711,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="수에즈">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="누에콩" price="52" />
 	  <item name="목화" price="267" />
@@ -11271,6 +11745,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="세이라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="커피" price="375" />
 	  <item name="금" option="*" price="3957" investment="240k" />
@@ -11286,6 +11763,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="소코트라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="용연향" price="2489" />
 	  <item name="어육" price="127" />
@@ -11310,6 +11790,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="무스카트">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="깨" option="*" price="168" />
@@ -11429,6 +11912,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마사와">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="팥" price="67" />
 	  <item name="보리" price="32" />
@@ -11484,6 +11970,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="바스라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="치즈" price="303" />
 	  <item name="센나" price="243" />
@@ -11516,6 +12005,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="호르무즈">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="양고기" price="315" />
 	  <item name="올리브유" option="*" price="275" />
@@ -11658,6 +12150,16 @@
 	</group>
   </cityinfo>
   <cityinfo name="캘리컷">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="나타샤" option="~" price="직업 해군사관 / 보조 공예품 거래, 회피, 검술, 포술, 총격, 저격술, 수리, 전술, 병기기술 / 언어 프랑스어 / 부관 방풍, 청소, 일갈, 기습, 통상탄 방어" />
+	  <item name="두아르테" option="~" price="직업 레인저 / 보조 지리학, 생존, 생태 조사, 낚시, 보급, 인식, 생물학, 던지기 기술, 검술, 응급처치 / 언어 포르투갈어, 인도어 / 부관 적재화물 정리, 예방, 조리 보조" />
+	  <item name="유리아나" option="~" price="직업 사냥꾼 / 보조 돛 조종, 생태 조사, 행군, 인식, 채집, 구조, 조리, 관리기술, 총격 / 언어 네덜란드어, 인도어 / 부관 고양이 사육, 영양학, 인도양 회항, 적재화물 강탈" />
+	  <item name="크리스토퍼" option="~" price="직업 정치상인 / 보조 총포류 거래, 공업품 거래, 보관, 사교, 조타, 저격술, 통솔, 전술 / 언어 영어, 인도어, 말레이 타갈로그어 / 부관 인도양 회항, 동남아시아 회항, 잉글랜드 교신, 주조 보조" />
+	  <item name="투팬" option="~" price="직업 검사 / 보조 무기류 거래, 주조, 검술, 응용검술, 방어, 수탈, 돌격, 총격, 전술, 응급처치 / 언어 아라비아어, 터키어 / 부관 인도양 회항, 기습, 구속" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="파르라티" option="^" />
 	</group>
@@ -11874,6 +12376,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="캘커타">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="생사" price="1659" />
 	  <item name="인도 편사" price="773" />
@@ -11902,6 +12407,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="고어">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="황마" price="124" />
 	  <item name="목화" price="267" />
@@ -12072,6 +12580,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="코친">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="인도 꼭두서니" price="331" />
 	  <item name="가르다몬" price="832" />
@@ -12102,6 +12613,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="실론">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="홍차" price="641" />
 	  <item name="사파이어" option="*" price="3240" investment="120k" />
@@ -12123,6 +12637,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="디우">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="용연향" price="2482" />
 	  <item name="사탕수수" price="193" />
@@ -12157,6 +12674,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="퐁디셰리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="캣아이" price="2555" />
 	  <item name="터메릭" price="194" />
@@ -12186,6 +12706,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마술리파탐">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="인도 편사" price="773" />
 	  <item name="초석" price="1444" />
@@ -12205,6 +12728,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아체">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="닭고기" price="288" />
 	  <item name="후추" price="255" />
@@ -12225,6 +12751,18 @@
 	</group>
   </cityinfo>
   <cityinfo name="자카르타">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="길버드" option="~" price="직업 군의 / 보조 생존, 낚시, 의약품 거래, 공예, 응급처치, 외과의술 / 언어 영어, 말레이 타갈로그어, 오세아니아어 / 부관 방풍, 적재화물 정리, 잉글랜드 교신, 공예 보조, 연막탄 방어, 방해" />
+	  <item name="빈 센트" option="~" price="직업 숙련검술사 / 보조 채집, 대화술, 조타, 검술, 응용검술, 수탈, 돌격, 전술, 응급처치 / 언어 네덜란드어 / 부관 방풍, 적재화물 정리, 기습, 주조 보조, 구속" />
+	  <item name="유리아나" option="~" price="직업 사냥꾼 / 보조 돛 조종, 생태 조사, 행군, 인식, 채집, 구조, 조리, 관리기술, 총격 / 언어 네덜란드어, 인도어 / 부관 고양이 사육, 영양학, 인도양 회항, 적재화물 강탈" />
+	  <item name="이반" option="~" price="직업 사냥꾼 / 보조 생태 조사, 조달, 행군, 채집, 생물학, 항해기술, 포술 / 언어 영어, 태국 미얀마어 / 부관 우회, 청소, 영양학, 동남아시아 회항, 잉글랜드 교신, 보관 위임" />
+	  <item name="죠르제" option="~" price="직업 토박이 해적 / 보조 주연, 무기류 거래, 경계, 보관, 조타, 검술, 포술, 총격, 기뢰 설치 / 언어 포르투갈어 / 부관 숙면, 설득, 포르투갈 교신, 구속, 적재화물 강탈" />
+	  <item name="카렌" option="~" price="직업 지도장인 / 보조 돛 조종, 측량, 지리학, 조달, 인식, 종교학, 감시 / 언어 네덜란드어, 말레이 타갈로그어 / 부관 우회, 예방, 인도양 회항, 동남아시아 회항, 보관 위임, 사슬탄 강화" />
+	  <item name="클라우디아" option="~" price="직업 조리사 / 보조 조달, 낚시, 식료품 거래, 조미료 거래, 주류 거래, 가축 거래, 조리, 보관, 관리기술 / 언어 이탈리아어, 말레이 타갈로그어 / 부관 방풍, 영양학, 조리 위임, 화염탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="라우트" option="^" />
 	</group>
@@ -12306,6 +12844,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="수라바야">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="타로토란" price="67" />
 	  <item name="바나나" price="131" />
@@ -12382,6 +12923,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="파타니">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="피시 소스" price="239" />
 	  <item name="코코넛" price="256" />
@@ -12405,6 +12949,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="팔렘방">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="계피" price="416" />
 	  <item name="코뿔소뿔" price="1922" />
@@ -12426,6 +12973,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="반자르마신">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="고구마" price="75" />
 	  <item name="닭고기" price="287" />
@@ -12448,6 +12998,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="페구">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="콩" price="63" />
 	  <item name="비단 원단" price="2197" />
@@ -12470,6 +13023,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마카사르">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="소금" price="206" />
 	  <item name="바나나" price="132" />
@@ -12490,6 +13046,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="말라카">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="타로토란" price="68" />
 	  <item name="닭" price="44" />
@@ -12547,6 +13106,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="지아딘">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="126" />
 	  <item name="벼" price="43" />
@@ -12569,6 +13131,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="룬">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="124" />
 	  <item name="콩" price="61" />
@@ -12590,6 +13155,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마닐라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="밭벼" price="40" />
 	  <item name="설탕" price="651" />
@@ -12668,6 +13236,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="브루나이">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="침향" price="5074" />
@@ -12717,6 +13288,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="다바오">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="밭벼" price="36" />
 	  <item name="야자유" price="184" />
@@ -12765,6 +13339,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="로프부리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="벼" price="50" />
 	  <item name="망고" price="359" />
@@ -12787,6 +13364,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="쿠칭">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="카사바" price="60" />
@@ -12813,6 +13393,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="딜리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="타로토란" price="68" />
 	  <item name="카사바" price="60" />
@@ -12835,6 +13418,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="잠비">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="커피" price="373" />
 	  <item name="용뇌" price="1080" />
@@ -13147,6 +13733,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="홀로">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="137" />
 	  <item name="통나무" price="164" />
@@ -13166,6 +13755,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="카카두">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="감람석" option="*" price="1256" investment="180k" />
 	  <item name="유칼리" price="328" />
@@ -13188,6 +13780,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="호바트">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="목재" price="503" />
 	  <item name="꿀" price="770" />
@@ -13208,6 +13803,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="왕가누이">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="목재" price="674" />
 	  <item name="고구마" price="86" />
@@ -13231,6 +13829,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="쿠가리">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="마카다미아넛트" price="331" />
 	  <item name="레몬머틀" price="531" />
@@ -13252,6 +13853,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="핀자라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" />
+	</group>
 	<group name="[교역]">
 	  <item name="캥거루고기" price="311" />
 	  <item name="소금" price="207" />
@@ -13274,6 +13878,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아카풀코">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="130" />
 	  <item name="은" price="1300" />
@@ -13307,6 +13914,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="과테말라">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" />
+	</group>
 	<group name="[교역]">
 	  <item name="목재" price="600" />
 	  <item name="옥수수" price="50" />
@@ -13329,6 +13939,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="파나마">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="130" />
 	  <item name="파인애플" price="780" />
@@ -13360,6 +13973,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="툼베스">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="청동" price="1033" />
 	  <item name="강달소라" price="4182" />
@@ -13385,6 +14001,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="람바예케">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="소금" price="220" />
 	  <item name="동광석" price="690" />
@@ -13408,6 +14027,15 @@
 	</group>
   </cityinfo>
   <cityinfo name="리마">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" />
+	</group>
+	<group name="[부관]">
+	  <item name="가르시아" option="~" price="직업 재봉사 / 보조 회계, 섬유 거래, 직물 거래, 무기류 거래, 봉제, 저격술, 수리 / 언어 영어, 포르투갈어, 케추아어 / 부관 방풍, 숙면, 중남미 서해안 회항, 포르투갈 교신, 구속" />
+	  <item name="루시오" option="~" price="직업 항해사 / 보조 돛 조종, 측량, 행군, 봉제, 조타, 회피, 속사, 수리 / 언어 스페인어, 케추아어 / 부관 적재화물 정리, 영양학, 동지중해 회항, 정찰, 화염탄 방어" />
+	  <item name="알리시아" option="~" price="직업 척후대 / 보조 지리학, 구조, 경계, 조타, 회피, 방어, 전술, 기뢰 설치 / 언어 스페인어, 마야어 / 부관 청소, 고양이 사육, 중재, 홍해 회항, 보관 위임" />
+	  <item name="에슬라" option="~" price="직업 민속학자 / 보조 측량, 지리학, 자물쇠 따기, 고고학, 던지기 기술, 검술, 통솔 / 언어 헤브라이어, 터키어, 페르시아어, 케추아어 / 부관 일갈, 중남미 서해안 회항, 공예 위임, 구속" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="티카" option="^" />
 	</group>
@@ -13537,6 +14165,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="코피아포">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="소금" price="207" />
 	  <item name="동광석" price="693" />
@@ -13560,6 +14191,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="발파라이소">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="청동" price="1034" />
 	  <item name="금" option="*" investment="400k" />
@@ -13583,6 +14217,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="괌">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="야자유" price="198" />
 	  <item name="코코넛" price="276" />
@@ -13606,6 +14243,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="사마라이">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="야자유" price="198" />
 	  <item name="코코넛" price="276" />
@@ -13656,6 +14296,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="나가사키">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="다카츠구" option="^" />
 	</group>
@@ -13725,6 +14368,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="에도">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="소바" />
 	  <item name="청주" />
@@ -13777,6 +14423,14 @@
 	</group>
   </cityinfo>
   <cityinfo name="사카이">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="미요" option="~" price="직업 환전상 / 보조 자물쇠 따기, 회계, 공업품 거래, 잡화 거래, 주조, 경계, 보관, 탄도학 / 언어 스페인어, 포르투갈어, 일본어 / 부관 서지중해 회항, 정찰, 에스파니아 교신, 통상탄 방어" />
+	  <item name="사쿠라" option="~" price="직업 도적 / 보조 지리학, 탐색, 자물쇠 따기, 보물 감정, 귀금속 거래, 경계, 검술 / 언어 영어, 일본어 / 부관 방파, 설득, 정찰, 보관 보조, 연막탄 강화, 방해" />
+	  <item name="직안" option="~" price="직업 용병 / 보조 조달, 귀금속 거래, 검술, 돌격, 수평사격, 총격, 수리 / 언어 네덜란드어, 일본어 / 부관 방풍, 청소, 일갈, 북해 회항, 기습, 오스만 투르크 교신" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="유키" option="^" />
 	</group>
@@ -13865,6 +14519,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="포항">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="철수" option="^" />
 	</group>
@@ -13915,6 +14572,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="부산">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
 	<group name="[교역]">
 	  <item name="참다시마" />
 	  <item name="한우" />
@@ -13980,6 +14640,14 @@
 	</group>
   </cityinfo>
   <cityinfo name="한양">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="조선소" />
+	</group>
+	<group name="[부관]">
+	  <item name="동우" option="~" price="직업 보급대 / 보조 보급, 채집, 구조, 식료품 거래, 회피, 탄도학, 수리, 통솔, 외과의술 / 언어 조선어 / 부관 방화, 중남미 동해안 회항, 정찰, 주조 보조, 적재화물 정리" />
+	  <item name="미선" option="~" price="직업 낚시꾼 / 보조 돛 조종, 조달, 낚시, 채집, 식료품 거래, 조리, 운용, 보관, 노 젓기 / 언어 조선어 / 부관 적재화물 정리, 오락, 동남아시아 회항, 연막탄 강화, 방해" />
+	  <item name="전철" option="~" price="직업 공예사 / 보조 채집, 항해기술, 조미료 거래, 공예품 거래, 공업품 거래, 공예, 조타, 기뢰 설치, 응급처치 / 언어 조선어, 중국어 / 부관 방풍, 오락, 남태평양 회항, 사슬탄 강화" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="영희" option="^" />
 	</group>
@@ -14120,6 +14788,11 @@
 	</group>
   </cityinfo>
   <cityinfo name="항주">
+	<group name="[부관]">
+	  <item name="맹맹" option="~" price="직업 무기상인 / 보조 자물쇠 따기, 대화술, 회계, 무기류 거래, 총포류 거래, 공업품 거래, 조선, 병기기술 / 언어 포르투갈어, 중국어 / 부관 우회, 일갈, 기습, 주조 보조, 포도탄 강화" />
+	  <item name="문직" option="~" price="직업 민속학자 / 보조 측량, 지리학, 탐색, 자물쇠 따기, 고고학, 던지기 기술, 미술품 거래 / 언어 조선어, 중국어, 일본어 / 부관 적재화물 정리, 영양학, 숙면, 조리 위임, 연발탄 방어" />
+	  <item name="미화" option="~" price="직업 용병 / 보조 미술, 언어학, 보석 거래, 봉제, 회피, 방어, 포술, 응급처치 / 언어 중국어, 말레이 타갈로그어, 오세아니아어 / 부관 방풍, 숙면, 동남아시아 회항, 정찰" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="소운" option="^" />
 	</group>
@@ -14334,6 +15007,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마카오">
+	<group name="[조선공]">
+	  <item name="조선공" option="~" price="항구 앞" />
+	</group>
 	<group name="[교역]">
 	  <item name="중화면" />
 	  <item name="당나귀" />
@@ -14444,6 +15120,11 @@
 	</group>
   </cityinfo>
   <cityinfo name="안평">
+	<group name="[부관]">
+	  <item name="명매" option="~" price="직업 정치상인 / 보조 돛 조종, 보물 감정, 귀금속 거래, 공업품 거래, 주조, 사교, 총격, 전술 / 언어 네덜란드어, 중국어 / 부관 고양이 사육, 중재, 아프리카 서해안 회항, 정찰, 기습" />
+	  <item name="여월" option="~" price="직업 번역가 / 보조 고고학, 대화술, 언어학, 회계, 운용, 공예, 전술 / 언어 네덜란드어, 중국어, 말레이 타갈로그어 / 부관 설득, 동남아시아 회항, 포르투갈 교신, 네덜란드 교신, 방해" />
+	  <item name="효위" option="~" price="직업 현상금 사냥꾼 / 보조 지리학, 언어학, 관리기술, 회피, 검술, 포술, 관통, 감시 / 언어 스페인어, 중국어 / 부관 고양이 사육, 예방, 홍해 회항, 에스파니아 교신, 조리 보조" />
+	</group>
 	<group name="[주점 종업원]">
 	  <item name="미연" option="^" />
 	</group>

@@ -47,6 +47,7 @@ namespace gvtrademap_cs
 			tab_8,						// 조각가
 			tab_9,						// 행상인
 			tab_9_1,					// 주점 종업원
+			tab_9_2,					// 부관
 			tab_10,						// 메모
 
 			city_name,					// 도시명
@@ -188,6 +189,7 @@ namespace gvtrademap_cs
 			case type.tab_8:				// 조각가
 			case type.tab_9:				// 행상인
 			case type.tab_9_1:				// 주점 종업원
+			case type.tab_9_2:				// 부관
 				int	index	= (int)(_type - type.tab_0);
 				foreach(GvoWorldInfo.Info i in m_world.World){
 					if(i.GetCount(GvoWorldInfo.Info.GroupIndex._0 + index) > 0){
@@ -278,6 +280,7 @@ namespace gvtrademap_cs
 			case type.tab_8:				// 조각가
 			case type.tab_9:				// 행상인
 			case type.tab_9_1:				// 주점 종업원
+			case type.tab_9_2:				// 부관
 			case type.tab_10:				// 메모
 				draw_spot(offset);
 //				spot_cities(OffsetPosition);
@@ -491,9 +494,10 @@ namespace gvtrademap_cs
 			if(size < 0.5)				size = 0.5f;
 			else if (size > 1.0f)	   size = 1.0f;
 	
-			// 주점 종업원은 나중에 추가한 아이콘이고, 메모는 원래 칸을 쓴다
+			// 주점 종업원, 부관은 나중에 추가한 아이콘이고, 메모는 원래 칸을 쓴다
 			icons.icon_index	icon	= icons.icon_index.spot_tab_staff;
 			if(m_spot_type < type.tab_9_1)			icon	= icons.icon_index.spot_tab_0 + (int)(m_spot_type - type.tab_0);
+			else if(m_spot_type == type.tab_9_2)	icon	= icons.icon_index.spot_tab_adjutant;
 			else if(m_spot_type == type.tab_10)		icon	= icons.icon_index.spot_tab_11;
 
 			m_device.sprites.BeginDrawSprites(m_icons.texture, offset, m_loop_image.ImageScale, new Vector2(size, size));
@@ -526,6 +530,7 @@ namespace gvtrademap_cs
 			case type.tab_8:				// 조각가
 			case type.tab_9:				// 행상인
 			case type.tab_9_1:				// 주점 종업원
+			case type.tab_9_2:				// 부관
 			case type.city_name:			// 도시명
 				break;
 
@@ -581,6 +586,7 @@ namespace gvtrademap_cs
 			case type.tab_8:					return "조각가";
 			case type.tab_9:					return "행상인";
 			case type.tab_9_1:					return "주점 종업원";
+			case type.tab_9_2:					return "부관";
 			case type.tab_10:					return "메모";
 			case type.city_name:				return "도시명";
 			case type.cultural_sphere:			return "문화권";
@@ -615,6 +621,7 @@ namespace gvtrademap_cs
 			case type.tab_8:					return "";
 			case type.tab_9:					return "";
 			case type.tab_9_1:					return "";
+			case type.tab_9_2:					return "";
 			case type.tab_10:					return "";
 			case type.city_name:				return "";
 			case type.cultural_sphere:			return "";

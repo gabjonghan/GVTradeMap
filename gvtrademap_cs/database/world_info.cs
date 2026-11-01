@@ -735,7 +735,7 @@ namespace gvtrademap_cs {
 			private string[] m_group_name_tbl = new string[]{
 												"[교역]", "[도구]", "[공방]", "[인물]",
 												"[배]", "[조선공]", "[대포]", "[추가장갑]",
-												"[돛]", "[선수상]", "[행상인]", "[주점 종업원]",
+												"[돛]", "[선수상]", "[행상인]", "[주점 종업원]", "[부관]",
 												"",
 											};
 
@@ -1075,6 +1075,7 @@ namespace gvtrademap_cs {
 					case Info.GroupIndex._8: return "조각가";
 					case Info.GroupIndex._9: return "행상인";
 					case Info.GroupIndex._10: return "주점 종업원";
+					case Info.GroupIndex._11: return "부관";
 					case Info.GroupIndex.max: return "메모";
 				}
 				return "기타";
@@ -1307,6 +1308,7 @@ namespace gvtrademap_cs {
 				_8,  // 선수상
 				_9,  // 행상인
 				_10,  // 주점 종업원
+				_11,  // 부관
 				max
 			};
 
@@ -1483,6 +1485,11 @@ namespace gvtrademap_cs {
 					public bool HasTooltip { get { return (ItemDb == null) ? false : true; } }
 					public string TooltipString {
 						get {
+							if ((m_tag == "~") || (m_tag == "^")) {
+								// 사람은 아이템 DB 에 없다
+								string info = (m_tag == "~") ? m_tag2.Replace(" / ", "\n") : "주점 종업원";
+								return Name + "\n" + info;
+							}
 							if (ItemDb == null) {
 								string str;
 								str = "명칭:" + Name;
@@ -1597,6 +1604,8 @@ namespace gvtrademap_cs {
 							case "_": return "행상인";
 							// 주점 종업원
 							case "^": return "종업원";
+							// 인물, 부관. price 에 위치나 스킬을 적어 둔다
+							case "~": return m_tag2;
 
 							// 그 밖의 것
 							default:
