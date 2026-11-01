@@ -198,6 +198,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		public gvtrademap_cs_form() {
 			InitializeComponent();
+			init_manual_menu();
 
 			// 타이틀
 			this.Text = def.WINDOW_TITLE;
@@ -1931,13 +1932,41 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 DragDrop
+		 채팅 로그 없이 쓰는 수동 조작 메뉴를 추가한다
 		---------------------------------------------------------------------------*/
-		private void gvtrademap_cs_form_DragDrop(object sender, DragEventArgs e) {
-			AllowDrop = false;
-			try {
-				string data = e.Data.GetData(DataFormats.Text) as string;
+		private void init_manual_menu() {
+			ToolStripItemCollection sea = setseaareastateToolStripMenuItem.DropDownItems;
+			sea.Add(new ToolStripSeparator());
+			sea.Add("해역 변동 설정 창 열기...", null, new EventHandler(open_sea_area_dlg_menu_Click));
+			sea.Add("클립보드에서 해역 정보 읽기...", null, new EventHandler(read_sea_area_clipboard_menu_Click));
 
+			int index = contextMenuStrip2.Items.IndexOf(toolStripSeparator7);
+			contextMenuStrip2.Items.Insert(index, new ToolStripMenuItem("조선 카운터 시작/초기화...", null, new EventHandler(build_ship_menu_Click)));
+			contextMenuStrip2.Items.Insert(index + 1, new ToolStripMenuItem("이자 카운터 초기화...", null, new EventHandler(reset_interest_menu_Click)));
+		}
+
+		private void open_sea_area_dlg_menu_Click(object sender, EventArgs e) {
+			edit_sea_area_dlg();
+		}
+
+		private void read_sea_area_clipboard_menu_Click(object sender, EventArgs e) {
+			update_sea_area_from_text(Clipboard.GetText());
+		}
+
+		private void build_ship_menu_Click(object sender, EventArgs e) {
+			build_ship_form.StartOrResetBuildShip(this, m_db);
+		}
+
+		private void reset_interest_menu_Click(object sender, EventArgs e) {
+			build_ship_form.ResetInterest(this, m_db);
+		}
+
+		/*-------------------------------------------------------------------------
+		 해역 정보 문자열을 반영한다
+		 한 줄에 하나씩 "서버,해역군,상태,날짜"
+		---------------------------------------------------------------------------*/
+		private void update_sea_area_from_text(string data) {
+			try {
 				List<sea_area_once_from_dd> list = sea_area.AnalizeFromDD(data);
 				sea_area_dd_form dlg = new sea_area_dd_form(m_lib, m_db, list);
 				if (dlg.ShowDialog(this) == DialogResult.OK) {
@@ -1949,6 +1978,14 @@ namespace gvtrademap_cs {
 			} catch {
 				MessageBox.Show("해역 정보 수신에 실패하였습니다. ");
 			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 DragDrop
+		---------------------------------------------------------------------------*/
+		private void gvtrademap_cs_form_DragDrop(object sender, DragEventArgs e) {
+			AllowDrop = false;
+			update_sea_area_from_text(e.Data.GetData(DataFormats.Text) as string);
 			AllowDrop = true;
 		}
 		#endregion

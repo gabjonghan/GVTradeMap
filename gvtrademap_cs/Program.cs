@@ -15,6 +15,10 @@ namespace gvtrademap_cs
 		[STAThread]
 		static void Main()
 		{
+			// 고DPI 화면에서 흐려지지 않도록 DPI 인식을 켠다
+			// 게임 화면 캡처가 어긋나면 --no-dpi-aware 를 붙여 실행하면 예전처럼 동작한다
+			if(Array.IndexOf(Environment.GetCommandLineArgs(), "--no-dpi-aware") < 0)	Useful.EnableDpiAware();
+
 			Mutex	m	= new Mutex(false, "mutex_gvtrademap_cs_cookie_Zephyros");
 			string	device_info_string	= "";
 	

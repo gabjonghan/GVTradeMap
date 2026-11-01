@@ -23,6 +23,9 @@ namespace win32
 	static public class user32
 	{
 		[DllImport("user32.dll")]
+		public static extern bool SetProcessDPIAware();
+
+		[DllImport("user32.dll")]
 		public static extern IntPtr GetForegroundWindow();
 
 		[DllImport("user32.dll")]

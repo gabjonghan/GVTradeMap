@@ -130,7 +130,6 @@ namespace gvtrademap_cs {
 
 				// 상태에 따라서는 비표시가 된다
 				ht.enable = true;
-				if (!m_lib.setting.enable_analize_log_chat) ht.enable = false;
 				if (!m_lib.setting.save_searoutes) ht.enable = false;
 				// 서버 모드일 때는 유효
 				if (m_lib.setting.is_server_mode) ht.enable = true;
@@ -146,7 +145,6 @@ namespace gvtrademap_cs {
 
 				// 상태에 따라서는 비표시가 된다
 				ht.enable = true;
-				if (!m_lib.setting.enable_analize_log_chat) ht.enable = false;
 				if (!m_lib.setting.save_searoutes) ht.enable = false;
 				// 서버 모드일 때는 유효
 				if (m_lib.setting.is_server_mode) ht.enable = true;
@@ -456,12 +454,15 @@ namespace gvtrademap_cs {
 						}
 					}
 					return true;
+				case (int)window_index.interest:
+					if ((mouseButtons & MouseButtons.Right) == 0) return true;
+					// 우클릭
+					build_ship_form.ResetInterest(form, m_db);
+					return true;
 				case (int)window_index.build_ship:
 					if ((mouseButtons & MouseButtons.Right) == 0) return true;
 					// 우클릭
-					if (MessageBox.Show("조선 카운터를 초기화할까요?", "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-						m_db.BuildShipCounter.FinishBuildShip();
-					}
+					build_ship_form.StartOrResetBuildShip(form, m_db);
 					return true;
 			}
 
@@ -492,9 +493,9 @@ namespace gvtrademap_cs {
 						if (str == "") str = "항로 공유 멤버가 없습니다";
 						return str;
 					}
-				case (int)window_index.interest: return m_db.InterestDays.GetPopupString();
+				case (int)window_index.interest: return m_db.InterestDays.GetPopupString() + "\n(우클릭으로 초기화)";
 				case (int)window_index.build_ship: {
-						return m_db.BuildShipCounter.GetPopupString() + "\n(우클릭으로 초기화)";
+						return m_db.BuildShipCounter.GetPopupString() + "\n(우클릭으로 시작/초기화)";
 					}
 				case (int)window_index.tcp_server: {
 						gvo_server_service server = m_myship_info.server_service;

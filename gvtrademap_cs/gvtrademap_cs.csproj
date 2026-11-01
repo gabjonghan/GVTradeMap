@@ -115,6 +115,9 @@
     <Compile Include="form\find_form2.Designer.cs">
       <DependentUpon>find_form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\build_ship_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="form\sea_area_dd_form.cs">
       <SubType>Form</SubType>
     </Compile>

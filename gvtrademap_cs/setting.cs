@@ -541,7 +541,7 @@ namespace gvtrademap_cs
 			connect_network				= true;
 			hook_mouse					= false;
 			windows_vista_aero			= false;
-			enable_analize_log_chat		= true;
+			enable_analize_log_chat		= false;		// 한국판 게임은 채팅 로그를 남기지 않는다
 			is_share_routes				= false;
 			capture_interval			= CaptureIntervalIndex.Per1000ms;
 			connect_web_icon			= false;
@@ -561,7 +561,7 @@ namespace gvtrademap_cs
 			enable_favorite_sea_routes_alpha		= true;
 			draw_favorite_sea_routes_alpha_popup	= false;
 			debug_flag_show_potision	= false;
-			enable_dpi_scaling		  = false;
+			enable_dpi_scaling		  = true;
 
 			// 표시 관계
 			select_info					= "";		// 선택없음

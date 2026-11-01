@@ -763,9 +763,22 @@ namespace Utility
 
 		//-------------------------------------------------------------------------
 		/// <summary>
+		/// 이 프로세스의 DPI 인식을 켠다. 창을 만들기 전에 호출할 것
+		/// </summary>
+		static public void EnableDpiAware()
+		{
+			try{
+				win32.user32.SetProcessDPIAware();
+			}catch(EntryPointNotFoundException){
+				// Vista 미만에는 없다
+			}
+		}
+
+		//-------------------------------------------------------------------------
+		/// <summary>
 		/// DPI 스케일링 배율을 얻는다
 		/// </summary>
-		/// <returns>MyDocument 폴더의 경로</returns>
+		/// <returns>배율</returns>
 		static public float GetDpiRatio()
 		{
 			using(Graphics g = Graphics.FromHwnd(IntPtr.Zero)){

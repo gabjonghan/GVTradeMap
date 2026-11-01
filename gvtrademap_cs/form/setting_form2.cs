@@ -125,7 +125,7 @@ namespace gvtrademap_cs {
 			toolTip1.SetToolTip(checkBox16, "@Web 아이콘을 그릴 때 같은 종류이고 거리가 가까우면 하나로 합침\n@Web 아이콘 표시가 좀 더 깔끔해집니다");
 
 			toolTip1.SetToolTip(checkBox3, "화면캡처 방법을 지정\nWindows Vista 사용시 측량인식이 잘 되지 않을 경우 체크하십시오\nWindows7은 체크가 필요없습니다.");
-			toolTip1.SetToolTip(checkBox5, "재해 팝업, 이자 경과 일수, 해역 변동 시스템용 로그 분석을 사용");
+			toolTip1.SetToolTip(checkBox5, "재해 팝업, 이자 경과 일수, 해역 변동 시스템용 로그 분석을 사용\n한국판 게임은 채팅 로그가 없어 기본으로 꺼져 있습니다\n이자·조선 카운터와 해역 변동은 지도 우클릭 메뉴로 직접 설정할 수 있습니다");
 			toolTip1.SetToolTip(checkBox17, "캡처한 화면을 선수상의 오른쪽에 표시\n나침반 각도 분석 및 확인용\n일반적으로 체크할 필요가 없습니다.");
 			toolTip1.SetToolTip(comboBox4, "화면캡처 간격을 선택\n짧은간격으로 캡처할수록 나침반의 각도변경에 대한 반응이 빨라지지만 CPU를 많이 사용합니다\nCPU가 감당할 수 있는 경우 0.5초에 1회 또는 그 이하를 선택해 주세요\n초기값은 1초에 1회");
 			toolTip1.SetToolTip(textBox6, "TCP 서버가 사용하는 포트 번호를 지정\n특별히 변경할 필요는 없습니다");
