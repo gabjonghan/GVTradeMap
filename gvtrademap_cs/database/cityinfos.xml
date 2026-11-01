@@ -598,7 +598,7 @@
 	  <item name="소시지" price="322" />
 	  <item name="치즈" option="*" price="303" />
 	  <item name="모피" option="*" price="1138" investment="180k" />
-	  <item name="호박" price="2020" />
+	  <item name="호박(보석)" price="2020" />
 	  <item name="목화" option="*" price="535" investment="720k" />
 	  <item name="은세공" price="2674" />
 	  <item name="고급가구" option="*" price="2457" investment="180k" />
@@ -902,7 +902,7 @@
 	<group name="[교역]">
 	  <item name="모피" price="1138" />
 	  <item name="목재" price="591" />
-	  <item name="호박" option="*" price="2020" investment="320k" />
+	  <item name="호박(보석)" option="*" price="2020" investment="320k" />
 	  <item name="철광석" option="*" price="566" investment="180k" />
 	  <item name="사탕무" option="*" price="79" investment="500k" />
 	</group>
@@ -1475,7 +1475,7 @@
 	  <item name="깃털" option="*" price="496" investment="180k" />
 	  <item name="모피" price="1138" />
 	  <item name="진사" price="725" />
-	  <item name="호박" option="*" price="2020" investment="240k" />
+	  <item name="호박(보석)" option="*" price="2020" investment="240k" />
 	  <item name="장궁" option="*" price="696" investment="320k" />
 	  <item name="유황" option="*" price="335" />
 	</group>

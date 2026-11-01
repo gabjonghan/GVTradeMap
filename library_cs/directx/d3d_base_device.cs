@@ -198,7 +198,13 @@ namespace directx
 			if(!m_d3d_device.CheckCooperativeLevel(out result)){
 				// 리셋 가능하면 리셋
 				if(result == (int)ResultCode.DeviceNotReset){
-					m_d3d_device.Reset(m_present_params);
+					try{
+						m_d3d_device.Reset(m_present_params);
+					}catch(GraphicsException){
+						// 리셋에 실패하면 다음 프레임에 다시 시도한다
+						System.Threading.Thread.Sleep(20);
+						return false;
+					}
 				}else if (result == (int)ResultCode.DeviceLost){
 					// 아직 리셋할 수 없으면 잠시 대기
 					System.Threading.Thread.Sleep(20);

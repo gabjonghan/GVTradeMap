@@ -1443,7 +1443,7 @@
 	<data_values name="창고" Min="0" Max="0" />
 	<detail Citys="각국본거지、동남아시아개척지（중추 한정）" ShipType="전부" Price="1,500,000" />
   </ship_part>
-  <ship_part name="범용소라틴세일" PartsType="돛" ShipSizeType="소형" IsGeneralPurpose="True">
+  <ship_part name="범용 소형 라틴세일" PartsType="돛" ShipSizeType="소형" IsGeneralPurpose="True">
 	<data_values name="내구" Min="0" Max="0" />
 	<data_values name="세로돛" Min="5" Max="15" />
 	<data_values name="가로돛" Min="0" Max="0" />
@@ -1456,7 +1456,7 @@
 	<data_values name="창고" Min="0" Max="0" />
 	<detail Citys="앤트워프、포르투、시라쿠사、제노바 、더블린、바르셀로나、발렌시아、팔마、피사、그로닝겐、플리머스、마데이라、말라가" ShipType="전부" Price="30,000" />
   </ship_part>
-  <ship_part name="범용중라틴세일" PartsType="돛" ShipSizeType="중형" IsGeneralPurpose="True">
+  <ship_part name="범용 중형 라틴세일" PartsType="돛" ShipSizeType="중형" IsGeneralPurpose="True">
 	<data_values name="내구" Min="0" Max="0" />
 	<data_values name="세로돛" Min="5" Max="15" />
 	<data_values name="가로돛" Min="0" Max="0" />
@@ -1469,7 +1469,7 @@
 	<data_values name="창고" Min="0" Max="0" />
 	<detail Citys="나폴리、베르겐、함부르크、아테네、간디아、브레멘、낭트、살로니카" ShipType="전부" Price="300,000" />
   </ship_part>
-  <ship_part name="범용대라틴세일" PartsType="돛" ShipSizeType="대형" IsGeneralPurpose="True">
+  <ship_part name="범용 대형 라틴세일" PartsType="돛" ShipSizeType="대형" IsGeneralPurpose="True">
 	<data_values name="내구" Min="0" Max="0" />
 	<data_values name="세로돛" Min="5" Max="15" />
 	<data_values name="가로돛" Min="0" Max="0" />
@@ -1482,7 +1482,7 @@
 	<data_values name="창고" Min="0" Max="0" />
 	<detail Citys="각국본거지、동남아시아개척지（중추 한정）" ShipType="전부" Price="1,500,000" />
   </ship_part>
-  <ship_part name="범용소스퀘어세일" PartsType="돛" ShipSizeType="소형" IsGeneralPurpose="True">
+  <ship_part name="범용 소형 스퀘어세일" PartsType="돛" ShipSizeType="소형" IsGeneralPurpose="True">
 	<data_values name="내구" Min="0" Max="0" />
 	<data_values name="세로돛" Min="0" Max="0" />
 	<data_values name="가로돛" Min="5" Max="15" />
@@ -1495,7 +1495,7 @@
 	<data_values name="창고" Min="0" Max="0" />
 	<detail Citys="앤트워프、포르투、시라쿠사、제노바 、더블린、바르셀로나、발렌시아、팔마、피사、그로닝겐、플리머스、마데이라、말라가" ShipType="전부" Price="30,000" />
   </ship_part>
-  <ship_part name="범용중스퀘어세일" PartsType="돛" ShipSizeType="중형" IsGeneralPurpose="True">
+  <ship_part name="범용 중형 스퀘어세일" PartsType="돛" ShipSizeType="중형" IsGeneralPurpose="True">
 	<data_values name="내구" Min="0" Max="0" />
 	<data_values name="세로돛" Min="0" Max="0" />
 	<data_values name="가로돛" Min="5" Max="15" />
@@ -1508,7 +1508,7 @@
 	<data_values name="창고" Min="0" Max="0" />
 	<detail Citys="나폴리、베르겐、함부르크、아테네、간디아、브레멘、낭트、살로니카" ShipType="전부" Price="300,000" />
   </ship_part>
-  <ship_part name="범용대스퀘어세일" PartsType="돛" ShipSizeType="대형" IsGeneralPurpose="True">
+  <ship_part name="범용 대형 스퀘어세일" PartsType="돛" ShipSizeType="대형" IsGeneralPurpose="True">
 	<data_values name="내구" Min="0" Max="0" />
 	<data_values name="세로돛" Min="0" Max="0" />
 	<data_values name="가로돛" Min="5" Max="15" />

@@ -768,7 +768,9 @@ namespace Utility
 		/// <returns>MyDocument 폴더의 경로</returns>
 		static public float GetDpiRatio()
 		{
-			return Graphics.FromHwnd(IntPtr.Zero).DpiX / 96.0f;
+			using(Graphics g = Graphics.FromHwnd(IntPtr.Zero)){
+				return g.DpiX / 96.0f;
+			}
 		}
 	}
 }
