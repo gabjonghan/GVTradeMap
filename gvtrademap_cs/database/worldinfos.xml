@@ -15,7 +15,7 @@
 		<name_offset2 x="-6" y="3" />
 		<city_detail index="8" city_type="City" alliance_type="Alliance" cultural_sphere="Netherlands" has_name_image="True" lang1="네덜란드어" bar_flags="0" />
 	</info>
-	<info name="뷔스비" url_index="97" info_type="City" angle="0">
+	<info name="비스뷔" url_index="97" info_type="City" angle="0">
 		<position x="847" y="2106" />
 		<name_offset1 x="6" y="-5" />
 		<name_offset2 x="6" y="-5" />
@@ -3311,11 +3311,6 @@
 	</info>
 	<info name="우스튜르트 고원" url_index="-1" info_type="Shore2" angle="0">
 		<position x="2109" y="2806" />
-		<name_offset1 x="0" y="0" />
-		<name_offset2 x="0" y="0" />
-	</info>
-	<info name="잠베지 강 중류" url_index="-1" info_type="Shore2" angle="0">
-		<position x="1251" y="5353" />
 		<name_offset1 x="0" y="0" />
 		<name_offset2 x="0" y="0" />
 	</info>

@@ -237,7 +237,8 @@ namespace gvtrademap_cs {
 					}
 				} else {
 					i.NameRect = new d3d_sprite_rects.rect(m_textureSize, m_offset, rect);
-					m_nameRect.Add(i.Name, i.NameRect);
+					// worldinfos.xml 에 같은 이름이 두 번 있어도 멈추지 않는다
+					m_nameRect[i.Name] = i.NameRect;
 				}
 
 				yIndex++;
