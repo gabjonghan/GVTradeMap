@@ -289,7 +289,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -499,7 +499,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제２권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" price="500" />
 	  <item name="매상" price="1800" />
 	  <item name="매의 상" price="5200" />
@@ -517,7 +517,7 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -580,7 +580,7 @@
 	<group name="[인물]">
 	  <item name="조선소재，가공철재" option="%" price="조선공" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="침착의 깃발" option="-" />
 	  <item name="면으로 만든 귀마개" option="-" />
 	  <item name="예비돛" option="-" />
@@ -878,7 +878,7 @@
 	  <item name="간이동판" price="41000" />
 	  <item name="간이철판" price="80000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="침착의 깃발" option="-" />
 	  <item name="면으로 만든 귀마개" option="-" />
 	  <item name="예비돛" option="-" />
@@ -1424,7 +1424,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제２권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="성인상 제작 9" option="%" />
 	  <item name="솔개상" price="500" />
 	  <item name="매상" price="1800" />
@@ -1632,7 +1632,7 @@
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" price="500" />
 	  <item name="매상" price="1800" />
 	  <item name="매의 상" price="5200" />
@@ -1918,7 +1918,7 @@
 	  <item name="추가 스팽커" price="55000" />
 	  <item name="조선소재，주조의 서 제2권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -2217,7 +2217,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -2664,7 +2664,7 @@
 	  <item name="추가 스팽커" price="55000" />
 	  <item name="조선소재，주조의 서 제2권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -2821,7 +2821,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제２권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -3268,7 +3268,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -3467,7 +3467,7 @@
 	  <item name="동판" price="73000" />
 	  <item name="철판" price="130000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -3793,7 +3793,7 @@
 	  <item name="범용소형포문" option="*" price="30000" investment="300k" />
 	  <item name="범용 소형 확장 창고" option="*" price="80000" investment="300k" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -4171,7 +4171,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -4533,7 +4533,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -4835,7 +4835,7 @@
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -4854,7 +4854,7 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="수술도구" option="-" />
 	  <item name="통" option="-" />
@@ -5055,7 +5055,7 @@
 	  <item name="동판" price="73000" />
 	  <item name="철판" price="130000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="수술도구" option="-" />
 	  <item name="통" option="-" />
@@ -5294,7 +5294,7 @@
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -5313,7 +5313,7 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="수술도구" option="-" />
 	  <item name="통" option="-" />
@@ -5563,7 +5563,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제２권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="수술도구" option="-" />
 	  <item name="통" option="-" />
@@ -5899,7 +5899,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -6039,7 +6039,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제２권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -6225,7 +6225,7 @@
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="쥐약" option="-" />
 	  <item name="면으로 만든 귀마개" option="-" />
@@ -6332,7 +6332,7 @@
 	  <item name="동판" price="73000" />
 	  <item name="철판" price="130000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="쥐약" option="-" />
 	  <item name="면으로 만든 귀마개" option="-" />
@@ -6452,7 +6452,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제２권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -6589,7 +6589,7 @@
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -6704,7 +6704,7 @@
 	  <item name="너도밤나무판" price="6400" />
 	  <item name="느릅나무판" price="13000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="기분 전환용 술통" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -6897,7 +6897,7 @@
 	  <item name="추가 스팽커" price="55000" />
 	  <item name="조선소재，주조의 서 제2권" option="%" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="면으로 만든 귀마개" option="-" />
 	  <item name="예비돛" option="-" />
 	  <item name="예비키" option="-" />
@@ -7098,7 +7098,7 @@
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="수술도구" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -7327,7 +7327,7 @@
 	  <item name="느릅나무판" price="13000" />
 	  <item name="동판" price="73000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="면으로 만든 귀마개" option="-" />
 	  <item name="예비돛" option="-" />
 	  <item name="예비키" option="-" />
@@ -7396,7 +7396,7 @@
 	<group name="[인물]">
 	  <item name="조선소재，대형노" option="%" price="조선공" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="수술도구" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -7581,7 +7581,7 @@
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -7599,7 +7599,7 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="기분 전환용 술통" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -8291,7 +8291,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -8308,7 +8308,7 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="쥐약" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -8459,7 +8459,7 @@
 	  <item name="경량 떡갈나무판" price="38000" />
 	  <item name="경량 마호가니판" price="56000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="쥐약" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -8508,7 +8508,7 @@
 	  <item name="상업용바사" price="5200" />
 	  <item name="베르간틴" price="148800" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="기분 전환용 술통" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -8679,7 +8679,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제3권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -8792,7 +8792,7 @@
 	  <item name="미즌 톱 로얄 세일" option="*" price="45000" />
 	  <item name="조선소재，봉제의 서 제3권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" option="*" price="500" />
 	  <item name="처녀상" option="*" price="13000" />
 	  <item name="천사상" option="*" price="13000" />
@@ -8961,7 +8961,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제3권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" price="500" />
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
@@ -9080,7 +9080,7 @@
 	  <item name="상업용바사" price="5200" />
 	  <item name="베르간틴" price="148800" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="기분 전환용 술통" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -9255,7 +9255,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제3권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -9431,7 +9431,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제3권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" price="500" />
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
@@ -9473,7 +9473,7 @@
 	  <item name="항해기술" option="s" price="카브랄" />
 	  <item name="응용검술" option="s" price="카브랄" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="예비돛" option="-" />
 	  <item name="예비키" option="-" />
 	  <item name="연막" option="-" />
@@ -9638,7 +9638,7 @@
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제3권" option="%" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" price="500" />
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
@@ -9680,7 +9680,7 @@
 	<group name="[인물]">
 	  <item name="조선소재，강화로프" option="%" price="조선공" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="예비돛" option="-" />
 	  <item name="예비키" option="-" />
 	  <item name="연막" option="-" />
@@ -9815,7 +9815,7 @@
 	<group name="[인물]">
 	  <item name="조선소재，저장고" option="%" price="조선공" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" option="*" price="60000" />
 	  <item name="위인상" option="*" price="60000" />
@@ -9894,7 +9894,7 @@
 	<group name="[인물]">
 	  <item name="조선소재，특수선창" option="%" price="조선공" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="예비돛" option="-" />
 	  <item name="침착의 깃발" option="-" />
 	  <item name="예비키" option="-" />
@@ -9951,7 +9951,7 @@
 	  <item name="외과의술" option="s" price="운징가 운쿠와" />
 	  <item name="아프리카어 사전 만드는 법" option="%" price="운징가 운쿠와" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="통" option="-" />
 	  <item name="침착의 깃발" option="-" />
 	  <item name="전염병 특효약" option="-" />
@@ -10011,7 +10011,7 @@
 	  <item name="특수 염색료8" price="5000" />
 	  <item name="아프리카 요리에 도전!" option="$" investment="400k" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="통" option="-" />
 	  <item name="침착의 깃발" option="-" />
 	  <item name="전염병 특효약" option="-" />
@@ -10184,7 +10184,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -10202,7 +10202,7 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="침착의 깃발" option="-" />
 	  <item name="예비돛" option="-" />
 	  <item name="예비키" option="-" />
@@ -10369,7 +10369,7 @@
 	  <item name="선미루" price="130000" />
 	  <item name="추가 소 스팽커" price="3500" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="침착의 깃발" option="-" />
 	  <item name="예비돛" option="-" />
@@ -10449,7 +10449,7 @@
 	  <item name="간이 너도밤나무판" price="2200" />
 	  <item name="간이 느릅나무판" price="5100" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="침착의 깃발" option="-" />
 	  <item name="예비돛" option="-" />
@@ -10524,7 +10524,7 @@
 	  <item name="망향의 카리욘벨" price="200" />
 	  <item name="뱃노래의 악보" price="200" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -10567,7 +10567,7 @@
 	  <item name="망향의 카리욘벨" price="200" />
 	  <item name="뱃노래의 악보" price="200" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -10867,7 +10867,7 @@
 	  <item name="선미루" price="130000" />
 	  <item name="추가 소 스팽커" price="3500" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="통" option="-" />
 	  <item name="면으로 만든 귀마개" option="-" />
 	  <item name="예비돛" option="-" />
@@ -11095,7 +11095,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="통" option="-" />
 	  <item name="면으로 만든 귀마개" option="-" />
 	  <item name="예비돛" option="-" />
@@ -11139,7 +11139,7 @@
 	  <item name="망향의 카리욘벨" price="200" />
 	  <item name="뱃노래의 악보" price="200" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" price="500" />
 	  <item name="매상" price="1800" />
 	  <item name="매의 상" price="5200" />
@@ -11501,7 +11501,7 @@
 	  <item name="경량 마호가니판" price="56000" />
 	  <item name="경량 로즈우드판" price="110000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -11519,7 +11519,7 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="쥐약" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -11724,7 +11724,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
 	  <item name="쥐약" option="-" />
 	  <item name="침착의 깃발" option="-" />
@@ -11943,7 +11943,7 @@
 	  <item name="경량 마호가니판" price="56000" />
 	  <item name="경량 로즈우드판" price="110000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="통" option="-" />
@@ -12308,7 +12308,7 @@
 	  <item name="미즌 갤런트 스테이 세일" price="22000" />
 	  <item name="미즌 로얄 갤런트 세일" price="21000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="통" option="-" />
@@ -12638,7 +12638,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -12768,7 +12768,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
 	  <item name="위인상" price="60000" />
@@ -13151,7 +13151,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	</group>
-	<group name="[상]">
+	<group name="[선수상]">
 	  <item name="솔개상" price="500" />
 	  <item name="처녀상" price="13000" />
 	  <item name="용사상" price="60000" />
@@ -13465,7 +13465,7 @@
 	<group name="[돛]">
 	  <item name="보조용 일본 돛" price="13000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -13661,7 +13661,7 @@
 	<group name="[돛]">
 	  <item name="보조용 정크 세일" price="12000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="육개장" option="+" price="3598" />
 	  <item name="불고기" option="+" price="2698" />
 	  <item name="대구탕" option="+" price="6072" />
@@ -13792,7 +13792,7 @@
 	<group name="[돛]">
 	  <item name="보조용 정크 세일" price="12000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="쥐약" option="-" />
@@ -14096,7 +14096,7 @@
 	<group name="[돛]">
 	  <item name="보조용 정크 세일" price="12000" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="로켄" option="+" price="1573" />
 	  <item name="추세가오" option="+" price="3373" />
 	  <item name="디콰초" option="+" price="1798" />
@@ -14486,7 +14486,7 @@
 	  <item name="일본어" option="s" price="다이코쿠야 고다유" />
 	  <item name="극북어" option="s" price="다이코쿠야 고다유" />
 	</group>
-		<group name="행상인">
+		<group name="[행상인]">
 	  <item name="예비키" option="-" />
 	  <item name="정전 협정서" option="-" />
 	  <item name="징벌의 로프" option="-" />
@@ -14676,7 +14676,7 @@
 	  <item name="공예품 거래" option="s" price="브라난" />
 	  <item name="주조" option="s" price="브라난" />
 	</group>
-		<group name="행상인">
+		<group name="[행상인]">
 	  <item name="구명도구" option="-" />
 	  <item name="소화모래" option="-" />
 	  <item name="목공도구" option="-" />
@@ -16224,7 +16224,7 @@
 	<group name="[인물]">
 	  <item name="육상전 소도구，조리 그2" option="%" price="식당 주인" />
 	</group>
-	<group name="행상인">
+	<group name="[행상인]">
 	  <item name="연막" option="-" />
 	  <item name="재블린" option="-" />
 	  <item name="폭렬약" option="-" />
