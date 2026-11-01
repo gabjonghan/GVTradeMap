@@ -915,14 +915,10 @@ namespace gvtrademap_cs {
 		 디테일정보읽기스레드
 		---------------------------------------------------------------------------*/
 		private void load_info_proc() {
-			_LoadInfosStatus.Start(3, "인터넷에서 동맹항 현황 파악");
-
-			if (m_lib.setting.connect_network) {
-				m_db.World.DownloadDomains(def.LOCAL_NEW_DOMAINS_INDEX_FULLFNAME);
-			}
+			// 일본 서버 동맹 정보는 한국 서버와 다르므로 받지 않는다. 동맹국은 지도에서 직접 바꾼 값을 저장해 쓴다
+			_LoadInfosStatus.Start(2, "도시 정보 가져오기");
 
 			// 디테일정보읽기
-			_LoadInfosStatus.IncStep("도시 정보 가져오기");
 			m_db.World.Load(def.INFO_FULLNAME, def.NEW_DOMAINS_INDEX_FULLFNAME, def.LOCAL_NEW_DOMAINS_INDEX_FULLFNAME);
 
 			// 아이템 DB 와 링크시킨다

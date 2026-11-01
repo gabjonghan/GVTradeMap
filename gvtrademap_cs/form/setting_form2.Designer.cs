@@ -455,12 +455,12 @@
 			this.comboBox3.FormattingEnabled = true;
 			this.comboBox3.Items.AddRange(new object[] {
             "잉글랜드",
-            "스페인",
+            "에스파니아",
             "포르투갈",
             "네덜란드",
             "프랑스",
             "베네치아",
-            "오스만투르크"});
+            "오스만 투르크"});
 			this.comboBox3.Location = new System.Drawing.Point(7, 46);
 			this.comboBox3.Name = "comboBox3";
 			this.comboBox3.Size = new System.Drawing.Size(175, 20);
@@ -471,13 +471,9 @@
 			this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox2.FormattingEnabled = true;
 			this.comboBox2.Items.AddRange(new object[] {
-            "Euros",
-            "Zephyros",
-            "Notos",
-            "Boreas",
-            "Helene",
-            "Polaris",
-            "Eirene"});
+            "헬레네",
+            "폴라리스",
+            "에이레네"});
 			this.comboBox2.Location = new System.Drawing.Point(7, 18);
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(175, 20);

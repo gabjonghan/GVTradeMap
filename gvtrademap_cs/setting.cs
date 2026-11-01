@@ -529,7 +529,7 @@ namespace gvtrademap_cs
 			draw_myship_angle			= true;
 
 			// 대화상자 설정 항목
-			server						= GvoWorldInfo.Server.Euros;
+			server						= GvoWorldInfo.Server.Helene;
 			country						= GvoWorldInfo.Country.England;
 			m_map_index					= MapIndex.Map1;
 			m_map_icon					= MapIcon.Big;
@@ -874,6 +874,8 @@ namespace gvtrademap_cs
 
 			// 대화상자 설정 항목
 			server				  = GvoWorldInfo.GetServerFromString(p.GetProfile("dialog", "server", server.ToString()));
+			// 예전 ini 의 일본 서버는 한국 서버로 바꾼다
+			if (server == GvoWorldInfo.Server.Unknown) server = GvoWorldInfo.Server.Helene;
 			country				 = GvoWorldInfo.GetCountryFromString(p.GetProfile("dialog", "country", country.ToString()));
 			map						= MapIndex.Map1 + p.GetProfile("dialog", "map_index_new",	(int)map);
 			map_icon				= MapIcon.Big + p.GetProfile("dialog", "map_icon",	(int)map_icon);

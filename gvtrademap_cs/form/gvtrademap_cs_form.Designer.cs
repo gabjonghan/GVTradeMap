@@ -169,7 +169,7 @@
 			this.ToolStripMenuItem_country1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.ToolStripMenuItem_country1.Name = "ToolStripMenuItem_country1";
 			this.ToolStripMenuItem_country1.Size = new System.Drawing.Size(168, 22);
-			this.ToolStripMenuItem_country1.Text = "스페인";
+			this.ToolStripMenuItem_country1.Text = "에스파니아";
 			this.ToolStripMenuItem_country1.Click += new System.EventHandler(this.ToolStripMenuItem_country1_Click);
 			// 
 			// ToolStripMenuItem_country2
@@ -214,7 +214,7 @@
 			this.ToolStripMenuItem_country6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.ToolStripMenuItem_country6.Name = "ToolStripMenuItem_country6";
 			this.ToolStripMenuItem_country6.Size = new System.Drawing.Size(168, 22);
-			this.ToolStripMenuItem_country6.Text = "오스만투르크";
+			this.ToolStripMenuItem_country6.Text = "오스만 투르크";
 			this.ToolStripMenuItem_country6.Click += new System.EventHandler(this.ToolStripMenuItem_country6_Click);
 			// 
 			// ToolStripMenuItem_country00

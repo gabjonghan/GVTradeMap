@@ -41,10 +41,6 @@ namespace gvtrademap_cs {
 
 		// 서버
 		public enum Server {
-			Euros,
-			Zephyros,
-			Notos,
-			Boreas,
 			Helene,
 			Polaris,
 			Eirene,
@@ -124,16 +120,22 @@ namespace gvtrademap_cs {
 	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.InlandCity, "내륙도시"),
 	  new EnumParser<GvoWorldInfo.InfoType>(GvoWorldInfo.InfoType.GuildCity, "길드개척도시")
 	};
+		private static EnumParser<GvoWorldInfo.Server>[] m_server_enum_param = new EnumParser<GvoWorldInfo.Server>[3]
+	{
+	  new EnumParser<GvoWorldInfo.Server>(GvoWorldInfo.Server.Helene, "헬레네"),
+	  new EnumParser<GvoWorldInfo.Server>(GvoWorldInfo.Server.Polaris, "폴라리스"),
+	  new EnumParser<GvoWorldInfo.Server>(GvoWorldInfo.Server.Eirene, "에이레네")
+	};
 		private static EnumParser<GvoWorldInfo.Country>[] m_country_enum_param = new EnumParser<GvoWorldInfo.Country>[8]
 	{
 	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Unknown, "무소속"),
 	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.England, "잉글랜드"),
-	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Spain, "스페인"),
+	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Spain, "에스파니아"),
 	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Portugal, "포르투갈"),
 	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Netherlands, "네덜란드"),
 	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.France, "프랑스"),
 	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Venezia, "베네치아"),
-	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Turkey, "오스만투르크")
+	  new EnumParser<GvoWorldInfo.Country>(GvoWorldInfo.Country.Turkey, "오스만 투르크")
 	};
 		private static EnumParser<GvoWorldInfo.CityType>[] m_citytype_enum_param = new EnumParser<GvoWorldInfo.CityType>[4]
 	{
@@ -397,19 +399,6 @@ namespace gvtrademap_cs {
 			return str;
 		}
 
-		public bool DownloadDomains(string domaininfo_file_name) {
-			Stopwatch stopwatch = new Stopwatch();
-			stopwatch.Start();
-			if (load_domains_from_old_data(download_domains())) {
-				WriteDomains(domaininfo_file_name);
-				Console.WriteLine("동맹국다운로드" + stopwatch.ElapsedMilliseconds.ToString());
-				return true;
-			} else {
-				Console.WriteLine("동맹국다운로드(실패)" + stopwatch.ElapsedMilliseconds.ToString());
-				return false;
-			}
-		}
-
 		/*-------------------------------------------------------------------------
 		 상세 정보 읽기
 		 스레드 읽기에 대응
@@ -626,20 +615,12 @@ namespace gvtrademap_cs {
 
 		public static string GetServerStringForShare(GvoWorldInfo.Server _server) {
 			switch (_server) {
-				case GvoWorldInfo.Server.Zephyros:
-					return "zephyros";
-				case GvoWorldInfo.Server.Notos:
-					return "notos";
-				case GvoWorldInfo.Server.Boreas:
-					return "boreas";
-				case GvoWorldInfo.Server.Helene:
-					return "helene";
 				case GvoWorldInfo.Server.Polaris:
 					return "polaris";
 				case GvoWorldInfo.Server.Eirene:
 					return "eirene";
 				default:
-					return "euros";
+					return "helene";
 			}
 		}
 
@@ -647,7 +628,14 @@ namespace gvtrademap_cs {
 		 서버명으로 Server 를 얻는다
 		---------------------------------------------------------------------------*/
 		public static Server GetServerFromString(string str) {
-			return EnumParserUtility<GvoWorldInfo.Server>.ToEnum(str, GvoWorldInfo.Server.Unknown);
+			return EnumParserUtility<GvoWorldInfo.Server>.ToEnum(GvoWorldInfo.m_server_enum_param, str, GvoWorldInfo.Server.Unknown);
+		}
+
+		/*-------------------------------------------------------------------------
+		 서버 표시명을 얻는다
+		---------------------------------------------------------------------------*/
+		public static string GetServerString(Server _server) {
+			return EnumParserUtility<GvoWorldInfo.Server>.ToString(GvoWorldInfo.m_server_enum_param, _server, "");
 		}
 
 		/*-------------------------------------------------------------------------
@@ -695,37 +683,6 @@ namespace gvtrademap_cs {
 
 		public static GvoWorldInfo.CulturalSphere GetCulturalSphereFromString(string str) {
 			return EnumParserUtility<GvoWorldInfo.CulturalSphere>.ToEnum(GvoWorldInfo.m_culturalsphere_enum_param, str, GvoWorldInfo.CulturalSphere.Unknown);
-		}
-
-		private string[] download_domains() {
-			string str1 = HttpDownload.Download("http://gvtrademap.daa.jp/domain.php", Encoding.UTF8);
-			if (str1 == null)
-				return (string[])null;
-			string[] strArray = str1.Split(new string[2]
-			{
-		"\r\n",
-		"\n"
-			}, StringSplitOptions.RemoveEmptyEntries);
-			List<string> list = new List<string>();
-			foreach (string str2 in strArray) {
-				if (!(str2 == "start")) {
-					if (!(str2 == "end"))
-						list.Add(str2);
-					else
-						break;
-				}
-			}
-			return list.ToArray();
-		}
-
-		private bool load_domains_from_old_data(string[] domains) {
-			if (domains == null || domains.Length != 4)
-				return false;
-			foreach (GvoWorldInfo.Info info in m_world) {
-				if (info.CityInfo != null)
-					info.CityInfo.LoadDomainFromNeworkData(domains);
-			}
-			return true;
 		}
 
 		/*-------------------------------------------------------------------------
@@ -882,7 +839,7 @@ namespace gvtrademap_cs {
 													CHECK_MARGIN * 2,
 													CHECK_MARGIN * 2);
 
-				m_server = GvoWorldInfo.Server.Euros;   // 초기값은 에우로스
+				m_server = GvoWorldInfo.Server.Helene;   // 초기값은 헬레네
 				m_cityinfo = null;
 				m_seainfo = null;
 
@@ -2032,7 +1989,7 @@ namespace gvtrademap_cs {
 				Useful.XmlAddAttribute(node1, "cultural_sphere", ((object)m_cultural_sphere).ToString());
 				Useful.XmlAddAttribute(node1, "has_name_image", m_has_name_image.ToString());
 				if (m_alliance_type == GvoWorldInfo.AllianceType.Capital || m_alliance_type == GvoWorldInfo.AllianceType.Territory)
-					Useful.XmlAddAttribute(node1, "default_country", ((object)GetDomain(GvoWorldInfo.Server.Euros)).ToString());
+					Useful.XmlAddAttribute(node1, "default_country", ((object)GetDomain(GvoWorldInfo.Server.Helene)).ToString());
 				Useful.XmlAddAttribute(node1, "lang1", m_lang1);
 				Useful.XmlAddAttribute(node1, "lang2", m_lang2);
 				Useful.XmlAddAttribute(node1, "bar_flags", m_sakaba_flag.ToString());
@@ -2042,15 +1999,14 @@ namespace gvtrademap_cs {
 				if (node == null || node.Name != "domain_info" || (node.Attributes["name"] == null || node.Attributes["name"].Value != m_name) || (node.ChildNodes == null || m_alliance_type != GvoWorldInfo.AllianceType.Alliance))
 					return;
 				foreach (XmlNode node1 in node) {
-					load_domain_sub(node1, GvoWorldInfo.Server.Euros);
-					load_domain_sub(node1, GvoWorldInfo.Server.Zephyros);
-					load_domain_sub(node1, GvoWorldInfo.Server.Notos);
-					load_domain_sub(node1, GvoWorldInfo.Server.Boreas);
+					load_domain_sub(node1, GvoWorldInfo.Server.Helene);
+					load_domain_sub(node1, GvoWorldInfo.Server.Polaris);
+					load_domain_sub(node1, GvoWorldInfo.Server.Eirene);
 				}
 			}
 
 			private void load_domain_sub(XmlNode node, GvoWorldInfo.Server server) {
-				if (node.Name != "server" || node.Attributes["name"] == null || node.Attributes["name"].Value != ((object)server).ToString())
+				if (node.Name != "server" || node.Attributes["name"] == null || GvoWorldInfo.GetServerFromString(node.Attributes["name"].Value) != server)
 					return;
 				m_domains[(int)server] = GvoWorldInfo.GetCountryFromString(Useful.XmlGetAttribute(node, "country", ((object)GvoWorldInfo.Country.Unknown).ToString()));
 			}
@@ -2059,20 +2015,9 @@ namespace gvtrademap_cs {
 				if (node == null || m_alliance_type != GvoWorldInfo.AllianceType.Alliance)
 					return;
 				XmlNode p_node = Useful.XmlAddNode(node, "domain_info", m_name);
-				Useful.XmlAddAttribute(Useful.XmlAddNode(p_node, "server", ((object)GvoWorldInfo.Server.Euros).ToString()), "country", ((object)m_domains[0]).ToString());
-				Useful.XmlAddAttribute(Useful.XmlAddNode(p_node, "server", ((object)GvoWorldInfo.Server.Zephyros).ToString()), "country", ((object)m_domains[1]).ToString());
-				Useful.XmlAddAttribute(Useful.XmlAddNode(p_node, "server", ((object)GvoWorldInfo.Server.Notos).ToString()), "country", ((object)m_domains[2]).ToString());
-				Useful.XmlAddAttribute(Useful.XmlAddNode(p_node, "server", ((object)GvoWorldInfo.Server.Boreas).ToString()), "country", ((object)m_domains[3]).ToString());
-			}
-
-			public bool LoadDomainFromNeworkData(string[] domains) {
-				if (m_alliance_type != GvoWorldInfo.AllianceType.Alliance || domains == null || (domains.Length != 4 || Index < 0) || (domains[0].Length < Index || domains[1].Length < Index || (domains[2].Length < Index || domains[3].Length < Index)))
-					return false;
-				m_domains[0] = GvoWorldInfo.GetCountryFromString(domains[0][Index].ToString());
-				m_domains[1] = GvoWorldInfo.GetCountryFromString(domains[1][Index].ToString());
-				m_domains[2] = GvoWorldInfo.GetCountryFromString(domains[2][Index].ToString());
-				m_domains[3] = GvoWorldInfo.GetCountryFromString(domains[3][Index].ToString());
-				return true;
+				foreach (GvoWorldInfo.Server server in new GvoWorldInfo.Server[] { GvoWorldInfo.Server.Helene, GvoWorldInfo.Server.Polaris, GvoWorldInfo.Server.Eirene }) {
+					Useful.XmlAddAttribute(Useful.XmlAddNode(p_node, "server", GvoWorldInfo.GetServerString(server)), "country", ((object)m_domains[(int)server]).ToString());
+				}
 			}
 		}
 	}

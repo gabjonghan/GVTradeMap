@@ -26,7 +26,7 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 - 셰이더는 자동 빌드되지 않는다. `library_cs/directx/fx/sprite.fx`를 고치면 같은 폴더의 `fxc_cnv.bat`(fxc `/Tfx_2_0`)를 직접 돌려 `sprite.fxo`를 갱신해야 한다. `.fxo`는 directx 어셈블리에 `directx.fx.sprite.fxo`로 임베드된다.
 - Release로 빌드할 때는 `bin\Debug` 안의 데이터 폴더들을 `bin\Release`로 복사해야 한다(원본 `gvtrademap_cs/README.txt`).
 - 테스트 프로젝트·테스트 프레임워크는 없다. 검증은 실제 실행으로만 가능하다.
-- 실행 확인 시 주의: 입력은 자체 루프로 처리되어 합성 클릭(`orca computer click`)은 메뉴를 띄우지 못한다. 실제 입력(`mouse_event`)을 쓴다. 지도 메뉴는 기본 설정에서 **Ctrl+우클릭**이다(`compatible_windows_rclick`). 게임 화면 캡처와 DPI 조합은 게임 없이는 확인할 수 없다.
+- 실행 확인 시 주의: 입력은 자체 루프로 처리되어 합성 클릭(`orca computer click`)은 메뉴를 띄우지 못한다. 실제 입력(`mouse_event`)을 쓴다. 지도 메뉴는 기본 설정에서 **Ctrl+우클릭**이다(`compatible_windows_rclick`). 게임 화면 캡처와 DPI 조합은 게임 없이는 확인할 수 없다. 실제 입력은 맨 앞 창으로 가므로 사용자가 PC 를 쓰는 중이면 다른 창에 들어갈 수 있다. 입력 전에 앱이 맨 앞인지 확인할 것.
 
 ## 아키텍처
 
@@ -60,6 +60,7 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 - 화면 캡처: `gvo/gvo_capture.cs` → `library_cs/gvo_base/gvo_capture_base.cs`. 게임 창은 **창 제목 없이 클래스명만으로** 찾는다(`gvo_def.GVO_CLASS_NAME = "Greate Voyages Online Game MainFrame"`). 일/한/영문판 공통 동작을 위한 의도적 설계이므로 창 제목 매칭을 다시 넣지 말 것.
 - 채팅 로그: `내 문서\KOEI\GV Online\Log\Chat\`을 정규식 규칙 테이블(`gvo_chat_base.analize_data`)로 파싱한다. 한국판 게임은 이 로그가 없다고 보고 분석을 기본으로 끈다. 이자·조선 카운터와 해역 변동은 수동 조작(지도 우클릭 메뉴, 창 우클릭, 해역 설정 창)으로 쓴다.
 - 네트워크: 항로 공유·@web 아이콘은 `def.URL_HP_ORIGINAL`(`http://gvtrademap.daa.jp/`) 대상 HTTP, 그 밖에 `net`/`gvo_net_base`의 TCP 래퍼가 있다. 업데이트 확인은 이 저장소의 `version.dat`(raw.githubusercontent.com, `update_checker`)를 본다. HTTPS 를 위해 `HttpDownload` 정적 생성자에서 TLS 1.2(`(SecurityProtocolType)3072`)를 켠다.
+- 서버는 한국 서버(헬레네, 폴라리스, 에이레네)만 둔다. 국가 표기는 잉글랜드, 에스파니아, 포르투갈, 네덜란드, 프랑스, 베네치아, 오스만 투르크. 일본 서버 동맹 정보 다운로드는 한국 서버와 맞지 않아 제거했고, 동맹국은 사용자가 지도에서 바꾼 값을 `temp\domaininfo.xml` 에 저장한다.
 - 외부 링크: 도시·상륙지 클릭은 인벤 지리 DB(`def.INVEN_AREACITY_URL` + `worldinfos.xml` 의 `url_index`), 레시피 검색은 대항해시대 조이(`gvo_def.URL2/URL3`, UTF-8 인코드). 해역 정보 수집(`gvoac.exe`)은 일본판 전용 도구라 기본 단축키 없이 수동 실행만 한다.
 
 ### 데이터 파일
