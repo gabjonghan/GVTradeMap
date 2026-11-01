@@ -11567,7 +11567,7 @@
 	  <item name="조선소재，로프" option="%" price="조선공" />
 	</group>
   </cityinfo>
-  <cityinfo name="고아">
+  <cityinfo name="고어">
 	<group name="[교역]">
 	  <item name="황마" price="124" />
 	  <item name="목화" price="267" />
@@ -12367,7 +12367,7 @@
 	  <item name="경량 로즈우드판" price="110000" />
 	</group>
   </cityinfo>
-  <cityinfo name="디바오">
+  <cityinfo name="다바오">
 	<group name="[교역]">
 	  <item name="밭벼" price="36" />
 	  <item name="야자유" price="184" />
@@ -14296,7 +14296,7 @@
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
 	</group>
   </cityinfo> 
-  <cityinfo name="상트페테르부르크">
+  <cityinfo name="상트 페테르부르크">
 	<group name="[교역]">
 	  <item name="펠트" option="*" price="772" investment="6.94M 초과 6.68M 이하 발전도 77k" />
 	  <item name="알렉산드라이트" option="*" price="3123" investment="17세기 제5기-18세기 제3기 등장" />
@@ -14715,7 +14715,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="보스니아만 서쪽">
+  <cityinfo name="보스니아만 서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -14728,7 +14728,7 @@
 	  <item name="메귀리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="스칸디나비아 서쪽">
+  <cityinfo name="스칸디나비아 서쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -14753,7 +14753,7 @@
 	  <item name="호밀" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="브리튼 섬 남쪽">
+  <cityinfo name="브리튼 섬 남쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -14764,7 +14764,7 @@
 	  <item name="귀뚜라미" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="브리튼 섬 동쪽">
+  <cityinfo name="브리튼 섬 동쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -14789,7 +14789,7 @@
 	  <item name="메귀리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="프랑스 북서쪽">
+  <cityinfo name="프랑스 북서쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="빨간 꽃" price="-1" />
@@ -14804,7 +14804,7 @@
 	  <item name="밀" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="모로코 서쪽">
+  <cityinfo name="모로코 서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -14819,7 +14819,7 @@
 	  <item name="밭벼" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아프리카 북서쪽">
+  <cityinfo name="아프리카 북서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -14830,7 +14830,7 @@
 	  <item name="나무 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아프리카 북쪽">
+  <cityinfo name="아프리카 북쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="풀" price="-1" />
@@ -14844,7 +14844,7 @@
 	  <item name="사슴" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="비스케이만 남쪽">
+  <cityinfo name="비스케이만 남쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -14858,7 +14858,7 @@
 	  <item name="호밀" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="남 지중해 아프리카 북쪽">
+  <cityinfo name="남 지중해 아프리카 북쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="풀" price="-1" />
@@ -14870,7 +14870,7 @@
 	  <item name="누에콩" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="이집트 북쪽">
+  <cityinfo name="이집트 북쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="생강" price="-1" />
@@ -14882,7 +14882,7 @@
 	  <item name="보리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="터키 서쪽">
+  <cityinfo name="터키 서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="흰 꽃" price="-1" />
@@ -14932,7 +14932,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="흑해 북서쪽">
+  <cityinfo name="흑해 북서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" option="?" price="-1" />
@@ -14946,7 +14946,7 @@
 	  <item name="벼" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="터키 북쪽">
+  <cityinfo name="터키 북쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="모래" price="-1" />
@@ -14961,7 +14961,7 @@
 	  <item name="보리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="흑해 동쪽">
+  <cityinfo name="흑해 동쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" option="?" price="-1" />
@@ -14976,7 +14976,7 @@
 	  <item name="밀" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="멕시코만 남서쪽">
+  <cityinfo name="멕시코만 남서쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -14988,7 +14988,7 @@
 	  <item name="기묘한 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="남비 북해안 고지">
+  <cityinfo name="남미 북해안 고지">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="빨간 꽃" price="-1" />
@@ -15015,7 +15015,7 @@
 	  <item name="기묘한 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="남미 북동쪽">
+  <cityinfo name="남미 북동쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -15028,7 +15028,7 @@
 	  <item name="기묘한 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="남미 남동쪽">
+  <cityinfo name="남미 남동쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="거대한 바위" price="-1" />
@@ -15055,7 +15055,7 @@
 	  <item name="밭벼" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="대서양중앙 서쪽">
+  <cityinfo name="대서양중앙 서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="석재" price="-1" />
@@ -15079,7 +15079,7 @@
 	  <item name="개미" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아프리카 남서쪽">
+  <cityinfo name="아프리카 남서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="모래" price="-1" />
@@ -15093,7 +15093,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아프리카 남남서쪽">
+  <cityinfo name="아프리카 남남서쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="풀" price="-1" />
@@ -15104,7 +15104,7 @@
 	  <item name="나무 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아프리카 남쪽">
+  <cityinfo name="아프리카 남쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="식물성 기름" price="-1" />
@@ -15115,7 +15115,7 @@
 	  <item name="나무 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아프리카 남남동쪽">
+  <cityinfo name="아프리카 남남동쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -15126,7 +15126,7 @@
 	  <item name="나무 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아프리카 남동쪽">
+  <cityinfo name="아프리카 남동쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="삼" price="-1" />
@@ -15138,7 +15138,7 @@
 	  <item name="나무 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="마다가스카르 서쪽">
+  <cityinfo name="마다가스카르 서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -15150,7 +15150,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="인도양 아프리카 동쪽">
+  <cityinfo name="인도양 아프리카 동쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="풀" price="-1" />
@@ -15164,7 +15164,7 @@
 	  <item name="보리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="홍해 서쪽">
+  <cityinfo name="홍해 서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -15176,7 +15176,7 @@
 	  <item name="보리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="홍해 동쪽">
+  <cityinfo name="홍해 동쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="풀" price="-1" />
@@ -15189,7 +15189,7 @@
 	  <item name="보리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아라비아 해 북서쪽">
+  <cityinfo name="아라비아 해 북서쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="풀" option="?" price="-1" />
@@ -15204,7 +15204,7 @@
 	  <item name="보리" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="페르시아 만 북쪽">
+  <cityinfo name="페르시아만 북쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -15218,7 +15218,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="아라비아 해 북동쪽">
+  <cityinfo name="아라비아 해 북동쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -15232,7 +15232,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="인도 서쪽">
+  <cityinfo name="인도양 서쪽 해안">
 	<group name="[교역]">
 	  <item name="모래" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -15246,7 +15246,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="벵갈만 북동쪽">
+  <cityinfo name="벵갈만 북동쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -15258,7 +15258,7 @@
 	  <item name="버섯" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="수마트라 섬 남서쪽">
+  <cityinfo name="수마트라 섬 남서쪽해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="모래" price="-1" />
@@ -15296,7 +15296,7 @@
 	  <item name="벼" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="셀레베스 섬 동쪽">
+  <cityinfo name="셀레베스 섬 동쪽해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -15995,7 +15995,7 @@
 	  <item name="돌" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="카르낙 거석군">
+  <cityinfo name="카르낙">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="풀" price="-1" />
@@ -16124,7 +16124,7 @@
 	  <item name="모래" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="기자지방">
+  <cityinfo name="기자 지방">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="모래" price="-1" />
@@ -16133,7 +16133,7 @@
 	  <item name="사금" price="-1" />
 	</group>
   </cityinfo>
-  <cityinfo name="룩소르지방">
+  <cityinfo name="룩소르 지방">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="모래" price="-1" />
@@ -16291,7 +16291,7 @@
 	  <item name="모래" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="탄자울지방">
+  <cityinfo name="탄자울 지방">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="돌" price="-1" />
@@ -16429,7 +16429,7 @@
 	  <item name="나무 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="폰페이 섬 남쪽">
+  <cityinfo name="폰페이 섬 남쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="통나무" price="-1" />
@@ -16442,7 +16442,7 @@
 	  <item name="기묘한 열매" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="일본 열도 남동쪽">
+  <cityinfo name="일본 열도 남동쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="삼" price="-1" />
@@ -16456,7 +16456,7 @@
 	  <item name="돼지" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="일본 열도 서쪽">
+  <cityinfo name="일본 열도 서쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="목화" price="-1" />
@@ -16469,7 +16469,7 @@
 	  <item name="찹쌀" price="-2" />
 	</group>
   </cityinfo>
-  <cityinfo name="중국 남동쪽">
+  <cityinfo name="중국 남동쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="삼" price="-1" />
@@ -16479,7 +16479,7 @@
 	  <item name="살구씨" price="-1" />
 	</group>
   </cityinfo>
-  <cityinfo name="대만 남동쪽">
+  <cityinfo name="대만 남동쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="흑연" price="-1" />
@@ -16994,7 +16994,7 @@
 	  <item name="해초" price="-1" />
 	</group>
   </cityinfo>
-  <cityinfo name="페르시아 만">
+  <cityinfo name="페르시아만">
 	<group name="[교역]">
 	  <item name="고등어" />
 	  <item name="전갱이" />
@@ -17253,12 +17253,12 @@
 	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
-  <cityinfo name="남 인도양">
+  <cityinfo name="남인도양">
 	<group name="[교역]">
 	  <item name="해수" />
 	</group>
   </cityinfo>
-  <cityinfo name="남동 인도양">
+  <cityinfo name="남동인도양">
 	<group name="[교역]">
 	  <item name="물치 다랑어" />
 	  <item name="정어리" />
@@ -17538,7 +17538,7 @@
 	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
-  <cityinfo name="갈라파고스제도 앞바다">
+  <cityinfo name="갈라파고스 제도 앞바다">
 	<group name="[교역]">
 	  <item name="멸치" />
 	  <item name="정어리" />
@@ -17604,7 +17604,7 @@
 	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
-  <cityinfo name="테라 노바 북쪽">
+  <cityinfo name="테라 노바 북쪽 해안">
 	<group name="[교역]">
 	  <item name="돌" price="-1" />
 	  <item name="버섯" price="-2" />
@@ -17630,7 +17630,7 @@
 			<item name="거대한 바위" price="-1" />
 		</group>
   </cityinfo>
-  <cityinfo name="북미 대륙 동쪽">
+  <cityinfo name="북미 대륙 동쪽 해안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="나무 열매" price="-2" />
@@ -17644,7 +17644,7 @@
 			<item name="크랜베리" price="-1" />
 		</group>
   </cityinfo>
-  <cityinfo name="북미 대륙 남동쪽">
+  <cityinfo name="북미 대륙 남동쪽 연안">
 	<group name="[교역]">
 	  <item name="풀" price="-1" />
 	  <item name="나무 열매" price="-2" />
@@ -17673,7 +17673,7 @@
 			<item name="거대한 바위" price="-1" />
 		</group>
   </cityinfo>
-  <cityinfo name="북미대륙 서쪽">
+  <cityinfo name="북미 대륙 서해안">
 	<group name="[교역]">
 	  <item name="모래" price="-2" />
 	  <item name="돌" price="-2" />
@@ -17780,7 +17780,7 @@
 	  <item name="목재" price="674" />
 	</group>
   </cityinfo>
-  <cityinfo name="북미대륙 서쪽">
+  <cityinfo name="북미 대륙 서해안">
 	<group name="[교역]">
 		  <item name="모래" price="-1" />
 			<item name="돌" price="-1" />
@@ -17960,7 +17960,7 @@
 	  <item name="상아" option="*" />
 	</group>
   </cityinfo>
-  <cityinfo name="이냠바네">
+  <cityinfo name="이냠바느">
 	<group name="[교역]">
 	  <item name="보리" />
 	  <item name="사탕수수" />
@@ -17999,7 +17999,7 @@
 	  <item name="진주" option="*" />
 	</group>
   </cityinfo>
-  <cityinfo name="망갈로르">
+  <cityinfo name="망갈">
 	<group name="[교역]">
 	  <item name="철광석" option="*" />
 	  <item name="자단" option="*" />
