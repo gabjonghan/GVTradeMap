@@ -57,7 +57,7 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 ### 게임 클라이언트 연동
 
 - 화면 캡처: `gvo/gvo_capture.cs` → `library_cs/gvo_base/gvo_capture_base.cs`. 게임 창은 **창 제목 없이 클래스명만으로** 찾는다(`gvo_def.GVO_CLASS_NAME = "Greate Voyages Online Game MainFrame"`). 일/한/영문판 공통 동작을 위한 의도적 설계이므로 창 제목 매칭을 다시 넣지 말 것.
-- 채팅 로그: `내 문서\KOEI\GV Online\Log\Chat\`을 정규식 규칙 테이블(`gvo_chat_base.analize_data`)로 파싱한다.
+- 채팅 로그: `내 문서\KOEI\GV Online\Log\Chat\`을 정규식 규칙 테이블(`gvo_chat_base.analize_data`)로 파싱한다. 한국판 게임은 이 로그가 없다고 보고 분석을 기본으로 끈다. 이자·조선 카운터와 해역 변동은 수동 조작(지도 우클릭 메뉴, 창 우클릭, 해역 설정 창)으로 쓴다.
 - 네트워크: 항로 공유·@web 아이콘은 `def.URL_HP_ORIGINAL`(`http://gvtrademap.daa.jp/`) 대상 HTTP, 그 밖에 `net`/`gvo_net_base`의 TCP 래퍼가 있다. 업데이트 확인은 이 저장소의 `version.dat`(raw.githubusercontent.com, `update_checker`)를 본다. HTTPS 를 위해 `HttpDownload` 정적 생성자에서 TLS 1.2(`(SecurityProtocolType)3072`)를 켠다.
 - 외부 링크: 도시·상륙지 클릭은 인벤 지리 DB(`def.INVEN_AREACITY_URL` + `worldinfos.xml` 의 `url_index`), 레시피 검색은 대항해시대 조이(`gvo_def.URL2/URL3`, UTF-8 인코드). 해역 정보 수집(`gvoac.exe`)은 일본판 전용 도구라 기본 단축키 없이 수동 실행만 한다.
 
