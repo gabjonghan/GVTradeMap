@@ -44,6 +44,8 @@ namespace gvtrademap_cs {
 
 		// 파일명(경로 포함)
 		public const string WEB_ICONS_FULLFNAME = DB_PATH + "webicons.txt";
+		public const string GAME_INFO_PATH = DB_PATH + "gameinfo";
+		public const string GAME_INFO_SETTING_FULLFNAME = SEAROUTE_PATH + "game_info_visible.txt";
 		public const string ITEMDB_FULLNAME = DB_PATH + "item_db.txt";
 		public const string INFO_FULLNAME = DB_PATH + "cityinfos.xml";
 		public const string ITEM_TYPE_DB = DB_PATH + "itemtype_db.xml";

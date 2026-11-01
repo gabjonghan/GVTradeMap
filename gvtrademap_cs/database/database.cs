@@ -36,6 +36,7 @@ namespace gvtrademap_cs {
 		private interest_days m_interest_days;  // 이자로부터의 경과 일수
 		private gvo_build_ship_counter m_build_ship_counter;	// 조선일수관리
 		private map_mark m_map_mark;			// 메모아이콘
+		private game_info m_game_info;			// 게임 자료
 		private ItemDatabaseCustom m_item_database; // 아이템DB
 		private ShipPartsDataBase m_ship_parts_database;	// 배부품DB
 		private sea_area m_sea_area;			// 위험해역변동시스템
@@ -56,6 +57,7 @@ namespace gvtrademap_cs {
 		public interest_days InterestDays { get { return m_interest_days; } }
 		public gvo_build_ship_counter BuildShipCounter { get { return m_build_ship_counter; } }
 		public map_mark MapMark { get { return m_map_mark; } }
+		public game_info GameInfo { get { return m_game_info; } }
 		public ItemDatabaseCustom ItemDatabase { get { return m_item_database; } }
 		public sea_area SeaArea { get { return m_sea_area; } }
 		public gvo_season GvoSeason { get { return m_season; } }
@@ -89,6 +91,7 @@ namespace gvtrademap_cs {
 			m_web_icons = new WebIcons(lib);
 			// 메모아이콘
 			m_map_mark = new map_mark(lib, def.MEMO_ICONS_FULLFNAME);
+			m_game_info = new game_info(lib, def.GAME_INFO_PATH, def.GAME_INFO_SETTING_FULLFNAME);
 			// 항로공유
 			m_share_routes = new ShareRoutes(lib);
 			// 화면캡처
@@ -142,6 +145,7 @@ namespace gvtrademap_cs {
 
 			// 메모 아이콘 기록
 			m_map_mark.Write(def.MEMO_ICONS_FULLFNAME);
+			m_game_info.WriteSetting();
 
 			// 위험해역 변동 시스템 정보 기록
 			m_sea_area.WriteSetting(def.SEAAREA_FULLFNAME);
@@ -177,6 +181,7 @@ namespace gvtrademap_cs {
 
 			// 메모아이콘
 			m_map_mark.Draw();
+			m_game_info.Draw();
 		}
 
 		/*-------------------------------------------------------------------------

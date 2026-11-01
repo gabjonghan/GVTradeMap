@@ -68,10 +68,12 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 - `cityinfos.xml` — 도시별 교역품/가격, `item_db.txt` — CSV(`id,분류,이름,설명`, UTF-8 BOM), `itemtype_db.xml`, `ShipParts.xml`, `webicons.txt`, `domaininfo.xml`
 - 데이터 간 이름 일치가 기능의 전제다: `cityinfos.xml`·`itemtype_db.xml`·`ShipParts.xml` 의 아이템명은 `item_db.txt` 의 이름으로 조회된다(`ItemDatabase.Find` — 정확 일치 → `m_ajust_name_list` → 띄어쓰기·괄호·♂♀ 무시 비교). 이름을 고칠 때는 `item_db.txt` 표기를 기준으로 할 것. `item_db.txt` 의 분류명(2열)은 `gvo_item_database.cs` 의 switch 와 1:1이므로 바꾸면 카테고리 판정이 깨진다.
 - `ShipParts.xml` 의 `PartsType`/`ShipSizeType` 값은 `ShipPartsDataBase` 의 한국어 키워드("선체","돛","대포","병기" / "소형","중형","대형","전부","중형, 대형")와 정확히 같아야 한다. 해석 실패 시 조용히 기본값(Hull/All)이 된다.
+- 아이콘 칸을 추가하려면 `map/gv_pics20.dds`(DXT1, 256×256)의 빈 칸을 쓰고 `icons.cs` 의 `icon_index` 끝과 `add_rects()` 끝에 같은 순서로 넣는다. `.pdn` 원본에는 주점 종업원 아이콘(144,128)이 없다.
 - `cityinfos.xml` 의 그룹명은 `world_info.cs` 의 `m_group_name_tbl` 과 정확히 같아야 한다. 다르면 그 그룹은 통째로 읽히지 않는다.
 - `worldinfos.xml` 의 `url_index` 는 인벤 지리 DB 의 code 다(원본의 일본 사이트 번호에서 교체). 인벤에 없는 장소는 `-1`.
 - 장소명은 한국 서버 표기를 따른다: 인벤 지리 DB 를 먼저 보고, 없으면 KR v2.0.4 표기를 쓴다. `worldinfos.xml` 과 `cityinfos.xml` 의 이름은 정확히 같아야 하고(다르면 품목이 조용히 버려짐), 같은 이름이 두 번 있으면 안 된다.
 - `gvtrademap_cs/データフォーマット.txt`(Shift-JIS) — 구버전 텍스트 포맷 문서지만 **필드 의미(주점 인덱스 비트, 도시 종류, 동맹 종류, 국가 번호)는 현행 XML 속성에 그대로 대응**하므로 데이터 편집 시 참고 문서다.
+- `database/gameinfo/*.txt` — 게임 자료 창의 분류. 파일을 추가하면 분류가 늘고 코드 수정은 필요 없다(`이름=x,y` 는 지도 표시 좌표, `// 제목` 은 이후 좌표의 구역명, 나머지는 설명문). UTF-8 BOM.
 - 런타임 생성 폴더: `temp\`(항로도·해역), `memo\`, `SS\`, `map\`. 설정은 `gvtrademap_cs.ini`에 `IIniSaveLoad.IniLoad/IniSave` 구현(`GlobalSettings`, `KeyAssignManager`)으로 저장된다.
 
 ### library_cs

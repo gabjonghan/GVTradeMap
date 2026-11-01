@@ -95,6 +95,7 @@ namespace gvtrademap_cs {
 		private RequestCtrl m_req_show_find_form;
 		// 항로도 목록 대화상자
 		private sea_routes_form2 m_sea_routes_form;
+		private game_info_form m_game_info_form;
 		private RequestCtrl m_req_sea_routes_form;
 
 		// 마우스훅
@@ -1351,6 +1352,7 @@ namespace gvtrademap_cs {
 
 			// 메모아이콘
 			if (tip == null) tip = m_db.MapMark.GetToolTip(gpos);
+			if (tip == null) tip = m_db.GameInfo.GetToolTip(gpos);
 
 			// 도시명
 			/*			if(m_lib.setting.map_draw_names == map_draw_names.draw){
@@ -1943,6 +1945,7 @@ namespace gvtrademap_cs {
 			int index = contextMenuStrip2.Items.IndexOf(toolStripSeparator7);
 			contextMenuStrip2.Items.Insert(index, new ToolStripMenuItem("조선 카운터 시작/초기화...", null, new EventHandler(build_ship_menu_Click)));
 			contextMenuStrip2.Items.Insert(index + 1, new ToolStripMenuItem("이자 카운터 초기화...", null, new EventHandler(reset_interest_menu_Click)));
+			contextMenuStrip2.Items.Insert(index + 2, new ToolStripMenuItem("게임 자료...", null, new EventHandler(game_info_menu_Click)));
 		}
 
 		private void open_sea_area_dlg_menu_Click(object sender, EventArgs e) {
@@ -1959,6 +1962,22 @@ namespace gvtrademap_cs {
 
 		private void reset_interest_menu_Click(object sender, EventArgs e) {
 			build_ship_form.ResetInterest(this, m_db);
+		}
+
+		private void game_info_menu_Click(object sender, EventArgs e) {
+			show_game_info_form();
+		}
+
+		/*-------------------------------------------------------------------------
+		 게임 자료 창을 연다
+		---------------------------------------------------------------------------*/
+		private void show_game_info_form() {
+			if (m_game_info_form == null) m_game_info_form = new game_info_form(m_lib, m_db.GameInfo);
+			if (m_game_info_form.Visible) {
+				m_game_info_form.Activate();
+			} else {
+				m_game_info_form.Show(this);
+			}
 		}
 
 		/*-------------------------------------------------------------------------
@@ -2237,6 +2256,9 @@ namespace gvtrademap_cs {
 				case KeyFunction.setting_window_button_12:
 					// 검색 대화상자를 연다
 					show_find_dialog();
+					break;
+				case KeyFunction.game_info_dlg:
+					show_game_info_form();
 					break;
 				case KeyFunction.setting_window_button_13:
 					// 설정 대화상자를 연다
