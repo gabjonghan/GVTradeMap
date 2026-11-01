@@ -40,7 +40,7 @@ namespace gvtrademap_cs
 			tab_2,						// 공방
 			tab_3,						// 인물
 			tab_4,						// 조선소주인
-			tab_4_1,					// 조선공
+			tab_4_1,					// 주점 종업원
 			tab_5,						// 무기장인
 			tab_6,						// 제재소장인
 			tab_7,						// 돛제작자
@@ -180,7 +180,7 @@ namespace gvtrademap_cs
 			case type.tab_2:				// 공방
 			case type.tab_3:				// 인물
 			case type.tab_4:				// 조선소주인
-			case type.tab_4_1:				// 조선공
+			case type.tab_4_1:				// 주점 종업원
 			case type.tab_5:				// 무기장인
 			case type.tab_6:				// 제재소장인
 			case type.tab_7:				// 돛제작자
@@ -269,7 +269,7 @@ namespace gvtrademap_cs
 			case type.tab_2:				// 공방
 			case type.tab_3:				// 인물
 			case type.tab_4:				// 조선소주인
-			case type.tab_4_1:				// 조선공
+			case type.tab_4_1:				// 주점 종업원
 			case type.tab_5:				// 무기장인
 			case type.tab_6:				// 제재소장인
 			case type.tab_7:				// 돛제작자
@@ -511,8 +511,8 @@ namespace gvtrademap_cs
 			case type.tab_1:				// 도구
 			case type.tab_2:				// 공방
 			case type.tab_3:				// 인물
-			case type.tab_4:				// 조선공
-			case type.tab_4_1:				// 조선소주인
+			case type.tab_4:				// 조선소주인
+			case type.tab_4_1:				// 주점 종업원
 			case type.tab_5:				// 무기장인
 			case type.tab_6:				// 제재소장인
 			case type.tab_7:				// 돛제작자
@@ -566,7 +566,7 @@ namespace gvtrademap_cs
 			case type.tab_2:					return "공방";
 			case type.tab_3:					return "인물";
 			case type.tab_4:					return "조선소주인";
-			case type.tab_4_1:				  return "조선공";
+			case type.tab_4_1:				  return "주점 종업원";
 			case type.tab_5:					return "무기장인";
 			case type.tab_6:					return "제재소장인";
 			case type.tab_7:					return "돛제작자";

@@ -3,6 +3,9 @@
   <!-- 도시정보 -->
   
   <cityinfo name="암스테르담">
+	<group name="[주점 종업원]">
+	  <item name="요한나" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="햄" price="375" />
 	  <item name="진" price="515" />
@@ -748,6 +751,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="스톡홀름">
+	<group name="[주점 종업원]">
+	  <item name="잉그리드" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="호밀" price="32" />
 	  <item name="향쑥" price="291" />
@@ -1975,6 +1981,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="런던">
+	<group name="[주점 종업원]">
+	  <item name="안젤라" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="위스키" price="552" />
 	  <item name="맥주" price="248" />
@@ -3043,6 +3052,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="세비야">
+	<group name="[주점 종업원]">
+	  <item name="로잘리오" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="와인" price="378" />
 	  <item name="수은제" option="*" price="1300" investment="400k" />
@@ -3974,6 +3986,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="리스본">
+	<group name="[주점 종업원]">
+	  <item name="크리스티나" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="햄" price="376" />
 	  <item name="아몬드유" option="*" price="448" investment="120k" />
@@ -4334,6 +4349,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="베네치아">
+	<group name="[주점 종업원]">
+	  <item name="에레오노라" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="후추" price="5619" />
 	  <item name="파셀리" price="95" />
@@ -4760,6 +4778,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="제노바">
+	<group name="[주점 종업원]">
+	  <item name="베아트리스" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="리큐르" price="476" />
 	  <item name="라벤더" option="*" price="674" />
@@ -5220,6 +5241,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="나폴리">
+	<group name="[주점 종업원]">
+	  <item name="죠반나" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="쇠고기" option="*" price="568" investment="225K 초과 240K 이하" />
 	  <item name="헤이즐넛" option="*" price="494" investment="305K 초과 385K 이하" />
@@ -5722,6 +5746,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="마르세이유">
+	<group name="[주점 종업원]">
+	  <item name="일레느" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="오리고기" price="267" />
 	  <item name="소금" price="207" />
@@ -6207,6 +6234,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아테네">
+	<group name="[주점 종업원]">
+	  <item name="뮬리네" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="올리브" price="224" />
 	  <item name="올리브유" price="275" />
@@ -6882,6 +6912,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="알렉산드리아">
+	<group name="[주점 종업원]">
+	  <item name="율리아" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="밀" option="*" price="39" />
 	  <item name="누에콩" option="*" price="53" />
@@ -7088,6 +7121,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="이스탄불">
+	<group name="[주점 종업원]">
+	  <item name="라디아" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="양고기" price="315" />
 	  <item name="올리브유" price="275" />
@@ -7595,6 +7631,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="튀니스">
+	<group name="[주점 종업원]">
+	  <item name="샤자르" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="팥" price="67" />
 	  <item name="올리브" option="*" price="223" />
@@ -8363,6 +8402,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="산토도밍고">
+	<group name="[주점 종업원]">
+	  <item name="와이라" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="사탕수수" price="191" />
 	  <item name="감자" price="115" />
@@ -8675,6 +8717,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="포르토벨로">
+	<group name="[주점 종업원]">
+	  <item name="라울" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="감자" price="115" />
 	  <item name="옥수수" price="47" />
@@ -9337,7 +9382,7 @@
   </cityinfo>
   <cityinfo name="그랜드케이맨">
 	<group name="[교역]">
-	  <item name="데킬라" option="1100" />
+	  <item name="데킬라" price="1100" />
 	  <item name="파인애플" option="*" price="860" />
 	  <item name="어육" price="127" />
 	  <item name="은" option="*" investment="320k" />
@@ -9892,6 +9937,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="리우데자네이루">
+	<group name="[주점 종업원]">
+	  <item name="지셀" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="목화" price="267" />
 	  <item name="사탕수수" price="192" />
@@ -10095,6 +10143,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="케이프타운">
+	<group name="[주점 종업원]">
+	  <item name="아리데스" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="밀" option="*" price="39" investment="240k" />
 	  <item name="말린 살구" option="*" price="343" investment="120k" />
@@ -10153,6 +10204,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="세인트조지스">
+	<group name="[주점 종업원]">
+	  <item name="라에마" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="코코넛" price="257" />
 	  <item name="목화" option="*" price="267" investment="320k" />
@@ -10478,6 +10532,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="잔지바르">
+	<group name="[주점 종업원]">
+	  <item name="가더" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="밭벼" price="35" />
 	  <item name="밀" price="39" />
@@ -10987,6 +11044,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="아덴">
+	<group name="[주점 종업원]">
+	  <item name="사할" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="127" />
 	  <item name="커피" price="378" />
@@ -11598,6 +11658,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="캘리컷">
+	<group name="[주점 종업원]">
+	  <item name="파르라티" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="홍차" option="*" price="641" investment="120k" />
 	  <item name="후추" price="257" />
@@ -12162,6 +12225,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="자카르타">
+	<group name="[주점 종업원]">
+	  <item name="라우트" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="어육" price="128" />
 	  <item name="벼" price="43" />
@@ -13342,6 +13408,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="리마">
+	<group name="[주점 종업원]">
+	  <item name="티카" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="마카" price="350" />
 	  <item name="아와이요" price="1555" />
@@ -13587,6 +13656,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="나가사키">
+	<group name="[주점 종업원]">
+	  <item name="다카츠구" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="소바" />
 	  <item name="청주" />
@@ -13705,6 +13777,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="사카이">
+	<group name="[주점 종업원]">
+	  <item name="유키" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="소바" />
 	  <item name="청주" />
@@ -13790,6 +13865,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="포항">
+	<group name="[주점 종업원]">
+	  <item name="철수" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="참다시마" />
 	  <item name="한우" />
@@ -13902,6 +13980,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="한양">
+	<group name="[주점 종업원]">
+	  <item name="영희" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="참다시마" />
 	  <item name="한우" />
@@ -14039,6 +14120,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="항주">
+	<group name="[주점 종업원]">
+	  <item name="소운" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="중화면" />
 	  <item name="당나귀" />
@@ -14128,6 +14212,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="중경">
+	<group name="[주점 종업원]">
+	  <item name="효비" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="중화면" />
 	  <item name="당나귀" />
@@ -14305,6 +14392,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="단수이">
+	<group name="[주점 종업원]">
+	  <item name="건굉" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="숭어알 젓갈" />
 	  <item name="사다장" />
@@ -14354,6 +14444,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="안평">
+	<group name="[주점 종업원]">
+	  <item name="미연" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="숭어알 젓갈" />
 	  <item name="사다장" />
@@ -14633,6 +14726,9 @@
 	</group>
   </cityinfo> 
   <cityinfo name="상트 페테르부르크">
+	<group name="[주점 종업원]">
+	  <item name="릴리아" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="펠트" option="*" price="772" investment="6.94M 초과 6.68M 이하 발전도 77k" />
 	  <item name="알렉산드라이트" option="*" price="3123" investment="17세기 제5기-18세기 제3기 등장" />
@@ -14836,6 +14932,9 @@
 	</group>
   </cityinfo>
   <cityinfo name="샌프란시스코">
+	<group name="[주점 종업원]">
+	  <item name="애니" option="^" />
+	</group>
 	<group name="[교역]">
 	  <item name="소" option="" price="316" />
 	  <item name="밀" option="" price="44" investment="" />

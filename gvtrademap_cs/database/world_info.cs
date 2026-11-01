@@ -734,7 +734,7 @@ namespace gvtrademap_cs {
 		public class Info : hittest, IDictionaryNode<string> {
 			private string[] m_group_name_tbl = new string[]{
 												"[교역]", "[도구]", "[공방]", "[인물]",
-												"[배]", "[조선공]", "[대포]", "[추가장갑]",
+												"[배]", "[주점 종업원]", "[대포]", "[추가장갑]",
 												"[돛]", "[선수상]", "[행상인]",
 												"",
 											};
@@ -1068,7 +1068,7 @@ namespace gvtrademap_cs {
 					case Info.GroupIndex._2: return "대장장이";
 					case Info.GroupIndex._3: return "인물";
 					case Info.GroupIndex._4: return "조선소주인";
-					case Info.GroupIndex._4_1: return "조선공";
+					case Info.GroupIndex._4_1: return "주점 종업원";
 					case Info.GroupIndex._5: return "무기장인";
 					case Info.GroupIndex._6: return "제재소장인";
 					case Info.GroupIndex._7: return "돛제작자";
@@ -1299,7 +1299,7 @@ namespace gvtrademap_cs {
 				_2,  // 공방
 				_3,  // 인물
 				_4,  // 조선소주인
-				_4_1,   // 조선공
+				_4_1,   // 주점 종업원
 				_5,  // 대포
 				_6,  // 추가장갑
 				_7,  // 돛
@@ -1564,6 +1564,10 @@ namespace gvtrademap_cs {
 							case "#": return Color.Green;
 							// 행상인
 							case "-": return Color.Gray;
+							// 특수 행상인
+							case "_": return Color.Gray;
+							// 주점 종업원
+							case "^": return Color.DarkMagenta;
 							// 그 밖의 것
 							default: return Color.Black;
 						}
@@ -1587,6 +1591,10 @@ namespace gvtrademap_cs {
 							case "#": return "무역상인";
 							// 행상인
 							case "-": return "행상인";
+							// 특수 행상인
+							case "_": return "행상인";
+							// 주점 종업원
+							case "^": return "종업원";
 
 							// 그 밖의 것
 							default:
@@ -1675,12 +1683,29 @@ namespace gvtrademap_cs {
 					}
 
 					/*-------------------------------------------------------------------------
+					 아이템 DB 의 분류가 이 그룹에 어울리는지 얻는다
+					 보닛(모자/보조돛), 호박(식료품/보석)처럼 이름이 같은 행을 구분하는 데 쓴다
+					---------------------------------------------------------------------------*/
+					private bool is_group_type(string type) {
+						switch ((Info.GroupIndex)m_group_index) {
+							case Info.GroupIndex._0: return ItemDatabase.GetCategolyFromType(type) != ItemDatabase.Categoly.Unknown;
+							case Info.GroupIndex._3: return type.EndsWith("스킬") || (type == "보고");
+							case Info.GroupIndex._4: return type.EndsWith("범선") || type.EndsWith("갤리");
+							case Info.GroupIndex._5: return type.EndsWith("포");
+							case Info.GroupIndex._6: return type == "추가장갑";
+							case Info.GroupIndex._7: return type == "보조돛";
+							case Info.GroupIndex._8: return type == "선수상";
+							default: return (type != "가구") && (type != "문장") && (type != "아이템 효과");
+						}
+					}
+
+					/*-------------------------------------------------------------------------
 					 아이템 DB 와 링크시킨다
 					---------------------------------------------------------------------------*/
 					internal void LinkItemDatabase(ItemDatabaseCustom db, string info_name) {
 						if (String.IsNullOrEmpty(Name)) return;
 
-						ItemDatabaseCustom.Data d = db.Find(Name);
+						ItemDatabaseCustom.Data d = db.Find(Name, is_group_type);
 #if DEBUG
 						//						if(d == null){
 						//							Debug.WriteLine(String.Format("{0} {1}", info_name, name));

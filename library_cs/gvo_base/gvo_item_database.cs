@@ -151,6 +151,18 @@ namespace gvo_base
 		 완전 일치만
 		 아이템과의 링크용
 		---------------------------------------------------------------------------*/
+		public Data Find(string name, Predicate<string> is_type)
+		{
+			// 같은 이름의 행이 여럿이면 분류가 맞는 행을 우선한다
+			Data[]	list	= base.GetValueList(name);
+			if((list != null) && (list.Length > 1)){
+				foreach(Data d in list){
+					if(is_type(d.Type))	return d;
+				}
+			}
+			return Find(name);
+		}
+
 		public Data Find(string name)
 		{
 			// item_db.txt 에 그대로 있으면 보정표보다 우선한다
