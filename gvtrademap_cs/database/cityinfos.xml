@@ -57,6 +57,9 @@
 	  <item name="고급모자 봉제법" option="*" price="200000" investment="240k" />
 	  <item name="방어구 장인의 공예기법" option="*" price="300000" investment="600k" />
 	  <item name="북유럽의 명물요리집" option="$" price="1M" />
+	  <item name="강욕상인의 철쇄" option="*" price="3000" investment="16세기 : 1, 2, 3" />
+	  <item name="한자 동맹 인장" option="*" price="5000" investment="16세기 : 5" />
+	  <item name="손도끼" price="25000" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -84,6 +87,7 @@
 	  <item name="마네킹(보통 남성형)" price="3000" />
 	  <item name="마네킹(보통 여성형)" price="3000" />
 	  <item name="고급 상납품 포장(NO.1)" option="%" />
+	  <item name="강력 포승" price="100000" />
 	</group>
 	<group name="[인물]">
 	  <item name="관찰" option="s" price="모험조합" />
@@ -113,6 +117,8 @@
 	  <item name="프랑스어" option="s" price="루벤스" />
 	  <item name="식물" option="h" price="파르네펠트 의장" />
 	  <item name="조선소재，돛줄" option="%" price="조선공" />
+	  <item name="노 젓기" option="s" price="해양 조합 마스터" />
+	  <item name="애완동물 키우는 법 상급편" option="%" price="조련사" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -186,6 +192,9 @@
 	  <item name="대형클리퍼★" price="5580000" />
 	  <item name="상업용대형클리퍼★" price="5670000" />
 	  <item name="조선소재，선체의 서 제1권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -288,6 +297,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
+	  <item name="조선소재，돛줄" option="%" price="%" />
 	</group>
 	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
@@ -307,6 +317,12 @@
 	  <item name="애플 파이" option="+" />
 	  <item name="게르만어 번역메모" option="@" />
 	  <item name="동유럽어 번역메모" option="@" />
+	  <item name="기분 전환용 술통" option="_" />
+	  <item name="예비키" option="_" />
+	  <item name="전염병 특효약" option="_" />
+	  <item name="침착의 깃발" option="_" />
+	  <item name="정전 협정서" option="_" />
+	  <item name="철수의 종" option="_" />
 	</group>
   </cityinfo>
   <cityinfo name="앤트워프">
@@ -406,6 +422,9 @@
 	  <item name="상업용갤리온" price="4600000" />
 	  <item name="전투용갤리온" price="4600000" />
 	  <item name="캐치★(로즈우드)" option="*" price="1215000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -603,6 +622,7 @@
 	  <item name="은세공" price="2674" />
 	  <item name="고급가구" option="*" price="2457" investment="180k" />
 	  <item name="도자기" price="1254" />
+	  <item name="면화" option="*" price="535" investment="720k" />
 	</group>
 	<group name="[도구]">
 	  <item name="질레트" price="27500" />
@@ -653,6 +673,8 @@
 	  <item name="호위용 코르벳★" price="2700000" />
 	  <item name="호위용 코르벳★★" price="675000" />
 	  <item name="호위용 코르벳★★★" price="1350000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -807,6 +829,8 @@
 	  <item name="북유럽형중갤리★" price="12204000" />
 	  <item name="북유럽형중갤리★★" option="*" price="3051000" investment="64k" />
 	  <item name="북유럽형중갤리★★★" price="6102000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -952,6 +976,8 @@
 	  <item name="발트 갤리★" option="*" price="19950000" />
 	  <item name="발트 갤리★★" option="*" price="4987500" />
 	  <item name="발트 갤리★★★" price="9975000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
   </cityinfo>
   <cityinfo name="함부르크">
@@ -1056,6 +1082,8 @@
 	  <item name="개조 중 카락★★" price="1050000" />
 	  <item name="개조 중 카락★★★" price="2100000" />
 	  <item name="조선소재，선체의 서 제2권" option="%" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -1150,6 +1178,10 @@
 	  <item name="밀" price="39" />
 	  <item name="소금" price="207" />
 	  <item name="민들레" option="*" price="192" investment="500k" />
+	  <item name="주석" price="" />
+	  <item name="면 원단" option="*" price="761" investment="600k" />
+	  <item name="화승총" price="" />
+	  <item name="호박(보석)" price="2820" />
 	</group>
 	<group name="[도구]">
 	  <item name="라운데르 단검" option="*" price="24500" />
@@ -1221,6 +1253,8 @@
 	  <item name="프류트★★" option="*" price="61500" />
 	  <item name="프류트★★★" option="*" price="123000" />
 	  <item name="캐치★(로즈우드)" option="*" price="1215000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
   </cityinfo>
   <cityinfo name="그로닝겐">
@@ -1320,6 +1354,9 @@
 	  <item name="브트쉽★★★" price="1579200" />
 	  <item name="조사용 브트쉽★★★" price="1579200" />
 	  <item name="장갑전열함★★" option="*" price="9600000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
   </cityinfo>
   <cityinfo name="베르겐">
@@ -1398,6 +1435,8 @@
 	  <item name="봄켓치★(철판)" price="1395000" />
 	  <item name="코르벳★(로즈우드)" price="3240000" />
 	  <item name="특수 코르벳★★★" price="1296000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -1570,6 +1609,8 @@
 	  <item name="상업용대형카락★★★" price="552000" />
 	  <item name="개조 중 카락★★" price="1050000" />
 	  <item name="개조 중 카락★★★" price="2100000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -1798,6 +1839,7 @@
 	  <item name="범용 소형 확장 선실" option="*" price="80000" />
 	  <item name="범용소형포문" option="*" price="30000" />
 	  <item name="범용 소형 확장 창고" option="*" price="80000" />
+	  <item name="불꽃 제작 기법서" option="%" />
 	</group>
 	<group name="[인물]">
 	  <item name="조선소재，가공철재" option="%" price="조선공" />
@@ -1850,6 +1892,9 @@
 	  <item name="소형갤리온★★" option="*" price="124500" />
 	  <item name="수송용갤리온★★" option="*" price="126000" />
 	  <item name="장갑전열함★★" option="*" price="9600000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -1985,6 +2030,11 @@
 	  <item name="방어구 장인의 공예기법" option="*" price="300000" investment="600k" />
 	  <item name="북유럽의 명물요리집" option="$" price="1M" />
 	  <item name="고급 상납품 포장(NO.3)" option="%" />
+	  <item name="전염병 특효약" option="*" price="5000" investment="16세기 : 4, 5" />
+	  <item name="신비한 향신료" option="*" price="10000" investment="15세기 : 5 16세기 : 1, 2, 3" />
+	  <item name="굉음탄" option="*" price="500" investment="16세기 : 5" />
+	  <item name="스피아" price="34400" />
+	  <item name="육상전용 소도구 주조편" option="*" price="10000" investment="15세기 : 3, 4" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -2012,6 +2062,7 @@
 	  <item name="마네킹(보통 남성형)" price="3000" />
 	  <item name="마네킹(보통 여성형)" price="3000" />
 	  <item name="조선공입문 공예편" option="%" />
+	  <item name="강력 포승" price="100000" />
 	</group>
 	<group name="[인물]">
 	  <item name="지리학" option="s" price="모험조합" />
@@ -2042,6 +2093,8 @@
 	  <item name="바디 랭귀지" option="s" price="존 디" />
 	  <item name="존 디의 연금술" option="%" price="존 디" />
 	  <item name="조선소재，돛줄" option="%" price="조선공" />
+	  <item name="노르웨이어" option="s" price="해양 조합 마스터" />
+	  <item name="애완동물 길들이기 입문" option="%" price="조련사" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -2114,6 +2167,9 @@
 	  <item name="경갤리온★★★" price="243000" />
 	  <item name="전열함★★" option="*" price="1005000" />
 	  <item name="조선소재，선체의 서 제1권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -2216,6 +2272,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
+	  <item name="조선소재，돛줄" option="%" price="%" />
 	</group>
 	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
@@ -2238,6 +2295,12 @@
 	  <item name="고급상납품（소형선용）" option="#" />
 	  <item name="토박이해적용 상납품" option="#" />
 	  <item name="게르만어 번역메모" option="@" />
+	  <item name="기분 전환용 술통" option="_" />
+	  <item name="예비키" option="_" />
+	  <item name="전염병 특효약" option="_" />
+	  <item name="침착의 깃발" option="_" />
+	  <item name="정전 협정서" option="_" />
+	  <item name="철수의 종" option="_" />
 	</group>
   </cityinfo>
   <cityinfo name="칼레">
@@ -2317,6 +2380,9 @@
 	  <item name="상업용갤리온" price="4600000" />
 	  <item name="전투용갤리온" price="4600000" />
 	  <item name="조선소재・소해정" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -2488,6 +2554,9 @@
 	  <item name="수송용 케벡★★★" price="4872000" />
 	  <item name="작전용 케벡★★★" option="*" price="4872000" />
 	  <item name="조선소재，선체의 서 제2권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="800" />
@@ -2598,6 +2667,9 @@
 	  <item name="봄바르다★★" option="*" price="253800" />
 	  <item name="봄바르다★★★" option="*" price="507600" />
 	  <item name="장갑전열함★★" option="*" price="9600000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -2733,6 +2805,7 @@
 	  <item name="구제" option="s" price="두아르테 로페스" />
 	  <item name="서아라비아어" option="s" price="두아르테 로페스" />
 	  <item name="조선소재，로프" option="%" price="조선공" />
+	  <item name="서아프리카어" option="s" price="두아르테 로페스" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -2785,6 +2858,9 @@
 	  <item name="상업용 대형 캐러벨★★" option="*" price="244800" />
 	  <item name="강습용 중 캐러벨★★" option="*" price="280800" />
 	  <item name="조선소재，선체의 서 제2권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="800" />
@@ -2860,6 +2936,7 @@
 	  <item name="레몬밤" price="256" />
 	  <item name="황마" price="124" />
 	  <item name="산호" option="*" price="2985" investment="500k" />
+	  <item name="붉은 콩" price="68" />
 	</group>
 	<group name="[도구]">
 	  <item name="펠트제 악톤" price="8300" />
@@ -2935,6 +3012,9 @@
 	  <item name="이베리안 지벡★★★" option="*" price="3948000" investment="60k" />
 	  <item name="순항형 개조 지벡★★★" option="*" price="3948000" investment="60k" />
 	  <item name="장갑전열함★★" price="9600000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -3018,6 +3098,11 @@
 	  <item name="방어구 장인의 공예기법" option="*" price="300000" investment="600k" />
 	  <item name="서 지중해의 명물요리집" option="$" />
 	  <item name="고급 상납품 포장(NO.3)" option="%" />
+	  <item name="염색가루" price="2000" />
+	  <item name="손도끼" price="25000" />
+	  <item name="계략 지침서 제 1권" price="10000" />
+	  <item name="귀금속의 제련법" option="*" price="200000" investment="16세기 : 2, 3" />
+	  <item name="현상범 수배서" price="100000" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -3045,6 +3130,7 @@
 	  <item name="마네킹(보통 남성형)" price="3000" />
 	  <item name="마네킹(보통 여성형)" price="3000" />
 	  <item name="조선공입문 공예편" option="%" />
+	  <item name="강력 포승" price="100000" />
 	</group>
 	<group name="[인물]">
 	  <item name="지리학" option="s" price="모험조합" />
@@ -3075,6 +3161,7 @@
 	  <item name="포르투갈어" option="s" price="토메 피레스" />
 	  <item name="로망어 사전 만드는 법" option="%" price="토메 피레스" />
 	  <item name="조선소재，돛줄" option="%" price="조선공" />
+	  <item name="먹이용 동물 조달술" option="%" price="조련사" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -3153,6 +3240,9 @@
 	  <item name="대형클리퍼★" price="5580000" />
 	  <item name="상업용대형클리퍼★" price="5670000" />
 	  <item name="조선소재，선체의 서 제1권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -3267,6 +3357,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
+	  <item name="조선소재，돛줄" option="%" price="%" />
 	</group>
 	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
@@ -3285,6 +3376,12 @@
 	  <item name="스콘" option="+" />
 	  <item name="콩소메 수프" option="+" />
 	  <item name="로망어 번역메모" option="@" />
+	  <item name="기분 전환용 술통" option="_" />
+	  <item name="예비키" option="_" />
+	  <item name="전염병 특효약" option="_" />
+	  <item name="침착의 깃발" option="_" />
+	  <item name="정전 협정서" option="_" />
+	  <item name="철수의 종" option="_" />
 	</group>
   </cityinfo>
   <cityinfo name="바르셀로나">
@@ -3299,6 +3396,7 @@
 	  <item name="놋쇠" option="*" price="638" investment="180k" />
 	  <item name="강철" price="972" />
 	  <item name="소금" price="207" />
+	  <item name="머스켓총" price="2474" />
 	</group>
 	<group name="[도구]">
 	  <item name="나사제 항해자의 모피코트" price="63400" />
@@ -3393,6 +3491,9 @@
 	  <item name="봄바르다★★" option="*" price="253800" />
 	  <item name="봄바르다★★★" option="*" price="507600" />
 	  <item name="강습용 중 캐러벨★★" option="*" price="280800" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -3648,6 +3749,9 @@
 	  <item name="이베리안 지벡★★★" option="*" price="3948000" investment="60k" />
 	  <item name="순항형 개조 지벡★★★" option="*" price="3948000" investment="60k" />
 	  <item name="장갑전열함★★" option="*" price="9600000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -3926,6 +4030,7 @@
 	  <item name="방어구 장인의 공예기법" option="*" price="300000" />
 	  <item name="서 지중해의 명물요리집" option="$" />
 	  <item name="고급 상납품 포장(NO.2)" option="%" />
+	  <item name="신비한 향신료" option="*" price="10000" investment="15세기 : 5 16세기 : 1, 2" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -3981,6 +4086,8 @@
 	  <item name="지리" option="h" price="브라간사 공작" />
 	  <item name="셋트요리집 제1권" option="%" price="크리스티나" />
 	  <item name="조선소재，돛줄" option="%" price="조선공" />
+	  <item name="노 젓기" option="s" price="디아스 제독" />
+	  <item name="애완동물 길들이기 상급" option="%" price="조련사" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -4056,6 +4163,9 @@
 	  <item name="대형클리퍼★" price="5580000" />
 	  <item name="상업용대형클리퍼★" price="5670000" />
 	  <item name="조선소재，선체의 서 제1권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -4170,6 +4280,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
+	  <item name="조선소재，돛줄" option="%" price="%" />
 	</group>
 	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
@@ -4192,6 +4303,12 @@
 	  <item name="고급상납품（소형선용）" option="#" />
 	  <item name="토박이해적용 상납품" option="#" />
 	  <item name="로망어 번역메모" option="@" />
+	  <item name="기분 전환용 술통" option="_" />
+	  <item name="예비키" option="_" />
+	  <item name="전염병 특효약" option="_" />
+	  <item name="침착의 깃발" option="_" />
+	  <item name="정전 협정서" option="_" />
+	  <item name="철수의 종" option="_" />
 	</group>
   </cityinfo>
   <cityinfo name="안코나">
@@ -4276,6 +4393,8 @@
 	  <item name="고급모자 봉제법" option="*" price="200000" investment="240k" />
 	  <item name="방어구 장인의 공예기법" option="*" price="300000" investment="600k" />
 	  <item name="동 지중해의 명물요리집" option="$" />
+	  <item name="현상범 수배서" price="100000" />
+	  <item name="신비한 향신료" option="*" price="10000" investment="15세기 : 5 16세기 : 1, 2" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -4410,6 +4529,8 @@
 	  <item name="대형클리퍼★" price="5580000" />
 	  <item name="상업용대형클리퍼★" price="5670000" />
 	  <item name="조선소재，선체의 서 제1권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -4532,6 +4653,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
+	  <item name="조선소재，돛줄" option="%" price="%" />
 	</group>
 	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
@@ -4551,6 +4673,12 @@
 	  <item name="치즈 케이크" option="+" />
 	  <item name="로망어 번역메모" option="@" />
 	  <item name="동유럽어 번역메모" option="@" />
+	  <item name="기분 전환용 술통" option="_" />
+	  <item name="예비키" option="_" />
+	  <item name="전염병 특효약" option="_" />
+	  <item name="침착의 깃발" option="_" />
+	  <item name="정전 협정서" option="_" />
+	  <item name="철수의 종" option="_" />
 	</group>
   </cityinfo>
   <cityinfo name="칼리아리">
@@ -4709,6 +4837,7 @@
 	  <item name="봉제" option="s" price="트라제토 후작 부인" />
 	  <item name="지리" option="h" price="자노 프레고소" />
 	  <item name="조선소재，마스트톱" option="%" price="조선공" />
+	  <item name="노 젓기" option="s" price="해양 조합 마스터" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -4759,6 +4888,8 @@
 	  <item name="작전용 포락카★★★" option="*" price="1646400" />
 	  <item name="수송용갤리★★" option="*" price="24000" />
 	  <item name="수송용갤리★★★" option="*" price="48000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -4918,6 +5049,7 @@
 	  <item name="범용 소형 확장 선실" price="80000" />
 	  <item name="범용소형포문" price="30000" />
 	  <item name="범용 소형 확장 창고" price="80000" />
+	  <item name="불꽃 제작 기법서" option="%" />
 	</group>
 	<group name="[인물]">
 	  <item name="식물" option="h" price="제임스 왕자" />
@@ -4970,6 +5102,8 @@
 	  <item name="포락카 지벡★★" price="2016000" />
 	  <item name="포락카 지벡★★★" price="4032000" />
 	  <item name="기동형 지벡★★★" price="4032000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -5218,6 +5352,8 @@
 	  <item name="강습용 갤리★★★" option="*" price="192000" />
 	  <item name="기동형 강습 갤리★★★" option="*" price="192000" />
 	  <item name="조선공입문 주조편" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -5343,6 +5479,7 @@
 	  <item name="도자기" option="*" price="1254" investment="120k" />
 	  <item name="대리석상" price="2531" />
 	  <item name="석공" price="819" />
+	  <item name="크로스보우" price="819" />
 	</group>
 	<group name="[도구]">
 	  <item name="코튼제 악톤" price="12300" />
@@ -5451,6 +5588,8 @@
 	  <item name="대형 프리깃★" option="*" price="4492800" />
 	  <item name="대형 프리깃★★" option="*" price="1123200" />
 	  <item name="대형 프리깃★★★" option="*" price="2246400" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -5639,6 +5778,12 @@
 	  <item name="방어구 장인의 공예기법" option="*" price="300000" investment="600k" />
 	  <item name="고급 상납품 포장(NO.2)" option="%" />
 	  <item name="서 지중해의 명물요리집" option="$" price="1M" />
+	  <item name="소녀전사의 부적" option="*" price="100000" investment="15세기 : 2" />
+	  <item name="발레 무용수의 머리 장식" option="*" price="483000" investment="483k" />
+	  <item name="발레 무용수 의상" option="*" price="750000" investment="750k" />
+	  <item name="발레 무용수의 부츠" option="*" price="237000" investment="237k" />
+	  <item name="모드 디자인집 제4권" option="*" price="300000" investment="15세기 : 2, 3, 4 16세기 : 5 17세기 : 1, 2" />
+	  <item name="각성제" option="*" price="10000" investment="16세기 : 2" />
 	</group>
 	<group name="[공방]">
 	  <item name="사분의" price="500" />
@@ -5776,6 +5921,8 @@
 	  <item name="대형클리퍼★" price="5580000" />
 	  <item name="상업용대형클리퍼★" price="5670000" />
 	  <item name="조선소재，선체의 서 제1권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -5898,6 +6045,7 @@
 	  <item name="포어 톱 로얄 세일" price="48000" />
 	  <item name="미즌 톱 로얄 세일" price="45000" />
 	  <item name="조선소재，봉제의 서 제1권" option="%" />
+	  <item name="조선소재，돛줄" option="%" price="%" />
 	</group>
 	<group name="[행상인]">
 	  <item name="구명도구" option="-" />
@@ -5916,6 +6064,12 @@
 	  <item name="과일 모듬" option="+" />
 	  <item name="부시 드 노엘" option="+" />
 	  <item name="로망어 번역메모" option="@" />
+	  <item name="기분 전환용 술통" option="_" />
+	  <item name="예비키" option="_" />
+	  <item name="전염병 특효약" option="_" />
+	  <item name="침착의 깃발" option="_" />
+	  <item name="정전 협정서" option="_" />
+	  <item name="철수의 종" option="_" />
 	</group>
   </cityinfo>
   <cityinfo name="라구사">
@@ -6003,6 +6157,8 @@
 	  <item name="펠러커★★★" price="381360" />
 	  <item name="장갑전열함★★" option="*" price="9600000" />
 	  <item name="조선소재，선체의 서 제2권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="800" />
@@ -6165,6 +6321,8 @@
 	  <item name="강습용 갤리스★" price="24634000" />
 	  <item name="강습용 갤리스★★" price="6156000" />
 	  <item name="강습용 갤리스★★★" price="12312000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -6320,6 +6478,8 @@
 	  <item name="포락카 지벡★★★" price="4032000" />
 	  <item name="기동형 지벡★★★" price="4032000" />
 	  <item name="조선소재，도선의 서 제3권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="800" />
@@ -6426,6 +6586,7 @@
 	  <item name="군용 슬루프★★★" price="436800" />
 	  <item name="갤리스★★" price="1125000" />
 	  <item name="갤리스★★★" option="*" price="2250000" investment="600k" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -6529,6 +6690,8 @@
 	  <item name="군용 슬루프★" option="*" price="873600" />
 	  <item name="군용 슬루프★★" price="218400" />
 	  <item name="군용 슬루프★★★" price="436800" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -6619,6 +6782,7 @@
 	  <item name="철광석" option="*" price="566" />
 	  <item name="진사" option="*" investment="400k" />
 	  <item name="석유" option="*" investment="240k" />
+	  <item name="붉은 콩" price="67" />
 	</group>
 	<group name="[도구]">
 	  <item name="질레트" price="27500" />
@@ -6662,6 +6826,8 @@
 	  <item name="터키 갤리★★" price="1117500" />
 	  <item name="터키 갤리★★★" price="2235000" />
 	  <item name="돌격용 오스만 갤리★★★" price="2235000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -6726,6 +6892,7 @@
 	  <item name="낙타모" price="342" />
 	  <item name="후추" option="*" investment="600k" />
 	  <item name="목화" price="267" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="질레트" price="27500" />
@@ -6762,6 +6929,7 @@
 	  <item name="제독" price="5000" />
 	  <item name="앵커" price="5000" />
 	  <item name="육상전용 소도구 공예편" option="%" />
+	  <item name="유인원" price="5000" />
 	</group>
 	<group name="[인물]">
 	  <item name="탐색" option="s" price="모험조합" />
@@ -6776,6 +6944,8 @@
 	  <item name="통솔" option="s" price="메흐메트 샤루크" />
 	  <item name="무기류 거래" option="s" price="메흐메트 샤루크" />
 	  <item name="중형생물" option="h" price="투만 베이" />
+	  <item name="조선소재，전락망" option="%" price="조선공" />
+	  <item name="고대 연금술" option="%" price="연금술사의 딸" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -6810,6 +6980,7 @@
 	  <item name="터키 갤리★★★" price="2235000" />
 	  <item name="돌격용 오스만 갤리★★★" price="2235000" />
 	  <item name="조선소재，도선의 서 제2권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -6952,6 +7123,12 @@
 	  <item name="카드" price="500" />
 	  <item name="카드(RANK2)" price="1000" />
 	  <item name="고급의상 봉제술" option="$" investment="2M" />
+	  <item name="현상범 수배서" price="100000" />
+	  <item name="돛 도료20" price="500000" />
+	  <item name="강철포탄" option="*" price="5000" investment="15세기 : 3" />
+	  <item name="삼시르" option="*" price="860000" investment="860k" />
+	  <item name="스타 사파이어 헤어밴드" option="*" price="8000000" investment="8000k" />
+	  <item name="반달형 칼 제련응용" option="*" price="50000" investment="15세기 : 4, 5 16세기 : 1, 2" />
 	</group>
 	<group name="[공방]">
 	  <item name="망향의 카리욘벨" price="200" />
@@ -7017,6 +7194,7 @@
 	  <item name="터키 갤리★★" price="1117500" />
 	  <item name="터키 갤리★★★" price="2235000" />
 	  <item name="수송용 오스만 갤리★★★" price="2235000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -7115,6 +7293,10 @@
 	  <item name="무화과 파이" option="+" />
 	  <item name="아프로아시아어 번역메모" option="@" />
 	  <item name="알타이어 번역메모" option="@" />
+	  <item name="기분 전환용 술통" option="_" />
+	  <item name="예비키" option="_" />
+	  <item name="정전 협정서" option="_" />
+	  <item name="철수의 종" option="_" />
 	</group>
   </cityinfo>
   <cityinfo name="오데사">
@@ -7164,6 +7346,7 @@
 	  <item name="강습용 갤리★★★" price="192000" />
 	  <item name="기동형 강습 갤리★★★" price="192000" />
 	  <item name="조선소재，도선의 서 제2권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
   </cityinfo>
   <cityinfo name="카이로">
@@ -7178,6 +7361,7 @@
 	  <item name="면원단" price="666" />
 	  <item name="설화석고" option="*" price="456" investment="180k" />
 	  <item name="파피루스" price="354" />
+	  <item name="면화" option="*" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="차도르" price="84700" />
@@ -7234,6 +7418,7 @@
 	  <item name="수송용대형갤리★★" option="*" price="342000" />
 	  <item name="수송용대형갤리★★★" option="*" price="684000" />
 	  <item name="조선소재，도선의 서 제3권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -7346,6 +7531,7 @@
 	  <item name="터키 융단" price="3640" />
 	  <item name="밀" price="39" />
 	  <item name="목화" price="267" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="금자수 부츠" option="*" price="2000" investment="500k" />
@@ -7372,6 +7558,7 @@
 	  <item name="다우" price="360000" />
 	  <item name="돌격용 다우" price="365000" />
 	  <item name="상업용 다우" price="372000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
   </cityinfo>
   <cityinfo name="세바스토폴">
@@ -7419,6 +7606,7 @@
 	  <item name="강달소라" price="3791" />
 	  <item name="마 원단" option="*" price="331" investment="240k" />
 	  <item name="철광석" price="566" />
+	  <item name="붉은 콩" price="67" />
 	</group>
 	<group name="[도구]">
 	  <item name="이슬람 장의" price="66100" />
@@ -7469,6 +7657,8 @@
 	  <item name="행군" option="s" price="레오 아프리카누스" />
 	  <item name="채집" option="s" price="레오 아프리카누스" />
 	  <item name="보물" option="h" price="물라이 하산" />
+	  <item name="노 젓기" option="s" price="해양 조합 마스터" />
+	  <item name="조선소재，경량노" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -7504,6 +7694,8 @@
 	  <item name="중갤리스★★" option="*" price="9150000" />
 	  <item name="바스★★" option="*" price="132000" />
 	  <item name="바스★★★" option="*" price="264000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -7630,6 +7822,7 @@
 	  <item name="낙타모" price="343" />
 	  <item name="목화" option="*" price="267" investment="320k" />
 	  <item name="면원단" option="*" price="650" investment="720k?" />
+	  <item name="면화" option="*" price="267" investment="320k" />
 	</group>
 	<group name="[도구]">
 	  <item name="이슬람 장의" price="66100" />
@@ -7682,6 +7875,8 @@
 	  <item name="돌격용 펠러커★★" option="*" price="192360" />
 	  <item name="돌격용 펠러커★★★" option="*" price="384720" />
 	  <item name="수송용 펠러커★★★" option="*" price="384720" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -7818,6 +8013,7 @@
 	  <item name="중갤리" price="2650000" />
 	  <item name="터키 갤리" price="11920000" />
 	  <item name="갤리스" price="7500000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -7980,6 +8176,7 @@
 	  <item name="갤리★★" option="*" price="96750" />
 	  <item name="갤리★★★" option="*" price="193500" />
 	  <item name="대형갤리★★" option="*" price="337500" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -8224,6 +8421,8 @@
 	  <item name="경갤리온" price="810000" />
 	  <item name="소형갤리온" price="830000" />
 	  <item name="수송용갤리온" price="840000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -8326,6 +8525,9 @@
 	  <item name="타카카" option="+" />
 	  <item name="마니소바" option="+" />
 	  <item name="아메리카어 번역메모" option="@" />
+	</group>
+	<group name="[인물]">
+	  <item name="조선소재，이동망" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="산후안">
@@ -8451,6 +8653,8 @@
 	  <item name="수송용 대형 스쿠너★★" option="*" price="2499000" />
 	  <item name="수송용 대형 스쿠너★★★" option="*" price="4998000" />
 	  <item name="수송용 고속 스쿠너★★★" option="*" price="4998000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="경량 삼나무판" price="880" />
@@ -8500,6 +8704,7 @@
 	  <item name="병기기술" option="s" price="발보아" />
 	  <item name="저격술" option="s" price="발보아" />
 	  <item name="케추아어" option="s" price="발보아" />
+	  <item name="조선소재，특수기뢰" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -8507,6 +8712,7 @@
 	  <item name="전투용바사" price="5100" />
 	  <item name="상업용바사" price="5200" />
 	  <item name="베르간틴" price="148800" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
@@ -8539,6 +8745,7 @@
 	  <item name="담배" option="*" price="448" investment="120k" />
 	  <item name="사이잘마" option="*" price="204" investment="180k" />
 	  <item name="네덜란드 편사" option="*" />
+	  <item name="올스파이스" price="335" />
 	</group>
 	<group name="[도구]">
 	  <item name="쉬르꼬" option="*" price="30000" />
@@ -8606,6 +8813,8 @@
 	  <item name="로얄 프리깃★★" option="*" price="7575000" />
 	  <item name="장갑전열함★" price="38784000" />
 	  <item name="조선소재，선체의 서 제3권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘2포" price="500" />
@@ -8647,6 +8856,9 @@
 	  <item name="소형 선미루" price="39000" />
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="조선소재，주조의 서 제3권" option="%" />
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="경량 삼나무판" price="880" />
@@ -8695,6 +8907,7 @@
 	  <item name="해수상" price="62000" />
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
+	  <item name="돛문장 작성 1" option="%" />
 	</group>
   </cityinfo>
   <cityinfo name="카라카스">
@@ -8803,6 +9016,7 @@
 	  <item name="거북상" option="*" price="1800" />
 	  <item name="해수상" option="*" price="62000" />
 	  <item name="천룡상" option="*" price="62000" />
+	  <item name="돛문장 작성 1" option="%" />
 	</group>
   </cityinfo>
   <cityinfo name="트루히요">
@@ -8814,6 +9028,8 @@
 	  <item name="돼지" option="*" price="55" />
 	  <item name="딸기" price="336" />
 	  <item name="화승총" option="*" investment="400k" />
+	  <item name="올스파이스" price="336" />
+	  <item name="머스켓총" option="*" investment="400k" />
 	</group>
 	<group name="[도구]">
 	  <item name="쉬르꼬" option="*" price="30000" />
@@ -8872,6 +9088,7 @@
 	  <item name="로얄 프리깃★★" option="*" price="7575000" />
 	  <item name="장갑전열함★" price="38784000" />
 	  <item name="조선소재，선체의 서 제3권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 8문" price="8100" />
@@ -8978,6 +9195,7 @@
 	  <item name="해수상" price="62000" />
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
+	  <item name="돛문장 작성 1" option="%" />
 	</group>
   </cityinfo>
   <cityinfo name="나소">
@@ -9014,6 +9232,7 @@
 	  <item name="목화" price="268" />
 	  <item name="철광석" price="566" />
 	  <item name="코코넛" price="256" />
+	  <item name="면화" price="268" />
 	</group>
 	<group name="[도구]">
 	  <item name="쉬르꼬" option="*" price="30000" />
@@ -9038,6 +9257,7 @@
 	  <item name="전투용바사" price="5100" />
 	  <item name="상업용바사" price="5200" />
 	  <item name="베르간틴" price="148800" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
   </cityinfo>
   <cityinfo name="베라크루스">
@@ -9079,6 +9299,7 @@
 	  <item name="전투용바사" price="5100" />
 	  <item name="상업용바사" price="5200" />
 	  <item name="베르간틴" price="148800" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[행상인]">
 	  <item name="소화모래" option="-" />
@@ -9111,6 +9332,7 @@
 	  <item name="강장제" price="300" />
 	  <item name="염료비법" option="$" investment="840k" />
 	  <item name="콘체로스샌들 제조법" option="%" />
+	  <item name="염료비법서" option="$" investment="840k" />
 	</group>
   </cityinfo>
   <cityinfo name="그랜드케이맨">
@@ -9182,6 +9404,8 @@
 	  <item name="로얄 프리깃★★" option="*" price="7575000" />
 	  <item name="장갑전열함★" price="38784000" />
 	  <item name="조선소재，선체의 서 제3권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘2포" price="500" />
@@ -9223,6 +9447,9 @@
 	  <item name="소형 선미루" price="39000" />
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="조선소재，주조의 서 제3권" option="%" />
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="경량 삼나무판" price="880" />
@@ -9271,6 +9498,7 @@
 	  <item name="해수상" price="62000" />
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
+	  <item name="돛문장 작성 1" option="%" />
 	</group>
   </cityinfo>
   <cityinfo name="카옌">
@@ -9343,6 +9571,7 @@
 	  <item name="로얄 프리깃★★" option="*" price="7575000" />
 	  <item name="장갑전열함★" price="38784000" />
 	  <item name="조선소재，선체의 서 제3권" option="%" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 8문" price="8100" />
@@ -9447,6 +9676,7 @@
 	  <item name="거북상" price="1800" />
 	  <item name="해수상" price="62000" />
 	  <item name="천룡상" price="62000" />
+	  <item name="돛문장 작성 1" option="%" />
 	</group>
   </cityinfo>
   <cityinfo name="바이아">
@@ -9457,6 +9687,7 @@
 	  <item name="목재" option="*" price="560" investment="240k" />
 	  <item name="쇠고기" price="566" />
 	  <item name="카사바" price="60" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="쉬르꼬" price="30000" />
@@ -9472,6 +9703,7 @@
 	  <item name="지리" option="h" price="카브랄" />
 	  <item name="항해기술" option="s" price="카브랄" />
 	  <item name="응용검술" option="s" price="카브랄" />
+	  <item name="조선소재，방현망" option="%" price="조선공" />
 	</group>
 	<group name="[행상인]">
 	  <item name="예비돛" option="-" />
@@ -9495,6 +9727,7 @@
 	  <item name="담배" option="*" price="827" investment="320k" />
 	  <item name="돼지" option="*" price="55" investment="120k" />
 	  <item name="쉐리" option="*" price="1017" investment="400k" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="쉬르꼬" price="30000" />
@@ -9554,6 +9787,7 @@
 	  <item name="로얄 프리깃★★" option="*" price="7575000" />
 	  <item name="장갑전열함★" price="38784000" />
 	  <item name="조선소재，선체의 서 제3권" option="%" />
+	  <item name="탐험용 바사" price="3000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 8문" price="8100" />
@@ -9654,6 +9888,7 @@
 	  <item name="거북상" price="1800" />
 	  <item name="해수상" price="62000" />
 	  <item name="천룡상" price="62000" />
+	  <item name="돛문장 작성 1" option="%" />
 	</group>
   </cityinfo>
   <cityinfo name="리우데자네이루">
@@ -9665,6 +9900,7 @@
 	  <item name="금" option="*" price="3730" investment="400k" />
 	  <item name="쟘부" price="111" />
 	  <item name="토파즈" option="*" price="1686" investment="600k" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="쉬르꼬" price="30000" />
@@ -9755,6 +9991,7 @@
 	  <item name="목재" price="590" />
 	  <item name="다이아몬드" option="*" price="3608" investment="400k" />
 	  <item name="금" option="*" price="3957" />
+	  <item name="면화" option="*" price="267" investment="240k" />
 	</group>
 	<group name="[도구]">
 	  <item name="황토염색복" price="53200" />
@@ -9794,6 +10031,7 @@
 	  <item name="산호" price="2985" />
 	  <item name="동광석" option="*" price="690" investment="240k" />
 	  <item name="목화" option="*" price="268" investment="240k" />
+	  <item name="면화" option="*" price="268" investment="240k" />
 	</group>
 	<group name="[도구]">
 	  <item name="아프리카 깃털장식" price="26600" />
@@ -9867,6 +10105,7 @@
 	  <item name="동광석" option="*" price="692" />
 	  <item name="주석" price="424" />
 	  <item name="다이아몬드" option="*" price="2774" />
+	  <item name="크롬 광석" option="*" price="2760" investment="8,500,000" />
 	</group>
 	<group name="[도구]">
 	  <item name="줄루족 전사의 의상" price="53200" />
@@ -9924,6 +10163,7 @@
 	  <item name="목재" price="596" />
 	  <item name="상아" price="1691" />
 	  <item name="금" option="*" price="3957" />
+	  <item name="면화" option="*" price="267" investment="320k" />
 	</group>
 	<group name="[도구]">
 	  <item name="황토염색복" price="53200" />
@@ -9945,6 +10185,7 @@
 	  <item name="나비" price="5000" />
 	  <item name="제독" price="5000" />
 	  <item name="앵커" price="5000" />
+	  <item name="유인원" price="5000" />
 	</group>
 	<group name="[인물]">
 	  <item name="중형생물" option="h" price="운징가 운쿠와" />
@@ -10002,6 +10243,7 @@
 	  <item name="밭벼" price="36" />
 	  <item name="팥" price="68" />
 	  <item name="다이아몬드" option="*" price="3608" investment="180k" />
+	  <item name="붉은 콩" price="68" />
 	</group>
 	<group name="[도구]">
 	  <item name="아프리카 깃털장식" price="26600" />
@@ -10029,6 +10271,7 @@
 	  <item name="옥수수" option="*" price="47" investment="240k" />
 	  <item name="석탄" option="*" price="418" investment="120k" />
 	  <item name="주석" price="424" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="만취하게 하는 술" price="300" />
@@ -10087,6 +10330,7 @@
 	</group>
 	<group name="[인물]">
 	  <item name="조선소재，조리실" option="%" price="조선공" />
+	  <item name="원석·광석 가공 제조법" option="%" price="원석 감정인" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -10113,6 +10357,8 @@
 	  <item name="상업용갤리온" price="4600000" />
 	  <item name="전투용갤리온" price="4600000" />
 	  <item name="탐험용 나오★★" price="255600" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -10242,6 +10488,7 @@
 	  <item name="금" option="*" price="3957" investment="320k" />
 	  <item name="에메랄드" price="3019" />
 	  <item name="공작석" option="*" price="1648" investment="180k" />
+	  <item name="면화" option="*" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="마사이 비즈" price="58900" />
@@ -10273,11 +10520,13 @@
 	  <item name="나비" price="5000" />
 	  <item name="제독" price="5000" />
 	  <item name="앵커" price="5000" />
+	  <item name="유인원" price="5000" />
 	</group>
 	<group name="[인물]">
 	  <item name="보물" option="h" price="원로 마지드" />
 	  <item name="염료 거래" option="s" price="원로 마지드" />
 	  <item name="페르시아어" option="s" price="원로 마지드" />
+	  <item name="조선소재，특수 제작 만능 충각" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -10305,6 +10554,7 @@
 	  <item name="상업용 삼부크★★★" price="330000" />
 	  <item name="무장 삼부크★★" price="150000" />
 	  <item name="무장 삼부크★★★" price="300000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -10398,6 +10648,7 @@
 	  <item name="금" option="*" price="3957" />
 	  <item name="목재" price="595" />
 	  <item name="상아" price="1689" />
+	  <item name="면화" option="*" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="사냥꾼의 창" option="*" price="38700" />
@@ -10443,6 +10694,7 @@
 	  <item name="아라비안 갤리" price="3840000" />
 	  <item name="아라비안 갤리★★" price="576000" />
 	  <item name="아라비안 갤리★★★" price="1152000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="간이 삼나무판" price="300" />
@@ -10598,6 +10850,7 @@
 	  <item name="석탄" price="418" />
 	  <item name="산호" price="2733" />
 	  <item name="에메랄드" option="*" price="3023" investment="600k" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="사냥꾼의 창" option="*" price="38700" />
@@ -10643,6 +10896,7 @@
 	  <item name="무장 삼부크" price="1000000" />
 	  <item name="상업용 삼부크" price="1100000" />
 	  <item name="아라비안 갤리" price="3840000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -10716,6 +10970,7 @@
 	  <item name="커피" price="375" />
 	  <item name="낙타모" price="342" />
 	  <item name="목화" price="267" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="던지는 화살" price="50" />
@@ -10741,6 +10996,7 @@
 	  <item name="용연향" price="2489" />
 	  <item name="석유" option="*" price="508" investment="180k" />
 	  <item name="석재" price="575" />
+	  <item name="면화" option="*" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="다마스크직물 아랍해적셔츠" price="181700" />
@@ -10772,6 +11028,7 @@
 	  <item name="해양생물" option="h" price="왼손잡이 아마드" />
 	  <item name="수평사격" option="s" price="왼손잡이 아마드" />
 	  <item name="총포류 거래" option="s" price="왼손잡이 아마드" />
+	  <item name="조선소재，제독실" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -10803,6 +11060,7 @@
 	  <item name="탐험용 지벡★★" price="864000" />
 	  <item name="상업용 무장 지벡★★" price="1596000" />
 	  <item name="군용 지벡★★" price="1260000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -10932,6 +11190,7 @@
 	  <item name="석유" price="511" />
 	  <item name="유향" price="1323" />
 	  <item name="철광석" option="*" price="566" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="아라비아 망토" price="96000" />
@@ -10974,6 +11233,7 @@
 	  <item name="유향" option="*" price="1323" investment="120k" />
 	  <item name="석류" option="*" price="359" investment="500k" />
 	  <item name="용혈" option="*" price="2168" investment="720k" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="작렬약" price="300" />
@@ -11026,6 +11286,7 @@
 	  <item name="제독" price="5000" />
 	  <item name="일광" price="5000" />
 	  <item name="앵커" price="5000" />
+	  <item name="유인원" price="5000" />
 	</group>
 	<group name="[인물]">
 	  <item name="항구-마을" option="h" price="알 가우리" />
@@ -11061,6 +11322,7 @@
 	  <item name="탐험용 지벡★★" price="864000" />
 	  <item name="상업용 무장 지벡★★" price="1596000" />
 	  <item name="군용 지벡★★" price="1260000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="800" />
@@ -11117,6 +11379,7 @@
 	  <item name="석재" price="576" />
 	  <item name="유향" price="1319" />
 	  <item name="금" option="*" price="3937" investment="600k" />
+	  <item name="붉은 콩" price="67" />
 	</group>
 	<group name="[도구]">
 	  <item name="아라비아 망토" price="96000" />
@@ -11155,6 +11418,9 @@
 	  <item name="해수상" price="62000" />
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
+	</group>
+	<group name="[인물]">
+	  <item name="조선소재，특수유탄" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="바스라">
@@ -11230,11 +11496,13 @@
 	  <item name="나비" price="5000" />
 	  <item name="제독" price="5000" />
 	  <item name="앵커" price="5000" />
+	  <item name="유인원" price="5000" />
 	</group>
 	<group name="[인물]">
 	  <item name="중형생물" option="h" price="알리 레이스" />
 	  <item name="인도어" option="s" price="알리 레이스" />
 	  <item name="인도양어 사전 만드는 법" option="%" price="알리 레이스" />
+	  <item name="조선소재，굉음기뢰" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -11263,6 +11531,7 @@
 	  <item name="탐험용 지벡★★" price="864000" />
 	  <item name="상업용 무장 지벡★★" price="1596000" />
 	  <item name="군용 지벡★★" price="1260000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -11390,6 +11659,7 @@
 	  <item name="말레이 타갈로그어" option="s" price="구자라트 대상" />
 	  <item name="역사유물" option="h" price="바이레 시장" />
 	  <item name="인도양어 사전 만드는 법" option="%" price="서고학자" />
+	  <item name="조선소재，정박용망" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -11423,6 +11693,7 @@
 	  <item name="대형클리퍼★★★" price="2790000" />
 	  <item name="상업용대형클리퍼★★" price="1417500" />
 	  <item name="상업용대형클리퍼★★★" price="2835000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -11579,6 +11850,7 @@
 	  <item name="인도 편사" price="772" />
 	  <item name="철광석" option="*" price="566" investment="180k" />
 	  <item name="루비" price="3407" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="마하라자터번" price="142700" />
@@ -11631,6 +11903,7 @@
 	  <item name="지벡" price="2900000" />
 	  <item name="상업용 지벡" price="2960000" />
 	  <item name="무장 지벡" price="3000000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -11798,6 +12071,7 @@
 	  <item name="목화" price="267" />
 	  <item name="사금석" price="1575" />
 	  <item name="에메랄드" option="*" price="3019" investment="180k" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="파자마" option="*" price="284200" investment="240k" />
@@ -11828,6 +12102,7 @@
 	  <item name="목화" price="267" />
 	  <item name="양" price="108" />
 	  <item name="딜" option="*" price="160" investment="500k" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="나루나리" option="*" price="42000" />
@@ -11855,6 +12130,7 @@
 	  <item name="목화" price="267" />
 	  <item name="석탄" price="415" />
 	  <item name="생사" price="1678" />
+	  <item name="면화" price="267" />
 	</group>
 	<group name="[도구]">
 	  <item name="나루나리" option="*" price="42000" investment="240k" />
@@ -11933,6 +12209,7 @@
 	  <item name="무장 삼부크★★" price="150000" />
 	  <item name="무장 삼부크★★★" price="300000" />
 	  <item name="작전용 무장 삼부크★★★" price="300000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="880" />
@@ -11969,6 +12246,8 @@
 	  <item name="목화" price="267" />
 	  <item name="자바편사" price="574" />
 	  <item name="금세공" option="*" price="2850" />
+	  <item name="면화" price="268" />
+	  <item name="니켈 광석" option="*" price="2840" investment="8,500,000" />
 	</group>
 	<group name="[도구]">
 	  <item name="해적조끼" price="18500" />
@@ -11998,6 +12277,7 @@
 	  <item name="삼부크" price="1000000" />
 	  <item name="무장 삼부크" price="1000000" />
 	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -12175,6 +12455,7 @@
 	  <item name="삼부크" price="1000000" />
 	  <item name="무장 삼부크" price="1000000" />
 	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -12289,6 +12570,7 @@
 	  <item name="삼층갑판 갤리온★" price="26400000" />
 	  <item name="삼층갑판 갤리온★★" price="6600000" />
 	  <item name="삼층갑판 갤리온★★★" price="13200000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -12356,6 +12638,7 @@
 	  <item name="삼부크" price="1000000" />
 	  <item name="무장 삼부크" price="1000000" />
 	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="880" />
@@ -12406,6 +12689,7 @@
 	  <item name="삼부크" price="1000000" />
 	  <item name="무장 삼부크" price="1000000" />
 	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -12521,6 +12805,7 @@
 	  <item name="삼부크" price="1000000" />
 	  <item name="무장 삼부크" price="1000000" />
 	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -12587,6 +12872,7 @@
 	  <item name="상업용 삼부크" price="1100000" />
 	  <item name="후방형 봄바르다★★★" option="*" price="507600" />
 	  <item name="작전용 중 갤리★★★" option="*" price="795000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -12655,6 +12941,9 @@
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
 	</group>
+	<group name="[인물]">
+	  <item name="남방어 사전 만드는 법" option="%" price="학자" />
+	</group>
   </cityinfo>
   <cityinfo name="테르나테">
 	<group name="[교역]">
@@ -12695,6 +12984,7 @@
 	  <item name="제독" price="5000" />
 	  <item name="앵커" price="5000" />
 	  <item name="성인상 제작11" option="%" />
+	  <item name="유인원" price="5000" />
 	</group>
 	<group name="[배]">
 	  <item name="바사" price="2000" />
@@ -12709,6 +12999,7 @@
 	  <item name="상업용 삼부크" price="1100000" />
 	  <item name="기동형 봄켓치★★★" price="502200" />
 	  <item name="조사용 대형 갤리★★★" price="684000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -12784,6 +13075,9 @@
 	  <item name="해수상" price="62000" />
 	  <item name="천룡상" price="62000" />
 	  <item name="불사조상" price="62000" />
+	</group>
+	<group name="[인물]">
+	  <item name="남방어 사전 만드는 법" option="%" price="학자" />
 	</group>
   </cityinfo>
   <cityinfo name="홀로">
@@ -12943,6 +13237,7 @@
 	  <item name="수송용카락" price="488000" />
 	  <item name="경갤리온" price="810000" />
 	  <item name="수송용갤리온" price="840000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
   </cityinfo>
   <cityinfo name="과테말라">
@@ -12995,6 +13290,7 @@
 	  <item name="수송용카락" price="488000" />
 	  <item name="경갤리온" price="810000" />
 	  <item name="수송용갤리온" price="840000" />
+	  <item name="탐험용 바사" price="5000" />
 	</group>
   </cityinfo>
   <cityinfo name="툼베스">
@@ -13091,6 +13387,8 @@
 	  <item name="카락" price="720000" />
 	  <item name="경갤리온" price="810000" />
 	  <item name="수송용갤리온" price="840000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -13309,6 +13607,8 @@
 	  <item name="화지" />
 	  <item name="일본 서적" />
 	  <item name="등심초" />
+	  <item name="가지" />
+	  <item name="모시" />
 	</group>
 	<group name="[도구]">
 	  <item name="소맷부리가 좁은 일본 의복" price="154000" />
@@ -13374,6 +13674,7 @@
 	  <item name="화지" />
 	  <item name="일본 서적" />
 	  <item name="초롱" />
+	  <item name="가지" />
 	</group>
 	<group name="[도구]">
 	  <item name="소맷부리가 좁은 일본 의복" price="154000" />
@@ -13399,6 +13700,9 @@
 	<group name="[배]">
 	  <item name="능원회선" price="8400000" />
 	</group>
+	<group name="[인물]">
+	  <item name="동아시아의 강화판 제조법" option="%" price="조선공" />
+	</group>
   </cityinfo>
   <cityinfo name="사카이">
 	<group name="[교역]">
@@ -13422,6 +13726,7 @@
 	  <item name="화지" />
 	  <item name="일본 서적" />
 	  <item name="가는 끈" />
+	  <item name="가지" />
 	</group>
 	<group name="[도구]">
 	  <item name="소맷부리가 좁은 일본 의복" price="154000" />
@@ -13480,6 +13785,9 @@
 	  <item name="두부" option="+" />
 	  <item name="단팥죽" option="+" />
 	</group>
+	<group name="[인물]">
+	  <item name="동아시아의 선실 설계법" option="%" price="조선공" />
+	</group>
   </cityinfo>
   <cityinfo name="포항">
 	<group name="[교역]">
@@ -13522,6 +13830,10 @@
 	  <item name="조운선" price="7900000" />
 	  <item name="사견선" price="8400000" />
 	  <item name="전투선" price="16600000" />
+	  <item name="중형 거북선" price="21200000" />
+	</group>
+	<group name="[인물]">
+	  <item name="동아시아의 선실 설계법" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="부산">
@@ -13573,6 +13885,7 @@
 	  <item name="조운선" price="7900000" />
 	  <item name="사견선" price="8400000" />
 	  <item name="전투선" price="16600000" />
+	  <item name="중형 거북선" price="21200000" />
 	</group>
 	<group name="[대포]">
 	  <item name="황자총통 4문" price="18000" />
@@ -13641,12 +13954,14 @@
 	<group name="[인물]">
 	  <item name="조선어" option="s" price="류성룡" />
 	  <item name="보물" option="h" price="류성룡" />
+	  <item name="동아시아의 강화판 제조법" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="조운선" price="7900000" />
 	  <item name="사견선" price="8400000" />
 	  <item name="전투선" price="16600000" />
 	  <item name="동아시아의 선체 제조법" option="%" />
+	  <item name="중형 거북선" price="21200000" />
 	</group>
 	<group name="[대포]">
 	  <item name="황자총통 4문" price="18000" />
@@ -13700,6 +14015,7 @@
 	  <item name="단안총" />
 	  <item name="대나무" />
 	  <item name="고묵" />
+	  <item name="청룡도" />
 	</group>
 	<group name="[도구]">
 	  <item name="호복" price="154000" />
@@ -13719,6 +14035,7 @@
 	  <item name="수송용 광선" price="15600000" />
 	  <item name="순항형 광선" price="15800000" />
 	  <item name="보선" price="16200000" />
+	  <item name="야전식 무장사선" price="38000000" />
 	</group>
   </cityinfo>
   <cityinfo name="항주">
@@ -13744,6 +14061,7 @@
 	  <item name="단안총" />
 	  <item name="대나무" />
 	  <item name="오수" />
+	  <item name="청룡도" />
 	</group>
 	<group name="[도구]">
 	  <item name="호복" price="154000" />
@@ -13778,6 +14096,7 @@
 	  <item name="수송용 광선" price="15600000" />
 	  <item name="순항형 광선" price="15800000" />
 	  <item name="보선" price="16200000" />
+	  <item name="야전식 무장사선" price="38000000" />
 	</group>
 	<group name="[대포]">
 	  <item name="불랑기포 4문" price="32000" />
@@ -13831,6 +14150,7 @@
 	  <item name="단안총" />
 	  <item name="대나무" />
 	  <item name="면죽연화" />
+	  <item name="청룡도" />
 	</group>
 	<group name="[도구]">
 	  <item name="호복" price="154000" />
@@ -13859,6 +14179,7 @@
 	  <item name="수송용 광선" price="15600000" />
 	  <item name="순항형 광선" price="15800000" />
 	  <item name="보선" price="16200000" />
+	  <item name="야전식 무장사선" price="38000000" />
 	</group>
 	<group name="[대포]">
 	  <item name="조선소재，주조의 서 제2권" option="%" />
@@ -13899,6 +14220,7 @@
 	  <item name="단안총" />
 	  <item name="대나무" />
 	  <item name="호필" />
+	  <item name="청룡도" />
 	</group>
 	<group name="[도구]">
 	  <item name="호복" price="154000" />
@@ -13918,6 +14240,10 @@
 	  <item name="수송용 광선" price="15600000" />
 	  <item name="순항형 광선" price="15800000" />
 	  <item name="보선" price="16200000" />
+	  <item name="야전식 무장사선" price="38000000" />
+	</group>
+	<group name="[인물]">
+	  <item name="동아시아의 강화판 제조법" option="%" price="조선공" />
 	</group>
   </cityinfo>
   <cityinfo name="마카오">
@@ -13943,6 +14269,7 @@
 	  <item name="단안총" />
 	  <item name="대나무" />
 	  <item name="라한과" />
+	  <item name="청룡도" />
 	</group>
 	<group name="[도구]">
 	  <item name="호복" price="154000" />
@@ -13966,6 +14293,7 @@
 	<group name="[인물]">
 	  <item name="종교유물" option="h" price="마테오 리치" />
 	  <item name="중국어" option="s" price="마테오 리치" />
+	  <item name="동아시아의 선실 설계법" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="사선" price="7500000" />
@@ -13973,6 +14301,7 @@
 	  <item name="수송용 광선" price="15600000" />
 	  <item name="순항형 광선" price="15800000" />
 	  <item name="보선" price="16200000" />
+	  <item name="야전식 무장사선" price="38000000" />
 	</group>
   </cityinfo>
   <cityinfo name="단수이">
@@ -14020,6 +14349,9 @@
 	  <item name="호위용 광선" price="16200000" />
 	  <item name="동아시아의 돛 제조법" option="%" />
 	</group>
+	<group name="[인물]">
+	  <item name="동아시아의 선실 설계법" option="%" price="조선공" />
+	</group>
   </cityinfo>
   <cityinfo name="안평">
 	<group name="[교역]">
@@ -14044,6 +14376,7 @@
 	  <item name="등" />
 	  <item name="등 세공" />
 	  <item name="금침화" />
+	  <item name="링쟈오" />
 	</group>
 	<group name="[도구]">
 	  <item name="욕군" price="154000" />
@@ -14074,6 +14407,7 @@
 	<group name="[인물]">
 	  <item name="중국어" option="s" price="하빈" />
 	  <item name="대형생물" option="h" price="하빈" />
+	  <item name="동아시아의 강화판 제조법" option="%" price="조선공" />
 	</group>
 	<group name="[배]">
 	  <item name="동아시아의 선체 제조법" option="%" />
@@ -14192,6 +14526,8 @@
 	  <item name="북유럽형중갤리★" price="12204000" />
 	  <item name="북유럽형중갤리★★" option="*" price="3051000" investment="64k" />
 	  <item name="북유럽형중갤리★★★" price="6102000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -14317,6 +14653,7 @@
 		<item name="고산 모드 디자인집 제1권" price="10000" />
 	  <item name="검 만들기 응용" price="50000" investment="120K 이하" />
 	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
 	</group>
 
 	<group name="[공방]">
@@ -14371,6 +14708,8 @@
 	  <item name="북유럽형중갤리★" price="12204000" />
 	  <item name="북유럽형중갤리★★" option="*" price="3051000" investment="64k" />
 	  <item name="북유럽형중갤리★★★" price="6102000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -14485,6 +14824,8 @@
 	  <item name="해양생물" option="h" price="다이코쿠야 고다유" />
 	  <item name="일본어" option="s" price="다이코쿠야 고다유" />
 	  <item name="극북어" option="s" price="다이코쿠야 고다유" />
+	  <item name="노르웨이어" option="s" price="상인 조합 마스터" />
+	  <item name="북극어" option="s" price="다이고쿠야 코다로" />
 	</group>
 		<group name="[행상인]">
 	  <item name="예비키" option="-" />
@@ -14517,7 +14858,12 @@
 			<item name="셔츠＆데님 팬츠" price="20000" investment="19세기 등장" />
 	  <item name="트라헤 데 바케로" price="65000" investment="19세기 등장" />		
 			<item name="멕시칸 솜브레로" price="35000" investment="19세기 등장" />
-			<item name="멕시칸 부츠" price="44000" investment="19세기 등장" />			
+			<item name="멕시칸 부츠" price="44000" investment="19세기 등장" />
+	  <item name="셔츠＆청바지" price="20000" />
+	  <item name="트라헤 드 바케로" price="65000" />
+	  <item name="광부의 피켈" price="10000" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="검 만들기 응용" price="50000" />
 	</group>
 
 	<group name="[공방]">
@@ -14530,6 +14876,19 @@
 	  <item name="조선공입문 주조편" price="10000" />
 	  <item name="북미식 티크 선박재료" price="10000000" investment="19세기 등장" />
 	  <item name="북미식 로즈우드 선박재료" price="15000000" investment="19세기 등장" />
+	  <item name="특수 장비 봉제법" price="50000" investment="180k" />
+	  <item name="범용 소형 선체" price="100000" investment="400k" />
+	  <item name="범용 소형 도선" price="100000" investment="400k" />
+	  <item name="범용 소형 증강판" price="50000" />
+	  <item name="범용 소형 라틴세일" price="30000" investment="400k" />
+	  <item name="범용 소형 스퀘어세일" price="30000" investment="400k" />
+	  <item name="범용 소형 노" price="50000" />
+	  <item name="범용 소형 개량 키" price="80000" />
+	  <item name="범용 소형 수조" price="80000" />
+	  <item name="범용 소형 장갑판" price="50000" />
+	  <item name="범용 소형 확장 선실" price="80000" />
+	  <item name="범용 소형 포문" price="30000" investment="400k" />
+	  <item name="범용 소형 확장 창고" price="80000" />
 	</group>
 
 	<group name="[배]">
@@ -14567,6 +14926,20 @@
 	  <item name="북유럽형중갤리★" price="12204000" />
 	  <item name="북유럽형중갤리★★" option="*" price="3051000" investment="64k" />
 	  <item name="북유럽형중갤리★★★" price="6102000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="베르간틴" price="148800" />
+	  <item name="전투용 캐러벨" price="280000" />
+	  <item name="캐러벨" price="285000" />
+	  <item name="상업용 캐러벨" price="290000" />
+	  <item name="경 갤리온" price="810000" />
+	  <item name="소형 갤리온" price="830000" />
+	  <item name="수송용 갤리온" price="840000" />
+	  <item name="프리깃" price="1080000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
+	  <item name="개조 중 카락" price="7000000" />
+	  <item name="갤리온" price="4500000" />
+	  <item name="상업용 갤리온" price="4600000" />
+	  <item name="전투용 갤리온" price="4600000" />
 	</group>
 	<group name="[대포]">
 	  <item name="팰콘포 2문" price="500" />
@@ -14634,6 +15007,8 @@
 	  <item name="선미루" price="130000" />
 	  <item name="추가 소 스팽커" price="3500" />
 	  <item name="추가 스팽커" price="55000" />
+	  <item name="앙페르포 6문" price="81000" />
+	  <item name="선수 데미 캘버린포" price="16200" />
 	</group>
 	<group name="[추가장갑]">
 	  <item name="삼나무판" price="880" />
@@ -14644,7 +15019,11 @@
 	  <item name="개량 마호가니판" price="58000" />
 	  <item name="동판" price="73000" />
 	  <item name="북미식 경화 라이브오크판" price="1240000" />
-
+	  <item name="경량 동판" price="80000" />
+	  <item name="개량 로즈우드판" price="115000" />
+	  <item name="북미식 경화 로즈우드 판" price="1160000" />
+	  <item name="경량 철판" price="150000" />
+	  <item name="북미식 압연 철판" price="1220000" />
 	</group>
 	<group name="[돛]">
 	  <item name="보닛" price="25000" />
@@ -14675,6 +15054,15 @@
 	  <item name="귀금속 거래" option="h" price="브라난" />
 	  <item name="공예품 거래" option="s" price="브라난" />
 	  <item name="주조" option="s" price="브라난" />
+	  <item name="탐색" option="s" price="모험가 조합 마스터" />
+	  <item name="행군" option="s" price="모험가 조합 마스터" />
+	  <item name="총포류 거래" option="s" price="상인 조합 마스터" />
+	  <item name="북미어" option="s" price="상인 조합 마스터" />
+	  <item name="응급처치" option="s" price="해양 조합 마스터" />
+	  <item name="총격" option="s" price="해양 조합 마스터" />
+	  <item name="보물" option="h" price="브래넌" />
+	  <item name="북미의 주점 요리·서부 편" option="%" price="주점 주인" investment="19세기" />
+	  <item name="북미 작업복 봉제법" option="%" price="여행자" />
 	</group>
 		<group name="[행상인]">
 	  <item name="구명도구" option="-" />
@@ -14893,6 +15281,7 @@
 	  <item name="양파" price="-2" />
 	  <item name="올리브" price="-2" />
 	  <item name="밀" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="카이로 건너편">
@@ -14903,6 +15292,7 @@
 	  <item name="벨라돈나" price="-1" />
 	  <item name="모래" price="-2" />
 	  <item name="팥" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="나일강 중부">
@@ -14944,6 +15334,7 @@
 	  <item name="올리브" price="-2" />
 	  <item name="밀" price="-2" />
 	  <item name="벼" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="터키 북쪽 해안">
@@ -14974,6 +15365,7 @@
 	  <item name="양파" price="-2" />
 	  <item name="올리브" price="-2" />
 	  <item name="밀" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="멕시코만 남서쪽 해안">
@@ -15174,6 +15566,7 @@
 	  <item name="풀" price="-2" />
 	  <item name="팥" price="-2" />
 	  <item name="보리" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="홍해 동쪽 해안">
@@ -15187,6 +15580,7 @@
 	  <item name="풀" price="-2" />
 	  <item name="팥" price="-2" />
 	  <item name="보리" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="아라비아 해 북서쪽 해안">
@@ -15499,6 +15893,7 @@
 	  <item name="풀" price="-2" />
 	  <item name="나무 열매" price="-2" />
 	  <item name="팥" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="파마구스타 서쪽">
@@ -15580,6 +15975,7 @@
 	  <item name="돌" price="-2" />
 	  <item name="순무" price="-2" />
 	  <item name="팥" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="튀니스 서쪽">
@@ -15608,6 +16004,7 @@
 	  <item name="누에콩" price="-2" />
 	  <item name="메귀리" price="-2" />
 	  <item name="보리" price="-2" />
+	  <item name="면화" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="베라크루스 남동쪽">
@@ -15673,6 +16070,7 @@
 	  <item name="모래" price="-2" />
 	  <item name="풀" price="-2" />
 	  <item name="팥" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="몸바사 서쪽">
@@ -15689,6 +16087,7 @@
 	  <item name="팥" price="-2" />
 	  <item name="개미" price="-2" />
 	  <item name="보리" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="마사와 서남쪽">
@@ -15767,6 +16166,7 @@
 	  <item name="풀" price="-2" />
 	  <item name="버섯" price="-2" />
 	  <item name="나무 열매" price="-2" />
+	  <item name="면화" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="메리다 남서쪽">
@@ -16103,6 +16503,7 @@
 	  <item name="돌" price="-2" />
 	  <item name="모래" price="-2" />
 	  <item name="풀" price="-2" />
+	  <item name="면화" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="히살리크 언덕">
@@ -16131,6 +16532,7 @@
 	  <item name="목화" price="-1" />
 	  <item name="석재" price="-1" />
 	  <item name="사금" price="-1" />
+	  <item name="면화" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="룩소르 지방">
@@ -16214,11 +16616,11 @@
   <cityinfo name="테노치티틀란">
 	<group name="[도구]">
 	  <item name="이글페더" price="15000000" />
-	  <item name="아스텍카렌더" />
-	  <item name="아스텍 오팔" />
-	  <item name="투척용 횃불" />
-	  <item name="타히보 쥬스" />
-	  <item name="강장제" />
+	  <item name="아스텍카렌더" price="15000000" />
+	  <item name="아스텍 오팔" price="15000000" />
+	  <item name="투척용 횃불" price="150" />
+	  <item name="타히보 쥬스" price="300" />
+	  <item name="강장제" price="300" />
 	  <item name="중미민족의상 봉제법" option="%" />
 	</group>
 	<group name="[인물]">
@@ -16415,6 +16817,8 @@
 	  <item name="목화" price="-1" />
 	  <item name="모래" price="-2" />
 	  <item name="팥" price="-2" />
+	  <item name="면화" price="-1" />
+	  <item name="붉은 콩" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="수에즈 북서쪽">
@@ -16454,6 +16858,7 @@
 	  <item name="팥" price="-2" />
 	  <item name="찹쌀" price="-2" />
 	  <item name="돼지" price="-2" />
+	  <item name="면화" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="일본 열도 서쪽 해안">
@@ -16467,6 +16872,7 @@
 	  <item name="팥" price="-2" />
 	  <item name="토란" price="-2" />
 	  <item name="찹쌀" price="-2" />
+	  <item name="면화" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중국 남동쪽 해안">
@@ -16477,6 +16883,11 @@
 	  <item name="목화" price="-1" />
 	  <item name="흑연" price="-1" />
 	  <item name="살구씨" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="팥" price="-2" />
+	  <item name="보리" price="-2" />
+	  <item name="찹쌀" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="대만 남동쪽 해안">
@@ -16508,6 +16919,11 @@
 	  <item name="목화" price="-1" />
 	  <item name="목재" price="-1" />
 	  <item name="옻나무" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="팥" price="-2" />
+	  <item name="말" price="-2" />
+	  <item name="벼" price="-2" />
 	</group>
   </cityinfo>
   <cityinfo name="단수이 남동쪽">
@@ -16521,6 +16937,7 @@
 	  <item name="돼지" price="-2" />
 	  <item name="닭" price="-2" />
 	  <item name="양파" price="-2" />
+	  <item name="면화" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="운대산 서쪽">
@@ -16560,6 +16977,10 @@
 	  <item name="대구" />
 	  <item name="넙치" />
 	  <item name="해수" price="-1" />
+	  <item name="금눈돔" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="유틀란드 반도 앞바다">
@@ -16576,6 +16997,9 @@
 	  <item name="새우" price="-1" />
 	  <item name="게" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="가자미" />
+	  <item name="꽁치" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="북해">
@@ -16590,6 +17014,10 @@
 	  <item name="대구" />
 	  <item name="해수" price="-1" />
 	  <item name="게" price="-1" />
+	  <item name="금눈돔" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="발트해">
@@ -16604,6 +17032,11 @@
 	  <item name="게" price="-1" />
 	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="황어" />
+	  <item name="꽁치" />
+	  <item name="오징어" />
+	  <item name="개복치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="브리튼 섬 남부">
@@ -16620,6 +17053,11 @@
 	  <item name="새우" price="-1" />
 	  <item name="게" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="금눈돔" />
+	  <item name="황어" />
+	  <item name="개복치" />
+	  <item name="뱀장어" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="브리튼 섬 북부">
@@ -16634,6 +17072,9 @@
 	  <item name="연어" />
 	  <item name="해수" price="-1" />
 	  <item name="게" price="-1" />
+	  <item name="성대" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="비스케이만">
@@ -16647,6 +17088,14 @@
 	  <item name="개복치" />
 	  <item name="해수" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="성대" />
+	  <item name="뱀장어" />
+	  <item name="농어" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="북동대서양">
@@ -16663,6 +17112,9 @@
 	  <item name="해수" price="-1" />
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
+	  <item name="달고기" />
+	  <item name="통나무" price="-1" />
+	  <item name="게" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="북대서양">
@@ -16677,6 +17129,8 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="꼬치삼치" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="리스본 앞바다">
@@ -16698,6 +17152,8 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="게" price="-1" />
+	  <item name="삼치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="마데이라 앞바다">
@@ -16720,6 +17176,9 @@
 	  <item name="새우" price="-1" />
 	  <item name="게" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="꼬치삼치" />
+	  <item name="백상어" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="지브롤터 해협">
@@ -16735,6 +17194,13 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="홍합" price="-1" />
+	  <item name="개복치" />
+	  <item name="쏨뱅이" />
+	  <item name="만새기" />
+	  <item name="백미돔" />
+	  <item name="달고기" />
+	  <item name="청새치" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="발레아레스제도 앞바다">
@@ -16749,6 +17215,12 @@
 	  <item name="해수" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="홍합" price="-1" />
+	  <item name="꼬치삼치" />
+	  <item name="백상어" />
+	  <item name="청새치" />
+	  <item name="해초" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="리그리아 해">
@@ -16759,6 +17231,16 @@
 	  <item name="정어리" />
 	  <item name="개복치" />
 	  <item name="홍합" price="-1" />
+	  <item name="청새치" />
+	  <item name="꼬치삼치" />
+	  <item name="감성돔" />
+	  <item name="고등어" />
+	  <item name="도루묵" />
+	  <item name="백상어" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="티레니아 해">
@@ -16777,6 +17259,9 @@
 	  <item name="새우" price="-1" />
 	  <item name="홍합" price="-1" />
 	  <item name="산호" price="-1" />
+	  <item name="청새치" />
+	  <item name="고등어" />
+	  <item name="백상어" />
 	</group>
   </cityinfo>
   <cityinfo name="이오니아 해">
@@ -16790,6 +17275,14 @@
 	  <item name="해수" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="사금" price="-1" />
+	  <item name="청상아리" />
+	  <item name="도루묵" />
+	  <item name="오징어" />
+	  <item name="개복치" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="홍합" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아드리아 해">
@@ -16802,6 +17295,9 @@
 	  <item name="개복치" />
 	  <item name="해수" price="-1" />
 	  <item name="사금" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="홍합" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="동 지중해">
@@ -16823,6 +17319,9 @@
 	  <item name="홍합" price="-1" />
 	  <item name="산호" price="-1" />
 	  <item name="사금" price="-1" />
+	  <item name="고등어" />
+	  <item name="복어" />
+	  <item name="개복치" />
 	</group>
   </cityinfo>
   <cityinfo name="흑해">
@@ -16836,6 +17335,9 @@
 	  <item name="새우" price="-1" />
 	  <item name="홍합" price="-1" />
 	  <item name="사금" price="-1" />
+	  <item name="전갱이" />
+	  <item name="정어리" />
+	  <item name="해초" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="카나리아 앞바다">
@@ -16853,6 +17355,12 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="삼치" />
+	  <item name="꼬치삼치" />
+	  <item name="참돔" />
+	  <item name="백상어" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="곡물해안 앞바다">
@@ -16861,6 +17369,18 @@
 	  <item name="정어리" />
 	  <item name="다금바리" />
 	  <item name="해수" price="-1" />
+	  <item name="삼치" />
+	  <item name="다랑어" />
+	  <item name="물치 다랑어" />
+	  <item name="참돔" />
+	  <item name="만새기" />
+	  <item name="꼬치삼치" />
+	  <item name="백상어" />
+	  <item name="청새치" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="황금해안 앞바다">
@@ -16874,6 +17394,12 @@
 	  <item name="백상어" />
 	  <item name="청새치" />
 	  <item name="해수" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="삼치" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남대서양">
@@ -16885,6 +17411,9 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="청상아리" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="기니 만">
@@ -16900,6 +17429,13 @@
 	  <item name="해수" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="개복치" />
+	  <item name="오징어" />
+	  <item name="백상어" />
+	  <item name="다랑어" />
+	  <item name="달고기" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="나미비아 앞바다">
@@ -16907,6 +17443,16 @@
 	  <item name="고등어" />
 	  <item name="정어리" />
 	  <item name="해수" price="-1" />
+	  <item name="가다랑어" />
+	  <item name="다랑어" />
+	  <item name="청상아리" />
+	  <item name="청새치" />
+	  <item name="꼬치삼치" />
+	  <item name="백상어" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="희망봉 앞바다">
@@ -16917,6 +17463,12 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="정어리" />
+	  <item name="청상아리" />
+	  <item name="백상어" />
+	  <item name="창꼬치" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아굴라스 곶">
@@ -16929,11 +17481,24 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="물치 다랑어" />
+	  <item name="창꼬치" />
+	  <item name="고등어" />
+	  <item name="다랑어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아굴라스 해저분지">
 	<group name="[교역]">
 	  <item name="해수" price="-1" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
+	  <item name="창꼬치" />
+	  <item name="물치 다랑어" />
+	  <item name="고등어" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="모잠비크 해협">
@@ -16943,6 +17508,14 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="정어리" />
+	  <item name="물치 다랑어" />
+	  <item name="고등어" />
+	  <item name="가다랑어" />
+	  <item name="다랑어" />
+	  <item name="잿방어" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남서 인도양">
@@ -16950,6 +17523,14 @@
 	  <item name="잿방어" />
 	  <item name="다랑어" />
 	  <item name="해수" price="-1" />
+	  <item name="가다랑어" />
+	  <item name="물치 다랑어" />
+	  <item name="정어리" />
+	  <item name="청새치" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="마다가스카르 앞바다">
@@ -16964,6 +17545,15 @@
 	  <item name="청새치" />
 	  <item name="청상아리" />
 	  <item name="해수" price="-1" />
+	  <item name="창꼬치" />
+	  <item name="다랑어" />
+	  <item name="꼬치삼치" />
+	  <item name="개복치" />
+	  <item name="백상어" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="잔지바르 앞바다">
@@ -16972,6 +17562,16 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="청상아리" />
+	  <item name="물치 다랑어" />
+	  <item name="가다랑어" />
+	  <item name="정어리" />
+	  <item name="고등어" />
+	  <item name="그루쿠마" />
+	  <item name="다랑어" />
+	  <item name="잿방어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아라비아 해">
@@ -16984,6 +17584,9 @@
 	  <item name="해수" price="-1" />
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
+	  <item name="개복치" />
+	  <item name="청상아리" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="홍해">
@@ -16992,6 +17595,10 @@
 	  <item name="앵무고기" />
 	  <item name="해수" price="-1" />
 	  <item name="해초" price="-1" />
+	  <item name="정어리" />
+	  <item name="물치 다랑어" />
+	  <item name="개복치" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="페르시아만">
@@ -17006,6 +17613,10 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="개복치" />
+	  <item name="청새치" />
+	  <item name="청상아리" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="인도 서쪽 해안 앞바다">
@@ -17015,6 +17626,15 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="정어리" />
+	  <item name="전갱이" />
+	  <item name="물치 다랑어" />
+	  <item name="창꼬치" />
+	  <item name="바나나피쉬" />
+	  <item name="그루쿠마" />
+	  <item name="흑점줄전갱이" />
+	  <item name="잿방어" />
+	  <item name="개복치" />
 	</group>
   </cityinfo>
   <cityinfo name="인도 남쪽 해안 앞바다">
@@ -17028,6 +17648,13 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="창꼬치" />
+	  <item name="청새치" />
+	  <item name="가다랑어" />
+	  <item name="잿방어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="개복치" />
+	  <item name="청상아리" />
 	</group>
   </cityinfo>
   <cityinfo name="안다만 해">
@@ -17036,6 +17663,13 @@
 	  <item name="해수" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="정어리" />
+	  <item name="창꼬치" />
+	  <item name="잿방어" />
+	  <item name="그루쿠마" />
+	  <item name="갑오징어" />
+	  <item name="물치 다랑어" />
+	  <item name="개복치" />
 	</group>
   </cityinfo>
   <cityinfo name="중부 인도양">
@@ -17049,6 +17683,9 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="정어리" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="벵갈만">
@@ -17062,6 +17699,9 @@
 	  <item name="해수" price="-1" />
 	  <item name="해초" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="그루쿠마" />
+	  <item name="갑오징어" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="산후안 앞바다">
@@ -17093,6 +17733,16 @@
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="꼬치삼치" />
+	  <item name="정어리" />
+	  <item name="백상어" />
+	  <item name="청상아리" />
+	  <item name="만새기" />
+	  <item name="달고기" />
+	  <item name="날새기" />
+	  <item name="잿방어" />
+	  <item name="벤자리" />
+	  <item name="개복치" />
 	</group>
   </cityinfo>
   <cityinfo name="서 카리브 해">
@@ -17109,6 +17759,12 @@
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="꼬치삼치" />
+	  <item name="농어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="백상어" />
+	  <item name="달고기" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="버뮤다제도 앞바다">
@@ -17121,6 +17777,9 @@
 	  <item name="해수" price="-1" />
 	  <item name="해초" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="다금바리" />
+	  <item name="통나무" price="-1" />
+	  <item name="진주조개" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="코드 곶 앞바다">
@@ -17133,6 +17792,9 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="게" price="-1" />
+	  <item name="블루피쉬" />
+	  <item name="대구" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="멕시코만">
@@ -17146,6 +17808,14 @@
 	  <item name="타폰" />
 	  <item name="해수" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="고등어" />
+	  <item name="이빨다랑어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남 카리브 해">
@@ -17162,6 +17832,18 @@
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="정어리" />
+	  <item name="숭어" />
+	  <item name="삼치" />
+	  <item name="만새기" />
+	  <item name="이빨다랑어" />
+	  <item name="다금바리" />
+	  <item name="다랑어" />
+	  <item name="청새치" />
+	  <item name="타폰" />
+	  <item name="갑옷메기" />
+	  <item name="해수" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙대서양">
@@ -17175,6 +17857,7 @@
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
 	  <item name="산호" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아마존강 유역">
@@ -17190,6 +17873,14 @@
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="정어리" />
+	  <item name="창꼬치" />
+	  <item name="청새치" />
+	  <item name="꼬치삼치" />
+	  <item name="가오리" />
+	  <item name="숭어" />
+	  <item name="개복치" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="산로케곶 앞바다">
@@ -17205,6 +17896,7 @@
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남서 대서양">
@@ -17215,6 +17907,9 @@
 	  <item name="다금바리" />
 	  <item name="해수" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="개복치" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="부에노스아이레스 앞바다">
@@ -17246,16 +17941,36 @@
 	  <item name="마젤란 쥐노래미" />
 	  <item name="해수" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="성대" />
+	  <item name="개복치" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="용연향" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="조지아 해저분지">
 	<group name="[교역]">
 	  <item name="해수" price="-1" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="오징어" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
+	  <item name="용연향" price="-1" />
+	  <item name="산호" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남인도양">
 	<group name="[교역]">
-	  <item name="해수" />
+	  <item name="해수" price="-1" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
+	  <item name="물치 다랑어" />
+	  <item name="다랑어" />
+	  <item name="청상아리" />
 	</group>
   </cityinfo>
   <cityinfo name="남동인도양">
@@ -17269,6 +17984,7 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="진주조개" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="자바섬 남쪽 앞바다">
@@ -17281,6 +17997,8 @@
 	  <item name="해수" price="-1" />
 	  <item name="해초" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="자바 해">
@@ -17293,6 +18011,12 @@
 	  <item name="통나무" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="숭어" />
+	  <item name="가오리" />
+	  <item name="쏨뱅이" />
+	  <item name="그루쿠마" />
+	  <item name="갈돔" />
+	  <item name="개복치" />
 	</group>
   </cityinfo>
   <cityinfo name="시암만">
@@ -17302,6 +18026,15 @@
 	  <item name="해수" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="정어리" />
+	  <item name="가오리" />
+	  <item name="쏨뱅이" />
+	  <item name="갑오징어" />
+	  <item name="물치 다랑어" />
+	  <item name="숭어" />
+	  <item name="개복치" />
+	  <item name="해초" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="셀레베스 해">
@@ -17322,6 +18055,13 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="가오리" />
+	  <item name="삼치" />
+	  <item name="물치 다랑어" />
+	  <item name="장미퉁돔" />
+	  <item name="흑점줄전갱이" />
+	  <item name="성대" />
+	  <item name="큰양놀래기" />
 	</group>
   </cityinfo>
   <cityinfo name="반다 해">
@@ -17339,6 +18079,9 @@
 	  <item name="삼치" />
 	  <item name="흑점줄전갱이" />
 	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="서캐롤린 해저분지">
@@ -17347,11 +18090,30 @@
 	  <item name="정어리" />
 	  <item name="가다랑어" />
 	  <item name="해수" price="-1" />
+	  <item name="숭어" />
+	  <item name="보리멸" />
+	  <item name="창꼬치" />
+	  <item name="삼치" />
+	  <item name="갈돔" />
+	  <item name="흑점줄전갱이" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="동 캐롤라인 해저분지">
 	<group name="[교역]">
 	  <item name="해수" price="-1" />
+	  <item name="정어리" />
+	  <item name="물치 다랑어" />
+	  <item name="창꼬치" />
+	  <item name="가다랑어" />
+	  <item name="삼치" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="오스트레일리아 서부 해저분지">
@@ -17360,6 +18122,12 @@
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
+	  <item name="이빨다랑어" />
+	  <item name="다랑어" />
+	  <item name="개복치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="퍼스 해저분지">
@@ -17372,6 +18140,11 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="톱상어" />
+	  <item name="다랑어" />
+	  <item name="개복치" />
+	  <item name="해수" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="아라푸라 해">
@@ -17386,6 +18159,7 @@
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="오스트레일리아 남부 해저분지">
@@ -17400,6 +18174,9 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="도루묵" />
+	  <item name="해수" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="산호해">
@@ -17413,6 +18190,9 @@
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="청새치" />
+	  <item name="도루묵" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="태즈먼 해">
@@ -17429,6 +18209,9 @@
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="이빨다랑어" />
+	  <item name="톱상어" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="사모아 해저분지">
@@ -17444,6 +18227,7 @@
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="가다랑어" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지 서쪽">
@@ -17453,16 +18237,29 @@
 	  <item name="청새치" />
 	  <item name="다랑어" />
 	  <item name="개복치" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지 북쪽">
 	<group name="[교역]">
+	  <item name="붉은개복치" />
+	  <item name="정어리" />
+	  <item name="청새치" />
+	  <item name="다랑어" />
+	  <item name="개복치" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지">
 	<group name="[교역]">
 	  <item name="정어리" />
 	  <item name="다랑어" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="남태평양 해저분지 동쪽">
@@ -17471,6 +18268,11 @@
 	  <item name="개복치" />
 	  <item name="다랑어" />
 	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="페루 해저분지">
@@ -17482,6 +18284,9 @@
 	  <item name="해수" price="-1" />
 	  <item name="굴" price="-1" />
 	  <item name="용연향" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="칠레 해저분지">
@@ -17492,6 +18297,13 @@
 	  <item name="청어" />
 	  <item name="메를루자" />
 	  <item name="해수" price="-1" />
+	  <item name="개복치" />
+	  <item name="다랑어" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="멜라네시아 해저분지">
@@ -17500,6 +18312,12 @@
 	  <item name="물치 다랑어" />
 	  <item name="정어리" />
 	  <item name="흑점줄전갱이" />
+	  <item name="도루묵" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙 태평양 해저분지 서쪽">
@@ -17508,6 +18326,10 @@
 	  <item name="가다랑어" />
 	  <item name="흑점줄전갱이" />
 	  <item name="해수" price="-1" />
+	  <item name="청새치" />
+	  <item name="통나무" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙 태평양 해저분지">
@@ -17515,6 +18337,11 @@
 	  <item name="정어리" />
 	  <item name="다랑어" />
 	  <item name="해수" price="-1" />
+	  <item name="개복치" />
+	  <item name="청새치" />
+	  <item name="새우" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="중앙 태평양 해저분지 동쪽">
@@ -17523,11 +18350,23 @@
 	  <item name="정어리" />
 	  <item name="다랑어" />
 	  <item name="해수" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="테우안테펙 만">
 	<group name="[교역]">
 	  <item name="해수" price="-1" />
+	  <item name="멸치" />
+	  <item name="부시리" />
+	  <item name="가다랑어" />
+	  <item name="청어" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="파나마 만">
@@ -17536,6 +18375,11 @@
 	  <item name="청어" />
 	  <item name="부시리" />
 	  <item name="해수" price="-1" />
+	  <item name="가다랑어" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="갈라파고스 제도 앞바다">
@@ -17543,11 +18387,26 @@
 	  <item name="멸치" />
 	  <item name="정어리" />
 	  <item name="해수" price="-1" />
+	  <item name="부시리" />
+	  <item name="다랑어" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="과야킬 만">
 	<group name="[교역]">
 	  <item name="해수" price="-1" />
+	  <item name="정어리" />
+	  <item name="멸치" />
+	  <item name="메를루자" />
+	  <item name="부시리" />
+	  <item name="해초" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="동아시아 서부">
@@ -17560,6 +18419,8 @@
 	  <item name="감성돔" />
 	  <item name="가다랑어" />
 	  <item name="다랑어" />
+	  <item name="정어리" />
+	  <item name="해수" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="동아시아 동부">
@@ -17580,6 +18441,7 @@
 	  <item name="목재" price="-1" />
 	  <item name="굴" price="-1" />
 	  <item name="산호" price="-1" />
+	  <item name="홍대치" />
 	</group>
   </cityinfo>
   <cityinfo name="북서 태평양 해저분지">
@@ -17590,6 +18452,8 @@
 	  <item name="가다랑어" />
 	  <item name="새우" price="-1" />
 	  <item name="굴" price="-1" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
 
@@ -17602,6 +18466,11 @@
 	  <item name="통나무" price="-1" />
 	  <item name="해초" price="-1" />
 	  <item name="새우" price="-1" />
+	  <item name="가다랑어" />
+	  <item name="흑점줄전갱이" />
+	  <item name="해수" price="-1" />
+	  <item name="굴" price="-1" />
+	  <item name="용연향" price="-1" />
 	</group>
   </cityinfo>
   <cityinfo name="테라 노바 북쪽 해안">
@@ -17657,6 +18526,7 @@
 			<item name="담배" price="-1" />
 			<item name="거대한 잎" price="-1" />
 			<item name="나무껍질" price="-1" />
+	  <item name="면화" price="-1" />
 		</group>
   </cityinfo>
   <cityinfo name="타코마 근교">
@@ -17719,6 +18589,7 @@
 	  <item name="팥" price="-2" />
 	  <item name="올리브" price="-2" />
 	  <item name="밀" price="-2" />
+	  <item name="붉은 콩" price="-2" />
 		</group>
   </cityinfo>
   <cityinfo name="잠베지 강 중류">
@@ -17752,6 +18623,7 @@
 	  <item name="카사바" price="-2" />
 	  <item name="토마토" price="-2" />
 			<item name="기묘한 열매" price="-2" />
+	  <item name="피라루크" />
 		</group>
   </cityinfo>
   <cityinfo name="아마존 오지">
@@ -17778,6 +18650,19 @@
 	  <item name="보리" price="35" />
 	  <item name="모피" option="*" price="1296" investment="320k" />
 	  <item name="목재" price="674" />
+	</group>
+	<group name="[도구]">
+	  <item name="건 슬링거의 옷" price="76000" investment="19세기" />
+	  <item name="건 슬링거의 조끼" price="76000" investment="19세기" />
+	  <item name="워크 부츠" price="8000" investment="19세기" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="해독제" price="100" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
 	</group>
   </cityinfo>
   <cityinfo name="북미 대륙 서해안">
@@ -17935,108 +18820,2177 @@
   <!-- 2023-2024 추가 도시: 정리 wiki(gvo.gamedb.info) 도시별 교역품 기준, 가격·투자액 미상 -->
   <cityinfo name="예테보리">
 	<group name="[교역]">
-	  <item name="호밀" />
-	  <item name="메귀리" />
-	  <item name="유럽 가재" />
-	  <item name="쐐기풀" />
-	  <item name="목재" />
-	  <item name="아마" />
+	  <item name="호밀" price="32" />
+	  <item name="메귀리" price="32" />
+	  <item name="유럽 가재" price="2534" />
+	  <item name="쐐기풀" price="403" />
+	  <item name="목재" price="591" />
+	  <item name="아마" price="167" />
 	  <item name="모피" option="*" />
 	  <item name="피혁" option="*" />
 	  <item name="고급가구" option="*" />
-	  <item name="달라헤스트" />
+	  <item name="달라헤스트" price="1747" />
+	</group>
+	<group name="[도구]">
+	  <item name="에이프런 드레스" price="5100" />
+	  <item name="스냅록식 사격총" price="8000" />
+	  <item name="낚시도구" price="2500" />
+	  <item name="독약" price="250" />
+	  <item name="해독제" price="100" />
+	  <item name="창만들기 응용" price="50000" />
+	  <item name="스웨덴 민족의상(남)" price="76000" />
+	  <item name="스웨덴 민족의상(여)" price="76000" />
+	  <item name="나막신" option="*" price="18600" investment="17세기 : 1, 2, 3, 4  18세기 : 1" />
+	  <item name="고대의 명요리" option="*" price="100000" investment="8,500,000" />
+	</group>
+	<group name="[공방]">
+	  <item name="사분의" price="500" />
+	  <item name="망향의 카리욘벨" price="200" />
+	  <item name="뱃노래의 악보" price="200" />
+	  <item name="해양생물상 조각술" price="10000" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	  <item name="한자 코그" price="24000" />
+	  <item name="무장 코그" price="25000" />
+	  <item name="소형 캐러벨" price="92000" />
+	  <item name="경 캐러벨" price="92000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="2 마스트 코그" price="96000" />
+	  <item name="푸카" price="220000" />
+	  <item name="워릭 코그" price="230000" />
+	  <item name="전투용 프류트" price="400000" />
+	  <item name="프류트" price="410000" />
+	  <item name="상업용 프류트" price="420000" />
+	  <item name="경 카락" price="478000" />
+	  <item name="소형 카락" price="480000" />
+	  <item name="수송용 카락" price="488000" />
+	  <item name="카락" price="720000" />
+	  <item name="전투용 카락" price="720000" />
+	  <item name="상업용 카락" price="728000" />
+	  <item name="핀네스" price="950000" />
+	  <item name="전투용 핀네스" price="950000" />
+	  <item name="상업용 핀네스" price="960000" />
+	  <item name="대형 카락" price="1800000" />
+	  <item name="상업용 대형카락" price="1840000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
+	  <item name="상업용 무장 카락" price="4000000" />
+	</group>
+	<group name="[대포]">
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
+	  <item name="팰콘포 8문" price="8100" />
+	  <item name="미니온포 2문" price="1400" />
+	  <item name="미니온포 4문" price="5600" />
+	  <item name="미니온포 6문" price="12400" />
+	  <item name="미니온포 8문" price="22400" />
+	  <item name="미니온포 10문" price="34800" />
+	  <item name="세이커포 2문" price="3200" />
+	  <item name="세이커포 4문" price="12600" />
+	  <item name="세이커포 6문" price="28400" />
+	  <item name="세이커포 8문" price="50500" />
+	  <item name="세이커포 10문" price="79000" />
+	  <item name="데미 캘버린포 2문" price="4000" />
+	  <item name="데미 캘버린포 4문" price="16200" />
+	  <item name="데미 캘버린포 6문" price="36400" />
+	  <item name="데미 캘버린포 8문" price="64600" />
+	  <item name="데미 캘버린포 10문" price="101000" />
+	  <item name="데미 캘버린포 12문" price="145400" />
+	  <item name="캘버린포 4문" price="21800" />
+	  <item name="캘버린포 6문" price="49100" />
+	  <item name="캘버린포 8문" price="87300" />
+	  <item name="캘버린포 10문" price="136300" />
+	  <item name="캘버린포 12문" price="196300" />
+	  <item name="파일로포 4문" price="12500" />
+	  <item name="파일로포 6문" price="38000" />
+	  <item name="드래코니스포 4문" price="18200" />
+	  <item name="드래코니스포 6문" price="55500" />
+	  <item name="드래코니스포 8문" price="103600" />
+	  <item name="앙페르포 4문" price="26600" />
+	  <item name="앙페르포 6문" price="81000" />
+	  <item name="프랑고포 4문" price="12500" />
+	  <item name="프랑고포 6문" price="38000" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="메테오라포 4문" price="26600" />
+	  <item name="메테오라포 6문" price="81000" />
+	  <item name="곡사포 2문" price="9100" />
+	  <item name="곡사포 4문" price="36300" />
+	  <item name="곡사포 6문" price="81700" />
+	  <item name="곡사포 8문" price="145200" />
+	  <item name="곡사포 10문" price="226800" />
+	  <item name="칼로네이드포 4문" price="14500" />
+	  <item name="슈미네포 4문" price="29300" />
+	  <item name="슈미네포 6문" price="89100" />
+	  <item name="발칸포 4문" price="29300" />
+	  <item name="발칸포 6문" price="89100" />
+	  <item name="소형 충각" price="1000" />
+	  <item name="소형 조교" price="3000" />
+	  <item name="소형 선수루" price="5000" />
+	  <item name="선수루" price="16000" />
+	  <item name="추가 소 스프릿" price="2000" />
+	  <item name="추가 스프릿" price="44000" />
+	  <item name="소형 선미루" price="39000" />
+	  <item name="선미루" price="130000" />
+	  <item name="추가 소 스팽커" price="3500" />
+	  <item name="추가 스팽커" price="55000" />
+	</group>
+	<group name="[추가장갑]">
+	  <item name="경량 삼나무판" price="880" />
+	  <item name="경량 붉은 소나무판" price="3000" />
+	  <item name="경량 너도밤나무판" price="7000" />
+	  <item name="느릅나무판" price="13000" />
+	  <item name="경량 떡갈나무판" price="38000" />
+	  <item name="간이 동판" price="41000" />
+	  <item name="간이 철판" price="80000" />
 	</group>
   </cityinfo>
   <cityinfo name="가봉">
 	<group name="[교역]">
-	  <item name="사탕수수" />
-	  <item name="야자유" />
+	  <item name="사탕수수" price="0" />
+	  <item name="야자유" price="0" />
 	  <item name="진주조" option="*" />
-	  <item name="커피" />
-	  <item name="석유" />
-	  <item name="산호" />
-	  <item name="공작석" />
+	  <item name="커피" price="0" />
+	  <item name="석유" price="0" />
+	  <item name="산호" price="0" />
+	  <item name="공작석" price="0" />
 	  <item name="다이아몬드" option="*" />
 	  <item name="상아" option="*" />
+	  <item name="토우진비에" option="*" price="0" investment="?" />
+	</group>
+	<group name="[도구]">
+	  <item name="만취하게 하는 술" price="300" />
+	  <item name="켄트" price="53400" />
+	  <item name="보충용 어망" price="1000" />
+	  <item name="다이아몬드 브로치" price="9000000" investment="?" />
+	  <item name="다이아몬드 반지" price="10000000" investment="?" />
+	  <item name="다이아몬드 귀걸이" price="7000000" />
+	  <item name="다이아몬드 목걸이" price="11000000" investment="?" />
+	  <item name="다이아몬드 헤어밴드" price="8000000" investment="?" />
+	  <item name="특수 염색료5" price="5000" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="전투용 바사" price="5100" />
+	  <item name="상업용 바사" price="5200" />
+	  <item name="소형 캐러벨" price="92000" />
+	  <item name="경 캐러벨" price="92000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="전투용 캐러벨" price="280000" />
+	  <item name="캐러벨" price="285000" />
+	  <item name="상업용 캐러벨" price="290000" />
+	  <item name="경 카락" price="478000" />
+	  <item name="소형 카락" price="480000" />
+	  <item name="수송용 카락" price="488000" />
+	  <item name="카락" price="720000" />
+	  <item name="전투용 카락" price="720000" />
+	  <item name="상업용 카락" price="728000" />
+	  <item name="경 갤리온" price="810000" />
+	  <item name="소형 갤리온" price="830000" />
+	  <item name="수송용 갤리온" price="840000" />
+	  <item name="나오" price="1250000" />
+	  <item name="탐험용 나오" price="1704000" />
+	  <item name="갤리온" price="4500000" />
+	  <item name="상업용 갤리온" price="4600000" />
+	  <item name="전투용 갤리온" price="4600000" />
+	</group>
+	<group name="[돛]">
+	  <item name="소 이너 지브" price="500" />
+	  <item name="이너 지브" price="1700" />
+	  <item name="포어 스테이 세일" price="8300" />
+	  <item name="포어 톱 갤런트 세일" price="2400" />
+	  <item name="미즌 톱 갤런트 세일" price="4200" />
+	</group>
+	<group name="[대포]">
+	  <item name="슈미네포 4문" price="29300" />
+	  <item name="슈미네포 6문" price="89100" />
+	  <item name="메테오라포 4문" price="26600" />
+	  <item name="메테오라포 6문" price="81000" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="프랑고포 4문" price="12500" />
+	  <item name="프랑고포 6문" price="38000" />
+	  <item name="발칸포 4문" price="29300" />
+	  <item name="발칸포 6문" price="89100" />
+	  <item name="앙페르포 4문" price="26600" />
+	  <item name="앙페르포 6문" price="81000" />
+	  <item name="드래코니스포 4문" price="18200" />
+	  <item name="드래코니스포 6문" price="55500" />
+	  <item name="드래코니스포 8문" price="103600" />
+	  <item name="파일로포 4문" price="12500" />
+	  <item name="파일로포 6문" price="38000" />
+	  <item name="엑스플로더포 2문" price="7100" />
+	  <item name="엑스플로더포 4문" price="28500" />
+	  <item name="엑스플로더포 6문" price="64000" />
+	  <item name="엑스플로더포 8문" price="113900" />
+	  <item name="세이커포 2문" price="3200" />
+	  <item name="세이커포 4문" price="12600" />
+	  <item name="세이커포 6문" price="28400" />
+	  <item name="세이커포 8문" price="50500" />
+	  <item name="세이커포 10문" price="79000" />
+	  <item name="미니온포 2문" price="1400" />
+	  <item name="미니온포 4문" price="5600" />
+	  <item name="미니온포 6문" price="12400" />
+	  <item name="미니온포 8문" price="22400" />
+	  <item name="미니온포 10문" price="34800" />
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
+	  <item name="팰콘포 8문" price="8100" />
 	</group>
   </cityinfo>
   <cityinfo name="이냠바느">
 	<group name="[교역]">
-	  <item name="보리" />
-	  <item name="사탕수수" />
-	  <item name="벼" />
-	  <item name="커피" />
+	  <item name="보리" price="0" />
+	  <item name="사탕수수" price="0" />
+	  <item name="벼" price="0" />
+	  <item name="커피" price="0" />
 	  <item name="루이보스" option="*" />
 	  <item name="아프리카 목각" option="*" />
-	  <item name="은" />
-	  <item name="산호" />
+	  <item name="은" price="0" />
+	  <item name="산호" price="0" />
 	  <item name="에메랄드" option="*" />
+	  <item name="면화" price="0" />
+	</group>
+	<group name="[도구]">
+	  <item name="포획망" price="300" />
+	  <item name="부메랑" price="150" />
+	  <item name="투척용 횃불" price="150" />
+	  <item name="던지는 화살" price="50" />
+	  <item name="치료약" price="300" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="사냥꾼의 창" price="38700" />
+	  <item name="나무 창" price="34400" />
+	  <item name="에메랄드 브로치" price="6000000" investment="?" />
+	  <item name="에메랄드 반지" price="7000000" investment="?" />
+	  <item name="에메랄드 귀걸이" price="4000000" />
+	  <item name="에메랄드 목걸이" price="8000000" investment="?" />
+	  <item name="에메랄드 헤어밴드" price="5000000" investment="?" />
 	</group>
   </cityinfo>
   <cityinfo name="얀부">
 	<group name="[교역]">
-	  <item name="밀" />
-	  <item name="양파" />
-	  <item name="커피" />
-	  <item name="석유" />
+	  <item name="밀" price="0" />
+	  <item name="양파" price="0" />
+	  <item name="커피" price="0" />
+	  <item name="석유" price="0" />
 	  <item name="검은색 광석" option="*" />
-	  <item name="낙타모" />
+	  <item name="낙타모" price="0" />
 	  <item name="화약" option="*" />
 	  <item name="산호" option="*" />
+	</group>
+	<group name="[도구]">
+	  <item name="지옥의 횃불" price="300" />
+	  <item name="작렬약" price="300" investment="?" />
+	  <item name="강력 끈끈이 기름" price="200" />
+	  <item name="마취약" price="500" />
+	  <item name="다마스크직물 아랍해적셔츠" price="1817000" />
+	</group>
+	<group name="[추가장갑]">
+	  <item name="삼나무판" price="800" />
+	  <item name="간이 붉은 소나무판" price="500" />
+	  <item name="간이 너도밤나무판" price="2200" />
+	  <item name="느릅나무판" price="13000" />
+	  <item name="티크판" price="22000" />
+	  <item name="마호가니판" price="51000" />
+	  <item name="로즈우드판" price="100000" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="전투용 바사" price="5100" />
+	  <item name="상업용 바사" price="5200" />
+	  <item name="경 갤리" price="150000" />
+	  <item name="갤리오트" price="156000" />
+	  <item name="수송용 갤리" price="160000" />
+	  <item name="다우" price="360000" />
+	  <item name="돌격용 다우" price="365000" />
+	  <item name="상업용 다우" price="372000" />
+	  <item name="강습용 갤리" price="640000" />
+	  <item name="갤리" price="645000" />
+	  <item name="상업용 갤리" price="650000" />
+	  <item name="삼부크" price="1000000" />
+	  <item name="무장 삼부크" price="1000000" />
+	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="아라비안 갤리" price="3840000" />
+	  <item name="지벡" price="2900000" />
+	  <item name="상업용 지벡" price="2960000" />
+	  <item name="무장 지벡" price="3000000" />
 	</group>
   </cityinfo>
   <cityinfo name="마나마">
 	<group name="[교역]">
-	  <item name="양고기" />
-	  <item name="올리브유" />
-	  <item name="녹색 광석" />
-	  <item name="양모" />
-	  <item name="페르시아 융단" />
+	  <item name="양고기" price="0" />
+	  <item name="올리브유" price="0" />
+	  <item name="녹색 광석" option="*" price="0" investment="8,500,000" />
+	  <item name="양모" price="0" />
+	  <item name="페르시아 융단" price="0" />
 	  <item name="타프타" option="*" />
-	  <item name="바질" />
-	  <item name="생강" />
+	  <item name="바질" price="0" />
+	  <item name="생강" price="0" />
 	  <item name="터키석" option="*" />
 	  <item name="진주" option="*" />
+	  <item name="자단" option="*" price="0" investment="320k" />
+	</group>
+	<group name="[도구]">
+	  <item name="지옥의 횃불" price="300" />
+	  <item name="나루나리" price="42000" investment="?" />
+	  <item name="강력 끈끈이 기름" price="200" />
+	  <item name="비석의 독" price="400" />
+	  <item name="매혹의 향기" price="1000" />
+	  <item name="쿠르타" price="83500" />
+	  <item name="살리" price="106100" />
+	  <item name="에메랄드 브로치" price="6000000" investment="?" />
+	  <item name="에메랄드 반지" price="7000000" investment="?" />
+	  <item name="에메랄드 귀걸이" price="4000000" />
+	  <item name="에메랄드 목걸이" price="8000000" investment="?" />
+	  <item name="에메랄드 헤어밴드" price="5000000" investment="?" />
 	</group>
   </cityinfo>
   <cityinfo name="망갈">
 	<group name="[교역]">
 	  <item name="철광석" option="*" />
 	  <item name="자단" option="*" />
-	  <item name="황마" />
-	  <item name="면화" />
-	  <item name="산양모" />
-	  <item name="캐시미어" />
+	  <item name="황마" price="0" />
+	  <item name="면화" price="0" />
+	  <item name="산양모" price="0" />
+	  <item name="캐시미어" price="0" />
 	  <item name="황동 세공" option="*" />
-	  <item name="생강" />
-	  <item name="백단" />
-	  <item name="자스민" />
+	  <item name="생강" price="0" />
+	  <item name="백단" price="0" />
+	  <item name="자스민" price="0" />
+	</group>
+	<group name="[도구]">
+	  <item name="지옥의 횃불" price="300" />
+	  <item name="나루나리" price="42000" investment="?" />
+	  <item name="강력 끈끈이 기름" price="200" />
+	  <item name="비석의 독" price="400" />
+	  <item name="매혹의 향기" price="1000" />
+	  <item name="쿠르타" price="83500" />
+	  <item name="살리" price="106100" />
+	  <item name="에메랄드 브로치" price="6000000" investment="?" />
+	  <item name="에메랄드 반지" price="7000000" investment="?" />
+	  <item name="에메랄드 귀걸이" price="4000000" />
+	  <item name="에메랄드 목걸이" price="8000000" investment="?" />
+	  <item name="에메랄드 헤어밴드" price="5000000" investment="?" />
+	</group>
+	<group name="[대포]">
+	  <item name="슈미네포 4문" price="29300" />
+	  <item name="슈미네포 6문" price="89100" />
+	  <item name="메테오라포 4문" price="26600" />
+	  <item name="메테오라포 6문" price="81000" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="프랑고포 4문" price="12500" />
+	  <item name="프랑고포 6문" price="38000" />
+	  <item name="발칸포 4문" price="29300" />
+	  <item name="발칸포 6문" price="89100" />
+	  <item name="앙페르포 4문" price="26600" />
+	  <item name="앙페르포 6문" price="81000" />
+	  <item name="드래코니스포 4문" price="18200" />
+	  <item name="드래코니스포 6문" price="55500" />
+	  <item name="드래코니스포 8문" price="103600" />
+	  <item name="파일로포 4문" price="12500" />
+	  <item name="파일로포 6문" price="38000" />
+	  <item name="칼로네이드포 4문" price="14500" />
+	  <item name="트렌치포 2문" price="6500" />
+	  <item name="트렌치포 4문" price="26200" />
+	  <item name="트렌치포 6문" price="58900" />
+	  <item name="트렌치포 8문" price="104700" />
+	  <item name="트렌치포 10문" price="163600" />
+	  <item name="캐논페드로포 4문" price="30500" />
+	  <item name="캐논페드로포 6문" price="68700" />
+	  <item name="캐논페드로포 8문" price="122200" />
+	  <item name="캐논페드로포 10문" price="190900" />
+	  <item name="캐논페드로포 12문" price="274900" />
+	  <item name="캘버린포 4문" price="21800" />
+	  <item name="캘버린포 6문" price="49100" />
+	  <item name="캘버린포 8문" price="87300" />
+	  <item name="캘버린포 10문" price="136300" />
+	  <item name="캘버린포 12문" price="196300" />
+	  <item name="데미 캘버린포 2문" price="4000" />
+	  <item name="데미 캘버린포 4문" price="16200" />
+	  <item name="데미 캘버린포 6문" price="36400" />
+	  <item name="데미 캘버린포 8문" price="64600" />
+	  <item name="데미 캘버린포 10문" price="101000" />
+	  <item name="데미 캘버린포 12문" price="145400" />
+	  <item name="세이커포 2문" price="3200" />
+	  <item name="세이커포 4문" price="12600" />
+	  <item name="세이커포 6문" price="28400" />
+	  <item name="세이커포 8문" price="50500" />
+	  <item name="세이커포 10문" price="79000" />
+	  <item name="미니온포 2문" price="1400" />
+	  <item name="미니온포 4문" price="5600" />
+	  <item name="미니온포 6문" price="12400" />
+	  <item name="미니온포 8문" price="22400" />
+	  <item name="미니온포 10문" price="34800" />
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
+	  <item name="팰콘포 8문" price="8100" />
+	  <item name="추가 소 스프릿" price="2000" />
+	  <item name="추가 소 스팽커" price="3500" />
+	  <item name="소형 선미루" price="39000" />
+	  <item name="선미루" price="130000" />
+	  <item name="소형 선수루" price="5000" />
+	  <item name="소형 조교" price="3000" />
+	  <item name="조교" price="24000" />
+	  <item name="소형 충각" price="1000" />
+	  <item name="충각" price="4800" />
+	  <item name="중형 충각" price="31000" />
+	  <item name="대형 충각" price="100000" />
+	</group>
+	<group name="[추가장갑]">
+	  <item name="간이 삼나무판" price="300" />
+	  <item name="간이 붉은 소나무판" price="500" />
+	  <item name="간이 너도밤나무판" price="2200" />
+	  <item name="느릅나무판" price="13000" />
+	  <item name="경량 티크판" price="24000" />
+	  <item name="경량 마호가니판" price="56000" />
+	  <item name="경량 로즈우드판" price="110000" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="전투용 바사" price="5100" />
+	  <item name="상업용 바사" price="5200" />
+	  <item name="경 갤리" price="150000" />
+	  <item name="갤리오트" price="156000" />
+	  <item name="수송용 갤리" price="160000" />
+	  <item name="다우" price="360000" />
+	  <item name="돌격용 다우" price="365000" />
+	  <item name="상업용 다우" price="372000" />
+	  <item name="강습용 갤리" price="640000" />
+	  <item name="갤리" price="645000" />
+	  <item name="상업용 갤리" price="650000" />
+	  <item name="삼부크" price="1000000" />
+	  <item name="무장 삼부크" price="1000000" />
+	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="지벡" price="2900000" />
+	  <item name="상업용 지벡" price="2960000" />
+	  <item name="무장 지벡" price="3000000" />
 	</group>
   </cityinfo>
   <cityinfo name="비샤카파트남">
 	<group name="[교역]">
-	  <item name="양" />
-	  <item name="인도 쪽" />
+	  <item name="양" price="0" />
+	  <item name="인도 쪽" price="0" />
 	  <item name="철광석" option="*" />
 	  <item name="붉은색 광석" option="*" />
-	  <item name="목재" />
-	  <item name="홍차" />
-	  <item name="면화" />
+	  <item name="목재" price="0" />
+	  <item name="홍차" price="0" />
+	  <item name="면화" price="0" />
 	  <item name="후추" option="*" />
-	  <item name="계피" />
+	  <item name="계피" price="0" />
+	</group>
+	<group name="[도구]">
+	  <item name="파자마" price="284200" />
+	  <item name="사르와르" price="45600" />
+	  <item name="나루나리" price="42000" investment="240k" />
+	  <item name="강력 끈끈이 기름" price="200" />
+	  <item name="비석의 독" price="400" />
+	  <item name="지옥의 횃불" price="300" />
+	  <item name="매혹의 향기" price="1000" />
+	</group>
+	<group name="[대포]">
+	  <item name="슈미네포 4문" price="29300" />
+	  <item name="슈미네포 6문" price="89100" />
+	  <item name="메테오라포 4문" price="26600" />
+	  <item name="메테오라포 6문" price="81000" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="프랑고포 4문" price="12500" />
+	  <item name="프랑고포 6문" price="38000" />
+	  <item name="발칸포 4문" price="29300" />
+	  <item name="발칸포 6문" price="89100" />
+	  <item name="앙페르포 4문" price="26600" />
+	  <item name="앙페르포 6문" price="81000" />
+	  <item name="드래코니스포 4문" price="18200" />
+	  <item name="드래코니스포 6문" price="55500" />
+	  <item name="드래코니스포 8문" price="103600" />
+	  <item name="파일로포 4문" price="12500" />
+	  <item name="파일로포 6문" price="38000" />
+	  <item name="칼로네이드포 4문" price="14500" />
+	  <item name="트렌치포 2문" price="6500" />
+	  <item name="트렌치포 4문" price="26200" />
+	  <item name="트렌치포 6문" price="58900" />
+	  <item name="트렌치포 8문" price="104700" />
+	  <item name="트렌치포 10문" price="163600" />
+	  <item name="캐논페드로포 4문" price="30500" />
+	  <item name="캐논페드로포 6문" price="68700" />
+	  <item name="캐논페드로포 8문" price="122200" />
+	  <item name="캐논페드로포 10문" price="190900" />
+	  <item name="캐논페드로포 12문" price="274900" />
+	  <item name="캘버린포 4문" price="21800" />
+	  <item name="캘버린포 6문" price="49100" />
+	  <item name="캘버린포 8문" price="87300" />
+	  <item name="캘버린포 10문" price="136300" />
+	  <item name="캘버린포 12문" price="196300" />
+	  <item name="데미 캘버린포 2문" price="4000" />
+	  <item name="데미 캘버린포 4문" price="16200" />
+	  <item name="데미 캘버린포 6문" price="36400" />
+	  <item name="데미 캘버린포 8문" price="64600" />
+	  <item name="데미 캘버린포 10문" price="101000" />
+	  <item name="데미 캘버린포 12문" price="145400" />
+	  <item name="세이커포 2문" price="3200" />
+	  <item name="세이커포 4문" price="12600" />
+	  <item name="세이커포 6문" price="28400" />
+	  <item name="세이커포 8문" price="50500" />
+	  <item name="세이커포 10문" price="79000" />
+	  <item name="미니온포 2문" price="1400" />
+	  <item name="미니온포 4문" price="5600" />
+	  <item name="미니온포 6문" price="12400" />
+	  <item name="미니온포 8문" price="22400" />
+	  <item name="미니온포 10문" price="34800" />
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
+	  <item name="팰콘포 8문" price="8100" />
+	</group>
+	<group name="[추가장갑]">
+	  <item name="간이 삼나무판" price="300" />
+	  <item name="간이 붉은 소나무판" price="500" />
+	  <item name="간이 너도밤나무판" price="2200" />
+	  <item name="느릅나무판" price="13000" />
+	  <item name="경량 티크판" price="24000" />
+	  <item name="경량 마호가니판" price="56000" />
+	  <item name="경량 로즈우드판" price="110000" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="전투용 바사" price="5100" />
+	  <item name="상업용 바사" price="5200" />
+	  <item name="경 갤리" price="150000" />
+	  <item name="갤리오트" price="156000" />
+	  <item name="수송용 갤리" price="160000" />
+	  <item name="다우" price="360000" />
+	  <item name="돌격용 다우" price="365000" />
+	  <item name="상업용 다우" price="372000" />
+	  <item name="강습용 갤리" price="640000" />
+	  <item name="갤리" price="645000" />
+	  <item name="상업용 갤리" price="650000" />
+	  <item name="삼부크" price="1000000" />
+	  <item name="무장 삼부크" price="1000000" />
+	  <item name="상업용 삼부크" price="1100000" />
+	  <item name="지벡" price="2900000" />
+	  <item name="상업용 지벡" price="2960000" />
+	  <item name="무장 지벡" price="3000000" />
 	</group>
   </cityinfo>
   <cityinfo name="보스턴">
 	<group name="[교역]">
-	  <item name="어육" />
-	  <item name="소금" />
-	  <item name="담배" />
+	  <item name="어육" price="127" />
+	  <item name="소금" price="207" />
+	  <item name="담배" price="538" investment="500k" />
 	  <item name="홍차" option="*" />
-	  <item name="럼주" />
+	  <item name="럼주" price="540" />
 	  <item name="강철" option="*" />
 	  <item name="석유" option="*" />
 	  <item name="피혁제품" option="*" />
 	  <item name="고급의류" option="*" />
+	</group>
+	<group name="[도구]">
+	  <item name="경찰 유니폼" price="70000" />
+	  <item name="경찰의 제모" price="30000" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	</group>
+	<group name="[인물]">
+	  <item name="북미 전통 머리장식 봉제법" option="%" price="여행자" />
+	</group>
+	<group name="[배]">
+	  <item name="무장 코그" price="25000" />
+	  <item name="소형 캐러벨" price="92000" />
+	  <item name="경 캐러벨" price="92000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="베르간틴" price="148800" />
+	  <item name="전투용 캐러벨" price="280000" />
+	  <item name="캐러벨" price="285000" />
+	  <item name="상업용 캐러벨" price="290000" />
+	  <item name="경 카락" price="478000" />
+	  <item name="소형 카락" price="480000" />
+	  <item name="수송용 카락" price="488000" />
+	  <item name="커터" option="*" price="360000" />
+	  <item name="호위용 커터" option="*" price="360000" />
+	  <item name="예항용 커터" option="*" price="360000" />
+	  <item name="카락" price="720000" />
+	  <item name="전투용 카락" price="720000" />
+	  <item name="상업용 카락" price="728000" />
+	  <item name="경 갤리온" price="810000" />
+	  <item name="소형 갤리온" option="*" price="830000" />
+	  <item name="수송용 갤리온" option="*" price="840000" />
+	  <item name="스쿠너" option="*" price="612000" />
+	  <item name="기동형 스쿠너" option="*" price="612000" />
+	  <item name="프리깃" option="*" price="1080000" />
+	  <item name="상업용 스쿠너" option="*" price="660000" />
+	  <item name="무장 스쿠너" option="*" price="666000" />
+	  <item name="대형 카락" price="1800000" />
+	  <item name="상업용 대형카락" price="1840000" />
+	  <item name="탐험용 대형 카락" option="*" price="3360000" />
+	  <item name="상업용 무장 카락" option="*" price="4000000" />
+	  <item name="갤리온" price="4500000" />
+	  <item name="상업용 갤리온" option="*" price="4600000" />
+	  <item name="전투용 갤리온" option="*" price="4600000" />
+	</group>
+  </cityinfo>
+  <!-- KR v2.0.4 에서 가져온 장소 -->
+  <cityinfo name="사그레스">
+	<group name="[교역]">
+	  <item name="어육" price="145" />
+	  <item name="밀" price="44" />
+	  <item name="와인" price="503" />
+	  <item name="소금" price="233" />
+	  <item name="돼지" price="61" />
+	  <item name="닭" price="48" />
+	  <item name="피혁" price="445" />
+	  <item name="철광석" price="539" />
+	  <item name="머스켓총" price="2730" />
+	</group>
+	<group name="[도구]">
+	  <item name="교복" price="1000" />
+	  <item name="교모" price="500" />
+	  <item name="간이 망원경" price="500" />
+	  <item name="다우징 로드" price="500" />
+	  <item name="여행자의 수기" price="500" />
+	  <item name="외눈안경" price="500" />
+	  <item name="낚시밥" price="10" />
+	  <item name="열화약" price="150" />
+	  <item name="염색료" price="1000" />
+	  <item name="재봉도구" price="10000" />
+	  <item name="던지는 화살" price="50" />
+	  <item name="투척용 횃불" price="150" />
+	  <item name="예술가용 관찰 가이드" price="300" />
+	  <item name="포획망" price="300" />
+	  <item name="상처용 약" price="150" />
+	  <item name="염색가루" price="2000" />
+	  <item name="누가해도 간단한 레시피" price="5000" />
+	  <item name="어부만의 생선보존법" price="5000" />
+	  <item name="축산 비법서-돼지의 장" price="8000" />
+	  <item name="직물 비법서-소재에 관한 책" price="5000" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="전투용 바사" price="5100" />
+	  <item name="상업용 바사" price="5200" />
+	  <item name="타렛테" price="11500" />
+	  <item name="한자 코그" price="24000" />
+	  <item name="무장 코그" price="25000" />
+	  <item name="소형 캐러벨" price="92000" />
+	  <item name="경 캐러벨" price="92000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="베르간틴" price="148800" />
+	  <item name="경 갤리" price="150000" />
+	  <item name="갤리오트" price="156000" />
+	  <item name="수송용 갤리" price="160000" />
+	  <item name="전투용 캐러벨" price="280000" />
+	  <item name="캐러벨" price="285000" />
+	  <item name="상업용 캐러벨" price="290000" />
+	  <item name="경 카락" price="478000" />
+	  <item name="소형 카락" price="480000" />
+	  <item name="수송용 카락" price="488000" />
+	  <item name="강습용 갤리" price="640000" />
+	  <item name="갤리" price="645000" />
+	  <item name="상업용 갤리" price="650000" />
+	  <item name="카락" price="720000" />
+	  <item name="전투용 카락" price="720000" />
+	  <item name="상업용 카락" price="728000" />
+	  <item name="경 갤리온" price="810000" />
+	  <item name="소형 갤리온" price="830000" />
+	  <item name="수송용 갤리온" price="840000" />
+	  <item name="프리깃" price="1080000" />
+	  <item name="대형 캐러벨" price="1160000" />
+	  <item name="나오" price="1250000" />
+	  <item name="중 캐러벨" price="1250000" />
+	  <item name="상업용 대형 캐러벨" price="1632000" />
+	  <item name="탐험용 나오" price="1704000" />
+	  <item name="강습용 중 캐러벨" price="1872000" />
+	  <item name="대형 카락" price="1800000" />
+	  <item name="상업용 대형카락" price="1840000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
+	  <item name="상업용 무장 카락" price="4000000" />
+	  <item name="중 카락" price="3000000" />
+	  <item name="개조 중 카락" price="7000000" />
+	  <item name="갤리온" price="4500000" />
+	  <item name="상업용 갤리온" price="4600000" />
+	  <item name="전투용 갤리온" price="4600000" />
+	</group>
+	<group name="[대포]">
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
+	  <item name="팰콘포 8문" price="8100" />
+	  <item name="미니온포 2문" price="1400" />
+	  <item name="미니온포 4문" price="5600" />
+	  <item name="미니온포 6문" price="12400" />
+	  <item name="미니온포 8문" price="22400" />
+	  <item name="미니온포 10문" price="34800" />
+	  <item name="세이커포 2문" price="3200" />
+	  <item name="세이커포 4문" price="12600" />
+	  <item name="세이커포 6문" price="28400" />
+	  <item name="세이커포 8문" price="50500" />
+	  <item name="세이커포 10문" price="79000" />
+	  <item name="데미 캘버린포 2문" price="4000" />
+	  <item name="데미 캘버린포 4문" price="16200" />
+	  <item name="데미 캘버린포 6문" price="36400" />
+	  <item name="데미 캘버린포 8문" price="64600" />
+	  <item name="데미 캘버린포 10문" price="101000" />
+	  <item name="데미 캘버린포 12문" price="145400" />
+	  <item name="캘버린포 4문" price="21800" />
+	  <item name="캘버린포 6문" price="49100" />
+	  <item name="캘버린포 8문" price="87300" />
+	  <item name="캘버린포 10문" price="136300" />
+	  <item name="캘버린포 12문" price="196300" />
+	  <item name="캐논페드로포 4문" price="30500" />
+	  <item name="캐논페드로포 6문" price="68700" />
+	  <item name="캐논페드로포 8문" price="122200" />
+	  <item name="캐논페드로포 10문" price="190900" />
+	  <item name="캐논페드로포 12문" price="274900" />
+	  <item name="트렌치포 2문" price="6500" />
+	  <item name="트렌치포 4문" price="26200" />
+	  <item name="트렌치포 6문" price="58900" />
+	  <item name="트렌치포 8문" price="104700" />
+	  <item name="트렌치포 10문" price="163600" />
+	  <item name="엔젤포 2문" price="10000" />
+	  <item name="엔젤포 4문" price="39900" />
+	  <item name="엔젤포 6문" price="89800" />
+	  <item name="엔젤포 8문" price="159600" />
+	  <item name="엔젤포 10문" price="249400" />
+	  <item name="세라핌포 4문" price="43100" />
+	  <item name="세라핌포 6문" price="97000" />
+	  <item name="세라핌포 8문" price="172400" />
+	  <item name="세라핌포 10문" price="269400" />
+	  <item name="모터포 2문" price="15300" />
+	  <item name="모터포 4문" price="61300" />
+	  <item name="모터포 6문" price="137900" />
+	  <item name="모터포 8문" price="245200" />
+	  <item name="벨리에포 4문" price="7800" />
+	  <item name="벨리에포 6문" price="31200" />
+	  <item name="벨리에포 8문" price="70400" />
+	  <item name="하이페리에포 4문" price="9200" />
+	  <item name="하이페리에포 6문" price="36800" />
+	  <item name="하이페리에포 8문" price="83100" />
+	  <item name="칼로네이드포 4문" price="14500" />
+	  <item name="파일로포 4문" price="12500" />
+	  <item name="파일로포 6문" price="38000" />
+	  <item name="드래코니스포 4문" price="18200" />
+	  <item name="드래코니스포 6문" price="55500" />
+	  <item name="드래코니스포 8문" price="103600" />
+	  <item name="앙페르포 4문" price="26600" />
+	  <item name="앙페르포 6문" price="81000" />
+	  <item name="발칸포 4문" price="29300" />
+	  <item name="발칸포 6문" price="89100" />
+	  <item name="프랑고포 4문" price="12500" />
+	  <item name="프랑고포 6문" price="38000" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="메테오라포 4문" price="26600" />
+	  <item name="메테오라포 6문" price="81000" />
+	  <item name="슈미네포 4문" price="29300" />
+	  <item name="슈미네포 6문" price="89100" />
+	  <item name="소형 충각" price="1000" />
+	  <item name="충각" price="4800" />
+	  <item name="중형 충각" price="31000" />
+	  <item name="소형 조교" price="3000" />
+	  <item name="조교" price="24000" />
+	  <item name="소형 선수루" price="5000" />
+	  <item name="추가 소 스프릿" price="2000" />
+	  <item name="추가 스프릿" price="44000" />
+	  <item name="소형 선미루" price="39000" />
+	  <item name="추가 소 스팽커" price="3500" />
+	  <item name="추가 스팽커" price="55000" />
+	</group>
+	<group name="[추가장갑]">
+	  <item name="삼나무판" price="800" />
+	  <item name="붉은 소나무 판" price="2700" />
+	  <item name="너도밤나무판" price="6400" />
+	  <item name="느릅나무판" price="13000" />
+	  <item name="떡갈나무 판" price="34000" />
+	  <item name="동판" price="73000" />
+	  <item name="철판" price="130000" />
+	</group>
+	<group name="[돛]">
+	  <item name="보닛" price="25000" />
+	  <item name="넓은 보닛" price="38000" />
+	  <item name="소 이너 지브" price="500" />
+	  <item name="이너 지브" price="1700" />
+	  <item name="아우터 지브" price="18000" />
+	  <item name="아우터 이너 지브" price="23000" />
+	  <item name="플라잉 아우터 지브" price="49000" />
+	  <item name="플라잉 이너 지브" price="58000" />
+	  <item name="포어 스테이 세일" price="8300" />
+	  <item name="미즌 스테이 세일" price="11000" />
+	  <item name="포어 톱 갤런트 세일" price="2400" />
+	  <item name="미즌 톱 갤런트 세일" price="4200" />
+	  <item name="포어 톱 스테이 세일" price="29000" />
+	  <item name="미즌 톱 스테이 세일" price="35000" />
+	  <item name="포어 갤런트 보닛" price="110000" />
+	  <item name="미즌 갤런트 보닛" price="130000" />
+	  <item name="포어 갤런트 스테이 세일" price="22000" />
+	  <item name="미즌 갤런트 스테이 세일" price="22000" />
+	  <item name="미즌 로얄 갤런트 세일" price="21000" />
+	  <item name="포어 로얄 스테이 세일" price="70000" />
+	  <item name="포어 톱 로얄 세일" price="48000" />
+	  <item name="미즌 톱 로얄 세일" price="45000" />
+	</group>
+	<group name="[행상인]">
+	  <item name="구명도구" option="-" />
+	  <item name="소화모래" option="-" />
+	  <item name="목공도구" option="-" />
+	  <item name="라임주스" option="-" />
+	  <item name="쥐약" option="-" />
+	  <item name="예비돛" option="-" />
+	  <item name="프랑키스카" option="-" />
+	  <item name="갑판 청소용 브러시" option="-" />
+	</group>
+  </cityinfo>
+  <cityinfo name="서안">
+	<group name="[교역]">
+	  <item name="특선 소흥주" />
+	  <item name="특선 한우" />
+	  <item name="특선 양주 밤" />
+	  <item name="특선 라한과" />
+	  <item name="특선 중국차" />
+	  <item name="특선 홍두" />
+	  <item name="특선 조선인삼" />
+	  <item name="엄선 사슴 가죽" />
+	  <item name="엄선 자근" />
+	  <item name="엄선 해당화" />
+	  <item name="극상 중국비단" />
+	  <item name="엄선 사마 은" />
+	  <item name="엄선 북투석" />
+	  <item name="엄선 양지백옥" />
+	  <item name="걸작 송백자" />
+	  <item name="걸작 중국 서화" />
+	  <item name="극상 고묵" />
+	  <item name="명품 일본도" />
+	  <item name="명품 타네가시마 총" />
+	  <item name="극상 화지" />
+	</group>
+	<group name="[공방]">
+	  <item name="한족의 무구 제조법(내륙편)" />
+	</group>
+	<group name="[행상인]">
+	  <item name="특제 사료" price="100" />
+	  <item name="장인의 대장공도구" price="25" />
+	  <item name="전염병 특효약" price="10" />
+	  <item name="표주박 닭튀김" price="3" />
+	  <item name="로쟈모" price="1" />
+	  <item name="애정 듬뿍 사료" price="200" />
+	  <item name="한절" price="10000" />
+	  <item name="슈에이펀양로우" price="4" />
+	  <item name="뱡뱡면" price="2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="포트 로얄">
+	<group name="[교역]">
+	  <item name="데킬라" price="1192" />
+	  <item name="럼주" price="540" />
+	  <item name="브랜디" price="981" />
+	  <item name="목재" price="592" />
+	  <item name="담배" price="538" />
+	  <item name="단검" price="762" />
+	  <item name="탄환" price="882" />
+	  <item name="화승총" price="2176" />
+	  <item name="화약" price="921" />
+	  <item name="보석세공" price="5273" />
+	</group>
+	<group name="[도구]">
+	  <item name="버커니어 드레스" price="20000" />
+	  <item name="토르투카 파이렛" price="20000" />
+	  <item name="토르투가 햇" price="15000" />
+	  <item name="파이렛 바이코르느" price="15000" />
+	  <item name="파이렛 부츠" price="10000" />
+	  <item name="광맥을 찾는 사람의 다우징로드" price="2500" />
+	  <item name="명탐험가의 수기" price="8000" />
+	  <item name="조사용 외눈안경" price="2500" />
+	  <item name="염색가루" price="2000" />
+	  <item name="재봉도구" price="10000" />
+	</group>
+	<group name="[공방]">
+	  <item name="선박용 도료" price="500" />
+	  <item name="돛 도료" price="500" />
+	  <item name="망향의 카리욘벨" price="200" />
+	  <item name="뱃노래의 악보" price="200" />
+	</group>
+	<group name="[인물]">
+	  <item name="카리브 해적 의상 봉제법" option="%" price="여성 취객" />
+	  <item name="카리브 해적의 장식품 제작법" option="%" price="해적선 선원" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	</group>
+	<group name="[대포]">
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="소형 충각" price="1000" />
+	  <item name="소형 선수루" price="5000" />
+	  <item name="추가 소 스프릿" price="2000" />
+	</group>
+	<group name="[추가장갑]">
+	  <item name="경량 삼나무판" price="880" />
+	</group>
+	<group name="[돛]">
+	  <item name="소 이너 지브" price="500" />
+	  <item name="포어 톱 갤런트 세일" price="2400" />
+	</group>
+  </cityinfo>
+  <cityinfo name="제너두">
+	<group name="[도구]">
+	  <item name="강장제" price="300" />
+	  <item name="던지는 나이프" price="150" />
+	  <item name="투척용 횃불" price="150" />
+	  <item name="부스테 델" option="*" price="20000" investment="14세기" />
+	  <item name="몽골 갑옷" option="*" price="20000" investment="14세기" />
+	  <item name="운겐 말가이" option="*" price="20000" investment="14세기" />
+	  <item name="잔진 말가이" option="*" price="20000" investment="14세기" />
+	  <item name="몽골 투구" option="*" price="20000" investment="14세기" />
+	  <item name="고탈" option="*" price="20000" investment="14세기" />
+	</group>
+  </cityinfo>
+  <cityinfo name="맨체스터">
+	<group name="[교역]">
+	  <item name="트위드" price="1123" investment="500k" />
+	  <item name="석탄" price="416" investment="120k" />
+	  <item name="면 원단" price="802" investment="330k" />
+	  <item name="목재" price="568" />
+	  <item name="아마" price="151" />
+	  <item name="모직 원단" price="779" />
+	  <item name="양모" price="280" />
+	</group>
+	<group name="[도구]">
+	  <item name="버틀러 수트" price="500000" />
+	  <item name="메이드드레스" price="500000" />
+	  <item name="워킹 베스트" price="5000" />
+	  <item name="중절모" price="450000" />
+	  <item name="레이스 브림" price="450000" />
+	  <item name="워킹 캡" price="2000" />
+	  <item name="플린트락 피스톨" price="3000" />
+	  <item name="라이트 크로스보우" price="15000" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	</group>
+	<group name="[공방]">
+	  <item name="사분의" price="500" />
+	  <item name="간이 인양 로프" price="500" />
+	  <item name="간단 예항보조로프" price="500" />
+	  <item name="조선공입문 재봉편" price="10000" />
+	  <item name="조선공입문 공예편" price="10000" />
+	  <item name="조선공입문 주조편" price="10000" />
+	  <item name="범용 소형 선체" price="100000" investment="300k" />
+	  <item name="범용 소형 도선" price="100000" investment="300k" />
+	  <item name="범용 소형 증강판" price="50000" investment="660k" />
+	  <item name="범용 소형 라틴세일" price="30000" investment="300k" />
+	  <item name="범용 소형 스퀘어세일" price="30000" investment="300k" />
+	  <item name="범용 소형 노" price="50000" investment="660k" />
+	  <item name="범용 소형 개량 키" price="80000" investment="680k" />
+	  <item name="범용 소형 수조" price="80000" investment="680k" />
+	  <item name="범용 소형 장갑판" price="50000" investment="670k" />
+	  <item name="범용 소형 확장 선실" price="80000" investment="680k" />
+	  <item name="범용 소형 포문" price="30000" investment="300k" />
+	  <item name="범용 소형 확장 창고" price="80000" investment="680k" />
+	</group>
+	<group name="[인물]">
+	  <item name="지리" option="h" price="존 케이" />
+	  <item name="공예" option="s" price="존 케이" />
+	</group>
+	<group name="[배]">
+	  <item name="바사" price="2000" />
+	  <item name="탐험용 바사" price="5000" />
+	  <item name="전투용 바사" price="5100" />
+	  <item name="상업용 바사" price="5200" />
+	  <item name="한자 코그" price="24000" />
+	  <item name="무장 코그" price="25000" />
+	  <item name="소형 캐러벨" price="92000" />
+	  <item name="경 캐러벨" price="92000" />
+	  <item name="운송용 소형 캐러벨" price="92000" />
+	  <item name="베르간틴" price="148800" />
+	  <item name="2 마스트 코그" price="96000" />
+	  <item name="브리티쉬 코그" price="96000" />
+	  <item name="워릭 코그" price="230000" />
+	  <item name="전투용 캐러벨" price="280000" />
+	  <item name="캐러벨" price="285000" />
+	  <item name="상업용 캐러벨" price="290000" />
+	  <item name="전투용 프류트" price="400000" />
+	  <item name="프류트" price="410000" />
+	  <item name="상업용 프류트" price="420000" />
+	  <item name="경 카락" price="478000" />
+	  <item name="소형 카락" price="480000" />
+	  <item name="수송용 카락" price="488000" />
+	  <item name="커터" option="*" price="360000" />
+	  <item name="카락" price="720000" />
+	  <item name="전투용 카락" price="720000" />
+	  <item name="상업용 카락" price="728000" />
+	  <item name="경 갤리온" price="810000" />
+	  <item name="소형 갤리온" price="830000" />
+	  <item name="수송용 갤리온" price="840000" />
+	  <item name="프리깃" price="1080000" />
+	  <item name="대형 카락" price="1800000" />
+	  <item name="상업용 대형카락" price="1840000" />
+	  <item name="탐험용 대형 카락" price="3360000" />
+	  <item name="상업용 무장 카락" price="4000000" />
+	  <item name="중 카락" price="3000000" />
+	  <item name="개조 중 카락" price="7000000" />
+	  <item name="갤리온" price="4500000" />
+	  <item name="상업용 갤리온" price="4600000" />
+	  <item name="전투용 갤리온" price="4600000" />
+	  <item name="전열함" option="*" price="6700000" />
+	  <item name="클리퍼" option="*" price="4650000" />
+	  <item name="상업용 클리퍼" option="*" price="4750000" />
+	  <item name="상업용 대형 갤리온" option="*" price="5600000" />
+	  <item name="대형 갤리온" option="*" price="5650000" />
+	  <item name="중 갤리온" option="*" price="5700000" />
+	</group>
+	<group name="[대포]">
+	  <item name="팰콘포 2문" price="500" />
+	  <item name="팰콘포 4문" price="2000" />
+	  <item name="팰콘포 6문" price="4600" />
+	  <item name="팰콘포 8문" price="8100" />
+	  <item name="미니온포 2문" price="1400" />
+	  <item name="미니온포 4문" price="5600" />
+	  <item name="미니온포 6문" price="12400" />
+	  <item name="미니온포 8문" price="22400" />
+	  <item name="미니온포 10문" price="34800" />
+	  <item name="세이커포 2문" price="3200" />
+	  <item name="세이커포 4문" price="12600" />
+	  <item name="세이커포 6문" price="28400" />
+	  <item name="세이커포 8문" price="50500" />
+	  <item name="세이커포 10문" price="79000" />
+	  <item name="데미 캘버린포 2문" price="4000" />
+	  <item name="데미 캘버린포 4문" price="16200" />
+	  <item name="데미 캘버린포 6문" price="36400" />
+	  <item name="데미 캘버린포 8문" price="64600" />
+	  <item name="데미 캘버린포 10문" price="101000" />
+	  <item name="데미 캘버린포 12문" price="145400" />
+	  <item name="캘버린포 4문" price="21800" />
+	  <item name="캘버린포 6문" price="49100" />
+	  <item name="캘버린포 8문" price="87300" />
+	  <item name="캘버린포 10문" price="136300" />
+	  <item name="캘버린포 12문" price="196300" />
+	  <item name="엔젤포 2문" price="10000" />
+	  <item name="엔젤포 4문" price="39900" />
+	  <item name="엔젤포 6문" price="89800" />
+	  <item name="엔젤포 8문" price="159600" />
+	  <item name="엔젤포 10문" price="249400" />
+	  <item name="세라핌포 4문" price="43100" />
+	  <item name="세라핌포 6문" price="97000" />
+	  <item name="세라핌포 8문" price="172400" />
+	  <item name="세라핌포 10문" price="269400" />
+	  <item name="래피드 파이어포 2문" price="4900" />
+	  <item name="래피드 파이어포 4문" price="19700" />
+	  <item name="래피드 파이어포 6문" price="44400" />
+	  <item name="래피드 파이어포 8문" price="78900" />
+	  <item name="래피드 파이어포 10문" price="123200" />
+	  <item name="데미캐논포 4문" price="6200" />
+	  <item name="데미캐논포 6문" price="24800" />
+	  <item name="데미캐논포 8문" price="55900" />
+	  <item name="데미캐논포 10문" price="99400" />
+	  <item name="캐논포 4문" price="19300" />
+	  <item name="칼로네이드포 4문" price="14500" />
+	  <item name="파일로포 4문" price="12500" />
+	  <item name="파일로포 6문" price="38000" />
+	  <item name="드래코니스포 4문" price="18200" />
+	  <item name="드래코니스포 6문" price="55500" />
+	  <item name="드래코니스포 8문" price="103600" />
+	  <item name="앙페르포 4문" price="26600" />
+	  <item name="앙페르포 6문" price="81000" />
+	  <item name="발칸포 4문" price="29300" />
+	  <item name="발칸포 6문" price="89100" />
+	  <item name="프랑고포 4문" price="12500" />
+	  <item name="프랑고포 6문" price="38000" />
+	  <item name="카플리스포 4문" price="18200" />
+	  <item name="카플리스포 6문" price="55500" />
+	  <item name="카플리스포 8문" price="103600" />
+	  <item name="메테오라포 4문" price="26600" />
+	  <item name="메테오라포 6문" price="81000" />
+	  <item name="슈미네포 4문" price="29300" />
+	  <item name="소형 충각" price="1000" />
+	  <item name="소형 조교" price="3000" />
+	  <item name="소형 선수루" price="5000" />
+	  <item name="선수루" price="16000" />
+	  <item name="추가 소 스프릿" price="2000" />
+	  <item name="추가 스프릿" price="44000" />
+	  <item name="소형 선미루" price="39000" />
+	  <item name="선미루" price="130000" />
+	  <item name="추가 소 스팽커" price="3500" />
+	  <item name="추가 스팽커" price="55000" />
+	</group>
+	<group name="[추가장갑]">
+	  <item name="경량 삼나무판" price="880" />
+	  <item name="붉은 소나무 판" price="2700" />
+	  <item name="너도밤나무판" price="6400" />
+	  <item name="느릅나무판" price="13000" />
+	  <item name="떡갈나무 판" price="34000" />
+	  <item name="동판" price="73000" />
+	  <item name="철판" price="130000" />
+	</group>
+	<group name="[돛]">
+	  <item name="보닛" price="25000" />
+	  <item name="넓은 보닛" price="38000" />
+	  <item name="소 이너 지브" price="500" />
+	  <item name="이너 지브" price="1700" />
+	  <item name="아우터 지브" price="18000" />
+	  <item name="아우터 이너 지브" price="23000" />
+	  <item name="플라잉 아우터 지브" price="49000" />
+	  <item name="플라잉 이너 지브" price="58000" />
+	  <item name="포어 스테이 세일" price="8300" />
+	  <item name="미즌 스테이 세일" price="11000" />
+	  <item name="포어 톱 갤런트 세일" price="2400" />
+	  <item name="미즌 톱 갤런트 세일" price="4200" />
+	  <item name="포어 톱 스테이 세일" price="29000" />
+	  <item name="미즌 톱 스테이 세일" price="35000" />
+	  <item name="포어 갤런트 보닛" price="110000" />
+	  <item name="미즌 갤런트 보닛" price="130000" />
+	  <item name="포어 갤런트 스테이 세일" price="22000" />
+	  <item name="미즌 갤런트 스테이 세일" price="22000" />
+	  <item name="포어 로얄 갤런트 세일" price="26000" />
+	  <item name="미즌 로얄 스테이 세일" price="79000" />
+	  <item name="포어 톱 로얄 세일" price="48000" />
+	  <item name="미즌 톱 로얄 세일" price="45000" />
+	</group>
+	<group name="[행상인]">
+	  <item name="구명도구" option="-" />
+	  <item name="소화모래" option="-" />
+	  <item name="목공도구" option="-" />
+	  <item name="라임주스" option="-" />
+	  <item name="쥐약" option="-" />
+	  <item name="예비돛" option="-" />
+	  <item name="프랑키스카" option="-" />
+	  <item name="갑판 청소용 브러시" option="-" />
+	</group>
+  </cityinfo>
+  <cityinfo name="빌바오">
+	<group name="[교역]">
+	  <item name="양모" price="323" />
+	  <item name="철광석" price="566" />
+	  <item name="호밀" price="32" />
+	  <item name="양" price="108" />
+	  <item name="머스켓총" price="2740" investment="300k" />
+	  <item name="옥수수" price="47" investment="500k" />
+	  <item name="종이" price="240" investment="8,500,000" />
+	</group>
+	<group name="[도구]">
+	  <item name="플린트락 피스톨" price="3000" investment="150k" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	  <item name="개량 대형 대포 주조법" option="$" investment="2,000,000" />
+	</group>
+	<group name="[인물]">
+	  <item name="생산기술서 보관응용편" option="%" price="생산공장 통조림 기계" />
+	  <item name="생산기술서 주조응용편" option="%" price="생산공장 용광로" />
+	  <item name="생산기술서 봉제응용편" option="%" price="생산공장 방직기" />
+	  <item name="생산기술서 조리응용편" option="%" price="생산공장 조리대" />
+	  <item name="생산기술서 공예응용편" option="%" price="생산공장 인쇄기" />
+	  <item name="특수 외륜선체 제조법" option="%" price="증기기사" />
+	</group>
+	<group name="[배]">
+	  <item name="현혹 공격" price="9924000" investment="2,000,000" />
+	</group>
+  </cityinfo>
+  <cityinfo name="비아나두카스텔루">
+	<group name="[교역]">
+	  <item name="와인" price="1030" />
+	  <item name="베르가못" price="518" />
+	  <item name="올리브유" price="275" investment="600k" />
+	  <item name="토마토" price="100" investment="8,500,000" />
+	  <item name="통나무" price="164" />
+	  <item name="가죽끈" price="784" investment="7,500,000" />
+	</group>
+	<group name="[도구]">
+	  <item name="플린트락 피스톨" price="3000" investment="150k" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	  <item name="개량 대형 대포 주조법" option="$" investment="2,000,000" />
+	</group>
+	<group name="[인물]">
+	  <item name="생산기술서 보관응용편" option="%" price="생산공장 통조림 기계" />
+	  <item name="생산기술서 주조응용편" option="%" price="생산공장 용광로" />
+	  <item name="생산기술서 봉제응용편" option="%" price="생산공장 방직기" />
+	  <item name="생산기술서 조리응용편" option="%" price="생산공장 조리대" />
+	  <item name="생산기술서 공예응용편" option="%" price="생산공장 인쇄기" />
+	  <item name="특수 외륜선체 제조법" option="%" price="증기기사" />
+	</group>
+	<group name="[배]">
+	  <item name="현혹 공격" price="9924000" investment="2,000,000" />
+	</group>
+  </cityinfo>
+  <cityinfo name="코토르">
+	<group name="[교역]">
+	  <item name="목재" price="591" />
+	  <item name="밀" price="39" />
+	  <item name="철재" price="703" />
+	  <item name="강철" price="971" investment="8,500,000" />
+	  <item name="어육" price="127" />
+	  <item name="바질" price="103" investment="300k" />
+	  <item name="말린 자두" price="287" investment="600k" />
+	</group>
+	<group name="[도구]">
+	  <item name="플린트락 피스톨" price="3000" investment="150k" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	  <item name="개량 대형 대포 주조법" option="$" investment="2,000,000" />
+	</group>
+	<group name="[인물]">
+	  <item name="생산기술서 보관응용편" option="%" price="생산공장 통조림 기계" />
+	  <item name="생산기술서 주조응용편" option="%" price="생산공장 용광로" />
+	  <item name="생산기술서 봉제응용편" option="%" price="생산공장 방직기" />
+	  <item name="생산기술서 조리응용편" option="%" price="생산공장 조리대" />
+	  <item name="생산기술서 공예응용편" option="%" price="생산공장 인쇄기" />
+	  <item name="특수 외륜선체 제조법" option="%" price="증기기사" />
+	</group>
+	<group name="[배]">
+	  <item name="현혹 공격" price="9924000" investment="2,000,000" />
+	</group>
+  </cityinfo>
+  <cityinfo name="르아브르">
+	<group name="[교역]">
+	  <item name="아마" price="151" />
+	  <item name="보리" price="32" />
+	  <item name="사탕무" price="79" investment="8,500,000" />
+	  <item name="건포도" price="208" />
+	  <item name="와인 비니거" price="431" investment="400k" />
+	  <item name="굴" price="" investment="550k" />
+	  <item name="버터" price="271" />
+	</group>
+	<group name="[도구]">
+	  <item name="플린트락 피스톨" price="3000" investment="150k" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	  <item name="개량 대형 대포 주조법" option="$" investment="2,000,000" />
+	</group>
+	<group name="[인물]">
+	  <item name="생산기술서 보관응용편" option="%" price="생산공장 통조림 기계" />
+	  <item name="생산기술서 주조응용편" option="%" price="생산공장 용광로" />
+	  <item name="생산기술서 봉제응용편" option="%" price="생산공장 방직기" />
+	  <item name="생산기술서 조리응용편" option="%" price="생산공장 조리대" />
+	  <item name="생산기술서 공예응용편" option="%" price="생산공장 인쇄기" />
+	  <item name="특수 외륜선체 제조법" option="%" price="증기기사" />
+	</group>
+	<group name="[배]">
+	  <item name="현혹 공격" price="9924000" investment="2,000,000" />
+	</group>
+  </cityinfo>
+  <cityinfo name="로테르담">
+	<group name="[교역]">
+	  <item name="돼지고기" price="320" />
+	  <item name="양파" price="71" />
+	  <item name="왁스" price="670" />
+	  <item name="감자" price="232" />
+	  <item name="주석" price="424" investment="550k" />
+	  <item name="아연광석" price="336" investment="550k" />
+	  <item name="석유" price="508" investment="8,500,000" />
+	</group>
+	<group name="[도구]">
+	  <item name="플린트락 피스톨" price="3000" investment="150k" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	  <item name="개량 대형 대포 주조법" option="$" investment="2,000,000" />
+	</group>
+	<group name="[인물]">
+	  <item name="생산기술서 보관응용편" option="%" price="생산공장 통조림 기계" />
+	  <item name="생산기술서 주조응용편" option="%" price="생산공장 용광로" />
+	  <item name="생산기술서 봉제응용편" option="%" price="생산공장 방직기" />
+	  <item name="생산기술서 조리응용편" option="%" price="생산공장 조리대" />
+	  <item name="생산기술서 공예응용편" option="%" price="생산공장 인쇄기" />
+	  <item name="특수 외륜선체 제조법" option="%" price="증기기사" />
+	</group>
+	<group name="[배]">
+	  <item name="현혹 공격" price="9924000" investment="2,000,000" />
+	</group>
+  </cityinfo>
+  <cityinfo name="포츠머스">
+	<group name="[교역]">
+	  <item name="돼지고기" price="320" />
+	  <item name="베이컨" price="323" investment="260k" />
+	  <item name="마늘" price="243" />
+	  <item name="양고기" price="318" />
+	  <item name="석탄" price="416" investment="300k" />
+	  <item name="대포" price="3253" investment="8,500,000" />
+	  <item name="모직 원단" price="779" />
+	</group>
+	<group name="[도구]">
+	  <item name="플린트락 피스톨" price="3000" investment="150k" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	  <item name="개량 대형 대포 주조법" option="$" investment="2,000,000" />
+	</group>
+	<group name="[인물]">
+	  <item name="생산기술서 보관응용편" option="%" price="생산공장 통조림 기계" />
+	  <item name="생산기술서 주조응용편" option="%" price="생산공장 용광로" />
+	  <item name="생산기술서 봉제응용편" option="%" price="생산공장 방직기" />
+	  <item name="생산기술서 조리응용편" option="%" price="생산공장 조리대" />
+	  <item name="생산기술서 공예응용편" option="%" price="생산공장 인쇄기" />
+	  <item name="특수 외륜선체 제조법" option="%" price="증기기사" />
+	</group>
+	<group name="[배]">
+	  <item name="현혹 공격" price="9924000" investment="2,000,000" />
+	</group>
+  </cityinfo>
+  <cityinfo name="오마하">
+	<group name="[도구]">
+	  <item name="채굴자의 방호복" price="70000" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	</group>
+	<group name="[인물]">
+	  <item name="북미 전통 신발 제법" option="%" price="여행자" />
+	</group>
+  </cityinfo>
+  <cityinfo name="새크라멘토">
+	<group name="[도구]">
+	  <item name="드라이제 피스톨" price="150000" />
+	  <item name="해독제" price="100" />
+	  <item name="솔개의 날개" price="100" />
+	  <item name="치료약" price="300" />
+	  <item name="석탄 연료" price="100000" />
+	  <item name="상처용 약 꾸러미" price="500" />
+	  <item name="직물 비법서-옷감에 관한 책" price="10000" />
+	  <item name="검 만들기 응용" price="50000" />
+	  <item name="모드 디자인집 제1권" price="10000" />
+	</group>
+	<group name="[인물]">
+	  <item name="북미 여행 소품 제법" option="%" price="여행자" />
+	</group>
+  </cityinfo>
+  <cityinfo name="갈라파고스 섬 남쪽 해안">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="돌" price="-1" />
+	  <item name="흰 꽃" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="거대한 바위" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="선인장" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="과테말라 북동쪽">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="돌" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="삼" price="-1" />
+	  <item name="빨간 꽃" price="-1" />
+	  <item name="거대한 잎" price="-1" />
+	  <item name="나무껍질" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="기묘한 열매" price="-2" />
+	  <item name="선인장" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="포항 서쪽">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="흰 꽃" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="당근" price="-2" />
+	  <item name="양파" price="-2" />
+	  <item name="콩" price="-2" />
+	  <item name="닭" price="-2" />
+	  <item name="찹쌀" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="조선 반도 서쪽 해안">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="빨간 꽃" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="소" price="-2" />
+	  <item name="콩" price="-2" />
+	  <item name="말" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="조선 반도 북쪽 해안">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="삼" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="흑연" price="-1" />
+	  <item name="양파" price="-2" />
+	  <item name="닭" price="-2" />
+	  <item name="말" price="-2" />
+	  <item name="찹쌀" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="중경 남서쪽">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="살구씨" price="-1" />
+	  <item name="옻나무" price="-1" />
+	  <item name="양파" price="-2" />
+	  <item name="돼지" price="-2" />
+	  <item name="팥" price="-2" />
+	  <item name="찹쌀" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="황하 하류">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="양파" price="-2" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="밀" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="흑해 북동쪽 해안">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="흰 꽃" price="-1" />
+	  <item name="살구씨" price="-1" />
+	  <item name="작약" price="-1" />
+	  <item name="붉은 콩" price="-2" />
+	  <item name="양파" price="-2" />
+	  <item name="올리브" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="시베리아 지방">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="돌" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="푸른색 광석" price="-1" />
+	  <item name="녹색 광석" price="-1" />
+	  <item name="노란색 광석" price="-1" />
+	  <item name="흰색 광석" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="산토끼" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="오호츠크 해 서해안">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="목재" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="석탄" price="-1" />
+	  <item name="크랜베리" price="-1" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="산토끼" price="-2" />
+	  <item name="기묘한 열매" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="벵갈만 북해안">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="검은색 광석" price="-1" />
+	  <item name="노란색 광석" price="-1" />
+	  <item name="녹색 광석" price="-1" />
+	  <item name="붉은색 광석" price="-1" />
+	  <item name="푸른색 광석" price="-1" />
+	  <item name="흰색 광석" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="거대한 바위" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="생사" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="순무" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="서시베리아 평원">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="향쑥" price="-1" />
+	  <item name="검은색 광석" price="-1" />
+	  <item name="녹색 광석" price="-1" />
+	  <item name="아마" price="-1" />
+	  <item name="니켈 광석" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="호밀" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="파간 지방">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="돌" price="-1" />
+	  <item name="모래" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="빨간 꽃" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="검은색 진흙" price="-1" />
+	  <item name="검은색 광석" price="-1" />
+	  <item name="흰색 광석" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="나무 열매" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="폰페이 섬 안쪽">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="검은색 광석" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="거대한 잎" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="기묘한 열매" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="갈라파고스 섬 안쪽">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="돌" price="-1" />
+	  <item name="빨간 꽃" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="거대한 바위" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="선인장" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="코판 강 북쪽 해안">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="거대한 바위" price="-1" />
+	  <item name="거대한 잎" price="-1" />
+	  <item name="나무껍질" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="기묘한 열매" price="-2" />
+	  <item name="선인장" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="공주 북쪽">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="소" price="-2" />
+	  <item name="콩" price="-2" />
+	  <item name="말" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="오우미">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="삼" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="흑연" price="-1" />
+	  <item name="나무껍질" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="돼지" price="-2" />
+	  <item name="팥" price="-2" />
+	  <item name="찹쌀" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="단수이 강 서쪽">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="목재" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="양파" price="-2" />
+	  <item name="닭" price="-2" />
+	  <item name="돼지" price="-2" />
+	  <item name="벼" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="아미산 동쪽">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="살구씨" price="-1" />
+	  <item name="옻나무" price="-1" />
+	  <item name="양파" price="-2" />
+	  <item name="돼지" price="-2" />
+	  <item name="팥" price="-2" />
+	  <item name="찹쌀" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="황토고원">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="면화" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="양파" price="-2" />
+	  <item name="밀" price="-2" />
+	  <item name="벼" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="나이아가라 강 유역">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="식물성 기름" price="-1" />
+	  <item name="흰색 광석" price="-1" />
+	  <item name="목재" price="-1" />
+	  <item name="거대한 잎" price="-1" />
+	  <item name="크랜베리" price="-1" />
+	  <item name="버섯" price="-2" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="지렁이" price="-2" />
+	  <item name="기묘한 열매" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="록키 지방">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="돌" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="거대한 바위" price="-1" />
+	  <item name="나무껍질" price="-1" />
+	  <item name="산토끼" price="-2" />
+	  <item name="나무 열매" price="-2" />
+	  <item name="사슴" price="-2" />
+	  <item name="기묘한 열매" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="우스튜르트 고원">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="흰 꽃" price="-1" />
+	  <item name="삼" price="-1" />
+	  <item name="살구씨" price="-1" />
+	  <item name="작약" price="-1" />
+	  <item name="양파" price="-2" />
+	  <item name="붉은 콩" price="-2" />
+	  <item name="올리브" price="-2" />
+	  <item name="밀" price="-2" />
+	  <item name="벼" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="바이칼 호 주변">
+	<group name="[교역]">
+	  <item name="풀" price="-1" />
+	  <item name="돌" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="거대한 바위" price="-1" />
+	  <item name="거대한 잎" price="-1" />
+	  <item name="흰색 광석" price="-1" />
+	  <item name="나무 열매" price="-2" />
+	</group>
+  </cityinfo>
+  <cityinfo name="히말라야 산맥 주변">
+	<group name="[교역]">
+	  <item name="돌" price="-1" />
+	  <item name="검은색 광석" price="-1" />
+	  <item name="노란색 광석" price="-1" />
+	  <item name="녹색 광석" price="-1" />
+	  <item name="붉은색 광석" price="-1" />
+	  <item name="푸른색 광석" price="-1" />
+	  <item name="흰색 광석" price="-1" />
+	  <item name="석재" price="-1" />
+	  <item name="거대한 바위" price="-1" />
+	  <item name="철광석" price="-1" />
+	  <item name="생사" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="케이프 해저분지">
+	<group name="[교역]">
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="테라 노바 앞바다">
+	<group name="[교역]">
+	  <item name="고등어" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="대구" />
+	  <item name="도미" />
+	  <item name="블랙 피쉬" />
+	  <item name="베링 이리치" />
+	  <item name="블루피쉬" />
+	  <item name="개복치" />
+	  <item name="다랑어" />
+	  <item name="날개다랑어" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="아이슬란드 해저분지">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="블랙 피쉬" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="래브라도 해">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="도미" />
+	  <item name="블루피쉬" />
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="프람 해협">
+	<group name="[교역]">
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="로포텐 해저분지">
+	<group name="[교역]">
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="덴마크 해저분지">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="노르웨이 해저분지">
+	<group name="[교역]">
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="서 바렌츠해">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="동 바렌츠해">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="북 노르웨이해">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="백해">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="서 카라해">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="동 카라해">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="등가시치" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="명태" />
+	  <item name="바다빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="라프테프 해">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="코텔니 섬 앞바다">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="황어" />
+	  <item name="대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="동 시베리아 해">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="바다빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="추크치 해">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="바다빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="오호츠크 해">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="바다빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="캄차카 반도 앞바다">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="바다빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="서 베링해">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="바다빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="동 베링해">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="바다빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="남그린란드섬 앞바다">
+	<group name="[교역]">
+	  <item name="꽁치" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="블랙 피쉬" />
+	  <item name="개복치" />
+	  <item name="도미" />
+	  <item name="블루피쉬" />
+	  <item name="해수" price="-1" />
+	  <item name="게" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="북그린란드섬 앞바다">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="도미" />
+	  <item name="다랑어" />
+	  <item name="블루피쉬" />
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="배로우 곶 앞바다">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="청어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="보퍼트 해">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="청어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="북극제도 앞바다">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="청어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="엘즈미어 앞바다">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="명태" />
+	  <item name="청어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="배핀 앞바다">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="열빙어" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="배핀 만">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="열빙어" />
+	  <item name="해수" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="게" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="허드슨 만">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="열빙어" />
+	  <item name="칠성장어" />
+	  <item name="명태" />
+	  <item name="해수" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="허드슨 해협">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="열빙어" />
+	  <item name="칠성장어" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="진주조개" price="-1" />
+	  <item name="용연향" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="알래스카 만">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="명태" />
+	  <item name="열빙어" />
+	  <item name="은대구" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="해초" price="-1" />
+	  <item name="새우" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="북동태평양">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="열빙어" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="알렉산더 제도 앞바다">
+	<group name="[교역]">
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="연어" />
+	  <item name="열빙어" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	  <item name="굴" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="샌프란시스코 앞바다">
+	<group name="[교역]">
+	  <item name="갈치" />
+	  <item name="꽁치" />
+	  <item name="정어리" />
+	  <item name="청어" />
+	  <item name="다랑어" />
+	  <item name="대구" />
+	  <item name="블랙 피쉬" />
+	  <item name="칠성장어" />
+	  <item name="청새치" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
+	</group>
+  </cityinfo>
+  <cityinfo name="캘리포니아 만">
+	<group name="[교역]">
+	  <item name="갈치" />
+	  <item name="꽁치" />
+	  <item name="정어리" />
+	  <item name="가다랑어" />
+	  <item name="해수" price="-1" />
+	  <item name="통나무" price="-1" />
 	</group>
   </cityinfo>
   </cityinfo_root>
