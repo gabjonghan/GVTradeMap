@@ -336,6 +336,7 @@ namespace gvo_base
 			case "보물상자":
 			case "행운권":
 			case "소재":
+			case "선박 소재":
 			case "애완동물":
 			case "부동산 권리 증서":
 			case "선박 교환권":
@@ -423,6 +424,7 @@ namespace gvo_base
 				case "보물상자":
 				case "행운권":
 				case "소재":
+				case "선박 소재":
 				case "애완동물":
 				case "가구":
 					return TypeGroup2.Item;
