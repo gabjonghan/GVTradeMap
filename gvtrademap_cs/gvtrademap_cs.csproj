@@ -115,6 +115,9 @@
     <Compile Include="form\find_form2.Designer.cs">
       <DependentUpon>find_form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\build_ship_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="form\sea_area_dd_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +183,7 @@
     <Compile Include="gvo\speed_calculator.cs" />
     <Compile Include="spot.cs" />
     <Compile Include="transform.cs" />
+    <Compile Include="update_checker.cs" />
     <Compile Include="sprite_rects\icons.cs" />
     <Compile Include="window\item_window.cs" />
     <Compile Include="loop_x_image.cs" />
@@ -253,6 +257,10 @@
     <Compile Include="database\sea_routes.cs" />
     <Compile Include="setting.cs" />
     <Compile Include="database\web_icons.cs" />
+    <Compile Include="database\game_info.cs" />
+    <Compile Include="form\game_info_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="database\world_info.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +307,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="database\ShipParts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="database\gameinfo\*.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="database\webicons.txt">

@@ -1,8 +1,8 @@
 ﻿/*-------------------------------------------------------------------------
 
- 조선からの경과일수
- 完全な경과일수とはならない가능性があるが, 
- 허용범위の정확도は保てる
+ 조선으로부터의 경과 일수
+ 완전한 경과 일수가 되지는 않을 수 있지만,
+ 허용 범위의 정확도는 유지된다
 
 ---------------------------------------------------------------------------*/
 
@@ -25,13 +25,13 @@ namespace gvtrademap_cs
 	---------------------------------------------------------------------------*/
 	public class gvo_build_ship_counter : gvo_day_counter
 	{
-		private const int					COUNTER_MAX	= 999;	// 999일でカンストする
+		private const int					COUNTER_MAX	= 999;	// 999 일에서 최대치에 도달한다
 	
 		private GlobalSettings						m_setting;
 
-		private bool						m_is_now_build;		// 조선중ならtrue
+		private bool						m_is_now_build;		// 조선 중이면 true
 		private string						m_ship_name;		// 선박명
-		private int							m_finish_days;		// 선박명から분석した조선종료일수
+		private int							m_finish_days;		// 선박명에서 분석한 조선 종료 일수
 
 		/*-------------------------------------------------------------------------
 		 
@@ -44,7 +44,7 @@ namespace gvtrademap_cs
 		public gvo_build_ship_counter(GlobalSettings _setting)
 			: base()
 		{
-			// カンストする일수を설정する
+			// 최대치에 도달하는 일수를 설정한다
 			base.CounterMax			= COUNTER_MAX;
 
 			// 설정항목
@@ -54,7 +54,7 @@ namespace gvtrademap_cs
 			base.Days				= m_setting.build_ship_days;
 			m_is_now_build			= m_setting.is_now_build_ship;
 			m_ship_name				= m_setting.build_ship_name;
-			m_finish_days			= get_build_ship_days(m_ship_name);	// 일수を得る
+			m_finish_days			= get_build_ship_days(m_ship_name);	// 일수를 얻는다
 		}
 
 		/*-------------------------------------------------------------------------
@@ -75,7 +75,7 @@ namespace gvtrademap_cs
 			base.Reset();					// 카운터리셋
 			m_is_now_build	= true;			// 조선개시
 			m_ship_name		= ship_name;	// 선박명
-			m_finish_days	= get_build_ship_days(m_ship_name);		// 일수を得る
+			m_finish_days	= get_build_ship_days(m_ship_name);		// 일수를 얻는다
 
 			// 설정항목업데이트
 			update_settings();
@@ -102,7 +102,7 @@ namespace gvtrademap_cs
 		{
 			if(!m_is_now_build)			return;
 
-			// 일수カウントの업데이트
+			// 일수 카운트 갱신
 			base.UpdateBase(days);
 
 			// 설정항목업데이트
@@ -110,59 +110,59 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 ポップアップ용の문자열を得る
+		 팝업용 문자열을 얻는다
 		---------------------------------------------------------------------------*/
 		public string GetPopupString()
 		{
 			if(m_is_now_build){
 				// 조선중
 				if(m_finish_days > 0){
-					// 선박명から종료일수분석できている
+					// 선박명으로 종료 일수를 분석할 수 있었다
 					if(GetDays() > m_finish_days){
-						// 完成する일수が경과している
-						return String.Format("[ {0} ]を建造중\n{1}일경과\n完成から{2}일경과",
+						// 완성되는 일수가 경과했다
+						return String.Format("[ {0} ] 을 건조중\n{1}일 경과\n완성으로부터 {2}일 경과",
 												m_ship_name,
 												base.GetDays(),
 												GetDays() - m_finish_days);
 					}else if(GetDays() == m_finish_days){
-						// 丁도完成してる
-						return String.Format("[ {0} ]を建造중\n{1}일경과\n完成しました",
+						// 딱 완성됐다
+						return String.Format("[ {0} ] 을 건조중\n{1}일 경과\n완성되었습니다",
 												m_ship_name,
 												base.GetDays());
 					}else{
-						// 完成する일수が경과していない
-						return String.Format("[ {0} ]を建造중\n{1}일경과\n残り{2}일",
+						// 완성되는 일수가 경과하지 않았다
+						return String.Format("[ {0} ] 을 건조중\n{1}일 경과\n남은 {2}일",
 												m_ship_name,
 												base.GetDays(),
 												m_finish_days - base.GetDays());
 					}
 				}else{
-					// 선박명から종료일수が분석できていない
-					return String.Format("[ {0} ]を建造중\n{1}일경과\n선박명に 14일 のような이름を付けると\n残り일수を계산できます",
+					// 선박명으로 종료 일수를 분석하지 못했다
+					return String.Format("[ {0} ] 을 건조중\n{1}일 경과\n선박명에 14일 같은 이름을 붙이면\n남은 일수를 계산할 수 있습니다",
 											m_ship_name,
 											base.GetDays());
 				}
 			}else{
 				// 조선개시대기
-				return "建造중ではありません";
+				return "건조중이 아닙니다";
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 조선일수を得る
-		 선박명に 14일 등が含まれていればそれを使う
-		 99일でカンスト
-		 일수が含まれない場合は-1を返す
+		 조선 일수를 얻는다
+		 선박명에 14일 등이 포함되어 있으면 그것을 사용한다
+		 99 일에서 최대치 도달
+		 일수가 포함되지 않은 경우에는 -1 을 반환한다
 		---------------------------------------------------------------------------*/
 		private int get_build_ship_days(string name)
 		{
-			// 全角수字を반角に변환する
+			// 전각 숫자를 반각으로 변환한다
 			name	= Useful.AdjustNumber(name);
 
 			Match	m	= Useful.match(@"([0-9]+)일", name);
-			if(m == null)	return -1;		// 일수が含まれない
+			if(m == null)	return -1;		// 일수가 포함되지 않았다
 
-			// 일수に변환
+			// 일수로 변환
 			return Useful.ToInt32(m.Groups[1].Value, -1);
 		}
 	}

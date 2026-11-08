@@ -1,16 +1,16 @@
 ﻿/*-------------------------------------------------------------------------
 
  대항해시대Online화면캡처
- 배の각도は2도간격で確定
- 360段階の분해능から180段階の値を得る
- 0도は実機の仕様により向けない
+ 배의 각도는 2 도 간격으로 확정
+ 360 단계의 분해능에서 180 단계의 값을 얻는다
+ 0 도는 실제 게임의 사양상 향할 수 없다
 
 ---------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------
  define
 ---------------------------------------------------------------------------*/
-// 나침반분석デバッグ
+// 나침반 분석 디버그
 //#define	DEBUG_COMPASS
 
 /*-------------------------------------------------------------------------
@@ -51,8 +51,8 @@ namespace gvtrademap_cs {
 			}
 
 			/*-------------------------------------------------------------------------
-			 캡처した내용を텍스쳐にする
-			 デバッグ용
+			 캡처한 내용을 텍스쳐로 만든다
+			 디버그용
 			---------------------------------------------------------------------------*/
 			public Texture CreateTexture(Device device) {
 				if (base.Image == null) return null;
@@ -62,7 +62,7 @@ namespace gvtrademap_cs {
 														1, Usage.Dynamic, Format.X8R8G8B8, Pool.SystemMemory)) {
 						UInt32[,] buf = (UInt32[,])tex.LockRectangle(typeof(UInt32), 0, LockFlags.Discard, base.Size.Height, base.Size.Width);
 
-						// 텍스쳐내용の生成
+						// 텍스쳐 내용 생성
 						int index = 0;
 						for (int y = 0; y < base.Size.Height; y++) {
 							for (int x = 0; x < base.Size.Width; x++) {
@@ -75,7 +75,7 @@ namespace gvtrademap_cs {
 						}
 						tex.UnlockRectangle(0);
 
-						// 사용できる메모リに전送
+						// 사용 가능한 메모리로 전송
 						return d3d_utility.CreateTextureFromTexture(device, tex);
 					}
 				} catch {
@@ -90,7 +90,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private gvt_lib m_lib;
 
-		// 캡처画상チェック용
+		// 캡처 이미지 확인용
 		private Texture m_debug_texture;
 		private Texture m_debug_texture2;
 
@@ -118,21 +118,21 @@ namespace gvtrademap_cs {
 			m_debug_texture = null;
 			m_debug_texture2 = null;
 
-			// 테이블生成용조정値
+			// 테이블 생성용 조정값
 			m_factor = 36f;
 			m_angle_x = 31.5f;
 			m_l = 54f;
 
-			// 나침반からの각도산출용테이블을작성함
+			// 나침반으로부터 각도를 산출하기 위한 테이블을 작성한다
 			//			create_compass_tbl();
-			// 조정테이블の작성
+			// 조정 테이블 작성
 			//			create_ajust_compass_tbl();
 		}
 
 		/*-------------------------------------------------------------------------
-		 screen_captureを작성함
-		 screen_captureを継承したものを사용する場合オーバーライドすること
-		 コンストラクタ내で呼ばれるので注意
+		 screen_capture 를 작성한다
+		 screen_capture 를 상속한 것을 사용할 경우 오버라이드할 것
+		 생성자 안에서 호출되므로 주의
 		---------------------------------------------------------------------------*/
 		protected override ScreenCapture CreateScreenCapture(int size_x, int size_y) {
 			return new capture_image(size_x, size_y);
@@ -180,8 +180,8 @@ namespace gvtrademap_cs {
 #if DEBUG_COMPASS
 		/*-------------------------------------------------------------------------
 		 debug
-		 검색する장소を赤にする
-		 텍스쳐표시時のテスト용
+		 검색할 위치를 빨갛게 표시한다
+		 텍스쳐 표시 시의 테스트용
 		---------------------------------------------------------------------------*/
 		private void debug_compass()
 		{
@@ -200,7 +200,7 @@ namespace gvtrademap_cs {
 #endif
 
 		/*-------------------------------------------------------------------------
-		 나침반からの각도산출용테이블을작성함
+		 나침반으로부터 각도를 산출하기 위한 테이블을 작성한다
 		 조정용
 		---------------------------------------------------------------------------*/
 		private void create_compass_tbl() {
@@ -246,7 +246,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 캡처디테일の표시
+		 캡처 상세 표시
 		---------------------------------------------------------------------------*/
 		public void DrawCapturedTexture() {
 			if (!m_lib.setting.draw_capture_info) return;
@@ -269,7 +269,7 @@ namespace gvtrademap_cs {
 
 			Vector3 pos = new Vector3(m_lib.device.client_size.X - 4, 64, 0.001f);
 
-			// 측량と항해일수
+			// 측량과 항해 일수
 			draw_debug_texture(m_debug_texture2, pos, 1f);
 			// 나침반
 			pos.Y += 8f + d3d_utility.GetTextureSize(m_debug_texture2).Y;

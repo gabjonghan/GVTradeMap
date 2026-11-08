@@ -1,7 +1,7 @@
 ﻿//-------------------------------------------------------------------------
 //
-// Iniのインターフェイスと관리ベース
-// IniBaseを実装したクラスならどれでも설정정보の읽기が가능となる
+// Ini 의 인터페이스와 관리 베이스
+// IniBase 를 구현한 클래스라면 어느 것이든 설정 정보 읽기가 가능해진다
 //
 //-------------------------------------------------------------------------
 using System;
@@ -11,19 +11,19 @@ namespace Utility.Ini
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// iniを사용するインターフェイス. 
-	/// クラス毎に그룹명を変えて이름の衝突を防ぐ. 
+	/// ini 를 사용하는 인터페이스.
+	/// 클래스마다 그룹명을 바꿔 이름 충돌을 막는다.
 	/// </summary>
 	/// <remarks>
-	/// <para>설정を保持するクラスがこのインターフェイスを実装し, </para>
-	/// <para>IniSettingBaseに등록すれば설정の읽기をまとめて行える. </para>
+	/// <para>설정을 보관하는 클래스가 이 인터페이스를 구현하고,</para>
+	/// <para>IniSettingBase 에 등록하면 설정 읽기를 한꺼번에 처리할 수 있다.</para>
 	/// </remarks>
 	public interface IIniSaveLoad
 	{
 		/// <summary>
-		/// 그룹명の初期値, 
-		/// 그룹명を지정しなかったときに사용される. 
-		/// 初期値を持つことで그룹명を용意する手間を省く. 
+		/// 그룹명의 초기값,
+		/// 그룹명을 지정하지 않았을 때 사용된다.
+		/// 초기값을 가짐으로써 그룹명을 준비하는 수고를 던다.
 		/// </summary>
 		string DefaultIniGroupName{	get;	}
 
@@ -35,7 +35,7 @@ namespace Utility.Ini
 		void IniLoad(IIni ini, string group);
 
 		/// <summary>
-		/// 書き出し
+		/// 기록
 		/// </summary>
 		/// <param name="ini">IIni</param>
 		/// <param name="group">그룹명</param>
@@ -44,11 +44,11 @@ namespace Utility.Ini
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// IniBaseを사용した설정관리のベース. 
-	/// 複수のIIniSaveLoadを등록できる. 
-	/// 初期値では그룹명の중複をチェックする. 
-	/// 그룹명が중複してもいい場合はEnableDuplicateGroupNameをtrueにすること. 
-	/// 継承したクラスのコンストラクタで파일명を지정することを期待している. 
+	/// IniBase 를 사용한 설정 관리의 베이스.
+	/// 여러 개의 IIniSaveLoad 를 등록할 수 있다.
+	/// 초기값에서는 그룹명의 중복을 확인한다.
+	/// 그룹명이 중복돼도 되는 경우에는 EnableDuplicateGroupName 을 true 로 할 것.
+	/// 상속한 클래스의 생성자에서 파일명을 지정하기를 기대한다.
 	/// </summary>
 	public abstract class IniSettingBase
 	{
@@ -58,14 +58,14 @@ namespace Utility.Ini
 		private List<SaveLoadNode>			m_list;
 
 		/// <summary>
-		/// 그룹명の중複チェック, trueのとき중複を許可する. 
-		/// 初期値はfalse
+		/// 그룹명 중복 확인, true 일 때 중복을 허용한다.
+		/// 초기값은 false
 		/// </summary>
 		protected bool						m_enable_duplicate_group_name;
 
 		/// <summary>
-		/// 그룹명の중複チェック, trueのとき중複を許可する. 
-		/// 初期値はfalse
+		/// 그룹명 중복 확인, true 일 때 중복을 허용한다.
+		/// 초기값은 false
 		/// </summary>
 		public bool EnableDuplicateGroupName	{	get{	return m_enable_duplicate_group_name;		}
 													set{	m_enable_duplicate_group_name	= value;	}}
@@ -77,21 +77,21 @@ namespace Utility.Ini
 		public IniSettingBase()
 		{
 			m_list							= new List<SaveLoadNode>();
-			m_enable_duplicate_group_name	= false;	// 그룹명の중複チェック유효
+			m_enable_duplicate_group_name	= false;	// 그룹명 중복 확인 유효
 		}
 
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 추가
 		/// </summary>
-		/// <param name="user">IIniを사용する유저</param>
-		/// <param name="group">userが사용する그룹명</param>
+		/// <param name="user">IIni 를 사용하는 유저</param>
+		/// <param name="group">user 가 사용하는 그룹명</param>
 		public virtual void AddIniSaveLoad(IIniSaveLoad user, string group)
 		{
-			// 그룹명の중複チェック
+			// 그룹명 중복 확인
 			if(!m_enable_duplicate_group_name){
 				if(is_duplicate_group_name(group)){
-					throw new Exception(String.Format("[ {0} ]\r\n그룹명が중複しています. ", group));
+					throw new Exception(String.Format("[ {0} ]\r\n그룹명이 중복되었습니다. ", group));
 				}
 			}
 			m_list.Add(new SaveLoadNode(user, group));
@@ -99,9 +99,9 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 추가, 그룹명はuser.DefaultGroupNameを사용する
+		/// 추가, 그룹명은 user.DefaultGroupName 을 사용한다
 		/// </summary>
-		/// <param name="user">IIniを사용する유저</param>
+		/// <param name="user">IIni 를 사용하는 유저</param>
 		public virtual void AddIniSaveLoad(IIniSaveLoad user)
 		{
 			AddIniSaveLoad(user, user.DefaultIniGroupName);
@@ -109,10 +109,10 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 그룹명が중複しているか調べる. 
+		/// 그룹명이 중복되는지 조사한다.
 		/// </summary>
-		/// <param name="group">調べる그룹명</param>
-		/// <returns>중複していればtrue</returns>
+		/// <param name="group">조사할 그룹명</param>
+		/// <returns>중복되면 true</returns>
 		private bool is_duplicate_group_name(string group)
 		{
 			foreach(SaveLoadNode i in m_list){
@@ -124,14 +124,14 @@ namespace Utility.Ini
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 로드. 
-		/// 継承先でIIniを작성し, Load(IIni ini)を呼び出すこと. 
-		/// コンストラクタで파일명등を지정すること. 
+		/// 상속받은 쪽에서 IIni 를 작성하고, Load(IIni ini) 를 호출할 것.
+		/// 생성자에서 파일명 등을 지정할 것.
 		/// </summary>
 		public abstract void Load();
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// IIniから로드
+		/// IIni 로부터 로드
 		/// </summary>
 		/// <param name="ini"></param>
 		protected virtual void Load(IIni ini)
@@ -144,15 +144,15 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 書きだす. 
-		/// 継承先でIIniを작성し, Save(IIni ini)を呼び出すこと. 
-		/// コンストラクタで파일명등を지정すること. 
+		/// 기록한다.
+		/// 상속받은 쪽에서 IIni 를 작성하고, Save(IIni ini) 를 호출할 것.
+		/// 생성자에서 파일명 등을 지정할 것.
 		/// </summary>
 		public abstract void Save();
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// IIniに書きだす. 
+		/// IIni 에 기록한다.
 		/// </summary>
 		/// <param name="ini">IIni</param>
 		protected virtual void Save(IIni ini)
@@ -165,7 +165,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// IniBase관리ノード
+		/// IniBase 관리 노드
 		/// </summary>
 		private class SaveLoadNode
 		{
@@ -182,7 +182,7 @@ namespace Utility.Ini
 			/// 구축
 			/// </summary>
 			/// <param name="user">유저</param>
-			/// <param name="group">유저が사용する그룹명</param>
+			/// <param name="group">유저가 사용하는 그룹명</param>
 			public SaveLoadNode(IIniSaveLoad user, string group)
 			{
 				if(user == null)					throw new ArgumentException();
@@ -218,64 +218,64 @@ namespace Utility.Ini
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// iniアクセスベース, 
-	/// 문자열설정と取得を実装して사용する. 
+	/// ini 접근 베이스,
+	/// 문자열 설정과 취득을 구현해서 사용한다.
 	/// </summary>
 	/// <remarks>
-	/// <para>iniと同じように사용できる. </para>
-	/// <para>配열を扱うことができる. </para>
-	/// <para>bool,int,long,double,float,stringに대응</para>
-	/// <para>데이터の取得と설정のインターフェイスのみを実装している. </para>
-	/// <para>파일への읽기は継承先が自由に行う. </para>
-	/// <para>사용者は파일への읽기がどう行われるか意識する必要はない. </para>
-	/// <para>IniBaseに対してGetProfile()とSetProfile()を呼ぶだけでよい. </para>
-	/// <para>파일への읽기を隠蔽するため, IniSettingBaseを継承して사용すること. </para>
-	/// <para>IniBaseを継承したクラスのインスタンスを直接작성함べきではない. </para>
-	/// <para>xmlを使ったクラスとしてXmlIniとXmlIniSettingが용意されている. </para>
+	/// <para>ini 와 같은 방식으로 사용할 수 있다.</para>
+	/// <para>배열을 다룰 수 있다.</para>
+	/// <para>bool, int, long, double, float, string 에 대응</para>
+	/// <para>데이터 취득과 설정의 인터페이스만 구현되어 있다.</para>
+	/// <para>파일 입출력은 상속받은 쪽이 자유롭게 수행한다.</para>
+	/// <para>사용자는 파일 입출력이 어떻게 이루어지는지 의식할 필요가 없다.</para>
+	/// <para>IniBase 에 대해 GetProfile() 과 SetProfile() 을 호출하기만 하면 된다.</para>
+	/// <para>파일 입출력을 은폐하기 위해, IniSettingBase 를 상속해서 사용할 것.</para>
+	/// <para>IniBase 를 상속한 클래스의 인스턴스를 직접 작성해서는 안 된다.</para>
+	/// <para>xml 을 사용한 클래스로 XmlIni 와 XmlIniSetting 이 준비되어 있다.</para>
 	/// </remarks>
 	public abstract class IniBase : IIni
 	{
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터があるかどうかを得る. 
-		/// 継承先で実装すること
+		/// 데이터가 있는지 여부를 얻는다.
+		/// 상속받은 쪽에서 구현할 것
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <returns>데이터がある場合true</returns>
+		/// <returns>데이터가 있는 경우 true</returns>
 		protected abstract bool HasProfile(string group_name, string name);
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
-		/// 継承先で実装すること
+		/// 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
+		/// 상속받은 쪽에서 구현할 것
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
-		/// <returns>得られた데이터</returns>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
+		/// <returns>얻어진 데이터</returns>
 		public abstract string GetProfile(string group_name, string name, string default_value);
 		
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
-		/// 継承先で実装すること
+		/// 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
+		/// 상속받은 쪽에서 구현할 것
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
 		/// <returns>
-		/// 得られた데이터
-		/// 대きさ0の配열の가능性有り
+		/// 얻어진 데이터
+		/// 크기 0 인 배열일 가능성 있음
 		/// </returns>
 		public abstract string[] GetProfile(string group_name, string name, string[] default_value);
 
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 데이터설정
-		/// 継承先で実装すること
+		/// 상속받은 쪽에서 구현할 것
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -285,8 +285,8 @@ namespace Utility.Ini
 		//-------------------------------------------------------------------------
 		/// <summary>
 		/// 데이터설정
-		/// 配열の내용は전부置きかえられる
-		/// 継承先で実装すること
+		/// 배열의 내용은 전부 대체된다
+		/// 상속받은 쪽에서 구현할 것
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -296,13 +296,13 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// bool데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// bool 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
-		/// <returns>得られた데이터</returns>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
+		/// <returns>얻어진 데이터</returns>
 		public bool GetProfile(string group_name, string name, bool default_value)
 		{
 			if(!HasProfile(group_name, name))	return default_value;
@@ -316,13 +316,13 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// int데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// int 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
-		/// <returns>得られた데이터</returns>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
+		/// <returns>얻어진 데이터</returns>
 		public int GetProfile(string group_name, string name, int default_value)
 		{
 			if(!HasProfile(group_name, name))	return default_value;
@@ -336,13 +336,13 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// long데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// long 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
-		/// <returns>得られた데이터</returns>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
+		/// <returns>얻어진 데이터</returns>
 		public long GetProfile(string group_name, string name, long default_value)
 		{
 			if(!HasProfile(group_name, name))	return default_value;
@@ -356,13 +356,13 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// double데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// double 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
-		/// <returns>得られた데이터</returns>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
+		/// <returns>얻어진 데이터</returns>
 		public double GetProfile(string group_name, string name, double default_value)
 		{
 			if(!HasProfile(group_name, name))	return default_value;
@@ -376,13 +376,13 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// float데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// float 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
-		/// <returns>得られた데이터</returns>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
+		/// <returns>얻어진 데이터</returns>
 		public float GetProfile(string group_name, string name, float default_value)
 		{
 			if(!HasProfile(group_name, name))	return default_value;
@@ -396,8 +396,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// bool설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// bool 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -409,8 +409,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// int설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// int 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -422,8 +422,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// long설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// long 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -435,8 +435,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// double설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// double 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -448,8 +448,8 @@ namespace Utility.Ini
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// float설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// float 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -462,15 +462,15 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// bool[]데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// bool[] 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
 		/// <returns>
-		/// 得られた데이터
-		/// 대きさ0の配열の가능性有り
+		/// 얻어진 데이터
+		/// 크기 0 인 배열일 가능성 있음
 		/// </returns>
 		public bool[] GetProfile(string group_name, string name, bool[] default_value)
 		{
@@ -484,7 +484,7 @@ namespace Utility.Ini
 						bool	b	= to_bool(s);
 						list.Add(b);
 					}catch{
-						// 실패した要素は無視
+						// 실패한 요소는 무시
 					}
 				}
 				return list.ToArray();
@@ -495,15 +495,15 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// int[]데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// int[] 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
 		/// <returns>
-		/// 得られた데이터
-		/// 대きさ0の配열の가능性有り
+		/// 얻어진 데이터
+		/// 크기 0 인 배열일 가능성 있음
 		/// </returns>
 		public int[] GetProfile(string group_name, string name, int[] default_value)
 		{
@@ -517,7 +517,7 @@ namespace Utility.Ini
 						int	b	= to_int(s);
 						list.Add(b);
 					}catch{
-						// 실패した要素は無視
+						// 실패한 요소는 무시
 					}
 				}
 				return list.ToArray();
@@ -528,15 +528,15 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// long[]데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// long[] 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
 		/// <returns>
-		/// 得られた데이터
-		/// 대きさ0の配열の가능性有り
+		/// 얻어진 데이터
+		/// 크기 0 인 배열일 가능성 있음
 		/// </returns>
 		public long[] GetProfile(string group_name, string name, long[] default_value)
 		{
@@ -550,7 +550,7 @@ namespace Utility.Ini
 						long	b	= to_long(s);
 						list.Add(b);
 					}catch{
-						// 실패した要素は無視
+						// 실패한 요소는 무시
 					}
 				}
 				return list.ToArray();
@@ -561,15 +561,15 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// double[]데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// double[] 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
 		/// <returns>
-		/// 得られた데이터
-		/// 대きさ0の配열の가능性有り
+		/// 얻어진 데이터
+		/// 크기 0 인 배열일 가능성 있음
 		/// </returns>
 		public double[] GetProfile(string group_name, string name, double[] default_value)
 		{
@@ -583,7 +583,7 @@ namespace Utility.Ini
 						double	b	= to_double(s);
 						list.Add(b);
 					}catch{
-						// 실패した要素は無視
+						// 실패한 요소는 무시
 					}
 				}
 				return list.ToArray();
@@ -594,15 +594,15 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// float[]데이터取得
-		/// 데이터が得られない場合はdefault_valueを返す
+		/// float[] 데이터 취득
+		/// 데이터를 얻지 못한 경우에는 default_value 를 반환한다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
-		/// <param name="default_value">데이터が得られない場合の初期値</param>
+		/// <param name="default_value">데이터를 얻지 못한 경우의 초기값</param>
 		/// <returns>
-		/// 得られた데이터
-		/// 대きさ0の配열の가능性有り
+		/// 얻어진 데이터
+		/// 크기 0 인 배열일 가능성 있음
 		/// </returns>
 		public float[] GetProfile(string group_name, string name, float[] default_value)
 		{
@@ -616,7 +616,7 @@ namespace Utility.Ini
 						float	b	= to_float(s);
 						list.Add(b);
 					}catch{
-						// 실패した要素は無視
+						// 실패한 요소는 무시
 					}
 				}
 				return list.ToArray();
@@ -628,8 +628,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// bool[]설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// bool[] 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -645,8 +645,8 @@ namespace Utility.Ini
 	
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// int[]설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// int[] 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -662,8 +662,8 @@ namespace Utility.Ini
 		
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// long[]설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// long[] 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -679,8 +679,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// double[]설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// double[] 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>
@@ -696,8 +696,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// float[]설정を更新
-		/// 설정항목がない場合Elementが作られる
+		/// float[] 설정을 갱신
+		/// 설정 항목이 없는 경우 Element 가 만들어진다
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">데이터명</param>

@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- WIN32ラッパー
+ WIN32 래퍼
 
 ---------------------------------------------------------------------------*/
 
@@ -22,6 +22,9 @@ namespace win32
 	---------------------------------------------------------------------------*/
 	static public class user32
 	{
+		[DllImport("user32.dll")]
+		public static extern bool SetProcessDPIAware();
+
 		[DllImport("user32.dll")]
 		public static extern IntPtr GetForegroundWindow();
 
@@ -46,7 +49,7 @@ namespace win32
 		[DllImport("user32.dll")]
 		public static extern void ReleaseDC(IntPtr hWnd, IntPtr hDC);
 
-		//키보드イベント処理
+		//키보드 이벤트 처리
 		[DllImport("user32.dll")]
 		public static extern int keybd_event(int VK, int scan, int flags,int extinfo);
 
@@ -124,7 +127,7 @@ namespace win32
 		public const int		VK_F12			= 0x7b;
 
 		/*-------------------------------------------------------------------------
-		 키보드イベントを発生させる
+		 키보드 이벤트를 발생시킨다
 		---------------------------------------------------------------------------*/
 		static public void PostMessage_KEYDOWN(IntPtr handle, int vk, int flag)
 		{

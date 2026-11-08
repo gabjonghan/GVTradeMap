@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
  항로도목록
- 모드レスダイア로그として사용すること
+ 모드리스 대화상자로 사용할 것
 
 ---------------------------------------------------------------------------*/
 
@@ -31,7 +31,7 @@ namespace gvtrademap_cs {
 
 	---------------------------------------------------------------------------*/
 	public partial class sea_routes_form2 : Form {
-		private gvt_lib m_lib;				  // よく使う기능をまとめたもの
+		private gvt_lib m_lib;				  // 자주 쓰는 기능을 모아 놓은 것
 		private GvoDatabase m_db;				   // DB
 
 		private bool m_disable_update_select;
@@ -57,88 +57,88 @@ namespace gvtrademap_cs {
 			toolTip1.AutoPopDelay = 30 * 1000;	  // 30초표시
 			toolTip1.BackColor = Color.LightYellow;
 
-			// ViewとDBを関連付けておく
+			// View 와 DB 를 연결해 둔다
 			m_view1 = new list_view_db(listView1, m_db.SeaRoute.searoutes);
 			m_view2 = new list_view_db(listView2, m_db.SeaRoute.favorite_sea_routes);
 			m_view3 = new list_view_db(listView3, m_db.SeaRoute.trash_sea_routes);
 
-			// 각ページの初期化
+			// 각 페이지 초기화
 			init_page1();
 			init_page2();
 			init_page3();
 		}
 
 		/*-------------------------------------------------------------------------
-		 ページの初期化
+		 페이지 초기화
 		---------------------------------------------------------------------------*/
 		private void init_page1() {
-			// ヘッダのコラムを추가しておく
-			// コラムの사이즈は覚えておく必要がある
+			// 헤더 컬럼을 추가해 둔다
+			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView1.Columns.Add("표시", 50);
-			listView1.Columns.Add("시작위치", 160);
-			listView1.Columns.Add("종료위치", 160);
-			listView1.Columns.Add("항해일수", 60);
-			listView1.Columns.Add("항해시간", 170);
+			listView1.Columns.Add("시작 위치", 160);
+			listView1.Columns.Add("종료 위치", 160);
+			listView1.Columns.Add("항해 일수", 60);
+			listView1.Columns.Add("항해 시간", 170);
 		}
 
 		/*-------------------------------------------------------------------------
-		 ページの初期化
+		 페이지 초기화
 		---------------------------------------------------------------------------*/
 		private void init_page2() {
-			// ヘッダのコラムを추가しておく
-			// コラムの사이즈は覚えておく必要がある
+			// 헤더 컬럼을 추가해 둔다
+			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView2.Columns.Add("표시", 50);
-			listView2.Columns.Add("시작위치", 160);
-			listView2.Columns.Add("종료위치", 160);
-			listView2.Columns.Add("항해일수", 60);
-			listView2.Columns.Add("항해시간", 170);
+			listView2.Columns.Add("시작 위치", 160);
+			listView2.Columns.Add("종료 위치", 160);
+			listView2.Columns.Add("항해 일수", 60);
+			listView2.Columns.Add("항해 시간", 170);
 		}
 
 		/*-------------------------------------------------------------------------
-		 ページの初期化
+		 페이지 초기화
 		---------------------------------------------------------------------------*/
 		private void init_page3() {
-			// ヘッダのコラムを추가しておく
-			// コラムの사이즈は覚えておく必要がある
+			// 헤더 컬럼을 추가해 둔다
+			// 컬럼 크기는 기억해 둘 필요가 있다
 			listView3.Columns.Add("표시", 50);
-			listView3.Columns.Add("시작위치", 160);
-			listView3.Columns.Add("종료위치", 160);
-			listView3.Columns.Add("항해일수", 60);
-			listView3.Columns.Add("항해시간", 170);
+			listView3.Columns.Add("시작 위치", 160);
+			listView3.Columns.Add("종료 위치", 160);
+			listView3.Columns.Add("항해 일수", 60);
+			listView3.Columns.Add("항해 시간", 170);
 		}
 
 		/*-------------------------------------------------------------------------
-		 ESCが押されたときの닫기動作
+		 ESC 가 눌렸을 때의 닫기 동작
 		---------------------------------------------------------------------------*/
 		private void button1_Click(object sender, EventArgs e) {
-			this.Hide();		// 표시を消す
+			this.Hide();		// 표시를 지운다
 		}
 
 		/*-------------------------------------------------------------------------
-		 閉じられようとしている
+		 닫히려고 하고 있다
 		---------------------------------------------------------------------------*/
 		private void sea_routes_form2_FormClosing(object sender, FormClosingEventArgs e) {
 			if (e.CloseReason == CloseReason.UserClosing) {
-				// このフォームの x ボタンが押されたときのみ취소する
-				// Alt + F4 でもここを通る
+				// 이 폼의 x 버튼이 눌렸을 때만 취소한다
+				// Alt + F4 로도 여기를 지난다
 				e.Cancel = true;
-				this.Hide();	// 비표시にする
+				this.Hide();	// 비표시로 만든다
 
-				// 선택상태を리셋する
+				// 선택 상태를 리셋한다
 				m_db.SeaRoute.ResetSelectFlag();
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 최초に표시されたとき
+		 처음 표시되었을 때
 		---------------------------------------------------------------------------*/
 		private void sea_routes_form2_Shown(object sender, EventArgs e) {
 			UpdateAllList();
 		}
 
 		/*-------------------------------------------------------------------------
-		 전체목록내용を업데이트する
-		 목록の수が変わった場合
+		 전체 목록 내용을 갱신한다
+		 목록의 개수가 바뀐 경우
 		---------------------------------------------------------------------------*/
 		public void UpdateAllList() {
 			update_sea_routes_list();
@@ -147,15 +147,15 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 최신の항로도の내용を업데이트する
-		 변경があったであろう箇所のみ다시그리기
-		 전체を다시그리기するとちらつくため
+		 최신 항로도의 내용을 갱신한다
+		 변경이 있었을 만한 부분만 다시 그리기
+		 전체를 다시 그리면 깜빡이기 때문
 		---------------------------------------------------------------------------*/
 		public void RedrawNewestSeaRoutes() {
-			// 항로도목록以외を업데이트する必要が今のところない
+			// 항로도 목록 이외를 갱신할 필요가 지금은 없다
 			switch (tabControl1.SelectedIndex) {
 				case 0: {
-						// 최신の항로도の내용を업데이트する
+						// 최신 항로도의 내용을 갱신한다
 						int count = m_view1.view.Items.Count;
 						if (count <= 0) return;
 						Rectangle rect = m_view1.view.GetItemRect(count - 1);
@@ -170,7 +170,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 항로도목록목록내용を업데이트する
+		 항로도 목록의 내용을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_sea_routes_list() {
 			tabPage1.Text = String.Format("항로도({0})", m_db.SeaRoute.searoutes.Count);
@@ -178,62 +178,62 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 즐겨찾기항로도목록목록내용を업데이트する
+		 즐겨찾기 항로도 목록의 내용을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_favorite_sea_routes_list() {
-			tabPage2.Text = String.Format("항로도즐겨찾기({0})", m_db.SeaRoute.favorite_sea_routes.Count);
+			tabPage2.Text = String.Format("즐겨찾기 항로도({0})", m_db.SeaRoute.favorite_sea_routes.Count);
 			update_list_count(m_view2);
 		}
 
 		/*-------------------------------------------------------------------------
-		 ごみ箱항로도목록목록내용を업데이트する
+		 휴지통 항로도 목록의 내용을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_trash_sea_routes_list() {
-			tabPage3.Text = String.Format("과거의항로도(비표시)({0})", m_db.SeaRoute.trash_sea_routes.Count);
+			tabPage3.Text = String.Format("과거 항로도(숨김)({0})", m_db.SeaRoute.trash_sea_routes.Count);
 			update_list_count(m_view3);
 		}
 
 		/*-------------------------------------------------------------------------
-		 목록の수を업데이트する
-		 一番상に표시されていた아이템を그리기범위내にスクロールさせる기능付き
+		 목록의 개수를 갱신한다
+		 맨 위에 표시되어 있던 아이템을 그리기 범위 안으로 스크롤시키는 기능 포함
 		---------------------------------------------------------------------------*/
 		private void update_list_count(list_view_db view) {
 			ListViewItem item = view.view.TopItem;
 			int index = -1;
 			if (item != null) index = item.Index;
 
-			// 一番下までスクロールした상태で항목수を減らすと例외がでる
-			// ListViewのバグ?
-			view.view.VirtualListSize = 0;			  // 例외対策
-			view.view.VirtualListSize = view.db.Count;  // 新しい항목수
+			// 맨 아래까지 스크롤한 상태에서 항목 수를 줄이면 예외가 발생한다
+			// ListView 의 버그?
+			view.view.VirtualListSize = 0;			  // 예외 대책
+			view.view.VirtualListSize = view.db.Count;  // 새 항목 수
 
-			/*			// 見える위치にスクロールさせる
+			/*			// 다시 그리기
 						if(   (view.view.Items.Count > 0)
 							&&(Index > 0) ){
-							// 一도一番下までスクロールさせる
+							// 한 번 맨 아래까지 스크롤시킨다
 							view.view.EnsureVisible(view.view.Items.Count - 1);
-							// 目的の아이템を一番상にする
-							// 一番상が무리なら적당な위치にスクロールする
+							// 목적한 아이템을 맨 위로 올린다
+							// 맨 위가 무리라면 적당한 위치로 스크롤한다
 							view.view.EnsureVisible(Index);
 						}
 			*/
 
 			/*			int Count	= m_view1.view.Items.Count;
 						if(Count > 0){
-							Rectangle	rect	= view.view.GetItemRect(Count - 1);	// もっとも新しい아이템のRect
+							Rectangle	rect	= view.view.GetItemRect(Count - 1);	// 가장 새로운 아이템의 Rect
 							view.view.Invalidate(view.view.RectangleToScreen(rect));
 						}
 			*/
-			// 一番下が見える위치にスクロールさせる	
-			// 一番下の정보が최신のもの
+			// 맨 아래가 보이는 위치로 스크롤시킨다
+			// 맨 아래의 정보가 최신인 것
 			if (view.view.Items.Count > 0) {
-				// 一도一番下までスクロールさせる
+				// 한 번 맨 아래까지 스크롤시킨다
 				view.view.EnsureVisible(view.view.Items.Count - 1);
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 항로목록が선택한
+		 항로 목록이 선택되었다
 		---------------------------------------------------------------------------*/
 		private void listView1_SelectedIndexChanged(object sender, EventArgs e) {
 			selected_index_changed(m_view1);
@@ -246,18 +246,18 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 항로목록が선택한
+		 항로 목록이 선택되었다
 		 sub
 		---------------------------------------------------------------------------*/
 		private void selected_index_changed(list_view_db view) {
 			if (m_disable_update_select) return;
 
-			// 선택상태を리셋する
+			// 선택 상태를 리셋한다
 			m_db.SeaRoute.ResetSelectFlag();
 
 			if (view.view.SelectedIndices.Count < 1) return;
 
-			// 최초の항목をセンタリングする
+			// 최초 항목을 센터링한다
 			SeaRoutes.Voyage i = get_route(view.db, view.view.SelectedIndices[0]);
 			if (i != null) {
 				if (i.GamePoint1st.X < 0) return;
@@ -266,7 +266,7 @@ namespace gvtrademap_cs {
 				m_lib.setting.req_centering_gpos.Request();
 			}
 
-			// 선택상태にする
+			// 선택 상태로 만든다
 			foreach (int index in view.view.SelectedIndices) {
 				SeaRoutes.Voyage ii = get_route(view.db, index);
 				if (ii == null) continue;
@@ -275,8 +275,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 지정된번호の항로도を得る
-		 범위외のときはnullを返す
+		 지정된 번호의 항로도를 얻는다
+		 범위 밖일 때는 null 을 반환한다
 		---------------------------------------------------------------------------*/
 		private SeaRoutes.Voyage get_route(List<SeaRoutes.Voyage> list, int index) {
 			if (list == null) return null;
@@ -314,7 +314,7 @@ namespace gvtrademap_cs {
 		 sub
 		---------------------------------------------------------------------------*/
 		private void set_draw_flag(list_view_db view, bool is_show) {
-			// 선택상태を리셋する
+			// 선택 상태를 리셋한다
 			m_db.SeaRoute.ResetSelectFlag();
 
 			if (view.view.SelectedIndices.Count < 1) return;
@@ -329,7 +329,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 전체선택상태にする
+		 전체 선택 상태로 만든다
 		---------------------------------------------------------------------------*/
 		private void all_select_AToolStripMenuItem_Click(object sender, EventArgs e) {
 			select_all(m_view1);
@@ -342,7 +342,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 전체선택상태にする
+		 전체 선택 상태로 만든다
 		 sub
 		---------------------------------------------------------------------------*/
 		private void select_all(list_view_db view) {
@@ -355,10 +355,10 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 선택상태を해제する
+		 선택 상태를 해제한다
 		---------------------------------------------------------------------------*/
 		private void button3_Click(object sender, EventArgs e) {
-			// 선택상태を리셋する
+			// 선택 상태를 리셋한다
 			m_db.SeaRoute.ResetSelectFlag();
 
 			m_disable_update_select = true;
@@ -370,7 +370,7 @@ namespace gvtrademap_cs {
 
 		/*-------------------------------------------------------------------------
 		 삭제
-		 선택されている항로도を삭제する
+		 선택되어 있는 항로도를 삭제한다
 		---------------------------------------------------------------------------*/
 		private void move_trash_RToolStripMenuItem_Click(object sender, EventArgs e) {
 			List<SeaRoutes.Voyage> list = get_selected_routes_list(m_view1);
@@ -404,15 +404,15 @@ namespace gvtrademap_cs {
 		 삭제확인
 		---------------------------------------------------------------------------*/
 		private bool ask_remove() {
-			if (MessageBox.Show("선택한항로도를 삭제합니다. \n삭제하면 복구가 불가능합니다. \n괜찮겠습니까?",
-								"항로도삭제확인",
+			if (MessageBox.Show("선택한 항로도를 삭제합니다. \n삭제하면 복구할 수 없습니다. \n계속할까요?",
+								"항로도 삭제 확인",
 								MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.No) return false;
 			return true;
 		}
 
 		/*-------------------------------------------------------------------------
-		 선택されている항로도목록を得る
-		 목록がないときはnullを返す
+		 선택되어 있는 항로도 목록을 얻는다
+		 목록이 없을 때는 null 을 반환한다
 		---------------------------------------------------------------------------*/
 		private List<SeaRoutes.Voyage> get_selected_routes_list(list_view_db view) {
 			if (view.view.SelectedIndices.Count < 1) return null;
@@ -428,7 +428,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 항로도から즐겨찾기に이동
+		 항로도에서 즐겨찾기로 이동
 		---------------------------------------------------------------------------*/
 		private void add_AToolStripMenuItem_Click(object sender, EventArgs e) {
 			List<SeaRoutes.Voyage> list = get_selected_routes_list(m_view1);
@@ -439,7 +439,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 항로도から과거의항로도に이동
+		 항로도에서 과거 항로도로 이동
 		---------------------------------------------------------------------------*/
 		private void delete_DToolStripMenuItem_Click(object sender, EventArgs e) {
 			List<SeaRoutes.Voyage> list = get_selected_routes_list(m_view1);
@@ -450,7 +450,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 즐겨찾기から과거의항로도に이동
+		 즐겨찾기에서 과거 항로도로 이동
 		---------------------------------------------------------------------------*/
 		private void toolStripMenuItem3_Click(object sender, EventArgs e) {
 			List<SeaRoutes.Voyage> list = get_selected_routes_list(m_view2);
@@ -461,7 +461,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 과거의항로도から즐겨찾기に이동
+		 과거 항로도에서 즐겨찾기로 이동
 		---------------------------------------------------------------------------*/
 		private void toolStripMenuItem6_Click(object sender, EventArgs e) {
 			List<SeaRoutes.Voyage> list = get_selected_routes_list(m_view3);
@@ -502,7 +502,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이템を작성함
+		 아이템을 작성한다
 		---------------------------------------------------------------------------*/
 		private ListViewItem create_item(SeaRoutes.Voyage i, bool is_draw_show_flag) {
 			GvoWorldInfo.Info info1 = m_db.World.FindInfo_WithoutSea(transform.ToPoint(i.MapPoint1st));
@@ -510,7 +510,7 @@ namespace gvtrademap_cs {
 			GvoWorldInfo.Info info2 = m_db.World.FindInfo_WithoutSea(transform.ToPoint(i.MapPointLast));
 			string last_name = (info2 != null) ? info2.Name : "";
 
-			string show_str = (i.IsEnableDraw) ? "표시" : "비표시";
+			string show_str = (i.IsEnableDraw) ? "표시" : "숨김";
 			if (!is_draw_show_flag) show_str = "---";
 
 			ListViewItem item = new ListViewItem(show_str, 0);
@@ -529,7 +529,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 listViewとdb
+		 listView 와 db
 		---------------------------------------------------------------------------*/
 		private class list_view_db {
 			private ListView m_list_view;
@@ -551,7 +551,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 メニューの유효と무효
+		 메뉴의 유효와 무효
 		---------------------------------------------------------------------------*/
 		private void contextMenuStrip1_Opening(object sender, CancelEventArgs e) {
 			if (!set_context_menu_state(contextMenuStrip1, listView1, 7)) e.Cancel = true;
@@ -564,7 +564,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 メニューの유효と무효
+		 메뉴의 유효와 무효
 		 sub
 		---------------------------------------------------------------------------*/
 		private bool set_context_menu_state(ContextMenuStrip menu, ListView list_view, int all_select_index) {

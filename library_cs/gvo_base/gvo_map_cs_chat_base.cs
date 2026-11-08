@@ -1,11 +1,11 @@
 ﻿/*-------------------------------------------------------------------------
 
- チャット분석
- 교역MapC#向け
- リクエスト付き
- 預金の이자は재해とは独立して분석される
- 위험해역변동시스템も独立して분석される
- アクシデントは분석時の最후のもののみ
+ 채팅 분석
+ 교역Map C# 용
+ 리퀘스트 포함
+ 예금 이자는 재해와는 독립적으로 분석된다
+ 위험해역 변동 시스템도 독립적으로 분석된다
+ 사고는 분석 시점의 마지막 것만
 
  스레드대응
 
@@ -77,14 +77,14 @@ namespace gvo_base {
 			plague,			 // 전염병
 			scurvy,			 // 괴혈병
 			UMA,				// 정체모를괴물
-			treasure1,		  // 何かいい物
-			treasure2,		  // 何か見つかるかも
-			treasure3,		  // 高価なもの
-			escape_battle,	  // 全배が戦場を離れました
+			treasure1,		  // 뭔가 좋은 물건
+			treasure2,		  // 뭔가 발견될지도
+			treasure3,		  // 고가의 물건
+			escape_battle,	  // 모든 배가 전장을 떠났습니다
 			win_battle,		 // 승리
 			lose_battle,		// 패배
 
-			// 以下はアクシデントではないがtagとして사용される
+			// 아래는 사고가 아니지만 tag 로 사용된다
 			interest,		   // 이자
 			sea_type_normal,	// 해역변동 통상
 			sea_type_safty,	 // 해역변동 안전화
@@ -94,8 +94,8 @@ namespace gvo_base {
 			buildship_finish,   // 조선완료
 		};
 
-		private accident m_accident;					// 今회분석した재해
-		private bool m_is_interest;			 // 이자が来たらtrue
+		private accident m_accident;					// 이번에 분석한 재해
+		private bool m_is_interest;			 // 이자가 오면 true
 		private List<sea_area_type> m_sea_area_type_list;	   // 해역변동시스템용
 
 		// 造배
@@ -201,79 +201,79 @@ namespace gvo_base {
 			m_is_interest = false;
 			m_sea_area_type_list = new List<sea_area_type>();
 
-			// 분석대상を설정する
+			// 분석 대상을 설정한다
 			init_analyze_list();
 
 			ResetAll();
 		}
 
 		/*-------------------------------------------------------------------------
-		 분석대상を설정する
+		 분석 대상을 설정한다
 		---------------------------------------------------------------------------*/
 		private void init_analyze_list() {
-			// 분석ルールを初期化する
+			// 분석 규칙을 초기화한다
 			base.ResetAnalizedList();
 
-			// index0の항목
-			base.AddAnalizeList(@"배가 식인상어에 습격당하고 있습니다.", type.index0, accident.shark1);
-			base.AddAnalizeList(@"인喰いザメが現れました！", type.index0, accident.shark2);
+			// index0 의 항목
+			base.AddAnalizeList(@"선원이 식인상어에게 습격당하고 있습니다.", type.index0, accident.shark1);
+			base.AddAnalizeList(@"식인상어가 나타났다!", type.index0, accident.shark2);
 			base.AddAnalizeList(@"화재가 발생했습니다!", type.index0, accident.fire);
-			base.AddAnalizeList(@"수초が舵に絡まっています！", type.index0, accident.seaweed);
-			base.AddAnalizeList(@"気味の悪い歌声が聞こえてきました", type.index0, accident.seiren);
+			base.AddAnalizeList(@"해초가 키에 엉켜버렸습니다!", type.index0, accident.seaweed);
+			base.AddAnalizeList(@"기분 나쁜 노랫소리가 들립니다", type.index0, accident.seiren);
 			base.AddAnalizeList(@"자기장이 이상합니다. 나침반이 제대로 움직이지 않습니다.", type.index0, accident.compass);
-			base.AddAnalizeList(@"폭풍が来ました！　돛を広げていると전覆してしまいます！", type.index0, accident.storm);
-			base.AddAnalizeList(@"눈보라になりました！　돛を広げていると凍りついてしまいます", type.index0, accident.blizzard);
+			base.AddAnalizeList(@"폭풍이 왔습니다! 돛을 펼쳐놓으면 전복하고 맙니다!", type.index0, accident.storm);
+			base.AddAnalizeList(@"눈보라가 되었습니다! 돛을 펼쳐놓으면 얼어버립니다", type.index0, accident.blizzard);
 			base.AddAnalizeList(@"쥐가 대량 발생했습니다!", type.index0, accident.mouse);
 			base.AddAnalizeList(@"전염병이 발생했습니다!", type.index0, accident.plague);
 			base.AddAnalizeList(@"괴혈병이 발생했습니다!", type.index0, accident.scurvy);
-			base.AddAnalizeList(@"정체모를괴물が現れました", type.index0, accident.UMA);
-			base.AddAnalizeList(@"このあたりで何かいい物が見つかるかもしれません", type.index0, accident.treasure1);
-			base.AddAnalizeList(@"このあたりで何か見つかるかもしれません", type.index0, accident.treasure2);
-			base.AddAnalizeList(@"このあたりで高価なものが見つかるかもしれません", type.index0, accident.treasure3);
-			base.AddAnalizeList(@"全배が戦場を離れました", type.index0, accident.escape_battle);
+			base.AddAnalizeList(@"정체 모를 괴물이 나타났습니다", type.index0, accident.UMA);
+			base.AddAnalizeList(@"이 근처에서 뭔가 좋은 물건이 발견될지도 모릅니다", type.index0, accident.treasure1);
+			base.AddAnalizeList(@"이 근처에서 무엇인가 발견될지도 모릅니다", type.index0, accident.treasure2);
+			base.AddAnalizeList(@"이 근처에서 고가의 물품이 발견될지도 모릅니다", type.index0, accident.treasure3);
+			base.AddAnalizeList(@"모든 선박이 전장을 떠났습니다", type.index0, accident.escape_battle);
 
 			// 
-			base.AddAnalizeList(@"に승리しました！", type.any_index, accident.win_battle);
-			base.AddAnalizeList(@"に패배しました…", type.any_index, accident.lose_battle);
+			base.AddAnalizeList(@"에게 승리했습니다！", type.any_index, accident.win_battle);
+			base.AddAnalizeList(@"에게 패배했습니다…", type.any_index, accident.lose_battle);
 
 			// 이자
 			base.AddAnalizeList_Interest(accident.interest);
 
 			// 해역변동
-			base.AddAnalizeList(@"^(.+)が위험해역に戻りました！", type.regex, accident.sea_type_normal);
-			base.AddAnalizeList(@"^(.+)が안전해역となりました！", type.regex, accident.sea_type_safty);
-			base.AddAnalizeList(@"^(.+)が무법해역となりました！", type.regex, accident.sea_type_lawless);
+			base.AddAnalizeList(@"^(.+)가 위험해역으로 돌아왔습니다!", type.regex, accident.sea_type_normal);
+			base.AddAnalizeList(@"^(.+)가 안전해역이 되었습니다!", type.regex, accident.sea_type_safty);
+			base.AddAnalizeList(@"^(.+)가 무법해역이 되었습니다!", type.regex, accident.sea_type_lawless);
 
 			// 造배
 			base.AddAnalizeList(@"^(.+)의 건조를 주문했습니다.", type.regex, accident.buildship_start);
-			base.AddAnalizeList(@"^(.+)의 강화を依頼しました", type.regex, accident.buildship_start);
+			base.AddAnalizeList(@"^(.+)의 강화 의뢰를 했습니다", type.regex, accident.buildship_start);
 			base.AddAnalizeList(@"`의 진수가 무사히 끝났습니다", type.any_index, accident.buildship_finish);
 		}
 
 		/*-------------------------------------------------------------------------
 		 로그분석
-		 複수の재해로그があっても, 最후のものだけが유효とする
-		 (たくさんのポップアップが1度に生まれる必要がないため)
+		 여러 개의 재해 로그가 있어도, 마지막 것만 유효로 한다
+		 (많은 팝업이 한 번에 생길 필요가 없기 때문)
 		---------------------------------------------------------------------------*/
 		public override bool AnalyzeNewestChatLog() {
 			// 재해없음
 			_accident = accident.none;
 
-			// 이자が来たかどうかはここではクリアされない
-			// 해역が変動したかどうかはここではクリアされない
+			// 이자가 왔는지 여부는 여기서 초기화되지 않는다
+			// 해역이 변동했는지 여부는 여기서 초기화되지 않는다
 
-			// 最新로그を분석
+			// 최신 로그를 분석
 			if (!base.AnalyzeNewestChatLog()) return false;
-			// 更新されたかチェック
+			// 갱신되었는지 확인
 			if (!base.is_update) return true;
 
-			// 분석내용をチェックする
+			// 분석 내용을 확인한다
 			update_analyze();
 			return true;
 		}
 
 		/*-------------------------------------------------------------------------
-		 분석내용をチェックする
+		 분석 내용을 확인한다
 		---------------------------------------------------------------------------*/
 		private void update_analyze() {
 			foreach (gvo_chat_base.analized_data d in base.analized_list) {
@@ -290,14 +290,14 @@ namespace gvo_base {
 					case accident.plague:		   // 전염병
 					case accident.scurvy:		   // 괴혈병
 					case accident.UMA:			  // 정체모를괴물
-					case accident.treasure1:		// 何かいい物
-					case accident.treasure2:		// 何か見つかるかも
-					case accident.treasure3:		// 高価なもの
-					case accident.escape_battle:	// 全배が戦場を離れました
+					case accident.treasure1:		// 뭔가 좋은 물건
+					case accident.treasure2:		// 뭔가 발견될지도
+					case accident.treasure3:		// 고가의 물건
+					case accident.escape_battle:	// 모든 배가 전장을 떠났습니다
 					case accident.win_battle:	   // 승리
 					case accident.lose_battle:	  // 패배
 						Debug.WriteLine(d.line);
-						_accident = (accident)d.tag;	// 単純に상書き
+						_accident = (accident)d.tag;	// 단순히 덮어쓰기
 						break;
 					case accident.interest:		 // 이자
 						Debug.WriteLine(d.line);
@@ -335,7 +335,7 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 全てリセットする
+		 전부 리셋한다
 		---------------------------------------------------------------------------*/
 		public void ResetAll() {
 			ResetAccident();
@@ -345,21 +345,21 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 재해정보をリセットする
+		 재해 정보를 리셋한다
 		---------------------------------------------------------------------------*/
 		public void ResetAccident() {
 			_accident = accident.none;
 		}
 
 		/*-------------------------------------------------------------------------
-		 이자が来たかどうかをリセットする
+		 이자가 왔는지 여부를 리셋한다
 		---------------------------------------------------------------------------*/
 		public void ResetInterest() {
 			is_interest = false;
 		}
 
 		/*-------------------------------------------------------------------------
-		 해역변동をリセットする
+		 해역 변동을 리셋한다
 		---------------------------------------------------------------------------*/
 		public void ResetSeaArea() {
 			lock (m_syncobject) {
@@ -368,7 +368,7 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 造배정보をリセットする
+		 조선 정보를 리셋한다
 		---------------------------------------------------------------------------*/
 		public void ResetBuildShip() {
 			m_is_start_build_ship = false;
@@ -395,7 +395,7 @@ namespace gvo_base {
 		}
 
 		/*-------------------------------------------------------------------------
-		 アクシデントの변환
+		 사고의 변환
 		---------------------------------------------------------------------------*/
 		static public string ToAccidentString(accident __accident) {
 			switch (__accident) {

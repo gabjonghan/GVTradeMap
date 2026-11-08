@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- DirectX용ユーティリティ
- 全てstaticメソッド
+ DirectX 용 유틸리티
+ 전부 static 메서드
 
 ---------------------------------------------------------------------------*/
 
@@ -23,9 +23,9 @@ namespace directx
 	static public class d3d_utility
 	{
 		/*-------------------------------------------------------------------------
-		 텍스쳐の사이즈を得る
-		 LevelDescription 0 の사이즈を返す 
-		 tex==null のとき Vector2(0,0) を返す
+		 텍스쳐 크기를 얻는다
+		 LevelDescription 0 의 크기를 반환한다
+		 tex==null 일 때 Vector2(0,0) 을 반환한다
 		---------------------------------------------------------------------------*/
 		static public Vector2 GetTextureSize(Texture tex)
 		{
@@ -40,15 +40,15 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 텍스쳐を작성함
-		 텍스쳐はManagedで작성される
-		 시스템메모リに작성した텍스쳐を사용できる텍스쳐にするのに사용する
-		 bmp등から切り出した텍스쳐を작성함場合は, 
-		 시스템메모リに텍스쳐を작성し, この関수でManagedに전送する
-		 Managedで작성した텍스쳐をロックしてはいけない
+		 텍스쳐를 작성한다
+		 텍스쳐는 Managed 로 작성된다
+		 시스템 메모리에 작성한 텍스쳐를 사용 가능한 텍스쳐로 만들 때 사용한다
+		 bmp 등에서 잘라낸 텍스쳐를 작성할 경우에는,
+		 시스템 메모리에 텍스쳐를 작성하고, 이 함수로 Managed 에 전송한다
+		 Managed 로 작성한 텍스쳐를 잠가서는 안 된다
 		 
-		 텍스쳐はできるだけDDSで작성し, TextureLoaderを使って로드こと
-		 TextureLoaderはManagedな텍스쳐を작성してくれる
+		 텍스쳐는 되도록 DDS 로 작성하고, TextureLoader 를 사용해 로드할 것
+		 TextureLoader 는 Managed 인 텍스쳐를 작성해 준다
 		---------------------------------------------------------------------------*/
 		static public Texture CreateTextureFromTexture(Device device, Texture src_texture)
 		{
@@ -57,9 +57,9 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 フォーマット지정版
-		 フォーマット변환は기본的には시간が掛かるので注意
-		 フォーマット변환に실패するかもしれない
+		 포맷 지정 버전
+		 포맷 변환은 기본적으로 시간이 걸리므로 주의
+		 포맷 변환에 실패할 수도 있다
 		---------------------------------------------------------------------------*/
 		static public Texture CreateTextureFromTexture(Device device, Texture src_texture, Format format)
 		{
@@ -67,14 +67,14 @@ namespace directx
 			if(src_texture == null)		return null;
 
 			try{
-				// 同じ사이즈の텍스쳐を작성함
+				// 같은 크기의 텍스쳐를 작성한다
 				Texture dst_texture		= CreateTextureSameSize(device, src_texture, format);
 				if(dst_texture == null){
 					// 실패
 					return null;
 				}
 
-				// コピー
+				// 복사
 				if(CopyTexture(device, dst_texture, src_texture)){
 					return dst_texture;
 				}else{
@@ -87,7 +87,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 渡された텍스쳐と同じ사이즈の텍스쳐を작성함
+		 넘겨받은 텍스쳐와 같은 크기의 텍스쳐를 작성한다
 		---------------------------------------------------------------------------*/
 		static public Texture CreateTextureSameSize(Device device, Texture src_texture)
 		{
@@ -101,7 +101,7 @@ namespace directx
 		}
 		static public Texture CreateTextureSameSize(Device device, Texture src_texture, Format format)
 		{
-			// Managedで작성함
+			// Managed 로 작성한다
 			return CreateTextureSameSize(device, src_texture, Usage.None, format, Pool.Managed);
 		}
 		static public Texture CreateTextureSameSize(Device device, Texture src_texture, Usage usage, Format format, Pool pool)
@@ -117,8 +117,8 @@ namespace directx
 			}
 		}
 		/*-------------------------------------------------------------------------
-		 渡された텍스쳐と同じ사이즈の텍스쳐を작성함
-		 렌더링 타겟として작성함
+		 넘겨받은 텍스쳐와 같은 크기의 텍스쳐를 작성한다
+		 렌더링 타겟으로 작성한다
 		---------------------------------------------------------------------------*/
 		static public Texture CreateRenderTargetTextureSameSize(Device device, Texture src_texture)
 		{
@@ -127,9 +127,9 @@ namespace directx
 		}
 	
 		/*-------------------------------------------------------------------------
-		 텍스쳐コピー
-		 例えば시스템메모リ상の텍스쳐をVRAMに전送する등
-		 사이즈등はチェックしないので注意
+		 텍스쳐 복사
+		 예를 들어 시스템 메모리상의 텍스쳐를 VRAM 에 전송하는 등
+		 크기 등은 확인하지 않으므로 주의
 		---------------------------------------------------------------------------*/
 		static public bool CopyTexture(Device device, Texture dst_texture, Texture src_texture)
 		{
@@ -138,7 +138,7 @@ namespace directx
 			if(dst_texture == null)		return false;
 
 			try{
-				// 単純にコピー
+				// 단순히 복사
 				Surface		dst	= dst_texture.GetSurfaceLevel(0);
 				Surface		src	= src_texture.GetSurfaceLevel(0);
 				SurfaceLoader.FromSurface(dst, src, Filter.None, 0);
@@ -151,7 +151,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 텍스쳐사이즈を2のべき乗に조정する
+		 텍스쳐 크기를 2 의 거듭제곱으로 조정한다
 		---------------------------------------------------------------------------*/
 		static public Size TextureSizePow2(Size size)
 		{
@@ -162,7 +162,7 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 사이즈を2のべき乗に조정する
+		 크기를 2 의 거듭제곱으로 조정한다
 		---------------------------------------------------------------------------*/
 		static private int size_pow2(int size)
 		{

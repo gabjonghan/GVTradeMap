@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- TCPクライアントベース
+ TCP 클라이언트 베이스
 
 ---------------------------------------------------------------------------*/
 
@@ -19,7 +19,7 @@ using System.Net.Sockets;
 ---------------------------------------------------------------------------*/
 namespace net_base
 {
-	// 데이터受信イベントハンドラ
+	// 데이터 수신 이벤트 핸들러
 	public delegate void ReceivedDataEventHandler(object sender, ReceivedDataEventArgs e);
 
 	/*-------------------------------------------------------------------------
@@ -110,7 +110,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 初期化
+		 초기화
 		---------------------------------------------------------------------------*/
 		private void initialize()
 		{
@@ -150,31 +150,31 @@ namespace net_base
 			}
 			m_disconnected_from_server	= !is_self;
 
-			// イベントを発生
+			// 이벤트 발생
 			OnDisconnected(new EventArgs());
 		}
 
 		/*-------------------------------------------------------------------------
-		 送信
+		 송신
 		---------------------------------------------------------------------------*/
 		public void Send(string str)
 		{
 			if(!is_connected){
-				throw new ApplicationException("接続していません");
+				throw new ApplicationException("접속되어 있지 않습니다");
 			}
 			
-			// 문자열をByte형配열に변환
-			// EOTを추가する
+			// 문자열을 Byte 형 배열로 변환
+			// EOT 를 추가한다
 			byte[] send_bytes	= m_encoding.GetBytes(str + "\u0004");
 
 			lock(m_sync_socket){
-				//데이터を送信する
+				//데이터를 송신한다
 				m_client.Send(send_bytes);
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 서버ーに接続する
+		 서버에 접속한다
 		---------------------------------------------------------------------------*/
 		public void Connect(string host, int port)
 		{
@@ -194,33 +194,33 @@ namespace net_base
 				throw new ApplicationException("이미 접속중입니다");
 			}
 
-			// 接続する
+			// 접속한다
 			m_client.Connect(new IPEndPoint(host, port));
 
 			m_local_ep		= (IPEndPoint)m_client.LocalEndPoint;
 			m_remote_ep		= (IPEndPoint)m_client.RemoteEndPoint;
 
-			// イベントを発生
+			// 이벤트 발생
 			OnConnected(new EventArgs());
 
-			// 非同期데이터受信を開始する
+			// 비동기 데이터 수신을 시작한다
 			StartReceive();
 		}
 	
 		/*-------------------------------------------------------------------------
-		 非同期데이터受信を開始する
+		 비동기 데이터 수신을 시작한다
 		---------------------------------------------------------------------------*/
 		public void StartReceive()
 		{
 			if(!is_connected){
-				throw new ApplicationException("接続していません");
+				throw new ApplicationException("접속되어 있지 않습니다");
 			}
 
-			// 初期化
+			// 초기화
 			byte[]	receive_buffer	= new byte[1024];
 			m_received_bytes		= new MemoryStream();
 
-			// 非同期受信を開始
+			// 비동기 수신 시작
 			try{
 				m_client.BeginReceive(	receive_buffer,
 										0, receive_buffer.Length,
@@ -233,12 +233,12 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 BeginReceiveのコールバック
+		 BeginReceive 의 콜백
 		---------------------------------------------------------------------------*/
 		private void receive_data_callback(IAsyncResult ar)
 		{
 			int		len = -1;
-			//読み込んだ長さを取得
+			//읽어들인 길이를 가져온다
 			try{
 				lock(m_sync_socket){
 					len	= m_client.EndReceive(ar);
@@ -246,51 +246,51 @@ namespace net_base
 			}catch{
 			}
 
-			//切断されたか調べる
+			//접속이 끊겼는지 확인한다
 			if(len <= 0){
 				Close(false);
 				return;
 			}
 
-			//受信した데이터を取得する
+			//수신한 데이터를 가져온다
 			byte[]	receive_buffer	= (byte[])ar.AsyncState;
 
-			//受信した데이터を蓄積する
+			//수신한 데이터를 누적한다
 			m_received_bytes.Write(receive_buffer, 0, len);
 
-			//최대値を超えた時は, 接続を닫기
+			//최댓값을 넘었을 때는 접속을 닫는다
 			if(m_received_bytes.Length > int.MaxValue){
 				Close(false);
 				return;
 			}
 
-			//最후まで受信したか調べる
+			//끝까지 수신했는지 확인한다
 			if(m_received_bytes.Length >= 1){
 				m_received_bytes.Seek(-1, System.IO.SeekOrigin.End);
-				if(m_received_bytes.ReadByte() == (int)'\u0004'){	// 종료コードがあれば
-					// 最후まで受信した時
-					// 受信した데이터を문자열に변환
+				if(m_received_bytes.ReadByte() == (int)'\u0004'){	// 종료 코드가 있으면
+					// 끝까지 수신했을 때
+					// 수신한 데이터를 문자열로 변환
 					string	str = m_encoding.GetString(m_received_bytes.ToArray());
 					m_received_bytes.Close();
 
-					// 분解する
+					// 분해한다
 					int startPos = 0, endPos;
 					while((endPos = str.IndexOf('\u0004', startPos)) >=0){
 						string line = str.Substring(startPos, endPos - startPos);
 						startPos = endPos + 1;
-						// イベントを発生
+						// 이벤트 발생
 						OnReceivedData(new ReceivedDataEventArgs(this, line));
 					}
 					m_received_bytes	= new MemoryStream();
 				}else{
-					// 一番후ろにシークする
+					// 맨 뒤로 시크한다
 					m_received_bytes.Seek(0, System.IO.SeekOrigin.End);
 				}
 			}
 
 			try{
 				lock(m_sync_socket){
-					// 다시び受信開始
+					// 다시 수신 시작
 					m_client.BeginReceive(	receive_buffer,
 											0, receive_buffer.Length,
 											SocketFlags.None,
@@ -303,7 +303,7 @@ namespace net_base
 		}
 	
 		/*-------------------------------------------------------------------------
-		 서버に接続した
+		 서버에 접속했다
 		---------------------------------------------------------------------------*/
 		protected virtual void OnConnected(EventArgs e)
 		{
@@ -313,8 +313,8 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 서버から切断された
-		 서버から切断した
+		 서버로부터 접속이 끊겼다
+		 서버와의 접속을 끊었다
 		---------------------------------------------------------------------------*/
 		protected virtual void OnDisconnected(EventArgs e)
 		{
@@ -324,7 +324,7 @@ namespace net_base
 		}
 
 		/*-------------------------------------------------------------------------
-		 데이터を受信した
+		 데이터를 수신했다
 		---------------------------------------------------------------------------*/
 		protected virtual void OnReceivedData(ReceivedDataEventArgs e)
 		{

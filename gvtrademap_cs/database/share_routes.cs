@@ -32,14 +32,14 @@ namespace gvtrademap_cs
 	{
 		// 바운딩 박스사이즈
 		private const int					BB_ONCE_SIZE		= 400;
-		// 각도표시の長さ
+		// 각도 표시의 길이
 		private const float					ANGLE_LINE_LENGTH	= 48f;
-		// 텍스쳐フォントのリフレッシュ간격
+		// 텍스쳐 폰트의 리프레시 간격
 		private const int					TEXTURED_FONT_REFLESH_INTERVAL	= 30;	// 30분
 //		private const int					TEXTURED_FONT_REFLESH_INTERVAL	= 1;
 	
 		public enum State{
-			outof_sea,				// 해상ではない
+			outof_sea,				// 해상이 아니다
 			in_the_sea,				// 해상
 		};
 	
@@ -51,7 +51,7 @@ namespace gvtrademap_cs
 			private string					m_name;				// 이름
 			private Point					m_pos;				// 위치
 			private State					m_state;			// 상태
-			private Vector2					m_angle_vector;		// 이동ベクトル
+			private Vector2					m_angle_vector;		// 이동 벡터
 
 			/*-------------------------------------------------------------------------
 			 
@@ -76,7 +76,7 @@ namespace gvtrademap_cs
 
 		/*-------------------------------------------------------------------------
 		 공유1배
-		 바운딩 박스付き
+		 바운딩 박스 포함
 		---------------------------------------------------------------------------*/
 		public class ShareShipListBB : D3dBB2d
 		{
@@ -93,7 +93,7 @@ namespace gvtrademap_cs
 			public ShareShipListBB()
 			{
 				m_list			= new List<ShareShip>();
-				// 적당なオフセット
+				// 적당한 오프셋
 				base.OffsetLT	= new Vector2(-64, -8);
 				base.OffsetRB	= new Vector2( 64,  16);
 			}
@@ -110,7 +110,7 @@ namespace gvtrademap_cs
 				// 추가
 				m_list.Add(p);
 				base.Update(pos);
-				return true;		// 추가した
+				return true;		// 추가했다
 			}
 		}
 
@@ -119,15 +119,15 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		private gvt_lib						m_lib;
 
-		// 정보取得は스레드のため, ダブルバッファで行う
+		// 정보 취득은 스레드로 하므로, 더블 버퍼로 처리한다
 		private bool						m_share_side;
 		private List<ShareShip>				m_share1;			// 공유정보
 		private List<ShareShip>				m_share2;			// 공유정보
-		private List<ShareShipListBB>		m_share_bb1;		// 공유정보(BB付き)
-		private List<ShareShipListBB>		m_share_bb2;		// 공유정보(BB付き)
+		private List<ShareShipListBB>		m_share_bb1;		// 공유 정보(BB 포함)
+		private List<ShareShipListBB>		m_share_bb2;		// 공유 정보(BB 포함)
 
-		private bool						m_req_textured_font_reflesh;	// 텍스쳐フォントのリフレッシュリクエスト
-		private int							m_network_access_count;			// 공유정보を得たら+1
+		private bool						m_req_textured_font_reflesh;	// 텍스쳐 폰트의 리프레시 리퀘스트
+		private int							m_network_access_count;			// 공유 정보를 얻으면 +1
 	
 		/*-------------------------------------------------------------------------
 		 
@@ -156,7 +156,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 공유정보の取得と설정
+		 공유 정보의 취득과 설정
 		 스레드대응
 		---------------------------------------------------------------------------*/
 		public void Share()
@@ -168,7 +168,7 @@ namespace gvtrademap_cs
 		}
 			
 		/*-------------------------------------------------------------------------
-		 공유정보の取得と설정
+		 공유 정보의 취득과 설정
 		 스레드대응
 		---------------------------------------------------------------------------*/
 		public void Share(int x, int y, State _state)
@@ -190,7 +190,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 공유정보の取得と설정
+		 공유 정보의 취득과 설정
 		 스레드대응
 		---------------------------------------------------------------------------*/
 		public void update_list(string data)
@@ -207,7 +207,7 @@ namespace gvtrademap_cs
 
 				string[] split2	= s.Split(new char[]{','}, StringSplitOptions.RemoveEmptyEntries);
 				if(split2.Length < 4)							continue;
-				if(split2[0] == m_lib.setting.share_group_myname)	continue;	// 본인自身
+				if(split2[0] == m_lib.setting.share_group_myname)	continue;	// 본인 자신
 
 				try{
 					int		x		= Convert.ToInt32(split2[1]);
@@ -218,16 +218,16 @@ namespace gvtrademap_cs
 				}
 			}
 
-			// 이동ベクトルを得る
+			// 이동 벡터를 얻는다
 			update_move_angle();
 
-			// BB목록を업데이트する
+			// BB 목록을 갱신한다
 			update_bb_list();
 	
-			// 그리기용にフリップ
+			// 그리기용으로 플립
 			flip();
 
-			// 텍스쳐フォントリフレッシュリクエスト
+			// 텍스쳐 폰트 리프레시 리퀘스트
 			if(++m_network_access_count >= TEXTURED_FONT_REFLESH_INTERVAL){
 				m_req_textured_font_reflesh		= true;
 				m_network_access_count			= 0;
@@ -239,13 +239,13 @@ namespace gvtrademap_cs
 		---------------------------------------------------------------------------*/
 		public void Draw()
 		{
-			// リフレッシュリクエスト
+			// 리프레시 리퀘스트
 			if(m_req_textured_font_reflesh){
 				m_lib.device.textured_font.Clear();
 				m_req_textured_font_reflesh	= false;
 			}
 	
-			// 그리기플래그が立ってないときは그리지않음
+			// 그리기 플래그가 서 있지 않을 때는 그리지 않음
 			if(!m_lib.setting.draw_share_routes)		return;
 
 			// 각도
@@ -271,7 +271,7 @@ namespace gvtrademap_cs
 
 			D3dBB2d.CullingRect	rect	= new D3dBB2d.CullingRect(image.Device.client_size);
 			foreach(ShareShipListBB bb in list){
-				// 바운딩 박스で화면외かどうか조사
+				// 바운딩 박스로 화면 밖인지 조사
 				if(bb.IsCulling(offset, image.ImageScale, rect))	continue;
 
 #if DRAW_POPUPS_BOUNDINGBOX
@@ -281,7 +281,7 @@ namespace gvtrademap_cs
 					if(s.Position.X < 0)		continue;
 					if(s.Position.Y < 0)		continue;
 		
-					// 지도좌표に변환
+					// 지도 좌표로 변환
 					Vector2	pos0	= transform.game_pos2_map_pos(transform.ToVector2(s.Position), image);
 					Vector2 pos		= image.GlobalPos2LocalPos(pos0, offset);
 
@@ -309,7 +309,7 @@ namespace gvtrademap_cs
 					if(s.Position.X < 0)		continue;
 					if(s.Position.Y < 0)		continue;
 
-					// 지도좌표に변환
+					// 지도 좌표로 변환
 					Vector2	pos0	= transform.game_pos2_map_pos(new Vector2(s.Position.X, s.Position.Y), image);
 					Vector2 pos		= image.GlobalPos2LocalPos(pos0, offset);
 
@@ -350,7 +350,7 @@ namespace gvtrademap_cs
 				Vector2	pos0	= transform.game_pos2_map_pos(new Vector2(s.Position.X, s.Position.Y), image);
 				Vector2 pos		= image.GlobalPos2LocalPos(pos0, offset);
 
-				// クランプ
+				// 클램프
 				if(pos.X + ANGLE_LINE_LENGTH < 0)							continue;
 				if(pos.X - ANGLE_LINE_LENGTH >= image.Device.client_size.X)	continue;
 				if(pos.Y + ANGLE_LINE_LENGTH < 0)							continue;
@@ -373,8 +373,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 이동ベクトルを得る
-		 BB용の矩形も업데이트する
+		 이동 벡터를 얻는다
+		 BB 용 사각형도 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_move_angle()
 		{
@@ -382,9 +382,9 @@ namespace gvtrademap_cs
 
 			foreach(ShareRoutes.ShareShip s in update_list){
 				ShareRoutes.ShareShip	old	= find_ship(s.Name);
-				if(old == null)		continue;		// 前회の정보が見当たらない
+				if(old == null)		continue;		// 지난번 정보를 찾을 수 없다
 
-				// 이동ベクトルを得る
+				// 이동 벡터를 얻는다
 				Vector2	vec	= transform.SubVector_LoopX(s.Position, old.Position, def.GAME_WIDTH);
 				vec.Normalize();
 				if(vec.LengthSq() > 0.5f)	s.AngleVector		= vec;
@@ -393,14 +393,14 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 BB목록を업데이트する
+		 BB 목록을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_bb_list()
 		{
 			List<ShareShip>			update_list		= ShareUpdateList;
 			List<ShareShipListBB>	update_bb_list	= ShareUpdateListBB;
 
-			// BB목록をクリア
+			// BB 목록을 비운다
 			update_bb_list.Clear();
 
 			List<ShareShip>			free_list		= new List<ShareShip>();
@@ -423,7 +423,7 @@ namespace gvtrademap_cs
 			ShareShipListBB	bb	= new ShareShipListBB();
 			foreach(ShareShip i in old){
 				if(!bb.Add(i, m_lib.loop_image)){
-					// 추가されなかったら次회に회す
+					// 추가되지 않았으면 다음번으로 넘긴다
 					free_list.Add(i);
 				}
 			}
@@ -431,8 +431,8 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 前회の정보を得る
-		 이름が同一の前회の정보を得る
+		 지난번 정보를 얻는다
+		 이름이 같은 지난번 정보를 얻는다
 		---------------------------------------------------------------------------*/
 		private ShareShip find_ship(string name)
 		{
