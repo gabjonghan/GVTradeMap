@@ -1,13 +1,13 @@
 ﻿/*-------------------------------------------------------------------------
 
- チャット분석
- リクエスト付き
- 預金の이자は재해とは独立して분석される
- 위험해역변동시스템も独立して분석される
- アクシデントは분석時の最후のもののみ
+ 채팅 분석
+ 리퀘스트 포함
+ 예금 이자는 재해와는 독립적으로 분석된다
+ 위험해역 변동 시스템도 독립적으로 분석된다
+ 사고는 분석 시점의 마지막 것만
 
- 로그の업데이트チェックに시간が掛かるため, 스레드推奨
- 해역변동は전용のメソッドUpdateSeaArea_DoRequest()でメイン스레드から行うこと
+ 로그 갱신 확인에 시간이 걸리므로 스레드 사용을 권장
+ 해역 변동은 전용 메서드 UpdateSeaArea_DoRequest() 로 메인 스레드에서 수행할 것
 
 ---------------------------------------------------------------------------*/
 
@@ -50,8 +50,8 @@ namespace gvtrademap_cs
 		}
 		
 		/*-------------------------------------------------------------------------
-		 해역변동の업데이트
-		 リクエストがあるときのみ분석する
+		 해역 변동 갱신
+		 리퀘스트가 있을 때만 분석한다
 		---------------------------------------------------------------------------*/
 		public void UpdateSeaArea_DoRequest()
 		{
@@ -61,7 +61,7 @@ namespace gvtrademap_cs
 		}
 	
 		/*-------------------------------------------------------------------------
-		 재해정보から保存용の値に변환する
+		 재해 정보를 저장용 값으로 변환한다
 		---------------------------------------------------------------------------*/
 		static public int ToIndex(accident a)
 		{
@@ -85,11 +85,11 @@ namespace gvtrademap_cs
 				return 108;
 			case accident.UMA:					// 정체모를괴물
 				return 109;
-			case accident.treasure1:			// 何かいい物
-			case accident.treasure2:			// 何か見つかるかも
-			case accident.treasure3:			// 高価なもの
+			case accident.treasure1:			// 뭔가 좋은 물건
+			case accident.treasure2:			// 뭔가 발견될지도
+			case accident.treasure3:			// 고가의 물건
 				return 111;
-			case accident.escape_battle:		// 全배が戦場を離れました
+			case accident.escape_battle:		// 모든 배가 전장을 떠났습니다
 			case accident.win_battle:			// 승리
 			case accident.lose_battle:			// 패배
 				return 110;
@@ -98,13 +98,13 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 해역변동시스템を업데이트する
+		 해역 변동 시스템을 갱신한다
 		---------------------------------------------------------------------------*/
 		private void update_sea_area()
 		{
 			sea_area_type[]	list	= base.sea_area_type_list;
 
-			// 反映させる
+			// 반영시킨다
 			if(list != null){
 				foreach(sea_area_type d in list){
 					switch(d.type){

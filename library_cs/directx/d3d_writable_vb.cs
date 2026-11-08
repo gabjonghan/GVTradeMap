@@ -1,16 +1,16 @@
 ﻿/*-------------------------------------------------------------------------
 
- 複수のvertex bufferを切り替えながらGPUの待ちを회避する構造
+ 여러 개의 vertex buffer 를 번갈아 쓰면서 GPU 대기를 회피하는 구조
 
- d3d_writable_vb_with_indexは
- 스프라이트용の인덱스バッファ付き
- 인덱스バッファは
+ d3d_writable_vb_with_index 는
+ 스프라이트용 인덱스 버퍼 포함
+ 인덱스 버퍼는
  0-1
  | | 
  2-3
- の順で인덱스が振られている
- TriangleListで그리기すること
- 인덱스バッファは16bitで작성されるため, 65536を越える인덱스は無理
+ 순서로 인덱스가 매겨져 있다
+ TriangleList 로 그릴 것
+ 인덱스 버퍼는 16bit 로 작성되므로 65536 을 넘는 인덱스는 불가능
 ---------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------
@@ -32,7 +32,7 @@ namespace directx
 	public class d3d_writable_vb : IDisposable
 	{
 		private VertexBuffer[]			m_vb;			// 
-		private int						m_index;		// 현재バッファ
+		private int						m_index;		// 현재 버퍼
 
 		/*-------------------------------------------------------------------------
 		 
@@ -40,7 +40,7 @@ namespace directx
 		public VertexBuffer vb		{		get{	return m_vb[m_index];	}}
 	
 		/*-------------------------------------------------------------------------
-		 element_count수분のバーテクスバッファをbuffer_count個持つ
+		 element_count 개수만큼의 버텍스 버퍼를 buffer_count 개 가진다
 		---------------------------------------------------------------------------*/
 		public d3d_writable_vb(Device device, Type type, int element_count, int buffer_count)
 		{
@@ -56,7 +56,7 @@ namespace directx
 	
 		/*-------------------------------------------------------------------------
 		 데이터설정
-		 전체をロックし, _objectを쓰기ます
+		 전체를 잠그고 _object 를 쓴다
 		---------------------------------------------------------------------------*/
 		public void SetData<T>(T[] _object) where T : struct
 		{
@@ -65,9 +65,9 @@ namespace directx
 
 		/*-------------------------------------------------------------------------
 		 데이터설정
-		 先頭から지정した수분쓰기ます
-		 少しだけ更新する場合용
-		 なぜか非常に遅いので사용禁止
+		 선두부터 지정한 개수만큼 쓴다
+		 조금만 갱신할 때용
+		 왠지 매우 느리므로 사용 금지
 		---------------------------------------------------------------------------*/
 /*		public void SetData<T>(T[] _object, int count) where T : struct
 		{
@@ -79,8 +79,8 @@ namespace directx
 		}
 */	
 		/*-------------------------------------------------------------------------
-		 バッファフリップ
-		 DrawPrimitive()を呼んだ直후にフリップすること
+		 버퍼 플립
+		 DrawPrimitive() 를 호출한 직후에 플립할 것
 		---------------------------------------------------------------------------*/
 		public void Flip()
 		{
@@ -128,13 +128,13 @@ namespace directx
 		}
 
 		/*-------------------------------------------------------------------------
-		 인덱스バッファを구축する
+		 인덱스 버퍼를 구축한다
 		---------------------------------------------------------------------------*/
 		public static IndexBuffer CreateSpriteIndexBuffer(Device device, int element_count)
 		{
-			int		count	= (element_count / 4) * 6;		// 4頂点で6つの頂点になる
+			int		count	= (element_count / 4) * 6;		// 정점 4 개가 정점 6 개가 된다
 			if(count >= UInt16.MaxValue){
-				// 65536を越えてしまうときはエラー
+				// 65536 을 넘어버릴 때는 오류
 				throw new Exception();
 			}
 			IndexBuffer	ib	= new IndexBuffer(device, count * sizeof(short), Usage.WriteOnly, Pool.Managed, true);

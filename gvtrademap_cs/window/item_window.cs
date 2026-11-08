@@ -1,7 +1,7 @@
 ﻿/*-------------------------------------------------------------------------
 
- 좌の윈도우
- 아이템정보を그리기する
+ 왼쪽 윈도우
+ 아이템 정보를 그린다
 
 ---------------------------------------------------------------------------*/
 
@@ -28,18 +28,18 @@ namespace gvtrademap_cs {
 
 	---------------------------------------------------------------------------*/
 	public class item_window : d3d_windows.window {
-		// 위치と사이즈(사이즈は自動で조정される)
+		// 위치와 크기(크기는 자동으로 조정된다)
 		private const int WINDOW_POS_X = 3;
 		private const int WINDOW_POS_Y = 3;
 		private const float WINDOW_POS_Z = 0.2f;
-		private const int WINDOW_SIZE_X = 250;  // 初期사이즈
-		private const int WINDOW_SIZE_Y = 200;  // 初期사이즈
+		private const int WINDOW_SIZE_X = 250;  // 초기 크기
+		private const int WINDOW_SIZE_Y = 200;  // 초기 크기
 
-		// 配置간격
-		private const int TABS_STEP_X = def.ICON_SIZE_X + 4;
+		// 배치 간격
+		private const int TABS_STEP_X = def.ICON_SIZE_X + 1;
 		private const int ICONS_STEP_X = def.ICON_SIZE_X + 4;
-		// 기본的な세로방향の간격
-		private const int STEP_Y0 = def.ICON_SIZE_Y + 2;	// 상부の아이콘용
+		// 기본적인 세로 방향 간격
+		private const int STEP_Y0 = def.ICON_SIZE_Y + 2;	// 상부의 아이콘용
 		private const int STEP_Y = def.ICON_SIZE_Y + 4;
 
 		/*-------------------------------------------------------------------------
@@ -47,29 +47,53 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private gvt_lib m_lib;					  // 
 		private GvoDatabase m_db;					   // DB
-		private spot m_spot;						// 장소표시
-		private gvtrademap_cs_form m_form;					  // 우클릭メニュー전용
+		private spot m_spot;						// 장소 표시
+		private gvtrademap_cs_form m_form;					  // 우클릭 메뉴 전용
 
 		private GvoWorldInfo.Info m_info;					   // 그리기대상
-		private int m_tab_index;				// 현재のタブ위치
+		// 그룹 번호(GroupIndex 순서). 메모는 그룹 다음 번호를 쓴다
+		private const int TAB_STAFF = 11;		// 주점 종업원
+		private const int TAB_ADJUTANT = 12;	// 부관
+		private const int TAB_TODO = 13;		// 할 일
+		private const int TAB_MEMO = 14;		// 메모
+		private const int TAB_MAX = 15;
 
-		private hittest_list m_hittest_list;				// 矩形관리
+		// 아래쪽 탭은 목적별로 묶은 쪽(page)이고, 목록 위의 칩이 쪽 안의 그룹이다
+		private static readonly string[] PAGE_NAMES = new string[] { "교역", "배·장비", "도구", "사람", "할 일", "메모" };
+		private static readonly int[][] PAGE_GROUPS = new int[][] {
+			new int[] { 0 },					// 교역소
+			new int[] { 4, 6, 7, 8, 9 },		// 선박, 대포, 추가장갑, 돛, 선수상
+			new int[] { 1, 2, 10 },				// 도구점, 공방, 행상인
+			new int[] { 3, 5, 11, 12 },			// 인물, 조선공, 주점 종업원, 부관
+			new int[] { TAB_TODO },
+			new int[] { TAB_MEMO },
+		};
+		private static readonly string[] CHIP_NAMES = new string[] {
+			"교역소", "도구점", "공방", "인물", "선박", "조선공", "대포", "추가장갑",
+			"돛", "선수상", "행상인", "종업원", "부관", "할 일", "메모",
+		};
+		private const int CHIPS_MAX = 5;		// 한 쪽의 최대 칩 수(칩 너비 계산용)
+
+		private int m_tab_index;				// 현재 그룹 번호
+
+		private hittest_list m_hittest_list;				// 사각형 관리
 		private Vector2 m_window_size;			  // 윈도우사이즈
 
-		private TextBox m_memo_text_box;			// 메모용テキストBOX
-		private ListView m_list_view;			   // 아이템표시용목록ビュー
+		private TextBox m_memo_text_box;			// 메모용 텍스트 BOX
+		private ListView m_list_view;			   // 아이템 표시용 목록 뷰
 
 		private bool m_is_1st_draw;
 
 		private enum item_index {
 			item_list,		  // 아이템목록
 			country,			// 국아이콘
-			icons,			  // 상の아이콘
-			tabs,			   // タブ
+			icons,			  // 위쪽 아이콘
+			tabs,			   // 탭
 			web,				// web아이콘
 			county_name,		// 국명
 			lang1,			  // 언어1
 			lang2,			  // 언어2
+			chips,			  // 그룹 칩
 			max
 		};
 
@@ -86,7 +110,7 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		public item_window(gvt_lib lib, GvoDatabase db, spot _spot, TextBox memo_text_box, ListView list_view, gvtrademap_cs_form form)
 			: base(lib.device, new Vector2(WINDOW_POS_X, WINDOW_POS_Y), new Vector2(WINDOW_SIZE_X, WINDOW_SIZE_Y), WINDOW_POS_Z) {
-			base.title = "아이템윈도우";
+			base.title = "아이템 창";
 
 			m_window_size = new Vector2(0, 0);
 			m_memo_text_box = memo_text_box;
@@ -110,9 +134,9 @@ namespace gvtrademap_cs {
 			m_hittest_list.Add(new hittest());
 			// 국아이콘
 			m_hittest_list.Add(new hittest());
-			// 아이콘たち
+			// 아이콘들
 			m_hittest_list.Add(new hittest());
-			// タブ
+			// 탭
 			m_hittest_list.Add(new hittest());
 			// web아이콘
 			m_hittest_list.Add(new hittest());
@@ -121,6 +145,8 @@ namespace gvtrademap_cs {
 			// 언어1
 			m_hittest_list.Add(new hittest());
 			// 언어2
+			m_hittest_list.Add(new hittest());
+			// 그룹 칩
 			m_hittest_list.Add(new hittest());
 		}
 
@@ -131,28 +157,28 @@ namespace gvtrademap_cs {
 			if (_info == null) return;
 
 			if (with_spot_reset) {
-				// 無条건で장소종료
+				// 무조건 장소 종료
 				m_spot.SetSpot(spot.type.none, "");
 				m_form.UpdateSpotList();
 			}
 
-			// 내용が同じ場合はなにもしない
+			// 내용이 같은 경우에는 아무것도 하지 않는다
 			if (m_info == _info) return;
 
 			// 메모
-			// テキストボックスの내용をDBに退避
+			// 텍스트 박스의 내용을 DB 에 대피
 			UpdateMemo();	   // 업데이트
 
 			// 업데이트
 			m_info = _info;
-			// 메모용テキストボックス업데이트
+			// 메모용 텍스트 박스 갱신
 			m_memo_text_box.Text = m_info.Memo;
 			// 아이템목록업데이트
 			update_item_list();
 		}
 
 		/*-------------------------------------------------------------------------
-		 마우스押し始め
+		 마우스 누르기 시작
 		---------------------------------------------------------------------------*/
 		override protected void OnMouseDownClient(Point pos, MouseButtons button) {
 			if ((button & MouseButtons.Left) != 0) {
@@ -163,12 +189,15 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 마우스좌押し始め
+		 마우스 좌클릭 누르기 시작
 		---------------------------------------------------------------------------*/
 		private void _window_on_mouse_l_down(Point pos) {
 			switch (m_hittest_list.HitTest_Index(pos)) {
 				case (int)item_index.tabs:
 					on_mouse_l_click_item_tabs(pos);
+					break;
+				case (int)item_index.chips:
+					on_mouse_l_click_chips(pos);
 					break;
 				default:
 					break;
@@ -176,12 +205,15 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 마우스우押し始め
+		 마우스 우클릭 누르기 시작
 		---------------------------------------------------------------------------*/
 		private void _window_on_mouse_r_down(Point pos) {
 			switch (m_hittest_list.HitTest_Index(pos)) {
 				case (int)item_index.tabs:
 					on_mouse_l_click_item_tabs(pos);
+					break;
+				case (int)item_index.chips:
+					on_mouse_l_click_chips(pos);
 					break;
 			}
 		}
@@ -231,6 +263,7 @@ namespace gvtrademap_cs {
 		private void _window_on_mouse_r_click(Point pos) {
 			switch (m_hittest_list.HitTest_Index(pos)) {
 				case (int)item_index.tabs:
+				case (int)item_index.chips:
 					on_mouse_r_click_item_tabs(pos);
 					break;
 				case (int)item_index.country:
@@ -243,12 +276,15 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 마우스ホイール
+		 마우스 휠
 		---------------------------------------------------------------------------*/
 		protected override void OnMouseWheelClient(Point pos, int delta) {
 			switch (m_hittest_list.HitTest_Index(pos)) {
 				case (int)item_index.tabs:
 					on_mouse_wheel_item_tabs(pos, delta);
+					break;
+				case (int)item_index.chips:
+					on_mouse_wheel_chips(pos, delta);
 					break;
 				default:
 					break;
@@ -259,19 +295,20 @@ namespace gvtrademap_cs {
 		 업데이트
 		---------------------------------------------------------------------------*/
 		override protected void OnUpdateClient() {
-			// 최소화時は메모윈도우を비표시にする
+			// 최소화 시에는 메모 윈도우를 비표시로 한다
 			if (base.window_mode == d3d_windows.window.mode.small) {
 				EnableMemoWindow(false);
 				EnableItemWindow(false);
 				return;
 			}
 
-			// 8dot분のギャップを持つ
-			d3d_windows.window iw = base.FindWindow("설정윈도우");
-			if (iw != null) base.size = new Vector2(iw.normal_size.X, base.screen_size.Y - 4 * 2);
-			else base.size = new Vector2(WINDOW_SIZE_X, base.screen_size.Y - 4 * 2);
+			// 8dot 만큼의 갭을 가진다
+			d3d_windows.window iw = base.FindWindow("설정 창");
+			// WinForms 목록은 DPI 만큼 글자가 커지므로 너비도 함께 늘린다
+			float width = ((iw != null) ? iw.normal_size.X : WINDOW_SIZE_X) * Useful.GetDpiRatio();
+			base.size = new Vector2(width, base.screen_size.Y - 4 * 2);
 
-			// 矩形を설정し直す
+			// 사각형을 다시 설정한다
 			update_rects();
 
 			if (base.size != m_window_size) {
@@ -282,7 +319,7 @@ namespace gvtrademap_cs {
 				m_memo_text_box.Size = new Size(rect.Width, rect.Height + 1);
 				m_list_view.Location = m_memo_text_box.Location;
 				m_list_view.Size = m_memo_text_box.Size;
-				// コラム사이즈조정
+				// 컬럼 크기 조정
 				ajust_item_columns_width();
 			}
 			update_memo_window();
@@ -291,12 +328,12 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 矩形を설정し直す
+		 사각형을 다시 설정한다
 		---------------------------------------------------------------------------*/
 		private void update_rects() {
 			Point offset = transform.ToPoint(base.client_pos);
 
-			// オフセットの업데이트
+			// 오프셋 갱신
 			foreach (hittest h in m_hittest_list) {
 				h.position = offset;
 			}
@@ -309,7 +346,7 @@ namespace gvtrademap_cs {
 			ht.rect = new Rectangle(0, pos_y, 24, def.ICON_SIZE_Y);
 			pos_y += STEP_Y0;
 
-			// 아이콘たち
+			// 아이콘들
 			ht = m_hittest_list[(int)item_index.icons];
 			ht.rect = new Rectangle(2, pos_y, ICONS_STEP_X * 4, def.ICON_SIZE_Y);
 
@@ -331,22 +368,27 @@ namespace gvtrademap_cs {
 
 			pos_y += STEP_Y0;
 
+			// 그룹 칩
+			ht = m_hittest_list[(int)item_index.chips];
+			ht.rect = new Rectangle(0, pos_y, (int)base.client_size.X, STEP_Y0);
+			pos_y += STEP_Y0;
+
 			// 아이템목록
-			// 아이템수がうまく収まるように사이즈を조정する
+			// 아이템 개수가 잘 들어가도록 크기를 조정한다
 			int size_y = (int)base.client_size.Y - (pos_y + STEP_Y) - (int)base.pos.Y;
-			d3d_windows.window iw = base.FindWindow("설정윈도우");
+			d3d_windows.window iw = base.FindWindow("설정 창");
 			if (iw != null) size_y -= (int)iw.size.Y;
 
 			ht = m_hittest_list[(int)item_index.item_list];
 			ht.rect = new Rectangle(0, pos_y, (int)base.client_size.X, size_y);
 			pos_y += size_y + 2;
 
-			// タブ
+			// 탭
 			ht = m_hittest_list[(int)item_index.tabs];
-			ht.rect = new Rectangle(2, pos_y, TABS_STEP_X * 12, def.ICON_SIZE_Y);
+			ht.rect = new Rectangle(0, pos_y, (int)base.client_size.X, def.ICON_SIZE_Y);
 			pos_y += STEP_Y;
 
-			// 세로사이즈を업데이트する
+			// 세로 크기를 갱신한다
 			base.client_size = new Vector2(base.client_size.X, pos_y);
 		}
 
@@ -360,7 +402,7 @@ namespace gvtrademap_cs {
 			}
 
 			// 아이템목록
-			// タブの현재を그리기
+			// 탭의 현재 상태를 그린다
 			draw_current_tab();
 
 			// 국명
@@ -369,8 +411,12 @@ namespace gvtrademap_cs {
 			// 언어
 			draw_lang();
 
-			// 마우스がある위치の背景
+			// 마우스가 있는 위치의 배경
 			draw_current_back();
+
+			// 탭과 칩
+			draw_tabs();
+			draw_chips();
 
 			base.device.sprites.BeginDrawSprites(m_lib.icons.texture);
 			{
@@ -378,14 +424,11 @@ namespace gvtrademap_cs {
 				// 국아이콘
 				draw_country();
 
-				// 아이콘たち
+				// 아이콘들
 				draw_icons();
 
 				// web아이콘
 				draw_web();
-
-				// タブ
-				draw_tabs();
 
 			}
 			base.device.sprites.EndDrawSprites();
@@ -424,7 +467,7 @@ namespace gvtrademap_cs {
 				}
 		*/
 		/*-------------------------------------------------------------------------
-		 현재の마우스がある장소설정
+		 현재 마우스가 있는 위치 설정
 		---------------------------------------------------------------------------*/
 		private void draw_current_back() {
 			Point pos = base.device.GetClientMousePosition();
@@ -439,12 +482,15 @@ namespace gvtrademap_cs {
 				case (int)item_index.tabs:
 					draw_current_back_tabs(pos);
 					break;
+				case (int)item_index.chips:
+					draw_current_back_chips(pos);
+					break;
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 현재の마우스がある장소설정
-		 아이콘達
+		 현재 마우스가 있는 위치 설정
+		 아이콘들
 		---------------------------------------------------------------------------*/
 		private void draw_current_back_icons(Point pos) {
 			hittest ht = m_hittest_list[(int)item_index.icons];
@@ -460,7 +506,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 현재の마우스がある장소설정
+		 현재 마우스가 있는 위치 설정
 		 Web아이콘
 		---------------------------------------------------------------------------*/
 		private void draw_current_back_web(Point pos) {
@@ -477,20 +523,47 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 현재の마우스がある장소설정
-		 タブ
+		 현재 마우스가 있는 위치 설정
+		 탭
 		---------------------------------------------------------------------------*/
 		private void draw_current_back_tabs(Point pos) {
 			hittest ht = m_hittest_list[(int)item_index.tabs];
 			Rectangle rect = ht.CalcRect();
+			int w = page_width();
+			int i = (pos.X - rect.X) / w;
+			if (i < 0 || i >= PAGE_NAMES.Length) return;
+			base.DrawCurrentButtonBack(new Vector3(rect.X + w * i, rect.Y - 1, base.z), new Vector2(w, def.ICON_SIZE_Y + 2));
+		}
 
-			pos.X -= rect.X;
-			pos.X /= TABS_STEP_X;
+		/*-------------------------------------------------------------------------
+		 현재 마우스가 있는 칩의 배경
+		---------------------------------------------------------------------------*/
+		private void draw_current_back_chips(Point pos) {
+			hittest ht = m_hittest_list[(int)item_index.chips];
+			Rectangle rect = ht.CalcRect();
+			int w = chip_width();
+			int i = (pos.X - rect.X) / w;
+			if (i < 0 || i >= PAGE_GROUPS[current_page()].Length) return;
+			base.DrawCurrentButtonBack(new Vector3(rect.X + w * i, rect.Y, base.z), new Vector2(w, def.ICON_SIZE_Y + 1));
+		}
 
-			Vector3 dpos = new Vector3(rect.X + TABS_STEP_X * pos.X, rect.Y, base.z);
-			dpos.X -= 2;
-			dpos.Y -= 2;
-			base.DrawCurrentButtonBack(dpos, new Vector2(def.ICON_SIZE_X + 4, def.ICON_SIZE_Y + 5));
+		/*-------------------------------------------------------------------------
+		 쪽·칩 너비와 현재 쪽
+		---------------------------------------------------------------------------*/
+		private int page_width() {
+			return Math.Max(1, (int)base.client_size.X / PAGE_NAMES.Length);
+		}
+		private int chip_width() {
+			return Math.Max(1, (int)base.client_size.X / CHIPS_MAX);
+		}
+		private static int page_of(int group) {
+			for (int p = 0; p < PAGE_GROUPS.Length; p++) {
+				if (Array.IndexOf(PAGE_GROUPS[p], group) >= 0) return p;
+			}
+			return 0;
+		}
+		private int current_page() {
+			return page_of(m_tab_index);
 		}
 
 		/*-------------------------------------------------------------------------
@@ -532,7 +605,7 @@ namespace gvtrademap_cs {
 				}
 			} else if (info.InfoType == GvoWorldInfo.InfoType.Sea) {
 				if (info.SeaInfo != null) {
-					// 최대속도상昇
+					// 최대 속도 상승
 					base.device.DrawTextR(font_type.normal, info.SeaInfo.SpeedUpRateString,
 											(int)pos.X + rect.Width, (int)pos.Y, Color.Black);
 				}
@@ -558,33 +631,36 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 현재タブを그리기する
+		 현재 탭을 그린다
 		---------------------------------------------------------------------------*/
 		private void draw_current_tab() {
-			hittest ht = m_hittest_list[(int)item_index.item_list];
-			Rectangle rect = ht.CalcRect();
+			// 아래쪽 탭. 지도 글자가 비치지 않도록 바탕을 깐다
+			Rectangle rect = m_hittest_list[(int)item_index.tabs].CalcRect();
+			base.device.DrawFillRect(new Vector3(rect.X, rect.Y - 2, base.z), new Vector2(rect.Width, STEP_Y), Color.FromArgb(255, 212, 212, 212).ToArgb());
+			int w = page_width();
+			Vector3 pos = new Vector3(rect.X + w * current_page(), rect.Y - 2, base.z);
+			base.device.DrawFillRect(pos, new Vector2(w, STEP_Y), Color.FromArgb(128, 255, 255, 255).ToArgb());
+			base.device.DrawLineRect(pos, new Vector2(w, STEP_Y + 1), Color.Black.ToArgb());
 
-			Vector3 pos = new Vector3(rect.X, rect.Y, base.z);
-			Vector2 size = new Vector2(rect.Width, rect.Height);
-			Vector3 pos2 = pos;
-
-			// タブの현재
-			pos2 = pos;
-			pos2.Y += size.Y;
-			pos2.X += TABS_STEP_X * m_tab_index;
-			base.device.DrawFillRect(pos2, new Vector2(TABS_STEP_X, STEP_Y), Color.FromArgb(128, 255, 255, 255).ToArgb());
-			base.device.DrawLineRect(pos2, new Vector2(TABS_STEP_X, STEP_Y + 1), Color.Black.ToArgb());
+			// 칩의 현재 그룹
+			rect = m_hittest_list[(int)item_index.chips].CalcRect();
+			int cw = chip_width();
+			int ci = Array.IndexOf(PAGE_GROUPS[current_page()], m_tab_index);
+			if (ci < 0) return;
+			pos = new Vector3(rect.X + cw * ci, rect.Y, base.z);
+			base.device.DrawFillRect(pos, new Vector2(cw, STEP_Y0 - 1), Color.FromArgb(128, 255, 255, 255).ToArgb());
+			base.device.DrawLineRect(pos, new Vector2(cw, STEP_Y0 - 1), Color.Gray.ToArgb());
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이템목록수を得る
+		 아이템 목록 개수를 얻는다
 		---------------------------------------------------------------------------*/
 		private int get_item_list_count() {
 			return get_item_list_count(m_tab_index);
 		}
 		private int get_item_list_count(int index) {
 			if (info == null) return 0;
-			if (index == 11) return info.GetMemoLines();		// 메모
+			if (index == TAB_MEMO) return info.GetMemoLines();		// 메모
 			return info.GetCount(GvoWorldInfo.Info.GroupIndex._0 + index);
 		}
 
@@ -616,7 +692,7 @@ namespace gvtrademap_cs {
 				case GvoWorldInfo.InfoType.City:
 				default:
 					index = icons.icon_index.country_4;
-					// 동맹関係により旗を선택する
+					// 동맹 관계에 따라 깃발을 선택한다
 					index += (int)info.MyCountry;
 					break;
 			}
@@ -626,7 +702,7 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이콘たち그리기
+		 아이콘들 그리기
 		---------------------------------------------------------------------------*/
 		private void draw_icons() {
 			hittest ht = m_hittest_list[(int)item_index.icons];
@@ -647,112 +723,167 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 タブたち그리기
+		 탭들 그리기
 		---------------------------------------------------------------------------*/
 		private void draw_tabs() {
-			hittest ht = m_hittest_list[(int)item_index.tabs];
-			Rectangle rect = ht.CalcRect();
-
-			Vector3 pos = new Vector3(rect.X, rect.Y, base.z);
-
-			for (int i = 0; i < 12; i++) {
-				icons.icon_index index = icons.icon_index.tab_gray_0;
-				if (info != null) {
-					if (get_item_list_count(i) > 0) index = icons.icon_index.tab_0;
-				}
-				base.device.sprites.AddDrawSpritesNC(pos, m_lib.icons.GetIcon(index + i));
-				pos.X += TABS_STEP_X;
+			Rectangle rect = m_hittest_list[(int)item_index.tabs].CalcRect();
+			int w = page_width();
+			for (int p = 0; p < PAGE_NAMES.Length; p++) {
+				bool enable = (p == page_of(TAB_MEMO)) || (page_count(p) > 0);
+				base.device.DrawTextC(font_type.normal, PAGE_NAMES[p], rect.X + w * p + w / 2, rect.Y, enable ? Color.Black : Color.Gray);
 			}
 		}
 
 		/*-------------------------------------------------------------------------
+		 칩들 그리기
+		 쪽 안의 그룹 이름과 개수
+		---------------------------------------------------------------------------*/
+		private void draw_chips() {
+			Rectangle rect = m_hittest_list[(int)item_index.chips].CalcRect();
+			int w = chip_width();
+			int[] groups = PAGE_GROUPS[current_page()];
+			for (int i = 0; i < groups.Length; i++) {
+				int count = get_item_list_count(groups[i]);
+				string str = CHIP_NAMES[groups[i]];
+				if (groups[i] != TAB_MEMO && count > 0) str += " " + count.ToString();
+				base.device.DrawTextC(font_type.normal, str, rect.X + w * i + w / 2, rect.Y, (count > 0) ? Color.Black : Color.Gray);
+			}
+		}
+
+		/*-------------------------------------------------------------------------
+		 쪽 안의 항목 수 합계
+		---------------------------------------------------------------------------*/
+		private int page_count(int page) {
+			int count = 0;
+			foreach (int g in PAGE_GROUPS[page]) count += get_item_list_count(g);
+			return count;
+		}
+
+		/*-------------------------------------------------------------------------
+		 쪽을 고른다
+		 항목이 있는 첫 그룹을 연다. 같은 쪽을 다시 누르면 그대로 둔다
+		---------------------------------------------------------------------------*/
+		private void select_page(int page) {
+			if (page < 0) page = PAGE_NAMES.Length - 1;
+			if (page >= PAGE_NAMES.Length) page = 0;
+			if (page == current_page()) return;
+			int[] groups = PAGE_GROUPS[page];
+			int group = groups[0];
+			foreach (int g in groups) {
+				if (get_item_list_count(g) > 0) { group = g; break; }
+			}
+			ajust_tab_index(group);
+		}
+
+		/*-------------------------------------------------------------------------
 		 마우스좌클릭
-		 タブ
+		 탭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_l_click_item_tabs(Point pos) {
-			hittest ht = m_hittest_list[(int)item_index.tabs];
-			Rectangle rect = ht.CalcRect();
+			Rectangle rect = m_hittest_list[(int)item_index.tabs].CalcRect();
+			select_page((pos.X - rect.X) / page_width());
+		}
 
-			pos.X -= rect.X;
-			ajust_tab_index(pos.X / TABS_STEP_X);
+		/*-------------------------------------------------------------------------
+		 마우스좌클릭
+		 칩
+		---------------------------------------------------------------------------*/
+		private void on_mouse_l_click_chips(Point pos) {
+			Rectangle rect = m_hittest_list[(int)item_index.chips].CalcRect();
+			int i = (pos.X - rect.X) / chip_width();
+			int[] groups = PAGE_GROUPS[current_page()];
+			if (i < 0 || i >= groups.Length) return;
+			ajust_tab_index(groups[i]);
 		}
 
 		/*-------------------------------------------------------------------------
 		 마우스우클릭
-		 タブ
+		 탭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_r_click_item_tabs(Point pos) {
-			on_mouse_l_click_item_tabs(pos);
+			// 할 일은 장소 표시 종류가 없다
+			if (m_tab_index == TAB_TODO) return;
 
-			// タブを장소표시
-			m_spot.SetSpot(spot.type.tab_0 + m_tab_index, "");
+			// 그룹을 장소 표시
+			m_spot.SetSpot((m_tab_index == TAB_MEMO) ? spot.type.tab_10 : spot.type.tab_0 + m_tab_index, "");
 			m_form.UpdateSpotList();
 		}
 
 		/*-------------------------------------------------------------------------
-		 마우스ホイール
-		 タブ
+		 마우스 휠
+		 탭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_wheel_item_tabs(Point pos, int delta) {
-			if (delta > 0) ajust_tab_index(m_tab_index - 1);
-			else ajust_tab_index(m_tab_index + 1);
+			select_page(current_page() + ((delta > 0) ? -1 : 1));
 		}
 
 		/*-------------------------------------------------------------------------
-		 タブ위치설정と조정
+		 마우스 휠
+		 칩
+		---------------------------------------------------------------------------*/
+		private void on_mouse_wheel_chips(Point pos, int delta) {
+			int[] groups = PAGE_GROUPS[current_page()];
+			int i = Array.IndexOf(groups, m_tab_index) + ((delta > 0) ? -1 : 1);
+			if (i < 0) i = groups.Length - 1;
+			if (i >= groups.Length) i = 0;
+			ajust_tab_index(groups[i]);
+		}
+
+		/*-------------------------------------------------------------------------
+		 탭 위치 설정과 조정
 		---------------------------------------------------------------------------*/
 		private void ajust_tab_index(int index) {
-			// ループさせる
-			if (index < 0) index = 11;
-			if (index >= 12) index = 0;
+			// 루프시킨다
+			if (index < 0) index = TAB_MAX - 1;
+			if (index >= TAB_MAX) index = 0;
 
 			m_tab_index = index;
 
-			// 메모の윈도우상태업데이트
-			// ちらつく問題でここで update_memo_window() を呼び出すのをやめ
+			// 메모 윈도우 상태 갱신
+			// 깜빡이는 문제로 여기서 update_memo_window() 를 호출하는 것은 중단
 			//			update_memo_window();
 			// 아이템목록업데이트
 			update_item_list();
 		}
 
 		/*-------------------------------------------------------------------------
-		 검색された아이템を장소표시する
+		 검색된 아이템을 장소 표시한다
 		---------------------------------------------------------------------------*/
 		public void SpotItem(GvoDatabase.Find select) {
 			if (select == null) {
-				// 선택が無ければ장소を해제する
+				// 선택이 없으면 장소를 해제한다
 				m_spot.SetSpot(spot.type.none, "");
 				m_form.UpdateSpotList();
 				return;
 			}
-			// 아이템DBは장소不가능
+			// 아이템 DB 는 장소 지정 불가능
 			if (select.Type == GvoDatabase.Find.FindType.Database) return;
 
 			GvoWorldInfo.Info _info = m_db.World.FindInfo(select.InfoName);
 			if (_info != null) {
-				// 장소の리셋없음で설정
+				// 장소 리셋 없이 설정
 				set_info(_info, false);
-				// センタリングしてもらう
+				// 센터링하도록 한다
 				req_centering_info();
 			}
 
 			switch (select.Type) {
 				case GvoDatabase.Find.FindType.Data:
 				case GvoDatabase.Find.FindType.DataPrice:
-					// 아이템から선택한ものを검색する
+					// 아이템에서 선택한 것을 검색한다
 					find_item_for_selected(select.Data.Name);
-					// 아이템を장소
+					// 아이템을 장소 지정
 					m_spot.SetSpot(spot.type.has_item, select.Data.Name);
 					break;
 				case GvoDatabase.Find.FindType.Database:
-					// 아이템DBは장소不가능
+					// 아이템 DB 는 장소 지정 불가능
 					break;
 				case GvoDatabase.Find.FindType.InfoName:
-					// 도시を장소
+					// 도시를 장소 지정
 					m_spot.SetSpot(spot.type.city_name, select.InfoName);
 					break;
 				case GvoDatabase.Find.FindType.Lang:
-					// 언어を장소
+					// 언어를 장소 지정
 					m_spot.SetSpot(spot.type.language, select.Lang);
 					break;
 				case GvoDatabase.Find.FindType.CulturalSphere:
@@ -764,8 +895,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 장소아이템の변경
-		 장소정보は변경されない
+		 장소 아이템 변경
+		 장소 정보는 변경되지 않는다
 		---------------------------------------------------------------------------*/
 		public void SpotItemChanged(spot.spot_once select) {
 			if (select == null) return;
@@ -773,18 +904,18 @@ namespace gvtrademap_cs {
 
 			GvoWorldInfo.Info _info = select.info;
 			if (_info != null) {
-				// 장소の리셋없음で설정
+				// 장소 리셋 없이 설정
 				set_info(_info, false);
-				// センタリングしてもらう
+				// 센터링하도록 한다
 				req_centering_info();
 			}
 
-			// 아이템から선택한ものを검색する
+			// 아이템에서 선택한 것을 검색한다
 			find_item_for_selected(select.name);
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이템から선택한ものを검색する
+		 아이템에서 선택한 것을 검색한다
 		---------------------------------------------------------------------------*/
 		private void find_item_for_selected(string find_item) {
 			if (info == null) return;
@@ -795,10 +926,10 @@ namespace gvtrademap_cs {
 					if (d == null) continue;
 					if (d.Name != find_item) continue;
 
-					// 선택した아이템が見えるようにスクロール위치を조정
+					// 선택한 아이템이 보이도록 스크롤 위치를 조정
 					ajust_tab_index((int)i);
 
-					// 표시위치を조정
+					// 표시 위치를 조정
 					if (m_list_view.Items.Count >= s) {
 						m_list_view.Items[s].Selected = true;
 						m_list_view.Items[s].EnsureVisible();
@@ -810,8 +941,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 センタリングされている도시をセンタリングする
-		 リクエスト
+		 센터링되어 있는 도시를 센터링한다
+		 리퀘스트
 		---------------------------------------------------------------------------*/
 		private void req_centering_info() {
 			if (info == null) return;
@@ -821,11 +952,11 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 국기を좌클릭
+		 국기를 좌클릭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_l_click_country(Point pos) {
-			// 국기を장소표시
-			// 도시のみ
+			// 국기를 장소 표시
+			// 도시만
 			if (info == null) return;
 			if (info.InfoType != GvoWorldInfo.InfoType.City) return;
 
@@ -834,34 +965,34 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 국기を우클릭
+		 국기를 우클릭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_r_click_country(Point pos) {
-			// 도시のみ
+			// 도시만
 			if (info == null) return;
 			if (info.InfoType != GvoWorldInfo.InfoType.City) return;
-			// 동맹できる도시のみ
+			// 동맹할 수 있는 도시만
 			if (info.AllianceType != GvoWorldInfo.AllianceType.Alliance) return;
 
-			// 우클릭メニューを開く
+			// 우클릭 메뉴를 연다
 			m_form.ShowChangeDomainsMenuStrip(pos);
 		}
 
 		/*-------------------------------------------------------------------------
-		 이름を우클릭
+		 이름을 우클릭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_r_click_country_name(Point pos) {
-			// 도시のみ
+			// 도시만
 			if (info == null) return;
 			if (info.InfoType != GvoWorldInfo.InfoType.City) return;
 			if (info.CulturalSphere == GvoWorldInfo.CulturalSphere.Unknown) return;
 
-			// 장소표시
+			// 장소 표시
 			SpotItem(new GvoDatabase.Find(info.CulturalSphere, ""));
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이콘たちを좌클릭
+		 아이콘들을 좌클릭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_l_click_icons(Point pos) {
 			hittest ht = m_hittest_list[(int)item_index.icons];
@@ -870,18 +1001,18 @@ namespace gvtrademap_cs {
 			pos.X -= rect.X;
 			pos.X /= ICONS_STEP_X;	  // Index;
 
-			// 아이콘を장소표시
+			// 아이콘을 장소 표시
 			m_spot.SetSpot(spot.type.icons_0 + pos.X, "");
 			m_form.UpdateSpotList();
 		}
 
 		/*-------------------------------------------------------------------------
-		 국명を좌클릭
+		 국명을 좌클릭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_l_click_country_name(Point pos) {
 			if (info == null) return;
 
-			// センタリングリクエスト
+			// 센터링 리퀘스트
 			req_centering_info();
 
 			// 장소
@@ -890,12 +1021,12 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 언어を좌클릭
+		 언어를 좌클릭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_l_click_lang(Point pos, int index) {
 			if (info == null) return;
 
-			// 언어を장소표시
+			// 언어를 장소 표시
 			string lang = (index == 0) ? info.Lang1 : info.Lang2;
 			if (lang == "") return;
 
@@ -904,51 +1035,41 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 Web아이콘を좌클릭
+		 Web 아이콘을 좌클릭
 		---------------------------------------------------------------------------*/
 		private void on_mouse_l_click_web(Point pos) {
 			if (info == null) return;
 			if (!info.IsUrl) return;
 
 			if (info.UrlIndex != -1) {
-				string url;
-				if (info.InfoType == GvoWorldInfo.InfoType.City) {
-					// 대商戦
-					url = def.URL0 + info.UrlIndex.ToString();
-				} else {
-					// DKKmap
-					url = def.URL1 + info.UrlIndex.ToString() + ".html";
-				}
-				Process.Start("http://" + url);
+				// 인벤 지리 DB 의 도시·상륙지 상세
+				Process.Start(def.INVEN_AREACITY_URL + info.UrlIndex.ToString());
 			} else {
-				// クリスタル商会
-				Process.Start("http://" + def.URL5 + Useful.UrlEncodeEUCJP(info.Url));
+				// 번호가 없는 옛 데이터(url_string)는 지리 DB 목록을 연다
+				Process.Start(def.INVEN_AREACITY_LIST_URL);
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 tabを切り替える
+		 tab 을 전환한다
 		---------------------------------------------------------------------------*/
 		public void ChangeTab(bool is_next) {
-			if (is_next) {
-				ajust_tab_index(m_tab_index + 1);
-			} else {
-				ajust_tab_index(m_tab_index - 1);
-			}
+			select_page(current_page() + (is_next ? 1 : -1));
 			m_lib.device.SetMustDrawFlag();
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시용の문자열を得る
-		 표시すべき문자열がない場合nullを返す
+		 툴팁 표시용 문자열을 얻는다
+		 표시할 문자열이 없는 경우에는 null 을 반환한다
 		---------------------------------------------------------------------------*/
 		override protected string OnToolTipStringClient(Point pos) {
 			switch (m_hittest_list.HitTest_Index(pos)) {
 				case (int)item_index.icons: return get_tooltip_string_icons(pos);
 				case (int)item_index.tabs: return get_tooltip_string_tabs(pos);
+				case (int)item_index.chips: return get_tooltip_string_chips(pos);
 			}
 
-			// 以下はinfoを참조する必要があるもの
+			// 아래는 info 를 참조해야 하는 것들
 			if (info == null) return null;
 
 			switch (m_hittest_list.HitTest_Index(pos)) {
@@ -956,9 +1077,9 @@ namespace gvtrademap_cs {
 					return info.GetToolTipString_HP();
 				case (int)item_index.county_name: {
 						string tmp = info.TooltipString;
-						tmp += "\n좌클릭으로 중심이동";
+						tmp += "\n좌클릭으로 중심 이동";
 						if (info.InfoType == GvoWorldInfo.InfoType.City) {
-							tmp += "\n우클릭으로 속해있는 문화권의 장소표시";
+							tmp += "\n우클릭으로 소속 문화권의 장소 표시";
 						}
 						return tmp;
 					}
@@ -966,7 +1087,7 @@ namespace gvtrademap_cs {
 				case (int)item_index.lang2:
 					if ((info.Lang1 != "")
 						|| (info.Lang2 != "")) {
-						return "사용언어\n좌클릭으로 장소표시";
+						return "사용 언어\n좌클릭으로 장소 표시";
 					}
 					break;
 				case (int)item_index.country:
@@ -974,12 +1095,12 @@ namespace gvtrademap_cs {
 						case GvoWorldInfo.InfoType.City:
 							switch (info.AllianceType) {
 								case GvoWorldInfo.AllianceType.Piratical:
-								case GvoWorldInfo.AllianceType.Unknown: return info.AllianceTypeStr + "\n좌클릭으로 장소표시";
-								case GvoWorldInfo.AllianceType.Alliance: return info.AllianceTypeStr + " " + info.CountryStr + "\n좌클릭으로 장소표시\n우클릭으로 동맹국변경";
+								case GvoWorldInfo.AllianceType.Unknown: return info.AllianceTypeStr + "\n좌클릭으로 장소 표시";
+								case GvoWorldInfo.AllianceType.Alliance: return info.AllianceTypeStr + " " + info.CountryStr + "\n좌클릭으로 장소 표시\n우클릭으로 동맹국 변경";
 
 								case GvoWorldInfo.AllianceType.Capital:
 								case GvoWorldInfo.AllianceType.Territory:
-									return info.CountryStr + " " + info.AllianceTypeStr + "\n좌클릭으로 장소표시";
+									return info.CountryStr + " " + info.AllianceTypeStr + "\n좌클릭으로 장소 표시";
 							}
 							break;
 						case GvoWorldInfo.InfoType.OutsideCity:
@@ -987,7 +1108,7 @@ namespace gvtrademap_cs {
 						case GvoWorldInfo.InfoType.Sea:
 						case GvoWorldInfo.InfoType.Shore:
 						case GvoWorldInfo.InfoType.Shore2:
-							//					return Info.InfoTypeStr + "\n좌클릭으로 장소표시";
+							//					return Info.InfoTypeStr + "\n좌클릭으로 장소 표시";
 							return info.InfoTypeStr;
 					}
 					break;
@@ -996,8 +1117,8 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시용の문자열を得る
-		 표시すべき문자열がない場合nullを返す
+		 툴팁 표시용 문자열을 얻는다
+		 표시할 문자열이 없는 경우에는 null 을 반환한다
 		 아이템목록
 		---------------------------------------------------------------------------*/
 		private string get_tooltip_string_item_list(GvoWorldInfo.Info.Group.Data d) {
@@ -1005,7 +1126,7 @@ namespace gvtrademap_cs {
 
 			string str = d.TooltipString;
 
-			// ヘルプを含める
+			// 도움말을 포함한다
 			//			if((!db.IsSkill)&&(!db.IsReport)){
 			str += "\n(우클릭으로 메뉴 열기)";
 			//			}
@@ -1013,9 +1134,9 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시용の문자열を得る
-		 표시すべき문자열がない場合nullを返す
-		 아이콘たち
+		 툴팁 표시용 문자열을 얻는다
+		 표시할 문자열이 없는 경우에는 null 을 반환한다
+		 아이콘들
 		---------------------------------------------------------------------------*/
 		private string get_tooltip_string_icons(Point pos) {
 			hittest ht = m_hittest_list[(int)item_index.icons];
@@ -1025,37 +1146,52 @@ namespace gvtrademap_cs {
 			pos.X /= ICONS_STEP_X;	  // Index;
 
 			switch (pos.X) {
-				case 0: return "의뢰 중개인/주점 아가씨/판매원\n좌클릭으로 장소표시";
-				case 1: return "서고\n좌클릭으로 장소표시";
-				case 2: return "번역가\n좌클릭으로 장소표시";
-				case 3: return "무역상인\n좌클릭으로 장소표시";
+				case 0: return "의뢰 중개인/주점 아가씨/판매원\n좌클릭으로 장소 표시";
+				case 1: return "서고\n좌클릭으로 장소 표시";
+				case 2: return "번역가\n좌클릭으로 장소 표시";
+				case 3: return "무역상인\n좌클릭으로 장소 표시";
 			}
 			return null;
 		}
 
 		/*-------------------------------------------------------------------------
-		 ツールチップ표시용の문자열を得る
-		 표시すべき문자열がない場合nullを返す
-		 タブ
+		 툴팁 표시용 문자열을 얻는다
+		 표시할 문자열이 없는 경우에는 null 을 반환한다
+		 탭
 		---------------------------------------------------------------------------*/
 		private string get_tooltip_string_tabs(Point pos) {
-			hittest ht = m_hittest_list[(int)item_index.tabs];
-			Rectangle rect = ht.CalcRect();
-
-			pos.X -= rect.X;
-			pos.X /= TABS_STEP_X;
-
-			if (0 < pos.X && pos.X < 12) {
-				return GvoWorldInfo.Info.GetGroupName((GvoWorldInfo.Info.GroupIndex)pos.X) + "\n우클릭で장소표시";
+			Rectangle rect = m_hittest_list[(int)item_index.tabs].CalcRect();
+			int p = (pos.X - rect.X) / page_width();
+			if (p < 0 || p >= PAGE_NAMES.Length) return null;
+			string str = PAGE_NAMES[p];
+			if (PAGE_GROUPS[p].Length > 1) {
+				List<string> names = new List<string>();
+				foreach (int g in PAGE_GROUPS[p]) names.Add(CHIP_NAMES[g]);
+				str += "\n" + String.Join(", ", names.ToArray());
 			}
-			return null;
+			return str + "\n휠로 탭 전환";
 		}
 
 		/*-------------------------------------------------------------------------
-		 메모の윈도우상태업데이트
+		 툴팁 표시용 문자열을 얻는다
+		 칩
+		---------------------------------------------------------------------------*/
+		private string get_tooltip_string_chips(Point pos) {
+			Rectangle rect = m_hittest_list[(int)item_index.chips].CalcRect();
+			int i = (pos.X - rect.X) / chip_width();
+			int[] groups = PAGE_GROUPS[current_page()];
+			if (i < 0 || i >= groups.Length) return null;
+			int g = groups[i];
+			string str = GvoWorldInfo.Info.GetGroupName((GvoWorldInfo.Info.GroupIndex)g);
+			if (g != TAB_TODO) str += "\n우클릭으로 장소 표시";
+			return str;
+		}
+
+		/*-------------------------------------------------------------------------
+		 메모 윈도우 상태 갱신
 		---------------------------------------------------------------------------*/
 		private void update_memo_window() {
-			if (m_tab_index == 11) {
+			if (m_tab_index == TAB_MEMO) {
 				EnableMemoWindow(true);
 				EnableItemWindow(false);
 			} else {
@@ -1065,21 +1201,21 @@ namespace gvtrademap_cs {
 		}
 
 		/*-------------------------------------------------------------------------
-		 메모の윈도우상태설정
+		 메모 윈도우 상태 설정
 		---------------------------------------------------------------------------*/
 		public void EnableMemoWindow(bool is_enable) {
 			enable_ctrl(m_memo_text_box, is_enable);
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이템の윈도우상태설정
+		 아이템 윈도우 상태 설정
 		---------------------------------------------------------------------------*/
 		public void EnableItemWindow(bool is_enable) {
 			enable_ctrl(m_list_view, is_enable);
 		}
 
 		/*-------------------------------------------------------------------------
-		 コントロールの상태설정
+		 컨트롤 상태 설정
 		---------------------------------------------------------------------------*/
 		private void enable_ctrl(Control ctrl, bool is_enable) {
 			// 표시설정
@@ -1088,7 +1224,7 @@ namespace gvtrademap_cs {
 					ctrl.Visible = true;
 				}
 
-				// 編集가능不가능설정
+				// 편집 가능/불가능 설정
 				if (m_info == null) {
 					if (ctrl.Enabled) ctrl.Enabled = false;
 				} else {
@@ -1097,14 +1233,14 @@ namespace gvtrademap_cs {
 			} else {
 				if (ctrl.Visible) {
 					ctrl.Visible = false;
-					base.device.form.Focus();	   // フォーカスを返す
+					base.device.form.Focus();	   // 포커스를 되돌린다
 				}
 			}
 		}
 
 		/*-------------------------------------------------------------------------
-		 메모を업데이트する
-		 종료時の업데이트용
+		 메모를 갱신한다
+		 종료 시 갱신용
 		---------------------------------------------------------------------------*/
 		public void UpdateMemo() {
 			if (info == null) return;
@@ -1116,40 +1252,59 @@ namespace gvtrademap_cs {
 		---------------------------------------------------------------------------*/
 		private void update_item_list() {
 			if (info == null) {
-				// 내용クリア
+				// 내용 초기화
 				m_list_view.Clear();
 				return;
 			}
 
-			// 업데이트開始
+			// 갱신 시작
 			m_list_view.BeginUpdate();
 
-			// 내용クリア
+			// 내용 초기화
 			m_list_view.Clear();
 
-			// ヘッダ
+			float dpi = Useful.GetDpiRatio();
+			// 헤더
 			switch (m_tab_index) {
 				case 0:
-					m_list_view.Columns.Add("명칭", 80);
-					m_list_view.Columns.Add("★", 25, HorizontalAlignment.Center);
-					m_list_view.Columns.Add("종류", 52, HorizontalAlignment.Center);
+					m_list_view.Columns.Add("명칭", (int)(80 * dpi));
+					m_list_view.Columns.Add("★", (int)(25 * dpi), HorizontalAlignment.Center);
+					m_list_view.Columns.Add("종류", (int)(52 * dpi), HorizontalAlignment.Center);
 					if (info.InfoType == GvoWorldInfo.InfoType.City) {
-						m_list_view.Columns.Add("가격", 55, HorizontalAlignment.Right);
+						m_list_view.Columns.Add("가격", (int)(55 * dpi), HorizontalAlignment.Right);
 					} else {
-						m_list_view.Columns.Add("스킬", 60, HorizontalAlignment.Center);
+						m_list_view.Columns.Add("스킬", (int)(60 * dpi), HorizontalAlignment.Center);
 					}
 					break;
 				case 3: // 스킬, 보고
-					m_list_view.Columns.Add("명칭", 140);
-					m_list_view.Columns.Add("인물", 120);
+					m_list_view.Columns.Add("명칭", (int)(140 * dpi));
+					m_list_view.Columns.Add("인물", (int)(120 * dpi));
 					break;
 				case 10:	// 행상인
-					m_list_view.Columns.Add("명칭", 160);
-					m_list_view.Columns.Add("인물", 60);
+					m_list_view.Columns.Add("명칭", (int)(120 * dpi));
+					m_list_view.Columns.Add("NPC", (int)(70 * dpi));
+					m_list_view.Columns.Add("가격", (int)(55 * dpi), HorizontalAlignment.Right);
+					break;
+				case TAB_TODO:
+					m_list_view.Columns.Add("명칭", (int)(110 * dpi));
+					m_list_view.Columns.Add("구분", (int)(38 * dpi), HorizontalAlignment.Center);
+					m_list_view.Columns.Add("내용", (int)(95 * dpi));
+					break;
+				case 5:		// 조선공
+					m_list_view.Columns.Add("명칭", (int)(120 * dpi));
+					m_list_view.Columns.Add("위치", (int)(120 * dpi));
+					break;
+				case TAB_STAFF:
+					m_list_view.Columns.Add("명칭", (int)(160 * dpi));
+					m_list_view.Columns.Add("구분", (int)(80 * dpi));
+					break;
+				case TAB_ADJUTANT:
+					m_list_view.Columns.Add("명칭", (int)(75 * dpi));
+					m_list_view.Columns.Add("직업, 스킬", (int)(165 * dpi));
 					break;
 				default:
-					m_list_view.Columns.Add("명칭", 160);
-					m_list_view.Columns.Add("가격", 80, HorizontalAlignment.Right);
+					m_list_view.Columns.Add("명칭", (int)(160 * dpi));
+					m_list_view.Columns.Add("가격", (int)(80 * dpi), HorizontalAlignment.Right);
 					break;
 			}
 
@@ -1170,6 +1325,11 @@ namespace gvtrademap_cs {
 					item.SubItems.Add(d.Type,
 										d.CategolyColor, item.BackColor, font);
 				}
+				if (m_tab_index == 10) {
+					item.SubItems.Add(d.Npc, Color.DimGray, item.BackColor, font);
+				} else if (m_tab_index == TAB_TODO) {
+					item.SubItems.Add(d.Kind, Color.DimGray, item.BackColor, font);
+				}
 				item.SubItems.Add(d.Price, d.PriceColor, item.BackColor, font);
 				m_list_view.Items.Add(item);
 			}
@@ -1177,33 +1337,33 @@ namespace gvtrademap_cs {
 			// 업데이트종료
 			m_list_view.EndUpdate();
 
-			// コラム사이즈조정
+			// 컬럼 크기 조정
 			ajust_item_columns_width();
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이템목록のコラム幅조정
-		 최초のコラムの사이즈を조정して가로スクロールバーが出ないようにする
+		 아이템 목록의 컬럼 폭 조정
+		 첫 컬럼의 크기를 조정해서 가로 스크롤바가 나오지 않도록 한다
 		---------------------------------------------------------------------------*/
 		private void ajust_item_columns_width() {
 			if (m_list_view.Columns.Count < 1) return;
-			if (m_tab_index == 3) return;	   // 인물タブは特別になにもしない
+			if (m_tab_index == 3) return;	   // 인물 탭은 특별히 아무것도 하지 않는다
 
 			Size size = m_list_view.ClientSize;
-			// 최초のコラム以외のコラムの幅の合計を求める
+			// 첫 컬럼 이외 컬럼들의 폭 합계를 구한다
 			int width = 0;
 			for (int i = 1; i < m_list_view.Columns.Count; i++) {
 				width += m_list_view.Columns[i].Width;
 			}
-			// 余りを최초のコラムの幅とする
+			// 나머지를 첫 컬럼의 폭으로 삼는다
 			width = size.Width - width;
 			if (width <= 0) width = 20;
 			m_list_view.Columns[0].Width = width;
 		}
 
 		/*-------------------------------------------------------------------------
-		 아이템목록に마우스があるかどうかを返す
-		 フォーカス判定용
+		 아이템 목록에 마우스가 있는지 여부를 반환한다
+		 포커스 판정용
 		---------------------------------------------------------------------------*/
 		public bool HitTest_ItemList(Point pos) {
 			if (base.window_mode == mode.small) return false;   // 최소화중

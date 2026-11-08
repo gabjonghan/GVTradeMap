@@ -29,7 +29,7 @@ namespace Utility
 	public EnumParser(T success_value, string to_string, string[] to_enum)
 	{
 	  if (!((object) m_success_value is Enum))
-		throw new ArgumentException("TはEnumでなければなりません. ");
+		throw new ArgumentException("T 는 Enum 이어야 합니다. ");
 	  m_success_value = success_value;
 	  m_other_to_enum_strings = to_enum;
 	  m_to_string = to_string;

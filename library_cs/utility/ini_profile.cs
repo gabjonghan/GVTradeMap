@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------
 //
-// GetPrivateProfileString()を사용したini파일アクセス
+// GetPrivateProfileString() 을 사용한 ini 파일 접근
 //
 //-------------------------------------------------------------------------
 using System;
@@ -11,7 +11,7 @@ namespace Utility.Ini
 {
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// IniProfileを使った설정관리
+	/// IniProfile 을 사용한 설정 관리
 	/// </summary>
 	public class IniProfileSetting : IniSettingBase
 	{
@@ -21,7 +21,7 @@ namespace Utility.Ini
 		/// <summary>
 		/// 구축
 		/// </summary>
-		/// <param name="file_name">설정파일명(フルパスであること)</param>
+		/// <param name="file_name">설정 파일명(전체 경로여야 한다)</param>
 		public IniProfileSetting(string file_name)
 		{
 			if(String.IsNullOrEmpty(file_name))	throw new ArgumentException();
@@ -40,7 +40,7 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 書き出し
+		/// 기록
 		/// </summary>
 		public override void Save()
 		{
@@ -51,13 +51,13 @@ namespace Utility.Ini
 
 	//-------------------------------------------------------------------------
 	/// <summary>
-	/// GetPrivateProfileString()を사용したini파일アクセス
+	/// GetPrivateProfileString() 을 사용한 ini 파일 접근
 	/// </summary>
 	public class IniProfile : IniBase
 	{
 		/// <summary>
-		/// API宣言
-		/// ini파일読込み
+		/// API 선언
+		/// ini 파일 읽기
 		/// </summary>
 		[DllImport("kernel32.dll", EntryPoint="GetPrivateProfileString")]
 		private static extern uint GetPrivateProfileString(
@@ -69,8 +69,8 @@ namespace Utility.Ini
 			, string lpFileName ); 
 
 		/// <summary>
-		/// API宣言
-		/// ini파일書込み
+		/// API 선언
+		/// ini 파일 쓰기
 		/// </summary>
 		[DllImport("kernel32.dll", EntryPoint="WritePrivateProfileString")] 
 		private static extern uint WritePrivateProfileString(
@@ -95,8 +95,8 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// 데이터があるかどうかを得る. 
-		/// とりあえず無条건でtrueを返す. 
+		/// 데이터가 있는지 여부를 얻는다.
+		/// 일단 무조건 true 를 반환한다.
 		/// </summary>
 		/// <param name="group_name"></param>
 		/// <param name="name"></param>
@@ -108,12 +108,12 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// string데이터取得
+		/// string 데이터 취득
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">이름</param>
-		/// <param name="default_value">初期値</param>
-		/// <returns>取得された데이터</returns>
+		/// <param name="default_value">초기값</param>
+		/// <returns>취득된 데이터</returns>
 		public override string GetProfile(string group_name, string name, string default_value)
 		{
 			StringBuilder	sb	= new StringBuilder(BUFF_LEN);
@@ -127,12 +127,12 @@ namespace Utility.Ini
 
 		//-------------------------------------------------------------------------
 		/// <summary>
-		/// string[]데이터取得
+		/// string[] 데이터 취득
 		/// </summary>
 		/// <param name="group_name">그룹명</param>
 		/// <param name="name">이름</param>
-		/// <param name="default_value">初期値</param>
-		/// <returns>取得された데이터</returns>
+		/// <param name="default_value">초기값</param>
+		/// <returns>취득된 데이터</returns>
 		public override string[] GetProfile(string group_name, string name, string[] default_value)
 		{
 			throw new NotImplementedException();
@@ -152,7 +152,7 @@ namespace Utility.Ini
 														value,
 														m_file_name);
 			if(ret == 0){
-				throw new Exception("데이터の쓰기に실패");
+				throw new Exception("데이터 쓰기에 실패");
 			}
 		}
 

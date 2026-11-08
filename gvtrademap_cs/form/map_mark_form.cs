@@ -1,6 +1,6 @@
 ﻿/*-------------------------------------------------------------------------
 
- 메모아이콘編集
+ 메모 아이콘 편집
 
 ---------------------------------------------------------------------------*/
 
@@ -76,21 +76,21 @@ namespace gvtrademap_cs
 
 			toolTip1.SetToolTip(button9, "상어");
 			toolTip1.SetToolTip(button10, "화재");
-			toolTip1.SetToolTip(button11, "수초");
+			toolTip1.SetToolTip(button11, "해초");
 			toolTip1.SetToolTip(button12, "사이렌");
-			toolTip1.SetToolTip(button13, "지자기이상");
+			toolTip1.SetToolTip(button13, "자기장 이상");
 			toolTip1.SetToolTip(button14, "어장");
 
-			toolTip1.SetToolTip(button15, "マンボウ");
+			toolTip1.SetToolTip(button15, "개복치");
 			toolTip1.SetToolTip(button16, "free");
 			toolTip1.SetToolTip(button17, "free");
 			toolTip1.SetToolTip(button18, "free");
 			toolTip1.SetToolTip(button19, "free");
 			toolTip1.SetToolTip(button20, "목적지");
 
-			toolTip1.SetToolTip(textBox1, "메모を入力してください");
-			toolTip1.SetToolTip(textBox2, "위치Xを지정してください");
-			toolTip1.SetToolTip(textBox3, "위치Yを지정してください");
+			toolTip1.SetToolTip(textBox1, "메모를 입력해 주십시오");
+			toolTip1.SetToolTip(textBox2, "위치 X 를 지정해 주십시오");
+			toolTip1.SetToolTip(textBox3, "위치 Y 를 지정해 주십시오");
 
 			button1.Click	+= new System.EventHandler(button1_Click);
 			button2.Click	+= new System.EventHandler(button2_Click);
@@ -117,7 +117,7 @@ namespace gvtrademap_cs
 		}
 
 		/*-------------------------------------------------------------------------
-		 선택されてる아이콘を변경する
+		 선택되어 있는 아이콘을 변경한다
 		---------------------------------------------------------------------------*/
 		private void change_icon(int index)
 		{
@@ -167,7 +167,7 @@ namespace gvtrademap_cs
 		private void button20_Click(object sender, EventArgs e){		change_icon(19);	}
 
 		/*-------------------------------------------------------------------------
-		 閉じられた
+		 닫혔다
 		---------------------------------------------------------------------------*/
 		private void map_mark_form_FormClosed(object sender, FormClosedEventArgs e)
 		{
