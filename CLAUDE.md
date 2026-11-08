@@ -67,8 +67,8 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
 
 `gvtrademap_cs/database/`의 파일들은 출력 폴더로 복사되며 런타임에 읽힌다. 경로 상수는 전부 `def.cs`에 모여 있다.
 - `worldinfos.xml` — 도시/해역 마스터(좌표, 이름 오프셋, 각도, 국가, 주점 플래그 등)
-- `cityinfos.xml` — 도시별 교역품/가격, `item_db.txt` — CSV(`id,분류,이름,설명`, UTF-8 BOM), `itemtype_db.xml`, `ShipParts.xml`, `webicons.txt`, `domaininfo.xml`
-- 데이터 간 이름 일치가 기능의 전제다: `cityinfos.xml`·`itemtype_db.xml`·`ShipParts.xml` 의 아이템명은 `item_db.txt` 의 이름으로 조회된다(`ItemDatabase.Find` — 정확 일치 → `m_ajust_name_list` → 띄어쓰기·괄호·♂♀ 무시 비교). 이름을 고칠 때는 `item_db.txt` 표기를 기준으로 할 것. `item_db.txt` 의 분류명(2열)은 `gvo_item_database.cs` 의 switch 와 1:1이므로 바꾸면 카테고리 판정이 깨진다.
+- `cityinfos.xml` — 도시별 교역품/가격, `item_db.txt` — CSV(`id,상태,분류,이름,설명`, UTF-8 BOM), `itemtype_db.xml`, `ShipParts.xml`, `webicons.txt`, `domaininfo.xml`
+- 데이터 간 이름 일치가 기능의 전제다: `cityinfos.xml`·`itemtype_db.xml`·`ShipParts.xml` 의 아이템명은 `item_db.txt` 의 이름으로 조회된다(`ItemDatabase.Find` — 정확 일치 → `m_ajust_name_list` → 띄어쓰기·괄호·♂♀ 무시 비교). 이름을 고칠 때는 `item_db.txt` 표기를 기준으로 할 것. `item_db.txt` 의 분류명(3열, 옛 형식은 2열)은 `gvo_item_database.cs` 의 switch 와 1:1이므로 바꾸면 카테고리 판정이 깨진다.
 - `ShipParts.xml` 의 `PartsType`/`ShipSizeType` 값은 `ShipPartsDataBase` 의 한국어 키워드("선체","돛","대포","병기" / "소형","중형","대형","전부","중형, 대형")와 정확히 같아야 한다. 해석 실패 시 조용히 기본값(Hull/All)이 된다.
 - 아이콘 칸을 추가하려면 `map/gv_pics20.dds`(DXT1, 256×256)의 빈 칸을 쓰고 `icons.cs` 의 `icon_index` 끝과 `add_rects()` 끝에 같은 순서로 넣는다. `.pdn` 원본에는 주점 종업원 아이콘(144,128)이 없다.
 - `cityinfos.xml` 의 그룹명은 `world_info.cs` 의 `m_group_name_tbl` 과 정확히 같아야 한다. 다르면 그 그룹은 통째로 읽히지 않는다.
@@ -102,4 +102,4 @@ msbuild gvtrademap_cs\gvtrademap_cs.sln /p:Configuration=Debug /p:Platform="Any 
   - **출처 순서(2026-11~)**: ① dhoSQL(오프라인 조이 DB, 2025-10 기준, https://github.com/dhosql/dhoSQL 의 `sql/dhoDatabase.sqlite3`. DB 파일은 저장소에 넣지 않는다) ② 2025-10 이후 바뀐 내용은 조이 사이트(ssjoy.org) — 운영자 허락 조건: 크롬을 직접 조종해 **시간당 100페이지 미만**. 다른 방식의 자동 수집은 하지 않는다 ③ 인벤.
   - **KR v2.0.4(연이v) 데이터는 쓰지 않는다**(재배포 금지). 무엇을 보여 줄지 정할 때만 참고하고, 구조·데이터·문구를 따라 하지 않는다. 2.0.4 에서 옮겨 온 게임 자료(침몰선·낚시·기상·해역조사 좌표, 타로, 철도, 부관 표)와 cityinfos 추가분은 2026-11 에 dhoSQL 로 바꾸거나 뺐다.
   - 일본 쪽 출처: 원본 이후 갱신된 유일한 포크는 `bN2DhXKD/gvtrademap_cs`(2023-06~2024-05, 일본 서버 월드 통합 대응). 신규 장소·풍향만 가져왔다(좌표는 지도 픽셀이라 공통 도시로 게임 좌표 환산). 아이템·도시별 교역품은 정리 wiki(gvo.gamedb.info — robots 허용, **Crawl-delay 60**)를 쓴다. gvdb.mydns.jp 는 robots 가 일반 봇을 막으므로 자동 수집하지 않는다.
-  - `item_db.txt`: 이름은 dhoSQL 공식 명칭을 따르고, dhoSQL 에 없으면 원본 일본어를 직접 번역한다. 설명은 dhoSQL 상세 표(소비품·레시피 책·선박 등)에 있으면 그 문구, 없으면 원본 일본어 직접 번역이다(2026-11 에 2.0.4 유래 이름·설명을 모두 걷어 냄). ID 대역: `9000001~` 일본 wiki 기준 직접 번역, `9100001~` `tools/import_dhosql.py` 가 판매 품목용으로 자동 추가(다시 돌리면 새로 만듦), `9200001~` dhoSQL 선박·분류로 채운 행. 앱은 ID 를 쓰지 않는다. 이름을 바꾸면 `tools/item_renames.tsv`(옛 이름→새 이름)에 남긴다. 변환 스크립트가 2.0.4 병합 전 블록의 품목명을 이 표로 바꾼다.
+  - `item_db.txt` 형식은 `ID,상태,분류,이름,설명`(설명의 쉼표는 줄바꿈)이다. 상태 `등록` 은 dhoSQL 에 있는 아이템으로 `tools/import_dhosql.py` 가 dhoSQL 기준(이름·분류, 설명은 dhoSQL 상세 표 또는 이전 행)으로 매번 새로 만든다. 상태 `미등록` 은 dhoSQL 에 없는 이름(일본판 이름의 임시 번역 등)으로, 스크립트가 지우지 않고 그대로 둔다. 앱은 미등록 아이템 툴팁에 상태를 표시한다. 상태 열이 없는 옛 형식도 읽는다. 등록 행은 손으로 고치지 말고, 미등록 행을 고치거나 추가한다. 앱은 ID 를 쓰지 않는다(등록 행은 dhoSQL ID, 판매 목록에만 있는 이름은 0). 아이템 이름을 바꾸면 `tools/item_renames.tsv`(옛 이름→새 이름)에 남긴다.

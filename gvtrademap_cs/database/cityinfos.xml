@@ -131,7 +131,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
@@ -474,7 +474,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -730,7 +730,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 프류트" price="420000" kind="선박 (교역용)" />
@@ -838,7 +838,7 @@
 	  <item name="해독제" price="100" kind="소비품 (육상 전투)" />
 	  <item name="포병대의 마음가짐" price="5000" kind="소비품 (해상 전투)" />
 	  <item name="스냅록식 사격총" price="8000" kind="장비품 (총)" />
-	  <item name="스웨덴 민족 의상(구입)" price="76000" kind="#N/A" />
+	  <item name="스웨덴 민족 의상" price="76000" kind="#N/A" note="구입" />
 	  <item name="에이프런 드레스" price="5100" kind="장비품 (몸)" />
 	  <item name="장식 퀴래스(시대 한정 구입)" price="164000" kind="장비품 (몸)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
@@ -848,7 +848,7 @@
 	<group name="[공방]">
 	  <item name="망향의 카리욘벨" price="200" kind="소비품 (항해)" />
 	  <item name="뱃노래의 악보" price="200" kind="소비품 (항해)" />
-	  <item name="특수 돛 도료4" price="1500" kind="소비품 (꾸미기)" />
+	  <item name="특수 돛 도료 4" price="1500" kind="소비품 (꾸미기)" />
 	  <item name="사분의" price="500" kind="장비품 (도구)" />
 	  <item name="해양생물상 조각술" price="10000" kind="레시피 책 (공예)" />
 	  <item name="특수 대포 주조법" price="200000" kind="레시피 책 (주조)" />
@@ -868,7 +868,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 프류트" price="420000" kind="선박 (교역용)" />
@@ -1015,7 +1015,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 프류트" price="420000" kind="선박 (교역용)" />
 	  <item name="상업용 핀네스" price="960000" kind="선박 (교역용)" />
@@ -1043,7 +1043,7 @@
 	  <item name="맥주" price="247" kind="교역품 (주류)" />
 	  <item name="납광석" price="402" kind="교역품 (광석)" />
 	  <item name="동광석" price="696" kind="교역품 (광석)" />
-	  <item name="주석" price="423" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="423" kind="교역품 (광석)" />
 	  <item name="철광석" price="566" kind="교역품 (광석)" />
 	  <item name="석탄" price="415" kind="교역품 (공업품)" />
 	  <item name="보석세공" option="*" price="3752" investment="520k" kind="교역품 (공예품)" />
@@ -1111,7 +1111,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -1232,7 +1232,7 @@
 	  <item name="모피" price="1132" kind="교역품 (섬유)" />
 	  <item name="면 원단" option="*" price="666" investment="600k" kind="교역품 (직물)" />
 	  <item name="호박(보석)" price="2467" kind="교역품 (보석)" />
-	  <item name="주석" price="-1" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="-1" kind="교역품 (광석)" />
 	  <item name="화승총" price="-1" kind="교역품 (총포류)" />
 	</group>
 	<group name="[도구]">
@@ -1296,7 +1296,7 @@
 	  <item name="상업용 핀네스" price="960000" kind="선박 (교역용)" />
 	  <item name="전투용 핀네스" price="950000" kind="선박 (전투용)" />
 	  <item name="대형 카락" price="1800000" kind="선박 (모험용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="탐험용 대형 카락" price="3360000" kind="선박 (모험용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="중 카락" price="3000000" kind="선박 (전투용)" />
@@ -1358,7 +1358,7 @@
 	  <item name="푸카" price="220000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 핀네스" price="960000" kind="선박 (교역용)" />
 	  <item name="수송용 갤리온" price="840000" kind="선박 (교역용)" />
@@ -1433,7 +1433,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 프류트" price="420000" kind="선박 (교역용)" />
 	  <item name="상업용 핀네스" price="960000" kind="선박 (교역용)" />
@@ -1617,7 +1617,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 프류트" price="420000" kind="선박 (교역용)" />
@@ -1842,7 +1842,7 @@
 	  <item name="치즈" price="303" kind="교역품 (식료품)" />
 	  <item name="납광석" price="402" kind="교역품 (광석)" />
 	  <item name="동광석" price="696" kind="교역품 (광석)" />
-	  <item name="주석" price="423" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="423" kind="교역품 (광석)" />
 	  <item name="청동" price="859" kind="교역품 (공업품)" />
 	  <item name="흑연" price="774" kind="교역품 (공업품)" />
 	  <item name="양손검" price="1247" kind="교역품 (무기류)" />
@@ -1904,7 +1904,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -2134,7 +2134,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
@@ -2432,7 +2432,7 @@
 	  <item name="스페니시토크" price="12400" kind="장비품 (머리)" />
 	  <item name="커치프" price="2300" kind="장비품 (머리)" />
 	  <item name="악톤" price="3800" kind="장비품 (몸)" />
-	  <item name="제독 코트" price="144000" kind="장비품 (몸)" note="구입" />
+	  <item name="제독 코트(구입)" price="144000" kind="장비품 (몸)" />
 	  <item name="모드 디자인집 제1권" price="10000" kind="레시피 책 (봉제)" />
 	  <item name="직물 비법서-옷감에 관한 책" price="10000" kind="레시피 책 (봉제)" />
 	  <item name="검 만들기 응용" option="*" price="50000" investment="120k" kind="레시피 책 (주조)" />
@@ -2461,7 +2461,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -2637,7 +2637,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -2764,7 +2764,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -2887,7 +2887,7 @@
 	  <item name="라드" price="227" kind="교역품 (조미료)" />
 	  <item name="소금" price="209" kind="교역품 (조미료)" />
 	  <item name="와인" price="375" kind="교역품 (주류)" />
-	  <item name="주석" price="423" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="423" kind="교역품 (광석)" />
 	  <item name="피혁" price="374" kind="교역품 (섬유)" />
 	</group>
 	<group name="[도구]">
@@ -2956,7 +2956,7 @@
 	  <item name="상업용 갤리" price="650000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
 	  <item name="상업용 대형 캐러벨" price="1632000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -3099,7 +3099,7 @@
 	  <item name="상업용 갤리" price="650000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
 	  <item name="상업용 대형 캐러벨" price="1632000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -3290,7 +3290,7 @@
 	  <item name="상업용 갤리" price="650000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
 	  <item name="상업용 대형 캐러벨" price="1632000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
@@ -3672,7 +3672,7 @@
 	  <item name="상업용 갤리" price="650000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
 	  <item name="상업용 대형 캐러벨" price="1632000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -3951,7 +3951,7 @@
 	  <item name="상업용 갤리" price="650000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
 	  <item name="상업용 대형 캐러벨" price="1632000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -4406,7 +4406,7 @@
 	  <item name="상업용 갤리" price="650000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
 	  <item name="상업용 대형 캐러벨" price="1632000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
@@ -4685,7 +4685,7 @@
 	  <item name="치료약" price="300" kind="소비품 (육상 전투)" />
 	  <item name="해독제" price="100" kind="소비품 (육상 전투)" />
 	  <item name="화승격발식 사격총" price="3000" kind="장비품 (총)" />
-	  <item name="꽃머리장식(구입)" option="*" price="135000" investment="550k" kind="장비품 (머리)" />
+	  <item name="꽃머리장식 (구입)" option="*" price="135000" investment="550k" kind="장비품 (머리)" />
 	  <item name="원로원 의원의 토가" option="*" price="360000" investment="390k" kind="장비품 (몸)" />
 	  <item name="색다른 수제 소품" price="100000" kind="레시피 책 (공예)" />
 	  <item name="모드 디자인집 제1권" price="10000" kind="레시피 책 (봉제)" />
@@ -4763,7 +4763,7 @@
 	  <item name="뱃노래의 악보" price="200" kind="소비품 (항해)" />
 	  <item name="돛 도료" price="500" kind="소비품 (꾸미기)" />
 	  <item name="선박용 도료" price="500" kind="소비품 (꾸미기)" />
-	  <item name="특수 돛 도료3" price="1500" kind="소비품 (꾸미기)" />
+	  <item name="특수 돛 도료 3" price="1500" kind="소비품 (꾸미기)" />
 	  <item name="강력 포승" price="100000" kind="소비품 (해상 전투)" />
 	  <item name="사분의" price="500" kind="장비품 (도구)" />
 	  <item name="마네킹(보통 남성형)" price="3000" kind="가구 (마네킹)" />
@@ -6128,7 +6128,7 @@
 	  <item name="트리코른" price="23000" kind="장비품 (머리)" />
 	  <item name="린넬제 페티코트" price="8300" kind="장비품 (몸)" />
 	  <item name="버커니어 조끼" price="11800" kind="장비품 (몸)" />
-	  <item name="제독 코트" option="*" price="144000" investment="180k" kind="장비품 (몸)" note="구입" />
+	  <item name="제독 코트(구입)" option="*" price="144000" investment="180k" kind="장비품 (몸)" />
 	  <item name="코튼제 악톤" price="12300" kind="장비품 (몸)" />
 	  <item name="가짜점" price="5000" kind="장비품 (장신구)" />
 	  <item name="가발의 제조법" option="*" price="300000" investment="120k" kind="레시피 책 (공예)" />
@@ -8055,11 +8055,11 @@
 	  <item name="공작털장식터번" price="73400" kind="장비품 (머리)" />
 	  <item name="깃털달린 터번" price="48300" kind="장비품 (머리)" />
 	  <item name="샤리아 서클릿" option="*" price="180000" investment="" kind="장비품 (머리)" note="구입" />
-	  <item name="예니체리 모자" option="*" price="180000" investment="" kind="장비품 (머리)" note="구입" />
+	  <item name="예니체리 모자(구입)" option="*" price="180000" investment="" kind="장비품 (머리)" />
 	  <item name="오깔" price="25400" kind="장비품 (머리)" />
 	  <item name="샤리아 드레스" option="*" price="350000" investment="" kind="장비품 (몸)" note="구입" />
 	  <item name="아랍해적셔츠" price="153900" kind="장비품 (몸)" />
-	  <item name="아미르 코트" option="*" price="350000" investment="" kind="장비품 (몸)" note="구입" />
+	  <item name="아미르 코트(구입)" option="*" price="350000" investment="" kind="장비품 (몸)" />
 	  <item name="이슬람 장의" price="66100" kind="장비품 (몸)" />
 	  <item name="아라비안슈즈" price="28100" kind="장비품 (다리)" />
 	  <item name="스타 사파이어 헤어밴드" option="*" price="8000000" investment="" kind="장비품 (장신구)" />
@@ -11703,7 +11703,7 @@
 	  <item name="사금" price="3221" kind="교역품 (귀금속)" />
 	  <item name="밀" option="*" price="39" investment="240k" kind="교역품 (식료품)" />
 	  <item name="동광석" price="696" kind="교역품 (광석)" />
-	  <item name="주석" price="423" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="423" kind="교역품 (광석)" />
 	  <item name="철광석" price="566" kind="교역품 (광석)" />
 	  <item name="말린 살구" option="*" price="343" investment="120k" kind="교역품 (기호품)" />
 	  <item name="양모" price="323" kind="교역품 (섬유)" />
@@ -11886,7 +11886,7 @@
   <cityinfo name="두알라">
 	<group name="[교역]">
 	  <item name="옥수수" option="*" price="47" investment="240k" kind="교역품 (식료품)" />
-	  <item name="주석" price="423" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="423" kind="교역품 (광석)" />
 	  <item name="석탄" option="*" price="415" investment="120k" kind="교역품 (공업품)" />
 	  <item name="커피" price="378" kind="교역품 (기호품)" />
 	  <item name="면화" price="234" kind="교역품 (섬유)" />
@@ -11957,7 +11957,7 @@
 	  <item name="공작석 헤어밴드" option="*" price="5000000" investment="120k" kind="장비품 (장신구)" />
 	</group>
 	<group name="[공방]">
-	  <item name="특수 돛 도료6" price="1500" kind="소비품 (꾸미기)" />
+	  <item name="특수 돛 도료 6" price="1500" kind="소비품 (꾸미기)" />
 	</group>
 	<group name="[인물]">
 	  <item name="조선소재， 조리실" option="%" price="조선공" />
@@ -12268,7 +12268,7 @@
 	  <item name="수정 귀걸이" price="4000000" kind="장비품 (장신구)" />
 	  <item name="수정 목걸이" option="*" price="8000000" investment="180k" kind="장비품 (장신구)" />
 	  <item name="수정 반지" option="*" price="7000000" investment="180k" kind="장비품 (장신구)" />
-	  <item name="수정 브로치" option="*" price="6000000" investment="120k" kind="장비품 (장신구)" note="구입" />
+	  <item name="수정 브로치(구입)" option="*" price="6000000" investment="120k" kind="장비품 (장신구)" />
 	  <item name="수정 헤어밴드" option="*" price="5000000" investment="120k" kind="장비품 (장신구)" />
 	  <item name="간이 망원경" price="500" kind="장비품 (도구)" />
 	</group>
@@ -12655,7 +12655,7 @@
 	<group name="[공방]">
 	  <item name="망향의 카리욘벨" price="200" kind="소비품 (항해)" />
 	  <item name="뱃노래의 악보" price="200" kind="소비품 (항해)" />
-	  <item name="특수 돛 도료5" price="1500" kind="소비품 (꾸미기)" />
+	  <item name="특수 돛 도료 5" price="1500" kind="소비품 (꾸미기)" />
 	  <item name="고양이 장식" price="14500" kind="장비품 (장신구)" />
 	  <item name="조범술 지침서" price="2000" kind="장비품 (장신구)" />
 	  <item name="특수 목재계 추가장갑 작성법" price="40000" kind="레시피 책 (공예)" />
@@ -13278,7 +13278,7 @@
 	  <item name="사파이어 귀걸이" price="4000000" kind="장비품 (장신구)" />
 	  <item name="사파이어 목걸이" option="*" price="8000000" investment="180k" kind="장비품 (장신구)" />
 	  <item name="사파이어 반지" option="*" price="7000000" investment="180k" kind="장비품 (장신구)" />
-	  <item name="사파이어 브로치" option="*" price="6000000" investment="180k" kind="장비품 (장신구)" note="구입" />
+	  <item name="사파이어 브로치(구입)" option="*" price="6000000" investment="180k" kind="장비품 (장신구)" />
 	  <item name="사파이어 헤어밴드" option="*" price="5000000" investment="120k" kind="장비품 (장신구)" />
 	  <item name="실크손수건" option="*" price="20000" investment="240k" kind="장비품 (장신구)" />
 	</group>
@@ -13287,7 +13287,7 @@
 	  <item name="뱃노래의 악보" price="200" kind="소비품 (항해)" />
 	  <item name="돛 도료" price="500" kind="소비품 (꾸미기)" />
 	  <item name="선박용 도료" price="500" kind="소비품 (꾸미기)" />
-	  <item name="특수 돛 도료7" price="1500" kind="소비품 (꾸미기)" />
+	  <item name="특수 돛 도료 7" price="1500" kind="소비품 (꾸미기)" />
 	  <item name="연막대포주조법" price="300000" kind="레시피 책 (주조)" />
 	  <item name="특수대포강화법" price="800000" kind="레시피 책 (주조)" />
 	</group>
@@ -14255,7 +14255,7 @@
 	<group name="[교역]">
 	  <item name="타로토란" price="68" kind="교역품 (식료품)" />
 	  <item name="닭" price="44" kind="교역품 (가축)" />
-	  <item name="주석" price="423" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="423" kind="교역품 (광석)" />
 	  <item name="모시풀" price="133" kind="교역품 (섬유)" />
 	  <item name="코리안더" price="238" kind="교역품 (향신료)" />
 	  <item name="안식향" price="728" kind="교역품 (향료)" />
@@ -14601,7 +14601,7 @@
   <cityinfo name="로프부리">
 	<group name="[교역]">
 	  <item name="벼" price="44" kind="교역품 (식료품)" />
-	  <item name="주석" price="423" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" price="423" kind="교역품 (광석)" />
 	  <item name="망고" price="276" kind="교역품 (기호품)" />
 	  <item name="판야" price="266" kind="교역품 (섬유)" />
 	  <item name="피혁" price="374" kind="교역품 (섬유)" />
@@ -15462,8 +15462,8 @@
 	  <item name="무녀의 치차" price="30000" kind="소비품 (해상 전투)" />
 	  <item name="나무 창" price="34400" kind="장비품 (창)" />
 	  <item name="사냥꾼의 창" price="38700" kind="장비품 (창)" />
-	  <item name="잉카 의복" price="160000" kind="장비품 (몸)" note="구입" />
-	  <item name="잉카 튜닉" price="160000" kind="장비품 (몸)" note="구입" />
+	  <item name="잉카 의복(구입)" price="160000" kind="장비품 (몸)" />
+	  <item name="잉카 튜닉(구입)" price="160000" kind="장비품 (몸)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	</group>
 	<group name="[조선공]">
@@ -15491,8 +15491,8 @@
 	  <item name="무녀의 치차" price="30000" kind="소비품 (해상 전투)" />
 	  <item name="나무 창" price="34400" kind="장비품 (창)" />
 	  <item name="사냥꾼의 창" price="38700" kind="장비품 (창)" />
-	  <item name="잉카 의복" price="160000" kind="장비품 (몸)" note="구입" />
-	  <item name="잉카 튜닉" price="160000" kind="장비품 (몸)" note="구입" />
+	  <item name="잉카 의복(구입)" price="160000" kind="장비품 (몸)" />
+	  <item name="잉카 튜닉(구입)" price="160000" kind="장비품 (몸)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	</group>
 	<group name="[조선공]">
@@ -15708,8 +15708,8 @@
 	  <item name="무녀의 치차" price="30000" kind="소비품 (해상 전투)" />
 	  <item name="나무 창" price="34400" kind="장비품 (창)" />
 	  <item name="사냥꾼의 창" price="38700" kind="장비품 (창)" />
-	  <item name="잉카 의복" price="160000" kind="장비품 (몸)" note="구입" />
-	  <item name="잉카 튜닉" price="160000" kind="장비품 (몸)" note="구입" />
+	  <item name="잉카 의복(구입)" price="160000" kind="장비품 (몸)" />
+	  <item name="잉카 튜닉(구입)" price="160000" kind="장비품 (몸)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	</group>
 	<group name="[조선공]">
@@ -15737,8 +15737,8 @@
 	  <item name="무녀의 치차" price="30000" kind="소비품 (해상 전투)" />
 	  <item name="나무 창" price="34400" kind="장비품 (창)" />
 	  <item name="사냥꾼의 창" price="38700" kind="장비품 (창)" />
-	  <item name="잉카 의복" price="160000" kind="장비품 (몸)" note="구입" />
-	  <item name="잉카 튜닉" price="160000" kind="장비품 (몸)" note="구입" />
+	  <item name="잉카 의복(구입)" price="160000" kind="장비품 (몸)" />
+	  <item name="잉카 튜닉(구입)" price="160000" kind="장비품 (몸)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	</group>
 	<group name="[조선공]">
@@ -15845,13 +15845,13 @@
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="일본식 관모" price="102000" kind="장비품 (머리)" note="구입·생산" />
-	  <item name="일본식 비녀" price="102000" kind="장비품 (머리)" note="구입" />
-	  <item name="소맷부리가 좁은 일본 의복" price="154000" kind="장비품 (몸)" note="구입" />
-	  <item name="고초리(구입)" price="48000" kind="장비품 (다리)" />
+	  <item name="일본식 관모(구입·생산)" price="102000" kind="장비품 (머리)" />
+	  <item name="일본식 비녀(구입)" price="102000" kind="장비품 (머리)" />
+	  <item name="소맷부리가 좁은 일본 의복(구입)" price="154000" kind="장비품 (몸)" />
+	  <item name="고초리 (구입)" price="48000" kind="장비품 (다리)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	  <item name="동아시아 소품(봉제편)" price="800000" kind="레시피 책 (봉제)" />
-	  <item name="초리" price="56000" kind="장비품 (다리)" note="구입" />
+	  <item name="초리(구입)" price="56000" kind="장비품 (다리)" />
 	</group>
 	<group name="[공방]">
 	  <item name="망향의 카리욘벨" price="200" kind="소비품 (항해)" />
@@ -15911,15 +15911,15 @@
   </cityinfo>
   <cityinfo name="에도">
 	<group name="[도구]">
-	  <item name="초리" price="56000" kind="장비품 (다리)" note="구입" />
+	  <item name="초리(구입)" price="56000" kind="장비품 (다리)" />
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="일본식 관모" price="102000" kind="장비품 (머리)" note="구입·생산" />
-	  <item name="일본식 비녀" price="102000" kind="장비품 (머리)" note="구입" />
-	  <item name="가문 문장을 수놓은 일본 옷" price="404000" kind="장비품 (몸)" note="구입" />
-	  <item name="소맷부리가 좁은 일본 의복" price="154000" kind="장비품 (몸)" note="구입" />
-	  <item name="고초리(구입)" price="48000" kind="장비품 (다리)" />
+	  <item name="일본식 관모(구입·생산)" price="102000" kind="장비품 (머리)" />
+	  <item name="일본식 비녀(구입)" price="102000" kind="장비품 (머리)" />
+	  <item name="가문 문장을 수놓은 일본 옷(구입)" price="404000" kind="장비품 (몸)" />
+	  <item name="소맷부리가 좁은 일본 의복(구입)" price="154000" kind="장비품 (몸)" />
+	  <item name="고초리 (구입)" price="48000" kind="장비품 (다리)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	  <item name="동아시아 소품(공예편)" price="800000" kind="레시피 책 (공예)" />
 	</group>
@@ -15967,17 +15967,17 @@
   </cityinfo>
   <cityinfo name="사카이">
 	<group name="[도구]">
-	  <item name="초리" price="56000" kind="장비품 (다리)" note="구입" />
+	  <item name="초리(구입)" price="56000" kind="장비품 (다리)" />
 	  <item name="포획망" price="300" kind="소비품 (스킬)" />
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="치료약 꾸러미" price="900" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
 	  <item name="타네가시마총" price="700000" kind="장비품 (총)" />
-	  <item name="일본식 관모" price="102000" kind="장비품 (머리)" note="구입·생산" />
-	  <item name="일본식 비녀" price="102000" kind="장비품 (머리)" note="구입" />
-	  <item name="소맷부리가 좁은 일본 의복" price="154000" kind="장비품 (몸)" note="구입" />
-	  <item name="고초리(구입)" price="48000" kind="장비품 (다리)" />
+	  <item name="일본식 관모(구입·생산)" price="102000" kind="장비품 (머리)" />
+	  <item name="일본식 비녀(구입)" price="102000" kind="장비품 (머리)" />
+	  <item name="소맷부리가 좁은 일본 의복(구입)" price="154000" kind="장비품 (몸)" />
+	  <item name="고초리 (구입)" price="48000" kind="장비품 (다리)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	  <item name="조미료 대전(비경편)" price="700000" kind="레시피 책 (공예)" />
 	  <item name="일본 명물 요리" price="350000" kind="레시피 책 (조리)" />
@@ -16093,11 +16093,11 @@
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="사모" price="102000" kind="장비품 (머리)" note="구입" />
+	  <item name="사모(구입)" price="102000" kind="장비품 (머리)" />
 	  <item name="아얌" price="102000" kind="장비품 (머리)" note="구입" />
-	  <item name="바지 저고리" price="154000" kind="장비품 (몸)" note="구입" />
-	  <item name="갖신(구입)" price="56000" kind="장비품 (다리)" />
-	  <item name="목화" price="56000" kind="장비품 (다리)" note="구입·생산" />
+	  <item name="바지 저고리(구입)" price="154000" kind="장비품 (몸)" />
+	  <item name="갖신 (구입)" price="56000" kind="장비품 (다리)" />
+	  <item name="목화(구입·생산)" price="56000" kind="장비품 (다리)" />
 	  <item name="짚신" price="48000" kind="장비품 (다리)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	  <item name="동아시아 소품(봉제편)" price="800000" kind="레시피 책 (봉제)" />
@@ -16147,12 +16147,12 @@
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="사모" price="102000" kind="장비품 (머리)" note="구입" />
+	  <item name="사모(구입)" price="102000" kind="장비품 (머리)" />
 	  <item name="아얌" price="102000" kind="장비품 (머리)" note="구입" />
 	  <item name="전립" price="82000" kind="장비품 (머리)" note="구입" />
-	  <item name="바지 저고리" price="154000" kind="장비품 (몸)" note="구입" />
-	  <item name="갖신(구입)" price="56000" kind="장비품 (다리)" />
-	  <item name="목화" price="56000" kind="장비품 (다리)" note="구입·생산" />
+	  <item name="바지 저고리(구입)" price="154000" kind="장비품 (몸)" />
+	  <item name="갖신 (구입)" price="56000" kind="장비품 (다리)" />
+	  <item name="목화(구입·생산)" price="56000" kind="장비품 (다리)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	  <item name="동아시아 소품(공예편)" price="800000" kind="레시피 책 (공예)" />
 	</group>
@@ -16219,13 +16219,13 @@
 	  <item name="치료약 꾸러미" price="900" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
 	  <item name="장도" price="700000" kind="장비품 (던지는 나이프)" />
-	  <item name="사모" price="102000" kind="장비품 (머리)" note="구입" />
+	  <item name="사모(구입)" price="102000" kind="장비품 (머리)" />
 	  <item name="아얌" price="102000" kind="장비품 (머리)" note="구입" />
 	  <item name="구군복" price="404000" kind="장비품 (몸)" note="구입" />
-	  <item name="바지 저고리" price="154000" kind="장비품 (몸)" note="구입" />
-	  <item name="치마 저고리" price="404000" kind="장비품 (몸)" note="구입" />
-	  <item name="갖신(구입)" price="56000" kind="장비품 (다리)" />
-	  <item name="목화" price="56000" kind="장비품 (다리)" note="구입·생산" />
+	  <item name="바지 저고리(구입)" price="154000" kind="장비품 (몸)" />
+	  <item name="치마 저고리(구입)" price="404000" kind="장비품 (몸)" />
+	  <item name="갖신 (구입)" price="56000" kind="장비품 (다리)" />
+	  <item name="목화(구입·생산)" price="56000" kind="장비품 (다리)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	  <item name="조미료 대전(비경편)" price="700000" kind="레시피 책 (공예)" />
 	  <item name="조선 명물 요리" price="350000" kind="레시피 책 (조리)" />
@@ -16339,7 +16339,7 @@
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="두건" price="82000" kind="장비품 (머리)" note="구입" />
+	  <item name="두건(구입)" price="82000" kind="장비품 (머리)" />
 	  <item name="사방평정건" price="102000" kind="장비품 (머리)" note="구입" />
 	  <item name="호복" price="154000" kind="장비품 (몸)" note="구입" />
 	  <item name="신" price="56000" kind="장비품 (다리)" note="구입" />
@@ -16390,10 +16390,10 @@
 	  <item name="치료약 꾸러미" price="900" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
 	  <item name="언월도" price="700000" kind="장비품 (창)" />
-	  <item name="두건" price="82000" kind="장비품 (머리)" note="구입" />
+	  <item name="두건(구입)" price="82000" kind="장비품 (머리)" />
 	  <item name="사방평정건" price="102000" kind="장비품 (머리)" note="구입" />
-	  <item name="소수배자" price="404000" kind="장비품 (몸)" note="구입" />
-	  <item name="한족 관복" price="404000" kind="장비품 (몸)" note="구입" />
+	  <item name="소수배자(구입)" price="404000" kind="장비품 (몸)" />
+	  <item name="한족 관복(구입)" price="404000" kind="장비품 (몸)" />
 	  <item name="호복" price="154000" kind="장비품 (몸)" note="구입" />
 	  <item name="신" price="56000" kind="장비품 (다리)" note="구입" />
 	  <item name="신발" price="48000" kind="장비품 (다리)" note="구입" />
@@ -16504,10 +16504,10 @@
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="두건" price="82000" kind="장비품 (머리)" note="구입" />
+	  <item name="두건(구입)" price="82000" kind="장비품 (머리)" />
 	  <item name="매화잠" price="102000" kind="장비품 (머리)" note="구입" />
 	  <item name="사방평정건" price="102000" kind="장비품 (머리)" note="구입" />
-	  <item name="한족 관복" price="404000" kind="장비품 (몸)" note="구입" />
+	  <item name="한족 관복(구입)" price="404000" kind="장비품 (몸)" />
 	  <item name="호복" price="154000" kind="장비품 (몸)" note="구입" />
 	  <item name="신" price="56000" kind="장비품 (다리)" note="구입" />
 	  <item name="신발" price="48000" kind="장비품 (다리)" note="구입" />
@@ -16570,7 +16570,7 @@
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="두건" price="82000" kind="장비품 (머리)" note="구입" />
+	  <item name="두건(구입)" price="82000" kind="장비품 (머리)" />
 	  <item name="사방평정건" price="102000" kind="장비품 (머리)" note="구입" />
 	  <item name="호복" price="154000" kind="장비품 (몸)" note="구입" />
 	  <item name="신" price="56000" kind="장비품 (다리)" note="구입" />
@@ -16618,7 +16618,7 @@
 	  <item name="강력 끈끈이 기름" price="200" kind="소비품 (육상 전투)" />
 	  <item name="비밀 치료약" price="600" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
-	  <item name="두건" price="82000" kind="장비품 (머리)" note="구입" />
+	  <item name="두건(구입)" price="82000" kind="장비품 (머리)" />
 	  <item name="사방평정건" price="102000" kind="장비품 (머리)" note="구입" />
 	  <item name="호복" price="154000" kind="장비품 (몸)" note="구입" />
 	  <item name="신" price="56000" kind="장비품 (다리)" note="구입" />
@@ -16738,7 +16738,7 @@
 	  <item name="통천관" price="102000" kind="장비품 (머리)" note="구입" />
 	  <item name="욕군" price="154000" kind="장비품 (몸)" note="구입" />
 	  <item name="직거심의" price="404000" kind="장비품 (몸)" note="구입" />
-	  <item name="착수삼유" price="404000" kind="장비품 (몸)" note="구입" />
+	  <item name="착수삼유(구입)" price="404000" kind="장비품 (몸)" />
 	  <item name="신" price="56000" kind="장비품 (다리)" note="구입" />
 	  <item name="신발" price="48000" kind="장비품 (다리)" note="구입" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
@@ -16921,7 +16921,7 @@
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 프류트" price="420000" kind="선박 (교역용)" />
@@ -17049,10 +17049,10 @@
 	  <item name="치료약" price="300" kind="소비품 (육상 전투)" />
 	  <item name="해독제" price="100" kind="소비품 (육상 전투)" />
 	  <item name="광부의 피켈" price="10000" kind="소비품 (기타)" />
-	  <item name="멕시칸 솜브레로" price="35000" kind="장비품 (머리)" note="시대 한정 구입" />
+	  <item name="멕시칸 솜브레로(시대 한정 구입)" price="35000" kind="장비품 (머리)" />
 	  <item name="셔츠 &amp; 청바지(시대 한정 구입)" price="20000" kind="장비품 (몸)" />
 	  <item name="트라헤 드 바케로(시대 한정 구입)" price="65000" kind="장비품 (몸)" />
-	  <item name="멕시칸 부츠" price="44000" kind="장비품 (다리)" note="시대 한정 구입" />
+	  <item name="멕시칸 부츠(시대 한정 구입)" price="44000" kind="장비품 (다리)" />
 	  <item name="모드 디자인집 제1권" price="10000" kind="레시피 책 (봉제)" />
 	  <item name="직물 비법서-옷감에 관한 책" price="10000" kind="레시피 책 (봉제)" />
 	  <item name="검 만들기 응용" price="50000" kind="레시피 책 (주조)" />
@@ -17109,7 +17109,7 @@
 	  <item name="탐험용 대형 카락" price="3360000" kind="선박 (모험용)" />
 	  <item name="푸카" price="220000" kind="선박 (모험용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="상업용 캐러벨" price="290000" kind="선박 (교역용)" />
@@ -17226,7 +17226,7 @@
 	  <item name="예비돛" price="2916" kind="소비품 (항해)" npc="행상인" />
 	  <item name="쥐약" price="1011" kind="소비품 (항해)" npc="행상인" />
 	  <item name="프랑키스카" price="2232" kind="소비품 (육상 전투)" npc="행상인" />
-	  <item name="북미식 경화 라이브오크판" price="1240000" kind="추가장갑" npc="제재소 장인" />
+	  <item name="북미식 경화 라이브오크 판" price="1240000" kind="추가장갑" npc="제재소 장인" />
 	  <item name="북미식 경화 로즈우드 판" price="1160000" kind="추가장갑" npc="제재소 장인" />
 	  <item name="개량 떡갈나무판" price="39000" kind="추가장갑" npc="제재소 장인" />
 	  <item name="개량 로즈우드판" price="115000" kind="추가장갑" npc="제재소 장인" />
@@ -19031,8 +19031,8 @@
 	  <item name="무녀의 치차" price="30000" kind="소비품 (해상 전투)" />
 	  <item name="나무 창" price="34400" kind="장비품 (창)" />
 	  <item name="사냥꾼의 창" price="38700" kind="장비품 (창)" />
-	  <item name="잉카 의복(빨간색)" price="200000" kind="장비품 (몸)" />
-	  <item name="잉카 튜닉" price="200000" kind="장비품 (몸)" note="쿠스코구입" />
+	  <item name="잉카 의복 (빨간색)" price="200000" kind="장비품 (몸)" />
+	  <item name="잉카 튜닉(쿠스코구입)" price="200000" kind="장비품 (몸)" />
 	  <item name="낚시도구" price="2500" kind="장비품 (장신구)" />
 	</group>
 	<group name="[할 일]">
@@ -19218,8 +19218,8 @@
 	  <item name="투석" price="30" kind="소비품 (육상 전투)" />
 	  <item name="투척용 횃불" price="150" kind="소비품 (육상 전투)" />
 	  <item name="나무 창" price="34400" kind="장비품 (창)" />
-	  <item name="깃털 악세사리" price="45000" kind="장비품 (머리)" note="구입" />
-	  <item name="헌터 튜닉" price="92500" kind="장비품 (몸)" note="구입" />
+	  <item name="깃털 악세사리(구입)" price="45000" kind="장비품 (머리)" />
+	  <item name="헌터 튜닉(구입)" price="92500" kind="장비품 (몸)" />
 	</group>
   </cityinfo>
   <cityinfo name="노르웨이 해">
@@ -20573,7 +20573,7 @@
 	  <item name="조사용 외눈안경" price="2500" kind="장비품 (장신구)" />
 	</group>
 	<group name="[행상인]">
-	  <item name="학사모" price="150000" kind="장비품 (머리)" npc="매점 주인" note="구입" />
+	  <item name="학사모(구입)" price="150000" kind="장비품 (머리)" npc="매점 주인" />
 	  <item name="아카데믹 드레스" price="240000" kind="장비품 (몸)" npc="매점 주인" />
 	  <item name="버클부츠" price="100" kind="장비품 (다리)" npc="매점 주인" />
 	  <item name="스트랩슈즈" price="5200" kind="장비품 (다리)" npc="매점 주인" />
@@ -20660,7 +20660,7 @@
 	  <item name="전투용 카락" price="720000" kind="선박 (전투용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />
 	  <item name="대형 카락" price="1800000" kind="선박 (모험용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="전투용 프류트" price="400000" kind="선박 (전투용)" />
 	  <item name="상업용 프류트" price="420000" kind="선박 (교역용)" />
 	  <item name="프류트" price="410000" kind="선박 (모험용)" />
@@ -21353,7 +21353,7 @@
 	  <item name="수송용 갤리온" price="840000" kind="선박 (교역용)" />
 	  <item name="프리깃" price="1080000" kind="선박 (전투용)" />
 	  <item name="대형 카락" price="1800000" kind="선박 (모험용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="탐험용 대형 카락" price="3360000" kind="선박 (모험용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="갤리온" price="4500000" kind="장식품" />
@@ -21363,10 +21363,10 @@
 	<group name="[행상인]">
 	  <item name="투자 신청서" price="1000" kind="소비품 (교역)" npc="대부호" />
 	  <item name="수수께끼의 횡재품(No.6)" price="1000000" kind="소비품 (아이템 획득)" npc="대부호" />
-	  <item name="웨스턴 부츠" price="100000" kind="장비품 (다리)" npc="대부호" note="대부호구입" />
+	  <item name="웨스턴 부츠(대부호구입)" price="100000" kind="장비품 (다리)" npc="대부호" />
 	  <item name="신비한 향신료" price="10000" kind="소비품 (스킬)" npc="여행자상인" />
 	  <item name="수수께끼의 횡재품(No.2)" price="1000000" kind="소비품 (아이템 획득)" npc="여행자상인" />
-	  <item name="멕시칸 부츠" price="100000" kind="장비품 (다리)" npc="여행자상인" note="여행자상인구입" />
+	  <item name="멕시칸 부츠(여행자상인구입)" price="100000" kind="장비품 (다리)" npc="여행자상인" />
 	</group>
 	<group name="[할 일]">
 	  <item name="투자 2,000,000" option="~" price="행운권(NO.5)" kind="투자" />
@@ -21446,7 +21446,7 @@
 	  <item name="탐험용 나오" price="1704000" kind="선박 (모험용)" />
 	  <item name="강습용 중 캐러벨" price="1872000" kind="선박 (전투용)" />
 	  <item name="대형 카락" price="1800000" kind="선박 (모험용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="탐험용 대형 카락" price="3360000" kind="선박 (모험용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="중 카락" price="3000000" kind="선박 (전투용)" />
@@ -21616,7 +21616,7 @@
 	  <item name="수송용 갤리온" price="840000" kind="선박 (교역용)" />
 	  <item name="프리깃" price="1080000" kind="선박 (전투용)" />
 	  <item name="대형 카락" price="1800000" kind="선박 (모험용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="탐험용 대형 카락" price="3360000" kind="선박 (모험용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="중 카락" price="3000000" kind="선박 (전투용)" />
@@ -21886,7 +21886,7 @@
 	  <item name="양파" price="-1" kind="교역품 (식료품)" />
 	  <item name="왁스" price="-1" kind="교역품 (공업품)" />
 	  <item name="감자" price="203" kind="교역품 (식료품)" />
-	  <item name="주석" option="*" price="371" investment="600k" kind="교역품 (광석)" note="교역품" />
+	  <item name="주석(교역품)" option="*" price="371" investment="600k" kind="교역품 (광석)" />
 	  <item name="아연광석" option="*" price="294" investment="600k" kind="교역품 (광석)" />
 	  <item name="석유" option="*" price="444" investment="8500k" kind="교역품 (공업품)" />
 	</group>
@@ -21969,7 +21969,7 @@
 	  <item name="워킹 캡(대부호구입)" price="140000" kind="장비품 (머리)" npc="대부호(오마하)" />
 	  <item name="굉음탄" price="500" kind="소비품 (해상 전투)" npc="여행자상인" />
 	  <item name="수수께끼의 횡재품(No.3)" price="1000000" kind="소비품 (아이템 획득)" npc="여행자상인" />
-	  <item name="웨스턴 글러브" price="100000" kind="장비품 (팔)" npc="여행자상인" note="여행자상인구입" />
+	  <item name="웨스턴 글러브(여행자상인구입)" price="100000" kind="장비품 (팔)" npc="여행자상인" />
 	</group>
 	<group name="[할 일]">
 	  <item name="거래 250,000" option="~" price="행운권(NO.5)" kind="거래" />
@@ -22086,7 +22086,7 @@
 	  <item name="핀네스" price="950000" kind="선박 (모험용)" />
 	  <item name="2 마스트 코그" price="96000" kind="선박 (교역용)" />
 	  <item name="상업용 갤리온" price="4600000" kind="선박 (교역용)" />
-	  <item name="상업용 대형 카락" price="1840000" kind="선박 (교역용)" />
+	  <item name="상업용 대형카락" price="1840000" kind="선박 (교역용)" />
 	  <item name="상업용 무장 카락" price="4000000" kind="선박 (교역용)" />
 	  <item name="상업용 바사" price="5200" kind="선박 (교역용)" />
 	  <item name="상업용 카락" price="728000" kind="선박 (교역용)" />

@@ -595,6 +595,7 @@ namespace gvo_base
 			private TypeGroup				m_type_group;			// 종류 그룹
 			private TypeGroup2				m_type_group2;			// 所持품카테고리
 			private bool					m_is_combat_item;		// 육상전 아이템일 때 true
+			private bool					m_is_registered;		// dhoSQL 에 있는 아이템이면 true. false 는 임시 번역 등 미등록
 
 			/*-------------------------------------------------------------------------
 			 
@@ -618,6 +619,8 @@ namespace gvo_base
 			public Color CategolyColor{		get{	return ItemDatabase.GetCategolyColor(m_categoly);	}}
 			public TypeGroup TypeGroup{		get{	return m_type_group;	}}
 			public bool IsCombatItem{		get{	return m_is_combat_item;	}}
+			public bool IsRegistered{		get{	return m_is_registered;		}}
+			public string StatusString{		get{	return m_is_registered? "등록": "미등록(dhoSQL 에 없음, 임시 번역일 수 있음)";	}}
 			public TypeGroup2 TypeGroup2{	get{	return m_type_group2;	}}
 			public string TypeGroup2Str{	get{	return ItemDatabase.ToString(m_type_group2);	}}
 	
@@ -637,11 +640,20 @@ namespace gvo_base
 				if(tmp.Length < 4)	return false;
 
 				try{
+					// 형식: ID,상태,분류,이름,설명  (상태 열이 없는 옛 형식 ID,분류,이름,설명 도 읽는다)
+					int		col		= 1;
+					string	status	= tmp[1].Trim();
+					m_is_registered	= true;
+					if((status == "등록") || (status == "미등록")){
+						if(tmp.Length < 5)	return false;
+						m_is_registered	= (status == "등록");
+						col				= 2;
+					}
 					m_id			= Useful.ToInt32(tmp[0].Trim(), 0);
-					m_type			= tmp[1].Trim();
-					m_name			= tmp[2].Trim();
+					m_type			= tmp[col].Trim();
+					m_name			= tmp[col + 1].Trim();
 					m_document		= "";
-					for(int i=3; i<tmp.Length; i++){
+					for(int i=col + 2; i<tmp.Length; i++){
 						m_document	+= tmp[i].Trim() + "\n";
 					}
 
@@ -668,6 +680,7 @@ namespace gvo_base
 			{
 				string	str		= "명칭:" + Name + "\n";
 				str				+= "종류:" + Type + "\n";
+				if(!IsRegistered)	str	+= "상태:" + StatusString + "\n";
 				str				+= "설명:\n" + Document;
 				return str;
 			}

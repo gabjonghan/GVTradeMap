@@ -1754,6 +1754,7 @@ namespace gvtrademap_cs {
 						if (this.Investment != "") {
 							str += "가격:" + this.Investment + "\n";
 						}
+						if (!ItemDb.IsRegistered) str += "상태:" + ItemDb.StatusString + "\n";
 						str += "설명:\n" + ItemDb.Document;
 						return str;
 					}

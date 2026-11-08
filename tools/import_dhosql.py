@@ -5,7 +5,8 @@
 # 만드는 것
 #   database/cityinfos.xml  도시별 판매 품목([교역]~[행상인])과 [할 일](투자·거래 보상, 낚시, 서고 지도)
 #                           [인물]·[조선공]·[부관] 과 판매 자료가 없는 장소의 그룹은 지금 파일 값을 그대로 둔다
-#   database/gameinfo/      01_침몰선, 02_낚시, 03_기상현상, 12_서고 지도
+#   database/item_db.txt    dhoSQL 아이템을 "등록", dhoSQL 에 없는 이름을 "미등록" 상태로
+#   database/gameinfo/      01_침몰선, 02_낚시, 03_기상현상, 12_보물지도
 # --write 없이 돌리면 통계만 출력한다.
 import io, os, re, sqlite3, sys
 from xml.sax.saxutils import quoteattr
@@ -69,10 +70,114 @@ NPC_GROUP = {
 ORDER = ["[교역]", "[도구]", "[공방]", "[인물]", "[배]", "[조선공]", "[대포]", "[추가장갑]", "[돛]", "[선수상]", "[행상인]", "[부관]", "[할 일]"]
 KEEP = {"[인물]", "[조선공]", "[부관]"}       # 지금 파일 값을 유지하는 그룹
 
+# ------------------------------------------------------------ 아이템 DB
+# item_db.txt 형식: ID,상태,분류,이름,설명(쉼표는 줄바꿈)
+#   상태 등록   dhoSQL 에 있는 아이템. 이름·분류는 dhoSQL 기준. 설명은 dhoSQL 상세 표, 없으면 지금 파일의 같은 이름 행
+#   상태 미등록 dhoSQL 에 없는 이름(일본판 이름의 임시 번역 등). 지금 파일 값을 그대로 둔다
+# 상태 열이 없는 옛 형식(ID,분류,이름,설명)도 읽는다.
 ITEM_DB = os.path.join(D, "item_db.txt")
-ADD_ID = 9100001         # 이 스크립트가 item_db 에 넣는 행의 시작 ID. 다시 돌리면 이 범위를 지우고 새로 넣는다
-db_lines = [l for l in io.open(ITEM_DB, encoding="utf-8-sig").read().split("\n") if l and not re.match(r"91\d{5},", l)]
-items = set(l.split(",")[2] for l in db_lines if l.count(",") >= 2)
+STATUS = ("등록", "미등록")
+
+
+def parse_item_line(l):
+    a = l.split(",")
+    if len(a) < 3 or not a[0].strip().isdigit():
+        return None
+    if a[1] in STATUS:
+        return {"id": a[0], "status": a[1], "type": a[2], "name": a[3] if len(a) > 3 else "", "desc": ",".join(a[4:])}
+    return {"id": a[0], "status": "", "type": a[1], "name": a[2], "desc": ",".join(a[3:])}
+
+
+old_rows = [r for r in (parse_item_line(l) for l in io.open(ITEM_DB, encoding="utf-8-sig").read().split("\n")) if r]
+nkey = lambda s: re.sub(r"[\s()（）]", "", s)
+old_by_name = {}
+for r in old_rows:
+    old_by_name.setdefault(r["name"], r)
+    old_by_name.setdefault(nkey(r["name"]), r)
+clean = lambda s: re.sub(r"\s+", " ", (s or "").replace("\\,", ",")).strip().strip('"').replace(",", "，")
+
+# dhoSQL 상세 표의 설명
+dho_desc = {}
+for t in ["consumable", "recipebook", "ship", "technic"]:
+    for n, d in q('select name,description from "%s"' % t):
+        if n and d and n not in dho_desc:
+            dho_desc[n] = clean(d)
+# 판매 목록의 분류(교역품·장비 세부 분류를 알 수 있다)
+sale_kind = {}
+for n, k in q("select item,item_category from npcsale where item_category is not null and item_category <> '#N/A'"):
+    sale_kind.setdefault(n, k)
+SHIP_SIZE = {"소형1": "소형", "소형2": "중소형", "중형": "중형", "대형1": "중대형", "대형2": "대형"}
+ship_type = {n: SHIP_SIZE.get(s, "") + ("갤리" if cat == "갤리" else "범선") for n, s, cat in q("select name,size,category from ship")}
+ship_type_n = {re.sub(r"[\s()（）]", "", n): t for n, t in ship_type.items()}
+KIND_TYPE = [(r"장비품 \(몸\)", "몸 장비품"), (r"장비품 \(머리\)", "머리 장비품"), (r"장비품 \(다리\)", "다리 장비품"),
+             (r"장비품 \(팔\)", "팔 장비품"), (r"장비품 \(장신구\)", "장신구"), (r"장비품", "무기/도구"),
+             (r"대포 \(선측포\)", "선측포"), (r"대포 \(선미포\)", "선미포"), (r"대포 \(선수포\)", "선수포"),
+             (r"교역품 \((\S+)\)", None)]
+# dhoSQL 분류 -> item_db 분류. None 이면 판매 분류·지금 파일 값으로 정한다
+CAT_TYPE = {"tradeGoods": None, "equipment": None, "cannon": None, "ship": None, "skill": None,
+            "consumable": "소비품", "recipeBook": "레시피", "shipMaterial": "선박 소재", "ornament": None,
+            "furniture": "가구", "figurehead": "선수상", "crest": "문장", "extraArmor": "추가장갑",
+            "studdingSail": "보조돛", "specialEquipment": "특수장비", "pet": "애완동물", "treasureBox": "보물상자",
+            "itemEffect": "아이템 효과", "technic": "테크닉", "certificate": "추천서"}
+
+
+def item_type(cat, n):
+    if cat == "ship" and (n in ship_type or nkey(n) in ship_type_n):
+        return ship_type.get(n) or ship_type_n[nkey(n)]
+    t = CAT_TYPE.get(cat)
+    if t:
+        return t
+    k = sale_kind.get(n, "")
+    for pat, typ in KIND_TYPE:
+        m = re.match(pat, k)
+        if m:
+            return typ or m.group(1)
+    o = old_by_name.get(n) or old_by_name.get(nkey(n))
+    if o and o["type"] not in CAT_TYPE:     # 앞선 실행이 남긴 영문 분류명은 쓰지 않는다
+        return o["type"]
+    # 세부 분류를 알 수 없을 때. 장비는 부위를 몰라 "장비품", 교역품은 "교역품"으로 둔다.
+    # dhoSQL 선박 분류 중 선박 표에 없는 것은 목재 등 선박 기본 재료다
+    return {"cannon": "선측포", "skill": "모험스킬", "ornament": "장신구", "equipment": "장비품", "tradeGoods": "교역품", "ship": "선박 소재"}.get(cat, cat)
+
+
+new_rows, reg_keys = [], set()
+for i, n, cat in q("select id,name,category from allData order by category,id"):
+    if cat not in CAT_TYPE:
+        continue
+    n = re.sub(r"\s*,\s*", "·", re.sub(r"^.*?\] ", "", n).strip())
+    if n in reg_keys:
+        continue
+    reg_keys.add(n)
+    reg_keys.add(nkey(n))
+    o = old_by_name.get(n) or old_by_name.get(nkey(n))
+    desc = dho_desc.get(n) or (o["desc"] if o else "")
+    if "판매 목록 기준으로 추가한 아이템" in desc:      # 앞선 버전이 넣은 안내문
+        desc = ""
+    new_rows.append({"id": str(i), "status": "등록", "type": item_type(cat, n), "name": n, "desc": desc})
+# 판매 목록에만 있는 이름(입수 방법이 붙은 변형 등)도 dhoSQL 이름이므로 등록한다
+for n, k in q("select distinct item,item_category from npcsale where item_category is not null and item_category <> '#N/A'"):
+    n = re.sub(r"\s*,\s*", "·", n.strip())
+    if n in reg_keys or nkey(n) in reg_keys:
+        continue
+    t = None
+    for pat, typ in KIND_TYPE + [(r"레시피 책", "레시피"), (r"추가장갑", "추가장갑"), (r"아이템 효과", "아이템 효과"), (r"소비품|선박 데코", "소비품"), (r"선박", "선박")]:
+        m = re.match(pat, k)
+        if m:
+            t = typ or m.group(1)
+            break
+    if not t:
+        continue
+    reg_keys.add(n)
+    reg_keys.add(nkey(n))
+    new_rows.append({"id": "0", "status": "등록", "type": t, "name": n, "desc": ""})
+n_reg = len(new_rows)
+for r in old_rows:
+    if r["name"] in reg_keys or nkey(r["name"]) in reg_keys:
+        continue
+    reg_keys.add(r["name"])
+    new_rows.append(dict(r, status="미등록"))
+report.append("item_db 등록 %d, 미등록 %d" % (n_reg, len(new_rows) - n_reg))
+items = set(r["name"] for r in new_rows)
 nitems = {re.sub(r"[\s()]", "", i): i for i in items}
 SUFFIX = re.compile(r"\((구입|금괴교환|교역품|식료품|머리|[^)]*구입[^)]*|대부호|시대 한정[^)]*)\)$")
 
@@ -217,23 +322,6 @@ for name in sales:
         for a in rows:
             if a[0][1] not in items:
                 miss[a[0][1]] = dict(a).get("kind", "")
-# item_db 에 없는 판매 품목은 분류를 맞춰 행을 추가한다. 선박은 크기 분류를 알 수 없어 넣지 않는다
-KIND_TYPE = [(r"장비품 \(몸\)", "몸 장비품"), (r"장비품 \(머리\)", "머리 장비품"), (r"장비품 \(다리\)", "다리 장비품"),
-             (r"장비품 \(팔\)", "팔 장비품"), (r"장비품 \(장신구\)", "장신구"), (r"장비품", "무기/도구"),
-             (r"대포 \(선측포\)", "선측포"), (r"대포 \(선미포\)", "선미포"), (r"대포 \(선수포\)", "선수포"),
-             (r"레시피 책", "레시피"), (r"추가장갑", "추가장갑"), (r"아이템 효과", "아이템 효과"), (r"소비품|선박 데코", "소비품"),
-             (r"교역품 \((\S+)\)", None)]
-add_rows = []
-for n, kind in sorted(miss.items()):
-    t = None
-    for pat, typ in KIND_TYPE:
-        m = re.match(pat, kind)
-        if m:
-            t = typ or m.group(1)
-            break
-    if t:
-        add_rows.append("%d,%s,%s,dhoSQL(오프라인 조이) 판매 목록 기준으로 추가한 아이템." % (ADD_ID + len(add_rows), t, n))
-report.append("item_db 추가 %d행" % len(add_rows))
 report.append("장소 %d곳(판매 %d, 할 일 %d), 행 %d. 지금 파일에서 빠지는 장소 %d: %s" % (len(names), len(sales), len(todo), n_items, len(dropped), dropped))
 report.append("장소를 못 찾아 건너뛴 판매처 %d: %s" % (len(skipped_city), sorted(skipped_city)))
 report.append("item_db 에 없는 판매 품목 %d종" % len(miss))
@@ -332,4 +420,5 @@ report.append("보물지도 %d" % nmap)
 print("\n".join(report))
 if WRITE:
     io.open(os.path.join(D, "cityinfos.xml"), "w", encoding="utf-8", newline="\n").write("\n".join(out) + "\n")
-    io.open(ITEM_DB, "w", encoding="utf-8-sig", newline="\r\n").write("\n".join(db_lines + add_rows) + "\n")
+    io.open(ITEM_DB, "w", encoding="utf-8-sig", newline="\r\n").write(
+        "".join("%s,%s,%s,%s,%s\n" % (r["id"], r["status"], r["type"], r["name"], r["desc"]) for r in new_rows))
